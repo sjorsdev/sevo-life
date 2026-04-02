@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:select-v1-v2-running-1775160684935",
+  "timestamp": "2026-04-02T20:11:24.935Z",
+  "description": "Run selection between agent-v1 and agent-v2 based on benchmark fitness. Record selection decision.",
+  "priority": 2,
+  "status": "running",
+  "dependsOn": []
+}
