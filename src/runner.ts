@@ -33,7 +33,8 @@ export const APP_PERMISSIONS = (appEnvVars: string[]): RunPermissions => ({
 export async function run(
   blueprint: string,
   permissions: RunPermissions = SEVO_PERMISSIONS,
-  timeoutMs = 300_000
+  timeoutMs = 300_000,
+  taskContext?: string
 ): Promise<RunResult> {
   const start = Date.now();
 
@@ -56,12 +57,19 @@ export async function run(
     args,
     stdout: "piped",
     stderr: "piped",
+    stdin: taskContext ? "piped" : "null",
     signal: AbortSignal.timeout(timeoutMs),
   });
 
   let result: Deno.CommandOutput;
   try {
-    result = await cmd.output();
+    const process = cmd.spawn();
+    if (taskContext && process.stdin) {
+      const writer = process.stdin.getWriter();
+      await writer.write(new TextEncoder().encode(taskContext));
+      await writer.close();
+    }
+    result = await process.output();
   } catch (e) {
     return {
       success: false,

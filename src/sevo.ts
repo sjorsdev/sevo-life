@@ -124,9 +124,14 @@ while (true) {
     break;
   }
 
-  // Run agent on task
+  // Run agent on task — pass task context via stdin
   console.log(`Running agent ${agent["@id"]} on blueprint ${agent.blueprint}`);
-  const runResult = await run(agent.blueprint, SEVO_PERMISSIONS);
+  const taskContext = JSON.stringify({
+    taskId: task["@id"],
+    description: task.description,
+    priority: task.priority,
+  });
+  const runResult = await run(agent.blueprint, SEVO_PERMISSIONS, 300_000, taskContext);
   console.log(
     `Run complete: success=${runResult.success}, duration=${runResult.durationMs}ms`
   );
