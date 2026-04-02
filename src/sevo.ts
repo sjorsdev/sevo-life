@@ -72,18 +72,30 @@ async function getBestAgent(): Promise<AgentNode | null> {
   );
   if (!active.length) return null;
 
-  // Return agent with highest recent EQS
   const fitnessScores = await queryNodes<FitnessNode>("fitness");
   if (!fitnessScores.length) return active[0];
 
-  const agentEqs = new Map<string, number>();
-  for (const f of fitnessScores) {
-    agentEqs.set(f.agent, f.eqs);
+  // Composite score: latest EQS + average absolute fitness
+  const agentScore = new Map<string, number>();
+  for (const agent of active) {
+    const agentFitness = fitnessScores.filter((f) => f.agent === agent["@id"]);
+    if (!agentFitness.length) {
+      agentScore.set(agent["@id"], 0);
+      continue;
+    }
+    const latestEqs = agentFitness.at(-1)?.eqs ?? 0;
+    const avgFitness =
+      agentFitness.reduce(
+        (sum, f) => sum + ((f.context?.fitness as number) ?? 0),
+        0
+      ) / agentFitness.length;
+    agentScore.set(agent["@id"], 0.5 * latestEqs + 0.5 * avgFitness);
   }
 
   return (
     active.sort(
-      (a, b) => (agentEqs.get(b["@id"]) ?? 0) - (agentEqs.get(a["@id"]) ?? 0)
+      (a, b) =>
+        (agentScore.get(b["@id"]) ?? 0) - (agentScore.get(a["@id"]) ?? 0)
     )[0] ?? active[0]
   );
 }
