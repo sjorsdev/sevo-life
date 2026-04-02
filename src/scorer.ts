@@ -10,12 +10,13 @@ export async function score(
   cycleId: string,
   parentPrediction?: { eqs: number }
 ): Promise<FitnessNode> {
-  // Get parent's previous EQS for magnitude calculation
-  const parentFitness = await queryNodes<FitnessNode>(
+  // Get parent's previous fitness for comparison
+  const previousFitnessNodes = await queryNodes<FitnessNode>(
     "fitness",
     (n) => n.agent === agentId
   );
-  const previousEqs = parentFitness.at(-1)?.eqs ?? 0;
+  const previousAppFitness =
+    (previousFitnessNodes.at(-1)?.context?.fitness as number) ?? 0;
 
   // Parse fitness from agent output
   const appFitness = (runResult.fitnessOutput?.fitness as number) ?? 0;
@@ -28,8 +29,9 @@ export async function score(
       Math.max(appFitness, 0.001)
     : 1.0; // no prediction = maximum error
 
-  const accuracy = appFitness > previousEqs ? 1.0 : 0.0;
-  const magnitude = Math.max(0, appFitness - previousEqs);
+  // accuracy: did this agent outperform its previous run (or parent)?
+  const accuracy = appFitness > previousAppFitness ? 1.0 : 0.0;
+  const magnitude = Math.max(0, appFitness - previousAppFitness);
 
   const eqs =
     (accuracy * magnitude) /

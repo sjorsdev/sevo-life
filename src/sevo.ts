@@ -6,7 +6,7 @@ import { score } from "./scorer.ts";
 import { propose } from "./mutator.ts";
 import { select } from "./selector.ts";
 import { git } from "./git.ts";
-import type { TaskNode, AgentNode } from "./types.ts";
+import type { TaskNode, AgentNode, FitnessNode } from "./types.ts";
 
 async function writeProgress(current: string, next: string, notes = "") {
   const activeAgents = await queryNodes<AgentNode>(
@@ -27,21 +27,36 @@ async function writeProgress(current: string, next: string, notes = "") {
 }
 
 async function getNextTask(): Promise<TaskNode | null> {
-  const pending = await queryNodes<TaskNode>(
-    "task",
-    (n) => n.status === "pending"
+  const allTasks = await queryNodes<TaskNode>("task");
+
+  // Find which base task IDs have been completed or are running
+  // Done/running nodes have IDs like "task:X-done-<ts>" or "task:X-running-<ts>"
+  const consumedBaseIds = new Set<string>();
+  for (const t of allTasks) {
+    if (t.status === "done" || t.status === "running") {
+      // Extract base ID by removing "-done-<ts>" or "-running-<ts>" suffix
+      const match = t["@id"].match(/^(.+?)-(done|running)-\d+$/);
+      if (match) consumedBaseIds.add(match[1]);
+    }
+  }
+
+  // Get truly pending tasks (not yet consumed)
+  const pending = allTasks.filter(
+    (t) => t.status === "pending" && !consumedBaseIds.has(t["@id"])
   );
   if (!pending.length) return null;
 
-  // Resolve dependencies — only pick tasks with all deps done
-  const doneTasks = await queryNodes<TaskNode>(
-    "task",
-    (n) => n.status === "done"
-  );
-  const doneIds = new Set(doneTasks.map((t) => t["@id"]));
+  // Resolve dependencies — check if deps are done
+  const doneBaseIds = new Set<string>();
+  for (const t of allTasks) {
+    if (t.status === "done") {
+      const match = t["@id"].match(/^(.+?)-done-\d+$/);
+      if (match) doneBaseIds.add(match[1]);
+    }
+  }
 
   const ready = pending.filter((t) =>
-    t.dependsOn.every((dep) => doneIds.has(dep))
+    t.dependsOn.every((dep) => doneBaseIds.has(dep))
   );
 
   if (!ready.length) return null;
@@ -58,13 +73,12 @@ async function getBestAgent(): Promise<AgentNode | null> {
   if (!active.length) return null;
 
   // Return agent with highest recent EQS
-  const fitnessScores = await queryNodes("fitness");
+  const fitnessScores = await queryNodes<FitnessNode>("fitness");
   if (!fitnessScores.length) return active[0];
 
   const agentEqs = new Map<string, number>();
   for (const f of fitnessScores) {
-    const fit = f as { agent: string; eqs: number };
-    agentEqs.set(fit.agent, fit.eqs);
+    agentEqs.set(f.agent, f.eqs);
   }
 
   return (
@@ -94,12 +108,13 @@ while (true) {
   console.log(`\nCycle ${cycleCount}: ${task["@id"]} — ${task.description}`);
 
   // Mark task running — create new node (append only)
-  await writeNode({
+  const runningTask: TaskNode = {
     ...task,
     "@id": `${task["@id"]}-running-${Date.now()}`,
-    status: "running" as const,
+    status: "running",
     timestamp: new Date().toISOString(),
-  });
+  };
+  await writeNode(runningTask);
 
   // Get best agent
   const agent = await getBestAgent();
@@ -139,13 +154,14 @@ while (true) {
   }
 
   // Mark task done
-  await writeNode({
+  const doneTask: TaskNode = {
     ...task,
     "@id": `${task["@id"]}-done-${Date.now()}`,
-    status: "done" as const,
+    status: "done",
     result: runResult.stdout.slice(0, 500),
     timestamp: new Date().toISOString(),
-  });
+  };
+  await writeNode(doneTask);
 
   await writeProgress(
     `cycle-${cycleCount}: ${task["@id"]}`,
