@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark:write-graph-node-v1",
+  "timestamp": "2026-04-02T00:00:00.000Z",
+  "version": 1,
+  "task": "Write a Deno TypeScript function that creates a valid JSON-LD SeVoNode, validates required fields, and appends it to the correct graph directory. Return typed result.",
+  "scoringLogic": "correctness(0.4) + typeSafety(0.3) + edgeCaseHandling(0.2) + efficiency(0.1)",
+  "difficulty": 1,
+  "passThreshold": 0.6
+}
