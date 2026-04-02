@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:benchmark-v1-agent-v2-done-1775160684894",
+  "timestamp": "2026-04-02T20:11:24.894Z",
+  "description": "Run agent-v2 against benchmark-v1. Compare fitness with agent-v1.",
+  "priority": 1,
+  "status": "done",
+  "dependsOn": [],
+  "result": "{\"fitness\":1,\"branches\":1,\"correct\":10,\"total\":10}\n"
+}
