@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:seed-improvement-analysis-done-1775160685234",
+  "timestamp": "2026-04-02T20:11:25.235Z",
+  "description": "Analyze fitness history and selection decisions. Generate seed improvement observations for CLAUDE-next.md.",
+  "priority": 5,
+  "status": "done",
+  "dependsOn": [],
+  "result": "{\"fitness\":1,\"branches\":1,\"correct\":10,\"total\":10}\n"
+}
