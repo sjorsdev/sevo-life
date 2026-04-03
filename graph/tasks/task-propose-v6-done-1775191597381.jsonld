@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:propose-v6-done-1775191597381",
+  "timestamp": "2026-04-03T04:46:37.381Z",
+  "description": "Propose and apply mutation to agent-v5 to create agent-v6. Target: add per-type schema validation and cross-node reference checks.",
+  "priority": 2,
+  "status": "done",
+  "dependsOn": [],
+  "result": ""
+}
