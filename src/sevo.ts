@@ -29,7 +29,7 @@ async function callClaude(prompt: string, retries = 3): Promise<string> {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       const cmd = new Deno.Command(claudePath, {
-        args: ["-p", prompt, "--output-format", "text", "--model", "sonnet"],
+        args: ["-p", prompt, "--output-format", "text", "--model", "haiku"],
         stdout: "piped",
         stderr: "piped",
       });
@@ -331,8 +331,8 @@ async function crossoverAgents(
   let blueprint1 = await Deno.readTextFile(parent1.blueprint);
   let blueprint2 = await Deno.readTextFile(parent2.blueprint);
 
-  // Truncate large blueprints to avoid overwhelming the LLM
-  const MAX_BP = 4000;
+  // Truncate large blueprints aggressively for faster LLM calls
+  const MAX_BP = 2000;
   if (blueprint1.length > MAX_BP) blueprint1 = blueprint1.slice(0, MAX_BP) + "\n// ... (truncated)";
   if (blueprint2.length > MAX_BP) blueprint2 = blueprint2.slice(0, MAX_BP) + "\n// ... (truncated)";
 
@@ -350,8 +350,8 @@ ${blueprint2}
 \`\`\`
 
 BENCHMARK (difficulty ${benchmark.difficulty}):
-${benchmark.task}
-Scoring: ${benchmark.scoringLogic}
+${benchmark.task.slice(0, 500)}
+Scoring: ${benchmark.scoringLogic.slice(0, 200)}
 
 MUTATION AGGRESSIVENESS: ${strategy.mutationRate.toFixed(2)} (0=conservative, 1=radical)
 
@@ -424,8 +424,8 @@ async function mutateAgent(
   console.log(`  Mutating ${agent["@id"]} [strategy: ${strategy.name}, rate: ${strategy.mutationRate.toFixed(2)}]...`);
 
   let blueprint = await Deno.readTextFile(agent.blueprint);
-  // Truncate large blueprints
-  if (blueprint.length > 6000) blueprint = blueprint.slice(0, 6000) + "\n// ... (truncated)";
+  // Truncate large blueprints aggressively for faster LLM calls
+  if (blueprint.length > 3000) blueprint = blueprint.slice(0, 3000) + "\n// ... (truncated)";
 
   const historyText =
     fitnessHistory
@@ -464,8 +464,8 @@ RECENT FITNESS HISTORY:
 ${historyText}
 
 CURRENT BENCHMARK (difficulty ${benchmark.difficulty}):
-${benchmark.task}
-Scoring: ${benchmark.scoringLogic}
+${benchmark.task.slice(0, 500)}
+Scoring: ${benchmark.scoringLogic.slice(0, 200)}
 Pass threshold: ${benchmark.passThreshold}
 
 MUTATION STRATEGY: ${strategy.name} (aggressiveness ${strategy.mutationRate.toFixed(2)})
@@ -640,8 +640,8 @@ async function evolveBenchmark(
     const prompt = `You are evolving a SEVO benchmark to be harder.
 
 CURRENT BENCHMARK (v${current.version}, difficulty ${current.difficulty}):
-Task: ${current.task}
-Scoring: ${current.scoringLogic}
+Task: ${current.task.slice(0, 500)}
+Scoring: ${current.scoringLogic.slice(0, 200)}
 Pass threshold: ${current.passThreshold}
 
 All agents currently pass with avg fitness ${avgFitness.toFixed(3)}.
