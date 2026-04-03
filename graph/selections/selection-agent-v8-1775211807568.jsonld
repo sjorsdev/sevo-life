@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Selection",
+  "@id": "selection-agent-v8-1775211807568",
+  "timestamp": "2026-04-03T10:23:27.568Z",
+  "winner": "agent:v8",
+  "loser": "agent:v6",
+  "winnerEqs": 0.6887096774193548,
+  "loserEqs": 0.4,
+  "reasoning": "parent EQS 0.689 >= mutant 0.400",
+  "eqsDelta": 0.2887096774193548
+}
