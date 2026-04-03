@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sevo-life</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #c8c8d0; font-family: 'Berkeley Mono', 'JetBrains Mono', 'Fira Code', monospace; overflow: hidden; }
+
+  #app { display: grid; grid-template-columns: 1fr 300px; grid-template-rows: auto 1fr; height: 100vh; gap: 0; }
+
+  header {
+    grid-column: 1 / -1;
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: #111118;
+    border-bottom: 1px solid #222;
+  }
+  header h1 { font-size: 16px; font-weight: 400; letter-spacing: 2px; color: #888; }
+  header h1 span { color: #e8e8f0; }
+  .controls { display: flex; gap: 8px; align-items: center; }
+  .controls button {
+    background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 5px 14px;
+    font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 3px;
+  }
+  .controls button:hover { background: #252530; color: #ddd; border-color: #555; }
+  .controls button.active { background: #2a2a3a; color: #fff; border-color: #667; }
+  .controls select, .controls input {
+    background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 4px 8px;
+    font-family: inherit; font-size: 12px; border-radius: 3px;
+  }
+  .controls label { font-size: 11px; color: #666; }
+
+  #canvas-wrap {
+    display: flex; align-items: center; justify-content: center;
+    background: #08080c; position: relative;
+  }
+  canvas { image-rendering: pixelated; }
+
+  #sidebar {
+    background: #0e0e14; border-left: 1px solid #1a1a22;
+    padding: 16px; overflow-y: auto; font-size: 12px;
+  }
+
+  .panel { margin-bottom: 14px; }
+  .panel-title {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: #555; margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1px solid #1a1a22;
+  }
+  .stat-row { display: flex; justify-content: space-between; padding: 2px 0; }
+  .stat-label { color: #666; }
+  .stat-value { color: #b8b8c0; font-variant-numeric: tabular-nums; }
+  .stat-value.good { color: #6c8; }
+  .stat-value.warn { color: #ca6; }
+  .stat-value.bad { color: #c66; }
+
+  .bar { height: 4px; background: #1a1a24; border-radius: 2px; margin: 3px 0 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; transition: width 0.3s; }
+
+  .entity-list { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .entity-chip {
+    display: flex; align-items: center; gap: 4px; padding: 2px 8px;
+    background: #151520; border-radius: 3px; font-size: 11px;
+  }
+  .entity-chip.dead { opacity: 0.3; text-decoration: line-through; }
+  .entity-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .tick-display { font-size: 13px; color: #888; font-variant-numeric: tabular-nums; }
+
+  .evo-log {
+    max-height: 100px; overflow-y: auto; font-size: 10px; line-height: 1.5; color: #666; margin-top: 4px;
+  }
+  .evo-log .birth { color: #6c8; }
+  .evo-log .death { color: #c66; }
+  .evo-log .world-evo { color: #68a; }
+  .evo-log .sim-evo { color: #a8a; }
+
+  .config-row { display: flex; justify-content: space-between; padding: 1px 0; font-size: 11px; }
+  .config-label { color: #555; }
+  .config-value { color: #8a8ac0; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>sevo / <span>life</span></h1>
+    <div class="controls">
+      <button id="btn-play" class="active">Play</button>
+      <button id="btn-pause">Pause</button>
+      <button id="btn-step">Step</button>
+      <label>Speed</label>
+      <select id="speed">
+        <option value="200">Slow</option>
+        <option value="80" selected>Normal</option>
+        <option value="30">Fast</option>
+        <option value="8">Max</option>
+      </select>
+      <label>Seed</label>
+      <input id="seed" type="number" value="42" style="width:60px">
+      <span class="tick-display" id="tick-display">tick 0</span>
+    </div>
+  </header>
+  <div id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="sidebar">
+    <div class="panel">
+      <div class="panel-title">World</div>
+      <div class="stat-row"><span class="stat-label">Tick</span><span class="stat-value" id="s-tick">0</span></div>
+      <div class="stat-row"><span class="stat-label">Alive</span><span class="stat-value" id="s-alive">0</span></div>
+      <div class="stat-row"><span class="stat-label">Births / Deaths</span><span class="stat-value" id="s-bd">0 / 0</span></div>
+      <div class="stat-row"><span class="stat-label">Max Generation</span><span class="stat-value" id="s-gen">0</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Beauty (drives all evolution)</div>
+      <div class="stat-row"><span class="stat-label">Total</span><span class="stat-value" id="s-beauty">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-beauty" style="width:0;background:#a7a"></div></div>
+      <div class="stat-row"><span class="stat-label">Symmetry</span><span class="stat-value" id="s-sym">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-sym" style="width:0;background:#777"></div></div>
+      <div class="stat-row"><span class="stat-label">Complexity</span><span class="stat-value" id="s-complex">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-complex" style="width:0;background:#777"></div></div>
+      <div class="stat-row"><span class="stat-label">Rhythm</span><span class="stat-value" id="s-rhythm">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-rhythm" style="width:0;background:#777"></div></div>
+      <div class="stat-row"><span class="stat-label">Color Harmony</span><span class="stat-value" id="s-harmony">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-harmony" style="width:0;background:#777"></div></div>
+      <div class="stat-row"><span class="stat-label">Coverage</span><span class="stat-value" id="s-coverage">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-coverage" style="width:0;background:#777"></div></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Simulation DNA (evolves what beauty means)</div>
+      <div class="config-row"><span class="config-label">w:symmetry</span><span class="config-value" id="sw-sym">0.25</span></div>
+      <div class="config-row"><span class="config-label">w:complexity</span><span class="config-value" id="sw-cplx">0.25</span></div>
+      <div class="config-row"><span class="config-label">w:rhythm</span><span class="config-value" id="sw-rhy">0.20</span></div>
+      <div class="config-row"><span class="config-label">w:colorHarmony</span><span class="config-value" id="sw-har">0.15</span></div>
+      <div class="config-row"><span class="config-label">w:coverage</span><span class="config-value" id="sw-cov">0.15</span></div>
+      <div class="config-row"><span class="config-label">neighborRadius</span><span class="config-value" id="sw-nr">3</span></div>
+      <div class="config-row"><span class="config-label">spawnEnergy</span><span class="config-value" id="sw-se">20</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">World DNA (evolves the physics)</div>
+      <div class="config-row"><span class="config-label">resourceRegen</span><span class="config-value" id="c-regen">0.005</span></div>
+      <div class="config-row"><span class="config-label">trailDecay</span><span class="config-value" id="c-decay">0.020</span></div>
+      <div class="config-row"><span class="config-label">energyDrain</span><span class="config-value" id="c-drain">0.500</span></div>
+      <div class="config-row"><span class="config-label">moveCost</span><span class="config-value" id="c-move">0.300</span></div>
+      <div class="config-row"><span class="config-label">harvestGain</span><span class="config-value" id="c-harvest">5.000</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Beings</div>
+      <div class="entity-list" id="entity-list"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Evolution Log</div>
+      <div class="evo-log" id="evo-log"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { World, DEFAULT_CONFIG, scoreBeauty, beautyByColor } from './sim.bundle.js';
+
+// ========================================================================
+// SEEDED PRNG
+// ========================================================================
+function mulberry32(seed) {
+  let s = seed | 0;
+  return () => { s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+}
+let evoRng;
+
+// ========================================================================
+// THREE EVOLUTIONARY TRACKS
+// ========================================================================
+
+// --- Track 1: SIMULATION DNA — evolves what "beautiful" means ---
+// These are the rules of the game itself. They change slowly.
+let simDNA = {
+  // Beauty weights — what counts as beautiful evolves
+  wSym: 0.25,
+  wComplex: 0.25,
+  wRhythm: 0.20,
+  wHarmony: 0.15,
+  wCoverage: 0.15,
+  // Simulation mechanics that affect what's possible
+  neighborRadius: 3,   // how far entities can see
+  spawnEnergy: 20,     // energy new beings start with
+};
+const SIM_EVO_INTERVAL = 500;  // evolve simulation every N ticks
+let simEvoTick = 0;
+let simBeautyHistory = [];  // rolling beauty scores to measure trend
+
+// --- Track 2: WORLD DNA — evolves the physics ---
+// These are the environmental conditions. They change at medium speed.
+const WORLD_EVO_INTERVAL = 200;
+let worldEvoTick = 0;
+let worldBeautyBefore = 0;
+let worldPrevConfig = null;  // for rollback if beauty drops
+
+// --- Track 3: BEING DNA — evolves the creatures ---
+// Genomes. They change fastest through birth/death/selection.
+const TARGET_POP = 10;
+
+// ========================================================================
+// COMPUTE BEAUTY USING EVOLVING SIMULATION WEIGHTS
+// ========================================================================
+function computeBeauty(grid) {
+  const raw = scoreBeauty(grid);
+  // Apply simulation's evolved weights instead of fixed weights
+  const total = raw.symmetry * simDNA.wSym
+    + raw.complexity * simDNA.wComplex
+    + raw.rhythm * simDNA.wRhythm
+    + raw.colorHarmony * simDNA.wHarmony
+    + raw.coverage * simDNA.wCoverage;
+  return { ...raw, total };
+}
+
+// ========================================================================
+// SEED POPULATION — intentionally simple, minimal behaviors
+// ========================================================================
+const SEED_GENOMES = [
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 0, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 1, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 2, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 3, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 4, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+  { moveSpeed: 0.5, turnBias: 0.0, resourceAttraction: 0.5, trailAttraction: 0.0, harvestThreshold: 0.3, energyConserve: 0.5, explorationDrive: 0.5, trailIntensity: 0.3, trailColor: 5, pulseFrequency: 0.0, patternSymmetry: 0.0 },
+];
+
+// ========================================================================
+// DECISION FUNCTION — the being's brain
+// ========================================================================
+const entityRngs = new Map();
+function entityRng(id, seed) {
+  if (!entityRngs.has(id)) entityRngs.set(id, mulberry32(seed + id * 7919));
+  return entityRngs.get(id)();
+}
+
+function decide(entity, neighbors) {
+  const g = entity.genome;
+  const rng = () => entityRng(entity.id, config.seed);
+  const selfCell = neighbors.find(n => n.distance === 0);
+  const onResource = selfCell ? selfCell.cell.resource > g.harvestThreshold : false;
+
+  // Survival: must eat to stay alive
+  if (entity.energy < 5) {
+    if (onResource) return { type: "harvest" };
+    const rc = neighbors.filter(n => n.cell.resource > 0.1 && n.distance > 0).sort((a, b) => a.distance - b.distance);
+    if (rc.length > 0) return { type: "move", direction: rc[0].direction };
+    if (g.energyConserve > 0.5) return { type: "idle" };
+  }
+  if (onResource) return { type: "harvest" };
+
+  // Pulse — aesthetic action
+  if (entity.energy > 8 && g.pulseFrequency > 0 && entity.age % Math.max(5, Math.round(20 * (1 - g.pulseFrequency))) === 0)
+    return { type: "pulse", radius: 2 };
+
+  // Movement — scored by genome preferences
+  if (rng() < g.moveSpeed) {
+    let bestDir = { x: 0, y: 0 }, bestScore = -Infinity;
+    for (const dir of [{x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1},{x:1,y:1},{x:-1,y:-1},{x:1,y:-1},{x:-1,y:1}]) {
+      let score = 0;
+      for (const n of neighbors.filter(n => n.direction.x === dir.x && n.direction.y === dir.y)) {
+        score += n.cell.resource * g.resourceAttraction / Math.max(n.distance, 0.5);
+        score += n.cell.trail * g.trailAttraction / Math.max(n.distance, 0.5);
+        if (!n.cell.occupied) score += 0.1;
+      }
+      if (g.patternSymmetry > 0.5 && (dir.x === 0 || dir.y === 0)) score += g.patternSymmetry * 0.3;
+      score += g.explorationDrive * (rng() * 0.5);
+      score += dir.x * g.turnBias * 0.2;
+      if (score > bestScore) { bestScore = score; bestDir = dir; }
+    }
+    return { type: "move", direction: bestDir };
+  }
+
+  // Trail when idle
+  if (g.trailIntensity > 0.2 && entity.energy > 5)
+    return { type: "trail", intensity: g.trailIntensity, color: g.trailColor };
+  return { type: "idle" };
+}
+
+// ========================================================================
+// BEING EVOLUTION — beauty is the fitness signal
+// ========================================================================
+const GENOME_KEYS = ['moveSpeed','turnBias','resourceAttraction','trailAttraction',
+  'harvestThreshold','energyConserve','explorationDrive','trailIntensity',
+  'trailColor','pulseFrequency','patternSymmetry'];
+
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+function mutateGenome(parent) {
+  const child = { ...parent };
+  const n = 1 + Math.floor(evoRng() * 3);
+  for (let i = 0; i < n; i++) {
+    const key = GENOME_KEYS[Math.floor(evoRng() * GENOME_KEYS.length)];
+    if (key === 'trailColor') {
+      child[key] = Math.floor(evoRng() * 6);
+    } else if (key === 'turnBias' || key === 'trailAttraction') {
+      child[key] = clamp(parent[key] + (evoRng() - 0.5) * 0.4, -1, 1);
+    } else {
+      child[key] = clamp(parent[key] + (evoRng() - 0.5) * 0.3, 0, 1);
+    }
+  }
+  return child;
+}
+
+function crossoverGenomes(a, b) {
+  const child = {};
+  for (const key of GENOME_KEYS) {
+    child[key] = evoRng() < 0.5 ? a[key] : b[key];
+    if (key !== 'trailColor' && evoRng() < 0.2) {
+      if (key === 'turnBias' || key === 'trailAttraction') {
+        child[key] = clamp(child[key] + (evoRng() - 0.5) * 0.2, -1, 1);
+      } else {
+        child[key] = clamp(child[key] + (evoRng() - 0.5) * 0.15, 0, 1);
+      }
+    }
+  }
+  return child;
+}
+
+// Beauty-driven parent selection using difference rewards
+let colorCredits = [0, 0, 0, 0, 0, 0];  // per-color beauty contribution
+
+function selectParent() {
+  const alive = world.getAlive();
+  if (alive.length === 0) return null;
+  if (alive.length === 1) return alive[0];
+
+  // Tournament: pick 3, select by beauty credit (not survival)
+  const candidates = [];
+  for (let i = 0; i < Math.min(3, alive.length); i++) {
+    candidates.push(alive[Math.floor(evoRng() * alive.length)]);
+  }
+  return candidates.sort((a, b) => {
+    // Beauty credit: how much does this entity's color contribute to beauty?
+    const creditA = colorCredits[a.genome.trailColor] || 0;
+    const creditB = colorCredits[b.genome.trailColor] || 0;
+    // Blend: 70% beauty credit + 30% survival (must stay alive to keep creating)
+    const fitnessA = 0.7 * creditA + 0.3 * (a.age / Math.max(world.tick, 1));
+    const fitnessB = 0.7 * creditB + 0.3 * (b.age / Math.max(world.tick, 1));
+    return fitnessB - fitnessA;
+  })[0];
+}
+
+// ========================================================================
+// WORLD EVOLUTION — hill climbing on beauty
+// ========================================================================
+const WORLD_KEYS = ['resourceRegenRate','trailDecayRate','energyDrainPerTick','moveCost','harvestGain'];
+const WORLD_RANGES = {
+  resourceRegenRate: [0.001, 0.02],
+  trailDecayRate: [0.005, 0.08],
+  energyDrainPerTick: [0.2, 1.0],
+  moveCost: [0.1, 0.8],
+  harvestGain: [2, 10],
+};
+
+function evolveWorld() {
+  if (!beautyCache) return;
+  const currentBeauty = beautyCache.total;
+
+  // If we have a previous mutation pending: check if beauty improved
+  if (worldPrevConfig) {
+    if (currentBeauty < worldBeautyBefore - 0.01) {
+      // Beauty dropped — rollback
+      world.evolveConfig(worldPrevConfig);
+      logEvent('world-evo', `REVERTED (beauty ${worldBeautyBefore.toFixed(3)} -> ${currentBeauty.toFixed(3)})`);
+      worldPrevConfig = null;
+      updateWorldDisplay();
+      return;
+    }
+    // Beauty held or improved — keep the change
+    logEvent('world-evo', `KEPT (beauty ${worldBeautyBefore.toFixed(3)} -> ${currentBeauty.toFixed(3)})`);
+    worldPrevConfig = null;
+  }
+
+  // New mutation: pick a random config param, nudge it
+  const key = WORLD_KEYS[Math.floor(evoRng() * WORLD_KEYS.length)];
+  const [lo, hi] = WORLD_RANGES[key];
+  const current = world.config[key];
+  const delta = (evoRng() - 0.5) * (hi - lo) * 0.12;
+  const newVal = clamp(current + delta, lo, hi);
+
+  // Save state for rollback
+  worldPrevConfig = { [key]: current };
+  worldBeautyBefore = currentBeauty;
+
+  world.evolveConfig({ [key]: newVal });
+  logEvent('world-evo', `${key}: ${current.toFixed(3)} -> ${newVal.toFixed(3)}`);
+  updateWorldDisplay();
+}
+
+// ========================================================================
+// SIMULATION EVOLUTION — evolves what "beautiful" means
+// ========================================================================
+function evolveSimulation() {
+  if (!beautyCache) return;
+
+  // Record beauty trajectory
+  simBeautyHistory.push(beautyCache.total);
+  if (simBeautyHistory.length > 20) simBeautyHistory.shift();
+
+  // Only evolve if we have enough history
+  if (simBeautyHistory.length < 10) return;
+
+  // Measure trend: is beauty improving?
+  const recent = simBeautyHistory.slice(-5);
+  const older = simBeautyHistory.slice(0, 5);
+  const recentAvg = recent.reduce((a, b) => a + b, 0) / recent.length;
+  const olderAvg = older.reduce((a, b) => a + b, 0) / older.length;
+  const trend = recentAvg - olderAvg;
+
+  if (trend > 0.02) {
+    // Beauty is improving — don't change the rules
+    logEvent('sim-evo', `beauty trending up (+${trend.toFixed(3)}), holding steady`);
+    return;
+  }
+
+  // Beauty is stagnating or declining — evolve the definition
+  // Strategy: shift weight TOWARD the weakest component (bottleneck)
+  const components = [
+    { key: 'wSym', val: beautyCache.symmetry, name: 'symmetry' },
+    { key: 'wComplex', val: beautyCache.complexity, name: 'complexity' },
+    { key: 'wRhythm', val: beautyCache.rhythm, name: 'rhythm' },
+    { key: 'wHarmony', val: beautyCache.colorHarmony, name: 'harmony' },
+    { key: 'wCoverage', val: beautyCache.coverage, name: 'coverage' },
+  ];
+
+  // Find weakest and strongest components
+  components.sort((a, b) => a.val - b.val);
+  const weakest = components[0];
+  const strongest = components[components.length - 1];
+
+  // Shift weight: increase weakest's weight, decrease strongest's
+  const shift = 0.02 + evoRng() * 0.03;
+  simDNA[weakest.key] = clamp(simDNA[weakest.key] + shift, 0.05, 0.50);
+  simDNA[strongest.key] = clamp(simDNA[strongest.key] - shift, 0.05, 0.50);
+
+  // Normalize weights to sum to 1
+  const wKeys = ['wSym', 'wComplex', 'wRhythm', 'wHarmony', 'wCoverage'];
+  const wSum = wKeys.reduce((s, k) => s + simDNA[k], 0);
+  for (const k of wKeys) simDNA[k] /= wSum;
+
+  // Also evolve simulation mechanics occasionally
+  if (evoRng() < 0.3) {
+    simDNA.spawnEnergy = clamp(simDNA.spawnEnergy + (evoRng() - 0.5) * 5, 10, 40);
+  }
+
+  logEvent('sim-evo', `EVOLVED: +${weakest.name}(${simDNA[weakest.key].toFixed(2)}) -${strongest.name}(${simDNA[strongest.key].toFixed(2)})`);
+  updateSimDisplay();
+}
+
+// ========================================================================
+// RENDERING
+// ========================================================================
+const CELL = 14;
+const COLORS = [
+  [220, 60, 60], [220, 180, 40], [60, 190, 80],
+  [60, 190, 210], [70, 100, 220], [180, 80, 200],
+];
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+let world, config, running = true, interval = 80;
+let beautyCache = null, beautyTick = -1;
+
+function init() {
+  const seed = parseInt(document.getElementById('seed').value) || 42;
+  evoRng = mulberry32(seed * 31337);
+  config = { ...DEFAULT_CONFIG, seed, width: 60, height: 40, maxTicks: Infinity, initialResources: 150 };
+  canvas.width = config.width * CELL;
+  canvas.height = config.height * CELL;
+  entityRngs.clear();
+  colorCredits = [0, 0, 0, 0, 0, 0];
+  world = new World(config, SEED_GENOMES);
+  beautyCache = null;
+  beautyTick = -1;
+  worldEvoTick = 0;
+  simEvoTick = 0;
+  worldPrevConfig = null;
+  simBeautyHistory = [];
+
+  // Reset simDNA to defaults
+  simDNA = { wSym: 0.25, wComplex: 0.25, wRhythm: 0.20, wHarmony: 0.15, wCoverage: 0.15, neighborRadius: 3, spawnEnergy: 20 };
+
+  document.getElementById('evo-log').innerHTML = '';
+  logEvent('birth', `${SEED_GENOMES.length} simple beings spawned (gen 0)`);
+  updateEntityList();
+  updateWorldDisplay();
+  updateSimDisplay();
+}
+
+function render() {
+  const { grid, entities, events } = world;
+  const w = config.width, h = config.height;
+
+  ctx.fillStyle = '#08080c';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Subtle grid
+  ctx.strokeStyle = 'rgba(255,255,255,0.02)';
+  ctx.lineWidth = 0.5;
+  for (let x = 0; x <= w; x++) { ctx.beginPath(); ctx.moveTo(x * CELL, 0); ctx.lineTo(x * CELL, h * CELL); ctx.stroke(); }
+  for (let y = 0; y <= h; y++) { ctx.beginPath(); ctx.moveTo(0, y * CELL); ctx.lineTo(w * CELL, y * CELL); ctx.stroke(); }
+
+  // Trails
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const cell = grid[y][x];
+      if (cell.trail > 0.02) {
+        const [r, g, b] = COLORS[cell.trailColor % 6];
+        ctx.fillStyle = `rgba(${r},${g},${b},${cell.trail * 0.7})`;
+        ctx.fillRect(x * CELL + 1, y * CELL + 1, CELL - 2, CELL - 2);
+        if (cell.trail > 0.5) {
+          ctx.fillStyle = `rgba(${r},${g},${b},${(cell.trail - 0.5) * 0.3})`;
+          ctx.fillRect(x * CELL, y * CELL, CELL, CELL);
+        }
+      }
+      if (cell.resource > 0.1) {
+        ctx.fillStyle = `rgba(255, 210, 60, ${0.3 + cell.resource * 0.5})`;
+        ctx.beginPath();
+        ctx.arc(x * CELL + CELL / 2, y * CELL + CELL / 2, (2 + cell.resource * 4) / 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+
+  // Events
+  for (const evt of events) {
+    if (evt.type === 'pulse') {
+      const e = entities.find(e => e.id === evt.id);
+      const [r, g, b] = COLORS[(e?.genome.trailColor ?? 0) % 6];
+      ctx.strokeStyle = `rgba(${r},${g},${b},0.5)`;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(evt.x * CELL + CELL / 2, evt.y * CELL + CELL / 2, (evt.r || 2) * CELL, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+    if (evt.type === 'death') {
+      ctx.fillStyle = 'rgba(255, 80, 80, 0.4)';
+      ctx.beginPath();
+      ctx.arc(evt.x * CELL + CELL / 2, evt.y * CELL + CELL / 2, CELL, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    if (evt.type === 'birth') {
+      ctx.fillStyle = 'rgba(100, 255, 140, 0.5)';
+      ctx.beginPath();
+      ctx.arc(evt.x * CELL + CELL / 2, evt.y * CELL + CELL / 2, CELL * 1.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  // Entities
+  for (const e of entities) {
+    if (!e.alive) continue;
+    const [r, g, b] = COLORS[e.genome.trailColor % 6];
+    const cx = e.pos.x * CELL + CELL / 2, cy = e.pos.y * CELL + CELL / 2;
+    const er = Math.min(1, e.energy / 20);
+    // Glow
+    const grad = ctx.createRadialGradient(cx, cy, 2, cx, cy, CELL * 0.8);
+    grad.addColorStop(0, `rgba(${r},${g},${b},${0.3 * er})`);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(cx - CELL, cy - CELL, CELL * 2, CELL * 2);
+    // Body
+    ctx.fillStyle = `rgb(${r},${g},${b})`;
+    ctx.beginPath(); ctx.arc(cx, cy, 3 + er * 2, 0, Math.PI * 2); ctx.fill();
+    // Eye
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.arc(cx + 1.5, cy - 1, 1, 0, Math.PI * 2); ctx.fill();
+    // Generation ring
+    if (e.generation > 0) {
+      ctx.strokeStyle = `rgba(${r},${g},${b},0.4)`;
+      ctx.lineWidth = Math.min(3, 0.5 + e.generation * 0.3);
+      ctx.beginPath(); ctx.arc(cx, cy, 6 + er, 0, Math.PI * 2); ctx.stroke();
+    }
+  }
+}
+
+// ========================================================================
+// EVOLUTION STEP — runs every tick after world.step()
+// ========================================================================
+function evolveStep() {
+  const alive = world.getAlive();
+
+  // Record deaths
+  for (const evt of world.events) {
+    if (evt.type === 'death') {
+      const e = world.entities.find(e => e.id === evt.id);
+      if (e) logEvent('death', `#${e.id} died (gen ${e.generation}, age ${e.age})`);
+    }
+  }
+
+  // Update beauty credits every 10 ticks (difference rewards)
+  if (world.tick % 10 === 0 && beautyCache) {
+    try {
+      colorCredits = beautyByColor(world.grid);
+    } catch { /* fallback to existing credits */ }
+  }
+
+  // BEING EVOLUTION: spawn new beings when population drops
+  if (alive.length < TARGET_POP) {
+    const needed = TARGET_POP - alive.length;
+    for (let i = 0; i < needed; i++) {
+      let genome, gen, parentIds;
+      const parentA = selectParent();
+
+      if (!parentA) {
+        // No alive entities — respawn from seed with mutations
+        genome = mutateGenome(SEED_GENOMES[Math.floor(evoRng() * SEED_GENOMES.length)]);
+        gen = 0;
+        parentIds = [];
+      } else if (alive.length >= 2 && evoRng() < 0.5) {
+        // Crossover two parents
+        const parentB = selectParent();
+        genome = crossoverGenomes(parentA.genome, parentB.genome);
+        gen = Math.max(parentA.generation, parentB.generation) + 1;
+        parentIds = [parentA.id, parentB.id];
+      } else {
+        // Mutate one parent
+        genome = mutateGenome(parentA.genome);
+        gen = parentA.generation + 1;
+        parentIds = [parentA.id];
+      }
+
+      const newEntity = world.spawn(genome, gen, parentIds);
+      if (newEntity) {
+        newEntity.energy = simDNA.spawnEnergy;  // simulation DNA controls starting energy
+        logEvent('birth', `#${newEntity.id} born (gen ${gen}${parentIds.length ? ' from #' + parentIds.join('+#') : ''})`);
+      }
+    }
+  }
+
+  // WORLD EVOLUTION: hill climbing on beauty
+  worldEvoTick++;
+  if (worldEvoTick >= WORLD_EVO_INTERVAL) {
+    worldEvoTick = 0;
+    evolveWorld();
+  }
+
+  // SIMULATION EVOLUTION: evolve the rules
+  simEvoTick++;
+  if (simEvoTick >= SIM_EVO_INTERVAL) {
+    simEvoTick = 0;
+    evolveSimulation();
+  }
+}
+
+// ========================================================================
+// STATS & DISPLAY
+// ========================================================================
+function updateStats() {
+  const alive = world.getAlive();
+  const maxGen = world.entities.reduce((m, e) => Math.max(m, e.generation), 0);
+
+  document.getElementById('s-tick').textContent = world.tick;
+  document.getElementById('tick-display').textContent = `tick ${world.tick}`;
+  document.getElementById('s-alive').textContent = alive.length;
+  document.getElementById('s-alive').className = 'stat-value ' + (alive.length >= 7 ? 'good' : alive.length >= 3 ? 'warn' : 'bad');
+  document.getElementById('s-bd').textContent = `${world.totalBirths} / ${world.totalDeaths}`;
+  document.getElementById('s-gen').textContent = maxGen;
+  document.getElementById('s-gen').className = 'stat-value ' + (maxGen >= 10 ? 'good' : maxGen >= 3 ? 'warn' : '');
+
+  // Recompute beauty with evolved weights every 10 ticks
+  if (world.tick - beautyTick >= 10) {
+    beautyCache = computeBeauty(world.grid);
+    beautyTick = world.tick;
+  }
+  if (beautyCache) {
+    setBar('beauty', beautyCache.total);
+    setBar('sym', beautyCache.symmetry);
+    setBar('complex', beautyCache.complexity);
+    setBar('rhythm', beautyCache.rhythm);
+    setBar('harmony', beautyCache.colorHarmony);
+    setBar('coverage', beautyCache.coverage);
+  }
+  if (world.tick % 20 === 0) updateEntityList();
+}
+
+function setBar(id, value) {
+  document.getElementById('s-' + id).textContent = (value * 100).toFixed(1) + '%';
+  document.getElementById('bar-' + id).style.width = (value * 100) + '%';
+}
+
+function updateEntityList() {
+  const el = document.getElementById('entity-list');
+  el.innerHTML = '';
+  const alive = world.entities.filter(e => e.alive);
+  const dead = world.entities.filter(e => !e.alive).slice(-3);
+  for (const e of [...alive, ...dead]) {
+    const [r, g, b] = COLORS[e.genome.trailColor % 6];
+    const chip = document.createElement('div');
+    chip.className = 'entity-chip' + (e.alive ? '' : ' dead');
+    const credit = (colorCredits[e.genome.trailColor] || 0);
+    chip.innerHTML = `<span class="entity-dot" style="background:rgb(${r},${g},${b})"></span>#${e.id} g${e.generation}`;
+    chip.title = `Beauty credit: ${credit.toFixed(3)} | Energy: ${e.energy.toFixed(1)} | Age: ${e.age} | Parents: ${e.parentIds.join(',')||'seed'}`;
+    el.appendChild(chip);
+  }
+}
+
+function updateWorldDisplay() {
+  document.getElementById('c-regen').textContent = world.config.resourceRegenRate.toFixed(3);
+  document.getElementById('c-decay').textContent = world.config.trailDecayRate.toFixed(3);
+  document.getElementById('c-drain').textContent = world.config.energyDrainPerTick.toFixed(3);
+  document.getElementById('c-move').textContent = world.config.moveCost.toFixed(3);
+  document.getElementById('c-harvest').textContent = world.config.harvestGain.toFixed(3);
+}
+
+function updateSimDisplay() {
+  document.getElementById('sw-sym').textContent = simDNA.wSym.toFixed(2);
+  document.getElementById('sw-cplx').textContent = simDNA.wComplex.toFixed(2);
+  document.getElementById('sw-rhy').textContent = simDNA.wRhythm.toFixed(2);
+  document.getElementById('sw-har').textContent = simDNA.wHarmony.toFixed(2);
+  document.getElementById('sw-cov').textContent = simDNA.wCoverage.toFixed(2);
+  document.getElementById('sw-nr').textContent = simDNA.neighborRadius;
+  document.getElementById('sw-se').textContent = simDNA.spawnEnergy.toFixed(0);
+}
+
+function logEvent(type, msg) {
+  const el = document.getElementById('evo-log');
+  const line = document.createElement('div');
+  line.className = type;
+  line.textContent = `[${world ? world.tick : 0}] ${msg}`;
+  el.appendChild(line);
+  el.scrollTop = el.scrollHeight;
+  while (el.children.length > 50) el.removeChild(el.firstChild);
+}
+
+// ========================================================================
+// MAIN LOOP
+// ========================================================================
+let lastStepTime = 0;
+function gameLoop(ts) {
+  requestAnimationFrame(gameLoop);
+  if (!running) { render(); return; }
+  if (ts - lastStepTime < interval) return;
+  lastStepTime = ts;
+  world.step(decide);
+  evolveStep();
+  render();
+  updateStats();
+}
+
+document.getElementById('btn-play').addEventListener('click', () => { running = true; setActive('btn-play'); });
+document.getElementById('btn-pause').addEventListener('click', () => { running = false; setActive('btn-pause'); });
+document.getElementById('btn-step').addEventListener('click', () => {
+  running = false; setActive('btn-pause');
+  world.step(decide); evolveStep(); render(); updateStats();
+});
+document.getElementById('seed').addEventListener('change', () => { init(); render(); updateStats(); });
+document.getElementById('speed').addEventListener('change', e => { interval = parseInt(e.target.value); });
+
+function setActive(id) {
+  document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+init(); render(); updateStats();
+requestAnimationFrame(gameLoop);
+</script>
+</body>
+</html>

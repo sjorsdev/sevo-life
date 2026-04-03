@@ -1,4 +1,4 @@
-// sim/types.ts — Simulation types for sevo-life
+// src/life-types.ts — Simulation types for sevo-life domain
 
 export interface Vec2 {
   x: number;
@@ -35,6 +35,9 @@ export interface Entity {
   totalHarvested: number;
   trailsLeft: number;
   distanceTraveled: number;
+  generation: number;
+  parentIds: number[];
+  bornAtTick: number;
 }
 
 export interface EntityGenome {
@@ -80,6 +83,8 @@ export interface EntityResult {
   trailsLeft: number;
   distanceTraveled: number;
   finalEnergy: number;
+  generation: number;
+  parentIds: number[];
 }
 
 export interface BeautyMetrics {
@@ -89,6 +94,15 @@ export interface BeautyMetrics {
   colorHarmony: number; // 0-1
   coverage: number;     // 0-1
   total: number;        // weighted composite 0-1
+}
+
+export interface WorldEvent {
+  type: "harvest" | "pulse" | "death" | "birth";
+  x: number;
+  y: number;
+  id: number;
+  r?: number; // pulse radius
+  generation?: number;
 }
 
 export interface SimulationResult {

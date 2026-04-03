@@ -8,9 +8,9 @@ import type {
   Entity,
   EntityAction,
   EntityGenome,
-} from "../sim/types.ts";
-import { DEFAULT_CONFIG } from "../sim/types.ts";
-import { runSimulation } from "../sim/runner.ts";
+} from "../src/life-types.ts";
+import { DEFAULT_CONFIG } from "../src/life-types.ts";
+import { runSimulation } from "../src/life-runner.ts";
 
 // Define 8 entity genomes with variation
 const genomes: EntityGenome[] = [
@@ -75,7 +75,6 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
   // Low energy? Conserve or harvest urgently
   if (entity.energy < 5) {
     if (onResource) return { type: "harvest" };
-    // Find nearest resource and move toward it
     const resourceCells = neighbors
       .filter((n) => n.cell.resource > 0.1)
       .sort((a, b) => a.distance - b.distance);
@@ -85,19 +84,15 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
     if (g.energyConserve > 0.5) return { type: "idle" };
   }
 
-  // Harvest opportunity — always harvest when on resources (boosts efficiency)
-  if (onResource) {
-    return { type: "harvest" };
-  }
+  if (onResource) return { type: "harvest" };
 
-  // Pulse — aesthetic action at regular intervals (creates rhythm)
+  // Pulse — aesthetic action at regular intervals
   if (entity.energy > 8 && g.pulseFrequency > 0 && entity.age % Math.max(5, Math.round(20 * (1 - g.pulseFrequency))) === 0) {
     return { type: "pulse", radius: 2 };
   }
 
-  // Move decision — always try to move, and leave trail behind
+  // Move decision
   if (Math.random() < g.moveSpeed) {
-    // Score each neighbor direction
     let bestDir = { x: 0, y: 0 };
     let bestScore = -Infinity;
 
@@ -120,16 +115,11 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
         if (!n.cell.occupied) score += 0.1;
       }
 
-      // Symmetry-seeking: prefer directions that mirror previous movement
       if (g.patternSymmetry > 0.5) {
-        // Bias toward axis-aligned movement for symmetric patterns
         if (dir.x === 0 || dir.y === 0) score += g.patternSymmetry * 0.3;
       }
 
-      // Exploration bonus for less-visited directions
       score += g.explorationDrive * (Math.random() * 0.5);
-
-      // Turn bias
       score += dir.x * g.turnBias * 0.2;
 
       if (score > bestScore) {
@@ -141,7 +131,7 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
     return { type: "move", direction: bestDir };
   }
 
-  // When idle, leave a trail (builds coverage and complexity)
+  // When idle, leave a trail
   if (g.trailIntensity > 0.2 && entity.energy > 5) {
     return { type: "trail", intensity: g.trailIntensity, color: g.trailColor };
   }

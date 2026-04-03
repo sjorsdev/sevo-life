@@ -1,4 +1,4 @@
-// sim/world.ts — 2D world engine for sevo-life
+// src/world.ts — 2D world engine for sevo-life
 
 import type {
   Cell,
@@ -10,7 +10,8 @@ import type {
   EntityResult,
   Vec2,
   WorldConfig,
-} from "./types.ts";
+  WorldEvent,
+} from "./life-types.ts";
 
 // Mulberry32 — seeded PRNG for deterministic simulation
 function mulberry32(seed: number): () => number {
@@ -24,16 +25,23 @@ function mulberry32(seed: number): () => number {
 }
 
 export class World {
-  readonly config: WorldConfig;
+  config: WorldConfig;  // mutable — world evolves too
   readonly grid: Cell[][];
   readonly entities: Entity[];
+  events: WorldEvent[];
   tick: number;
   private rng: () => number;
+  private nextId: number;
+  totalBirths: number;
+  totalDeaths: number;
 
   constructor(config: WorldConfig, genomes: EntityGenome[]) {
     this.config = config;
     this.tick = 0;
+    this.events = [];
     this.rng = mulberry32(config.seed);
+    this.totalBirths = 0;
+    this.totalDeaths = 0;
 
     // Initialize empty grid
     this.grid = Array.from({ length: config.height }, () =>
@@ -63,6 +71,7 @@ export class World {
         y: Math.floor(this.rng() * config.height),
       };
       this.grid[pos.y][pos.x].occupied = true;
+      this.totalBirths++;
       return {
         id: i,
         pos,
@@ -73,8 +82,55 @@ export class World {
         totalHarvested: 0,
         trailsLeft: 0,
         distanceTraveled: 0,
+        generation: 0,
+        parentIds: [],
+        bornAtTick: 0,
       };
     });
+    this.nextId = genomes.length;
+  }
+
+  /** Spawn a new entity into the living world. Returns the entity or null if no space. */
+  spawn(genome: EntityGenome, generation = 0, parentIds: number[] = []): Entity | null {
+    const { width, height } = this.config;
+    let attempts = 0;
+    while (attempts < 50) {
+      const x = Math.floor(this.rng() * width);
+      const y = Math.floor(this.rng() * height);
+      if (!this.grid[y][x].occupied) {
+        const entity: Entity = {
+          id: this.nextId++,
+          pos: { x, y },
+          energy: 20,
+          age: 0,
+          genome,
+          alive: true,
+          totalHarvested: 0,
+          trailsLeft: 0,
+          distanceTraveled: 0,
+          generation,
+          parentIds,
+          bornAtTick: this.tick,
+        };
+        this.grid[y][x].occupied = true;
+        this.entities.push(entity);
+        this.totalBirths++;
+        this.events.push({ type: "birth", x, y, id: entity.id, generation });
+        return entity;
+      }
+      attempts++;
+    }
+    return null;
+  }
+
+  /** Get currently alive entities */
+  getAlive(): Entity[] {
+    return this.entities.filter(e => e.alive);
+  }
+
+  /** Evolve world parameters mid-simulation. Only affects future ticks. */
+  evolveConfig(changes: Partial<WorldConfig>): void {
+    this.config = { ...this.config, ...changes };
   }
 
   getNeighbors(pos: Vec2, radius = 3): CellView[] {
@@ -107,15 +163,15 @@ export class World {
         if (!grid[ny][nx].occupied) {
           // Leave trail — 3 intensity phases for complexity, longer period for rhythm
           const oldCell = grid[entity.pos.y][entity.pos.x];
-          const entityPeriod = 8 + entity.id * 3; // each entity has a different rhythm period
+          const entityPeriod = 8 + entity.id * 3;
           const phase = entity.age % (entityPeriod * 3);
           let trailStrength: number;
           if (phase < entityPeriod) {
-            trailStrength = entity.genome.trailIntensity * 0.15; // light
+            trailStrength = entity.genome.trailIntensity * 0.15;
           } else if (phase < entityPeriod * 2) {
-            trailStrength = entity.genome.trailIntensity * 0.5;  // medium
+            trailStrength = entity.genome.trailIntensity * 0.5;
           } else {
-            trailStrength = entity.genome.trailIntensity * 0.9;  // strong
+            trailStrength = entity.genome.trailIntensity * 0.9;
           }
           oldCell.trail = Math.min(1, oldCell.trail + trailStrength);
           oldCell.trailColor = entity.genome.trailColor;
@@ -136,6 +192,7 @@ export class World {
           entity.energy += gained;
           entity.totalHarvested += gained;
           cell.resource = 0;
+          this.events.push({ type: "harvest", x: entity.pos.x, y: entity.pos.y, id: entity.id });
         }
         break;
       }
@@ -147,7 +204,6 @@ export class World {
         break;
       }
       case "pulse": {
-        // Visual pulse — leaves trails in a radius
         const r = Math.min(action.radius, 3);
         for (let dy = -r; dy <= r; dy++) {
           for (let dx = -r; dx <= r; dx++) {
@@ -161,10 +217,10 @@ export class World {
         }
         entity.energy -= 1;
         entity.trailsLeft += r * r;
+        this.events.push({ type: "pulse", x: entity.pos.x, y: entity.pos.y, id: entity.id, r });
         break;
       }
       case "idle":
-        // Resting — slight energy conservation
         entity.energy += 0.1;
         break;
     }
@@ -172,6 +228,7 @@ export class World {
 
   step(decisionFn: DecisionFn): void {
     this.tick++;
+    this.events = [];
     const { config, grid, entities } = this;
 
     // Entity actions
@@ -184,6 +241,8 @@ export class World {
       if (entity.energy <= 0) {
         entity.alive = false;
         grid[entity.pos.y][entity.pos.x].occupied = false;
+        this.totalDeaths++;
+        this.events.push({ type: "death", x: entity.pos.x, y: entity.pos.y, id: entity.id });
         continue;
       }
 
@@ -220,6 +279,8 @@ export class World {
       trailsLeft: e.trailsLeft,
       distanceTraveled: e.distanceTraveled,
       finalEnergy: e.energy,
+      generation: e.generation,
+      parentIds: e.parentIds,
     }));
   }
 

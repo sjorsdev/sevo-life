@@ -1,9 +1,29 @@
 {
   "@context": "sevo://v1",
   "@type": "Goal",
-  "@id": "goal:evolution-quality",
-  "name": "Improve evolutionary selection quality",
-  "metric": "EQS = (accuracy × magnitude) / (branches_explored × prediction_error)",
-  "antiGaming": "EQS computed from immutable git history. Scorer is separate process from scored agent.",
-  "timestamp": "2026-04-02T00:00:00.000Z"
+  "@id": "goal:sevo-life",
+  "name": "Beauty-driven evolution of artificial life",
+  "goals": [
+    {
+      "name": "Being beauty",
+      "description": "Each being evolves from simple to complex beauty. Measured per-entity via difference rewards — how much does this being's color/trail contribute to global beauty?",
+      "metric": "beautyByColor(grid)[entity.trailColor] — difference between global beauty with and without this entity's trails",
+      "evolvable": ["decision functions", "genome structures", "action types"]
+    },
+    {
+      "name": "World sustainability",
+      "description": "The world sustains diverse life and enables emergent complexity. The physics themselves evolve to maximize this.",
+      "metric": "diversity × avg_lifespan × pattern_emergence",
+      "evolvable": ["world mechanics", "physics parameters", "resource models"]
+    },
+    {
+      "name": "Evolution quality",
+      "description": "The simulation's own evolution improves. EQS measures selection quality. The definition of beauty itself evolves — limitless ceiling.",
+      "metric": "EQS + beauty_trend",
+      "evolvable": ["beauty scorer", "selection logic", "scoring weights"]
+    }
+  ],
+  "composite_fitness": "0.5 * survivalRate + 0.3 * beautyScore + 0.2 * efficiency",
+  "note": "Three nested evolutionary loops: beings evolve fastest (genome mutation/crossover), world evolves at medium speed (physics hill-climbing), simulation DNA evolves slowest (beauty definition). Neither survival nor aesthetics alone achieves max fitness — agents must balance both. The ceiling is limitless because code evolution (not just parameter tuning) drives all three loops.",
+  "timestamp": "2026-04-03T00:00:00.000Z"
 }

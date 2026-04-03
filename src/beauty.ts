@@ -1,7 +1,7 @@
-// sim/beauty.ts — Algorithmic beauty scorer for sevo-life
+// src/beauty.ts — Algorithmic beauty scorer for sevo-life
 // Pure math, no LLM, fully deterministic
 
-import type { BeautyMetrics, Cell } from "./types.ts";
+import type { BeautyMetrics, Cell } from "./life-types.ts";
 
 // Symmetry (25%) — how symmetric are trail patterns?
 function symmetryScore(grid: Cell[][]): number {
@@ -196,7 +196,6 @@ function colorHarmonyScore(grid: Cell[][]): number {
   if (totalTrails === 0) return 0;
 
   // Harmony: complementary colors (distance 3 on 6-hue wheel) score highest
-  // Analogous (distance 1) score medium, same color scores low
   const usedColors = colorCounts
     .map((count, i) => ({ color: i, ratio: count / totalTrails }))
     .filter((c) => c.ratio > 0.05);
@@ -211,7 +210,6 @@ function colorHarmonyScore(grid: Cell[][]): number {
         Math.abs(usedColors[i].color - usedColors[j].color),
         6 - Math.abs(usedColors[i].color - usedColors[j].color),
       );
-      // Distance 3 = complementary (1.0), distance 2 = triadic (0.8), distance 1 = analogous (0.5)
       harmonySum += dist === 3 ? 1.0 : dist === 2 ? 0.8 : 0.5;
       pairs++;
     }
@@ -235,9 +233,9 @@ function coverageScore(grid: Cell[][]): number {
 
   // Optimal coverage is around 30-60% — too sparse or too full isn't beautiful
   const ratio = trailCells / totalCells;
-  if (ratio < 0.1) return ratio * 5; // ramp up to 0.5 at 10%
-  if (ratio > 0.7) return Math.max(0, 1 - (ratio - 0.7) * 3); // ramp down after 70%
-  return 0.5 + (ratio - 0.1) * (0.5 / 0.6); // linear 0.5 to 1.0 in sweet spot
+  if (ratio < 0.1) return ratio * 5;
+  if (ratio > 0.7) return Math.max(0, 1 - (ratio - 0.7) * 3);
+  return 0.5 + (ratio - 0.1) * (0.5 / 0.6);
 }
 
 export function scoreBeauty(grid: Cell[][]): BeautyMetrics {
@@ -255,4 +253,34 @@ export function scoreBeauty(grid: Cell[][]): BeautyMetrics {
     coverage * 0.15;
 
   return { symmetry, complexity, rhythm, colorHarmony, coverage, total };
+}
+
+/**
+ * Difference rewards: measure each color's contribution to beauty.
+ * Returns array[6] where each entry = globalBeauty - beautyWithoutThatColor.
+ * Positive = that color makes the world more beautiful.
+ * Negative = that color is hurting beauty.
+ */
+export function beautyByColor(grid: Cell[][]): number[] {
+  const h = grid.length;
+  const w = grid[0].length;
+  const globalBeauty = scoreBeauty(grid).total;
+
+  const contributions: number[] = [];
+  for (let color = 0; color < 6; color++) {
+    // Build masked grid: zero out trails of this color
+    const masked: Cell[][] = Array.from({ length: h }, (_, y) =>
+      Array.from({ length: w }, (_, x) => {
+        const cell = grid[y][x];
+        const c = Math.min(5, Math.max(0, Math.floor(cell.trailColor)));
+        if (c === color && cell.trail > 0) {
+          return { ...cell, trail: 0 };
+        }
+        return cell;
+      })
+    );
+    const beautyWithout = scoreBeauty(masked).total;
+    contributions[color] = globalBeauty - beautyWithout;
+  }
+  return contributions;
 }
