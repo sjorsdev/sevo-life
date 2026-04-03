@@ -595,10 +595,12 @@ async function registerMutant(
   const finalPath =
     (await Deno.stat(canonicalPath).catch(() => null)) ? canonicalPath : mutantPath;
 
+  // Use timestamp suffix to guarantee unique IDs across concurrent registrations
+  const ts = Date.now();
   const newAgent: AgentNode = {
     "@context": "sevo://v1",
     "@type": "Agent",
-    "@id": `agent:v${actualGen}`,
+    "@id": `agent:v${actualGen}-${ts}`,
     timestamp: new Date().toISOString(),
     blueprint: finalPath,
     parent: parent["@id"],
@@ -857,7 +859,9 @@ while (true) {
 
       if (mutantScore >= parentScore) {
         console.log(`    MUTANT WINS on ${island.name}!`);
-        const gen = Math.max(...agents.map((a) => a.generation)) + 1;
+        // Use max gen + island offset to avoid generation collisions between islands
+        const maxGen = Math.max(...(await queryNodes<AgentNode>("agent")).map((a) => a.generation));
+        const gen = maxGen + islandIdx + 1; // ensures uniqueness across islands
         const newAgent = await registerMutant(islandBest.agent, mutantPath, mutationNode, gen);
         await select(newAgent["@id"], islandBest.agent["@id"], mutantFitness, islandBest.result!.fitness);
         console.log(`    Registered: ${newAgent["@id"]} (gen ${newAgent.generation})`);
