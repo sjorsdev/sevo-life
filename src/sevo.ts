@@ -20,20 +20,51 @@ import type {
 } from "./types.ts";
 
 // ---------------------------------------------------------------------------
-// LLM helper — shells out to claude CLI
+// LLM helper — shells out to claude CLI with retry
 // ---------------------------------------------------------------------------
-async function callClaude(prompt: string): Promise<string> {
-  const cmd = new Deno.Command("claude", {
-    args: ["-p", prompt, "--output-format", "text"],
-    stdout: "piped",
-    stderr: "piped",
-  });
-  const result = await cmd.output();
-  if (!result.success) {
-    const stderr = new TextDecoder().decode(result.stderr);
-    throw new Error(`claude CLI failed: ${stderr}`);
+async function callClaude(prompt: string, retries = 3): Promise<string> {
+  // Use full path to claude CLI to avoid PATH issues in deno subprocess
+  const claudePath = `${Deno.env.get("HOME")}/.local/bin/claude`;
+
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const cmd = new Deno.Command(claudePath, {
+        args: ["-p", prompt, "--output-format", "text", "--model", "sonnet"],
+        stdout: "piped",
+        stderr: "piped",
+      });
+      const result = await cmd.output();
+      const stdout = new TextDecoder().decode(result.stdout).trim();
+      const stderr = new TextDecoder().decode(result.stderr).trim();
+
+      if (!result.success) {
+        console.log(`    claude CLI attempt ${attempt}/${retries} failed: ${stderr.slice(0, 200) || `exit code ${result.code}`}`);
+        if (attempt < retries) {
+          const delay = attempt * 15_000; // 15s, 30s, 45s
+          console.log(`    Retrying in ${delay / 1000}s...`);
+          await new Promise((r) => setTimeout(r, delay));
+          continue;
+        }
+        throw new Error(`claude CLI failed after ${retries} attempts: ${stderr.slice(0, 300)}`);
+      }
+
+      if (!stdout) {
+        console.log(`    claude CLI returned empty output, attempt ${attempt}/${retries}`);
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, 10_000));
+          continue;
+        }
+        throw new Error("claude CLI returned empty output");
+      }
+
+      return stdout;
+    } catch (e) {
+      if (attempt === retries) throw e;
+      console.log(`    claude CLI error attempt ${attempt}: ${e instanceof Error ? e.message.slice(0, 150) : "unknown"}`);
+      await new Promise((r) => setTimeout(r, attempt * 15_000));
+    }
   }
-  return new TextDecoder().decode(result.stdout).trim();
+  throw new Error("callClaude: unreachable");
 }
 
 // ---------------------------------------------------------------------------
@@ -297,8 +328,13 @@ async function crossoverAgents(
 ): Promise<{ mutantPath: string; crossoverNode: CrossoverNode; mutationNode: MutationNode } | null> {
   console.log(`  Crossover: ${parent1["@id"]} × ${parent2["@id"]}...`);
 
-  const blueprint1 = await Deno.readTextFile(parent1.blueprint);
-  const blueprint2 = await Deno.readTextFile(parent2.blueprint);
+  let blueprint1 = await Deno.readTextFile(parent1.blueprint);
+  let blueprint2 = await Deno.readTextFile(parent2.blueprint);
+
+  // Truncate large blueprints to avoid overwhelming the LLM
+  const MAX_BP = 4000;
+  if (blueprint1.length > MAX_BP) blueprint1 = blueprint1.slice(0, MAX_BP) + "\n// ... (truncated)";
+  if (blueprint2.length > MAX_BP) blueprint2 = blueprint2.slice(0, MAX_BP) + "\n// ... (truncated)";
 
   const prompt = `You are performing CROSSOVER between two SEVO agent blueprints.
 Your job: combine the BEST strategies from BOTH parents into a superior child.
@@ -387,7 +423,9 @@ async function mutateAgent(
 ): Promise<{ mutantPath: string; mutationNode: MutationNode } | null> {
   console.log(`  Mutating ${agent["@id"]} [strategy: ${strategy.name}, rate: ${strategy.mutationRate.toFixed(2)}]...`);
 
-  const blueprint = await Deno.readTextFile(agent.blueprint);
+  let blueprint = await Deno.readTextFile(agent.blueprint);
+  // Truncate large blueprints
+  if (blueprint.length > 6000) blueprint = blueprint.slice(0, 6000) + "\n// ... (truncated)";
 
   const historyText =
     fitnessHistory
@@ -720,7 +758,12 @@ while (true) {
   console.log("\n--- Per-island evolution ---");
   const noveltyArchive = await queryNodes<NoveltyNode>("novelty");
 
+  let islandIdx = 0;
   for (const island of islands) {
+    // Rate limit: small delay between islands to avoid overwhelming claude CLI
+    if (islandIdx > 0) await new Promise((r) => setTimeout(r, 5_000));
+    islandIdx++;
+
     console.log(`\n  [${island.name}] strategy=${island.strategy}`);
 
     // Get island's strategy configuration

@@ -17,18 +17,31 @@ import type {
 // ---------------------------------------------------------------------------
 // LLM helper
 // ---------------------------------------------------------------------------
-async function callClaude(prompt: string): Promise<string> {
-  const cmd = new Deno.Command("claude", {
-    args: ["-p", prompt, "--output-format", "text"],
-    stdout: "piped",
-    stderr: "piped",
-  });
-  const result = await cmd.output();
-  if (!result.success) {
-    const stderr = new TextDecoder().decode(result.stderr);
-    throw new Error(`claude CLI failed: ${stderr}`);
+async function callClaude(prompt: string, retries = 2): Promise<string> {
+  const claudePath = `${Deno.env.get("HOME")}/.local/bin/claude`;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const cmd = new Deno.Command(claudePath, {
+        args: ["-p", prompt, "--output-format", "text", "--model", "sonnet"],
+        stdout: "piped",
+        stderr: "piped",
+      });
+      const result = await cmd.output();
+      const stdout = new TextDecoder().decode(result.stdout).trim();
+      if (!result.success || !stdout) {
+        if (attempt < retries) {
+          await new Promise((r) => setTimeout(r, attempt * 10_000));
+          continue;
+        }
+        throw new Error(`claude CLI failed: ${new TextDecoder().decode(result.stderr).slice(0, 200)}`);
+      }
+      return stdout;
+    } catch (e) {
+      if (attempt === retries) throw e;
+      await new Promise((r) => setTimeout(r, attempt * 10_000));
+    }
   }
-  return new TextDecoder().decode(result.stdout).trim();
+  throw new Error("callClaude: unreachable");
 }
 
 // ---------------------------------------------------------------------------
