@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:run-v6-benchmark-v3-done-1775192097287",
+  "timestamp": "2026-04-03T04:54:57.287Z",
+  "description": "Run agent-v6 (40 tests, schema validation, reference checks, 3 strategies) against benchmark-v3. Score EQS.",
+  "priority": 1,
+  "status": "done",
+  "dependsOn": [],
+  "result": "{\"fitness\":1,\"branches\":3,\"correct\":40,\"total\":40,\"winningStrategy\":\"strict-upfront\"}\n"
+}
