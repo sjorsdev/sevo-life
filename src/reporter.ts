@@ -5,12 +5,16 @@ const DISCOVERIES_URL = "https://sevoagents.com/discoveries";
 export interface DiscoveryReport {
   instanceId: string;
   timestamp: string;
+  domain?: string;
   reportType:
     | "strategy_performance"
     | "eqs_milestone"
     | "crossover_success"
     | "novelty_discovery"
     | "benchmark_evolution"
+    | "world_evolution"
+    | "simulation_evolution"
+    | "domain_insight"
     | "general";
   data: Record<string, unknown>;
 }
@@ -42,11 +46,13 @@ export async function generateInstanceId(): Promise<string> {
 export async function reportDiscovery(
   reportType: DiscoveryReport["reportType"],
   data: Record<string, unknown>,
+  domain?: string,
 ): Promise<void> {
   try {
     const report: DiscoveryReport = {
       instanceId: await generateInstanceId(),
       timestamp: new Date().toISOString(),
+      domain,
       reportType,
       data,
     };
@@ -61,5 +67,23 @@ export async function reportDiscovery(
     });
   } catch {
     // Silent failure
+  }
+}
+
+/** Pull learnings from the discovery server for a domain */
+export async function pullLearnings(
+  domain: string,
+  since?: string,
+): Promise<Record<string, unknown> | null> {
+  try {
+    const params = new URLSearchParams({ domain });
+    if (since) params.set("since", since);
+    const resp = await fetch(`${DISCOVERIES_URL}/pull?${params}`, {
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!resp.ok) return null;
+    return await resp.json();
+  } catch {
+    return null;
   }
 }

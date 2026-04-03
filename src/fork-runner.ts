@@ -7,6 +7,7 @@ import { queryNodes, writeNode } from "./graph.ts";
 import { run, SEVO_PERMISSIONS } from "./runner.ts";
 import { score } from "./scorer.ts";
 import { git } from "./git.ts";
+import { reportDiscovery, pullLearnings } from "./reporter.ts";
 import type {
   AgentNode,
   FitnessNode,
@@ -131,6 +132,20 @@ async function runDomainCycle(
   console.log(`\n--- ${goal.domain}: Cycle ${cycle} ---`);
   console.log(`  Goals: ${goal.goals.map(g => g.name).join(", ")}`);
 
+  // Pull learnings from discovery server before evolving
+  const learnings = await pullLearnings(goal.domain);
+  if (learnings) {
+    const recs = learnings.recommendations as Record<string, unknown> | undefined;
+    const topPriority = recs?.topPriority as string | undefined;
+    if (topPriority && topPriority !== "none") {
+      console.log(`  Server recommends focus on: ${topPriority}`);
+    }
+    const crossInsights = learnings.crossInsights as Array<Record<string, unknown>> | undefined;
+    if (crossInsights?.length) {
+      console.log(`  Cross-domain insights: ${crossInsights.length}`);
+    }
+  }
+
   // Get agents and benchmark
   let agents = await getDomainAgents(goal.domain);
   const benchmark = await getDomainBenchmark(goal.domain);
@@ -182,6 +197,18 @@ async function runDomainCycle(
         const survivalRate = (result.fitnessOutput.survivalRate as number) ?? 0;
         console.log(`    fitness=${fitness.toFixed(3)} beauty=${beautyScore.toFixed(3)} survival=${survivalRate.toFixed(3)}`);
 
+        // Report to discovery server
+        reportDiscovery("eqs_milestone", {
+          agentId: agent["@id"],
+          fitness,
+          beautyScore,
+          survivalRate,
+          efficiency: (result.fitnessOutput.efficiency as number) ?? 0,
+          beauty: result.fitnessOutput.beauty ?? {},
+          generation: agent.generation,
+          cycleId,
+        }, goal.domain);
+
         if (fitness > bestFitness) {
           bestFitness = fitness;
           bestAgent = agent;
@@ -208,13 +235,23 @@ async function runDomainCycle(
       `- ${g.name}: ${g.description} (metric: ${g.metric})`
     ).join("\n");
 
+    // Include server recommendations in mutation prompt if available
+    let serverGuidance = "";
+    if (learnings) {
+      const recs = learnings.recommendations as Record<string, unknown> | undefined;
+      const recList = recs?.recommendations as string[] | undefined;
+      if (recList?.length) {
+        serverGuidance = `\nSERVER RECOMMENDATIONS (from cross-instance learning):\n${recList.slice(0, 3).map(r => `- ${r}`).join("\n")}\n`;
+      }
+    }
+
     const prompt = `You are evolving a sevo-life agent to improve multi-goal fitness.
 
 DOMAIN GOALS:
 ${goalDescription}
 
 COMPOSITE FITNESS: ${goal.compositeFitness}
-
+${serverGuidance}
 CURRENT BLUEPRINT (truncated):
 \`\`\`typescript
 ${truncated}
@@ -312,6 +349,15 @@ async function recordDomainLearnings(
 
   await writeNode(seedImprovement);
   console.log(`  Recorded ${improvements.length} domain learnings`);
+
+  // Also report insights to discovery server
+  for (const insight of improvements) {
+    reportDiscovery("domain_insight", {
+      insight,
+      source: `${domain}-cycle-${cycle}`,
+      applicability: "cross-domain",
+    }, domain);
+  }
 }
 
 // ===========================================================================
