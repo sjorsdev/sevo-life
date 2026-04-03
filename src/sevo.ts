@@ -75,12 +75,16 @@ async function getBestAgent(): Promise<AgentNode | null> {
   const fitnessScores = await queryNodes<FitnessNode>("fitness");
   if (!fitnessScores.length) return active[0];
 
-  // Composite score: latest EQS + average absolute fitness
+  // Composite score: fitness history + generation bonus for newer agents
   const agentScore = new Map<string, number>();
+  const maxGen = Math.max(...active.map((a) => a.generation));
   for (const agent of active) {
     const agentFitness = fitnessScores.filter((f) => f.agent === agent["@id"]);
+    // Generation bonus: newer agents get priority to be tested
+    const genBonus = agent.generation / Math.max(maxGen, 1);
     if (!agentFitness.length) {
-      agentScore.set(agent["@id"], 0);
+      // Untested agents get a bonus so they get a chance to run
+      agentScore.set(agent["@id"], 0.5 + 0.5 * genBonus);
       continue;
     }
     const latestEqs = agentFitness.at(-1)?.eqs ?? 0;
@@ -89,7 +93,10 @@ async function getBestAgent(): Promise<AgentNode | null> {
         (sum, f) => sum + ((f.context?.fitness as number) ?? 0),
         0
       ) / agentFitness.length;
-    agentScore.set(agent["@id"], 0.5 * latestEqs + 0.5 * avgFitness);
+    agentScore.set(
+      agent["@id"],
+      0.4 * latestEqs + 0.3 * avgFitness + 0.3 * genBonus
+    );
   }
 
   return (

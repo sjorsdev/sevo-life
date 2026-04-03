@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:test-v5-selection",
+  "timestamp": "2026-04-03T05:00:00.000Z",
+  "description": "Run agent-v5 (multi-strategy, 30 tests, 3 branches) and verify it gets selected by getBestAgent. Score EQS.",
+  "priority": 1,
+  "status": "pending",
+  "dependsOn": []
+}
