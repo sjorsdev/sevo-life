@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Selection",
+  "@id": "selection-v6-over-v5",
+  "timestamp": "2026-04-03T05:20:00.000Z",
+  "winner": "agent:v6",
+  "loser": "agent:v5",
+  "winnerEqs": 0.667,
+  "loserEqs": 0.4,
+  "reasoning": "agent-v6 adds per-type schema validation and cross-node reference checking. 40 tests vs 30. Both maintain fitness=1.0 with 3 strategies. v6 directly targets benchmark-v3 requirements.",
+  "eqsDelta": 0.267
+}
