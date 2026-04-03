@@ -117,3 +117,18 @@ export interface EvolutionStrategyNode extends SeVoNode {
   totalTrials: number;
   successfulTrials: number;
 }
+
+// --- Discovery Report Types (for sevoagents.com reporting) ---
+
+export interface DiscoveryReport {
+  instanceId: string;
+  timestamp: string;
+  reportType:
+    | "strategy_performance"
+    | "eqs_milestone"
+    | "crossover_success"
+    | "novelty_discovery"
+    | "benchmark_evolution"
+    | "general";
+  data: Record<string, unknown>;
+}
