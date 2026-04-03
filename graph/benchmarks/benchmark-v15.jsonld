@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v15",
+  "timestamp": "2026-04-03T10:56:59.167Z",
+  "version": 15,
+  "parent": "benchmark-v14",
+  "task": "Implement Byzantine-resilient consensus with dynamic validator set management, adaptive fault tolerance, and provably immutable finality. Extend v14 by requiring: (1) Dynamic Validator Set with Atomic Safety—add and remove validators during live consensus while provably maintaining Byzantine safety (f < n/3 always holds); prove that all active validators have causally-consistent view of membership changes; (2) Adaptive Byzantine Threshold Recalculation—automatically recalculate max faults f_new = floor((n_new - 1) / 3) during set changes; ensure no liveness gap where threshold is undefined; prevent validator removal that would violate f < n/3 invariant; (3) Leader Equivocation Under Byzantine Leadership—detect if leader itself is Byzantine by identifying conflicting blocks, votes, or proposals it sent; prove equivocation using cryptographic signature analysis; trigger deterministic replacement without consensus halt; (4) Immutable Finality Anchors—mark blocks as finalized only after f+1 validators sign; prove that finalized blocks cannot be rolled back even if f validators later become Byzantine; include cryptographic proof of finality irreversibility; (5) Cascading Failure Resilience—correctly handle validators failing and recovering in rapid sequence (e.g., 3+ faults within 2 rounds); prove liveness is not lost; prove safety is not violated; characterize timing constraints that prevent cascade-induced splits.",
+  "scoringLogic": "dynamicValidatorSetAtomicity(0.15) + adaptiveThresholdCorrectness(0.13) + leaderEquivocationDetection(0.14) + immutableFinalityProof(0.14) + cascadingFailureResilience(0.13) + byzantineSafetyUnderDynamics(0.15) + livenessUnderMembership(0.16)",
+  "difficulty": 15,
+  "passThreshold": 0.95
+}
