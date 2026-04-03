@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v4",
+  "timestamp": "2026-04-03T05:08:20.295Z",
+  "version": 4,
+  "parent": "benchmark:write-graph-node-v3",
+  "task": "Create, validate, persist, and query JSON-LD SeVoNodes under adversarial and resource-constrained conditions. Must handle all v3 requirements plus: (1) graph cycle detection — reject writes that would create circular @id reference chains, (2) schema migration — read nodes written in a legacy format (missing @context, flat fields) and normalize them without data loss, (3) write-ahead logging — all writes go through a WAL; crash mid-batch (simulated via AbortSignal after random delay) must leave graph in consistent state with no partial writes committed, (4) query planning — answer multi-hop graph traversals (e.g. 'all fitness nodes for agents descended from agent X within 3 generations') in under 50ms for a graph of 500+ nodes, (5) memory budget — complete all operations with heap usage staying under 64MB (tracked via Deno.memoryUsage), (6) adversarial input — reject malformed nodes that pass naive JSON.parse but contain prototype pollution attempts, circular JSON references, or @id values with path traversal sequences",
+  "scoringLogic": "correctness(0.15) + typeSafety(0.10) + schemaValidation(0.10) + concurrency(0.10) + referenceIntegrity(0.10) + cycleDetection(0.10) + schemaMigration(0.10) + crashRecovery(0.10) + queryPerformance(0.05) + memoryEfficiency(0.05) + adversarialRejection(0.05)",
+  "difficulty": 4,
+  "passThreshold": 0.8
+}
