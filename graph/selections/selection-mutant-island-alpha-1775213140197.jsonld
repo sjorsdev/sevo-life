@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Selection",
+  "@id": "selection-mutant-island-alpha-1775213140197",
+  "timestamp": "2026-04-03T10:45:40.197Z",
+  "winner": "mutant-island-alpha",
+  "loser": "agent:v6",
+  "winnerEqs": 0.4984615384615385,
+  "loserEqs": 0.4,
+  "reasoning": "mutant EQS 0.498 > parent 0.400",
+  "eqsDelta": 0.09846153846153849
+}
