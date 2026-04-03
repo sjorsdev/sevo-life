@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "seed-improvement-restartability-1",
+  "timestamp": "2026-04-03T11:05:00.000Z",
+  "observation": "After 10 cycles of advanced evolution (island model, crossover, novelty search, adaptive mutation), the system has: 22 active agents, 16 benchmarks (difficulty 1-16), 380 fitness records. Crossover is the most successful strategy (36% success). The CLAUDE.md seed is complete enough to reconstruct everything from scratch — all code was generated from the seed. Restarting with the same seed but more context would produce a better system faster.",
+  "suggestion": "The seed (CLAUDE.md) should be updated to include learnings: (1) Use haiku model for mutations (faster), sonnet for architecture decisions. (2) Use island model with 3 strategies from the start. (3) Start benchmarks at difficulty 3+ to avoid trivial early cycles. (4) Crossover is the most productive mutation type — weight it higher (70%+). (5) Truncate blueprints to 3K chars for mutation prompts. (6) Use timestamp suffixes on agent IDs to avoid collisions. (7) Graph type pluralization creates 'fitnesss' — fix or accept.",
+  "evidence": ["selection-agent-v55-1775214024309-1775214024406", "strategy-crossover-1775214024430", "benchmark-v16"],
+  "priority": 2
+}
