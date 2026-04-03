@@ -1,0 +1,15 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Island",
+  "@id": "island-island-gamma-1775193510802",
+  "timestamp": "2026-04-03T05:18:30.802Z",
+  "name": "island-gamma",
+  "strategy": "crossover",
+  "agents": [
+    "agent:v2",
+    "agent:v3"
+  ],
+  "migrationInterval": 4,
+  "mutationRate": 0.5,
+  "cyclesSinceImprovement": 0
+}
