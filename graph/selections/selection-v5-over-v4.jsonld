@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Selection",
+  "@id": "selection-v5-over-v4",
+  "timestamp": "2026-04-03T04:50:00.000Z",
+  "winner": "agent:v5",
+  "loser": "agent:v4",
+  "winnerEqs": 0.533,
+  "loserEqs": 0.4,
+  "reasoning": "agent-v5 explores 3 strategies (branches=3) vs agent-v4's single approach (branches=1). Both achieve fitness=1.0 but v5 demonstrates multi-strategy exploration, directly improving the branchesExplored EQS component.",
+  "eqsDelta": 0.133
+}

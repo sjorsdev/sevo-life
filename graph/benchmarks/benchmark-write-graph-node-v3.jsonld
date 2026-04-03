@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark:write-graph-node-v3",
+  "timestamp": "2026-04-03T04:50:00.000Z",
+  "version": 3,
+  "parent": "benchmark:write-graph-node-v2",
+  "task": "Create, validate, persist, and query JSON-LD SeVoNodes. Must handle: schema validation per node type (AgentNode requires blueprint+generation, FitnessNode requires agent+eqs+cycleId), cross-node reference validation (@id references exist), concurrent writes with conflict detection, 100+ parallel operations, and multiple competing strategies with winner selection.",
+  "scoringLogic": "correctness(0.2) + typeSafety(0.15) + schemaValidation(0.2) + concurrency(0.15) + multiStrategy(0.15) + referenceIntegrity(0.15)",
+  "difficulty": 3,
+  "passThreshold": 0.75
+}

@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:mutate-v5-schema",
+  "timestamp": "2026-04-03T04:50:00.000Z",
+  "description": "Mutate agent-v5 to add per-type schema validation (AgentNode requires blueprint+generation, FitnessNode requires agent+eqs). Test the mutant and select if improved.",
+  "priority": 2,
+  "status": "pending",
+  "dependsOn": []
+}
