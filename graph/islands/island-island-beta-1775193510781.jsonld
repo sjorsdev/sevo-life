@@ -1,0 +1,15 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Island",
+  "@id": "island-island-beta-1775193510781",
+  "timestamp": "2026-04-03T05:18:30.781Z",
+  "name": "island-beta",
+  "strategy": "aggressive",
+  "agents": [
+    "agent:v4",
+    "agent:v1"
+  ],
+  "migrationInterval": 3,
+  "mutationRate": 0.8,
+  "cyclesSinceImprovement": 0
+}
