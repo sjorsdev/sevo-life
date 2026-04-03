@@ -16,18 +16,19 @@ export interface RunResult {
   fitnessOutput?: Record<string, unknown>;
 }
 
+// No API key needed — mutator uses claude CLI, not direct API calls
 export const SEVO_PERMISSIONS: RunPermissions = {
   read: ["./graph", "./blueprints", "./goal.jsonld", "./src"],
   write: ["./graph"],
-  network: ["api.anthropic.com"],
-  env: ["ANTHROPIC_API_KEY"],
+  network: [],
+  env: [],
 };
 
 export const APP_PERMISSIONS = (appEnvVars: string[]): RunPermissions => ({
   read: ["./graph", "./blueprints", "./goal.jsonld"],
   write: ["./graph/staging"],
-  network: ["api.anthropic.com"],
-  env: ["ANTHROPIC_API_KEY", ...appEnvVars],
+  network: [],
+  env: [...appEnvVars],
 });
 
 export async function run(

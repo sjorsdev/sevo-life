@@ -132,10 +132,11 @@ Sandboxing:  Deno subprocess permissions
              Each agent run gets explicit --allow-read/write/net flags.
              No Docker needed. Deno enforces boundaries natively.
 
-LLM:         Anthropic API
-             ANTHROPIC_API_KEY from environment.
-             Model routing per task — Haiku for cheap tasks,
-             Sonnet for reasoning, Opus for architectural decisions.
+LLM:         Claude Code CLI (`claude -p` for programmatic, subagents for parallel)
+             No API key needed — claude CLI handles authentication.
+             Mutator shells out to `claude -p` for mutation proposals.
+             Main worker IS Claude Code — it drives the loop directly.
+             Use subagents (Agent tool) for parallel mutation evaluation.
 
 Worker:      This Claude Code instance
              Runs with full VM permissions (--dangerously-skip-permissions).
@@ -438,19 +439,20 @@ export interface RunResult {
 }
 
 // Default permissions for SEVO agents
+// No API key needed — mutator uses claude CLI, not direct API calls
 export const SEVO_PERMISSIONS: RunPermissions = {
   read: ["./graph", "./blueprints", "./goal.jsonld", "./src"],
   write: ["./graph"],
-  network: ["api.anthropic.com"],
-  env: ["ANTHROPIC_API_KEY"]
+  network: [],
+  env: []
 }
 
 // Application agents get additional permissions via env vars
 export const APP_PERMISSIONS = (appEnvVars: string[]): RunPermissions => ({
   read: ["./graph", "./blueprints", "./goal.jsonld"],
   write: ["./graph/staging"],  // staging only — scorer promotes
-  network: ["api.anthropic.com"],
-  env: ["ANTHROPIC_API_KEY", ...appEnvVars]
+  network: [],
+  env: [...appEnvVars]
 })
 
 export async function run(
@@ -558,31 +560,35 @@ export async function score(
 
 ---
 
-## mutator.ts — LLM-driven mutation proposals
+## mutator.ts — LLM-driven mutation proposals via claude CLI
 
 ```typescript
 // src/mutator.ts
-import Anthropic from "npm:@anthropic-ai/sdk"
 import { writeNode, queryNodes } from "./graph.ts"
 import { git } from "./git.ts"
 import type { MutationNode, FitnessNode, AgentNode } from "./types.ts"
 
-const client = new Anthropic()
+// No API key needed — uses claude CLI directly
+async function callClaude(prompt: string): Promise<string> {
+  const cmd = new Deno.Command("claude", {
+    args: ["-p", prompt, "--output-format", "text"],
+    stdout: "piped",
+    stderr: "piped",
+  })
+  const result = await cmd.output()
+  if (!result.success) {
+    throw new Error(`claude CLI failed: ${new TextDecoder().decode(result.stderr)}`)
+  }
+  return new TextDecoder().decode(result.stdout).trim()
+}
 
 export async function propose(agent: AgentNode): Promise<MutationNode> {
-  // Read blueprint and fitness history
   const blueprint = await Deno.readTextFile(agent.blueprint)
   const history = await queryNodes<FitnessNode>("fitness",
     n => n.agent === agent["@id"]
   )
 
-  // Ask LLM for one targeted mutation
-  const response = await client.messages.create({
-    model: "claude-sonnet-4-6",
-    max_tokens: 2000,
-    messages: [{
-      role: "user",
-      content: `You are mutating a SEVO agent blueprint to improve EQS.
+  const prompt = `You are mutating a SEVO agent blueprint to improve EQS.
 
 Current blueprint:
 \`\`\`typescript
@@ -594,26 +600,22 @@ ${history.slice(-5).map(f =>
   `- ${f.timestamp}: EQS ${f.eqs.toFixed(3)} ` +
   `(accuracy: ${f.accuracy}, magnitude: ${f.magnitude.toFixed(3)}, ` +
   `branches: ${f.branchesExplored}, predError: ${f.predictionError.toFixed(3)})`
-).join("\n")}
+).join("\n") || "No history yet."}
 
 Propose ONE specific, minimal change to improve EQS.
-Focus on what the fitness history reveals about weaknesses.
 
-Respond with JSON:
+Respond with JSON only, no markdown fences:
 {
   "reasoning": "why this mutation improves EQS",
   "change": "exact description of what to change",
-  "expectedImprovement": 0.0-1.0,
+  "expectedImprovement": 0.1,
   "targetMetric": "accuracy|magnitude|branches|predictionError"
 }`
-    }]
-  })
 
-  const parsed = JSON.parse(
-    (response.content[0] as { text: string }).text
-  )
+  const response = await callClaude(prompt)
+  const jsonMatch = response.match(/\{[\s\S]*\}/)
+  const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : response)
 
-  // Create git branch for this mutation
   const branchName = `mutation/${agent["@id"]}-${Date.now()}`
   await git.branch(branchName)
 
