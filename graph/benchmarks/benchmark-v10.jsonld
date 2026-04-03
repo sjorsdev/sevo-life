@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v10",
+  "timestamp": "2026-04-03T10:42:42.802Z",
+  "version": 10,
+  "parent": "benchmark-v9",
+  "task": "Implement leaderless Byzantine-resilient consensus with synchronous safety proof, adaptive-adversary resistance, and fork-free finality. Extend v9 by adding: (1) Synchronous safety under all-to-all communication with formal proof that O(n²) message complexity is information-theoretically necessary (lower bound proof in communication-complexity framework); (2) Liveness under partial synchrony with explicit view-change protocol—prove safety across view transitions and that GST triggers finality within f < n/3 rounds (no view-change loops, no cyclic stalls); (3) Adaptive Byzantine adversary model—adversary can corrupt honest nodes after proposal phase, must still guarantee finality for already-batched requests (historical safety); (4) Fork-free finality: once a block is committed, prove NO execution path can finalize a conflicting block, even under network partition + node resurrection + total restarts (no blockchain-style rollbacks); (5) State machine replication with concurrent client-request batching—order client requests deterministically, prove linearizability under concurrent proposals and Byzantine faults; (6) Quantum-resistant assumptions—use lattice-based signatures and post-quantum hash functions, prove collision resistance under quantum adversary; (7) Performance: prove latency bounds in Delta (network delay) and prove throughput ≥ n*B/Delta where B is batch size.",
+  "scoringLogic": "synchronousSafetyProof(0.16) + messageLowerBound(0.14) + livenessUnderPartialSync(0.13) + viewChangeCorrectness(0.12) + adaptiveAdversaryResistance(0.12) + forkFreeFinality(0.11) + linearizabilityProof(0.10) + quantumResistance(0.08) + latencyThroughputBounds(0.04)",
+  "difficulty": 10,
+  "passThreshold": 0.95
+}
