@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "fork-learning-sevo-calc-cycle-2-1775193716747",
+  "timestamp": "2026-04-03T05:21:56.747Z",
+  "observation": "Fork sevo-calc (fitness 1.000) generated 1 domain insights",
+  "suggestion": "Cross-validation between independent evaluation strategies (recursive descent vs shunting-yard)",
+  "evidence": [
+    "fork:sevo-calc",
+    "cycle:2"
+  ],
+  "priority": 5
+}
