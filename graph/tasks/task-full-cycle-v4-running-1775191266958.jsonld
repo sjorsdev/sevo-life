@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:full-cycle-v4-running-1775191266958",
+  "timestamp": "2026-04-03T04:41:06.958Z",
+  "description": "Run agent-v4 on benchmark-v2, score EQS, propose mutation via claude CLI, and record results.",
+  "priority": 1,
+  "status": "running",
+  "dependsOn": []
+}
