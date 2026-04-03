@@ -19,7 +19,7 @@ export interface RunResult {
 // No API key needed — mutator uses claude CLI, not direct API calls
 export const SEVO_PERMISSIONS: RunPermissions = {
   read: ["./graph", "./blueprints", "./goal.jsonld", "./src"],
-  write: ["./graph"],
+  write: ["./graph", Deno.env.get("TMPDIR") ?? "/tmp"],
   network: [],
   env: [],
 };
