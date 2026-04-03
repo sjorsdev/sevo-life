@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v7",
+  "timestamp": "2026-04-03T10:21:11.689Z",
+  "version": 7,
+  "parent": "benchmark-v6",
+  "task": "Implement linearizable distributed consensus with Byzantine leader election, dynamic reconfiguration, and cryptographic state verification. Build on v6 by adding: (1) Linearizability proof — demonstrate all concurrent operations appear as single-threaded execution with total ordering; verify via trace analysis against linearization points; (2) Byzantine leader election — leader can be faulty; system must elect new leader, maintain safety during transition, tolerate 1/3 Byzantine nodes in election; (3) Dynamic reconfiguration — add/remove replicas at runtime; old and new quorum sizes must be safe (never allow single-quorum split-brain); (4) Merkle tree state verification — replicas compute cryptographic merkle trees of state; periodic verification detects divergence within 100ms; (5) Strict p99 latency under adversarial load — 500ms p99 with 30% Byzantine byzantine nodes actively delaying/dropping messages; (6) Log compaction with safe snapshotting — compress logs without losing safety; snapshots must include quorum signatures proving they were committed; (7) Total ordering verification — provide timestamped operation log that is identical across all correct replicas; agent must prove no causality violations.",
+  "scoringLogic": "linearizabilityProof(0.22) + byzantineLeaderElection(0.18) + reconfigurationSafety(0.15) + merkleVerification(0.12) + p99LatencySLA(0.12) + snapshotSafety(0.10) + totalOrderingConsistency(0.08) + failureRecoverySpeed(0.03)",
+  "difficulty": 7,
+  "passThreshold": 0.95
+}
