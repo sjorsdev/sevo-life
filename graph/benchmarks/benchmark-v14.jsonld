@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v14",
+  "timestamp": "2026-04-03T10:54:20.639Z",
+  "version": 14,
+  "parent": "benchmark-v13",
+  "task": "Implement Byzantine-resilient consensus with leader rotation, causal consistency, and provable progress under partial synchrony. Extend v13 by requiring: (1) Concurrent Fork Resolution with Blame Attribution—detect and resolve 5+ competing forks simultaneously; cryptographically prove which validator(s) caused each fork using signed message sequences and equivocation evidence; (2) Byzantine Broadcast Sub-protocol—implement reliable broadcast for leader proposals with Byzantine safety and liveness proofs; guarantee all non-faulty validators receive identical proposal content; (3) Leader Rotation Protocol—implement view-change mechanism allowing validators to evict Byzantine leaders; prove safety of rotation (no two leaders can commit conflicting blocks in same round); prove liveness of rotation (new leader elected within bounded time despite f Byzantine adversaries); (4) Causal Consistency Under Byzantine Conditions—prove all validators observe causal order of commits (if tx A→B causally, all see A before B); handle Byzantine validators that attempt to reorder causally-linked transactions; (5) Provable Liveness/Progress—prove consensus terminates within O(f + 1) rounds under partial synchrony model; formalize network delay bounds; prove no indefinite consensus delays even with adaptive Byzantine adversary; (6) Adaptive Adversary with Message Knowledge—adversary observes all messages before deciding which f validators to corrupt each round; prove consensus safety despite this stronger model; prove adversary cannot predict future leader identity to pre-corrupt quorum.",
+  "scoringLogic": "concurrentForkDetectionWithBlame(0.14) + byzantineBroadcastProtocol(0.14) + leaderRotationSafety(0.12) + leaderRotationLiveness(0.12) + causalConsistencyProof(0.15) + livenessProgressFormalization(0.14) + adaptiveKnowledgeAdversaryProof(0.13)",
+  "difficulty": 14,
+  "passThreshold": 0.95
+}
