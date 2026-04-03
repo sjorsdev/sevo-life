@@ -11,7 +11,7 @@ export interface WorldConfig {
   maxTicks: number;
   initialResources: number;     // resource cells at start
   resourceRegenRate: number;    // probability per tick per empty cell
-  trailDecayRate: number;       // trail intensity lost per tick (0-1)
+  trailDecayRate: number;       // trail intensity lost per tick (0-1) — lower = trails persist longer
   energyDrainPerTick: number;   // energy cost per tick alive
   moveCost: number;             // extra energy cost for moving
   harvestGain: number;          // energy gained from harvesting
@@ -107,7 +107,7 @@ export const DEFAULT_CONFIG: WorldConfig = {
   maxTicks: 200,
   initialResources: 80,
   resourceRegenRate: 0.005,
-  trailDecayRate: 0.05,
+  trailDecayRate: 0.02,  // slower decay = trails persist longer for coverage/complexity
   energyDrainPerTick: 0.5,
   moveCost: 0.3,
   harvestGain: 5,

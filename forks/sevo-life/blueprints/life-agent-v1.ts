@@ -85,22 +85,17 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
     if (g.energyConserve > 0.5) return { type: "idle" };
   }
 
-  // Harvest opportunity
-  if (onResource && entity.energy < 15) {
+  // Harvest opportunity — always harvest when on resources (boosts efficiency)
+  if (onResource) {
     return { type: "harvest" };
   }
 
-  // Pulse — aesthetic action, only when energy allows
-  if (entity.energy > 10 && g.pulseFrequency > 0 && Math.random() < g.pulseFrequency * 0.1) {
+  // Pulse — aesthetic action at regular intervals (creates rhythm)
+  if (entity.energy > 8 && g.pulseFrequency > 0 && entity.age % Math.max(5, Math.round(20 * (1 - g.pulseFrequency))) === 0) {
     return { type: "pulse", radius: 2 };
   }
 
-  // Trail — leave a mark
-  if (entity.energy > 8 && g.trailIntensity > 0.3 && Math.random() < g.trailIntensity * 0.3) {
-    return { type: "trail", intensity: g.trailIntensity, color: g.trailColor };
-  }
-
-  // Move decision
+  // Move decision — always try to move, and leave trail behind
   if (Math.random() < g.moveSpeed) {
     // Score each neighbor direction
     let bestDir = { x: 0, y: 0 };
@@ -125,6 +120,12 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
         if (!n.cell.occupied) score += 0.1;
       }
 
+      // Symmetry-seeking: prefer directions that mirror previous movement
+      if (g.patternSymmetry > 0.5) {
+        // Bias toward axis-aligned movement for symmetric patterns
+        if (dir.x === 0 || dir.y === 0) score += g.patternSymmetry * 0.3;
+      }
+
       // Exploration bonus for less-visited directions
       score += g.explorationDrive * (Math.random() * 0.5);
 
@@ -138,6 +139,11 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
     }
 
     return { type: "move", direction: bestDir };
+  }
+
+  // When idle, leave a trail (builds coverage and complexity)
+  if (g.trailIntensity > 0.2 && entity.energy > 5) {
+    return { type: "trail", intensity: g.trailIntensity, color: g.trailColor };
   }
 
   return { type: "idle" };

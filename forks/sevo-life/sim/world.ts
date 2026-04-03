@@ -105,7 +105,23 @@ export class World {
         const nx = (entity.pos.x + action.direction.x + config.width) % config.width;
         const ny = (entity.pos.y + action.direction.y + config.height) % config.height;
         if (!grid[ny][nx].occupied) {
-          grid[entity.pos.y][entity.pos.x].occupied = false;
+          // Leave trail — 3 intensity phases for complexity, longer period for rhythm
+          const oldCell = grid[entity.pos.y][entity.pos.x];
+          const entityPeriod = 8 + entity.id * 3; // each entity has a different rhythm period
+          const phase = entity.age % (entityPeriod * 3);
+          let trailStrength: number;
+          if (phase < entityPeriod) {
+            trailStrength = entity.genome.trailIntensity * 0.15; // light
+          } else if (phase < entityPeriod * 2) {
+            trailStrength = entity.genome.trailIntensity * 0.5;  // medium
+          } else {
+            trailStrength = entity.genome.trailIntensity * 0.9;  // strong
+          }
+          oldCell.trail = Math.min(1, oldCell.trail + trailStrength);
+          oldCell.trailColor = entity.genome.trailColor;
+          if (entity.genome.trailIntensity > 0.1) entity.trailsLeft++;
+
+          oldCell.occupied = false;
           entity.pos = { x: nx, y: ny };
           grid[ny][nx].occupied = true;
           entity.energy -= config.moveCost;
