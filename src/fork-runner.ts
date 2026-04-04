@@ -8,6 +8,7 @@ import { run, SEVO_PERMISSIONS } from "./runner.ts";
 import { score } from "./scorer.ts";
 import { git } from "./git.ts";
 import { reportDiscovery, pullLearnings } from "./reporter.ts";
+import { computeSevoScore } from "./sevoscore.ts";
 import type {
   AgentNode,
   FitnessNode,
@@ -381,6 +382,13 @@ async function main() {
       }
       await recordDomainLearnings(goal.domain, improvements, bestFitness, cycle);
     }
+
+    // Compute SevoScore for this cycle
+    console.log("\n--- SevoScore ---");
+    const bestAgent = bestFitness?.agent ?? "unknown";
+    const bestEqs = bestFitness?.eqs ?? 0;
+    const avgFit = bestFitness?.context?.fitness as number ?? 0;
+    await computeSevoScore(`${goal.domain}-cycle-${cycle}-${Date.now()}`, bestAgent, bestEqs, avgFit);
 
     // Cooldown between cycles
     if (cycle < MAX_CYCLES) {

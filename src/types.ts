@@ -118,6 +118,38 @@ export interface EvolutionStrategyNode extends SeVoNode {
   successfulTrials: number;
 }
 
+// --- SevoScore — self-computed universal benchmark score ---
+
+export interface SevoScoreNode extends SeVoNode {
+  "@type": "SevoScore";
+  cycleId: string;
+  score: number;              // cumulative SevoScore at this cycle
+  cyclePoints: number;        // points earned this cycle
+  breakdown: {
+    agentsCreated: number;
+    agentsImproved: number;
+    fitnessEvaluations: number;
+    mutationsProposed: number;
+    selectionsMade: number;
+    noveltysRecorded: number;
+    crossoversPerformed: number;
+    seedImprovements: number;
+    benchmarksEvolved: number;
+    improvementBonus: number;
+  };
+  metadata: {
+    totalAgents: number;
+    activeAgents: number;
+    bestAgentId: string;
+    bestEqs: number;
+    avgFitness: number;
+    maxBenchmarkDifficulty: number;
+    evolvedLoc: number;
+    model: string;
+    domain: string;
+  };
+}
+
 // --- Discovery Report Types (for sevoagents.com reporting) ---
 
 export interface DiscoveryReport {
