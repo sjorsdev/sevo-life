@@ -84,7 +84,7 @@ const floater: Genome = {
   springDamping: 0.03,
   drag: 0.98,
   baseRadius: 6,
-  resourceAttraction: 0.85,
+  resourceAttraction: 0.8,
   flockingStrength: 0.4,
   avoidanceRadius: 50,
   pulseRate: 0.6,
