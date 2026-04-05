@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405239896",
+  "timestamp": "2026-04-05T16:07:19.896Z",
+  "observation": "Domain sevo-life (fitness 0.662) generated 2 insights",
+  "suggestion": "Beauty diversity scales with morphological expression variance; efficiency scales with oscillation frequency × stiffness. Low-frequency, high-damping bodies move grace-fully and cheaply. Increase symmetry constraints to let that diversity reward kick in.; Efficiency is the bottleneck (0.452 vs targets 0.5+ for other metrics). The lowest fitness sub-components are diversityOfForms (0.456) and motionGrace (0.495). Organisms are burning energy inefficiently despite moderate survival. Solution: reduce energetic overhead by lowering spring stiffness and pulse rates (less oscillation), increase drag slightly to dampen wasteful motion, and boost symmetry in growth patterns to unlock the unused diversity ceiling. Crawler variants need leaner leg mechanics; jellyfish needs damper tentacle pulse.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
