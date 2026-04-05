@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775386866649",
+  "timestamp": "2026-04-05T11:01:06.649Z",
+  "observation": "Domain sevo-life (fitness 0.486) generated 6 insights",
+  "suggestion": "Fitness is 0.5 * survivalRate + 0.3 * beautyScore + 0.2 * efficiency.; Decision function drives phenotype expression. Survival phenotypes (predator, scavenger); Weighted decision prioritizes high-attraction neighbors.; Harvest decision depends on energyConserve threshold.; Trail intensity modulated by pulseFrequency (temporal) and patternSymmetry (spatial).; Compute composite fitness using the domain goal weights.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
