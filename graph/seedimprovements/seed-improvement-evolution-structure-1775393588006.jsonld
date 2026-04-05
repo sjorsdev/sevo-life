@@ -1,0 +1,15 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "seed-improvement-evolution-structure-1775393588006",
+  "timestamp": "2026-04-05T12:53:08.006Z",
+  "observation": "The evolution loop runs cycles mechanically but has no self-reflection, goal alignment, or structural adaptation. When fitness plateaus, the system keeps grinding the same approach. Learnings are written to Claude memory (ephemeral) but not fed back into the evolution model. The system forgets across sessions. There is no brainstorming mechanism when stuck. No cycle structure that forces stepping back to assess if the approach itself needs changing.",
+  "suggestion": "Introduce a meta-cycle structure: (1) EVOLVE phase — run N cycles of normal evolution (current). (2) REFLECT phase — after N cycles, analyze fitness trends, identify plateaus, compare strategy success rates. Write reflection to graph. (3) BRAINSTORM phase — if fitness is plateauing, invoke LLM with full context (learnings, reflections, fitness history) to propose structural changes — not parameter tweaks but architectural shifts (new cell types, new actions, new beauty dimensions). (4) REALIGN phase — check if current work still serves the goal. Are we optimizing the right thing? Should the goal itself evolve? Write goal-alignment assessment to graph. (5) TRANSCEND phase — when a brainstorm proposes changes beyond the current codebase (new src/ files, new types), actually implement them. The system modifies its own source code. All phases write to graph/meta/ as immutable records. All learnings flow through the git repo — no ephemeral storage. Every sevo project can read every other project's reflections and brainstorms by reading their git repos.",
+  "evidence": [
+    "40-cycles-parameter-plateau",
+    "learnings-lost-between-sessions",
+    "no-reflection-mechanism",
+    "mechanical-grinding-without-adaptation"
+  ],
+  "priority": 10
+}
