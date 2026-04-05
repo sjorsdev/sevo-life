@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408176068",
+  "timestamp": "2026-04-05T16:56:16.068Z",
+  "observation": "Domain sevo-life (fitness 0.662) generated 2 insights",
+  "suggestion": "dying-of-hunger problem: organisms evolve beautiful forms but cannot sustainably feed. survival first, beauty emerges from living longer.; survivalRate is critically low (0.333) — organisms starve before reaching age 500. Only 2 of 6 survive, and even they have minimal energy (7, 21). The bottleneck is not beauty (0.663 is solid) but resource acquisition and energy conservation. Survivors (IDs 2, 5) barely stay alive. Proposed fix: boost resourceAttraction to help organisms locate and harvest food, increase energyConserve to extend lifespan during search, raise explorationDrive to discover resource patches faster, diversify trailColor to allow specialization. This targets the 0.5-weighted survival component directly.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
