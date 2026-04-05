@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410951982",
+  "timestamp": "2026-04-05T17:42:31.982Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Energy-starved organisms fighting physics friction — unlock efficiency by increasing drag, cutting damping, and spreading spatial burden across avoidance radius.; Efficiency (0.317) is critically weak versus survivalRate (0.667) and beautyScore (0.673). Organisms have minimal energy reserves (3-17) despite maximum lifespan, indicating they're struggling with energy expenditure. Secondary weakness: spatialComposition (0.3) and diversityOfForms (0.456) in beauty suggest crowding and monotonous morphology. Root cause: physics friction (low drag), excessive damping losses, and overpowered swim mechanics. Strategy: (1) Increase drag → 0.97-0.99 to reduce energy cost of movement, (2) Lower springDamping → 0.02-0.05 to cut oscillation losses, (3) Reduce swimStrength → 0.35-0.6 to conserve energy while maintaining locomotion, (4) Increase avoidanceRadius → 40-60 to spread formations and improve spatial efficiency, (5) Vary parameters across genomes to increase morphological diversity and selection pressure.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
