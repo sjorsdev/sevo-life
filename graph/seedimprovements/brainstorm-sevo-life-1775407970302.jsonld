@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775407970302",
+  "timestamp": "2026-04-05T16:52:50.302Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not a parameter tuning problem—it's a **constraint saturation** problem. The organism phenotype space has been well-explored under current rules (cell types, actions, world physics). Further parameter tweaks just rearrange weights on exhausted dimensions. Breaking through requires introducing NEW MORPHOLOGICAL or ENVIRONMENTAL DEGREES OF FREEDOM that no organism has yet evolved to exploit. Signaling adds internal complexity; asymmetry adds body-plan space; heterogeneity adds niche-space. Each opens a fresh frontier for selection pressure.; [medium] Introduce chemical signaling between adjacent cells: cells can emit/sense local gradients that modulate gene expression in neighbors — Current cell types are stateless responders. Signaling creates emergent tissue-level coordination, enabling specialization beyond simple cell-type assignment. Organisms can now evolve primitive nervous systems, concentration gradients for body patterning, and cooperative multicellular behaviors. This opens an entirely new design dimension: developmental patterning and morphogenesis.; [medium] Add asymmetric body axis genes: organisms encode a polarity direction (head/tail, left/right) that biases cell fate during growth — Current organisms are radially symmetric or random-form. Asymmetry enables directional sensing, hierarchical body organization, and streamlined movement. Fish, worms, and insects all gained massive advantages from bilateral/asymmetric body plans. This breaks symmetry constraint and lets evolution explore predator/prey forms with anterior-posterior organization.; [easy] Partition world into 3-4 spatial resource zones with different light/nutrient profiles; organisms must migrate to survive — Uniform well-mixed world selected only for generic efficiency. Heterogeneous world selects for NICHE EXPLOITATION: organisms that develop movement toward light, nutrient-seeking behavior, and habitat preference. This creates geographic speciation pressure and forces evolution of sensorimotor complexity (phototaxis, chemotaxis, spatial memory) that generic survival metrics won't select for.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
