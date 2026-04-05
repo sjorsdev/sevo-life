@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412232798",
+  "timestamp": "2026-04-05T18:03:52.798Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Spatial beauty and survival are decoupled — low survival (0.667) from energy loss, low spatial beauty from random motion. Decouple genomes into specialized roles with opposing parameters to create complementary spatial patterns and redundancy.; Lowest fitness components: spatialComposition (0.3) and diversityOfForms (0.456). The simulation lacks coordinated spatial patterns and distinct organism morphologies. Two organisms died (id 0, 3), suggesting energy conservation issues. Strategy: (1) Boost exploration and motion patterns via moveSpeed + explorationDrive to create richer spatial compositions; (2) Increase trailIntensity across all genomes to leave visible spatial signatures; (3) Diverge genome strategies — some high exploration + low conservation (scouts), others high conservation + high resource attraction (foragers) — to increase form diversity and robustness; (4) Tune patternSymmetry to create coherent movement geometry.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
