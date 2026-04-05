@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411982731",
+  "timestamp": "2026-04-05T17:59:42.731Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "Organisms are beautiful but inefficient — they waste energy on motion without payoff. Survival bottleneck is mid-growth energy depletion. Spatial arrangement ignored.; Efficiency is the critical bottleneck at 0.466, dragging the overall fitness from potential 0.75+ down to 0.62. Energy waste is consuming 38% of the reward. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are severely underdeveloped — the system is optimizing form/color coherence at the cost of spatial arrangement and morphological diversity. Organisms are dying sub-optimal (age 275-288 vs 500 max), indicating energy starvation during growth. Solution: (1) Dramatically increase energy conservation and resource attraction to sustain longer lifespans. (2) Boost trail visibility and spatial coherence for better composition. (3) Diversify trail colors and movement patterns to break the over-coherence trap.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
