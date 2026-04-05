@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775417255598",
+  "timestamp": "2026-04-05T19:27:35.598Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Energy scarcity is the constraint—low efficiency kills organisms before beauty or survival matter. Constraint-driven evolution: optimize for *harvest per joule* not raw movement.; Efficiency is critically low at 0.292, dragging overall fitness despite decent beauty (0.677). The organism death rate is high (50%), indicating unsustainable energy expenditure. The genome traits show: moveSpeed and pulseFrequency are likely burning energy without proportional gain. Survival improves efficiency. Solution: reduce energy-costly behaviors (movement, pulsing, trails) while maintaining resourceAttraction to harvest more efficiently. Secondarily, spatial composition (0.3) and form diversity (0.456) are weak in beauty — add slight asymmetry and varied body plans.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
