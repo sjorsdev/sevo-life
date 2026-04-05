@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775390846816",
+  "timestamp": "2026-04-05T12:07:26.816Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency scales with (energyConserve × inverse_harvestThreshold) / moveSpeed — lower threshold harvests more often, conserve prevents waste, slow movement saves energy. Current pop inverts this.; Efficiency is critically weak at 0.149 despite 20% goal weight. The population burns energy with high moveSpeed (0.7-0.85) and moderate energyConserve (0.4-0.65) without compensating via lower harvestThreshold. Compare genome 1 (Efficient Hoarder): moveSpeed 0.4, harvestThreshold 0.05, energyConserve 0.8 — most sustainable. Lower harvestThreshold across the board (currently 0.08-0.15) and increase energyConserve in high-moveSpeed roles. Survival is strong (0.875) so aggressive efficiency push will not break it. Beauty is secondary lever.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
