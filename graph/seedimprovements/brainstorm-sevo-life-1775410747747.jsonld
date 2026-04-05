@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775410747747",
+  "timestamp": "2026-04-05T17:39:07.747Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Plateau indicates the fitness landscape under current rules has become smooth (no gradient). Single-organism morphology has saturated—local optima are sharp and numerous. Breaking through requires either (1) new phenotypic dimensions (colony structure, temporal expression), (2) new selection pressures (environmental variation), or (3) both. Parameter tuning cannot add dimensions. Structural change is mandatory.; [hard] Introduce symbiotic colony mechanics: organisms can form adhesion bonds creating multi-organism superstructures with emergent properties (distributed energy, collective growth, colony-level replication). Add colony-level fitness dimension orthogonal to individual survival. — Current space likely saturated for single-organism morphology. Colonies introduce new phenotypic degrees of freedom (network topology, specialization roles) and new selection pressure at emergent level. Similar to evolutionary jump from single-cells to multicellular organisms.; [medium] Add temporal beauty dimension: organisms express kinetic patterns (movement gaits, pulsing/oscillating behaviors, growth rhythms, synchronized group displays). Decouple shape beauty from motion beauty. Beauties can now evolve along time axis. — Beauty score is currently static (morphology snapshot). Evolution is optimizing shape only. Adding temporal patterns (which require algorithmic control structures, not just cell positions) expands fitness landscape dimension. Movement patterns are largely unexplored in current designs.; [easy] Implement environmental challenge cycles: world alternates between 2-3 different regimes (light levels, viscosity, temperature, toxin presence) every N cycles. Organisms must maintain fitness across regimes, not just local optima for current environment. — Plateau suggests convergence to stable attractor in stable environment. Regime shifts break that attractor repeatedly, punishing overspecialization, rewarding generalist robustness. Simpler to implement than new mechanics—same organisms, different constraints.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
