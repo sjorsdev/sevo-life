@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775394987944",
+  "timestamp": "2026-04-05T13:16:27.944Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "efficiency deficit comes from high moveSpeed without proportional harvest gain; rhythm needs temporal consistency, not just visual symmetry; efficiency is the critical bottleneck (0.153), dragging down overall fitness despite perfect survivalRate. The high-movement entities (Harvester, Aesthetic Harvester, Persistence Hunter) burn energy faster than harvestThreshold returns justify. Secondary issue: rhythm score (0.054) is critically low—temporal patterns need higher pulseFrequency. Fix efficiency by reducing moveSpeed on expensive explorers and boosting energyConserve globally; boost rhythm by increasing pulseFrequency on all entities to 0.25+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
