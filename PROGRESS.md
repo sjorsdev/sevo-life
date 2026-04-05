@@ -1,8 +1,42 @@
 # PROGRESS
 
-## Cycle: 10
-## Active agents: agent:v91-1775382544245(gen91), agent:v59-1775379480698(gen59), agent:v70-1775381116792(gen70), agent:v80-1775381976023(gen80), agent:v6(gen6), agent:v94-1775382582024(gen94), agent:life-v1(gen1), agent:v122-1775384133345(gen122), agent:v101-1775383109294(gen101), agent:v73-1775381154789(gen73), agent:v8(gen8), agent:v48-1775213645074(gen48), agent:v4(gen4), agent:v63-1775380009048(gen63), agent:v118-1775384098884(gen118), agent:v37-1775213049489(gen37), agent:v13-1775212077728(gen13), agent:v10-1775212042596(gen10), agent:v97-1775383080010(gen97), agent:v68-1775380359107(gen68), agent:v83-1775382161189(gen83), agent:v113-1775383812254(gen113), agent:v44-1775213381657(gen44), agent:v65-1775380324155(gen65), agent:v27-1775212809538(gen27), agent:v89-1775382244047(gen89), agent:v55-1775214024309(gen55), agent:v21-1775212278098(gen21), agent:v17-1775212118541(gen17), agent:v103-1775383394726(gen103), agent:v2(gen2), agent:v7(gen7), agent:v126-1775384259742(gen126), agent:v115-1775383934308(gen115), agent:v111-1775383626877(gen111), agent:v23-1775212394136(gen23), agent:v76-1775381943755(gen76), agent:v5(gen5), agent:v51-1775213987779(gen51), agent:v130-1775384480909(gen130), agent:v1(gen1), agent:v30-1775212911263(gen30), agent:v34-1775212948285(gen34), agent:v107-1775383459384(gen107), agent:v3(gen3), agent:v41-1775213085301(gen41), agent:v87-1775382191043(gen87)
-## Islands: island-alpha[conservative](2 agents), island-beta[aggressive](2 agents), island-gamma[crossover](2 agents)
-## Strategies: crossover(28%), aggressive(7%), crossover(0%), aggressive(0%), aggressive(22%), crossover(29%), aggressive(19%), aggressive(16%), aggressive(0%), conservative(19%), conservative(20%), conservative(18%), crossover(33%), crossover(26%), aggressive(23%), aggressive(19%), aggressive(0%), aggressive(15%), crossover(0%), crossover(27%), crossover(31%), conservative(10%), aggressive(6%), crossover(32%), aggressive(0%), aggressive(0%), conservative(17%), crossover(0%), aggressive(24%), aggressive(15%), conservative(0%), crossover(32%), conservative(20%), conservative(0%), conservative(0%), crossover(0%), crossover(27%), conservative(18%), conservative(14%), conservative(11%), conservative(11%), aggressive(21%), aggressive(15%), aggressive(22%), crossover(30%), crossover(0%), crossover(32%), crossover(30%), crossover(28%), crossover(24%), crossover(31%), aggressive(23%), conservative(13%), aggressive(14%), conservative(0%), crossover(0%), conservative(15%), aggressive(20%), aggressive(14%), aggressive(20%), aggressive(0%), conservative(21%), crossover(26%), aggressive(0%), crossover(0%), aggressive(7%), conservative(10%), crossover(0%), aggressive(16%), conservative(20%), crossover(28%), conservative(12%), aggressive(21%), conservative(17%), crossover(29%), aggressive(17%), crossover(15%), aggressive(12%), conservative(11%), crossover(27%), crossover(36%), conservative(9%), conservative(0%), conservative(10%), aggressive(20%), conservative(13%), conservative(14%), crossover(25%), crossover(30%), aggressive(0%), conservative(9%), conservative(13%), aggressive(22%), aggressive(22%), aggressive(0%), crossover(33%), conservative(0%), conservative(13%), conservative(0%), crossover(21%), conservative(13%), conservative(16%), conservative(11%), crossover(31%), conservative(12%), crossover(0%), crossover(31%), conservative(10%), conservative(16%), crossover(0%), conservative(13%), conservative(9%), aggressive(23%), crossover(28%), crossover(33%), crossover(26%), crossover(30%), conservative(16%), crossover(32%), crossover(35%), conservative(0%), aggressive(17%), aggressive(17%), conservative(0%), conservative(9%), crossover(35%), aggressive(14%), aggressive(16%), aggressive(23%), conservative(0%), aggressive(0%), aggressive(16%), aggressive(18%), crossover(35%), aggressive(16%), aggressive(19%), aggressive(0%), crossover(31%), aggressive(19%), crossover(27%), crossover(27%), conservative(0%), aggressive(22%), conservative(17%), conservative(15%), crossover(0%), aggressive(17%), aggressive(0%), aggressive(18%), crossover(29%), conservative(12%), crossover(29%), conservative(10%), aggressive(0%), aggressive(22%), conservative(14%), aggressive(0%), conservative(8%), conservative(0%), crossover(29%), aggressive(18%), crossover(0%), conservative(0%), conservative(19%), crossover(28%), crossover(33%), aggressive(16%), crossover(8%), conservative(14%), conservative(10%)
-## Notes: best=agent:v59-1775379480698 EQS=5.000 avgFit=1.078 avgNovelty=0.005 islands=3
-## Timestamp: 2026-04-05T10:21:37.129Z
+## Status: PLATEAU — brainstorm proposals ready for implementation
+## SevoScore: 2550
+## Best fitness: 0.708 (stuck for ~20 cycles)
+## Active agents: 28 (24 v1-pixel, 4 v2-body)
+## Body beauty: 0.808 (v2 agents)
+## Total learnings: 220+
+## Brainstorms: 4 (all detecting plateau, all proposing structural changes)
+
+## What's working
+- Meta-cycle: EVOLVE → REFLECT → BRAINSTORM → REALIGN
+- Body system (world-v2.ts, body.ts): multi-cell organisms with L-system growth
+- Parameter-patch mutations: 100% run rate vs 20% for full rewrites
+- Fork detection: only scores own work, not inherited data
+- Visualization: http://localhost:8090 (run: PORT=8090 deno run --allow-all web/serve.ts)
+
+## What's stuck
+- Fitness plateaued at ~0.7 for 20+ cycles
+- All 4 brainstorms converge on same diagnosis: single static fitness landscape
+- Parameter tuning within current architecture has reached its limit
+
+## Brainstorm consensus — implement these (in order of impact):
+1. **Seasonal cycles** [easy] — environment shifts every N ticks, no single phenotype dominates
+2. **Dynamic beauty dimensions** [medium] — expand what beauty means (temporal, relational, emergent)
+3. **Predator-prey** [hard] — Red Queen dynamics, co-evolution, multi-species ecosystem
+4. **Developmental stages** [medium] — juvenile→mature→elder with different capabilities
+
+## Entry point
+- Run: `deno run --allow-all src/fork-runner.ts` (NOT sevo.ts)
+- fork-runner.ts has the meta-cycle built in
+- Visualization: `deno run --allow-all web/build.ts && PORT=8090 deno run --allow-all web/serve.ts`
+
+## Key files
+- src/fork-runner.ts — main evolution loop with meta-cycle
+- src/world-v2.ts — multi-cell organism world engine
+- src/body.ts — L-system growth + body beauty scoring
+- src/beauty.ts — legacy trail beauty (v1 agents still use this)
+- blueprints/life-agent-v5.ts — body agent with dynamic fitness weights
+- web/v2.html — organism visualization
+
+## Timestamp: 2026-04-05
