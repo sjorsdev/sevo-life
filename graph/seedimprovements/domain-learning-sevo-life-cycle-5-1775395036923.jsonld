@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775395036923",
+  "timestamp": "2026-04-05T13:17:16.923Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Efficiency is gated by movement cost, not harvest strategy. Slow travel + high conservation beats fast exploration.; Efficiency is critically weak at 0.148, dragging overall fitness to 0.701. With 0.2 weight on efficiency, improving it from 0.148 to ~0.30 would add ~0.024 to overall fitness (3.4% gain). Root cause: excessive moveSpeed + high explorationDrive = energy waste. Survival is already perfect (1.0), so optimization focus should be efficiency-first. Beauty (0.57) is secondary—rhythm (0.159) is the only beauty bottleneck, but lower weight makes efficiency ROI higher. Action: reduce moveSpeed globally (target 0.55-0.65 range), increase energyConserve (0.75+), lower explorationDrive where exceeding 0.7.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
