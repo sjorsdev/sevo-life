@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407786214",
+  "timestamp": "2026-04-05T16:49:46.214Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Motion grace and efficiency collapse together—organisms burning energy on inefficient swimming. Efficient life is parsimonious life.; Efficiency is severely lagging (0.399 vs 0.667 survivalRate, 0.68 beautyScore). The organism fitness shows 2 dead entities and 4 alive at max age but with varying energy (3-25). This suggests wasteful movement and poor energy management. Low motionGrace (0.572) indicates thrashing. Solution: penalize aimless movement (reduce moveSpeed, explorationDrive), reward energy conservation, target resources more directly.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
