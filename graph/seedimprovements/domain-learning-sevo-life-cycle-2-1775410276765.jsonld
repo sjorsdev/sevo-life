@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410276765",
+  "timestamp": "2026-04-05T17:31:16.765Z",
+  "observation": "Domain sevo-life (fitness 0.558) generated 2 insights",
+  "suggestion": "Efficiency requires disciplined energy allocation; diversity and spatial composition require phenotypic variation. Tune efficiency globally, vary morphology per-entity.; Efficiency is critically weak at 0.459, dragging overall fitness. Secondary weaknesses: spatialComposition (0.3) and diversityOfForms (0.456). Survival and beauty are decent. Core issue: organisms waste energy on unfocused movement and pulsing; spatial layout is compressed. Strategy: (1) Boost energyConserve across all genomes to reduce waste, cut explorationDrive to eliminate costly random wandering, increase resourceAttraction for targeted foraging; (2) Vary moveSpeed and patternSymmetry across entities to increase morphological diversity and encourage spatial spread; (3) Reduce harvestThreshold so energy collection is more efficient. These changes address the efficiency bottleneck while improving compositional variety.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
