@@ -1,0 +1,14 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "reflection-sevo-life-1775394315319",
+  "timestamp": "2026-04-05T13:05:15.319Z",
+  "observation": "Fitness trend: improving (recent avg: 0.699, delta: 0.6988). History: 5 cycles. ",
+  "suggestion": "Continue current approach. Trend: improving.",
+  "evidence": [
+    "fitness-history:0.695,0.696,0.702,0.701,0.7",
+    "trend:improving",
+    "delta:0.6988"
+  ],
+  "priority": 3
+}
