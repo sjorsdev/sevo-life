@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406144710",
+  "timestamp": "2026-04-05T16:22:24.710Z",
+  "observation": "Domain sevo-life (fitness 0.643) generated 2 insights",
+  "suggestion": "Organisms are energy-poor explorers, not efficient foragers. Shift from exploration-heavy to trail-following strategy.; Efficiency (0.458) is the critical bottleneck, dragging overall fitness from ~0.65 to 0.613. The organisms are surviving (0.667) and achieving decent beauty (0.663), but wasting energy. Four organisms live to max age with low energy (6-37), indicating movement/metabolism costs exceed resource intake. Primary fix: reduce moveSpeed and explorationDrive to cut energy waste. Secondary: increase trailAttraction to leverage existing food traces instead of blind search. Spatial composition (0.3) is also weak—increase patternSymmetry variance to improve form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
