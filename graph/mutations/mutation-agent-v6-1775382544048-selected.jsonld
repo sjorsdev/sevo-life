@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Mutation",
+  "@id": "mutation-agent-v6-1775382544048-selected",
+  "timestamp": "2026-04-05T09:49:04.286Z",
+  "parent": "agent:v6",
+  "proposal": "LLM-generated conservative mutation (rate 0.10)",
+  "branch": "main",
+  "status": "selected",
+  "reasoning": "Strategy: conservative. Make CONSERVATIVE changes — fine-tune existing strategies, fix edge cases, improve efficiency."
+}
