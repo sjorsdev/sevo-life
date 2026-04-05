@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775405347781",
+  "timestamp": "2026-04-05T16:09:07.781Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Spatial clustering kills composition—need extremes in exploration vs. gathering to force natural spreading; diversity emerges from population heterogeneity, not individual complexity.; spatialComposition (0.3) is critically weak—organisms cluster too densely, suggesting dominant resource-seeking behavior. diversityOfForms (0.427) shows insufficient morphological variation. Organisms have similar energy levels and particle counts. Solution: Create behavioral diversity with extreme moveSpeed/explorationDrive variation (scouts vs. resource-hoarders) to naturally spread population; increase energyConserve for efficiency gains; vary trail properties and symmetry for form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
