@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775416844751",
+  "timestamp": "2026-04-05T19:20:44.751Z",
+  "observation": "Domain sevo-life (fitness 0.609) generated 2 insights",
+  "suggestion": "Survivors are energy-constrained, not space-constrained. Fix the energy economy first; spatial composition improves as a side effect of organisms having energy to move deliberately.; Efficiency (0.433) is the critical bottleneck — it's 0.24 points below beauty and dragging overall fitness. The bottleneck is energy waste and poor resource gathering. Simultaneously, spatialComposition (0.3) and diversityOfForms (0.456) indicate organisms aren't spread efficiently through space or expressing enough phenotypic variation. Survivors are hitting age-500 caps with moderate-low energy (6-29), suggesting they're barely sustaining — not thriving. Strategy: (1) increase energyConserve to reduce baseline drain, (2) boost resourceAttraction so organisms find food faster and waste less time searching, (3) add harvestThreshold tuning to be selective about feeding (eat when needed, not constantly), (4) increase explorationDrive to force better spatial coverage and diversityOfForms naturally emerges from organisms exploring different niches.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
