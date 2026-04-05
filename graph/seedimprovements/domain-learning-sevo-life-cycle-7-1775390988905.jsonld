@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775390988905",
+  "timestamp": "2026-04-05T12:09:48.905Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency gains outweigh beauty gains 3:1 due to goal weighting. Energy conservation via reduced movement is the lever.; Efficiency at 0.157 is the critical bottleneck — entities burn too much energy moving. MoveSpeed is too high across the board, especially for Harvester (0.85) and Persistence Hunter (0.82). Parallel issue: rhythm at 0.171 is the weakest beauty dimension — pulseFrequency is too low on aggressive entities. Strategy: reduce moveSpeed 10-20% (target 0.65-0.70 for high-energy types), increase pulseFrequency by 50-100% on low-rhythm entities (0.12→0.25, 0.15→0.28), reduce explorationDrive on Persistence Hunter (wastes energy on low-value exploration).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
