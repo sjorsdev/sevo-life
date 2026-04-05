@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407405386",
+  "timestamp": "2026-04-05T16:43:25.386Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Smaller ≠ weaker: org 5 (8 particles, 32 energy) outperforms org 1 (12 particles, 13 energy). Efficiency scales inverse to size; reduce waste rather than grow bigger.; Efficiency (0.445) is the critical bottleneck, dragging fitness from potential 0.7+ to 0.593. The mortality (2/6 dead) and uneven energy distribution indicate poor energy management. Organisms with fewer particles but higher energy (org 2: 16, org 5: 32 vs org 1,4: 13) reveal the scaling is sound but overall expenditure is wasteful. Fix: reduce explorationDrive (random costly movement), increase energyConserve (critical), boost resourceAttraction (find food without flailing), and reduce moveSpeed on heavier forms. This targets the root: organisms are burning energy faster than they harvest it.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
