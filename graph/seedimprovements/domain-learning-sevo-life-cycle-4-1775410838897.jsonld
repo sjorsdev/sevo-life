@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410838897",
+  "timestamp": "2026-04-05T17:40:38.897Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Efficiency collapses when organisms move without purpose. Symmetric movement patterns and aggressive resource-seeking recover 60-80% of efficiency loss without sacrificing beauty.; Efficiency is the critical bottleneck (0.519 vs survival 0.833, beauty 0.659). Energy distribution is extremely uneven — most organisms have 5-6 energy while two hoard 15-30. This indicates two failures: poor energy harvesting (organisms not attractive to resources) and poor energy conservation (movement is wasteful). Secondary: diversityOfForms (0.457) suggests growth patterns are too similar. Fix efficiency by: (1) increasing energyConserve to reduce movement cost, (2) raising resourceAttraction so organisms seek resources more aggressively, (3) increasing patternSymmetry to create more efficient locomotion patterns. Target organisms with lowest energy first.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
