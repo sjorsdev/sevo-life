@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775417144478",
+  "timestamp": "2026-04-05T19:25:44.478Z",
+  "observation": "Domain sevo-life (fitness 0.639) generated 2 insights",
+  "suggestion": "Energy starvation, not reproduction failure—organisms are efficient at beauty but wasteful at survival; lock in low-cost morphologies and reduce search overhead.; Efficiency (0.332) is the critical bottleneck, pulling overall fitness down despite strong beauty metrics. Current organisms die at 252-373 ticks but survive at max lifespan with critically low energy (2-21), indicating wasteful energy expenditure outpaces resource acquisition. Survival Rate (0.5) means 50% death rate—unacceptable. Primary fix: reduce movement-related energy drain via lower moveSpeed and explorationDrive, increase energyConserve to stretch resources further, raise harvestThreshold to commit to high-value resources only, and lower resourceAttraction to avoid exhausting chases. Secondary: diversityOfForms (0.456) and spatialComposition (0.507) are weak—slightly different parameters across genomes create architectural variety.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
