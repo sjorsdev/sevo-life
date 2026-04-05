@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775410591680",
+  "timestamp": "2026-04-05T17:36:31.680Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not a fitness limit — it's a morphospace saturation. The cell vocabulary, world rules, and decision architecture have been tuned to near-perfection, but they define a bounded solution space. To escape, expand the space itself: add new cell types via development (heterochrony), new selection pressures via environment (dynamics), or new interaction modes (communication/symbiosis). The fitness function is working correctly. The problem is that evolution has optimized what CAN be optimized given the current rules. Change the rules.; [hard] Developmental heterochrony: cell differentiation timing. Add gene-regulated developmental stages where cells specialize INTO different types (sensory, motor, structural, processing) based on expression timing during growth, not just static types. Organisms now trade morphology plasticity vs specialization. — Current search likely maxed out single fixed-cell-type morphologies. Heterochrony (changing developmental timing) opens a new morphospace — same cells, different specialization schedules = fundamentally new body plans. Beauty patterns in development itself become evolvable.; [medium] Dynamic environmental pressure zones. Instead of static resources, create moving predator zones, nutrient wells that migrate, and temporal resource scarcity (seasons or cycles). Organisms must now predict and track, not just optimize for static equilibrium. — Plateau suggests local optimization for current environment. Dynamic pressure = new problem domains. Organisms that thrive in chaos can't be discovered by tuning static fitness. Forces evolution toward robustness and prediction, not perfection on one landscape.; [hard] Intercellular communication and quorum sensing. Cells can broadcast/sense chemicals; organism decisions now aggregate from cell-level voting, not centralized logic. Add symbiotic pairing mechanics: two organisms can fuse into chimera, trade specialized cells, then separate. — Current architecture: centralized control (one decision function). Quorum + symbiosis = decentralized emergence. Beauty becomes about harmony/resonance between parts, not just form. Creates entirely new evolutionary niche (cooperation, modularity) that centralized architectures cannot access.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
