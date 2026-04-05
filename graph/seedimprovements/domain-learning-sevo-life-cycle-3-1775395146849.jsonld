@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775395146849",
+  "timestamp": "2026-04-05T13:19:06.849Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: low harvestThreshold causes constant low-gain harvests. Trade selectivity (higher threshold) + energy conservation for net gain.; Efficiency is critically weak at 0.149 (target: 0.3+). Analysis: current harvestThreshold values (0.07-0.12) are triggering frequent low-value harvests, wasting energy. High moveSpeed entities (0.75-0.85) + explorationDrive (0.7-0.8) create excessive energy costs. Solution: (1) Increase harvestThreshold to be selective—harvest substantial resources only; (2) boost energyConserve across all entities to reduce baseline drain; (3) reduce moveSpeed on energy-wasting phenotypes. Secondary: rhythm is weak (0.153)—increase pulseFrequency on ordered entities for temporal patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
