@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412832516",
+  "timestamp": "2026-04-05T18:13:52.516Z",
+  "observation": "Domain sevo-life (fitness 0.613) generated 2 insights",
+  "suggestion": "Energy conservation beats movement speed — a slower, efficient organism outlasts a fast, wasteful one in long simulations.; Efficiency (0.47) is the critical bottleneck — nearly 20% below beautyScore and 22% below survivalRate. Organisms have modest energy reserves (17-27) despite reaching age 500, indicating high energy drain. Spatial composition (0.3) is also severely weak. Strategy: (1) Increase energyConserve to reduce metabolic waste, (2) reduce moveSpeed to lower movement cost while maintaining resource attraction, (3) increase harvestThreshold to avoid chasing marginal resources, (4) boost patternSymmetry variance to improve form diversity and spatial distribution.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
