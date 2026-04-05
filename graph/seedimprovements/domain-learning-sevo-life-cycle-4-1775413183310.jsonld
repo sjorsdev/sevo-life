@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413183310",
+  "timestamp": "2026-04-05T18:19:43.310Z",
+  "observation": "Domain sevo-life (fitness 0.639) generated 2 insights",
+  "suggestion": "Energy abundance without movement discipline = death. Coupling conservation with smarter foraging reverses the inefficiency spiral.; Efficiency is the weakest component (0.536), dragging down overall fitness. Organisms have high energy reserves but low energy-to-movement ROI. Dead organisms (IDs 0,3) failed early—likely inefficient foraging burned reserves before reaching viable age. Spatial composition (0.3) is also critically weak, suggesting poor spatial distribution strategies. Proposal: reduce movement waste by lowering moveSpeed and increasing energyConserve globally. Boost resourceAttraction to improve foraging efficiency (find food faster, waste less energy searching). Increase explorationDrive to encourage spatial spread while keeping movement efficient.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
