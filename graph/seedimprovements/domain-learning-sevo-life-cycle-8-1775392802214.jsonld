@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775392802214",
+  "timestamp": "2026-04-05T12:40:02.214Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Efficiency fails because entities move too much relative to energy gained. Rhythm fails because pulseFrequency is nearly zero — no temporal periodicity in the system. Increase pulse, reduce waste.; Current fitness 0.688 is limited by efficiency (0.151) and rhythm (0.074). Efficiency is the weakest goal component. Rhythm is the weakest beauty component. Strategy: (1) Reduce moveSpeed in high-movement entities and boost energyConserve across the board to improve efficiency. (2) Increase pulseFrequency uniformly — rhythm is critically low (0.074) because no entity creates temporal patterns. (3) Boost trailIntensity and coverage for entities that haven't maxed it. Survivalrate is perfect (1.0) so focus on the other two goals.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
