@@ -13,7 +13,7 @@ const MIME: Record<string, string> = {
 
 Deno.serve({ port: PORT }, async (req) => {
   const url = new URL(req.url);
-  const path = url.pathname === "/" ? "/index.html" : url.pathname;
+  const path = url.pathname === "/" ? "/v2.html" : url.pathname;
   const ext = path.substring(path.lastIndexOf("."));
   const contentType = MIME[ext];
 

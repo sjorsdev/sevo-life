@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sevo-life v2 — organisms</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0a0f; color: #c8c8d0; font-family: 'Berkeley Mono', 'JetBrains Mono', monospace; overflow: hidden; }
+  #app { display: grid; grid-template-columns: 1fr 280px; grid-template-rows: auto 1fr; height: 100vh; }
+  header {
+    grid-column: 1 / -1; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: #111118; border-bottom: 1px solid #222;
+  }
+  header h1 { font-size: 16px; font-weight: 400; letter-spacing: 2px; color: #888; }
+  header h1 span { color: #e8e8f0; }
+  .controls { display: flex; gap: 8px; align-items: center; }
+  .controls button {
+    background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 5px 14px;
+    font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 3px;
+  }
+  .controls button:hover { background: #252530; color: #ddd; }
+  .controls button.active { background: #2a2a3a; color: #fff; border-color: #667; }
+  .controls select { background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 4px 8px; font-family: inherit; font-size: 12px; border-radius: 3px; }
+  .tick { font-size: 13px; color: #888; font-variant-numeric: tabular-nums; }
+  #canvas-wrap { display: flex; align-items: center; justify-content: center; background: #06060a; }
+  canvas { image-rendering: pixelated; }
+  #sidebar { background: #0e0e14; border-left: 1px solid #1a1a22; padding: 16px; overflow-y: auto; font-size: 12px; }
+  .panel { margin-bottom: 14px; }
+  .panel-title { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #555; margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1px solid #1a1a22; }
+  .stat-row { display: flex; justify-content: space-between; padding: 2px 0; }
+  .stat-label { color: #666; }
+  .stat-value { color: #b8b8c0; font-variant-numeric: tabular-nums; }
+  .bar { height: 4px; background: #1a1a24; border-radius: 2px; margin: 3px 0 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; transition: width 0.3s; }
+  .org-card { background: #151520; border-radius: 4px; padding: 8px; margin-bottom: 6px; }
+  .org-card.dead { opacity: 0.3; }
+  .org-name { font-weight: bold; font-size: 11px; margin-bottom: 4px; }
+  .org-stat { font-size: 10px; color: #777; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>sevo / <span>life v2</span> — organisms</h1>
+    <div class="controls">
+      <button id="btn-play" class="active">Play</button>
+      <button id="btn-pause">Pause</button>
+      <button id="btn-restart">Restart</button>
+      <select id="speed">
+        <option value="200">Slow</option>
+        <option value="60" selected>Normal</option>
+        <option value="20">Fast</option>
+        <option value="4">Max</option>
+      </select>
+      <span class="tick" id="tick-display">tick 0</span>
+    </div>
+  </header>
+  <div id="canvas-wrap"><canvas id="canvas"></canvas></div>
+  <div id="sidebar">
+    <div class="panel">
+      <div class="panel-title">World</div>
+      <div class="stat-row"><span class="stat-label">Tick</span><span class="stat-value" id="s-tick">0</span></div>
+      <div class="stat-row"><span class="stat-label">Alive</span><span class="stat-value" id="s-alive">0</span></div>
+      <div class="stat-row"><span class="stat-label">Avg Body Size</span><span class="stat-value" id="s-size">0</span></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Body Beauty</div>
+      <div class="stat-row"><span class="stat-label">World Beauty</span><span class="stat-value" id="s-beauty">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-beauty" style="width:0;background:#a7a"></div></div>
+      <div class="stat-row"><span class="stat-label">Form Symmetry</span><span class="stat-value" id="s-sym">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-sym" style="width:0;background:#7a7"></div></div>
+      <div class="stat-row"><span class="stat-label">Proportion</span><span class="stat-value" id="s-prop">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-prop" style="width:0;background:#77a"></div></div>
+      <div class="stat-row"><span class="stat-label">Complexity</span><span class="stat-value" id="s-complex">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-complex" style="width:0;background:#a77"></div></div>
+      <div class="stat-row"><span class="stat-label">Ecosystem Diversity</span><span class="stat-value" id="s-diversity">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-diversity" style="width:0;background:#7aa"></div></div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Organisms</div>
+      <div id="org-list"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { WorldV2, Body, scoreBodyBeauty, DEFAULT_CONFIG } from './sim.bundle.js';
+
+const HUES = [
+  [255, 80, 80],   // 0 red
+  [80, 255, 120],  // 1 green
+  [80, 140, 255],  // 2 blue
+  [255, 220, 60],  // 3 yellow
+  [200, 80, 255],  // 4 purple
+  [80, 240, 240],  // 5 cyan
+];
+
+const CELL_TYPE_SHAPES = {
+  core:         { symbol: '●', glow: true },
+  mouth:        { symbol: '◉', glow: false },
+  leg:          { symbol: '▪', glow: false },
+  eye:          { symbol: '◎', glow: true },
+  skin:         { symbol: '■', glow: false },
+  reproductive: { symbol: '✦', glow: true },
+};
+
+// --- Body genomes (same as life-agent-v5) ---
+const treeGenome = {
+  growthRules: [
+    { from: "core", direction: { x: 0, y: -1 }, produces: "skin", minAge: 2, energyCost: 3, probability: 0.8, maxInstances: 6, symmetry: false },
+    { from: "skin", direction: { x: 1, y: 0 }, produces: "skin", minAge: 3, energyCost: 3, probability: 0.4, maxInstances: 4, symmetry: true },
+    { from: "skin", direction: { x: 0, y: -1 }, produces: "mouth", minAge: 4, energyCost: 2, probability: 0.3, maxInstances: 4, symmetry: true },
+    { from: "core", direction: { x: 0, y: 1 }, produces: "leg", minAge: 1, energyCost: 2, probability: 0.6, maxInstances: 2, symmetry: false },
+    { from: "core", direction: { x: 1, y: 0 }, produces: "eye", minAge: 5, energyCost: 4, probability: 0.3, maxInstances: 2, symmetry: true },
+  ],
+  maxCells: 18, growthEnergyCost: 2,
+  coreColor: 2, skinColor: 3, colorGradient: true,
+  bilateralSymmetry: 0.9, radialSymmetry: 0.1, elongation: 0.7, branching: 0.5,
+};
+
+const starGenome = {
+  growthRules: [
+    { from: "core", direction: { x: 1, y: 0 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.7, maxInstances: 3, symmetry: true },
+    { from: "core", direction: { x: 0, y: 1 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.7, maxInstances: 3, symmetry: true },
+    { from: "skin", direction: { x: 1, y: 0 }, produces: "mouth", minAge: 3, energyCost: 2, probability: 0.5, maxInstances: 4, symmetry: true },
+    { from: "skin", direction: { x: 0, y: 1 }, produces: "mouth", minAge: 3, energyCost: 2, probability: 0.5, maxInstances: 4, symmetry: true },
+    { from: "core", direction: { x: 0, y: -1 }, produces: "eye", minAge: 4, energyCost: 3, probability: 0.5, maxInstances: 1, symmetry: false },
+    { from: "core", direction: { x: 1, y: 1 }, produces: "leg", minAge: 1, energyCost: 2, probability: 0.6, maxInstances: 2, symmetry: true },
+  ],
+  maxCells: 20, growthEnergyCost: 2,
+  coreColor: 0, skinColor: 4, colorGradient: false,
+  bilateralSymmetry: 0.8, radialSymmetry: 0.7, elongation: 0.2, branching: 0.3,
+};
+
+const wormGenome = {
+  growthRules: [
+    { from: "core", direction: { x: 0, y: -1 }, produces: "skin", minAge: 1, energyCost: 2, probability: 0.9, maxInstances: 8, symmetry: false },
+    { from: "skin", direction: { x: 0, y: -1 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.6, maxInstances: 8, symmetry: false },
+    { from: "skin", direction: { x: 0, y: -1 }, produces: "mouth", minAge: 5, energyCost: 2, probability: 0.4, maxInstances: 1, symmetry: false },
+    { from: "mouth", direction: { x: 1, y: 0 }, produces: "eye", minAge: 1, energyCost: 3, probability: 0.5, maxInstances: 2, symmetry: true },
+    { from: "skin", direction: { x: 1, y: 0 }, produces: "leg", minAge: 2, energyCost: 1, probability: 0.4, maxInstances: 6, symmetry: true },
+  ],
+  maxCells: 22, growthEnergyCost: 1.5,
+  coreColor: 1, skinColor: 5, colorGradient: true,
+  bilateralSymmetry: 0.95, radialSymmetry: 0.0, elongation: 0.9, branching: 0.1,
+};
+
+const genomes = [treeGenome, starGenome, wormGenome, treeGenome, starGenome, wormGenome];
+const MORPH_NAMES = ['Tree', 'Star', 'Worm', 'Tree', 'Star', 'Worm'];
+
+// --- Config ---
+const config = { ...DEFAULT_CONFIG, width: 60, height: 45, maxTicks: 9999, initialResources: 200, resourceRegenRate: 0.015, harvestGain: 8, energyDrainPerTick: 0.3, seed: 42 };
+const CELL_PX = 12;
+
+// --- Decision function ---
+function decide(org, nearbyResources, nearbyOrganisms, worldTick) {
+  const bodySize = org.body.cells.length;
+  const maxSize = org.body.genome.maxCells;
+  if (bodySize < maxSize * 0.5 && org.energy > 20) return { type: "grow" };
+  if (org.energy < 8) {
+    if (nearbyResources.length > 0) {
+      const c = nearbyResources.sort((a, b) => (Math.abs(a.x - org.body.center.x) + Math.abs(a.y - org.body.center.y)) - (Math.abs(b.x - org.body.center.x) + Math.abs(b.y - org.body.center.y)))[0];
+      const dx = Math.sign(c.x - org.body.center.x), dy = Math.sign(c.y - org.body.center.y);
+      if (dx === 0 && dy === 0) return { type: "harvest" };
+      return { type: "move", direction: { x: dx, y: dy } };
+    }
+    return { type: "harvest" };
+  }
+  if (bodySize < maxSize && org.energy > 25) return { type: "grow" };
+  if (worldTick % 12 === 0 && org.energy > 12) return { type: "pulse", color: org.body.genome.coreColor };
+  if (nearbyResources.length > 0) {
+    const c = nearbyResources[0];
+    const dx = Math.sign(c.x - org.body.center.x), dy = Math.sign(c.y - org.body.center.y);
+    if (dx === 0 && dy === 0) return { type: "harvest" };
+    return { type: "move", direction: { x: dx, y: dy } };
+  }
+  const dirs = [{x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1}];
+  return { type: "move", direction: dirs[worldTick % 4] };
+}
+
+// --- State ---
+let world, playing = true, interval = 60;
+
+function init() {
+  config.seed = Date.now() % 100000;
+  world = new WorldV2(config, genomes);
+}
+init();
+
+// --- Canvas ---
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = config.width * CELL_PX;
+canvas.height = config.height * CELL_PX;
+
+function draw() {
+  ctx.fillStyle = '#08080c';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Draw resources
+  for (let y = 0; y < config.height; y++) {
+    for (let x = 0; x < config.width; x++) {
+      const cell = world.grid[y][x];
+      if (cell.resource > 0.05) {
+        const a = cell.resource * 0.5;
+        ctx.fillStyle = `rgba(60, 180, 60, ${a})`;
+        ctx.fillRect(x * CELL_PX + 2, y * CELL_PX + 2, CELL_PX - 4, CELL_PX - 4);
+      }
+      if (cell.trail > 0.02) {
+        const hue = HUES[cell.trailColor % 6];
+        ctx.fillStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, ${cell.trail * 0.25})`;
+        ctx.fillRect(x * CELL_PX, y * CELL_PX, CELL_PX, CELL_PX);
+      }
+    }
+  }
+
+  // Draw organisms
+  for (const org of world.organisms) {
+    if (!org.alive) continue;
+    for (const cell of org.body.cells) {
+      const wx = ((org.body.center.x + cell.offset.x) % config.width + config.width) % config.width;
+      const wy = ((org.body.center.y + cell.offset.y) % config.height + config.height) % config.height;
+      const px = wx * CELL_PX;
+      const py = wy * CELL_PX;
+      const hue = HUES[cell.color % 6];
+      const shape = CELL_TYPE_SHAPES[cell.type] || CELL_TYPE_SHAPES.skin;
+
+      // Glow effect for core/eye cells
+      if (shape.glow) {
+        ctx.fillStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, 0.15)`;
+        ctx.beginPath();
+        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Cell body
+      ctx.fillStyle = `rgb(${hue[0]}, ${hue[1]}, ${hue[2]})`;
+      if (cell.type === 'core') {
+        ctx.beginPath();
+        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX/2 - 1, 0, Math.PI * 2);
+        ctx.fill();
+      } else if (cell.type === 'eye') {
+        ctx.beginPath();
+        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX/3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.beginPath();
+        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, 2, 0, Math.PI * 2);
+        ctx.fill();
+      } else if (cell.type === 'mouth') {
+        ctx.fillRect(px + 2, py + 2, CELL_PX - 4, CELL_PX - 4);
+        ctx.fillStyle = '#000';
+        ctx.fillRect(px + 4, py + CELL_PX/2 - 1, CELL_PX - 8, 2);
+      } else if (cell.type === 'leg') {
+        ctx.fillRect(px + 3, py + 1, CELL_PX - 6, CELL_PX - 2);
+      } else {
+        // skin / default — rounded rect
+        const r = 2;
+        ctx.beginPath();
+        ctx.roundRect(px + 1, py + 1, CELL_PX - 2, CELL_PX - 2, r);
+        ctx.fill();
+      }
+
+      // Outline connecting cells
+      ctx.strokeStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, 0.3)`;
+      ctx.lineWidth = 0.5;
+      ctx.strokeRect(px, py, CELL_PX, CELL_PX);
+    }
+  }
+}
+
+// --- Sidebar ---
+function updateSidebar() {
+  const alive = world.organisms.filter(o => o.alive);
+  document.getElementById('s-tick').textContent = world.tick;
+  document.getElementById('s-alive').textContent = alive.length + ' / ' + world.organisms.length;
+  document.getElementById('tick-display').textContent = 'tick ' + world.tick;
+  const avgSize = alive.length > 0 ? (alive.reduce((s, o) => s + o.body.cells.length, 0) / alive.length).toFixed(1) : '0';
+  document.getElementById('s-size').textContent = avgSize;
+
+  // Beauty metrics
+  const beauties = alive.map(o => scoreBodyBeauty(o.body));
+  if (beauties.length > 0) {
+    const avg = (arr, fn) => arr.reduce((s, b) => s + fn(b), 0) / arr.length;
+    const wb = avg(beauties, b => b.total);
+    const sym = avg(beauties, b => b.formSymmetry);
+    const prop = avg(beauties, b => b.proportion);
+    const cpx = avg(beauties, b => b.complexity);
+    document.getElementById('s-beauty').textContent = wb.toFixed(3);
+    document.getElementById('bar-beauty').style.width = (wb * 100) + '%';
+    document.getElementById('s-sym').textContent = sym.toFixed(3);
+    document.getElementById('bar-sym').style.width = (sym * 100) + '%';
+    document.getElementById('s-prop').textContent = prop.toFixed(3);
+    document.getElementById('bar-prop').style.width = (prop * 100) + '%';
+    document.getElementById('s-complex').textContent = cpx.toFixed(3);
+    document.getElementById('bar-complex').style.width = (cpx * 100) + '%';
+  }
+
+  // Diversity
+  let divSum = 0, divPairs = 0;
+  for (let i = 0; i < alive.length; i++) {
+    for (let j = i + 1; j < alive.length; j++) {
+      const a = alive[i].body.cells.length, b = alive[j].body.cells.length;
+      divSum += Math.abs(a - b) / Math.max(a, b, 1);
+      divPairs++;
+    }
+  }
+  const diversity = divPairs > 0 ? divSum / divPairs : 0;
+  document.getElementById('s-diversity').textContent = diversity.toFixed(3);
+  document.getElementById('bar-diversity').style.width = (diversity * 100) + '%';
+
+  // Organism cards
+  const list = document.getElementById('org-list');
+  list.innerHTML = '';
+  for (let i = 0; i < world.organisms.length; i++) {
+    const org = world.organisms[i];
+    const beauty = scoreBodyBeauty(org.body);
+    const hue = HUES[org.body.genome.coreColor % 6];
+    const card = document.createElement('div');
+    card.className = 'org-card' + (org.alive ? '' : ' dead');
+    card.innerHTML = `
+      <div class="org-name" style="color:rgb(${hue.join(',')})">
+        ${MORPH_NAMES[i] || 'Organism'} #${org.id}
+      </div>
+      <div class="org-stat">cells: ${org.body.cells.length} · energy: ${org.energy.toFixed(0)} · age: ${org.age}</div>
+      <div class="org-stat">beauty: ${beauty.total.toFixed(3)} · symmetry: ${beauty.formSymmetry.toFixed(2)}</div>
+    `;
+    list.appendChild(card);
+  }
+}
+
+// --- Loop ---
+let timer;
+function loop() {
+  if (playing && !world.isFinished()) {
+    world.step(decide);
+  }
+  draw();
+  updateSidebar();
+}
+function startLoop() { clearInterval(timer); timer = setInterval(loop, interval); }
+startLoop();
+
+// --- Controls ---
+document.getElementById('btn-play').onclick = () => { playing = true; };
+document.getElementById('btn-pause').onclick = () => { playing = false; };
+document.getElementById('btn-restart').onclick = () => { init(); };
+document.getElementById('speed').onchange = (e) => { interval = parseInt(e.target.value); startLoop(); };
+</script>
+</body>
+</html>

@@ -539,6 +539,428 @@ const DEFAULT_CONFIG = {
     harvestGain: 5,
     seed: 42
 };
+class Body {
+    cells;
+    center;
+    genome;
+    age;
+    constructor(center, genome){
+        this.center = center;
+        this.genome = genome;
+        this.age = 0;
+        this.cells = [
+            {
+                offset: {
+                    x: 0,
+                    y: 0
+                },
+                type: "core",
+                energy: 20,
+                age: 0,
+                color: genome.coreColor
+            }
+        ];
+    }
+    getWorldPositions() {
+        return this.cells.map((c)=>({
+                x: this.center.x + c.offset.x,
+                y: this.center.y + c.offset.y
+            }));
+    }
+    getBounds() {
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        for (const c of this.cells){
+            minX = Math.min(minX, c.offset.x);
+            maxX = Math.max(maxX, c.offset.x);
+            minY = Math.min(minY, c.offset.y);
+            maxY = Math.max(maxY, c.offset.y);
+        }
+        return {
+            minX,
+            maxX,
+            minY,
+            maxY,
+            width: maxX - minX + 1,
+            height: maxY - minY + 1
+        };
+    }
+    countByType(type) {
+        return this.cells.filter((c)=>c.type === type).length;
+    }
+    hasCell(offset) {
+        return this.cells.some((c)=>c.offset.x === offset.x && c.offset.y === offset.y);
+    }
+    grow(availableEnergy, rng) {
+        this.age++;
+        for (const c of this.cells)c.age++;
+        if (this.cells.length >= this.genome.maxCells) return [];
+        const newCells = [];
+        for (const rule of this.genome.growthRules){
+            if (this.cells.length + newCells.length >= this.genome.maxCells) break;
+            if (availableEnergy < rule.energyCost) continue;
+            const existing = this.cells.filter((c)=>c.type === rule.produces).length + newCells.filter((c)=>c.type === rule.produces).length;
+            if (existing >= rule.maxInstances) continue;
+            const sources = this.cells.filter((c)=>c.type === rule.from && c.age >= rule.minAge);
+            for (const source of sources){
+                if (rng() > rule.probability) continue;
+                if (this.cells.length + newCells.length >= this.genome.maxCells) break;
+                const newOffset = {
+                    x: source.offset.x + rule.direction.x,
+                    y: source.offset.y + rule.direction.y
+                };
+                if (this.hasCell(newOffset) || newCells.some((c)=>c.offset.x === newOffset.x && c.offset.y === newOffset.y)) continue;
+                const color = this.genome.colorGradient ? (this.genome.coreColor + Math.floor(Math.sqrt(newOffset.x ** 2 + newOffset.y ** 2))) % 6 : rule.produces === "skin" ? this.genome.skinColor : this.genome.coreColor;
+                newCells.push({
+                    offset: newOffset,
+                    type: rule.produces,
+                    energy: 5,
+                    age: 0,
+                    color
+                });
+                availableEnergy -= rule.energyCost;
+                if (rule.symmetry && this.genome.bilateralSymmetry > 0.5) {
+                    const mirrorOffset = {
+                        x: -newOffset.x,
+                        y: newOffset.y
+                    };
+                    if (!this.hasCell(mirrorOffset) && !newCells.some((c)=>c.offset.x === mirrorOffset.x && c.offset.y === mirrorOffset.y)) {
+                        newCells.push({
+                            offset: mirrorOffset,
+                            type: rule.produces,
+                            energy: 5,
+                            age: 0,
+                            color
+                        });
+                        availableEnergy -= rule.energyCost;
+                    }
+                }
+            }
+        }
+        this.cells.push(...newCells);
+        return newCells;
+    }
+}
+function scoreBodyBeauty(body) {
+    const cells = body.cells;
+    if (cells.length <= 1) return {
+        formSymmetry: 0,
+        proportion: 0,
+        complexity: 0,
+        colorHarmony: 0,
+        total: 0
+    };
+    let mirrorMatches = 0;
+    let mirrorTotal = 0;
+    for (const c of cells){
+        if (c.offset.x === 0) continue;
+        mirrorTotal++;
+        const mirror = cells.find((m)=>m.offset.x === -c.offset.x && m.offset.y === c.offset.y);
+        if (mirror) {
+            mirrorMatches++;
+            if (mirror.type === c.type) mirrorMatches += 0.5;
+        }
+    }
+    const formSymmetry = mirrorTotal > 0 ? Math.min(1, mirrorMatches / mirrorTotal) : 0;
+    const bounds = body.getBounds();
+    const ratio = bounds.width / Math.max(bounds.height, 1);
+    const inverseGolden = 1 / 1.618;
+    const closestGolden = Math.min(Math.abs(ratio - 1.618), Math.abs(ratio - inverseGolden), Math.abs(ratio - 1));
+    const proportion = Math.max(0, 1 - closestGolden);
+    const usedTypes = new Set(cells.map((c)=>c.type));
+    const typeDiversity = usedTypes.size / 6;
+    const sizeFactor = Math.min(1, cells.length / body.genome.maxCells);
+    const complexity = 0.6 * typeDiversity + 0.4 * sizeFactor;
+    const colorCounts = [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ];
+    for (const c of cells)colorCounts[c.color % 6]++;
+    const usedColors = colorCounts.map((count, i)=>({
+            color: i,
+            ratio: count / cells.length
+        })).filter((c)=>c.ratio > 0.05);
+    let harmonySum = 0;
+    let pairs = 0;
+    for(let i = 0; i < usedColors.length; i++){
+        for(let j = i + 1; j < usedColors.length; j++){
+            const dist = Math.min(Math.abs(usedColors[i].color - usedColors[j].color), 6 - Math.abs(usedColors[i].color - usedColors[j].color));
+            harmonySum += dist === 3 ? 1.0 : dist === 2 ? 0.8 : 0.5;
+            pairs++;
+        }
+    }
+    const colorHarmony = pairs > 0 ? harmonySum / pairs : 0.3;
+    const total = formSymmetry * 0.35 + proportion * 0.20 + complexity * 0.25 + colorHarmony * 0.20;
+    return {
+        formSymmetry,
+        proportion,
+        complexity,
+        colorHarmony,
+        total
+    };
+}
+function mulberry321(seed) {
+    let s = seed | 0;
+    return ()=>{
+        s = s + 0x6d2b79f5 | 0;
+        let t = Math.imul(s ^ s >>> 15, 1 | s);
+        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+}
+class WorldV2 {
+    config;
+    grid;
+    organisms;
+    events;
+    tick;
+    rng;
+    nextId;
+    constructor(config, genomes){
+        this.config = config;
+        this.tick = 0;
+        this.events = [];
+        this.rng = mulberry321(config.seed);
+        this.nextId = 0;
+        this.grid = Array.from({
+            length: config.height
+        }, ()=>Array.from({
+                length: config.width
+            }, ()=>({
+                    resource: 0,
+                    trail: 0,
+                    trailColor: 0,
+                    occupied: false
+                })));
+        let placed = 0;
+        while(placed < config.initialResources){
+            const x = Math.floor(this.rng() * config.width);
+            const y = Math.floor(this.rng() * config.height);
+            if (this.grid[y][x].resource === 0) {
+                this.grid[y][x].resource = 0.3 + this.rng() * 0.7;
+                placed++;
+            }
+        }
+        this.organisms = genomes.map((genome)=>{
+            const center = this.findOpenSpace();
+            const body = new Body(center, genome);
+            this.markOccupied(body);
+            const org = {
+                id: this.nextId++,
+                body,
+                energy: 30,
+                age: 0,
+                alive: true,
+                totalHarvested: 0,
+                generation: 0,
+                parentIds: [],
+                bornAtTick: 0
+            };
+            return org;
+        });
+    }
+    findOpenSpace() {
+        for(let i = 0; i < 100; i++){
+            const x = 3 + Math.floor(this.rng() * (this.config.width - 6));
+            const y = 3 + Math.floor(this.rng() * (this.config.height - 6));
+            if (!this.grid[y][x].occupied) return {
+                x,
+                y
+            };
+        }
+        return {
+            x: Math.floor(this.config.width / 2),
+            y: Math.floor(this.config.height / 2)
+        };
+    }
+    markOccupied(body) {
+        for (const pos of body.getWorldPositions()){
+            const wx = (pos.x % this.config.width + this.config.width) % this.config.width;
+            const wy = (pos.y % this.config.height + this.config.height) % this.config.height;
+            this.grid[wy][wx].occupied = true;
+        }
+    }
+    clearOccupied(body) {
+        for (const pos of body.getWorldPositions()){
+            const wx = (pos.x % this.config.width + this.config.width) % this.config.width;
+            const wy = (pos.y % this.config.height + this.config.height) % this.config.height;
+            this.grid[wy][wx].occupied = false;
+        }
+    }
+    step(decisionFn) {
+        this.tick++;
+        this.events = [];
+        for (const org of this.organisms){
+            if (!org.alive) continue;
+            org.energy -= this.config.energyDrainPerTick * (1 + org.body.cells.length * 0.02);
+            org.age++;
+            if (org.energy <= 0) {
+                org.alive = false;
+                this.clearOccupied(org.body);
+                continue;
+            }
+            const nearbyResources = [];
+            const center = org.body.center;
+            const eyeCount = org.body.countByType("eye");
+            const perceptionRadius = 3 + eyeCount * 2;
+            for(let dy = -perceptionRadius; dy <= perceptionRadius; dy++){
+                for(let dx = -perceptionRadius; dx <= perceptionRadius; dx++){
+                    if (Math.sqrt(dx * dx + dy * dy) > perceptionRadius) continue;
+                    const wx = ((center.x + dx) % this.config.width + this.config.width) % this.config.width;
+                    const wy = ((center.y + dy) % this.config.height + this.config.height) % this.config.height;
+                    if (this.grid[wy][wx].resource > 0.1) {
+                        nearbyResources.push({
+                            x: wx,
+                            y: wy
+                        });
+                    }
+                }
+            }
+            const nearbyOrganisms = this.organisms.filter((o)=>o.alive && o.id !== org.id).map((o)=>{
+                const dx = o.body.center.x - center.x;
+                const dy = o.body.center.y - center.y;
+                return {
+                    id: o.id,
+                    distance: Math.sqrt(dx * dx + dy * dy),
+                    cellCount: o.body.cells.length
+                };
+            }).filter((o)=>o.distance < perceptionRadius * 2);
+            const action = decisionFn(org, nearbyResources, nearbyOrganisms, this.tick);
+            this.applyAction(org, action);
+        }
+        for(let y = 0; y < this.config.height; y++){
+            for(let x = 0; x < this.config.width; x++){
+                if (this.grid[y][x].trail > 0) {
+                    this.grid[y][x].trail = Math.max(0, this.grid[y][x].trail - this.config.trailDecayRate);
+                }
+                if (this.grid[y][x].resource === 0 && this.rng() < this.config.resourceRegenRate) {
+                    this.grid[y][x].resource = 0.2 + this.rng() * 0.5;
+                }
+            }
+        }
+    }
+    applyAction(org, action) {
+        switch(action.type){
+            case "grow":
+                {
+                    const newCells = org.body.grow(org.energy, this.rng);
+                    org.energy -= newCells.length * org.body.genome.growthEnergyCost;
+                    this.markOccupied(org.body);
+                    break;
+                }
+            case "move":
+                {
+                    const legCount = org.body.countByType("leg");
+                    if (legCount === 0 && org.body.cells.length > 1) break;
+                    this.clearOccupied(org.body);
+                    org.body.center.x = ((org.body.center.x + action.direction.x) % this.config.width + this.config.width) % this.config.width;
+                    org.body.center.y = ((org.body.center.y + action.direction.y) % this.config.height + this.config.height) % this.config.height;
+                    this.markOccupied(org.body);
+                    for (const cell of org.body.cells){
+                        if (cell.type === "skin") {
+                            const wx = ((org.body.center.x + cell.offset.x) % this.config.width + this.config.width) % this.config.width;
+                            const wy = ((org.body.center.y + cell.offset.y) % this.config.height + this.config.height) % this.config.height;
+                            this.grid[wy][wx].trail = Math.min(1, this.grid[wy][wx].trail + 0.3);
+                            this.grid[wy][wx].trailColor = cell.color;
+                        }
+                    }
+                    org.energy -= this.config.moveCost * (1 + org.body.cells.length * 0.05);
+                    break;
+                }
+            case "harvest":
+                {
+                    const mouths = org.body.cells.filter((c)=>c.type === "mouth");
+                    if (mouths.length === 0) {
+                        const cx = (org.body.center.x % this.config.width + this.config.width) % this.config.width;
+                        const cy = (org.body.center.y % this.config.height + this.config.height) % this.config.height;
+                        if (this.grid[cy][cx].resource > 0) {
+                            const gained = this.grid[cy][cx].resource * this.config.harvestGain * 0.5;
+                            org.energy += gained;
+                            org.totalHarvested += gained;
+                            this.grid[cy][cx].resource = 0;
+                        }
+                        break;
+                    }
+                    for (const mouth of mouths){
+                        const wx = ((org.body.center.x + mouth.offset.x) % this.config.width + this.config.width) % this.config.width;
+                        const wy = ((org.body.center.y + mouth.offset.y) % this.config.height + this.config.height) % this.config.height;
+                        if (this.grid[wy][wx].resource > 0) {
+                            const gained = this.grid[wy][wx].resource * this.config.harvestGain;
+                            org.energy += gained;
+                            org.totalHarvested += gained;
+                            this.grid[wy][wx].resource = 0;
+                        }
+                    }
+                    break;
+                }
+            case "pulse":
+                {
+                    for (const cell of org.body.cells){
+                        if (cell.type === "skin" || cell.type === "core") {
+                            const wx = ((org.body.center.x + cell.offset.x) % this.config.width + this.config.width) % this.config.width;
+                            const wy = ((org.body.center.y + cell.offset.y) % this.config.height + this.config.height) % this.config.height;
+                            this.grid[wy][wx].trail = Math.min(1, this.grid[wy][wx].trail + 0.5);
+                            this.grid[wy][wx].trailColor = action.color;
+                        }
+                    }
+                    org.energy -= 0.5;
+                    break;
+                }
+            case "idle":
+                org.energy += 0.05;
+                break;
+        }
+    }
+    isFinished() {
+        return this.tick >= this.config.maxTicks || this.organisms.every((o)=>!o.alive);
+    }
+    getResults() {
+        const alive = this.organisms.filter((o)=>o.alive);
+        const organismResults = this.organisms.map((o)=>({
+                id: o.id,
+                survived: o.alive,
+                age: o.age,
+                cellCount: o.body.cells.length,
+                bodyBeauty: scoreBodyBeauty(o.body),
+                totalHarvested: o.totalHarvested,
+                generation: o.generation
+            }));
+        const livingBeauties = organismResults.filter((o)=>o.survived).map((o)=>o.bodyBeauty.total);
+        const worldBeauty = livingBeauties.length > 0 ? livingBeauties.reduce((a, b)=>a + b, 0) / livingBeauties.length : 0;
+        let diversitySum = 0;
+        let diversityPairs = 0;
+        for(let i = 0; i < alive.length; i++){
+            for(let j = i + 1; j < alive.length; j++){
+                const a = alive[i].body.cells.length;
+                const b = alive[j].body.cells.length;
+                const sizeDiff = Math.abs(a - b) / Math.max(a, b, 1);
+                const typesA = new Set(alive[i].body.cells.map((c)=>c.type));
+                const typesB = new Set(alive[j].body.cells.map((c)=>c.type));
+                const typeOverlap = [
+                    ...typesA
+                ].filter((t)=>typesB.has(t)).length / Math.max(typesA.size, typesB.size, 1);
+                diversitySum += sizeDiff * 0.5 + (1 - typeOverlap) * 0.5;
+                diversityPairs++;
+            }
+        }
+        const ecosystemDiversity = diversityPairs > 0 ? diversitySum / diversityPairs : 0;
+        return {
+            organisms: organismResults,
+            worldBeauty,
+            ecosystemDiversity,
+            survivalRate: alive.length / Math.max(this.organisms.length, 1),
+            avgBodySize: alive.length > 0 ? alive.reduce((s, o)=>s + o.body.cells.length, 0) / alive.length : 0,
+            avgAge: this.organisms.reduce((s, o)=>s + o.age, 0) / Math.max(this.organisms.length, 1),
+            totalTicks: this.tick,
+            grid: this.grid
+        };
+    }
+}
 export { World as World };
 export { scoreBeauty as scoreBeauty, beautyByColor as beautyByColor };
 export { DEFAULT_CONFIG as DEFAULT_CONFIG };
+export { WorldV2 as WorldV2 };
+export { Body as Body, scoreBodyBeauty as scoreBodyBeauty };
