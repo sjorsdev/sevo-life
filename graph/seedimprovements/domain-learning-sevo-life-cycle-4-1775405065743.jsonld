@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405065743",
+  "timestamp": "2026-04-05T16:04:25.743Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Organisms survive but waste energy through uncoordinated exploration. Introduce rhythmic pulsing and energy conservation to create efficient, beautiful movement patterns.; Efficiency at 0.141 is critically low and the primary fitness bottleneck. With strong survival (0.875) but poor efficiency, organisms burn energy wastefully. Secondary issue: rhythm (0.194) and coverage (0.242) are weak in beauty. Strategy: (1) boost energyConserve across all genomes to reduce energy waste; (2) reduce explorationDrive to cut aimless movement; (3) increase pulseFrequency for rhythmic movement patterns (improves both efficiency and rhythm aesthetics); (4) boost patternSymmetry for visual rhythm. Target: efficiency → 0.35+, rhythm → 0.4+, coverage via better movement coherence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
