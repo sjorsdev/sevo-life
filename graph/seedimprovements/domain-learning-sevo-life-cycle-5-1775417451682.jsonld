@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775417451682",
+  "timestamp": "2026-04-05T19:30:51.682Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Survival bottleneck is energy starvation, not predation. Shift from exploration-heavy to harvest-efficient. Let motion emerge only after energy stability.; survivalRate at 0.5 is the critical bottleneck (weighted 0.5 in goal). Half the organisms die before age 500; survivors are energy-starved (9-21 remaining). Efficiency is also weak (0.362). Root cause: organisms burn energy faster than they harvest. Secondary issue: spatialComposition is very low (0.3) despite decent beauty metrics—organisms clump rather than spread. Fix: boost resourceAttraction and energyConserve across the board, reduce wasteful exploration for fragile genomes, increase explorationDrive for spatial spread in hardier types.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
