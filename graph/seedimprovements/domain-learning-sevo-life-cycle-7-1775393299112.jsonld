@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775393299112",
+  "timestamp": "2026-04-05T12:48:19.112Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: entities hoard energy rather than spend it on productive harvesting. Break conservatism + add temporal patterns.; Efficiency is critically low (0.154) despite perfect survival, indicating entities are over-conservative with energy. Current energyConserve values (0.4-0.8) create passive behavior that reduces resource-gathering rate and work output per cycle. Simultaneously, rhythm beauty (0.13) is weak because pulseFrequency values are too low—temporal patterns aren't forming. Solution: reduce energyConserve to unlock active foraging, and increase pulseFrequency on high-trail-intensity entities to create rhythmic patterns that drive both efficiency (faster harvest cycles) and beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
