@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775389427110",
+  "timestamp": "2026-04-05T11:43:47.110Z",
+  "observation": "Domain sevo-life (fitness 0.689) generated 13 insights",
+  "suggestion": "survivalRate has 0.5 weight in composite fitness. Focused on maximizing lifespan; increased energyConserve from 0.4 to 0.65 to extend lifespan. Still aggressive harvesting.; boosted energyConserve from 0.8 to 0.88 and trailIntensity from 0.25 to 0.5 for beauty contribution; increased patternSymmetry from 0.75 to 0.88 and energyConserve from 0.45 to 0.68 for compound improvement; shifted energyConserve from 0.55 to 0.72 and increased patternSymmetry for better beauty; reduced moveSpeed to 0.62 (less energy waste) while keeping resourceAttraction at 0.88 for sustained harvesting; ultra-high energyConserve (0.92) with moderate movement for longest possible lifespan; new genome targeting beautyScore improvement (0.3 weight). High trail intensity (0.95) with good energy conservation; highest patternSymmetry (0.92) + high trailIntensity (0.88) for beauty dominance, with solid energy conservation; prioritize resource cells when energy is low to sustain longer lifespans; resource attraction weighted higher when low on energy; harvest when threshold met, with slight bias toward harvesting when survival is critical; movement distance reduced by energyConserve to extend lifespan",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
