@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410319708",
+  "timestamp": "2026-04-05T17:31:59.708Z",
+  "observation": "Domain sevo-life (fitness 0.591) generated 2 insights",
+  "suggestion": "Efficiency ∝ (resources harvested) / (energy spent moving). Spatial beauty emerges from collision avoidance + mild flocking. Form diversity requires distinct genomes with different patrol strategies.; Efficiency is severely weak (0.423 vs targets of 0.5+), driven by high energy expenditure. spatialComposition (0.3) shows organisms aren't forming coherent patterns. diversityOfForms (0.456) lacks morphological variation. Root cause: organisms moving too much and too fast, burning resources without coordinating spatially. Solution: reduce movement overhead, increase resource sensing range, balance flocking to create spatial emergence without energy waste. Add genetic diversity via trail color and symmetry tuning.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
