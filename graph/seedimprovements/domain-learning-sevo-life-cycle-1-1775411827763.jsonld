@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411827763",
+  "timestamp": "2026-04-05T17:57:07.763Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Survival deficit is energy starvation, not genetics — organisms need lower baseline metabolism and higher resource-finding aggression to spread and sustain.; Survival rate is 0.5 (half dead) and directly weighted at 0.5× in the goal — this is the critical bottleneck. Dead organisms died at ages 225, 225, 429 (starved before 500 max). Root cause: energy drain from movement exceeds resource discovery. Alive organisms max out at 500, suggesting they found stable energy but barely survived. Secondary weakness: spatialComposition (0.3) indicates clustering rather than dispersal — organisms competing for same patches. Fix: reduce movement energy costs, increase active resource seeking and exploration, reduce path-following clustering behavior.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
