@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410114924",
+  "timestamp": "2026-04-05T17:28:34.924Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Organisms are burning energy to explore/pulse without gaining corresponding fitness — the simulation rewards *being alive and beautiful*, not *moving frantically*.; Efficiency is the bottleneck (0.467) — it directly costs 0.2 of the goal function. Within beauty, spatialComposition (0.3) shows organisms cluster rather than explore. The living organisms have very low energy reserves (4–45 out of potential max), indicating excessive energy drain. Primary lever: increase energyConserve and reduce moveSpeed to lower baseline metabolism. Secondary lever: boost explorationDrive to spread organisms spatially (improves both spatialComposition beauty metric and avoids local resource depletion). Tertiary: reduce pulseFrequency since pulsing is an energy cost with no survival benefit evident.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
