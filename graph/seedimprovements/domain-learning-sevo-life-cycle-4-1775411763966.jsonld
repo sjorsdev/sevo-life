@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411763966",
+  "timestamp": "2026-04-05T17:56:03.966Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Energy starvation is killing the population; make organisms more efficient foragers and less wasteful movers.; Efficiency (0.266) is the critical bottleneck — organisms are spending too much energy relative to output. Dead organisms aged 225-412 suggest premature starvation. Alive organisms at age 500 with energy 9-12 are near depletion. Spatial composition (0.3) is also weak. Strategy: reduce energy waste (lower moveSpeed, increase energyConserve), boost resource finding (increase resourceAttraction, lower harvestThreshold), and improve spatial visibility. Survival rate improves directly if organisms live longer with better energy management.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
