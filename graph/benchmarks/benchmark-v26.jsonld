@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v26",
+  "timestamp": "2026-04-05T09:29:09.728Z",
+  "version": 26,
+  "parent": "benchmark-v25",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v26) extending v25 with: (1) Optimistic Fast-Path Consensus—agents must implement consensus completing in 3 network delays in the optimistic case (no Byzantine faults visible) with explicit latency bounds for all code paths; (2) Byzantine Leader Election Protocol—implement leader selection resilient to Byzantine leader behavior (equivocation, non-determinism) with guaranteed leader rotation on detected Byzantine violations; (3) Hybrid Fault Model—handle f_b Byzantine + f_c crash failures with constraint f_b + 2*f_c < n, proving correctness under both faults simultaneously; (4) Formal Verification in Higher-Order Logic—submit safety proof in Coq/Isabelle/Lean with machine-checkable proof of linearizability; (5) Cryptographic Agility—implement algorithm-agnostic signature abstraction where switching hash/signature schemes requires only config change (no code modification), with formal proof that all Byzantine guarantees hold for any secure scheme; (6) Byzantine Recovery Protocol—agents must recover from extended network partitions, Byzantine node crashes, and crash-Byzantine combinations with formal liveness proof that all honest nodes reach agreement within bounded time; (7) Quorum System Formalism—provide explicit quorum intersection proof showing all read-write quorum pairs intersect in at least one honest node under f_b Byzantine + f_c crash; (8) O(n² worst-case, O(n log n) optimistic message complexity with formal proof that both bounds hold under all adversarial message scheduling scenarios.",
+  "scoringLogic": "optimisticFastPathLatency(0.12) + leaderElectionByzantineResilience(0.12) + hybridFaultModelCorrectness(0.14) + formalVerificationCompleteness(0.16) + cryptographicAgilityProof(0.12) + byzantineRecoveryLiveness(0.13) + quorumIntersectionFormal(0.12) + messageComplexityDualBound(0.09)",
+  "difficulty": 26,
+  "passThreshold": 0.95
+}
