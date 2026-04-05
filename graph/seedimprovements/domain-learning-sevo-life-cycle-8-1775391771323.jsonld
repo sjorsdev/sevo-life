@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775391771323",
+  "timestamp": "2026-04-05T12:22:51.323Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "Efficiency collapse is due to high movement/exploration cost relative to energy gain—organisms are wandering inefficiently. Tighten targeting to harvest-rich areas, not exploration.; Efficiency is critically weak (0.042), contributing only 0.0084 to fitness. Beauty is already strong (0.782). Survival is secondary (0.40). To maximize the goal function, improve efficiency: reduce wasted movement, conserve energy aggressively, increase harvest threshold to avoid energy-negative actions, and reduce exploration overhead. This directly multiplies overall fitness by improving the 0.2x-weighted term. Secondary: slightly boost resource attraction to ensure harvests offset movement costs.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
