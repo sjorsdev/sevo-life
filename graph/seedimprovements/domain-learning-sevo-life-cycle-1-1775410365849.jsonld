@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410365849",
+  "timestamp": "2026-04-05T17:32:45.849Z",
+  "observation": "Domain sevo-life (fitness 0.631) generated 2 insights",
+  "suggestion": "Efficiency beats complexity — organisms with 28 energy (org 5) outperform those with 1 energy (org 0) despite similar structure. Tighten the energy-hunting feedback loop rather than growing bigger.; Efficiency is the weakest component (0.552), directly limiting overall fitness. The problem is organisms are wasting energy through unnecessary movement and exploration without effective resource gathering. Spatial composition (0.3) is nearly broken, suggesting poor coordination and positioning. Organism 3 died early (374 vs 500 age) likely due to energy depletion. Solution: reduce wasteful exploration behavior, increase focused resource harvesting, and improve spatial coordination through formation-friendly parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
