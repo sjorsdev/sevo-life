@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413134586",
+  "timestamp": "2026-04-05T18:18:54.586Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Organisms evolve beautiful forms but waste energy moving; they need efficient foraging before complex morphology.; Efficiency (0.393) is critically weak and blocks 0.2 of the goal score. The culprit: high movement cost relative to resource gain. Organisms at age 500 show stalled growth; IDs 1 and 4 are near-starving (energy 6 and 2). Survival dropped from expected 6/6 to 4/6. Secondary issue: spatialComposition (0.3) indicates poor dispersal. Fix: reduce metabolic drag (energyConserve up), boost resource attraction to close the gap between movement cost and energy intake, and increase exploration to spread the population better across space.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
