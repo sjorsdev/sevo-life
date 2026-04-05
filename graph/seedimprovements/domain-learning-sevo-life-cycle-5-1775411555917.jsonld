@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411555917",
+  "timestamp": "2026-04-05T17:52:35.917Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Particle lifespan is energy-gated, not age-gated — lower movement cost and faster resource conversion beats exploration and display.; Efficiency is the critical bottleneck at 0.334 — only 33% of the goal weight. Three organisms died early (ages 268-300) before reaching sustainable energy levels. The survivors reached age 500 but wasted energy on high movement costs and trail display. Root cause: moveSpeed and exploration overhead exceed resource acquisition rate. Fix: reduce metabolic waste (moveSpeed, explorationDrive, trailIntensity), boost energy conservation and resourceAttraction to create efficient feeding loops. Survival will improve immediately with sustainable energy budgets.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
