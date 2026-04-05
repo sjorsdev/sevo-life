@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775405464225",
+  "timestamp": "2026-04-05T16:11:04.225Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Beauty is bound by space utilization and behavioral diversity, not individual particle elegance. Evolution converged to safe, clustered forms. Break the local optimum with behavioral variation.; Fitness is capped by beautyScore (0.663), specifically spatialComposition (0.3 — critical) and diversityOfForms (0.427 — weak). Organisms are confined, morphologically homogeneous, and not exploring space or creating emergent patterns. Survival is perfect (1.0) and efficiency is acceptable (0.673), so safety margins exist for aggressive exploration. Mutation strategy: increase explorationDrive and moveSpeed to force spatial dispersal; vary resourceAttraction and patternSymmetry across population to create behavioral/morphological diversity; adjust energyConserve to reward active exploration over conservation. This directly targets the bottleneck.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
