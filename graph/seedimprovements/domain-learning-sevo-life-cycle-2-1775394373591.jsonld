@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394373591",
+  "timestamp": "2026-04-05T13:06:13.591Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Beauty creation is energy-expensive relative to resource gain. Reduce visual overhead and movement waste to free energy for survival.; Efficiency (0.131) is catastrophically weak and dragging the overall fitness. The weighted contribution is only 0.026, while survival (0.4375) dominates. Beauty (0.544) is also soft but not critical. The problem: entities are burning energy on high trailIntensity/pulseFrequency and moveSpeed without adequate resource harvesting returns. Reduce energy expenditure (moveSpeed, trail overhead) and boost retention (energyConserve) across the board. The Aesthetic Harvester is beautiful but inefficient — dial back its visual cost while preserving core movement and harvesting.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
