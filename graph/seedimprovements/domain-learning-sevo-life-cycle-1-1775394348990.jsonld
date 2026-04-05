@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775394348990",
+  "timestamp": "2026-04-05T13:05:48.990Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Efficiency + beauty are anti-coupled; the Harvester sacrifices both rhythm and coverage for speed. Decoupling them via pulse and trail intensity lets aggressive foragers contribute to emergence without moving carelessly.; Efficiency is critically low (0.144) — 5x weaker than its weighted goal. Within beauty, rhythm is nearly absent (0.119). Root causes: (1) Harvester has zero pulse, creating dead visual weight. (2) movement patterns lack temporal coherence. (3) Trail presence too sparse for coverage. Solution: boost pulseFrequency across low-rhythm entities (+0.1–0.2), reduce moveSpeed slightly on resource-aggressive types to preserve energy, increase trailIntensity where coverage is poor. Target: efficiency → 0.3+, rhythm → 0.25+",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
