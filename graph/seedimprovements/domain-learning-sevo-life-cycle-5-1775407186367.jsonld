@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407186367",
+  "timestamp": "2026-04-05T16:39:46.367Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is metabolic cost, not exploration. Improve survival by energy conservation first, then resource attraction.; Efficiency (0.478) is the weakest metric — organisms are dying early or energy-starved. Spatial composition (0.3) is critically low. The dead organisms (0, 3) failed before max age, suggesting metabolic waste or poor resource acquisition. Current survivors have low energy reserves (9, 15). Proposal: reduce metabolic waste via energyConserve, improve food-finding via resourceAttraction, reduce costly movement, and boost visual composition via symmetry. Different genome archetypes need different tuning — jellyfish-like forms should be more efficient swimmers; crawler-like forms should find resources more aggressively.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
