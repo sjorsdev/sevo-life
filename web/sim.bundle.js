@@ -217,9 +217,9 @@ const v2 = {
 const DEFAULT_WORLD = {
     width: 800,
     height: 600,
-    maxTicks: 500,
-    resourceCount: 60,
-    flowStrength: 0.2,
+    maxTicks: Infinity,
+    resourceCount: 100,
+    flowStrength: 0.15,
     gravity: 0
 };
 function mulberry32(seed) {
@@ -280,7 +280,8 @@ class World {
                 radius: 10 + this.rng() * 20,
                 regrowRate: 0.002 + this.rng() * 0.005
             }));
-        this.organisms = genomes.map((genome)=>this.spawnOrganism(genome));
+        this.organisms = [];
+        for (const genome of genomes)this.spawnOrganism(genome);
     }
     spawnOrganism(genome, pos) {
         const p = pos ?? {
@@ -311,10 +312,11 @@ class World {
             springs: [],
             genome,
             age: 0,
-            energy: 50,
+            energy: 80,
             alive: true,
             totalHarvested: 0
         };
+        this.organisms.push(org);
         return org;
     }
     step() {
@@ -378,8 +380,8 @@ class World {
         for (const org of this.organisms){
             if (!org.alive) continue;
             org.age++;
-            const seasonDrainMult = season === 1 ? 1.5 : season === 2 ? 1.3 : 1.0;
-            org.energy -= (0.03 + org.particles.length * 0.005) * seasonDrainMult;
+            const seasonDrainMult = season === 1 ? 1.3 : season === 2 ? 1.1 : 1.0;
+            org.energy -= (0.015 + org.particles.length * 0.002) * seasonDrainMult;
             if (org.energy <= 0) {
                 org.alive = false;
                 continue;
@@ -398,9 +400,9 @@ class World {
                 const beautyScore = this.beauty.beauty();
                 org.energy += beautyScore.total * 0.2;
             }
-            if (org.energy > 40 && org.age > 100 && org.particles.length >= org.genome.maxParticles * 0.5) {
+            if (org.age > 150 && org.age % 200 === 0 && org.energy > 5) {
                 const alive = this.organisms.filter((o)=>o.alive);
-                if (alive.length < 12) {
+                if (alive.length < 30) {
                     const childGenome = JSON.parse(JSON.stringify(org.genome));
                     childGenome.baseRadius = org.genome.baseRadius * (0.85 + this.rng() * 0.3);
                     childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.15));
@@ -451,7 +453,7 @@ class World {
                     };
                     const child = this.spawnOrganism(childGenome, childPos);
                     child.generation = org.generation + 1;
-                    org.energy -= 20;
+                    org.energy -= 10;
                 }
             }
             if (org.genome.pulseRate > 0) {
@@ -596,10 +598,11 @@ class World {
                 if (r.amount < 0.05) continue;
                 const d = v2.dist(h.pos, r.pos);
                 if (d < r.radius + h.radius) {
-                    const gained = Math.min(r.amount, 0.1) * 5 * efficiency;
+                    const bite = Math.min(r.amount, 0.15);
+                    const gained = bite * 10 * efficiency;
                     org.energy += gained;
                     org.totalHarvested += gained;
-                    r.amount -= Math.min(r.amount, 0.1);
+                    r.amount -= bite;
                 }
             }
         }

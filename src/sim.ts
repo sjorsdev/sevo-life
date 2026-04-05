@@ -195,7 +195,8 @@ export class World {
     }));
 
     // Spawn organisms
-    this.organisms = genomes.map((genome) => this.spawnOrganism(genome));
+    this.organisms = [];
+    for (const genome of genomes) this.spawnOrganism(genome);
   }
 
   spawnOrganism(genome: Genome, pos?: V2): Organism {
@@ -225,6 +226,7 @@ export class World {
       totalHarvested: 0,
     };
 
+    this.organisms.push(org);
     return org;
   }
 
