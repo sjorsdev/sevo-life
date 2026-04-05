@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775391848021",
+  "timestamp": "2026-04-05T12:24:08.021Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost, not harvest selectivity. Reduce speed globally; beauty requires higher pulse and trail intensity to create visible rhythm and coverage.; Efficiency is critically low at 0.149 — this is the highest-impact weakness since it directly constrains overall fitness. The primary culprit is excessive movement cost: moveSpeed values (0.6–0.75) are burning energy without proportional resource gains. Secondary weakness is beauty rhythm (0.291) and coverage (0.313) — low pulseFrequency and limited trailIntensity. Strategy: (1) reduce moveSpeed across the board to cut energy waste, (2) increase energyConserve on high-activity entities, (3) boost pulseFrequency and trailIntensity to improve beauty without raising survival cost. Survival is already maxed at 1.0, so no tradeoff needed there.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
