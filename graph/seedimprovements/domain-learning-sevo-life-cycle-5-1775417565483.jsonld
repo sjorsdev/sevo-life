@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775417565483",
+  "timestamp": "2026-04-05T19:32:45.483Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Energy efficiency beats structural complexity. Minimize movement cost, maximize conservation, then invest remaining budget in visual distinctiveness.; Efficiency is the critical bottleneck (0.358 vs 0.667 survival, 0.696 beauty). The dead organisms (ids 0,3) had 13 particles with zero energy—costly structure without payoff. Survivors are leaner (8-12 particles) but still energy-starved. Primary fix: reduce moveSpeed to lower per-step metabolic cost, increase energyConserve to retain gathered resources longer. Secondary: boost visual differentiation (trailColor variance, patternSymmetry) to unlock unused beauty potential without energy cost. The high-efficiency survivors (id 5: 24 energy, 8 particles) show the optimal pattern—lean structure, conservative movement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
