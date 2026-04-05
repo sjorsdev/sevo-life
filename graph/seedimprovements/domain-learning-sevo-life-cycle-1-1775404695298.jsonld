@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775404695298",
+  "timestamp": "2026-04-05T15:58:15.298Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Organisms are moving too much and pulsing too slowly—lower energy cost per action, add temporal structure to trails.; Efficiency at 0.145 is critically weak—it's the bottleneck. SurvivalRate maxes at 1.0, beautyScore is improving. In particle sims, efficiency typically measures energy spent vs. spatial/temporal impact. With avgAge at ceiling (200), organisms live full lifespans but waste energy. Rhythm (0.183) is also severely weak. Strategy: reduce moveSpeed and explorationDrive to cut wasted motion, boost energyConserve to stretch resources, increase pulseFrequency to generate temporal rhythm (currently nearly silent). Target 50% gain in efficiency moves overall fitness from 0.699 to ~0.75.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
