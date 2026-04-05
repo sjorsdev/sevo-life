@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775391202341",
+  "timestamp": "2026-04-05T12:13:22.341Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Efficiency improved by reducing mobility cost (moveSpeed) and energy waste, not by reducing resource drive—survival and resource availability stay constant while energy efficiency climbs.; Efficiency at 0.147 is critically low and drags overall fitness to 0.641. Survival is strong (0.875), beauty is adequate (0.58), so improving efficiency gains 0.2x weight directly. Root causes: moveSpeed 0.75-0.85 burns energy; energyConserve at 0.4-0.45 on aggressive foragers wastes marginal harvests; high explorationDrive (0.8) and trailIntensity (0.85) compound energy loss. Strategy: reduce movement cost, boost energy conservation on high-movement entities, trim non-essential trail drawing.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
