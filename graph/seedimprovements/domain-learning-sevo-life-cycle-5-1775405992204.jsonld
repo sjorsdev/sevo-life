@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405992204",
+  "timestamp": "2026-04-05T16:19:52.204Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Energy starvation is the bottleneck — move cheaper, harvest smarter, distribute visually to create natural spacing pressure.; Efficiency is critically weak at 0.462 — three organisms have dangerously low energy (organism 1 at 1 energy will die soon, organism 4 at 7 energy struggling). Root cause: high movement costs without sufficient energy harvesting. Simultaneous beauty weakness in diversityOfForms (0.457) and spatialComposition (0.3) suggests organisms are clustered similarly. Fix: (1) reduce moveSpeed globally to cut energy burn, (2) increase energyConserve for critical organisms, (3) boost resourceAttraction to improve harvesting efficiency, (4) vary trailColor and patternSymmetry across organisms to increase form diversity and spatial distribution.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
