@@ -27,7 +27,7 @@ const jellyfish: Genome = {
   springDamping: 0.05,
   drag: 0.97,
   baseRadius: 5,
-  resourceAttraction: 0.6,
+  resourceAttraction: 0.72,
   flockingStrength: 0.2,
   avoidanceRadius: 40,
   pulseRate: 0.8,
