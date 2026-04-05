@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409153189",
+  "timestamp": "2026-04-05T17:12:33.189Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Efficiency crisis masks beauty potential — organisms can't sustain enough energy to express complex morphology or spatial intelligence.; Efficiency is the critical bottleneck (0.442 vs. beauty 0.677, survival 0.667). Organisms die prematurely or reach max age with dangerously low energy. Root causes: (1) resource gathering too passive, (2) movement costs too high relative to intake, (3) spatial composition extremely weak (0.3) — organisms cluster rather than explore. Strategy: boost resourceAttraction to increase energy intake, raise energyConserve to reduce waste, elevate explorationDrive to spread organisms (better spatial composition), trim moveSpeed to lower metabolic drag. Secondary: amplify patternSymmetry and trailIntensity to push beauty diversity from 0.456.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
