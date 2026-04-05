@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408008789",
+  "timestamp": "2026-04-05T16:53:28.789Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Small, efficient, cooperative organisms outlast large explorers. Boost metabolic efficiency and feeding while reducing wandering.; Efficiency at 0.332 is the critical bottleneck—organisms waste energy on movement and maintenance. Dead organisms aged 281–398 indicate starvation/exhaustion. Spatial composition at 0.3 is also very weak. Strategy: (1) cut movement energy cost via moveSpeed reduction and boost energyConserve, (2) increase resourceAttraction and lower harvestThreshold to enable aggressive feeding with lower overhead, (3) increase trailAttraction to cluster organisms and improve spatial composition. This trades speed for survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
