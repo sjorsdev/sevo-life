@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775394011636",
+  "timestamp": "2026-04-05T13:00:11.636Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "High velocity without conservation burns energy faster than low-threshold harvesting can replenish. Entities need slower, steadier movement to match their harvest capabilities.; Efficiency is critically weak at 0.145 (0.2 weight = major drag on overall 0.696 fitness). Analysis shows high-movement entities (Harvester 0.75 speed, Aesthetic Harvester 0.75 speed) pair with low energy conservation (0.35-0.42), causing energy waste without proportional resource gain. Survival is perfect (1.0), so we can trade movement for conservation without survival risk. Strategy: reduce moveSpeed on aggressive explorers, raise energyConserve across the board, lower explorationDrive on inefficient searchers. This preserves resource access while cutting waste, targeting efficiency → 0.25+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
