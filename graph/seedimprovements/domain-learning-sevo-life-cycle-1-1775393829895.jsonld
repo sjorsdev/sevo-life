@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775393829895",
+  "timestamp": "2026-04-05T12:57:09.895Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "Movement efficiency dominates total fitness; synchronized pulsing emerges as dominant beauty signal when frequencies converge.; Efficiency is critically low (0.157), reducing overall fitness despite perfect survival. Movement is expensive—current speeds (0.55-0.85) consume energy without proportional resource returns. Additionally, rhythm (0.184) is the worst beauty component; low pulseFrequency values prevent visual synchronization. Strategy: (1) Reduce moveSpeed 15-25% to cut baseline energy cost, (2) Increase energyConserve 10-20% to improve efficiency floor, (3) Increase pulseFrequency 2-3x to create emergent rhythm patterns. Survivalrate is already optimal (1.0), so preserve harvestThreshold and resourceAttraction.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
