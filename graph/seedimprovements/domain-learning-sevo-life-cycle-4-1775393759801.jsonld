@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775393759801",
+  "timestamp": "2026-04-05T12:55:59.801Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Movement is the largest energy sink—reduce moveSpeed 15%, raise energyConserve 20%, entities harvest more than they spend.; Efficiency is critically weak (0.154 vs 0.576 beauty, 1.0 survival). It contributes 0.2 weight to fitness but pulls the score down hardest. Root cause: high moveSpeed (0.55–0.85) burns energy; low energyConserve (0.25–0.6) wastes harvested resources. Secondary issue: rhythm component within beauty is also 0.154, indicating lack of synchronized patterns. Solution: lower movement cost, raise metabolic efficiency, increase pulse/symmetry for emergent rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
