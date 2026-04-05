@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775409472841",
+  "timestamp": "2026-04-05T17:17:52.841Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is a morphological convergence trap. Evolution has found 2-3 body plans that score well under current physics + current beauty metrics, and beauty selection is *reinforcing* these winners rather than *rewarding* diversity. The fitness function optimizes for local pattern beauty (symmetry, smoothness) which biases toward simple forms. Without new environmental pressure (dynamic world) or new expressiveness (cell types, sexual recombination), populations cannot escape the local optima attractor. The system needs disruptive pressure that makes yesterday's beauty solutions suboptimal tomorrow.; [medium] Introduce sexual reproduction with genetic recombination instead of cloning + mutation — Current evolution likely explores variations linearly from each parent. Sexual recombination explores the combinatorial space of gene pairs, creating trait combinations never seen before. This exponentially increases the novelty available in the mutation search space, directly counteracting plateau by opening regions of genome space that point mutations alone cannot reach. Beauty selection would now reward cross-lineage hybrid patterns.; [medium] Add dynamic environmental zones with migrating resource patches and seasonal selective pressures — Plateau indicates convergence to stable local optima in a static world. Dynamic environmental pressure prevents convergence—organisms must continually adapt to new conditions. This creates rolling selection waves: beauty traits useful in zone A become liabilities in zone B, preventing populations from settling into a single dominant morphology. Non-stationary environment breaks the fitness ceiling imposed by fixed ecological niches.; [hard] Expand cell differentiation with 4-6 specialized cell subtypes (sensory, contractile, structural, signaling, storage) with distinct growth rules and beauty properties — Current organisms likely use homogeneous cells, limiting morphological complexity and beauty dimensions. Specialized cell types unlock: sensory organs (eyes, antennae), muscle systems, support structures, neural-like signaling networks, energy storage. This dramatically expands what 'beauty' can mean—symmetry of sensory organs, gradient patterns in signaling networks, fractal branching of support tissue. Beauty reward landscape becomes much richer, creating selection pressure for fundamentally new body plans rather than variations on existing ones.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
