@@ -1,0 +1,14 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "seed-improvement-mutation-strategy-1775389227759",
+  "timestamp": "2026-04-05T11:40:27.759Z",
+  "observation": "LLM-generated full blueprint rewrites fail >80%. In 30 domain cycles only ~3 mutants ran successfully. Syntax errors from reproducing hundreds of lines.",
+  "suggestion": "Default to parameter-only mutations: ask LLM for JSON patch ({moveSpeed: 0.5, energyConserve: 0.7}) and apply programmatically. Reserve full rewrites for aggressive strategy only. Faster, more reliable, more composable.",
+  "evidence": [
+    "sevo-life-30-domain-cycles",
+    "3-of-30-mutants-ran",
+    "80pct-failure-rate"
+  ],
+  "priority": 9
+}
