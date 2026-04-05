@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775422371148",
+  "timestamp": "2026-04-05T20:52:51.148Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The fitness plateau at exactly 0.000 suggests organisms cannot complete reproductive cycles—they're not growing past single cells or not surviving long enough to measure beauty. The evolutionary search space collapsed into: 'don't exist' vs 'barely exist'. Structural solution is not more fitness pressure but more degrees of freedom—new cell behaviors, environmental responsiveness, or control architectures that let organisms *express* variation that beauty selection can act on.; [medium] Introduce multi-scale beauty hierarchy: separate metrics for cell-level symmetry, organ-level pattern, and whole-organism form. Beauty = local harmony + global composition + novelty bonus. — Current fitness plateau suggests beauty metric has hit a local ceiling or organisms can't increase it despite varying morphology. Multi-scale metrics provide new gradient directions. Organisms can evolve beautiful internal structure even if external form stalls. Novelty bonus prevents convergence.; [hard] Add phenotypic plasticity: organisms modify their expressed genes (not genotype) based on environmental cues (nutrient density, neighbor density, light angle). Cells express different behaviors in different contexts. Same genome → variable morphology. — Plateau suggests organisms are locked into fixed developmental paths. Plasticity decouples genotype search space from phenotype space—one genome can explore many forms. Creates feedback between environment and form that wasn't possible before. Enables organisms to 'discover' beauty in responses to world state.; [hard] Replace fixed decision network with hierarchical composable behaviors: organisms build control logic by chaining primitive actions (grow, redirect, attract, repel, sense) into learned sequences. Add 'behavior mutation'—insert/remove/reorder actions in the chain rather than mutating weights. — Neural networks alone may not support discrete structural discovery. Hierarchical composition allows step-wise complexity (3-step→5-step→7-step behaviors). Behavior mutations create larger jumps in phenotype space. Enables emergent behaviors (e.g., pulsing patterns, synchronized growth) not reachable by weight tuning alone.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
