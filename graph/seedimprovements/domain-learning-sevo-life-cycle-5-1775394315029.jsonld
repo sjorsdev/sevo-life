@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394315029",
+  "timestamp": "2026-04-05T13:05:15.029Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "High moveSpeed without matching harvest yield creates energy debt. Conservation + occasional pulses beat constant movement.; Efficiency is critically weak (0.15 vs. target 0.5+). The population burns energy through high moveSpeed (0.6-0.7) and moderate explorationDrive without sufficient energy conservation. Survival is maxed (1.0), so we can sacrifice some exploration for conservation. Secondary weakness: rhythm (0.235) suggests pulses are too infrequent. Strategy: reduce moveSpeed and explorationDrive across aggressive seekers, boost energyConserve uniformly, increase pulseFrequency to improve temporal beauty. This trades exploration efficiency for persistence-based discovery.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
