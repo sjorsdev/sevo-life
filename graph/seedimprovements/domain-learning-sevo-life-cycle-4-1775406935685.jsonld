@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406935685",
+  "timestamp": "2026-04-05T16:35:35.685Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Organisms starve because moving and pulsing costs more energy than they harvest. Reduce metabolic tax, increase gathering efficiency.; Efficiency (0.279) is critically weak, and survival (0.5) shows organisms dying by energy starvation (dead organisms aged 225-435; alive ones at energy 8-11, barely sustainable). Beauty is decent (0.734) but diversity is low (0.456). The bottleneck is metabolic cost vs. resource gathering. Alive organisms hit max age (500), indicating lifespan capacity exists but energy depletion kills younger ones. Solution: (1) drastically reduce movement cost via lower moveSpeed and pulseFrequency, (2) improve energy conservation and resource harvesting to break the starvation cycle, (3) reduce wasteful exploration. This shifts the fitness formula from 0.5×0.5 + 0.3×0.734 + 0.2×0.279 = 0.526 toward 0.5×0.8 + 0.3×0.7 + 0.2×0.5+ = 0.65+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
