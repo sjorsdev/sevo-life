@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413600418",
+  "timestamp": "2026-04-05T18:26:40.418Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Fast, hunt-heavy genomes fail efficiency test; survival depends on conservation, not speed. Spatial beauty emerges from rhythm, not random placement.; Efficiency at 0.529 is the critical bottleneck (weighted 0.2 in goal function). Organisms are burning energy on costly movement and resource-chasing without commensurate survival gains. Spatial composition is secondary weakness (0.3). Strategy: reduce moveSpeed and resourceAttraction across high-energy genomes to cut waste; increase energyConserve to retain resources; boost patternSymmetry and trailIntensity on diverse morphologies to improve spatial coherence. Three high-impact mutations: crawler-like entities should move slower and conserve more; jellyfish should reduce resourceAttraction (sensor-heavy design wastes energy hunting); add patternSymmetry to create emergent grid patterns that improve composition scoring.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
