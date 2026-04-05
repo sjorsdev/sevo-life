@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775391230756",
+  "timestamp": "2026-04-05T12:13:50.756Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Low rhythm + low efficiency → genomes need to move more purposefully (pulsing patterns) and gather more aggressively; synchronized movement beats random wandering for both beauty and resource discovery.; Efficiency is critically weak (0.16) and rhythm is the lowest beauty component (0.199). Efficiency suggests energy-to-harvest ratio is poor—entities are moving too much without sufficient resource gathering. Rhythm suggests lack of synchronized or patterned movement. Strategy: (1) Increase pulseFrequency uniformly to create temporal patterns and improve rhythm, (2) Boost moveSpeed on efficient foragers to find better patches, (3) Reduce harvestThreshold on lower-efficiency genomes to capture more marginal resources, (4) Increase trailIntensity to improve coverage beauty metric.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
