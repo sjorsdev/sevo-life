@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409717749",
+  "timestamp": "2026-04-05T17:21:57.749Z",
+  "observation": "Domain sevo-life (fitness 0.655) generated 2 insights",
+  "suggestion": "particles-as-cost model: larger bodies require exponentially more energy; smaller efficient foragers survive longer and enable diversity emergence; survivalRate is critically low at 0.333—organisms die from energy starvation before establishing stable populations. Dead organisms had 12-13 particles; living ones have 8 with high energy reserves. This indicates growth is too aggressive relative to energy acquisition. Beauty shows zero form diversity. Strategy: (1) increase energyConserve dramatically (0.75–0.9) to reduce metabolic burn, (2) boost resourceAttraction (0.75–0.95) for reliable foraging, (3) cut explorationDrive (0.1–0.3) to eliminate wasteful movement, (4) reduce moveSpeed (0.3–0.5) for efficiency, (5) vary trailColor and patternSymmetry across genomes to unlock beauty diversity. Target: survivalRate 0.6+, then diversityOfForms emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
