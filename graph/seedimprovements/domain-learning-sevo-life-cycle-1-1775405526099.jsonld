@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405526099",
+  "timestamp": "2026-04-05T16:12:06.099Z",
+  "observation": "Domain sevo-life (fitness 0.667) generated 2 insights",
+  "suggestion": "High survival + low efficiency = organisms waste energy clustering. Spread them out, differentiate their trails, push them to harvest faster.; Efficiency is the weakest factor (0.525 vs. 1.0 survivalRate). Within beautyScore, spatialComposition (0.3) and diversityOfForms (0.427) are critically weak, indicating poor spatial spread and low phenotypic variation. Organisms survive well but cluster inefficiently. Boost moveSpeed and explorationDrive to improve coverage. Increase trailIntensity and vary trailColor across genomes to maximize visual diversity. Adjust harvestThreshold aggressively to improve energy ROI per movement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
