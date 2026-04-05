@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405551478",
+  "timestamp": "2026-04-05T16:12:31.478Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Survival ≠ efficiency. Even well-formed organisms die from poor energy management. Shift from exploratory to conservative metabolism — let selection maintain survival rate while rewarding energy thrift.; Efficiency at 0.367 is the critical bottleneck — survival and beauty are 0.667+ but efficiency drags overall fitness to 0.615. The organisms are surviving well but burning energy wastefully through excessive movement and pulsing. Target: reduce energy expenditure on non-essential activity (exploration, pulsing, trail rendering) while maintaining survival rate. Priority: energyConserve +0.35, explorationDrive -0.4, pulseFrequency -0.3 for jellies (pulsing costs), moveSpeed -0.2 (steady movement > frantic exploration).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
