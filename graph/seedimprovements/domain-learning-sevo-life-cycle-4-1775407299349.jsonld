@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407299349",
+  "timestamp": "2026-04-05T16:41:39.349Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Low energy despite full lifespan = organisms are barely breaking even. Rebalance toward harvesting efficiency and resource detection without increasing movement cost.; Efficiency (0.422) is the bottleneck dragging fitness to 0.612 despite strong survival (0.667) and beauty (0.675). The organisms survive but accumulate minimal energy (avg 15.5 across 6), suggesting poor resource harvesting and metabolic wastefulness. Spatial composition (0.3) and diversity of forms (0.456) are also weak. Strategy: boost energyConserve to reduce waste, increase resourceAttraction and explorationDrive for better foraging, add trailColor variation for morphological diversity. Survival rate already 67% so avoid aggressive changes that risk viability.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
