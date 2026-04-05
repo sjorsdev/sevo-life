@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407656899",
+  "timestamp": "2026-04-05T16:47:36.899Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Efficiency gains via energy budgeting unlock survival gains; diversity gains via color+symmetry variation improve beauty ceiling.; Efficiency is critically weak (0.468 vs 0.667 survival, 0.672 beauty) and carries 20% goal weight. Two organisms died, and survivors have inconsistent energy reserves. Root causes: moveSpeed too high (energy waste), energyConserve too low (inefficient harvesting), explorationDrive generates wasteful movement. Secondary issue: diversityOfForms (0.456) and spatialComposition (0.3) need variation. Fix by: (1) reducing moveSpeed to lower baseline energy drain, (2) increasing energyConserve to stretch reserves, (3) raising explorationDrive with efficient parameters, (4) varying trailColor/patternSymmetry across entities for visual diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
