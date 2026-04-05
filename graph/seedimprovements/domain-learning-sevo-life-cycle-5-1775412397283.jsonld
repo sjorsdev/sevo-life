@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412397283",
+  "timestamp": "2026-04-05T18:06:37.283Z",
+  "observation": "Domain sevo-life (fitness 0.626) generated 2 insights",
+  "suggestion": "Lean morphologies with conservative energy budgets and exploratory behavior outperform complex bodies — evolve toward efficient wanderers with heterogeneous strategies.; Efficiency is the critical bottleneck (0.458 vs 0.667 survival, 0.683 beauty). Spatial composition (0.3) and diversity of forms (0.456) are also weak. Living organisms with 8 particles outperform larger ones (13 particles = dead). Strategy: (1) boost energy conservation and reduce particle-count waste via lower harvestThreshold, (2) increase explorationDrive to improve spatial distribution and break clustering, (3) introduce genome diversity with different resourceAttraction and trail strategies to increase form variety.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
