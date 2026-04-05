@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412884758",
+  "timestamp": "2026-04-05T18:14:44.758Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Survival bottleneck is starvation, not predation—complexity without resource reliability is lethal.; Survival rate (0.5) is the critical bottleneck—weighted 50% in the goal. Three organisms died at ages 226-418, indicating energy starvation rather than predation. The dead entities had full particle structures (12-13) but zero energy, suggesting they built complexity without establishing reliable resource intake. Solution: increase resourceAttraction globally (0.7-0.75) to make organisms reliably find food, boost energyConserve (0.65-0.7) to reduce metabolic drain, and slightly reduce moveSpeed (0.55-0.6) to prevent wasteful high-energy exploration. Efficiency is secondary; survival enables all other traits.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
