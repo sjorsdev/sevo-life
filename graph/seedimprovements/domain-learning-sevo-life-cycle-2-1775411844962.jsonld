@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411844962",
+  "timestamp": "2026-04-05T17:57:24.962Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "High particle count + poor efficiency = wasteful movement. Organisms need to move less, conserve more, and find food faster.; Efficiency is critically weak (0.54). Organisms have 8-13 particles but efficiency suggests they burn energy unsustainably — likely excessive movement or poor resource gathering. Secondary issue: spatialComposition (0.3) indicates clustering, not spread. Solution: increase energyConserve to reduce waste, boost resourceAttraction for faster energy gain, increase explorationDrive to create spatial diversity. This also improves survivalRate by keeping organisms alive longer on less energy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
