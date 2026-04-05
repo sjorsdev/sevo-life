@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775403993200",
+  "timestamp": "2026-04-05T15:46:33.200Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Survival is maxed; efficiency starves. Reduce energy conservation and sync pulse frequencies across the population for coordinated beauty and active resource processing.; Fitness is 0.699, but efficiency is critically weak at 0.148 (14.8% of potential). Rhythm in beauty is also low (0.128), suggesting uncoordinated movement. Root cause: entities are too energetically conservative (energyConserve 0.6-0.8) and lack synchronized pulsing (pulseFrequency mostly 0.12-0.35). Strategy: reduce energyConserve to force more active harvesting behavior, and increase pulseFrequency across all genomes to create synchronized rhythm patterns. This directly improves both efficiency (more activity) and beauty (coordinated pulsing).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
