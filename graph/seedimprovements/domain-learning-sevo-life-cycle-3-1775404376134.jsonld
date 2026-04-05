@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775404376134",
+  "timestamp": "2026-04-05T15:52:56.134Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Efficiency collapses when entities waste energy chasing marginal resources; beauty rhythm emerges from synchronized pulse patterns, not static trails.; Efficiency at 0.143 is critically weak—dragging 20% of total fitness. Root cause: Harvester and Aesthetic Harvester have low energyConserve (0.4, 0.45), and harvestThreshold values (0.05-0.08) waste energy on marginal resources. Beauty rhythm at 0.188 is second priority—most genomes have pulseFrequency ≤0.25 and low patternSymmetry, killing emergent rhythm. Fix: (1) Raise energyConserve on low-conserving entities, raise harvestThreshold to 0.10-0.12 to stop micro-harvesting losses. (2) Boost pulseFrequency and patternSymmetry on rhythm-weak genomes to improve rhythm and coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
