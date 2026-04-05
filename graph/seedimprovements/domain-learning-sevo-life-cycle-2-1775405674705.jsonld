@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405674705",
+  "timestamp": "2026-04-05T16:14:34.705Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Efficiency gains compound fitness more than beauty in particle sims — favor energy conservation and reduced wasted motion over novelty-seeking.; Efficiency is the critical bottleneck (0.503) dragging overall fitness down. The organisms max out at 500 age with high energy variance (5-27), indicating poor energy management. Secondarily, spatialComposition (0.3) and diversityOfForms (0.457) are weak because organisms lack coordinated spacing and behavioral diversity. Strategy: (1) increase energyConserve globally to reduce waste; (2) reduce moveSpeed to match actual needs rather than thrashing; (3) reduce explorationDrive to keep organisms clustered in resource-rich regions rather than wandering; (4) introduce behavioral diversity via patternSymmetry and pulseFrequency variation to improve both composition and form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
