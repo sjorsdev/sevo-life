@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411940813",
+  "timestamp": "2026-04-05T17:59:00.813Z",
+  "observation": "Domain sevo-life (fitness 0.652) generated 2 insights",
+  "suggestion": "Energy scarcity limits form complexity. Organisms must gather more aggressively (resourceAttraction) and move more efficiently (energyConserve) before they can express visually interesting spatial formations.; Efficiency (0.495) is critically low — organisms are energy-starved despite age 500. Three organisms (IDs 1, 3, 4) have depleted reserves despite mature age, indicating poor resource attraction. Spatial composition (0.3) is the weakest beauty component — organisms need better coordination and visual patterns. Strategy: boost resource attraction and energy metabolism in struggling organisms; increase flocking and trail intensity for spatial beauty and diversity of movement patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
