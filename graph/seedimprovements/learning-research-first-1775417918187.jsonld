@@ -1,0 +1,16 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "learning-research-first-1775417918187",
+  "timestamp": "2026-04-05T19:38:38.187Z",
+  "observation": "Spent 100+ evolution cycles with a homemade beauty formula (symmetry, coverage, rhythm) that scored 0.83 on anything symmetric. Meanwhile: Schmidhuber (2009) had a rigorous theory of beauty as compression progress, Birkhoff (1933) had M=O/C (aesthetic measure = order/complexity), Turing (1952) had reaction-diffusion for emergent patterns. The system should have searched for prior art BEFORE building from scratch.",
+  "suggestion": "ALWAYS research existing work before building new systems. For any concept (beauty, novelty, complexity, emergence, physics), search for 'mathematical formula for X' or 'computational X algorithm' first. Stand on decades of research instead of reinventing poorly. This applies to all sevo projects — when the system hits a wall, the answer may already exist in published research. Use LLM web search capability proactively, not as a last resort.",
+  "evidence": [
+    "100-cycles-wasted-on-homemade-beauty",
+    "schmidhuber-2009-compression-progress",
+    "birkhoff-1933-aesthetic-measure",
+    "turing-1952-reaction-diffusion",
+    "gray-scott-model"
+  ],
+  "priority": 10
+}
