@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775416632766",
+  "timestamp": "2026-04-05T19:17:12.766Z",
+  "observation": "Domain sevo-life (fitness 0.581) generated 2 insights",
+  "suggestion": "Beauty and efficiency are inversely coupled when particles cost energy; break the link by making organisms forage aggressively and waste less.; Efficiency (0.366) is critically low—organisms are energy-inefficient despite decent beauty (0.784). Survival at 50% shows resource starvation: particles are too expensive relative to energy gain. Dead organisms aged 270-465, suggesting mid-life energy crash. Solution: reduce drag (energy waste), increase resourceAttraction (find food faster), and lower harvestThreshold (eat smaller portions, more frequently) to sustain on less. This keeps particle counts for beauty while dramatically improving metabolic efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
