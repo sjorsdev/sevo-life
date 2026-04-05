@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775394758777",
+  "timestamp": "2026-04-05T13:12:38.777Z",
+  "observation": "Domain sevo-life (fitness 0.711) generated 2 insights",
+  "suggestion": "Movement energy >> harvesting efficiency. Explorers must move less or stay static once resourced.; Efficiency is critically low (0.138), dragging overall fitness. The root cause: excessive movement energy. Most genomes have moveSpeed ≥0.65, meaning entities burn energy exploring. Even the 'Efficient Hoarder' with low moveSpeed (0.4) can't compensate when 5 other entities waste energy. Solution: Dramatically lower moveSpeed for high-movement phenotypes (Harvester, Persistence Hunter, Aesthetic Harvester). Movement is the dominant energy cost; reduce it while keeping harvestThreshold and energyConserve tuned for quick, efficient resource capture. Maintain diversity by keeping one low-speed hoarder baseline.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
