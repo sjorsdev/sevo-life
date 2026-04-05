@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775423564363",
+  "timestamp": "2026-04-05T21:12:44.363Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Zero fitness delta after 725 cycles signals the system has hit an absorbing state—not because evolution is complete, but because the constraint space (fixed anatomy + static environment + single-objective fitness) has locked organisms and selection mechanism into mutual constraint. Evolution cannot escape without expanding what is *possible*, not just rewarding what exists. The plateau is architectural, not parametric.; [easy] Environmental Non-Stationarity: Add temporal dynamics—seasonal resource shifts, moving food sources, periodic predators, or climate cycles. Make the fitness landscape time-varying rather than static. — Plateau indicates perfect local adaptation with zero selective pressure. Static environments lock evolution in place. Dynamic selection targets force continuous adaptation and prevent convergence to dead-end optima.; [medium] Developmental Plasticity: Allow organisms to modify behavior/morphology during lifetime via sensorimotor learning. Add a simple neuromodulation layer where environmental stimuli trigger temporary phenotypic changes. Decouple genotype-phenotype timing. — Current system waits for generational turnover to explore new behaviors. Lifetime plasticity compresses exploration into individual organisms, revealing higher-fitness regions the genetic algorithm couldn't find. Also creates phenotypic variation from identical genotypes, breaking symmetry.; [hard] Morphospace Expansion: Remove fixed cell-type constraints. Allow organisms to evolve new cell types and tissue specializations (e.g., sensory, neural, contractile roles emerge rather than pre-defined). Add mutation operators for cell-type creation and body-plan restructuring. — Plateau suggests current cell types and body plans have exhausted their fitness potential. Organisms are trying to win with a locked toolkit. Expanding morphospace opens entire new design territories—multi-cellular differentiation, distributed sensing, novel locomotion modes that current architecture cannot express.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
