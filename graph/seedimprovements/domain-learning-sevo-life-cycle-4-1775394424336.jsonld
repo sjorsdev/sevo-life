@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775394424336",
+  "timestamp": "2026-04-05T13:07:04.337Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency ceiling broken by movement costs; energy conservation dominates. Beauty requires rhythm pulsing—current 0.0-0.25 too low.; Efficiency is critically weak (0.142), dragging down overall fitness. Root cause: excessive movement energy cost combined with moderate energy conservation. Secondary issue: rhythm (0.214) and symmetry (0.494) pull beauty down. Solution: (1) reduce moveSpeed globally—the Hoarder's 0.4 model is sound, (2) boost energyConserve to near-max (0.85-0.9 range), (3) cut explorationDrive sharply to eliminate wasteful wandering, (4) increase pulseFrequency and patternSymmetry to lift beauty metrics without energy cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
