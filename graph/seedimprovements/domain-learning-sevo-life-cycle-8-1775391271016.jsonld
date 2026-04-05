@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775391271016",
+  "timestamp": "2026-04-05T12:14:31.016Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency collapses when organisms move without purpose; beauty requires purposeful complexity, not wasteful scale.; Efficiency is critically weak (0.067 vs beauty 0.792, survival 0.8). The system wastes energy through excessive movement and exploration. With avg age 291 and avg size 6, organisms are large/long-lived but inefficient. High beautyScore and survivalRate are stable — focus on energy management. Increase energyConserve to reduce metabolic waste, reduce explorationDrive to eliminate aimless wandering, optimize moveSpeed toward purposeful motion, and strengthen resourceAttraction to make movement reward-driven rather than random.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
