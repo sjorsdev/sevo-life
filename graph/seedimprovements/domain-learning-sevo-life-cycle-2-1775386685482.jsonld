@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775386685482",
+  "timestamp": "2026-04-05T10:58:05.482Z",
+  "observation": "Domain sevo-life (fitness 0.488) generated 17 insights",
+  "suggestion": "v1 had low survival — entities were too exploratory and wasting energy; Baseline survival archetype. Must never drop below critical energy.; Seeks resources actively but stops moving when energy drops; Creates visible patterns while maintaining energy; improves beautyScore; Paths directly to resources, minimal wandering. Highest harvestThreshold means selective eating; Follows trails of others to find resource-rich regions; emergent clustering; Minimal energy burn, will survive lean periods. Creates faint but persistent patterns; High symmetry + pulsing creates mandala-like patterns. Non-wasteful movement.; Follows trails when nearby, seeks resources when isolated. Emergent swarm behavior.; Critical energy check — survival first, beauty second; In crisis mode, only move to nearest resource; ignore aesthetics; Slow, purposeful movement in crisis; Move faster when hungry, slower when saturated; 60% chance to follow trails — creates emergent patterns without being slaves to them; turnBias creates consistent drift, allowing patterns to emerge; Only harvest when resources are available AND not fully sated; Faint trails when hungry (conserving energy expression)",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
