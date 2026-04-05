@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775417062418",
+  "timestamp": "2026-04-05T19:24:22.418Z",
+  "observation": "Domain sevo-life (fitness 0.633) generated 2 insights",
+  "suggestion": "Efficiency and spatial diversity are inversely sensitive to movement cost — reduce moveSpeed globally, vary explorationDrive per entity to create emergent spatial niche differentiation.; Efficiency is critically weak (0.38 vs 0.667 survival, 0.696 beauty). Energy is being wasted on movement without proportional return. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are failures. Organisms clump spatially and follow too-similar patterns. Root cause: moveSpeed too high, explorationDrive too low, patternSymmetry too rigid. Organisms need to: (1) move less wastefully, (2) spread spatially, (3) develop individual behavioral signatures. High-energy organisms (4, 5) should conserve; low-energy (3) should explore more to find resources.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
