@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408221172",
+  "timestamp": "2026-04-05T16:57:01.173Z",
+  "observation": "Domain sevo-life (fitness 0.573) generated 2 insights",
+  "suggestion": "Low efficiency kills survival — organisms spend more energy maintaining structure than harvesting. Fix the metabolic drain first.; Efficiency is critically low at 0.276 — this is the bottleneck. Organisms survive to age 500 but with near-zero energy (3, 11, 28), indicating severe energy deficit during simulation. Root cause: excessive energy expenditure relative to harvesting. Strategy: maximize energyConserve (reduce per-step metabolic cost), boost resourceAttraction (active harvesting), reduce explorationDrive (eliminate wasteful movement). This targets the energy budget imbalance directly. Secondary benefit: improved survival rate through sustained energy reserves.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
