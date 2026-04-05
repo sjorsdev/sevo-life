@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407258948",
+  "timestamp": "2026-04-05T16:40:58.948Z",
+  "observation": "Domain sevo-life (fitness 0.608) generated 2 insights",
+  "suggestion": "Efficiency collapse is behavioral, not physical. Organisms wander instead of forage. Flip the budget: 30% less exploration, 40% more resource-seeking, 20% better energy retention = efficiency + survival together.; Efficiency at 0.447 is critically weak—35% below beauty and dragging the 0.579 fitness. Organisms are starving despite living 275-500 steps: they move but don't harvest well. Root causes: (1) low resourceAttraction means they miss food patches; (2) high explorationDrive wastes energy on random movement; (3) energyConserve isn't compensating. The 50% survival is directly tied—organisms die of exhaustion, not predation. Raising resourceAttraction, energyConserve, and harvestThreshold while dropping explorationDrive and turnBias (reduces thrashing) recycles the energy budget toward survival. Survival rate improving also compounds beauty composition (living organisms paint trails longer). Move away from high-variance exploration toward high-efficiency foraging.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
