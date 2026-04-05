@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413492213",
+  "timestamp": "2026-04-05T18:24:52.213Z",
+  "observation": "Domain sevo-life (fitness 0.651) generated 2 insights",
+  "suggestion": "Organisms are clustered inefficiently with little coordinated motion — need distributed exploration + synchronized pulsing to create spatial beauty patterns.; Spatial composition (0.3) is critically weak — organisms lack coordinated positioning and emergent patterns. Efficiency (0.484) is the second bottleneck; energy is being wasted on poor movement choices. To address both: (1) increase explorationDrive across all genomes to spread organisms out and enable better spatial organization; (2) boost energyConserve to reduce waste; (3) tune patternSymmetry and pulseFrequency to enable more graceful, synchronized motion that creates visible spatial harmonies. Survival rate is acceptable at 0.667, so focus improvement cycles on beauty-driven metrics (spatial, motion grace, diversity) which together weight heavily in the beauty score.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
