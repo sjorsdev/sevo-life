@@ -1,0 +1,73 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness-agent-life-v2-particle-1775403867248-sevo-life-cycle-2-1775410118387",
+  "timestamp": "2026-04-05T17:28:38.635Z",
+  "agent": "agent:life-v2-particle-1775403867248",
+  "eqs": 0.22200000000000003,
+  "accuracy": 0,
+  "magnitude": 0,
+  "branchesExplored": 6,
+  "predictionError": 1,
+  "cycleId": "sevo-life-cycle-2-1775410118387",
+  "context": {
+    "fitness": 0.555,
+    "branches": 6,
+    "survivalRate": 0.5,
+    "beautyScore": 0.707,
+    "beauty": {
+      "formBeauty": 0.769,
+      "symmetryQuality": 0.865,
+      "proportionHarmony": 0.724,
+      "colorCoherence": 0.829,
+      "diversityOfForms": 0.456,
+      "spatialComposition": 0.584,
+      "motionGrace": 0.748
+    },
+    "efficiency": 0.412,
+    "organisms": [
+      {
+        "id": 0,
+        "alive": false,
+        "particles": 13,
+        "energy": 0,
+        "age": 278
+      },
+      {
+        "id": 1,
+        "alive": true,
+        "particles": 12,
+        "energy": 16,
+        "age": 500
+      },
+      {
+        "id": 2,
+        "alive": true,
+        "particles": 8,
+        "energy": 16,
+        "age": 500
+      },
+      {
+        "id": 3,
+        "alive": false,
+        "particles": 13,
+        "energy": 0,
+        "age": 225
+      },
+      {
+        "id": 4,
+        "alive": false,
+        "particles": 12,
+        "energy": 0,
+        "age": 477
+      },
+      {
+        "id": 5,
+        "alive": true,
+        "particles": 8,
+        "energy": 34,
+        "age": 500
+      }
+    ]
+  }
+}
