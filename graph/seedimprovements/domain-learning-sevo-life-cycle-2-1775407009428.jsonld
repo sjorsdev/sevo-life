@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407009428",
+  "timestamp": "2026-04-05T16:36:49.428Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Small, slow organisms with high conservation outlive large, active ones — evolve for frugality and foraging precision, not movement.; Efficiency is critically low (0.398 vs 0.714 beauty). Organisms are burning energy faster than they can replenish it, causing deaths at young ages. Survival rate (0.5) suffers as a result. The living organisms (2, 4, 5) are smaller and have lower movement costs. Strategy: (1) reduce moveSpeed and pulseFrequency to cut energy burn, (2) increase energyConserve and resourceAttraction so organisms live longer and find food more reliably, (3) increase diversityOfForms by varying trailColor and patternSymmetry across the population to push beauty score higher.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
