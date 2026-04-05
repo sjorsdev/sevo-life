@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405259047",
+  "timestamp": "2026-04-05T16:07:39.047Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Energy efficiency and behavioral diversity are coupled — heterogeneous movement strategies force form variation and reduce resource contention.; Efficiency is the bottleneck at 0.62, dragging overall fitness from potential 0.78+. Core issue: energy waste during movement and poor resource conversion. Secondary issue: diversityOfForms at 0.427 indicates genomes are too similar. Organisms 0 and 3 are energy-starved (4 and 9 vs. 24-29), suggesting poor resource attraction. Solution: (1) increase energyConserve across all organisms to reduce baseline drag waste, (2) boost resourceAttraction for struggling organisms, (3) reduce moveSpeed to cut kinetic energy drain while maintaining behavioral activity, (4) increase explorationDrive variance to create more distinct morphological phenotypes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
