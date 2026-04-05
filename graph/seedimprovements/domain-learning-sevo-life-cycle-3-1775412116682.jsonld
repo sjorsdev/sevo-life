@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775412116682",
+  "timestamp": "2026-04-05T18:01:56.682Z",
+  "observation": "Domain sevo-life (fitness 0.616) generated 2 insights",
+  "suggestion": "High survival + high beauty but low efficiency = organisms live long but burn calories poorly. Make them metabolically thrifty hunters, not wanderers.; Efficiency (0.487) is the critical bottleneck — it dominates the fitness penalty. The particle simulation's energy costs are too high relative to resource gains. Two drivers: (1) organisms waste energy on expensive movement/pulsing without sufficient resource return, (2) spatial composition (0.3) suggests poor resource discovery patterns. Solution: reduce baseline metabolic drag (pulseFrequency), boost resource-seeking behavior (resourceAttraction), and increase energy conservation per movement. Organisms 1, 4, 5 are energy-rich but inefficient (high waste per gain). Organism 2 is lean but starving. Homogenize by making all organisms smarter hunters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
