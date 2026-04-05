@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775392627204",
+  "timestamp": "2026-04-05T12:37:07.204Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency starves from exploration waste—teach beings to harvest marginal resources faster and move less between finds.; Efficiency is severely bottlenecked at 0.14 despite strong survival (0.875). Current genomes waste energy: high moveSpeed without corresponding harvests, high explorationDrive that burns energy in unproductive searching, harvestThresholds set too high (beings wait for abundant resources instead of taking marginal gains). Secondary issue: beauty rhythm (0.256) and coverage (0.275) are weak. Fix efficiency first by reducing energy waste (moveSpeed, explorationDrive), improving harvesting ROI (lower thresholds, higher conservation), then boost beauty through rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
