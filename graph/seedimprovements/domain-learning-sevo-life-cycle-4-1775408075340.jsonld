@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408075340",
+  "timestamp": "2026-04-05T16:54:35.340Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Energy abundance without exploration velocity = inefficiency. Organisms need to spend energy dynamically, not hoard it.; Efficiency is the critical bottleneck at 0.523 — organisms are energy-rich (one at 50 units) but not converting that into productive movement or exploration. spatialComposition at 0.3 shows poor spatial spread despite having 6 living entities. The mutation targets: (1) reduce energyConserve to force more active exploration (efficiency), (2) increase explorationDrive and moveSpeed to spread organisms and find resources faster (composition + efficiency), (3) boost trailAttraction to create emergent clustering (composition + beauty). motionGrace improves with reduced energyConserve (more active = more natural motion patterns).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
