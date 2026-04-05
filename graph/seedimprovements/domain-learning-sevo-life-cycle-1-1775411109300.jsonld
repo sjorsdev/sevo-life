@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411109300",
+  "timestamp": "2026-04-05T17:45:09.300Z",
+  "observation": "Domain sevo-life (fitness 0.607) generated 2 insights",
+  "suggestion": "Homogeneous population + poor energy management. Vary genomes for diversity; improve energy flow for efficiency and survival.; Efficiency (0.507) is the weakest metric dragging overall fitness. Diversity of forms (0.456) is critically low — population is morphologically homogeneous. Survival rate (0.667) indicates energy stress. Target: increase energyConserve and resourceAttraction across all entities to reduce waste and sustain longer. Vary trailColor (0-5) across population to maximize diversity score. Boost pulseFrequency for motion grace. Reduce turnBias to stabilize movement and improve spatial composition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
