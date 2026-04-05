@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775390579317",
+  "timestamp": "2026-04-05T12:02:59.317Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency collapse from overmovement. Rhythm starved by low pulse frequencies. Reduce speed, preserve conserve, amplify temporal patterning.; Efficiency (0.151) is critically low — less than 1/4 of goal weight. Beauty's rhythm (0.199) is also weak. Root cause: moveSpeed burns energy without proportional harvest gain, and low pulseFrequency creates temporal sparsity. Strategy: reduce movement cost on high-speed entities, increase energyConserve, and boost pulseFrequency to address missing temporal patterns that constrain beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
