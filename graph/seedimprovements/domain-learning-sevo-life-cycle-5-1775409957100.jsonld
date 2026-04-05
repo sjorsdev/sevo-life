@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409957100",
+  "timestamp": "2026-04-05T17:25:57.100Z",
+  "observation": "Domain sevo-life (fitness 0.647) generated 2 insights",
+  "suggestion": "Energy starvation is primary constraint; organisms that survive need 40% more attraction efficiency and 25% less movement cost to unlock spatial diversity.; Efficiency is critically weak (0.37 vs 0.667 survival, 0.684 beauty). Energy depletion killed two organisms early (age 263, 225). The survivor spread shows energy scarcity: organisms 1 & 4 hover at minimal energy (7, 13). Spatial composition is also low (0.3) — organisms cluster poorly. Strategy: (1) reduce movement overhead to conserve energy, (2) boost resource attraction so survivors can sustain longer and explore further, (3) increase pattern diversity to improve spatial and beauty composition. Lower moveSpeed and pulseFrequency cuts wasted energy; higher resourceAttraction + explorationDrive enables efficient foraging while still covering space.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
