@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775390718721",
+  "timestamp": "2026-04-05T12:05:18.721Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost — reduce moveSpeed on mobile entities, increase energyConserve across the board, lower harvestThreshold on non-explorers to gain resources without travel.; Efficiency is critically weak at 0.141, contributing only 0.028 to overall fitness. SurvivalRate is already maxed at 1.0. The problem is energy expenditure: most genomes have moveSpeed 0.6-0.65, which burns energy faster than current energyConserve values can sustain. Reducing movement speed and maximizing energy conservation will improve the resource-to-energy ratio. Additionally, lowering harvestThreshold on slower-moving entities enables harvesting marginal resources without mobility cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
