@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775414473036",
+  "timestamp": "2026-04-05T18:41:13.036Z",
+  "observation": "Domain sevo-life (fitness 0.620) generated 2 insights",
+  "suggestion": "Efficiency scales with energy conservation + movement purpose. Spatial beauty emerges from symmetric trail patterns, not movement cost. Decouple energy efficiency from spatial composition — reduce movement, increase trail coherence.; Efficiency (0.538) is the primary bottleneck dragging overall fitness from 0.674 to 0.629. Within beauty, spatial composition (0.3) is critically weak. Strategy: (1) Reduce moveSpeed and explorationDrive across survivors to cut energy waste, (2) Increase energyConserve to preserve existing energy reserves, (3) Boost patternSymmetry and trailIntensity to improve spatial organization without energy cost. Survivors (IDs 1,2,4,5) all reached age 500, indicating viability — refine their efficiency. The dead entities (IDs 0,3) show this mutation pattern works for longevity; now optimize energy ROI.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
