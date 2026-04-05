@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405851996",
+  "timestamp": "2026-04-05T16:17:31.996Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Spatial distribution fundamentally enables both beauty (composition) and efficiency (less collision cost). Spreading the population reveals form diversity.; Spatial composition (0.3) is critically weak — organisms are clustered rather than distributed. Diversity of forms (0.427) is low — insufficient morphological exploration. Efficiency (0.634) drags overall fitness. Strategy: spread organisms via increased avoidance and reduced flocking; boost diversity through varied trail presentation and pattern asymmetry; conserve energy by trading moveSpeed for explorationDrive (quality over quantity movement).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
