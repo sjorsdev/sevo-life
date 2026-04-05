@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411059565",
+  "timestamp": "2026-04-05T17:44:19.565Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Energy starvation, not genetics, kills — conservation beats exploration when resources are tight.; Survival rate (0.5) is the critical bottleneck. Three organisms died prematurely (ages 225-251) due to energy depletion, while survivors reached 500 with energy >15. Root cause: energyConserve too low — organisms burn resources faster than they acquire them. Secondary issue: efficiency (0.265) shows movement is expensive relative to gain. Tertiary: diversityOfForms (0.456) lags other beauty metrics. Strategy: (1) boost energyConserve to extend lifespan, (2) increase resourceAttraction to sustain growth, (3) reduce moveSpeed to lower energy cost, (4) increase patternSymmetry to unlock beauty ceiling. This fixes survival immediately and enables beauty/efficiency gains in next cycle.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
