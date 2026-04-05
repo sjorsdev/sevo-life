@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407425928",
+  "timestamp": "2026-04-05T16:43:45.928Z",
+  "observation": "Domain sevo-life (fitness 0.559) generated 2 insights",
+  "suggestion": "Survival depends on energy efficiency first; beauty and spatial distribution follow naturally when organisms live long enough to develop complexity.; Efficiency is critically low (0.417) while spatialComposition is failing (0.3). Two organisms died prematurely (ages 260, 245) and survivors have dangerously low energy reserves except organism 5 (36 energy). Root causes: excessive energy burn, poor resource finding, weak spatial spread. Solutions: (1) Increase energyConserve to extend lifespan and reduce energy bleed, (2) Increase resourceAttraction to help organisms discover food, (3) Boost explorationDrive to spread organisms across space (fixing spatialComposition). Target struggling genomes 0,1,3,4 which have lowest energy; strengthen 2,5 which are stable.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
