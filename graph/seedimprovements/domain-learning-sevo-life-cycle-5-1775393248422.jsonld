@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775393248422",
+  "timestamp": "2026-04-05T12:47:28.422Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency and beauty compete via movement: slow rhythmic movement (high pulse, lower speed) wins both; fast silent movement (high speed, zero pulse) loses both.; Efficiency is critically weak (0.153), dragging overall fitness. The genome set has excessive moveSpeed consuming energy without proportional resource harvesting. Beauty rhythm (0.227) and coverage (0.333) also lag. Solution: reduce movement energy waste, increase rhythmic pulsing for beauty, boost trail presence for coverage. The Harvester's moveSpeed of 0.85 is the worst offender—fast movement with no pulseFrequency creates neither beauty nor sustainable harvesting.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
