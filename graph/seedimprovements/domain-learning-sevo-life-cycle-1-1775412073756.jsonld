@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412073756",
+  "timestamp": "2026-04-05T18:01:13.756Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: organisms move too much for too little fitness gain. Spatial clustering (0.3) + low efficiency (0.481) suggests energy-expensive movement without strategic exploration. Constrain motion, reward resource-finding and distribution.; Efficiency (0.481) is the primary bottleneck — it alone drags down the composite fitness by ~0.1 points. The survival rate is already strong (0.833), so gains must come from reducing movement/energy waste and improving spatial distribution. Spatial composition (0.3) indicates organisms cluster inefficiently. Strategy: (1) reduce moveSpeed globally to cut wasteful energy burn, (2) increase energyConserve to stretch resources further, (3) boost explorationDrive to spread organisms spatially, (4) lower pulseFrequency since pulsing costs energy with marginal beauty return. Organism 5 has critically low energy (4) — highest priority for conservation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
