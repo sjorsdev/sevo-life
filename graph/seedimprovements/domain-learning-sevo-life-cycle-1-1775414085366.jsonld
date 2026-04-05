@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775414085366",
+  "timestamp": "2026-04-05T18:34:45.366Z",
+  "observation": "Domain sevo-life (fitness 0.607) generated 2 insights",
+  "suggestion": "Energy per particle correlates with survival—organisms need 1.5+ energy/particle ratio. Efficiency improves when genomes gather faster than they consume, not by moving less.; Efficiency (0.328) is the critical bottleneck, dragging down overall fitness. Only 3/6 organisms survived—energy management is failing. Survivors like ID 5 have 18 energy on 8 particles (2.25 energy/particle) vs dead organisms at 0 energy. Root cause: high movement/maintenance cost relative to resource gathering. Secondary issue: diversityOfForms (0.456) suggests genomes are too similar in strategy. Solution: (1) Increase resourceAttraction to boost energy income, (2) Increase energyConserve to reduce waste, (3) Reduce moveSpeed or raise harvestThreshold to avoid wasteful exploration, (4) Introduce diverse trail strategies to fix diversity metric.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
