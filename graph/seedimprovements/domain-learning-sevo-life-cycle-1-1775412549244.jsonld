@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412549244",
+  "timestamp": "2026-04-05T18:09:09.244Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Organisms waste energy exploring; improve resource clustering by stronger attraction and less exploration, boost visual patterns for spatial beauty.; Efficiency (0.555) is the weakest weighted component — it directly reduces overall fitness by 0.2 weight. The beauty metrics show spatial composition (0.3) and diversity of forms (0.456) are also low. The organisms are reaching max age (500) but with variable energy levels (4-53), suggesting inefficient gathering or conservation. To improve: (1) increase resourceAttraction and energyConserve to reduce wasted movement and better capture resources; (2) reduce exploreDrive to cut energy spent searching vs. harvesting; (3) boost trailIntensity and patternSymmetry to improve spatial composition without harming survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
