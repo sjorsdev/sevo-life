@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775403763234",
+  "timestamp": "2026-04-05T15:42:43.234Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency is killed by late harvesting; beauty rhythm dies in stillness. Move faster to resources, pulse harder.; Efficiency at 0.145 is crippling the overall fitness despite perfect survival. The bottleneck is harvestThreshold—entities wait too long before harvesting, wasting energy searching. Secondary issues: rhythm (0.155) is weak due to low pulseFrequency (0.12-0.35), and coverage (0.375) suffers from low explorationDrive in stationary entities (Hoarder at 0.15). The fix: lower harvestThreshold globally (harvest sooner = less wasted movement), boost pulseFrequency to create temporal patterns, and increase explorationDrive on sedentary entities to spread out and find resources faster.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
