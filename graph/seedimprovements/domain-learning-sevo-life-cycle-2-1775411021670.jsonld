@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411021670",
+  "timestamp": "2026-04-05T17:43:41.670Z",
+  "observation": "Domain sevo-life (fitness 0.545) generated 2 insights",
+  "suggestion": "Efficiency gains compound: conservative energy use allows longer lifespans and more exploration within energy budgets, which naturally generates form diversity through varied movement patterns.; Efficiency (0.418) is the bottleneck, dragging overall fitness to 0.636. DiversityOfForms (0.456) in beauty is also weak. Organisms are burning energy inefficiently while all reaching age 500 with modest energy reserves. Two died before cycle end. Strategy: (1) Increase energyConserve across all genomes to improve efficiency, (2) Increase explorationDrive and vary moveSpeed for genomes to increase morphological diversity and form variation, (3) Boost resourceAttraction for slower genomes to improve survival without energy waste.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
