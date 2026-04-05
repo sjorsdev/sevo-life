@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413977085",
+  "timestamp": "2026-04-05T18:32:57.085Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Smaller bodies with high energy conservation outsurvive larger ones in resource-scarce worlds. Energy economy beats complexity.; Survival rate (0.5) is the bottleneck — 6 of 8 dead. Living organisms (ages 500) all have low particle counts (8-12) and those with 12-13 particles all died, suggesting energy economics breaks past that threshold. Dead avg lifespan 305 vs living at max 500 suggests energy drain around age 250-400. Efficiency (0.314) shows wasteful movement/growth. Strategy: (1) drastically boost energyConserve to survive longer, (2) reduce moveSpeed to lower caloric burn, (3) increase resourceAttraction so remaining energy finds food, (4) vary trailColor for diversity bonus. Motion grace is acceptable (0.671) so avoid changing pulseFrequency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
