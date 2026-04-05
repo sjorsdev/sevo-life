@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411316874",
+  "timestamp": "2026-04-05T17:48:36.874Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Leanness compounds: 8-particle genomes at maxParticles yield 2-3x energy per particle. Optimize for high-harvest scavengers, not swimmers.; Efficiency is the critical bottleneck (0.454 vs 0.667 for survival/beauty). Four organisms are dead or struggling due to energy loss. The lean organisms (8 particles, 24-25 energy) outperform the heavy ones (12-13 particles, 12 energy). Spatial composition is also weak (0.3), indicating poor foraging patterns. Root causes: (1) moveSpeed is burning energy without equivalent harvest, (2) resourceAttraction is too low — organisms miss energy opportunities, (3) explorationDrive too uniform — no agents mapping space efficiently, (4) energyConserve doesn't offset movement cost. Solution: Prioritize lean, high-harvest organisms. Make spacefaring explorers with high resourceAttraction. Reduce visual overhead (trailIntensity) and reallocate to survival mechanics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
