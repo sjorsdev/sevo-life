@@ -160,16 +160,24 @@ while (!world.isFinished()) {
 
 const result = world.getResults();
 
-// Composite fitness: 0.4 survival + 0.35 bodyBeauty + 0.15 ecosystemDiversity + 0.1 efficiency
+// Dynamic fitness weights — shift toward beauty when survival is solved
+// (Brainstorm proposal: "increase beauty coefficient when survivalRate plateaus")
 const maxHarvest = config.harvestGain * config.maxTicks;
 const avgHarvest = result.organisms.reduce((s, o) => s + o.totalHarvested, 0) / result.organisms.length;
 const efficiency = Math.min(1, avgHarvest / maxHarvest);
 
+// When survival is high, beauty matters more. When survival is low, survival matters more.
+const survivalSolved = result.survivalRate > 0.8;
+const wSurvival = survivalSolved ? 0.20 : 0.45;
+const wBeauty = survivalSolved ? 0.50 : 0.30;
+const wDiversity = survivalSolved ? 0.20 : 0.15;
+const wEfficiency = survivalSolved ? 0.10 : 0.10;
+
 const fitness =
-  0.4 * result.survivalRate +
-  0.35 * result.worldBeauty +
-  0.15 * result.ecosystemDiversity +
-  0.1 * efficiency;
+  wSurvival * result.survivalRate +
+  wBeauty * result.worldBeauty +
+  wDiversity * result.ecosystemDiversity +
+  wEfficiency * efficiency;
 
 console.log(JSON.stringify({
   fitness: Math.round(fitness * 1000) / 1000,
