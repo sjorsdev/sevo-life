@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775404897813",
+  "timestamp": "2026-04-05T16:01:37.813Z",
+  "observation": "Domain sevo-life (fitness 0.690) generated 2 insights",
+  "suggestion": "Rhythm failure indicates organisms lack synchronization or regular behavior—pulsing too weakly or infrequently. Pairing high energyConserve with high pulseFrequency and patternSymmetry should surface efficient, rhythmic swimmers.; Efficiency (0.154) is the critical bottleneck—valued at 0.2× in the goal, it's dragging overall fitness despite perfect survival. Rhythm (0.191) is also critically weak. Both suggest organisms are burning energy inefficiently and lack coherent periodic patterns. Strategy: increase energyConserve to reduce waste, boost pulseFrequency and patternSymmetry to create visible rhythm, and modulate trailIntensity to amplify pattern emergence. Test across multiple organisms—some conservative on exploration (save energy), others more aggressive on pulse dynamics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
