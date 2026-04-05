@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409216910",
+  "timestamp": "2026-04-05T17:13:36.910Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Energy starvation is killing organisms before they can fully mature; surviving entities plateau at max age 500 with low energy. Prioritize harvest efficiency over exploration.; Efficiency at 0.488 is the critical bottleneck—weighted contribution of only 0.098 vs. survival's 0.334. Four of six organisms are dead (survival at 0.667), suggesting energy starvation. Beauty's spatial composition (0.3) and form diversity (0.456) are weak because organisms lack coordination. Strategy: reduce energy waste via lower moveSpeed and higher conservation; boost resourceAttraction to feed before dying; increase patternSymmetry to improve spatial ordering without additional cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
