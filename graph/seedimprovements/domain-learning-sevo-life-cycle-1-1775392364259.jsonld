@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775392364259",
+  "timestamp": "2026-04-05T12:32:44.259Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Aggressive under-selective harvesting (threshold 0.04-0.08) wastes energy on marginal resources; raising threshold to 0.15+ + conserving energy 0.75+ unlocks efficiency while beauty-focused entities drive rhythm via pulse.; Efficiency is critically weak (0.127 vs target ~0.4), dragging overall fitness from 0.75+ potential to 0.638. Root cause: aggressive harvesting (thresholds too low) burns energy faster than gains are realized. Simultaneously, harvesters move fast (0.65) but don't conserve energy enough (0.6-0.75). Secondary: beauty rhythm (0.245) is weak — too-low pulseFrequency on aesthetic entities. Strategy: (1) raise harvestThreshold to 0.15+ for selectivity, (2) boost energyConserve to 0.75+ on all movers, (3) increase pulseFrequency on beauty-focused entities to improve rhythm. This trades off marginal resource collection for efficiency gains + beauty depth.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
