@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406180474",
+  "timestamp": "2026-04-05T16:23:00.474Z",
+  "observation": "Domain sevo-life (fitness 0.651) generated 2 insights",
+  "suggestion": "Energy starvation kills before reaching 300 cycles. Efficient foraging (high attraction, low wandering) extends lifespan → raises survival → fitness climbs.; Efficiency (0.384) is weakest, directly causing survival collapse. Half the population dies at ages 250-300 while survivors reach 500 — this is energy starvation under movement cost. Spatial composition (0.3) suggests organisms cluster wastefully. Fix by: (1) increase energyConserve to reduce baseline metabolism, (2) increase resourceAttraction so organisms find food instead of wandering, (3) reduce moveSpeed and pulseFrequency to cut movement/oscillation waste, (4) reduce explorationDrive to avoid costly risk-taking. Organisms 0, 3, 4 (dead) need aggressive rescue; organisms 1, 2, 5 (survivors at 500) need minor tuning to avoid regression.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
