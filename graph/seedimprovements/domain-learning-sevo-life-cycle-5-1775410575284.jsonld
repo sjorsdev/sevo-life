@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410575284",
+  "timestamp": "2026-04-05T17:36:15.284Z",
+  "observation": "Domain sevo-life (fitness 0.654) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy leakage through movement. Constrain moveSpeed and increase harvest efficiency to improve overall fitness score.; Efficiency (0.519) is the primary bottleneck — 23% below beautyScore and dragging the overall fitness. Organisms are burning energy without proportional return. The low motionGrace (0.674) and very low diversityOfForms (0.457) suggest inefficient locomotion and insufficient morphological exploration. Strategy: reduce movement waste via lower moveSpeed and higher energyConserve, increase resourceAttraction for better harvest efficiency, and boost explorationDrive to break out of local optimum in form space.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
