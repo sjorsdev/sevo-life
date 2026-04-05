@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775416567551",
+  "timestamp": "2026-04-05T19:16:07.551Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Complex morphologies (jellyfish/crawler with 20-particle ceilings) waste more energy than they gain in behavior. Reduce move costs and attraction-driven overhead.; Efficiency is critically low (0.354) while beauty and survival are reasonable. Analysis: organisms 0,3,4 died or are barely sustaining; organism 4 has 12 particles but only 1 energy — severe efficiency loss from overbuilt morphology. The problem is excessive particle growth consuming energy faster than harvest can replenish. Solution: reduce exploration and resource-chasing (wasted movement), increase metabolic conservation, lower attraction parameters that cause expensive navigation patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
