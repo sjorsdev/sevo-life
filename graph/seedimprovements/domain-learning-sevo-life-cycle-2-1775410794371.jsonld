@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410794371",
+  "timestamp": "2026-04-05T17:39:54.371Z",
+  "observation": "Domain sevo-life (fitness 0.567) generated 2 insights",
+  "suggestion": "Efficiency = energy conservation × movement economy; diversity emerges from parameter variance, not individual genome complexity.; Efficiency at 0.445 is the critical bottleneck, dragging overall fitness down. The weighted contribution is only 0.089 vs survival's 0.417. Organisms are wasting energy on inefficient movement and foraging. Secondary issue: diversityOfForms (0.457) and spatialComposition (0.532) are weak — organisms need varied movement patterns and visual distinctiveness. Organism 5's exceptional energy (22) suggests efficient resource handling is possible. Propose: (1) boost energyConserve to reduce wasted kinetic energy, (2) raise harvestThreshold to avoid chasing distant/unprofitable resources, (3) increase patternSymmetry variation for visual diversity, (4) moderate moveSpeed to prevent thrashing, (5) boost explorationDrive with energy conservation to create spatially interesting arrangements.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
