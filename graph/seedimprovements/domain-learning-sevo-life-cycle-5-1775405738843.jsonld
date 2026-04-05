@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405738843",
+  "timestamp": "2026-04-05T16:15:38.843Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Efficiency = energyConserve + harvestThreshold + (inverse explorationDrive). Diversity = spread of trailColor + patternSymmetry. Organism 3's death suggests high moveSpeed + high explorationDrive + low harvestThreshold — unsustainable. Rebalance.; Efficiency is the bottleneck (0.57 vs 0.833 survival, 0.716 beauty). Primary lever: reduce metabolic waste via energyConserve and explorationDrive. Secondary lever: diversityOfForms is lowest beauty metric (0.457) — increase variation in trailColor and patternSymmetry across population. Organism 3 died at 449/500; likely inefficient parameters causing energy depletion. Target alive organisms with conservative tweaks: lower exploration costs, boost resource efficiency, vary visual traits.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
