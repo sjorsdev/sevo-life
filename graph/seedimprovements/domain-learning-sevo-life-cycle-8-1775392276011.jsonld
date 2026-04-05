@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775392276011",
+  "timestamp": "2026-04-05T12:31:16.011Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Rhythm is starved—pulseFrequency turnaround from <0.3 to 0.3-0.4 unlocks visual complexity + energy efficiency via better pattern recognition feedback.; Efficiency is critically weak (0.141) despite perfect survivalRate. This bottleneck is the primary drag on overall fitness. Second weakness is rhythm at 0.129 and coverage at 0.392. Root cause: pulseFrequency is universally too low (0.08-0.3 range), which impacts both visual rhythm and movement patterns. energyConserve is suboptimal on mobile entities. Strategy: boost pulseFrequency across the board for immediate rhythm/beauty gains, increase energyConserve on high-moveSpeed entities to reduce waste, increase patternSymmetry to improve symmetry metric (0.517).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
