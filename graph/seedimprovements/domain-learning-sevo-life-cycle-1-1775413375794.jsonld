@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413375794",
+  "timestamp": "2026-04-05T18:22:55.794Z",
+  "observation": "Domain sevo-life (fitness 0.675) generated 2 insights",
+  "suggestion": "Organisms are energy-poor and spatially clustered. Shift from aggressive foraging (high moveSpeed without energy controls) to efficient exploration (energyConserve + resourceAttraction + explorationDrive).; Efficiency is critically weak at 0.48 (lowest metric), pulling down overall fitness. Root causes: (1) organisms dying early (ages 274-285 suggest energy depletion before reaching max lifespan), (2) spatial composition extremely low at 0.3 (no interesting distributed patterns), (3) low form diversity at 0.456 (limited morphological variation). Strategy: prioritize energy conservation and resource acquisition to prevent early death, boost exploration to spread organisms across space, and tune movement for efficiency over raw speed.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
