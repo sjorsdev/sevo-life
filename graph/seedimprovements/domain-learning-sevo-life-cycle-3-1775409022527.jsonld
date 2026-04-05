@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409022527",
+  "timestamp": "2026-04-05T17:10:22.527Z",
+  "observation": "Domain sevo-life (fitness 0.598) generated 2 insights",
+  "suggestion": "Low efficiency + high max-age suggests fast burnout, not lifespan. Energy conservation > movement cost.; Efficiency is critically low (0.428) vs. target 0.2 weight in fitness. Organisms are burning energy without proportional spatial coverage or form diversity. spatialComposition (0.3) is severe bottleneck in beauty. Six entities at max lifespan (500) with depleted energy suggests poor energy conservation and sub-optimal exploration. IDs 1,3 (12 particles, low energy) are thrashing; IDs 2,5 (8 particles, moderate energy) are more efficient. Mutation strategy: increase energyConserve across all genomes to reduce metabolic waste, increase explorationDrive to improve spatial composition and diversity, and increase patternSymmetry to create coherent spatial patterns that boost both beauty and efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
