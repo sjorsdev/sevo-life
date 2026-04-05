@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775416993437",
+  "timestamp": "2026-04-05T19:23:13.437Z",
+  "observation": "Domain sevo-life (fitness 0.626) generated 2 insights",
+  "suggestion": "Efficiency improves through exploration-driven movement; diversity emerges from heterogeneous visual phenotypes and spatial distribution, not morphological complexity alone.; Efficiency (0.483) is 18% below beautyScore and 28% below survivalRate, making it the primary drag on fitness. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are severely underperforming. Root cause: organisms clustering, low movement variance, high energy waste on non-exploratory behavior. Solution: boost moveSpeed and explorationDrive to spread entities spatially, lower energyConserve to encourage active swimming/crawling, increase patternSymmetry and vary trailColor to create morphological diversity. This addresses efficiency directly while improving both spatial composition and form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
