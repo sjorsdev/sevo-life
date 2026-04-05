@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Agent",
+  "@id": "agent:life-v3-1775391889151",
+  "timestamp": "2026-04-05T12:24:49.151Z",
+  "blueprint": "./blueprints/life-agent-v3.ts",
+  "parent": "agent:life-v2-1775386725877",
+  "generation": 3,
+  "status": "active",
+  "domain": "sevo-life"
+}
