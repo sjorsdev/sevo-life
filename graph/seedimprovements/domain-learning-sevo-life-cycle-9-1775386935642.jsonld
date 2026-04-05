@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775386935642",
+  "timestamp": "2026-04-05T11:02:15.642Z",
+  "observation": "Domain sevo-life (fitness 0.695) generated 13 insights",
+  "suggestion": "efficiency was the weakest component (0.2 weight). Redesigned genomes to harvest more aggressively; new role focused purely on efficiency. Low threshold + high attraction.; reduced harvestThreshold from 0.1 to 0.05 to capture more marginal resources; merge efficiency with beauty. Moderate threshold, high trail intensity.; shifted from 0.2 to 0.15 harvestThreshold for better efficiency baseline; reduced energy waste (lower moveSpeed for endurance) while maintaining resource drive; ultra-low threshold (0.06) + high energy conservation for maximum harvest ratio; high pulse frequency + symmetry enable beauty creation without sacrificing resource drive; high trailAttraction but lower threshold means it efficiently captures resource trails; improved energy emergency detection. Wider radius search for resources when desperate.; improved movement strategy. Always check for resources, weight them heavily.; doubled resource weight contribution to emphasize harvest efficiency; reduced exploration randomness when energy is moderate to focus on resources",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
