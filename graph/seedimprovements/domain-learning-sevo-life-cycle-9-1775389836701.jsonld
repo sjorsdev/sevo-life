@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775389836701",
+  "timestamp": "2026-04-05T11:50:36.701Z",
+  "observation": "Domain sevo-life (fitness 0.691) generated 9 insights",
+  "suggestion": "survival rate is the bottleneck (0.5 weight in fitness). Previous versions optimized efficiency; survival requires not dying. Reduced moveSpeed to 0.3 and conservation to 0.9 to maximize lifespan.; entities that don't move don't burn energy. Stay in resource-rich area, harvest deeply.; survival + beauty require moderation. Not too fast (energy drain), moderate harvest threshold; some exploration needed to find resource zones, but limited moveSpeed (0.6 vs 0.85 in v2); don't leave resources on the table, but don't burn energy doing it. Stay in place,; if entities die before beauty emerges, beauty score stays low. This genome survives; trails that other entities follow become shared resource highways. High trailAttraction; decision function unchanged — genomes carry all strategy variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
