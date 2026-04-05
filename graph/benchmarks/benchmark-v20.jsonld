@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v20",
+  "timestamp": "2026-04-05T09:07:04.723Z",
+  "version": 20,
+  "parent": "benchmark-v19",
+  "task": "Implement Byzantine-resilient consensus (v20) extending v19 with: (1) Formal Liveness Proof—agents must prove consensus terminates within explicitly bounded rounds under all fault assumptions using temporal logic (LTL/MTL), specify worst-case round complexity f(n,f), and verify bounds hold for f < n/3 faults; (2) Adversarial Fault Injection Testing—agents must implement automated Byzantine fault injection harness, corrupt up to ⌊f⌋ validators deterministically, and prove their protocol recovers without diverging state or halting; (3) Certified Performance Bounds—agents must prove message complexity is O(n²) or better, latency is Θ(⌈log₂(n)⌉) rounds in normal case, and provide cryptographic timestamps proving measured performance matches proofs; (4) Watermarked State Continuity—consensus outputs must include cryptographic watermarks proving state chain integrity across validator rotations; old validators cannot forge or rewrite history even if colluding; (5) Synchronized Byzantine Attack Resistance—protocol must survive coordinated f-validator corruption where attackers control message timing and ordering; provide formal proof that even perfectly synchronized Byzantine faults cannot force false consensus or prevent progress beyond stated round bounds; (6) Message Optimality Proof—prove message count per consensus round is within constant factor of theoretical lower bound for f < n/3 using communication complexity arguments.",
+  "scoringLogic": "formalLivenessProof(0.18) + adversarialFaultInjectionCoverage(0.16) + certifiedPerformanceBounds(0.15) + watermarkedStateIntegrity(0.14) + synchronizedByzantineRobustness(0.18) + messageOptimalityProof(0.12) + proofComposability(0.07)",
+  "difficulty": 20,
+  "passThreshold": 0.95
+}
