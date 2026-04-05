@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775404142750",
+  "timestamp": "2026-04-05T15:49:02.750Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is wasteful movement, not poor harvesting. Rhythm beauty is locked behind low pulseFrequency—rhythm appears as temporal pattern, not just spatial.; Efficiency is critically weak (0.149 vs 0.5 survivalRate and 0.3 beautyScore). Entities are burning energy through excessive movement while maintaining perfect survival—unnecessary waste. Since survivalRate=1.0, moveSpeed can drop 15-25% without survival risk. Simultaneously, beautyScore's rhythm component is severely underdeveloped (0.181): low pulseFrequency across all entities prevents rhythmic pattern emergence. Solution: reduce movement-based energy waste, boost energyConserve for better fuel efficiency, increase pulseFrequency in key entities to unlock rhythm beauty without survival cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
