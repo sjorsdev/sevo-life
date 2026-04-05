@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407384949",
+  "timestamp": "2026-04-05T16:43:04.949Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Smaller, slower, more conservative organisms outperform larger high-activity ones. Beauty emerges from efficient constraint, not motion quantity.; Efficiency (0.531) is the bottleneck — 20% weight in goal function. Organisms are bleeding energy. Spatial composition (0.3) is also critically weak. Solution: reduce moveSpeed to prevent wasteful motion, increase energyConserve to retain resources during movement, reduce explorationDrive to focus energy, and improve spatial organization via flocking. Organisms 2 and 5 with lower particle counts but higher energy show smaller forms are more sustainable. Spatial clustering via avoidance radius tuning enables emergent formation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
