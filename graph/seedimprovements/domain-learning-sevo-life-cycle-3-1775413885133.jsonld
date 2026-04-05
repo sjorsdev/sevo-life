@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413885133",
+  "timestamp": "2026-04-05T18:31:25.133Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Energy cost > energy gain. Fix the engine before optimizing the paint.; Efficiency (0.552) is the critical bottleneck—53% below target. This drags down overall fitness despite decent survival and beauty. Root cause: organisms are burning energy without proportional benefit. Spatial composition (0.3) and diversity of forms (0.456) are secondary weaknesses. Strategy: (1) Reduce energy waste by lowering moveSpeed and improving energyConserve, (2) increase explorationDrive to spread organisms (fixing spatial composition), (3) boost resourceAttraction for better foraging efficiency. All genomes get efficiency tuning; slower, more conservative movers will naturally increase diversity by filling different niches.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
