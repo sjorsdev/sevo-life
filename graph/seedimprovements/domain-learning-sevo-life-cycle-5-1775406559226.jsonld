@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406559226",
+  "timestamp": "2026-04-05T16:29:19.226Z",
+  "observation": "Domain sevo-life (fitness 0.633) generated 2 insights",
+  "suggestion": "In particle systems, efficiency ∝ energy-per-movement. Spatial beauty emerges from constrained, intentional motion with trail coherence, not free exploration.; Efficiency is critically weak (0.366), dragging down overall fitness despite good survival and beauty scores. Additionally, spatial composition (0.3) is bottlenecking beauty. Root cause: organisms move too fast (energy waste), explore too randomly, and don't build coherent spatial patterns. Solution: reduce movement overhead, increase energy conservation, lower exploration waste, amplify emergent trail-based patterning.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
