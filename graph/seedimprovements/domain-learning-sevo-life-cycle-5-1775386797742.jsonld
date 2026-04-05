@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775386797742",
+  "timestamp": "2026-04-05T10:59:57.742Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 11 insights",
+  "suggestion": "v1 fitness 0.621 suggests survival bottleneck. Added adaptive strategies + collective genomes.; survival bottleneck: entities die when energy drops below move cost. Harvest preemptively.; cooperation: trails mark successful foraging paths. Learn from peers.; flexibility: when energy is high, explore and create beauty. When low, pure survival.; group dynamics: pulse events signal entity locations. Move toward recent pulses.; survival priority - check if next move would cause starvation; adaptive beauty — only emit pulse when energy is abundant; collective learning — trail following with preference for strong trails; survival weight — resource attraction dominates in critical state; aesthetic contribution only when not starving; weight survival higher because v1's bottleneck was starvation",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
