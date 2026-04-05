@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409042486",
+  "timestamp": "2026-04-05T17:10:42.486Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Energy budget is the gate; specialize genomes into distinct survival strategies (pulse vs locomote) to unlock diversity ceiling.; Efficiency is the critical bottleneck at 0.57, dragging overall fitness to 0.637. Survival is also weak at 0.667. The real problem: organisms are burning energy inefficiently (high drag/movement cost) and all genomes are too similar, reducing emergent diversity (0.456). Jellyfish and crawler should specialize: jellyfish trades speed for pulsing efficiency and minimal drag; crawler optimizes locomotion economy. Reducing baseRadius and springDamping cuts energy waste. Increasing resourceAttraction improves survival by making feeding more efficient. Boosting avoidanceRadius prevents collisions that waste energy. diversityOfForms stays low because genomes don't express distinct strategies — specialization in parameters fixes this.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
