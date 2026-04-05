@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411174477",
+  "timestamp": "2026-04-05T17:46:14.477Z",
+  "observation": "Domain sevo-life (fitness 0.659) generated 2 insights",
+  "suggestion": "Efficiency ≈ energy_harvested / energy_burned. Lower moveSpeed, reduce energyConserve defaults, increase resourceAttraction to find food faster with less wandering.; Efficiency is the critical bottleneck at 0.451 (20% weight), dragging overall fitness from potential 0.75+ down to 0.669. High moveSpeed and energyConserve waste energy; organisms burn resources faster than they harvest. Secondary weakness: diversityOfForms (0.457) suggests genomes are converging. Solution: reduce movement energy cost across all genomes, and differentiate parameter tuning per entity to increase morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
