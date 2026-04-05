@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409497809",
+  "timestamp": "2026-04-05T17:18:17.809Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "Efficiency dominates fitness—organisms win by *not spending* energy, not by moving fast. Reduce oscillation costs before increasing speed.; Efficiency is critically weak at 0.355—only 1/3 of the goal weight achieved. This suggests organisms are burning energy faster than they can harvest. Secondary weakness: diversityOfForms (0.456) means organisms are morphologically too similar. Root causes: (1) physics parameters favor expensive spring oscillations and high pulse rates, (2) all genomes follow similar growth templates, (3) resource attraction and energy conservation are not tuned for actual harvest efficiency. Fix: reduce mechanical energy waste (springStiffness, pulseRate), increase exploitation efficiency (energyConserve, harvestThreshold calibration), boost morphological variation (explorationDrive, trailIntensity differentiation).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
