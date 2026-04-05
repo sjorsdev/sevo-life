@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775416610935",
+  "timestamp": "2026-04-05T19:16:50.935Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with physics overhead. Reduce springDamping and drag; organisms maintain form with less energy wasted on resonance and friction.; Efficiency is the critical bottleneck (0.445 vs beauty 0.739, survival 0.667). Organisms reach age 500 but retain low energy—physics parameters are energy-inefficient. High drag (0.9-0.99) and unconstrained spring oscillation waste energy. Beauty is already strong (formBeauty 0.825, motionGrace 0.888), so efficiency gains won't sacrifice it. Target: reduce structural vibration, lower movement drag, optimize attraction thresholds.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
