@@ -574,6 +574,100 @@ Respond with JSON only:
   }
 }
 
+// --- THINK: creative/mathematical/cross-disciplinary reasoning ---
+// Different from brainstorm. Brainstorm proposes structural changes.
+// THINK generates novel ideas by combining concepts across fields.
+// The LLM reasons about math, physics, biology, aesthetics, music,
+// topology — looking for connections nobody has made.
+async function think(
+  goal: GoalConfig,
+  reflectionSummary: string,
+  brainstormProposals: string[],
+): Promise<string[]> {
+  console.log(`\n============================================================`);
+  console.log(`  THINK — creative reasoning across disciplines`);
+  console.log(`============================================================`);
+
+  const learnings = await queryNodes<SeedImprovementNode>("seedimprovement");
+  const allInsights = learnings
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp))
+    .slice(0, 15)
+    .map((l) => l.suggestion.slice(0, 150))
+    .join("\n");
+
+  const prompt = `You are a creative thinker working on an artificial life simulation.
+Your job is NOT to propose code changes. Your job is to THINK DEEPLY
+and generate NOVEL IDEAS by combining concepts from different fields.
+
+CURRENT STATE: ${reflectionSummary}
+
+GOAL: ${goal.name}
+
+PREVIOUS BRAINSTORM PROPOSALS:
+${brainstormProposals.join("\n")}
+
+ACCUMULATED KNOWLEDGE:
+${allInsights}
+
+Now THINK creatively. Cross-pollinate between fields:
+- What would a MATHEMATICIAN see in this problem? (topology, fractals, group theory, dynamical systems)
+- What would a BIOLOGIST suggest? (morphogenesis, evo-devo, symbiosis, horizontal gene transfer)
+- What would a MUSICIAN approach? (harmony, counterpoint, rhythm, tension/resolution)
+- What would a PHYSICIST try? (phase transitions, criticality, self-organized criticality, entropy)
+- What would an ARTIST see? (composition, negative space, contrast, narrative)
+
+Generate 3 NOVEL ideas that combine at least 2 fields. Not incremental improvements.
+Ideas that might sound crazy but have mathematical grounding.
+
+Respond with JSON:
+{
+  "thinking": "your reasoning process — show the cross-field connections",
+  "ideas": [
+    {"idea": "description", "fields": ["field1", "field2"], "math": "the mathematical principle behind it", "testable": "how to verify if it works"},
+    {"idea": "description", "fields": ["field1", "field2"], "math": "principle", "testable": "verification"},
+    {"idea": "description", "fields": ["field1", "field2"], "math": "principle", "testable": "verification"}
+  ]
+}`;
+
+  try {
+    const response = await callClaude(prompt);
+    const jsonMatch = response.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return [];
+    const parsed = JSON.parse(jsonMatch[0]);
+
+    const ideas: string[] = [];
+    if (parsed.thinking) {
+      console.log(`  Thinking: ${parsed.thinking.slice(0, 300)}`);
+      ideas.push(`REASONING: ${parsed.thinking}`);
+    }
+    if (parsed.ideas) {
+      for (const idea of parsed.ideas) {
+        console.log(`  IDEA [${idea.fields?.join("+")}]: ${idea.idea}`);
+        console.log(`    Math: ${idea.math}`);
+        console.log(`    Test: ${idea.testable}`);
+        ideas.push(`[${idea.fields?.join("+")}] ${idea.idea} — Math: ${idea.math} — Test: ${idea.testable}`);
+      }
+    }
+
+    // Write thinking to graph
+    await writeNode({
+      "@context": "sevo://v1",
+      "@type": "SeedImprovement",
+      "@id": `thinking-${goal.domain}-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      observation: `Creative thinking phase: ${ideas.length} novel cross-disciplinary ideas generated.`,
+      suggestion: ideas.join("; "),
+      evidence: [`trigger:think-phase`, `ideas:${ideas.length}`, `fields:cross-disciplinary`],
+      priority: 9,
+    } as SeedImprovementNode);
+
+    return ideas;
+  } catch (e) {
+    console.log(`  Thinking failed: ${(e as Error).message.slice(0, 100)}`);
+    return [];
+  }
+}
+
 // --- REALIGN: check if we're still serving the goal ---
 async function realign(goal: GoalConfig, bestFitness: number): Promise<void> {
   console.log(`\n============================================================`);
@@ -597,7 +691,7 @@ async function realign(goal: GoalConfig, bestFitness: number): Promise<void> {
 async function main() {
   const goal = await loadGoal();
   console.log(`\nSEVO Domain Evolution: ${goal.name}`);
-  console.log(`Meta-cycle: ${EVOLVE_CYCLES} evolve → reflect → brainstorm (if stuck) → realign`);
+  console.log(`Meta-cycle: EVOLVE → REFLECT → THINK → BRAINSTORM → REALIGN`);
 
   // --- EVOLVE phase ---
   let bestFitness = 0;
@@ -641,10 +735,11 @@ async function main() {
   // --- REFLECT phase ---
   const reflection = await reflect(goal, fitnessHistory);
 
-  // --- BRAINSTORM phase (only if plateauing) ---
-  if (reflection.plateauing) {
-    await brainstorm(goal, reflection.summary);
-  }
+  // --- THINK phase (always — creative thinking shouldn't wait for plateaus) ---
+  const brainstormProposals = reflection.plateauing
+    ? await brainstorm(goal, reflection.summary)
+    : [];
+  const novelIdeas = await think(goal, reflection.summary, brainstormProposals);
 
   // --- REALIGN phase ---
   await realign(goal, bestFitness);
