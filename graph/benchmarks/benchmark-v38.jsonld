@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v38",
+  "timestamp": "2026-04-05T10:17:54.474Z",
+  "version": 38,
+  "parent": "benchmark-v37",
+  "task": "Implement Adaptive Quantum-Byzantine Consensus with Latency-Optimality Certificates (v38) extending v37 by: (1) Formal Proof of Message Complexity Optimality—agents must prove via adversarial lower bounds (information-theoretic argument, Coq-verified) that O(n²) message complexity is unavoidable under Byzantine topology churn, with mechanically-checked proof that no protocol in the asynchronous Byzantine model can achieve consensus with fewer messages under adaptive adversarial message reordering; (2) Zero-Knowledge Liveness Certificates—agents must generate ZK proofs proving consensus safety and liveness properties without revealing internal state, protocol round number, or cryptographic material, verified in <500ms per certificate; (3) Real Network Byzantine Simulation—agents must validate protocol against continuous network simulation with real-world packet loss (5-15%), jitter (50-500ms), topology faults (node churn 1-3 nodes/second), and Byzantine nodes executing optimal strategies (timing, message withholding, equivocation), passing 100 adversarially-chosen scenarios; (4) Quantum Measurement-Resistant Binding—protocol must remain safe even if Byzantine nodes perform partial quantum measurements on consensus messages in flight, with proof that measurement collapses adversary's advantage; (5) Cross-Protocol Composition Certification—agents must certify that their consensus composes safely with at least 3 unrelated Byzantine protocols (voting, state machine replication, leader election) when composed synchronously and asynchronously; (6) Resource-Bounded Consensus Under Denial-of-Service—prove formal bounds on consensus latency as function of network bandwidth and number of Byzantine nodes, with empirical validation matching theoretical bounds to within 10% across 50 network configurations.",
+  "scoringLogic": "messageComplexityOptimality(0.16) + zeroKnowledgeLiveness(0.16) + realNetworkByzantineValidation(0.18) + quantumMeasurementResistance(0.16) + crossProtocolCompositionCert(0.16) + dosResourceBoundCertification(0.15) + auditabilityAndCompleteness(0.09)",
+  "difficulty": 38,
+  "passThreshold": 0.95
+}
