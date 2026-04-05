@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411156721",
+  "timestamp": "2026-04-05T17:45:56.721Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Efficiency crisis is metabolic: organisms are spending more energy moving/exploring than they gain from resources. Reduce movement waste, increase foraging precision, evolve longer-lived lineages.; Efficiency (0.405) is the critical bottleneck — pulling down overall fitness by ~40 points. Early organism deaths (age ~230) indicate energy depletion under current parameters. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are weak, suggesting organisms cluster and lack morphological variation. Solution: (1) Increase energyConserve across all genomes to reduce metabolic waste — organisms should survive longer and maintain energy. (2) Boost resourceAttraction to help organisms find food faster with less exploration cost. (3) Reduce moveSpeed or tie it to resource availability to prevent aimless energy burns. (4) Increase explorationDrive on select entities to spread spatially and create form diversity. Survival will stabilize, beautyScore will maintain, and efficiency gains will compound.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
