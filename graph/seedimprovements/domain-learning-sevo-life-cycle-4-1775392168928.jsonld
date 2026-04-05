@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775392168928",
+  "timestamp": "2026-04-05T12:29:28.928Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "High survivalRate masks low efficiency — beings live long but inefficiently. Movement budget is the bottleneck, not resource capture.; Efficiency is critically low (0.125) despite high survival, indicating excessive energy waste relative to resource gain. Beauty's rhythm component is weak (0.29) and coverage is moderate (0.404). The bottleneck is movement cost — entities are spending energy moving and exploring without sufficient return. Solution: reduce moveSpeed on fast entities to conserve energy, lower explorationDrive to cut wasteful wandering, and increase visual rhythm/coverage on aesthetic genomes to improve beautyScore.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
