@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775389327139",
+  "timestamp": "2026-04-05T11:42:07.139Z",
+  "observation": "Domain sevo-life (fitness 0.691) generated 9 insights",
+  "suggestion": "Previous generation optimized efficiency (0.2 weight) but fitness plateaued at 0.691.; High efficiency when energy > 50%, switches to conservative when energy < 30%; Reduced moveSpeed from 0.4 to 0.35 for lower energy burn. Slightly higher threshold (0.08); Increased trailIntensity from 0.85 to 0.9, reduced moveSpeed from 0.7 to 0.6; Reduced moveSpeed to 0.55 (was 0.65) + raised energyConserve to 0.65 (was 0.55).; Reduced from 0.75 to 0.68 moveSpeed + increased energyConserve to 0.72.; Raised harvestThreshold from 0.06 to 0.09 to reduce energy cost of constant harvesting.; New role to increase beauty diversity. Very high pulseFrequency (0.45) + trailIntensity (0.95); Adaptive decision logic now scales harvest aggressiveness by energy state.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
