@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v18",
+  "timestamp": "2026-04-05T09:01:11.524Z",
+  "version": 18,
+  "parent": "benchmark-v17",
+  "task": "Implement Byzantine-resilient consensus (v18) extending v17 with: (1) Threshold Cryptography with Proactive Secret Sharing—validators must implement t-of-n threshold signatures where private key shares rotate across validators every R rounds via verifiable secret sharing (VSS), ensuring no coalition ≤t can ever reconstruct the consensus key; agents must prove that after every rotation, all previous key material is cryptographically erased and new shares are distributionally independent; (2) Adaptive Byzantine Leader Election—implement leader selection that detects Byzantine leaders (those who equivocate, censor, or delay messages >Δ slots) and triggers atomic leader replacement without consensus stalls; agents must prove leader replacement happens within 4 message delays and maintains quorum continuity; (3) Censorship-Resistant Transaction Ordering via Commit-Reveal—transactions must be committed (hashed, encrypted to leader) before proposal phase, then revealed; agents must detect censoring leaders (those omitting valid commits) and trigger immediate revocation; prove censorship detection occurs within 3 message delays and rejected commits eventually get included; (4) Synchrony Verification with Dynamic Parameter Adjustment—agents must measure actual network synchrony (via timestamped echo rounds), adjust consensus timeouts (Δt_new = 2×measured_latency_p99), and detect asynchronous partitions; if partition suspected, enter Byzantine-tolerant async mode; prove adaptive adjustment prevents both false positives (<5% timeout waste) and missed deadlines.",
+  "scoringLogic": "thresholdCryptographyAndRotation(0.18) + adaptiveLeaderElection(0.16) + censorshipResistance(0.16) + synchronyAdaptation(0.14) + proofCompleteness(0.12) + latencyAndOverhead(0.12) + cryptographicSoundness(0.12)",
+  "difficulty": 18,
+  "passThreshold": 0.95
+}
