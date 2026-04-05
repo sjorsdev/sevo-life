@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775392851554",
+  "timestamp": "2026-04-05T12:40:51.554Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with movement cost. Reduce moveSpeed uniformly, raise conservation baseline. Survival already at 1.0 — preserve it while fixing efficiency and beauty rhythm.; Efficiency at 0.137 is critically low and drags down overall fitness. The issue: entities move too fast (0.6-0.7) and don't conserve energy effectively (0.55-0.72). High movement costs energy without proportional resource gain. Secondary problem: rhythm (0.241) is weak because pulseFrequency is too low on most entities. Solution: reduce moveSpeed to 0.5 across all entities (energy is movement-bound), increase energyConserve to 0.75-0.85 for all, boost pulseFrequency to 0.15-0.25 for rhythm. These changes lower wasted movement, extend lifespan via better conservation, and create more visible rhythmic patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
