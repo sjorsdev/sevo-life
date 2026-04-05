@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405596632",
+  "timestamp": "2026-04-05T16:13:16.632Z",
+  "observation": "Domain sevo-life (fitness 0.603) generated 2 insights",
+  "suggestion": "spatial coordination emerges from energetic efficiency + trail memory, not from faster movement. Slow organisms that hoard energy cluster better than fast scattered ones.; spatialComposition (0.3) is critically weak — organisms lack spatial coordination. efficiency (0.482) is second-lowest. The dead organism (id 3) suggests marginal survival margins. Strategy: reduce moveSpeed to cut energy waste and enable more controlled navigation; increase energyConserve for direct efficiency gain; boost trailAttraction to create emergent spatial clustering (trails guide future movement patterns). diversityOfForms (0.457) improves naturally as efficiency frees energy for exploration variance.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
