@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412332046",
+  "timestamp": "2026-04-05T18:05:32.046Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Small efficient bodies that forage aggressively beat large ornate bodies that starve slowly.; Efficiency is critically weak (0.369 vs 0.69 beauty, 0.667 survival). Organisms are alive but starving—energy budgets range 3-14 while trying to maintain 8-13 particles. Spatial composition is also poor (0.3), indicating particles cluster rather than spread. Root causes: (1) baseRadius too large—metabolic cost scales with particle count/size, (2) drag too high—movement costs more energy than gain from finding resources, (3) growth steps don't spread particles far enough horizontally. Solution: shrink particles, reduce drag friction, increase attraction to resources, adjust growth geometry to maximize reach.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
