@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406083593",
+  "timestamp": "2026-04-05T16:21:23.593Z",
+  "observation": "Domain sevo-life (fitness 0.583) generated 2 insights",
+  "suggestion": "Survival requires energy abundance. Focus on metabolic efficiency first; beauty and complexity follow from surplus energy.; Efficiency (0.487) is the weakest component and primary drag on overall fitness. Organisms 0, 1, 2, 3 show poor energy management — early death or critically low energy despite reaching max age. Organisms 4 and 5 maintain high energy at age 500. The problem is metabolic inefficiency and poor resource gathering. Solution: increase energyConserve to reduce baseline metabolic cost, increase resourceAttraction for better energy capture, reduce moveSpeed to lower activity costs, and increase harvestThreshold to avoid wasting energy on marginal resources.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
