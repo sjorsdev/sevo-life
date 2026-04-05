@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775417037908",
+  "timestamp": "2026-04-05T19:23:57.908Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "Efficiency deaths: organisms run out of energy before reproducing. Fix: metabolic efficiency first, spatial spread second.; Efficiency is critically weak (0.429) — organisms burn energy faster than they should. Two organisms died prematurely (ages 227, 434). Spatial composition is lowest in beauty (0.3) — organisms cluster rather than explore. Proposal: (1) Reduce moveSpeed and increase energyConserve across population to cut waste, (2) Boost resourceAttraction so organisms find food faster and need less movement, (3) Increase explorationDrive and reduce avoidanceRadius so organisms spread and don't huddle, (4) Raise harvestThreshold so they take every food opportunity. Diversity of forms (0.456) is also soft — increase patternSymmetry variance to encourage morphological complexity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
