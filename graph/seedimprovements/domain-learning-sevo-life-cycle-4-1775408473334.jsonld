@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408473334",
+  "timestamp": "2026-04-05T17:01:13.334Z",
+  "observation": "Domain sevo-life (fitness 0.599) generated 2 insights",
+  "suggestion": "Efficiency dominates fitness curve; energy management is the lever. Better exploration patterns feed spatial composition and diversity as side effects.; Efficiency is the bottleneck (0.448 vs 0.667 survival, 0.687 beauty). Organisms are burning energy inefficiently—see low energy reserves (max 33) at max lifespan. Spatial composition is terrible (0.3)—organisms cluster poorly. Increasing energyConserve and explorationDrive directly addresses both: better energy management and wider exploration patterns improve efficiency, spread, and diversity. Boost resourceAttraction slightly to help organisms sustain longer. For beauty, vary trailColor across genomes to increase diversityOfForms.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
