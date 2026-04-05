@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408431184",
+  "timestamp": "2026-04-05T17:00:31.184Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Survival beats beauty: maximizing lifespans enables longer beauty expression and higher complexity growth. Energy conservation matters more than exploration.; Survival rate of 0.5 is the critical bottleneck. Organisms are dying from energy depletion despite reaching max age, indicating poor resource acquisition and conservation. Efficiency at 0.37 compounds this—high movement cost with insufficient energy harvest. Beauty is already strong (0.724), so priority is: (1) boost resourceAttraction and energyConserve to sustain life longer, (2) reduce explorationDrive to lower energy waste, (3) optimize harvestThreshold to catch resources reliably. The alive organisms (IDs 1, 4, 5) should be more aggressive foragers; dead ones failed at energy management.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
