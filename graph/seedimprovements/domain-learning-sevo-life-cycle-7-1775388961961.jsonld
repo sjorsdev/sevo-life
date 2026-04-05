@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775388961961",
+  "timestamp": "2026-04-05T11:36:01.961Z",
+  "observation": "Domain sevo-life (fitness 0.691) generated 10 insights",
+  "suggestion": "Survival rate is 50% of composite fitness. Previous focus on efficiency (20%) was misaligned.; high energy conservation (0.75) + moderate harvest threshold (0.12) = lives longer while gathering; extreme energy conservation (0.85) + high harvest threshold (0.15) means harvests less often but stays alive longer; high trail attraction (0.35) means entities cluster together, creating defensive perimeter patterns; balanced energyConserve (0.6) + high explorationDrive (0.75) = explores new areas while preserving energy; lower moveSpeed (0.5) reduces energy drain while still creating rich trail patterns; moveSpeed 0.4 + energyConserve 0.8 + harvestThreshold 0.2 = rare harvests but survives on very little; high pulseFrequency (0.3) creates pulsing visual patterns (beauty) while also; high trailAttraction (0.4) + moderate moveSpeed (0.6) = entities form moving clusters; Decision function now weights survival-first decision making:",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
