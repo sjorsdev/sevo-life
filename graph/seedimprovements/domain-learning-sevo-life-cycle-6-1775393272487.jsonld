@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775393272487",
+  "timestamp": "2026-04-05T12:47:52.487Z",
+  "observation": "Domain sevo-life (fitness 0.690) generated 2 insights",
+  "suggestion": "Energy conservation is the leverage point—pulseFrequency and moveSpeed are secondary. Push the floor to 0.65 conserve, reduce dance overhead.; Efficiency is critically weak at 0.155 despite strong survival (1.0). The goal weights efficiency at 0.2x, so this bottleneck costs ~0.13 fitness points. Root cause: entities are moving too much and conserving energy inconsistently. Entity 0 (Harvester) at 0.85 moveSpeed and 0.4 conserve is burning energy; Entity 2 (Aesthetic) sacrifices energy for beauty with 0.45 conserve and 0.25 pulse; most others under-optimize conservation. Solution: raise energyConserve floor to 0.6+, reduce moveSpeed where exploration isn't the bottleneck, lower pulseFrequency (visual generation costs energy). Survival is already maxed, so we can reweight toward efficiency without loss.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
