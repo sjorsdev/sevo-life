@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775416926812",
+  "timestamp": "2026-04-05T19:22:06.812Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Energy poverty cascades: expensive movement kills early; survivors barely maintain. Efficiency gain requires metabolic shift, not just better foraging.; Efficiency is the critical bottleneck at 0.476—nearly half. This compounds through the population: 2 dead organisms (ages 233, 374), survivors at max age but with depleted energy (organism 5 at 9 energy). The problem is high movement cost relative to resource gain. Reducing drag, movement speed, and pulse frequency directly lowers energy expenditure. Spatial composition weakness (0.3) compounds this—organisms cluster instead of spreading to distribute foraging load. Increasing explorationDrive and energyConserve while lowering moveSpeed/pulseFrequency creates leaner, longer-lived phenotypes. Secondary: diversityOfForms (0.456) suggests genomes converge too quickly; boost exploratory mutation rather than exploitation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
