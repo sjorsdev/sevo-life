@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409870640",
+  "timestamp": "2026-04-05T17:24:30.641Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Survival compounds beauty—dead organisms contribute nothing. Push energyConserve to 0.75+ first, then refine shape/motion.; Survival rate (0.5) and efficiency (0.35) are critically low. Organisms die young with minimal energy. Root causes: (1) High metabolic burn relative to resource acquisition, (2) Poor energy conservation behavior, (3) Inefficient foraging. Priority: increase resourceAttraction and energyConserve to keep organisms alive longer, then optimize motionGrace and diversityOfForms. Jellyfish/crawler shapes are beautiful but too expensive energetically.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
