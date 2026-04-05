@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775388863801",
+  "timestamp": "2026-04-05T11:34:23.801Z",
+  "observation": "Domain sevo-life (fitness 0.692) generated 11 insights",
+  "suggestion": "survival rate weighted 0.5 but previous genomes burned energy too quickly on movement.; reduced moveSpeed from 0.85→0.65 and increased energyConserve from 0.4→0.7 for 40% longer lifespan; moveSpeed 0.4→0.25, harvestThreshold 0.05→0.07 (sweet spot), energyConserve 0.8→0.85; increased energyConserve 0.45→0.62, reduced pulseFrequency 0.25→0.15 (less computation cost); energyConserve 0.55→0.68, moveSpeed 0.65→0.52, enables longer runs without starvation; moveSpeed 0.75→0.58, energyConserve 0.65→0.75, reduces metabolic cost per cell traversed; moveSpeed 0.35→0.2, harvestThreshold 0.06→0.08 (optimal sweet spot), energyConserve 0.9; resource detection improved by balancing harvest threshold with surrounding cell quality; trail-following behavior now modulated by energy state; resource attraction is primary driver but modulated by exploration drive; when no immediate reward, exploration is weighted by genome. Low-explore genomes stay put.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
