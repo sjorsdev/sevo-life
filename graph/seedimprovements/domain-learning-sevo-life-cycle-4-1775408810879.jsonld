@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408810879",
+  "timestamp": "2026-04-05T17:06:50.879Z",
+  "observation": "Domain sevo-life (fitness 0.599) generated 2 insights",
+  "suggestion": "Energy cost scales with particle count; survival → lower particle count or dramatically higher resource efficiency. Raise attraction/conservation together to create virtuous cycle: find food faster, waste less.; Survival rate is critically low at 0.333 (only 2/6 alive) and dominates the goal function (0.5 weight). Only 2 organisms reached age 500; others died by age 421. Root cause: resource gathering is insufficient relative to energy burn. diversityOfForms=0 indicates morphological homogeneity exacerbates resource competition. Strategy: boost resourceAttraction to help organisms locate food, increase energyConserve to reduce metabolic cost, raise explorationDrive to discover more food patches, and lower harvestThreshold to make feeding more frequent. Surviving organisms have 8 particles (smallest in cohort), suggesting small is advantageous but overall energy deficit is critical.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
