@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775404565138",
+  "timestamp": "2026-04-05T15:56:05.138Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Rhythm is missing—pulse frequencies too low to create synchronized patterns. Efficiency drains through high movement costs. Solution: sync pulsing + lean locomotion.; Fitness breakdown reveals efficiency (0.148) is crippling the overall score, contributing only 0.0296 to goal. More critically, rhythm (0.069) is nearly absent from beauty metrics—this suggests entities lack synchronized pulsing patterns. High movement speeds (0.85, 0.75) consume energy without proportional efficiency gains. Strategy: (1) Dramatically increase pulseFrequency across all genomes to unlock rhythm—currently 0.15–0.35 is too low for emergent synchronization. (2) Reduce moveSpeed moderately to conserve energy while maintaining resource-seeking capacity. (3) Lower harvestThreshold further to extract more value per movement. (4) Boost energyConserve where below 0.7 to sustain longer cycles.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
