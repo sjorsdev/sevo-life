@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408343595",
+  "timestamp": "2026-04-05T16:59:03.595Z",
+  "observation": "Domain sevo-life (fitness 0.607) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is metabolic waste from high-cost behaviors (pulsing, swimming) with poor return on survival. Energy conservation matters more than raw movement.; Efficiency is critically weak (0.471) despite strong survival (0.833). This indicates energy expenditure is poorly tuned — organisms are burning resources without proportional benefit. Secondary issue: spatialComposition (0.3) shows clustering/collision waste. Root cause: pulseRate and swimStrength too high for current drag/mass ratios, avoidanceRadius too small. Tertiary: diversityOfForms (0.457) needs phenotypic spread. Strategy: reduce metabolic costs, increase spatial separation, add exploratory variance to grow different shapes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
