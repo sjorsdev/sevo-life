@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775426253244",
+  "timestamp": "2026-04-05T21:57:33.244Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau suggests the system has converged to a local optimum in a single-peak fitness landscape. The fitness is 0.000 because all organisms have evolved to be equally 'correct' given the constraints. Parameter tuning within that landscape adds noise but no direction. Structural changes must add new dimensions to the problem (new ecological niches, new competitors, new morphologies) that create multiple peaks and new selection gradients. Beauty-driven evolution needs multiple valid solutions, not one attractor.; [easy] Introduce environmental heterogeneity: Create 3-5 distinct resource zones (light/dark/nutrient-rich/toxic/sparse) that persist across the world. Organisms must choose between specializing for one zone or generalist morphs that work in all. Beauty scoring becomes zone-specific (e.g., bioluminescence is beautiful in dark zones). — Homogeneous environments converge to a single phenotype. Heterogeneity forces population to split into ecological niches, each optimizing independently for different beauty dimensions. This breaks the single-peak local optimum and creates multiple fitness peaks to explore.; [medium] Add predator-prey dynamics: Introduce a second organism species that spawns automatically when prey population is high. Predators evolve to hunt (new behaviors: chase, pursuit, energy theft), prey evolve defenses (speed, camouflage, toxicity). Both evolve in an arms race that prevents convergence. — Single-species optimization hits a stable point. Interspecific competition creates moving target fitness landscape — predators adapt, prey counter-adapt, creating perpetual selection pressure that prevents plateau. New beauty dimensions emerge (predator stealth vs prey appearance).; [hard] Introduce developmental instruction set with colony organization: Add new cell types (coordinator cells that sense neighbors, worker cells, reproductive cells). Modify growth rules to allow organisms to spawn attached offspring that share a nervous system. Beauty now includes emergent colony morphology (symmetry across multiple bodies, coordinated motion). — Current cell types may have exhausted their expressible morphospace. Multi-body colonies with shared control allow order-of-magnitude more body plans. Colony-level symmetry and coordinated behavior are new beauty dimensions that require novel evolutionary strategies to achieve.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
