@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775393878994",
+  "timestamp": "2026-04-05T12:57:58.994Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency constrains beauty — fix efficiency first by tuning harvesting economics and movement cost, then beauty flows naturally through improved rhythm and coverage.; Efficiency (0.131) is critically low, dragging overall fitness from potential 0.75+ down to 0.634. Root causes: (1) Fast-moving harvesters burn energy without proportional resource gain — Harvester's 0.85 moveSpeed is wasteful; (2) Hoarder's 0.05 harvestThreshold is too aggressive, likely harvesting marginal resources at net energy loss; (3) Low pulseFrequency across all genomes kills rhythm score (0.17), which blocks beauty gains. Rhythm directly feeds pattern emergence and visual complexity. Fix: reduce energy-wasting movement, calibrate harvest thresholds to actual resource value, boost pulseFrequency uniformly to unlock rhythm and coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
