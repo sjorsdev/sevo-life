@@ -126,7 +126,7 @@ async function getDomainBenchmark(domain: string): Promise<BenchmarkNode | null>
 async function runDomainCycle(
   goal: GoalConfig,
   cycle: number,
-): Promise<{ improvements: string[]; bestFitness: number }> {
+): Promise<{ improvements: string[]; bestFitness: number; bestAgentId: string | null }> {
   const cycleId = `${goal.domain}-cycle-${cycle}-${Date.now()}`;
   const improvements: string[] = [];
 
@@ -153,7 +153,7 @@ async function runDomainCycle(
 
   if (!benchmark) {
     console.log("  No domain benchmark found.");
-    return { improvements: [], bestFitness: 0 };
+    return { improvements: [], bestFitness: 0, bestAgentId: null };
   }
 
   // If no agents, register the initial one
@@ -223,7 +223,7 @@ async function runDomainCycle(
   }
 
   if (!bestAgent) {
-    return { improvements: [], bestFitness: 0 };
+    return { improvements: [], bestFitness: 0, bestAgentId: null };
   }
 
   console.log(`  Best: ${bestAgent["@id"]} fitness=${bestFitness.toFixed(3)}`);
@@ -323,7 +323,7 @@ RULES:
     console.log(`  Mutation failed: ${(e as Error).message.slice(0, 100)}`);
   }
 
-  return { improvements, bestFitness };
+  return { improvements, bestFitness, bestAgentId: bestAgent["@id"] };
 }
 
 // ---------------------------------------------------------------------------
@@ -364,16 +364,21 @@ async function recordDomainLearnings(
 // ===========================================================================
 // MAIN — Detect domain from goal.jsonld and run evolution
 // ===========================================================================
-const MAX_CYCLES = 5;
+const MAX_CYCLES = 10;
 
 async function main() {
   const goal = await loadGoal();
   console.log(`\nSEVO Domain Evolution: ${goal.name}`);
   console.log(`Domain: ${goal.domain}`);
   console.log(`Goals: ${goal.goals.length}`);
+  console.log(`Composite fitness: ${goal.compositeFitness}`);
 
   for (let cycle = 1; cycle <= MAX_CYCLES; cycle++) {
-    const { improvements, bestFitness } = await runDomainCycle(goal, cycle);
+    console.log(`\n============================================================`);
+    console.log(`  DOMAIN CYCLE ${cycle}/${MAX_CYCLES}`);
+    console.log(`============================================================`);
+
+    const { improvements, bestFitness, bestAgentId } = await runDomainCycle(goal, cycle);
 
     if (improvements.length > 0) {
       console.log(`\n  Domain insights:`);
@@ -383,12 +388,14 @@ async function main() {
       await recordDomainLearnings(goal.domain, improvements, bestFitness, cycle);
     }
 
-    // Compute SevoScore for this cycle
+    // Compute SevoScore
     console.log("\n--- SevoScore ---");
-    const bestAgent = bestFitness?.agent ?? "unknown";
-    const bestEqs = bestFitness?.eqs ?? 0;
-    const avgFit = bestFitness?.context?.fitness as number ?? 0;
-    await computeSevoScore(`${goal.domain}-cycle-${cycle}-${Date.now()}`, bestAgent, bestEqs, avgFit);
+    await computeSevoScore(
+      `${goal.domain}-cycle-${cycle}-${Date.now()}`,
+      bestAgentId ?? "unknown",
+      bestFitness,
+      bestFitness,
+    );
 
     // Cooldown between cycles
     if (cycle < MAX_CYCLES) {
@@ -396,7 +403,7 @@ async function main() {
     }
   }
 
-  console.log(`\n${goal.domain} evolution complete.`);
+  console.log(`\n${goal.domain} evolution complete (${MAX_CYCLES} cycles).`);
 }
 
 main();
