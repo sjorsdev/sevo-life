@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775389091829",
+  "timestamp": "2026-04-05T11:38:11.829Z",
+  "observation": "Domain sevo-life (fitness 0.693) generated 8 insights",
+  "suggestion": "fitness composition is 0.5*survival + 0.3*beauty + 0.2*efficiency.; moveSpeed 0.65 (was 0.85) reduces energy burn per action for longer lifespan.; reduced moveSpeed to 0.3 (was 0.4) for pure stationary harvesting.; moveSpeed 0.6 (was 0.7) prioritizes energy conservation over speed.; moveSpeed 0.5 (was 0.65) + energyConserve 0.7 creates survivalist phenotype.; moveSpeed 0.7 (same) + explorationDrive 0.75 (was 0.8) = exploration with energy awareness.; moveSpeed 0.25 (was 0.35) for extreme energy conservation.; hybrid survival+beauty: energyConserve 0.72, moveSpeed 0.55, trailIntensity 0.7.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
