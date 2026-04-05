@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775390068345",
+  "timestamp": "2026-04-05T11:54:28.345Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Efficiency fails not from bad selection but from energy hemorrhage on exploration. Harvesters and Optimizers move too much relative to returns. Rhythm fails because only one genome has pulseFrequency > 0.25.; Efficiency is critically weak (0.136 vs 0.875 survival, 0.492 beauty). Movement costs dominate without proportional gains. Additionally, rhythm (0.225) and coverage (0.233) are low—no entity has strong pulseFrequency. Fix efficiency by reducing moveSpeed on high-movement entities and boosting energyConserve. Fix rhythm/coverage by increasing pulseFrequency globally (creates temporal patterns) and trailIntensity (spreads visual presence).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
