@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394967265",
+  "timestamp": "2026-04-05T13:16:07.265Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Efficiency collapses when fast entities move without capturing resources proportionally; conversely, low-rhythm hoarders create dead zones. Rebalance: lower speeds + higher conservation on efficiency-focused types, higher pulse + exploration on beauty-focused types.; Efficiency is critically weak (0.137 vs 0.5 target) — drags down overall fitness by 40% potential points. Root cause: Harvester (0.85 moveSpeed, 0.7 explorationDrive) and Persistence Hunter (0.75 moveSpeed) waste energy on movement without corresponding resource capture. Beauty is secondary weak point (0.573), driven by low rhythm (0.265) and coverage (0.358) — the low-trail-intensity entities (Harvester 0.2, Hoarder 0.25) leave invisible footprints. Strategy: (1) Cut movement overhead on high-mobility entities, boost energyConserve to 0.75+. (2) Raise harvestThreshold to avoid thrashing on marginal resources. (3) Increase pulseFrequency and explorationDrive on visually-mute entities to improve rhythm and coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
