@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775393989832",
+  "timestamp": "2026-04-05T12:59:49.832Z",
+  "observation": "Domain sevo-life (fitness 0.709) generated 2 insights",
+  "suggestion": "Marginal resource harvesting is energy-negative; entities profit most by raising harvest threshold and slowing movement, freeing energy for pulses that drive beauty.; Efficiency is critically weak (0.153, worth 0.031 of goal score) vs. survivalRate perfection (already maxed). Beauty's rhythm component is very weak (0.159). Root cause: entities burn energy on marginal resource harvesting (low harvestThresholds) and high movement (Harvester at 0.85 moveSpeed). Fix by: (1) raising harvestThreshold across all entities to avoid sub-ROI harvests, (2) reducing moveSpeed for high-burn types, (3) increasing energyConserve to baseline 0.45+, (4) boosting pulseFrequency for rhythm contribution. Harvester burns 6x+ energy vs. harvest; efficiency gained > +0.15 possible.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
