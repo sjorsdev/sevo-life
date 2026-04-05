@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775388833250",
+  "timestamp": "2026-04-05T11:33:53.250Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 13 insights",
+  "suggestion": "survival rate (0.5 weight) is now the bottleneck. Previous efficiency focus created feast-famine cycles.; threshold 0.04 captures resources others miss. High conservation = long survival.; reduced moveSpeed (0.35) from 0.4 saves energy. Threshold 0.06 ensures steady harvest.; paired high trailIntensity (0.9) with conservation (0.6) so beauty-makers live long.; threshold 0.13 (raised from 0.15) increases capture rate. moveSpeed 0.6 balances exploration.; threshold 0.08 + moveSpeed 0.72 + conservation 0.7 = stable long-term survival.; lowest moveSpeed (0.32) saves energy while threshold 0.07 catches marginal resources.; pulseFrequency 0.45 (high) generates visible patterns. conservation 0.65 ensures survival.; trailAttraction 0.3 (positive) means entities follow each other's trails, creating emergent patterns.; patternSymmetry 0.85 creates recognizable geometric beauty. threshold 0.12 ensures resources.; moveSpeed 0.28, conservation 0.88, threshold 0.05 = maximum survival in sparse conditions.; primary goal is survival. Check energy first — conservative movement when depleted.; beauty emergence happens when entities coordinate. Check trail attraction.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
