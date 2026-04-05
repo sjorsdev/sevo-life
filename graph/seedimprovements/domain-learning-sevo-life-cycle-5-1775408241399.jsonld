@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408241399",
+  "timestamp": "2026-04-05T16:57:21.399Z",
+  "observation": "Domain sevo-life (fitness 0.633) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy starvation + uncoordinated spatial spread. Fix resource-finding before optimizing motion.; Efficiency is critically weak (0.478) compared to survival (0.667) and beauty (0.634). Organisms are energy-depleted (most at 0 energy) and spatially disorganized (0.3 composition score). Root causes: poor resourceAttraction causing starvation, wasteful movement (high drag equiv), and low patternSymmetry preventing coordinated spatial arrangement. Targeting: (1) increase resourceAttraction to reduce starvation, (2) boost energyConserve to prevent depletion, (3) improve patternSymmetry for better spatial coherence. diversityOfForms weak suggests parameter drift — adjust explorationDrive selectively to maintain form diversity without chaos.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
