@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405719199",
+  "timestamp": "2026-04-05T16:15:19.199Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "Efficiency + spatial composition bottleneck is driven by metabolic imbalance and behavioral clustering. Decoupling organisms spatially while stabilizing energy costs lifts both simultaneously.; Fitness is bottlenecked by efficiency (0.511) and spatial composition (0.3). Organisms show wild energy variance (1-45), indicating poor energy management and clustering behavior. Most organisms are passive/similar, reducing spatial diversity. Solution: (1) Universally increase energyConserve to stabilize metabolism across the population. (2) Boost moveSpeed and explorationDrive for passive organisms to spread them spatially. (3) Increase patternSymmetry variance across genomes to improve diversityOfForms. (4) Reduce resourceAttraction for high-energy consumers to prevent wasteful chasing.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
