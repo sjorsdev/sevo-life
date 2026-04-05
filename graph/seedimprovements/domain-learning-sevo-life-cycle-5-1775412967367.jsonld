@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412967367",
+  "timestamp": "2026-04-05T18:16:07.367Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Efficiency collapses under high exploration cost + low resource focus. Organisms should move deliberately toward food, not exploratively. Conservation > Speed.; Efficiency (0.44) is the critical bottleneck — it's 40% below beauty and dragging overall fitness down. The organisms show weak survival (2/6 dead, short lifespans 269-334) and low energy retention on living ones (max 23 vs. capable of much higher). This indicates energy waste during movement/exploration. Solution: reduce movement cost and exploration waste, increase energy conservation and resource attraction to fuel recovery. Particle counts (8-13) are reasonable — the issue is behavioral energy drain, not structure.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
