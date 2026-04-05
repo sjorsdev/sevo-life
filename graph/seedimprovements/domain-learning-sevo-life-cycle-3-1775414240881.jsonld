@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775414240881",
+  "timestamp": "2026-04-05T18:37:20.881Z",
+  "observation": "Domain sevo-life (fitness 0.606) generated 2 insights",
+  "suggestion": "organisms are starving before finding resources — energy conservation + resource-seeking urgency will unlock survival curve; survivalRate (0.5) is the critical bottleneck — weighted 0.5 in the goal but half the organisms are dead. All deceased organisms had energy = 0 at death, indicating energy starvation. Efficiency is also weak (0.392). Primary strategy: increase energyConserve to keep organisms alive longer, increase resourceAttraction to ensure they find food before starvation, and lower harvestThreshold so they consume resources more aggressively when found. Secondary: improve spatialComposition (0.3) and motionGrace (0.428) by optimizing movement parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
