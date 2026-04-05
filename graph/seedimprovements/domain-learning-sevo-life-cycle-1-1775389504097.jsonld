@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775389504097",
+  "timestamp": "2026-04-05T11:45:04.097Z",
+  "observation": "Domain sevo-life (fitness 0.692) generated 10 insights",
+  "suggestion": "survival rate dominates fitness (0.5 weight). Redesigned genomes to maximize entity lifespan through adaptive energy management and risk avoidance while maintaining efficiency and beauty.; survival > efficiency. High energyConserve (0.85) + moderate move speed to live longer; reduces moveSpeed to 0.3 for minimal energy drain + ultra-low harvest threshold (0.04); energyConserve 0.7 + trailIntensity 0.8 for lifespan + aesthetics; moveSpeed 0.4 + harvestThreshold 0.06 creates resource-dense domains where lifespan extends; trailIntensity 0.9 + energyConserve 0.72 balances beauty goal with survival; moveSpeed 0.7 allows more exploration but energyConserve 0.75 maintains long life; moveSpeed 0.25 + energyConserve 0.95 creates entities that nearly never die from energy; trailIntensity 0.95 + energyConserve 0.68 creates beautiful long-lived entities; survival-focused decision tree. Prioritize energy conservation at low health",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
