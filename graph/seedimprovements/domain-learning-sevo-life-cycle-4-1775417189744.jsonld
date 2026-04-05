@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775417189744",
+  "timestamp": "2026-04-05T19:26:29.744Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Maximize survival first (it's 50% of goal). Efficiency through tighter resource loops beats beauty optimization—beauty is already at 0.79, survival is at 0.5.; Survival rate (0.5) is the critical bottleneck—3 of 6 organisms are dead, and the 3 alive ones are barely sustaining (energies: 5, 19, 24). This directly hits the 0.5 weight in the goal. Efficiency is secondary but also weak (0.353). Beauty metrics are actually strong (0.788), so don't sacrifice that. Root problem: organisms expend energy faster than they harvest. Solution: prioritize resource gathering (resourceAttraction), reduce expenditure (energyConserve, lower moveSpeed for wasteful wandering), and be more aggressive about harvesting (harvestThreshold). The dead organisms (0, 3, 4) suggest energy starvation killed them—ones that survived longer did so by being more conservative or efficient.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
