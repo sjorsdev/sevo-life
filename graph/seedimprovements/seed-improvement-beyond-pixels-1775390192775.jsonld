@@ -1,0 +1,15 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "seed-improvement-beyond-pixels-1775390192775",
+  "timestamp": "2026-04-05T11:56:32.775Z",
+  "observation": "Current simulation is a snake game with trail analysis. Beings are single pixels, beauty is hardcoded trail metrics, only genome parameters evolve. This is not life — it is a parametric screensaver. Three fundamental limits: (1) no body/form — beings have no shape, (2) beauty is shallow — measuring trail symmetry not emergence or form, (3) only parameters evolve — not structure, physics, or beauty itself.",
+  "suggestion": "Redesign around three principles: (A) Beings with BODIES �� multi-cell organisms that grow via L-system rules, have shape/proportion/bilateral symmetry. Beauty of form not trails. (B) Deeper beauty — emergent complexity, self-organization, ecosystem dynamics, morphogenesis. Beauty is about what life BECOMES not what it leaves behind. (C) Everything evolves — the growth rules, the physics, the decision function structure, AND the beauty definition itself. The beauty scorer should be part of the genome so what counts as beautiful is itself subject to evolution.",
+  "evidence": [
+    "40-cycles-of-parameter-tuning",
+    "fitness-plateau-at-0.7",
+    "only-2-successful-agents",
+    "beauty-score-stuck-at-0.55"
+  ],
+  "priority": 10
+}
