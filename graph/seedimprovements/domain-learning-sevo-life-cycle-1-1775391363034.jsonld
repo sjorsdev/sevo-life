@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775391363034",
+  "timestamp": "2026-04-05T12:16:03.034Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "High beauty creation (trailIntensity 0.85) and high movement speed (0.85) are energy sinks that kill efficiency without corresponding survival/beauty gains. Conservative organisms with moderate parameters outperform specialists.; Efficiency is critically low at 0.151 (only 5% of total fitness but severely underperforming). The main culprits: Harvester has energyConserve 0.4 (too low for high moveSpeed 0.85), Aesthetic Harvester combines high trailIntensity 0.85 with low energyConserve 0.45 (expensive beauty), and Persistence Hunter at 0.65 conservation can improve. Additionally, rhythm is 0.111 (very weak) suggesting irregular pulse patterns. Efficiency gains require reducing energy expenditure while preserving survival (0.875 is strong) and moderating beauty creation. Strategy: boost energyConserve on inefficient entities, moderate expensive trail creation, and stabilize pulseFrequency consistency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
