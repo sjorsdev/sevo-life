@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411582651",
+  "timestamp": "2026-04-05T17:53:02.651Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Survival pressure creates form diversity — energy scarcity forces morphological specialization. Unlock it by making feeding more reliable and movement cheaper.; Efficiency (0.523) is the critical bottleneck dragging down overall fitness. Two organisms died, indicating energy starvation. survivalRate depends on it (0.667 with 2 deaths). diversityOfForms (0.456) is also weak within beauty metrics. Solution: (1) Reduce energy waste by lowering moveSpeed and explorationDrive across all; (2) Improve resource gathering via higher resourceAttraction and lower harvestThreshold to feed before starvation; (3) Increase energyConserve to stretch scarcity; (4) Vary patternSymmetry and pulseFrequency across organisms to increase form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
