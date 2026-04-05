@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775392907607",
+  "timestamp": "2026-04-05T12:41:47.607Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency improves through aggressive low-threshold harvesting + energy conservation. Rhythm improves by making pulsing the default behavior, not opt-in.; Efficiency is critically low (0.146 → only 0.029 points of goal). This stems from harvestThreshold being too high — entities aren't gathering resources effectively despite 100% survival. Beauty is secondary weakness (0.558), driven primarily by missing rhythm (0.203) — pulseFrequency is near-zero. Strategy: (1) Lower harvestThreshold globally to capture marginal resources without increased movement cost. (2) Boost energyConserve to stretch collected resources further. (3) Increase pulseFrequency across variants to generate visual rhythm. (4) Nudge patternSymmetry upward for structural harmony.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
