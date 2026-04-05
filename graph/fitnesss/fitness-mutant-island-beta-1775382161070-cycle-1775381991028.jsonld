@@ -1,0 +1,19 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness-mutant-island-beta-1775382161070-cycle-1775381991028",
+  "timestamp": "2026-04-05T09:42:41.107Z",
+  "agent": "mutant-island-beta-1775382161070",
+  "eqs": 0.7,
+  "accuracy": 1,
+  "magnitude": 1,
+  "branchesExplored": 2,
+  "predictionError": 1,
+  "cycleId": "cycle-1775381991028",
+  "context": {
+    "fitness": 1,
+    "branches": 2,
+    "correct": 20,
+    "total": 20
+  }
+}
