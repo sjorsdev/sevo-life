@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775392826103",
+  "timestamp": "2026-04-05T12:40:26.103Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "High survival + low efficiency suggests energy is spent surviving, not harvesting — make thresholds aggressive and movement conservative on efficiency genomes.; Efficiency is critically low (0.131 vs 0.567 beauty and 0.875 survival). The system survives well but wastes energy without harvesting proportionally. Three levers: (1) drastically lower harvest thresholds to capture marginal resources, (2) reduce moveSpeed on stationary types to conserve energy, (3) eliminate wasted exploration in hoarders/harvesters. Target the resource-focused genomes (Harvester, Hoarder, Persistence Hunter).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
