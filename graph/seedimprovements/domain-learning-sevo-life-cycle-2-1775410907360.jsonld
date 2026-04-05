@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410907360",
+  "timestamp": "2026-04-05T17:41:47.361Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Efficiency and survival are the same problem: organisms burn energy finding/moving to resources. Reduce moveSpeed, increase resourceAttraction and energyConserve to compress energy/distance ratio.; Efficiency is critically low at 0.379 (weighted 0.2 of goal), and survival rate is weak at 0.667 (two organisms dead at young ages: IDs 0 age 342, 3 age 239). The survivors are energy-starved (ID 1 has only 2 energy left). Root cause: high movement cost relative to energy intake. Fix: reduce movement waste, increase resource-finding efficiency, prioritize energy conservation. Spatial composition beauty (0.3) also suggests organisms are scattered inefficiently — patterns are loose. Secondary gain from tighter energy budgets.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
