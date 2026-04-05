@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411743854",
+  "timestamp": "2026-04-05T17:55:43.854Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Low energy organisms outcompete via different morphologies when given resource parity; diversity emerges from survival pressure when efficiency is balanced.; diversityOfForms (0.457) is the lowest beauty metric, indicating morphological homogeneity. Simultaneously, efficiency (0.661) lags — organism 0 and 1 are energy-starved (5, 9 energy), and organism 3 died early (age 274). Strategy: (1) Increase resourceAttraction and harvestThreshold on low-energy organisms to balance energy acquisition, (2) reduce metabolic drag via energyConserve on all, (3) increase explorationDrive and pulseFrequency diversity to create varied movement/morphology styles, (4) boost patternSymmetry to improve spatial composition. This improves both diversity (via behavioral variation) and efficiency (via energy management).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
