@@ -1,0 +1,6 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Task",
+  "@id": "task:append-only-test-1",
+  "timestamp": "2026-04-05T10:06:39.635Z"
+}

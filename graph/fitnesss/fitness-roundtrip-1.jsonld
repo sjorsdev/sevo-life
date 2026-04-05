@@ -1,0 +1,7 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness:roundtrip-1",
+  "timestamp": "2026-04-05T10:06:39.634Z",
+  "eqs": 0.5
+}
