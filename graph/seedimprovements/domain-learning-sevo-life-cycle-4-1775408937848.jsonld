@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408937848",
+  "timestamp": "2026-04-05T17:08:57.848Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Beauty emerges from both group harmony (spatial clustering via attraction) and individual distinction (visual traits via trails and colors). Current genomes lack both.; Beauty is bottlenecked by spatial composition (0.3) and form diversity (0.427). Organisms cluster poorly and lack visual differentiation. Fix by: (1) increasing resourceAttraction and trailAttraction to create cohesive formations that improve spatial composition, (2) varying trailColor across organisms and amplifying trailIntensity to boost visual diversity. Target: spatialComposition → 0.6+, diversityOfForms → 0.6+, beautyScore → 0.75+",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
