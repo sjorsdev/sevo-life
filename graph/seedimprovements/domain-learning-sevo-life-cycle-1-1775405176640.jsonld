@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405176640",
+  "timestamp": "2026-04-05T16:06:16.640Z",
+  "observation": "Domain sevo-life (fitness 0.617) generated 2 insights",
+  "suggestion": "Overclustering + energy waste. Push exploration and conservation; trade flocking for efficiency.; Efficiency is critically low (0.572 vs target >0.7). spatialComposition (0.3) and diversityOfForms (0.457) are weak, indicating organisms cluster poorly and lack morphological variety. Primary fix: increase explorationDrive across population for spatial spread, increase energyConserve for efficiency, and vary patternSymmetry to boost form diversity. Organisms 1 and 5 are thriving (high energy) — push them as explorers. Organisms 3 and 4 struggle (energy 0, 35) — stabilize with conservative params.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
