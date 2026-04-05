@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413729521",
+  "timestamp": "2026-04-05T18:28:49.521Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Survival and efficiency are linked via energy scarcity — organisms die because they burn too much per tick and can't find resources fast enough. Focus on metabolic efficiency first.; Efficiency (0.404) is the critical bottleneck — it's dragging the fitness weighted sum despite decent beauty. Two organisms died young (272, 298 ticks) suggesting energy starvation. Survivors at max age show inconsistent energy (8→21), indicating metabolic stress. The payload-to-lifespan ratio is poor. Mutation targets: (1) reduce metabolic cost via lower drag and movement, (2) boost resource attraction to stabilize energy, (3) lower particle complexity for cheaper genomes, (4) increase energy conservation to buffer against scarcity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
