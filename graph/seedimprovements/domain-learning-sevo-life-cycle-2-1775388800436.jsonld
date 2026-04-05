@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775388800436",
+  "timestamp": "2026-04-05T11:33:20.436Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 12 insights",
+  "suggestion": "survival rate (0.5 weight) is the critical bottleneck. Entities dying too quickly.; new primary role. Ultra-conservative energy use + optimal harvest timing; higher harvestThreshold (0.2) prevents premature starvation; increased trailIntensity (0.8) + higher pulseFrequency (0.3); increased explorationDrive (0.65) to discover new resource patches.; moveSpeed reduced to 0.4 (minimize energy drain) while maintaining; patternSymmetry (0.85) + higher pulseFrequency (0.35) creates; moveSpeed (0.75) enables rapid discovery of new resources.; Spawn strategy adjusted for survival. More entities spawned with; Core decision loop unchanged but with improved genome diversity.; simulation runs with evolved genome strategies focused on survival; Output fitness metrics. Survival rate should improve significantly",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
