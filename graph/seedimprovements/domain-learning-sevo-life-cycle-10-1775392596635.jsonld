@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775392596635",
+  "timestamp": "2026-04-05T12:36:36.635Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy waste per movement step, not harvest success rate. Lower moveSpeed + higher energyConserve yields more sustainable foraging cycles.; Efficiency is critically weak (0.137 vs target 0.3+). Primary bottleneck: energy waste in movement and suboptimal harvest thresholds. Entity 1's harvestThreshold 0.04 means wasting movement on marginal resources. Entities 0,2,4 burn energy with high moveSpeed but low energyConserve. Secondary issue: rhythm is flat (0.236) due to inconsistent pulseFrequency. Increase energyConserve +0.12-0.15 across board, reduce moveSpeed for movement-heavy genomes, normalize harvestThreshold to 0.08-0.12 sweet spot, stabilize pulseFrequency toward 0.2.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
