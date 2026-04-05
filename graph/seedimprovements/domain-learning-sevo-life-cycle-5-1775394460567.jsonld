@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394460567",
+  "timestamp": "2026-04-05T13:07:40.567Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Energy budget misallocated to movement. Entities move 2–3× more than harvest efficiency justifies. Temporal patterns isolated—need coherent pulse synchronization.; Efficiency (0.145) is critically weak—worth 0.2 of total score but 5× below capacity. Root cause: genomes waste energy on excessive movement (moveSpeed 0.6–0.7) and aimless exploration relative to harvest gain. Secondary weakness: Rhythm (0.083) indicates poor temporal coherence—pulseFrequency too low or uncoordinated. Fix: (1) lower moveSpeed and explorationDrive, boost energyConserve to 0.8–0.92 to cut wasted motion; (2) raise pulseFrequency to 0.2–0.35 to create synchronized temporal patterns. Survival already strong (0.875)—these changes harvest dormant efficiency without sacrificing it.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
