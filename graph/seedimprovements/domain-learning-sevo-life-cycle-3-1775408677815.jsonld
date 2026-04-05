@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408677815",
+  "timestamp": "2026-04-05T17:04:37.815Z",
+  "observation": "Domain sevo-life (fitness 0.610) generated 2 insights",
+  "suggestion": "Energy starvation cascades: dead organisms exhausted reserves before finding stable resource patches. Efficient survival requires tighter coupling between motion cost and harvest rate.; Efficiency is the critical bottleneck at 0.525, weighted 20% in the goal. Two organisms died (likely energy starvation), and organism 4 is critically low on energy (11). The physics support well-formed beauty (0.786-0.909 across aesthetic metrics), so the mutation should focus on energy management and resource acquisition. Increase energyConserve to reduce wasteful movement, boost resourceAttraction for smarter foraging, and reduce moveSpeed slightly to cut baseline costs. Secondary: improve spatial diversity by varying explorationDrive and trailColor to boost both composition (0.528) and form diversity (0.456).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
