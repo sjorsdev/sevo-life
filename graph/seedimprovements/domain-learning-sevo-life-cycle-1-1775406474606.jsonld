@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406474606",
+  "timestamp": "2026-04-05T16:27:54.606Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Efficiency and spatial spread are energy problems: organisms wander too much finding resources and don't explore enough. Concentrate search, maximize foraging ROI, distribute population.; Efficiency (0.56) is the lowest absolute component despite 20% weight. Spatial composition (0.3) is critically weak — organisms are clustered. Diversity of forms (0.457) is below target. Root cause: high moveSpeed × low resourceAttraction creates energy waste during foraging; low explorationDrive concentrates organisms. Solution: increase energyConserve (reduce wasted motion), boost explorationDrive (spread across space), increase resourceAttraction (find food faster with less wandering), tune moveSpeed down slightly (efficiency over raw speed). This targets efficiency gains + spatial spread without sacrificing survival (already 0.833).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
