@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410818650",
+  "timestamp": "2026-04-05T17:40:18.650Z",
+  "observation": "Domain sevo-life (fitness 0.603) generated 2 insights",
+  "suggestion": "Energy starvation dominates — resource acquisition must improve before any beauty metrics matter. Diversity requires morphological specialization via parameter differentiation.; Survival rate at 0.5 is the critical bottleneck — organisms are dying from energy depletion. Three entities dead at ages 225-284; survivor entity 5 is critically low at 7 energy despite age 500. Root cause: efficiency 0.341 means poor resource gathering or excessive energy expenditure. Secondary weakness: spatialComposition 0.3 and diversityOfForms 0.456 — genomes cluster in behavior space instead of exploring distinct morphospace. Fix: (1) boost resourceAttraction and explorationDrive to improve resource hunting and energy sustainability, (2) increase energyConserve to stretch available resources further, (3) differentiate crawler/jellyfish parameter sets to create behavioral and visual diversity, increasing spatial spread. Expected gain: +0.15 survival, +0.12 efficiency, +0.08 spatial composition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
