@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412719213",
+  "timestamp": "2026-04-05T18:11:59.213Z",
+  "observation": "Domain sevo-life (fitness 0.618) generated 2 insights",
+  "suggestion": "Beauty and survival are decorations if the organism starves. Efficiency enables longevity.; Efficiency (0.35) is the critical bottleneck. Organisms survive (0.667) and look beautiful (0.742) but consume energy faster than they acquire it. Survival instinct + visual complexity are outrunning resource-gathering capability. Reduce metabolic drag (trail intensity, exploration) and increase resource-directed behavior (attraction, harvest efficiency). Even modest efficiency gains (0.35→0.50) would push overall fitness above 0.65.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
