@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408031913",
+  "timestamp": "2026-04-05T16:53:51.913Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Efficient organisms find energy sources before burning out; they don't roam randomly. Spatial composition improves when exploration is driven by gradient sensing, not uniform wandering.; Efficiency (0.473) is the lowest fitness component. Spatial composition (0.3) is critically weak. Both point to wasteful movement and poor resource-finding behavior. Target: reduce energy expenditure via conservation, improve spatial distribution via exploration and resource sensing, optimize harvesting thresholds.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
