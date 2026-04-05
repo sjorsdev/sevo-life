@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775390697198",
+  "timestamp": "2026-04-05T12:04:57.198Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Efficiency fails because entities explore and move too much relative to harvest value. Beauty creation is energy-expensive. Shift toward targeted movement over exploratory wandering.; Efficiency is critically weak at 0.135 (13.5%) vs survivalRate at 0.875. The problem: high movement costs without proportional gains. Entities 0, 3, 4, and 5 combine high moveSpeed (0.65) with exploration drives (0.5-0.8) that burn energy without sufficient resource capture. Entity 2's beauty aesthetic (trailIntensity 0.85, pulseFrequency 0.35) is also energy-expensive. Solution: reduce exploration overhead on movement-heavy entities, lower trail rendering costs on beauty-focused entities, and tighten the moveSpeed/energyConserve tradeoff.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
