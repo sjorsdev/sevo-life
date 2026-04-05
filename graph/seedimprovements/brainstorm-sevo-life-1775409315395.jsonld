@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775409315395",
+  "timestamp": "2026-04-05T17:15:15.395Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau reflects optimization saturation in three independent dimensions. Organisms have found local maxima for (survivalRate, beautyScore, efficiency) under fixed physics with fixed morphological substrate. Evolution is not broken — it succeeded too well at the assigned problem. Breakthrough requires either expanding the problem space (trajectory beauty, nervous system capabilities, social fitness) or fundamentally changing how organisms interact with evaluation (group-level vs. individual, temporal vs. static). Without new degrees of freedom, no mutation matters.; [medium] Add nervous system cell type with information-processing capability. Neurons can form networks within organisms, enabling response to multi-step sensory inputs, memory, and learned behavior patterns. Organism decision function can now query internal neural state. — Current organisms optimize fixed decision functions over static inputs. Neural substrates allow discovery of emergent decision strategies, deeper exploration of behavioral morphospace, and organisms that sense/respond to temporal patterns. Breaks plateau by opening new dimension of evolutionary search.; [easy] Expand beauty scoring to include trajectory beauty: score the growth path, not just endpoint. Reward smooth transitions, harmonic periodicity in growth, symmetrical unfolding patterns, recursive self-similarity during development. Weight trajectory beauty at 40% of total beauty score. — Current system scores static final forms. Most organisms have converged on similar endpoint solutions. Trajectory scoring forces organisms to be beautiful *while becoming*, opening entire new optimization landscape. Existing organisms can't score high on this dimension — immediate selection pressure for new strategies.; [hard] Introduce organism cooperation mechanic: allow organisms to influence each other's growth parameters (share nutrients, modulate neighbor growth rates), reproduce with genetic blending from two parents, and form multi-organism superstructures. Fitness is now group-level, not individual. — 430 cycles of single-organism optimization has saturated individual morphospace. Social/group fitness introduces completely new evolutionary game: how do populations self-organize? Cooperative strategies, division of labor, and emergent collective intelligence become selectable. Breaks plateau by shifting selection unit from organism to ecosystem.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
