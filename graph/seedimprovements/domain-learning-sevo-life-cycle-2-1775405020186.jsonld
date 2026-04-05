@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405020186",
+  "timestamp": "2026-04-05T16:03:40.186Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Organisms are robust survivors but energetically wasteful — conservation and focused harvesting unlock most remaining fitness; Efficiency is the critical bottleneck at 0.161 (8% of its potential 0.2 contribution), while survivalRate is already maxed. Every unit of efficiency improvement worth 0.2 points vs beautyScore's 0.3. Priority: reduce movement waste via energyConserve, cut unnecessary exploration, and optimize harvest efficiency. Secondary: boost symmetry (0.35) and rhythm (0.167) for beauty without energy cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
