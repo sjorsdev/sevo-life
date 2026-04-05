@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410444036",
+  "timestamp": "2026-04-05T17:34:04.036Z",
+  "observation": "Domain sevo-life (fitness 0.604) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy starvation during growth phase (ages 5-22 for crawlers, 5-25 for jellyfish). Reduce moveSpeed and pulseFrequency; increase resourceAttraction and energyConserve to keep energy reserves above harvest threshold.; Efficiency is critically weak (0.305) — dragging down overall fitness from potential 0.65+ to 0.514. Three organisms dead, survivors have low energy (8-29). Root cause: high energy burn relative to resource intake. Target: reduce movement cost, improve energy conservation, increase resource attraction. Secondary: boost diversity-of-forms via color differentiation and varied body structures.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
