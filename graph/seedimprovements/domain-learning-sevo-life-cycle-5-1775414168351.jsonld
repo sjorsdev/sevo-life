@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775414168351",
+  "timestamp": "2026-04-05T18:36:08.351Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is overhead, not behavior. Lower the baseline cost to survive; diversity bottleneck is uniformity — vary parameters across entities to break symmetry.; Efficiency is critically weak (0.431 vs 0.667 survival, 0.709 beauty). This is a metabolic problem — organisms are burning energy to maintain structure without sufficient return. Secondary issue: diversity of forms (0.456) and spatial composition (0.506) drag beauty down. Solution: (1) Reduce maintenance cost via higher energyConserve to let organisms accumulate energy buffer, (2) Increase resourceAttraction to find food faster and harvest more efficiently, (3) Vary trail colors and pattern symmetry across population to increase form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
