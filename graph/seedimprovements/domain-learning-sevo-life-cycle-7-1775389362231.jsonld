@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775389362231",
+  "timestamp": "2026-04-05T11:42:42.231Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 16 insights",
+  "suggestion": "Previous generation optimized efficiency but compromised survival rate.; reduced moveSpeed to 0.75 to conserve energy during search, improved survivalRate; increased energyConserve from 0.8 to 0.85, raised harvestThreshold from 0.05 to 0.08; increased trailIntensity to 0.9 and patternSymmetry to 0.8 for higher beautyScore,; new focus: balance all three fitness components. Moderate in all dimensions; kept moveSpeed at 0.75 but increased energyConserve to 0.7,; raised harvestThreshold from 0.06 to 0.09 to reduce risk of starvation death,; new genome for beautyScore improvement. High pulseFrequency (0.4) and patternSymmetry (0.85); new strategy: high explorationDrive (0.7) with survival safeguards.; Refined decision function with survival priority; Emergency energy check prevents death spiral from over-harvesting.; Standard decision making with genome-driven behavior; Enhanced metrics tracking for fitness computation; Compute fitness metrics from simulation result; beautyScore derived from trail diversity and pattern emergence; efficiency measured by resources harvested per energy spent",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
