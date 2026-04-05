@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v29",
+  "timestamp": "2026-04-05T09:45:29.393Z",
+  "version": 29,
+  "parent": "benchmark-v28",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v29) extending v28 by adding: (1) Dynamic Reconfiguration Under Byzantine Attack—agents must implement safe membership changes while Byzantine faults occur, proving that quorum overlap is maintained across all reconfigurations and that no two branches of the state machine can diverge; (2) Speculative Execution with Byzantine-Safe Rollback—agents must speculatively execute commands under optimistic timing assumptions but provably roll back to safe state if synchrony breaks, with formal specification of all rollback invariants; (3) Formal Liveness Proof Under Partial Asynchrony—agents must provide explicit proof that progress is guaranteed when f < n/3 Byzantine faults even if all timing assumptions fail temporarily, using eventual synchrony model; (4) Cross-Instance Consensus Consistency—agents must maintain Byzantine consistency across multiple parallel consensus instances (sharded state), proving that no two instances can commit conflicting updates; (5) Adaptive Byzantine Fault Detection—agents must detect actual number of Byzantine faults at runtime and adjust quorum sizes (2f+1) dynamically, maintaining safety across all transitions; (6) Leader Election via Verifiable Random Function—replace deterministic leader rotation with VRF-based sortition with formal proof of leader uniqueness and unpredictability.",
+  "scoringLogic": "reconfigurationSafetyAndQuorumOverlap(0.16) + speculativeRollbackFormalInvariants(0.16) + livenesProofUnderAsyncFormalRigor(0.16) + crossInstanceConsistencyFormalProof(0.15) + adaptiveFaultDetectionCorrectness(0.15) + vrfLeaderElectionUniquenessProof(0.12)",
+  "difficulty": 29,
+  "passThreshold": 0.95
+}
