@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407164728",
+  "timestamp": "2026-04-05T16:39:24.728Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Energy starvation prevents exploration—unlock resource surplus first, then genetic diversity will emerge as organisms compete with energy buffer.; Efficiency (0.463) is the critical bottleneck—only 0.0926 contribution to overall fitness yet severely underperforming. Organisms reach age 500 with near-zero energy, indicating poor resource acquisition (despite low survival cost) and/or excessive movement waste. Diversity of forms (0.457) is equally weak, suggesting genomes fail to explore distinct morphologies. Root causes: (1) low resourceAttraction makes organisms miss harvestable resources, (2) untuned harvestThreshold wastes energy gathering, (3) moveSpeed unconstrained burns reserves. Solution: boost resourceAttraction globally to enable energy surplus, increase energyConserve to reduce waste, lower moveSpeed to preserve reserves, raise explorationDrive and patternSymmetry variance across genomes to break morphological convergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
