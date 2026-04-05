@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408769164",
+  "timestamp": "2026-04-05T17:06:09.164Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Smaller, slower, energy-conservative organisms outlive complex builders — evolution favors efficiency over complexity at current parameters.; Efficiency is critically weak at 0.363, dragging overall fitness. Organisms with 13 particles die by age ~250 while 8-particle variants survive to 500. This indicates complexity overhead exceeds energy gain. Dead organisms (0,3) grew too large too fast. Survivors (2,5 with 8 particles) conserve energy better. Solution: reduce movement cost, increase energy conservation, lower growth aggressiveness. Secondary issue: spatial composition (0.3) suggests organisms cluster poorly — improve with better pattern symmetry and resource attraction balance.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
