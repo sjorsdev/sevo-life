@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775389251103",
+  "timestamp": "2026-04-05T11:40:51.103Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 9 insights",
+  "suggestion": "survivalRate (50% weight) is primary fitness driver. Previous version's aggressive; moved from moveSpeed 0.85 to 0.65 to reduce energy burn rate while maintaining resource drive; kept low threshold (0.05) but increased moveSpeed from 0.4 to 0.5 for better resource discovery; increased trailIntensity to 0.9 and pulseFrequency to 0.35 to drive beauty emergence; raised energyConserve from 0.55 to 0.62 to improve survival baseline; reduced moveSpeed from 0.75 to 0.68 to lower energy drain while keeping exploration high; increased moveSpeed from 0.35 to 0.45 to improve survival (find resources faster); new role focused on beauty emergence. High trail intensity (0.92) + high pattern symmetry (0.85); moderate across board with slight tilt toward conservation (energyConserve 0.63)",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
