@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412569362",
+  "timestamp": "2026-04-05T18:09:29.362Z",
+  "observation": "Domain sevo-life (fitness 0.628) generated 2 insights",
+  "suggestion": "Large, mobile organisms in particle sims pay quadratic energy costs. Efficiency jumps when size and movement optimize for the actual resource density. Smaller, more conservative genomes should outcompete wasteful ones.; Efficiency at 0.237 is critically dragging overall fitness. With 3 of 6 organisms dead and alive ones holding high energy, the system wastes energy on size/movement not converted to survival gains. Beauty is strong (0.726), survival is moderate (0.5), but the efficiency bottleneck caps fitness at 0.535. Strategy: reduce metabolic overhead (smaller particles, less movement energy), increase energy conservation rates, and tighten resource-seeking thresholds so organisms don't waste cycles on expensive behaviors that don't improve survival. This also addresses low diversityOfForms (0.456) by allowing leaner variants to survive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
