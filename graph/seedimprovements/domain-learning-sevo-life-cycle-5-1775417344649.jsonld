@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775417344649",
+  "timestamp": "2026-04-05T19:29:04.649Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Efficiency breaks when exploration cost > foraging gain. Spread first, then optimize energy per organism.; Efficiency (0.465) is the primary drag on fitness—a 23% gap from beautyScore. Compounded by spatialComposition (0.3, worst component) and diversityOfForms (0.456), organisms cluster inefficiently and waste energy. Survival depends on reducing per-organism energy overhead while increasing spatial spread. Strategy: boost moveSpeed and explorationDrive to force organisms away from birth cluster (improves spatialComposition); increase energyConserve and harvestThreshold to stop frivolous trail-laying and movement; boost resourceAttraction so energy expenditure pays off in food acquisition. Three organisms died at age ~270; better exploration + conservation extends lifespan and improves diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
