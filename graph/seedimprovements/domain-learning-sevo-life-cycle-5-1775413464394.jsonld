@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413464394",
+  "timestamp": "2026-04-05T18:24:24.394Z",
+  "observation": "Domain sevo-life (fitness 0.604) generated 2 insights",
+  "suggestion": "Efficiency crashes when entities explore randomly instead of targeting resources; diversity requires intentional morphological divergence, not convergence.; Efficiency is critically low at 0.411 (40% below target). Organism 3 died at age 225, indicating resource/movement management failure. Diversity of Forms is weak at 0.457, suggesting organisms are morphologically similar. Primary issue: excessive energy expenditure on movement relative to resource gain. Secondary issue: insufficient morphological variation. Strategy: (1) Reduce moveSpeed and explorationDrive to lower energy burn, (2) Increase resourceAttraction for more directed (efficient) foraging, (3) Increase patternSymmetry and vary trailColor across entities to boost diversity metric.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
