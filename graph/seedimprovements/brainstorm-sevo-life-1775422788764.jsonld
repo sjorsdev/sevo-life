@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775422788764",
+  "timestamp": "2026-04-05T20:59:48.764Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau at fitness=0.000 is a degenerate equilibrium: evolution found a fixed-point solution (static form, zero reproductive pressure, minimal energy expense) that the fitness function cannot distinguish from or improve beyond. The system optimized away all selection pressure. Structural change must reintroduce *perpetual* asymmetry—either through forced interaction (predators), environmental change (plasticity), or goal expansion (temporal beauty). A fitness landscape with no local optima is one where evolution never stops.; [medium] Introduce predator-prey coevolution: split organisms into two types with opposing fitness functions (predators score on capture efficiency + elegance of pursuit; prey score on evasion artistry + survival). Create explicit interaction-based arms race. — Current plateau suggests organisms evolved in isolation toward dead-end optima. Forced adversarial interaction creates perpetual selection pressure—no two-strategy system can simultaneously maximize both escape and pursuit. Arms race dynamics prevent convergence. Beauty expression shifts from static form to dynamic dance.; [medium] Add phenotypic plasticity: organism morphology and behavior respond to environmental state (nutrient gradients, temperature, light cycles). Let environment vary on longer timescales. Organisms gain fitness by expressing different beautiful forms in different contexts. — Fitness=0 suggests organisms may have converged to a single 'perfect' static form that the function can't improve further. Plasticity expands strategy space from one fixed morphology to many context-dependent ones. Organisms that are beautifully adaptive (not just beautiful) create new evolutionary dimensions. Environment forcing prevents stagnation.; [hard] Replace static beauty scoring with temporal beauty: fitness rewards sequences of morphological states (metamorphosis, growth patterns, rhythmic movement) rather than final form. Organisms gain points for *transitions* between aesthetically pleasing states, not just being beautiful at one moment. — 0.3 weight on beauty but organisms may have found a local form that plateaus. Temporal scoring makes evolution an infinite game—organisms can keep inventing new beautiful sequences even after form converges. Also breaks symmetry of selection: organisms in chaotic chase (predator model above) can express beauty through movement sequences.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
