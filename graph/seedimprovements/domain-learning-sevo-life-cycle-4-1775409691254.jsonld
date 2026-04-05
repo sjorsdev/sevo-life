@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409691254",
+  "timestamp": "2026-04-05T17:21:31.254Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Efficiency collapse from resource starvation — organisms need to find food faster and spend less energy on structure maintenance.; Efficiency is the weakest component at 0.537 (lowest absolute score and 0.2 weight in goal). Spatial composition is critically low at 0.3, indicating organisms are too compact and not utilizing available space. Root causes: organisms are energy-starved (some have 1 energy despite 500-step lifespan), suggesting either high metabolic cost or poor resource gathering. High springStiffness + drag wastes energy maintaining form. Solution: boost energy conservation, increase resource/trail attraction to gather more food, reduce structural overhead cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
