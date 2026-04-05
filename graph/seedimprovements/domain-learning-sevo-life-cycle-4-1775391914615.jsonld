@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775391914615",
+  "timestamp": "2026-04-05T12:25:14.615Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Energy cost >> energy gain. Slow, persistent entities with high conservation beat fast explorers.; Efficiency is critically weak at 0.126, dragging overall fitness to 0.632. This is the primary bottleneck—even small improvements here yield +0.02 to overall score. Root cause: moveSpeed and pulseFrequency are energy-expensive relative to resource gains. Strategy: globally reduce movement cost, increase metabolic efficiency, lower energy-wasteful pulsing in utility-focused genomes. Keep high trail intensity only in aesthetic entities. Survival rate (0.875) is strong—preserve it by keeping harvest thresholds conservative.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
