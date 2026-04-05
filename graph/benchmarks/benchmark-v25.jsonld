@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v25",
+  "timestamp": "2026-04-05T09:26:49.288Z",
+  "version": 25,
+  "parent": "benchmark-v24",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v25) extending v24 with: (1) Asynchronous Byzantine Atomic Broadcast—consensus alone is insufficient; agents must implement full atomic broadcast with strict ordering guarantees, where all honest replicas deliver the same sequence of messages in the same order, even under f < n/3 Byzantine faults and asynchronous (unbounded delay) conditions; prove safety and liveness under adaptive-adversary model where Byzantine nodes see all honest messages before responding; machine-checkable Coq proof with no admitted tactics; (2) Dynamic Validator Reconfiguration—prove protocol safety and liveness across configuration changes where the validator set evolves over time; prove that reconfiguration commits atomically before use and that all safe transitions maintain Byzantine resilience; Coq proof required; (3) Sub-Quadratic Message Complexity Under Threshold Cryptography—prove message complexity is O(n log n) or better in f-free rounds under threshold signature scheme (TSS); provide formal analysis of Byzantine-resilient TSS instantiation; (4) View-Change Liveness Under Adversarial Leader Rotation—prove liveness of view-change mechanism where adaptive adversary schedules message delays to maximize time-to-liveness; provide explicit bound on number of view changes needed to achieve consensus under the given adversary model; (5) Formal Cryptographic Correctness—formalize and prove correctness of threshold signature operations: generation, signing, and verification; prove Byzantine nodes cannot forge valid threshold signatures; prove that adaptive adversary cannot predict or control leader election via VRF even with knowledge of all honest state; (6) Byzantine-Resilient Consensus Under Network Partition Healing—prove that when a partition heals, consensus safely recovers without equivocation; prove all honest replicas can resume atomic broadcast in the original validator set without re-delivering already-delivered messages; Coq proof required.",
+  "scoringLogic": "atomicBroadcastSafetyProof(0.18) + dynamicReconfigurationCorrectness(0.16) + subQuadraticComplexityProof(0.15) + viewChangeLivenessUnderAdversary(0.15) + cryptographicCorrectnessFormal(0.18) + partitionHealingConsensusProof(0.12) + overallCoqProofQuality(0.06)",
+  "difficulty": 25,
+  "passThreshold": 0.95
+}
