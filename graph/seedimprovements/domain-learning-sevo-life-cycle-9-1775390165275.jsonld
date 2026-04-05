@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775390165275",
+  "timestamp": "2026-04-05T11:56:05.275Z",
+  "observation": "Domain sevo-life (fitness 0.691) generated 2 insights",
+  "suggestion": "Energy budget is zero-sum. Speed trades against endurance. Beings need less movement if they exploit local resources better + sync behavior rhythmically.; Efficiency is critically weak at 0.134 (contributes only 0.027 to fitness). Root cause: high-speed beings (Harvester, Persistence Hunter) burn energy through excessive movement+exploration. Also, rhythm metric is weak (0.321), suggesting low pulseFrequency limits visual pattern emergence. Strategy: (1) reduce moveSpeed on energy-intensive beings to lower baseline expenditure, (2) increase pulseFrequency across beings to improve rhythm/beauty rhythm synchronization. Efficiency gains cascade: slower, more targeted movement + lower energy waste = higher net harvest efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
