@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405295331",
+  "timestamp": "2026-04-05T16:08:15.331Z",
+  "observation": "Domain sevo-life (fitness 0.652) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is behavioral (conservative movement), not structural—organisms are energy-rich but underutilized.; Efficiency is critically weak (0.428) and directly suppresses fitness by 0.2 weight. The constraint is likely energy-per-lifespan or movement-per-particle. Secondary weakness: spatialComposition (0.3) indicates organisms cluster poorly. Organisms maintain high survival but waste energy inefficiently. Solution: reduce energyConserve (they're overly cautious), increase moveSpeed (explore more actively), increase explorationDrive (break clustering patterns). This trades some energy cost for better spatial distribution and discovery efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
