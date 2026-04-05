@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406708098",
+  "timestamp": "2026-04-05T16:31:48.098Z",
+  "observation": "Domain sevo-life (fitness 0.628) generated 2 insights",
+  "suggestion": "Efficiency scales linearly with survival benefit; even small gains here unlock sustained population growth.; Efficiency is the critical bottleneck (0.359 vs 0.667 survival, 0.658 beauty). Organisms bleed energy even when barely moving. Spatial composition (0.3) shows poor world utilization — entities cluster rather than explore. Fix: increase energy conservation, reduce wasteful movement, boost exploration drive for better spatial distribution.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
