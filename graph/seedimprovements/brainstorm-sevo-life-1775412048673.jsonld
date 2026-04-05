@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775412048673",
+  "timestamp": "2026-04-05T18:00:48.673Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Evolution is stuck because the search space under current rules has been exhausted. Parameter tuning hit the boundary of the landscape. To escape: (1) expand dimensionality (temporal beauty), (2) remove competing constraints (life stages), (3) add feedback dynamics that create moving targets (environment interaction). The plateau is not because organisms are optimized — it's because the rules stopped changing. Change the rules.; [medium] Add Resonance Cell type — cells that oscillate and create harmonic patterns, including a temporal beauty dimension (animation score: how well organisms change/pulse over time) — Current beauty metric likely evaluates static shape/color — evolution converged to stable configurations. Temporal beauty is infinite (no best animation, only unexplored parameter spaces). Organisms that create waves, pulsing patterns, and synchronized oscillations unlock new niches. Opens new optimization directions: frequency, phase, amplitude, harmonic complexity.; [medium] Introduce life stage asymmetry — organisms have Larva phase (mobile, simple, high reproduction, low beauty cost) → Adult phase (immobile, complex, high beauty potential, low reproduction). Fitness evaluated on adult form only. — Plateau occurs because evolution is forced to optimize all three metrics (survival, beauty, efficiency) simultaneously with same cell budget. Life stages decouple: larvae maximize survival/efficiency, adults can specialize in beauty without reproduction pressure. Unlocks morphological complexity that was blocked by survival constraints.; [hard] Implement Environmental Pigment System — organisms can release colored particles that spread through world (Poisson diffusion), affecting light absorption and organism visibility. Beauty reward includes 'environmental chromatic harmony' — how well organism color scheme complements the pigment patterns it creates around itself. — Currently world is static, organisms optimize in isolation. Pigment creates feedback loop: organisms modify their environment, which then shifts selection pressure on all nearby organisms. This prevents global convergence — your environment becomes your niche. New strategy space: cooperation (organisms create complementary pigments), arms races (predators evolve pigments that hide their presence).",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
