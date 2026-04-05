@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406770353",
+  "timestamp": "2026-04-05T16:32:50.353Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Evolution is spending energy on form beauty at the cost of survival—flip the priority to energy efficiency, beauty becomes emergent property of healthy populations.; Efficiency is critically low (0.275) despite good beauty (0.729). Organisms have poor energy levels (most survivors under 30 energy) and 66% are dead, suggesting they waste energy on movement/flocking while failing to gather resources. High explorationDrive causes wasteful random behavior. Low resourceAttraction means organisms ignore food sources. By increasing resource-seeking aggression and reducing wasted exploration, efficiency gains compound into better survival, feeding the beautyScore further.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
