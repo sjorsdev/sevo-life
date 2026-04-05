@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775388765318",
+  "timestamp": "2026-04-05T11:32:45.318Z",
+  "observation": "Domain sevo-life (fitness 0.695) generated 12 insights",
+  "suggestion": "fitness 0.695 indicates balance problem, not pure efficiency. Testing shows:; trailColor + patternSymmetry create visual clusters that signal resources to others; shifted paradigm: aggressive harvest kills fast, sustainable harvest creates visible legacy; movement cost limits entities. Stationary entities create denser patterns = higher beauty delta; exploration finds resource clusters, then settles. High attraction to trails = leverages others' discovery; pulse patterns are more visually striking than continuous trails. Same efficiency, better beauty signal; mathematical beauty (symmetry) is measurable and preferred. Lower movement enables it.; trail attraction was underweighted. Entities should cluster, amplify beauty signal; stationary strategy requires patience (high harvestThreshold to avoid false positives); decision logic now prioritizes survival first (energy management); only explore when energy sufficient. This prevents death spirals.; fitness improvement comes from survival synergy, not raw efficiency numbers",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
