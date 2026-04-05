@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410635522",
+  "timestamp": "2026-04-05T17:37:15.522Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Organisms cluster inefficiently (spatialComposition 0.3) and burn energy too fast (survivalRate 0.667). Force beautiful spacing via resource-seeking + avoidance, not flocking.; spatialComposition is critically weak (0.3 vs. 0.6+ for other metrics), indicating organisms cluster poorly and waste visual space. diversityOfForms at 0.474 is secondary weak point. Two organisms died (IDs 0, 4), suggesting energy starvation despite 500-step runs. Root cause: insufficient resource seeking and poor energy conservation. Mutations: increase resourceAttraction (0.75-0.85) to force spatial spreading and competition for distributed resources; increase avoidanceRadius (0.65-0.75) to prevent dense clustering; increase energyConserve (0.7-0.8) to prevent deaths; vary patternSymmetry and trailColor across genomes for morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
