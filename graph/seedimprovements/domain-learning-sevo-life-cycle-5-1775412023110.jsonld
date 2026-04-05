@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412023110",
+  "timestamp": "2026-04-05T18:00:23.110Z",
+  "observation": "Domain sevo-life (fitness 0.613) generated 2 insights",
+  "suggestion": "Organisms are starving slowly. They move too much, find resources inefficiently, and burn energy faster than they harvest. Energy conservation is the lever.; Survival rate (0.667) is the bottleneck — lowest of three components but highest weight (0.5x). Four of six organisms are dead, and living ones show depleted energy reserves. Low efficiency (0.467) compounds the problem: organisms waste energy moving and gathering. Target: boost resourceAttraction to help organisms find food, increase energyConserve to reduce metabolic waste, lower moveSpeed to prevent burnout. Secondary: diversityOfForms (0.456) is weak — increase explorationDrive to encourage morphological variety. This targets the selection criteria directly.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
