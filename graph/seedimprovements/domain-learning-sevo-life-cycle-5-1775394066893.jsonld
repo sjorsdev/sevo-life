@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394066893",
+  "timestamp": "2026-04-05T13:01:06.893Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Energy waste and lack of temporal rhythm cripple fitness. Global increases to energyConserve (+0.15-0.25) and pulseFrequency (+0.15-0.25) address the two weakest metrics directly.; Efficiency (0.146) is the critical bottleneck dragging down overall fitness. Secondary issue: rhythm (0.095) is extremely weak. Root causes: (1) energyConserve values too low across population — most entities waste energy on movement. Harvester has 0.25, Balanced has 0.4; these need 0.5-0.65 to minimize waste. (2) pulseFrequency critically undertuned — most entities pulse at 0.1-0.18, creating no temporal rhythm. Raising to 0.25-0.4 creates visual pattern that beauty scorer rewards. Coverage (0.388) also weak — boost explorationDrive on spatial entities.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
