@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775394268917",
+  "timestamp": "2026-04-05T13:04:28.917Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Lower harvest threshold ≠ higher efficiency. Beings waste energy checking and harvesting marginal resources. Raise threshold to filter for richer patches, reduce wasted energy cycles.; Efficiency is critically low at 0.149, dragging down overall fitness despite perfect survivalRate. Analysis: harvestThreshold across all genomes is too aggressive (0.08-0.15). Beings are harvesting at minimal resource concentrations, wasting energy on marginal gains. This creates high energy-to-reward friction. Solution: raise harvestThreshold to force beings to seek richer patches before harvesting, reducing decision cycles and movement without payoff. Also reduce explorationDrive in high-wandering genomes (Harvester and Persistence Hunter) — undirected exploration burns energy. Expected impact: efficiency should improve 40-60% with better energy ROI per harvest.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
