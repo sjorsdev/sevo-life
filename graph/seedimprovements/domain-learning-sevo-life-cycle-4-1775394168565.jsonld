@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775394168565",
+  "timestamp": "2026-04-05T13:02:48.565Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "High moveSpeed + high explorationDrive + low energyConserve = energy hemorrhage despite full survival. Efficiency scales with conservation, not motion.; Efficiency is catastrophically weak at 0.15, dragging the composite fitness down despite perfect survival. This indicates entities are burning excessive energy relative to harvest gains. The bottleneck: moveSpeed and explorationDrive are too high (aggressive explorers waste energy), and energyConserve is too low (baseline waste is high). With perfect survivalRate, the problem is not death but energy leakage. Reduce mobility costs and exploration waste; increase conservation efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
