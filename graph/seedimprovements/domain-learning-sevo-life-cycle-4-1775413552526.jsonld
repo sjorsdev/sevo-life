@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413552526",
+  "timestamp": "2026-04-05T18:25:52.526Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is spatial starvation + poor resource-seeking. High moveSpeed + explorationDrive + resourceAttraction fixes both.; Efficiency (0.608) is the critical bottleneck, dragging overall fitness from potential 0.75+. Root causes: (1) spatialComposition score 0.3 indicates organisms cluster rather than explore globally—low moveSpeed and explorationDrive. (2) Energy distribution shows starvation: organism 0 at 2 energy, organism 4 at 11—weak resourceAttraction lets rich patches go unharvested. (3) Organism 3 died at age 268 (46% lifespan loss)—energyConserve too low. Survival rate is strong (0.833); beauty metrics stable except spatial. The mutation target: unlock spatial exploration and resource-seeking to raise efficiency above 0.75, which cascades to overall fitness 0.72+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
