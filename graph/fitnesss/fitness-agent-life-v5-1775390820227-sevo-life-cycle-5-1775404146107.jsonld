@@ -1,0 +1,60 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness-agent-life-v5-1775390820227-sevo-life-cycle-5-1775404146107",
+  "timestamp": "2026-04-05T15:49:08.549Z",
+  "agent": "agent:life-v5-1775390820227",
+  "eqs": 0.25684,
+  "accuracy": 1,
+  "magnitude": 0.07699999999999996,
+  "branchesExplored": 5,
+  "predictionError": 1,
+  "cycleId": "sevo-life-cycle-5-1775404146107",
+  "context": {
+    "fitness": 0.619,
+    "branches": 5,
+    "survivalRate": 0.8,
+    "beautyScore": 0.787,
+    "ecosystemDiversity": 0.11,
+    "efficiency": 0.062,
+    "avgBodySize": 6.5,
+    "avgAge": 268,
+    "organisms": [
+      {
+        "id": 0,
+        "survived": false,
+        "cells": 5,
+        "beauty": 0.753,
+        "formSymmetry": 1
+      },
+      {
+        "id": 1,
+        "survived": true,
+        "cells": 6,
+        "beauty": 0.791,
+        "formSymmetry": 1
+      },
+      {
+        "id": 2,
+        "survived": true,
+        "cells": 7,
+        "beauty": 0.777,
+        "formSymmetry": 1
+      },
+      {
+        "id": 3,
+        "survived": true,
+        "cells": 7,
+        "beauty": 0.789,
+        "formSymmetry": 1
+      },
+      {
+        "id": 4,
+        "survived": true,
+        "cells": 6,
+        "beauty": 0.791,
+        "formSymmetry": 1
+      }
+    ]
+  }
+}
