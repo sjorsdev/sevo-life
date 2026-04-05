@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775395194427",
+  "timestamp": "2026-04-05T13:19:54.427Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Rhythm is efficiency—temporally structured pulsing reduces wasted motion and emergent beauty simultaneously.; Efficiency is critically weak at 0.149 (dragging down 20% of goal), and rhythm at 0.26 indicates poor temporal structure. Root cause: entities move too fast relative to harvest capture and lack rhythmic pulsing. High moveSpeed (0.75–0.85) with moderate harvestThreshold creates energy waste through constant exploration. Solution: reduce moveSpeed for high-speed roles; increase pulseFrequency across board to create rhythmic patterns that improve both rhythm metric AND coverage (patterns become temporally coherent, reducing redundant motion). Pattern-based movement is more efficient than random wandering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
