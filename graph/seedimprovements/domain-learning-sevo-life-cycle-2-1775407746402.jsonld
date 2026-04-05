@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407746402",
+  "timestamp": "2026-04-05T16:49:06.402Z",
+  "observation": "Domain sevo-life (fitness 0.534) generated 2 insights",
+  "suggestion": "Weak efficiency signals overconsumption; spatial composition collapses when exploration is absent. High-energy organisms (2,5) are resource-abundant but spatially clustered—redirect into exploration. Low-energy organisms (1,4) are conservation-starved—boost energyConserve. Increase frequency/symmetry variance to prevent convergence.; Efficiency is the critical bottleneck (0.534 vs 0.667+ for survival/beauty). This stems from high energy waste despite reasonable survival. Secondary issues: spatialComposition (0.3) and diversityOfForms (0.456) both weak. Root causes: (1) organisms move inefficiently without energy conservation, (2) exploration too conservative so no spatial spread, (3) morphological diversity too homogeneous. Target: boost energyConserve and explorationDrive globally; reduce moveSpeed for energy-wasters; vary patternSymmetry and pulseFrequency across organisms to break symmetry and create niche differentiation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
