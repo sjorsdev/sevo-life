@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775390137711",
+  "timestamp": "2026-04-05T11:55:37.711Z",
+  "observation": "Domain sevo-life (fitness 0.690) generated 2 insights",
+  "suggestion": "Efficiency and rhythm are decoupled problems: entities are moving too much (waste) and pulsing too little (invisibility). Fix both orthogonally.; Efficiency (0.14) is critically low and dragging down total fitness despite strong survival. Rhythm (0.078) is nearly zero, indicating pulseFrequency values are globally too low. Primary fixes: (1) reduce energy waste via lower moveSpeed on fast-moving harvesters and higher energyConserve, (2) dramatically increase pulseFrequency to establish visible rhythmic patterns. Efficiency boost alone improves 0.2-weighted component from 0.14→0.35+ (delta ~0.04 to total fitness). Rhythm boost brings beautyScore up to unlock more complex patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
