@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775417234236",
+  "timestamp": "2026-04-05T19:27:14.236Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau signals that evolution has saturated the current design space. Homogeneous organisms + static world + single decision architecture converge to one or few dominant solutions. Breakthrough requires structural expansion: more body complexity (specialization), more selection pressure (temporal dynamics), or more strategic degrees of freedom (modular behavior). Without these, parameter tuning cannot help—the landscape itself is exhausted.; [medium] Introduce cell specialization and obligate colony structures — Current system likely treats all cells identically, capping body complexity. Allow cells to differentiate into specialist types (sensory, energetic, structural, reproductive) with different costs and capabilities. Organisms become multi-cell colonies where coordination is required. This explodes the morphospace available to evolution and creates selection for emergent properties (distributed sensing, efficient organization, division of labor) that directly feed beauty scoring. Single-strategy organisms cannot outcompete coordinated colonies.; [easy] Add temporal world dynamics: seasonal resource shifts, dynamic environmental gradients — Static homogeneous world = static fitness landscape = convergence. Current plateau likely reflects organisms finding the single dominant solution for invariant conditions. Introduce time-varying resource availability, temperature zones, or predator/prey cycles that shift every N cycles. Organisms must evolve tracking solutions, bet-hedging, and niche specialization. The fitness landscape becomes a moving target—plateau breaks because there is no global optimum, only adaptive tracking.; [medium] Replace monolithic decision function with modular behavioral subsystems and context-switching — Single neural net or rule function can get stuck in one attractor state. Add discrete behavioral modules (hunt, mate, flee, explore, rest) that organisms can wire together and switch between based on internal state/sensory input. This enables qualitatively different strategies (territorial vs. nomadic, social vs. solitary, aggressive vs. cryptic) without requiring massive architectural rewiring. Modularity breaks local optima by allowing organisms to interpolate between behavioral styles.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
