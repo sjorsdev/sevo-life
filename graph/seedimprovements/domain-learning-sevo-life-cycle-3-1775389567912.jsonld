@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775389567912",
+  "timestamp": "2026-04-05T11:46:07.912Z",
+  "observation": "Domain sevo-life (fitness 0.696) generated 15 insights",
+  "suggestion": "survival rate has 50% weight in fitness — previous versions under-optimized for lifespan.; high energyConserve (0.9) + moderate harvest (0.15) = reliable, long-lived entity; balanced harvestThreshold (0.12) with energyConserve (0.75) extends lifespan; high patternSymmetry (0.8) + high pulseFrequency (0.35) generates emergent; very high trailAttraction (0.5) + moderate speed (0.5) causes clustering; moderate speed (0.65) + high energyConserve (0.82) + strong explorationDrive (0.6); moveSpeed 0.35 + energyConserve 0.92 + moderate harvest (0.14) creates; moderate speed (0.6) + high pulseFrequency (0.4) + patternSymmetry (0.9); low moveSpeed (0.32) + very high resourceAttraction (0.95) + low trailAttraction (-0.2); Decision function now prioritizes survival-compatible behaviors.; survival priority — find resources to extend lifespan.; secondary priority — move toward friendly trails for clustering/beauty.; explore for undiscovered resources, but conservatively.; trail drawing now tied to survival state.; slightly more entities to sustain population via longer lifespans",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
