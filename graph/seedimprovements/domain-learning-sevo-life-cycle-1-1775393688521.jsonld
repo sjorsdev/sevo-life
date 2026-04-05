@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775393688521",
+  "timestamp": "2026-04-05T12:54:48.521Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Movement is the primary energy sink. Lower speed + higher conservation outpaces marginal resource-finding cost; rhythm requires consistent pulsing, not sporadic.; Efficiency is critically weak (0.143), dragging overall fitness. survivalRate is solid (0.875) but efficiency accounts for 20% of goal weight. The bottleneck is energy burn: most genomes have moveSpeed 0.7+ (expensive) and energyConserve too low (0.25-0.6). Secondary issue: rhythm is extremely weak (0.099) — pulseFrequency too low across all genomes. Strategy: reduce moveSpeed 15-20%, increase energyConserve 10-15%, boost pulseFrequency for rhythm emergence. This preserves resource-seeking (high attraction) while cutting waste.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
