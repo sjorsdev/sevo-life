@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409785998",
+  "timestamp": "2026-04-05T17:23:05.998Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Dying organisms depleted energy through exploration-driven movement before reaching resource density. Shift strategy: less wandering, more targeted feeding, higher conservation.; Efficiency is critically weak (0.385 vs 0.667 survival, 0.788 beauty). Two organisms died early (age 225 vs 500 max), suggesting energy depletion. High-energy survivors (entities 1, 5: 14-30 energy) outperform low-energy ones (entity 4: 8 energy). The bottleneck is wasteful movement and unfocused foraging. Increase energyConserve to preserve resources, decrease explorationDrive to reduce aimless wandering, and increase resourceAttraction for targeted foraging. Beauty is already strong (0.788) — protect it by maintaining trailIntensity and patternSymmetry.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
