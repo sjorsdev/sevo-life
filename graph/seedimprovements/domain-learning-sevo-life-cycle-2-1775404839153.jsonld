@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775404839153",
+  "timestamp": "2026-04-05T16:00:39.153Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 2 insights",
+  "suggestion": "Organisms survive perfectly but waste energy—rhythm-based periodic behaviors may be more efficient than constant movement; Efficiency is critically low (0.151) and caps overall fitness despite perfect survival. Rhythm (0.061) and symmetry (0.391) are also weak in beauty. Strategy: increase energyConserve across population to reduce energy waste, decrease moveSpeed to lower cost of action, boost pulseFrequency to strengthen rhythm metric. Apply mutations across diverse genomes to explore efficiency-beauty tradeoffs.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
