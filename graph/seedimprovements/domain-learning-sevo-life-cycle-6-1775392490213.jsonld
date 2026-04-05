@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775392490213",
+  "timestamp": "2026-04-05T12:34:50.213Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "In short worlds, exploration drive without immediate payoff is energy waste. Entities should conserve and pulse, not wander.; Efficiency at 0.146 is critically weak (25% of weighted fitness). The survival rate masks that entities are burning excessive energy on movement and exploration without proportional resource gains. Rhythm (0.041) is also atrocious. Strategy: (1) boost energyConserve to reduce baseline waste, (2) lower moveSpeed on high-exploration entities to cut unnecessary movement cost, (3) increase pulseFrequency to establish temporal patterns (rhythm), (4) reduce explorationDrive on the Persistence Hunter which burns energy on low-payoff exploration in a 200-tick window. These changes target the bottlenecks: energy efficiency + temporal rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
