@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408050562",
+  "timestamp": "2026-04-05T16:54:10.562Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "Survival gated by energy economics, not movement grace. Maximize foraging efficiency before optimizing motion.; Efficiency (0.42) is the critical bottleneck. Survey shows energy depletion even in live organisms (ids 1,2 have only 5,3 energy while 4,5 have 16,35). Physics is expensive: high drag and low damping waste movement energy. Strategy: increase energyConserve (reduce per-tick drain), lower moveSpeed (less thrashing), increase harvestThreshold (eat more aggressively before starving), boost resourceAttraction (find food faster). Beauty is strong (0.708) so small efficiency tweaks won't hurt it.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
