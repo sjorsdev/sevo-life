@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409806012",
+  "timestamp": "2026-04-05T17:23:26.012Z",
+  "observation": "Domain sevo-life (fitness 0.590) generated 2 insights",
+  "suggestion": "Lean wins: 8 particles + high energy beats 12 particles + low energy. Efficiency ceiling is unbloated morphologies + aggressive resource seeking.; Efficiency at 0.449 is the bottleneck (0.2 weight in goal). The best performers (orgs 2,5) have 8 particles with high energy; worst (orgs 1,4) have 12 particles but low energy. Current designs are bloated. Spatial composition (0.3) is also critically weak — organisms cluster instead of spreading. Fix: (1) reduce particle count targets in oversized genomes, (2) boost resource attraction + energy conservation, (3) increase avoidance radius for spatial spread.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
