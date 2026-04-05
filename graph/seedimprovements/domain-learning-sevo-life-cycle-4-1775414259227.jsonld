@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775414259227",
+  "timestamp": "2026-04-05T18:37:39.227Z",
+  "observation": "Domain sevo-life (fitness 0.593) generated 2 insights",
+  "suggestion": "Efficiency crisis: organisms burning energy on locomotion faster than they harvest. Spatial clustering drives low composition score. Genetic homogeneity suppresses form diversity ceiling.; Weakest metric is efficiency (0.559) combined with spatial composition (0.3) and diversity of forms (0.456). Two organisms died despite having 13 particles — high energy burn relative to survival. Survivors plateau at max age (500) suggesting energy constraints limit further growth. Strategy: reduce moveSpeed and increase energyConserve for fragile phenotypes; boost explorationDrive and patternSymmetry across all genomes to increase spatial spread and form diversity; vary trailColor to strengthen visual distinctiveness and drive beauty metrics upward.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
