@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407474034",
+  "timestamp": "2026-04-05T16:44:34.034Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Efficiency ceiling is movement cost + idle pulsing, not beauty complexity. Organisms spend more energy moving than gathering. Rebalance toward aggressive resource harvesting and conservative movement.; Efficiency is critically weak at 0.402 vs. target. Energy conservation and resource gathering are the bottlenecks. Organisms are alive at age 500 (max cap) with minimal energy margins—they're surviving but inefficiently. Survival rate (0.667) suggests some are dying before reaching that age. Root cause: high movement overhead + insufficient resource attraction. Solution: increase energyConserve to reduce per-move cost, boost resourceAttraction to harvest more efficiently, lower explorationDrive to reduce wasteful wandering, reduce pulseFrequency to save idle energy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
