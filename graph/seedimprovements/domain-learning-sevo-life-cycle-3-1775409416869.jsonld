@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409416869",
+  "timestamp": "2026-04-05T17:16:56.869Z",
+  "observation": "Domain sevo-life (fitness 0.536) generated 2 insights",
+  "suggestion": "Efficiency fails when organisms explore before securing food; prioritize feeding economics over motion.; Efficiency at 0.482 is the bottleneck (weakest of the three objectives). Two organisms died prematurely (ages 279, 333) and survivor #4 has critically low energy (6). This points to energy mismanagement—either wasteful movement or inadequate resource harvesting. The issue is behavioral: organisms move too freely (high explorationDrive) without harvesting efficiently. Solution: increase harvestThreshold to make resource acquisition more aggressive, boost energyConserve to reduce baseline metabolism waste, and lower explorationDrive to eliminate energy-draining idle movement. This should push efficiency from 0.482 → ~0.62 while preserving the good beautyScore (0.749).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
