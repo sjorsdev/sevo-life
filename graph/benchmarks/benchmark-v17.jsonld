@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v17",
+  "timestamp": "2026-04-05T08:58:18.931Z",
+  "version": 17,
+  "parent": "benchmark-v16",
+  "task": "Implement Byzantine-resilient consensus (v17) extending v16 with: (1) Distributed Timestamp Verification—validators must maintain cryptographically-bound loosely-synchronized clocks; use BLS-signed timestamps on every message; agents must detect Byzantine clock validators (those whose signed timestamps deviate >Δt from quorum median) and exclude them from consensus; prove that clock deviations are detected within 2 message delays; (2) Coalition-Aware Byzantine Detection—extend single-validator Byzantine detection to identify subgroups of validators colluding to delay common messages; use aggregate signature tracking: if k validators all delay the same message by >T/3, flag them as a coalition and trigger coalition-level slashing; (3) Safe Reconfiguration Under Attack—implement validator set changes (add/remove) such that: old validators cannot block new validator joins using Byzantine delays; new validators cannot be prevented from catching up via equivocated history; prove atomic cutover (no fork between old and new sets); (4) Proof Size Bounds—all BLS aggregates and cryptographic proofs must fit in bounded space (max 8KB per proof bundle); agents must batch and compress proofs to prevent bloat attacks; include proof-size efficiency in scoring; (5) Asynchrony Recovery with Byzantine Restart—when network becomes asynchronous, agents must detect when Byzantine validators are deliberately extending asynchrony (by suppressing sync messages); trigger automatic view change and resync; prove liveness recovery within T_recovery rounds even if f validators are actively attacking sync.",
+  "scoringLogic": "distributedClockVerification(0.15) + coalitionDetectionAndSlashing(0.15) + safeReconfigurationAtomicity(0.15) + proofSizeEfficiency(0.12) + asynchronyRecoveryLiveness(0.15) + cryptographicCorrectnessAcrossAllComponents(0.14) + concurrentStress(0.14)",
+  "difficulty": 17,
+  "passThreshold": 0.95
+}
