@@ -413,7 +413,20 @@ async function recordDomainLearnings(
 // META-CYCLE: EVOLVE → REFLECT → BRAINSTORM → REALIGN
 // ===========================================================================
 const EVOLVE_CYCLES = 5;  // evolution cycles per meta-cycle
-const fitnessHistory: number[] = [];
+
+// Load fitness history from graph — persists across sessions
+async function loadFitnessHistory(): Promise<number[]> {
+  const fitnessNodes = await queryNodes<FitnessNode>("fitness");
+  // Get unique fitness values per cycle, sorted by timestamp
+  const byCycle = new Map<string, number>();
+  for (const f of fitnessNodes) {
+    const existing = byCycle.get(f.cycleId);
+    if (!existing || f.eqs > existing) byCycle.set(f.cycleId, f.eqs);
+  }
+  return [...byCycle.values()];
+}
+const fitnessHistory: number[] = await loadFitnessHistory();
+console.log(`Loaded ${fitnessHistory.length} historical fitness records from graph`);
 
 // --- REFLECT: analyze trends, detect plateaus ---
 async function reflect(
