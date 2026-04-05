@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775407698930",
+  "timestamp": "2026-04-05T16:48:18.930Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not lack of mutations or poor selection—it's convergence. One fitness landscape + random search = find local optimum, plateau forever. SEVO's EQS formula rewards finding winners faster, not exploring harder. The system needs either (a) an expanding search space (new cell types, new morphological freedom), (b) a non-stationary fitness landscape (beauty as novelty, not absolute), or (c) multi-agent competition. All three work because they guarantee 'solved' states never stay solved.; [medium] Introduce Neural Cell Type enabling learned behavior within lifetime — Current evolution is purely genetic/morphological. Organisms cannot adapt strategy mid-life, so selection pressure favors rigid, pre-optimized forms. A neural cell type (integrates sensory inputs, modulates motor outputs) would allow same genome to express different behaviors in different contexts. This expands the effective phenotype space exponentially—same organism can now be risk-taking in resource-rich zones, conservative in depleted zones. Breaks convergence to single 'universal strategy'.; [easy] Beauty score becomes dynamic novelty metric: reward morphologies distant from recent population distribution — Fixed beauty metric causes convergence—all organisms evolve toward the same 'beautiful' form, plateau is reached, done. Dynamic metric penalizes this. If organisms gain beauty bonus proportional to morphological distance from 100-cycle running average, you create negative frequency-dependent selection: 'beautiful' solutions become less beautiful once common. This enforces diversity and continually destabilizes local optima.; [hard] Introduce predator organism type with inverse fitness goal; enable coevolutionary arms race — Current system is single-goal (maximize survival+beauty+efficiency). System reaches equilibrium because no external pressure resets it. Split population: some organisms evolve for predation (mobility+energy, penalized for beauty), others for evasion (speed+morphological complexity). Arms race dynamics mean each side's 'solution' keeps obsoleting the other's—fitness landscape never stops moving. Plateau because there's only one player; add a second player and stagnation becomes impossible.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
