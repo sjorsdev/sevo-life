@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407028175",
+  "timestamp": "2026-04-05T16:37:08.175Z",
+  "observation": "Domain sevo-life (fitness 0.609) generated 2 insights",
+  "suggestion": "Efficiency fails at the physics layer, not behavior. Lower drag + spring costs + pulse rate preserves beauty while extending survival window and improving net energy balance.; Efficiency (0.369) is the critical bottleneck, dragging overall fitness down by ~7% of the goal. Organisms are dying at 225-283 before reaching stable age, suggesting energy deficit despite adequate resources. Physics parameters (drag, spring stiffness) are consuming energy without translating to survival or beauty gains. Organisms 0 and 3 died early despite 13-particle complexity — a sign that morphological cost exceeds benefit. Strategy: reduce passive energy drain via drag and spring physics, increase resource-gathering efficiency, and lower pulse overhead. Beauty scores (0.696) are stable enough to tolerate small morphology adjustments.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
