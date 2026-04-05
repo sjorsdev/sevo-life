@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408982007",
+  "timestamp": "2026-04-05T17:09:42.007Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Smaller bodies with greedy resource attraction outsurvive larger ones—beauty from complexity should scale with energy income, not particle count.; Efficiency (0.523) is the critical bottleneck. It's dragging 20% of the fitness calculation. Root cause: organisms are spending too much energy on movement/maintenance relative to resource acquisition. Dead organisms (ids 0, 3) had max particles (13) but starved—particle count is an energy liability. Survivors (ids 1, 2, 4, 5) are smaller (8-12) and energy-positive. Solution: reduce movement overhead, increase resource-seeking efficiency, lower the growth ceiling, and make energy conservation more aggressive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
