@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409134020",
+  "timestamp": "2026-04-05T17:12:14.020Z",
+  "observation": "Domain sevo-life (fitness 0.633) generated 2 insights",
+  "suggestion": "Low efficiency stems from immobile, under-resourced genomes. Increase moveSpeed + resourceAttraction + explorationDrive, decrease energyConserve. Movement generates diversity of position AND efficiency simultaneously.; Efficiency is critically low at 0.451 — organisms are not moving or harvesting effectively. Spatial composition (0.3) indicates clustering/poor distribution. Survival rate (0.667) shows some organisms die prematurely due to low energy. Primary intervention: increase movement speed and resource attraction across all genomes to drive active foraging. Lower energy conservation (less 'sitting still') to prioritize exploration. Increase exploration drive to spread spatially. Target: move efficiency from 0.45 → 0.65+, spread organisms across world, boost resource capture.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
