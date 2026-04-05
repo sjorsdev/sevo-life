@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775392118713",
+  "timestamp": "2026-04-05T12:28:38.713Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Marginal harvesting at low thresholds is an energy sink. Higher threshold + visible rhythm patterns unlock both efficiency and beauty simultaneously.; Efficiency is critically weak (0.145 → contributes only 0.029 to fitness), while survival is saturated (1.0). The problem: harvestThreshold values are too low, causing constant marginal harvesting that wastes more energy than it gains. Entity 2 at 0.04 is harvesting nearly constantly. Second issue: rhythm is near-zero (0.099), indicating pulseFrequency too low for visible patterns. Solution: (1) Raise harvestThreshold 0.08→0.15+ so entities only harvest when profitable, (2) Reduce moveSpeed slightly to conserve energy, (3) Boost pulseFrequency 0.15-0.3→0.4-0.6 for visible rhythm patterns. This rebalances the goal: efficiency can now contribute 0.2 instead of 0.029.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
