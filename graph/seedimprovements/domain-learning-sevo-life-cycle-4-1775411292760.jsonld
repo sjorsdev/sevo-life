@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411292760",
+  "timestamp": "2026-04-05T17:48:12.760Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy conservation ratio—organisms move beautifully but expensively. Shift from costly exploration to targeted foraging.; Efficiency is critically weak at 0.475 vs survival/beauty at 0.66+. Current organisms waste energy despite good survival. Weak spatialComposition (0.3) suggests poor movement optimization. Dead organisms (ids 0, 3) burned out quickly. Live organisms have low energy reserves at age 500. Root cause: high movement cost relative to resources gained. Solution: increase energyConserve to reduce passive drain, boost resourceAttraction to harvest more efficiently, moderate moveSpeed to lower locomotion cost, increase explorationDrive slightly to find better resource patches.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
