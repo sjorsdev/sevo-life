@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775391752538",
+  "timestamp": "2026-04-05T12:22:32.538Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Efficiency failure is movement overspend. Slow genomes down, cut exploration drive 30-40%, raise conservation to 0.75+. Rhythm improves with higher pulseFrequency (0.3+). Symmetry with patternSymmetry 0.8+.; Efficiency at 0.159 is critically weak (33x weaker than survival, 2.7x weaker than beauty). The weighted goal is 0.2 * efficiency = 0.032 of total fitness. Primary bottleneck: genomes move/explore too aggressively, burning energy faster than harvesting replenishes. Harvester (0.85 speed + 0.7 exploration) and Persistence Hunter (0.75 speed + 0.8 exploration) are energy hemorrhages. Secondary: beautyScore 0.546 lags due to rhythm (0.193) and symmetry (0.451). Fix efficiency first: reduce movement cost and exploration waste, increase conservation. Secondary: boost rhythm and symmetry for beauty gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
