@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409002163",
+  "timestamp": "2026-04-05T17:10:02.163Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Efficiency crisis indicates over-spending on traits that don't compound survival/beauty. Simplify metabolism before scaling morphology.; Efficiency is critically low (0.397) despite strong beauty (0.737) and acceptable survival (0.667). This bottleneck is costing ~0.08 in overall fitness. The particle simulation is burning energy on exploratory/pulsing behavior without proportional survival or beauty gains. Organisms 0 and 3 died early (before max lifespan), suggesting inefficient energy expenditure. Alive organisms show moderate energy (10-19) in 500-age population — they should be much fuller. Target: increase energyConserve across all genomes (to 0.7+), reduce explorationDrive (wastes movement), optimize harvestThreshold (stop chasing distant resources), and reduce unnecessary pulseFrequency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
