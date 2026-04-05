@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775414219925",
+  "timestamp": "2026-04-05T18:36:59.925Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Energy scarcity is the evolutionary bottleneck; organisms with beautiful forms are starving. Rebalance toward resource-seeking and efficiency over movement costs.; Efficiency is the critical bottleneck at 0.336, dragging fitness from potential 0.65+ down to 0.555. Most organisms die before 500 age steps due to energy depletion. Living organisms (2,4,5) are severely energy-constrained. Survival rate is only 0.5. Beauty metrics are strong (symmetry, form, motion all >0.8) so optimization should target energy throughput and conservation, not morphology. Strategy: reduce wasteful exploration/movement, increase resource detection and harvest efficiency, raise energy conservation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
