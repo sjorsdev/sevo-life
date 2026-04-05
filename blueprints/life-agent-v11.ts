@@ -25,9 +25,9 @@ const jellyfish: Genome = {
   accentColor: [200, 120, 255],
   springStiffness: 0.03,
   springDamping: 0.05,
-  drag: 0.96,
+  drag: 0.97,
   baseRadius: 5,
-  resourceAttraction: 0.7,
+  resourceAttraction: 0.8,
   flockingStrength: 0.2,
   avoidanceRadius: 40,
   pulseRate: 0.8,
@@ -61,7 +61,7 @@ const crawler: Genome = {
   flockingStrength: 0.1,
   avoidanceRadius: 30,
   pulseRate: 0.2,
-  swimStrength: 0.5,
+  swimStrength: 0.7,
 };
 
 const floater: Genome = {
@@ -84,7 +84,7 @@ const floater: Genome = {
   springDamping: 0.03,
   drag: 0.98,
   baseRadius: 6,
-  resourceAttraction: 0.3,
+  resourceAttraction: 0.85,
   flockingStrength: 0.4,
   avoidanceRadius: 50,
   pulseRate: 0.6,
