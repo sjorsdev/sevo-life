@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409916801",
+  "timestamp": "2026-04-05T17:25:16.801Z",
+  "observation": "Domain sevo-life (fitness 0.631) generated 2 insights",
+  "suggestion": "Dead organisms exhausted energy before age 500 despite adequate initial resources. Spatial collision/clustering kills composition score. Uniform phenotypes suppress diversity ceiling.; Spatial composition (0.3) and diversity of forms (0.456) are the critical weaknesses dragging down beauty. Survival rate (0.667) shows 33% mortality — organisms dying mid-cycle due to poor energy management. Efficiency (0.642) is lowest composite metric. Three-pronged fix: (1) Increase explorationDrive and vary turnBias to spread organisms spatially and reduce crowding artifacts. (2) Boost energyConserve significantly and lower moveSpeed to stop energy bleeding — dead organisms (0,3) failed to conserve resources to age 500. (3) Maximize trailColor and patternSymmetry variance across genomes — currently too uniform, kills diversity score.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
