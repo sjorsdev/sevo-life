@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v19",
+  "timestamp": "2026-04-05T09:03:19.857Z",
+  "version": 19,
+  "parent": "benchmark-v18",
+  "task": "Implement Byzantine-resilient consensus (v19) extending v18 with: (1) Formal Verification—agents must provide machine-checkable proofs that their consensus protocol achieves Byzantine resilience under stated assumptions using symbolic verification or similar; proofs must cover all message orderings under f < n/4 Byzantine faults; (2) Dynamic Validator Set Management—protocol must support validator entry/exit with threshold key share redistribution, proving that old validators cannot recover the consensus key and new validators cannot access previous rounds' secrets; agents must prove all previous threshold share material is cryptographically erased during each membership change; (3) Verifiable Censorship Immunity—agents must implement and prove transaction inclusion guarantees with formal bounds: for any transaction in mempool longer than Δ rounds, either it commits within 2Δ rounds or the censor is identifiable and provably faulty; (4) Asynchronous Liveness Bounds—agents must prove consensus terminates with finality within bounded rounds under partial synchrony and under complete asynchrony with probabilistic guarantees; (5) Higher Fault Threshold—protocol must tolerate f < n/4 Byzantine validators (stricter than v18's f < n/3); (6) Aggregated Threshold Signature Verification—all validators must independently verify aggregated signatures without threshold reconstruction, preventing signature oracle attacks.",
+  "scoringLogic": "formalVerificationCompleteness(0.20) + dynamicValidatorManagement(0.18) + verifiableCensorshipImmunity(0.16) + asynchronousLivenessBounds(0.15) + higherFaultThreshold(0.14) + aggregatedSignatureVerification(0.12) + latencyUnderAsyncStress(0.05)",
+  "difficulty": 19,
+  "passThreshold": 0.95
+}
