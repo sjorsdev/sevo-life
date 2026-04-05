@@ -1,0 +1,31 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness-agent-life-v3-1775391566502-sevo-life-cycle-3-1775394122685",
+  "timestamp": "2026-04-05T13:02:04.653Z",
+  "agent": "agent:life-v3-1775391566502",
+  "eqs": 0.31539999999999996,
+  "accuracy": 1,
+  "magnitude": 0.06499999999999995,
+  "branchesExplored": 1,
+  "predictionError": 1,
+  "cycleId": "sevo-life-cycle-3-1775394122685",
+  "context": {
+    "fitness": 0.691,
+    "branches": 1,
+    "survivalRate": 1,
+    "beautyScore": 0.535,
+    "efficiency": 0.152,
+    "beauty": {
+      "symmetry": 0.407,
+      "complexity": 0.937,
+      "rhythm": 0.228,
+      "colorHarmony": 0.72,
+      "coverage": 0.3
+    },
+    "totalTicks": 200,
+    "avgAge": 200,
+    "correct": 8,
+    "total": 8
+  }
+}
