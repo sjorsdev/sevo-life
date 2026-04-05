@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775391870521",
+  "timestamp": "2026-04-05T12:24:30.521Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: entities survive well but accumulate resources too slowly. Reduce movement, boost conservation, increase harvest intensity.; Efficiency is critically weak at 0.149 (should target >0.4), dragging overall fitness from potential 0.75+ to 0.617. survivalRate is good (0.875) but entities aren't harvesting sustainably — energy burn is too high. Secondary issue: beauty rhythm and coverage are extremely weak (0.098 and 0.313), indicating sparse, irregular trails. Fix: boost energyConserve globally to extend lifespans and resource accumulation windows; increase pulseFrequency and trailIntensity for visual patterns that contribute to beauty metrics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
