@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775412593519",
+  "timestamp": "2026-04-05T18:09:53.519Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "organism survival is gated by energy depletion, not predation—shift from mobility to efficiency and foraging; efficiency (0.416) is the weakest absolute metric and lowest denominator in weighted formula. Root cause: excessive energy drain from movement + poor resource harvesting. Secondary issue: spatialComposition (0.3) indicates clustering; organisms need higher explorationDrive to spread. Dead organisms (3, 4) exhausted energy before reaching harvest cycle. Solution: increase energyConserve to reduce baseline drain, increase resourceAttraction to prioritize food-finding, increase explorationDrive to prevent clustering (improves spatial composition and diversityOfForms), reduce moveSpeed on high-energy walkers to balance exploration with conservation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
