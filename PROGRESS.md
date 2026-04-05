@@ -1,51 +1,54 @@
 # PROGRESS
 
-## Status: NEEDS SERIOUS REDESIGN — current simulation too simple
-## SevoScore: 3935
+## Status: ALIVE — reproduction working, THINK phase generating ideas
+## SevoScore: 3950
+## Population: 30 organisms (cap), 28+ unique color variants from 3 species
+## THINK ideas: 21 cross-disciplinary ideas in graph
 
-## Honest assessment (again)
-The particle simulation is a toy. Spring-connected dots with no internal state,
-no geometric shapes, no real structure. Organisms have no memory, no metabolism,
-no development stages. The world has chemistry but organisms can't even
-sustain reproduction — 10,000 ticks, zero generations. Debugging energy
-thresholds is missing the point entirely.
+## Breakthrough this session
+spawnOrganism() never added organisms to the array. One missing line.
+Everything built before was useless without reproduction. Now fixed:
+3 starting species → 30 organisms by tick 1000 with real diversification.
 
-## What's fundamentally missing
-1. **Internal state** — organisms have no memory, no metabolism, no neural network
-2. **Geometric shapes** — particles are dots, not structured forms
-3. **Multi-scale levels** — no atoms→molecules→cells→organs→organisms
-4. **Real interaction** — organisms don't communicate, trade, eat each other
-5. **The world as organism** — chemistry exists but doesn't shape organisms back
-6. **Time for emergence** — need millions of ticks, not thousands
+## Meta-cycle: EVOLVE → REFLECT → THINK → BRAINSTORM → REALIGN
+THINK phase generates novel cross-disciplinary ideas every cycle.
+21 ideas accumulated, converging on 3 themes:
+1. **Temporal dimension** — rhythm, oscillation, phase-locking with environment
+2. **Environmental legacy** — organisms shape world for offspring (niche construction)
+3. **Developmental programs** — growth rules not fixed form (morphogenesis)
 
-## Research foundations discovered (should have found earlier)
+## Most actionable ideas (from THINK)
+- Niche construction: chemistry deposits as inheritance (organisms already do this!)
+- Beauty as costly signal: decorative cells cost 3x, Pareto tradeoff
+- Polymorphic castes: group selection, division of labor
+- Stigmergy: collective intelligence via environmental modification
+
+## Research foundations
 - Schmidhuber (2009) — beauty = compression progress
-- Birkhoff (1933) — aesthetic measure = order / complexity
-- Turing (1952) — reaction-diffusion → organic patterns
-- Lehman & Stanley — novelty search (evolution without objectives)
-- Gray-Scott model — two-chemical reaction-diffusion
+- Birkhoff (1933) — M = O/C (order/complexity)
+- Turing (1952) — reaction-diffusion
+- Kuramoto model — coupled oscillators
+- Kleiber's law — metabolic scaling
 
-## Infrastructure that works
-- sevo-score@1.2.1 on npm — scoring, contracts, auto-publish
-- sevo-engine@1.0.0 on npm — graph, runner, scorer, mutator
-- Meta-cycle: EVOLVE → REFLECT → BRAINSTORM → REALIGN
-- Chemistry layer (reaction-diffusion)
-- Compression-progress beauty engine
-- Visualization framework
+## Infrastructure
+- sim.ts: particle physics + chemistry + seasons + reproduction + social interaction
+- chemistry.ts: Gray-Scott reaction-diffusion
+- compression-beauty.ts: Schmidhuber + Birkhoff beauty engine
+- fork-runner.ts: meta-cycle with THINK phase
+- web/v2.html: Canvas2D visualization
+- sevo-score@1.2.1, sevo-engine@1.0.0 on npm
 
-## Key learnings for next attempt
-- Research existing work before building from scratch
-- Test basic viability (can organisms reproduce?) before adding features
-- Don't optimize numbers without checking visual output
-- The simulation IS the evolution — not separate loops
-- Beauty can't be a formula — it must emerge from interaction
-- The world needs to be alive, not a backdrop
-- Organisms need internal state to be interesting
-- This is serious research, not weekend hacking
+## Key learnings
+- Research before building (Schmidhuber, not homemade formulas)
+- Test basic viability first (can organisms reproduce?)
+- Don't optimize numbers without visual verification
+- THINK phase > BRAINSTORM — cross-disciplinary reasoning finds what optimization can't
+- One missing line of code can block everything
 
-## Next step
-This needs a deeper foundation. Research: Lenia (continuous cellular automata),
-NEAT (evolving neural networks), Avida (digital organisms with metabolism),
-Tierra (self-replicating programs). Stand on existing artificial life research.
+## Run
+```
+deno run --allow-all src/fork-runner.ts    # evolve with meta-cycle
+deno run --allow-all web/build.ts && PORT=8090 deno run --allow-all web/serve.ts  # visualize
+```
 
 ## Timestamp: 2026-04-05
