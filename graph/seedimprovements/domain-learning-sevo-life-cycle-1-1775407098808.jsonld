@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407098808",
+  "timestamp": "2026-04-05T16:38:18.808Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Spatial beauty emerges from coordinated motion, not static forms — tune flocking and avoidance radius to create emergent schools/patterns rather than isolated wanderers.; Efficiency (0.557) is the weakest component, dragging down overall fitness despite strong survivalRate (0.833). spatialComposition (0.3) is critically weak — organisms aren't arranging themselves harmoniously. Root cause: high energyConserve waste and uncoordinated movement. The organism with energy=1 (id 3) is borderline starving. Reduce metabolic drag, improve moveSpeed coordination, and tune flocking/avoidance to create emergent spatial beauty. These changes preserve survival while recovering efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
