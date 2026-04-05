@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406671045",
+  "timestamp": "2026-04-05T16:31:11.045Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "Particles are metabolic cost. Leaner bodies (8 vs 13 particles) reach age 500 while heavy forms die by 386. Efficiency improves with constraint.; Efficiency (0.431) is the critical bottleneck. While beauty (0.708) and survival (0.667) are reasonable, efficiency drags the weighted score. Analysis: organisms with fewer particles (8) survive to age 500, while those with 13 particles die earlier — leaner = more efficient. Strategy: reduce movement energy cost and increase conservation. Lower moveSpeed (cuts motion overhead), increase energyConserve (explicit metabolism tuning), reduce explorationDrive (eliminate wasteful thrashing), and lower resourceAttraction (expensive chase behavior). These compound to reduce total energy spend while maintaining survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
