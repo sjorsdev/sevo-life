@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413513037",
+  "timestamp": "2026-04-05T18:25:13.037Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Low efficiency + weak spatial composition = organisms burning energy on redundant local movement rather than exploring. More conservative motion + higher exploration drive + sensory feedback creates longer-range adaptive behavior.; Efficiency is the bottleneck at 0.47 — organisms waste energy on movement/navigation. Spatial composition is critically weak (0.3), indicating poor environmental exploration. Organisms cluster or move inefficiently. Solution: (1) Increase energyConserve to reduce metabolic overhead; (2) Increase explorationDrive to spread organisms and improve spatial distribution; (3) Reduce moveSpeed slightly since current speed appears wasteful; (4) Boost trailIntensity for better sensory feedback in navigation. Vary a few genomes to increase morphological diversity (currently 0.456).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
