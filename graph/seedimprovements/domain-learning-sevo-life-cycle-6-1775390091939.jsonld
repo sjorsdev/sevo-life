@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775390091939",
+  "timestamp": "2026-04-05T11:54:51.939Z",
+  "observation": "Domain sevo-life (fitness 0.688) generated 2 insights",
+  "suggestion": "Efficiency gains are multiplicative on survival — surviving longer with lower energy cost compounds. Current population burns resources exploring when focused resource-seeking + conservation wins.; Efficiency is critically weak (0.143 vs survivalRate 0.875, beautyScore 0.553). With 0.2 weighting, this bottleneck prevents fitness from exceeding 0.65 even with perfect survival/beauty. Root causes: moveSpeed too high (Harvester 0.85, Aesthetic 0.7, Persistence 0.75 waste energy moving), explorationDrive too high (wastes energy on non-productive wandering), energyConserve underutilized. Solution: reduce moveSpeed to 0.5-0.6 across all entities, increase energyConserve to 0.65-0.8, cut explorationDrive in half.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
