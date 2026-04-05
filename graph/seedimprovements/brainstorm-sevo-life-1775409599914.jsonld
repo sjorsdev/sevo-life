@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775409599914",
+  "timestamp": "2026-04-05T17:19:59.914Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Evolution is stuck because the system has optimized *parameters* within a fixed *architecture*. The morphospace is constrained by three things: unconstrained growth (allows degenerate solutions), homogeneous environment (single peak), flat behavior (no perception→action coupling). Real biology breaks plateaus via constraints (development), environmental fragmentation (niches), and sensorimotor loops (behavior). The fitness function is not the bottleneck — the search strategy is.; [medium] Introduce developmental growth constraints: cells can only grow from adjacent parent cells, with growth phases and per-phase budgets. Organisms must follow developmental programs rather than spawning arbitrary morphologies. — Unconstrained morphogenesis has exhausted the accessible solution space. Real biology's developmental constraints paradoxically open new morphologies by reorganizing the search landscape. Growth programs enable segmentation, radial symmetry, bilateral symmetry, and other structured forms that random growth cannot find. The plateau is constrained by bad search strategy, not fitness ceiling.; [easy] Fragment world into heterogeneous resource zones: temperature gradients, nutrient density patches, light intensity mapping. Different regions reward different morphologies and behaviors. — Homogeneous environment selects for one global optimum. Heterogeneous world creates multiple local peaks and drives specialization. Current population converges to one strategy; patchy resources would reward diversity naturally and break symmetry. This is why real ecosystems stratify into niches.; [medium] Add sensory cell types (detect local nutrient/light/temperature) + perception-action coupling: organisms can only move/grow toward/away-from perceived signals, not arbitrary directions. Decouple morphology from behavior; add behavioral complexity. — Plateau suggests current organism behavioral space is thin. Blind taxis-only organisms have learned to saturate their action repertoire. Perception opens new strategic dimensions: tracking food sources, predator avoidance, kin recognition. Sensorimotor coupling creates pressure for specialized morphologies (eyes, antennae, detection organs) that current flat fitness landscape does not reward.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
