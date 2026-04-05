@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775393851508",
+  "timestamp": "2026-04-05T12:57:31.508Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency gains by ratio-matching moveSpeed to energyConserve; rhythm unlocked by 2-3x pulseFrequency increase. Rhythm was capped by low pulse values, not tuned for temporal beauty.; Efficiency (0.142) is critically weak — the bottleneck component. Within beauty, rhythm (0.081) is severely underdeveloped. Entities waste energy moving too fast relative to harvest gains. Strategy: (1) reduce moveSpeed on high-speed resource seekers, increase energyConserve to reduce waste; (2) boost pulseFrequency across all entities to unlock rhythm component; (3) keep coverage adequate by maintaining one faster explorer.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
