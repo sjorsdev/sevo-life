@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413324671",
+  "timestamp": "2026-04-05T18:22:04.671Z",
+  "observation": "Domain sevo-life (fitness 0.613) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with movement cost; reusing paths via trailAttraction compounds conservation gains. Diversity requires parameter uncorrelation—spread trailColor and patternSymmetry across the population.; Efficiency is critically weak (0.342 vs target >0.5), consuming 20% of the fitness weight. Survival is secondary (0.667). Within beauty, diversity of forms (0.456) is the lowest component. Root causes: organisms move too much (energy waste), don't conserve well, and lack behavioral/visual diversity. Solution: reduce moveSpeed globally, dramatically increase energyConserve, increase trailAttraction to reuse paths (lower energy), and distribute trait diversity across entities using different trailColors and patternSymmetry values.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
