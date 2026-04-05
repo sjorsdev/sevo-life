@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411498917",
+  "timestamp": "2026-04-05T17:51:38.917Z",
+  "observation": "Domain sevo-life (fitness 0.652) generated 2 insights",
+  "suggestion": "Complexity must earn its energy cost—simpler, energy-efficient organisms outsurvive elaborate ones. Tune for parsimony before growth.; Efficiency is critically low (0.359), causing energy depletion and death. Organisms with 12-13 particles died (ages 269-494) while 8-particle organisms survive. The problem: overcomplexity burns energy faster than harvesting replenishes it. Solution: reduce energy waste through lower movement/exploration costs, increase harvest efficiency, boost metabolic conservation. This directly improves both efficiency score and survival rate without compromising the already-strong beauty metrics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
