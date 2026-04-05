@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413639883",
+  "timestamp": "2026-04-05T18:27:19.883Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Early mortality is energy crisis, not design failure. Stabilize the death spiral with faster resource discovery and lower metabolic cost during growth.; Survival rate (0.667) is the bottleneck at 50% weight. Two organisms died early (ages 228, 275) from energy depletion while survivors stabilized at age 500. Dead organisms exhausted energy before reaching stable foraging. Efficiency (0.442) is also weak — organisms burn too much energy relative to output. Beauty is strong (0.72) so avoid changing those parameters. Strategy: (1) increase energyConserve across all to prevent early starvation, (2) boost resourceAttraction so organisms find food faster before energy runs dry, (3) reduce moveSpeed for lower energy drain. The survivors show that once stable, the genomes work — they just need to survive the bootstrapping phase.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
