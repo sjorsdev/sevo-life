@@ -1,0 +1,14 @@
+{
+  "@context": "sevo://v1",
+  "@type": "EvolutionStrategy",
+  "@id": "strategy-crossover-1775382618247",
+  "timestamp": "2026-04-05T09:50:18.247Z",
+  "name": "crossover",
+  "mutationRate": 0.1,
+  "crossoverRate": 0.7,
+  "selectionPressure": 3,
+  "noveltyWeight": 0.05,
+  "successRate": 0.26666666666666666,
+  "totalTrials": 45,
+  "successfulTrials": 12
+}
