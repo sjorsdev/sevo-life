@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775404594429",
+  "timestamp": "2026-04-05T15:56:34.429Z",
+  "observation": "Domain sevo-life (fitness 0.709) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: entities waste energy seeking perfect conditions instead of harvesting nearby. Slow down movement, reduce exploration drive, harvest more eagerly at current location.; Efficiency is critically weak (0.151 vs target). The population moves too aggressively—high moveSpeed (0.85, 0.75, 0.7) burns energy faster than harvest gains. Reducing moveSpeed uniformly by ~0.15-0.2 and lowering explorationDrive for wanderers will improve energy efficiency. Secondary: beautyScore (0.559) limited by rhythm (0.23) and coverage (0.388). Increasing pulseFrequency across the board creates temporal patterns; boosting patternSymmetry adds visual coherence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
