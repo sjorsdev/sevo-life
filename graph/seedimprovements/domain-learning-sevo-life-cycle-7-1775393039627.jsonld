@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775393039627",
+  "timestamp": "2026-04-05T12:43:59.627Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Over-movement is bleeding efficiency; entities survive well but burn energy getting to resources worth little. Increase harvest threshold to be selective, reduce movement overhead.; Efficiency is critically low at 0.139 (contributing only 2.78% to goal), dragging down overall fitness. Root cause: entities move too frequently relative to resource harvest value. Rhythm is also severely weak at 0.18. Strategy: (1) reduce moveSpeed globally to cut energy waste, (2) increase harvestThreshold to avoid harvesting marginal resources, (3) boost pulseFrequency and trailIntensity on beauty-focused entities for rhythm and coverage, (4) increase energyConserve to lower baseline metabolism.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
