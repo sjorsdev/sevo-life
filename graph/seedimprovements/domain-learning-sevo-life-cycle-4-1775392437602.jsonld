@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775392437602",
+  "timestamp": "2026-04-05T12:33:57.602Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Beings are moving and exploring too aggressively relative to energy budget. Energy conservation dominates efficiency more than movement optimization — shift toward stillness and selective motion.; Efficiency is critically weak at 0.123 (only 2.46% of goal contribution), dragging overall fitness. This indicates excessive energy expenditure. Secondary weakness: rhythm (0.232) and coverage (0.396) limit beauty. Strategy: (1) Boost energyConserve across genomes with lower values (current 0.55-0.65 are insufficient), (2) Reduce moveSpeed for non-scout roles to cut idle movement waste, (3) Increase pulseFrequency uniformly to fix rhythm deficiency (0.08-0.3 is too low/scattered).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
