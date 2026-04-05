@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775392016059",
+  "timestamp": "2026-04-05T12:26:56.059Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: fast movers with poor conservation waste energy. Slow down exploration, boost conservation, let harvesters work harder instead of moving harder.; Efficiency is critically weak at 0.147, dragging overall fitness to 0.704. Target: improve from 0.147 → ~0.25+ to add ~0.02 to total fitness. Root cause: high moveSpeed (0.6-0.65) paired with moderate-to-low energyConserve (0.55-0.65) causes excessive energy burn. High-movement entities are exploring too aggressively without sufficient conservation. Secondary weakness: rhythm (0.262) and coverage (0.4) in beauty are weak, suggesting insufficient trail diversity and spatial coverage. Reduce moveSpeed on inefficient searchers, raise energyConserve across the board, and increase trailIntensity on low-coverage entities.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
