@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775393067249",
+  "timestamp": "2026-04-05T12:44:27.249Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency failure = movement cost > resource extraction. Tighten the loop: move less, harvest better, conserve harder.; Efficiency is critically weak (0.144) — less than 1/5 of survivalRate's contribution. Analysis: entities waste energy through excessive movement (high moveSpeed) and insufficient resource extraction relative to energy spent. The Efficient Hoarder and Harvester have good base instincts but adjacent entities squander mobility on low-yield behavior. Rhythm (0.157) is also weak — underdeveloped pulse patterns. Strategy: (1) Lower moveSpeed across explorers to reduce idle energy costs, (2) Increase energyConserve baseline, (3) Reduce explorationDrive on persistence hunter (0.8 is too aggressive), (4) Add rhythm via pulseFrequency to Aesthetic Harvester who already trails effectively. This preserves 100% survival while compounding efficiency gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
