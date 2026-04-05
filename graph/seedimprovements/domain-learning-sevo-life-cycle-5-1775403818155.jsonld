@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775403818155",
+  "timestamp": "2026-04-05T15:43:38.155Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "Entities reach full lifespan but underharvest—threshold tuning + pulsing patterns unlock energy capture without fitness cost.; Efficiency is critically weak (0.146), dragging overall fitness despite perfect survival. This stems from low harvest capture despite entities reaching age 200. Rhythm is the weakest beauty component (0.248) - pulseFrequency values (0.12-0.35) are too conservative. Coverage (0.463) suggests insufficient spatial exploration. Solution: (1) increase harvestThreshold slightly so entities harvest even at moderate resource levels, not just peaks; (2) boost pulseFrequency across all genomes for rhythmic emergence; (3) increase explorationDrive on passive entities to improve coverage. These three changes directly target all three components: efficiency gains from more frequent harvesting, rhythm from periodic oscillation, coverage from expanded search behavior.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
