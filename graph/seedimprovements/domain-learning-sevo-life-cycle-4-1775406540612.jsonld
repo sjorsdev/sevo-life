@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406540612",
+  "timestamp": "2026-04-05T16:29:00.612Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "Energy deficit kills before age limit. Shift from movement-heavy to resource-hunting strategy.; Survival rate (0.5) is the critical bottleneck — it's the highest-weighted goal component (0.5×) but underperforming. Only 3/6 organisms alive. Dead organisms lasted 268-362 steps; alive ones made it to 500 but with depleted energy (7-33). Root cause: organisms burn energy faster than they acquire it, causing early starvation. Secondary issue: efficiency (0.347) suggests wasted movement. Solution: prioritize energy conservation and resource acquisition over movement cost. Reduce explorationDrive to cut wasteful wandering, increase resourceAttraction to find food actively, boost energyConserve to extend lifespan. Beauty (0.769) is already strong — protect it by varying genome strategies.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
