@@ -149,14 +149,15 @@ function draw() {
   ctx.fillStyle = '#02030a';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Flow field visualization — subtle
-  ctx.globalAlpha = 0.03;
-  for (let y = 0; y < world.flow.height; y++) {
-    for (let x = 0; x < world.flow.width; x++) {
+  // Flow field — every 3rd cell only
+  ctx.globalAlpha = 0.04;
+  ctx.strokeStyle = '#4466aa';
+  ctx.lineWidth = 0.5;
+  for (let y = 0; y < world.flow.height; y += 3) {
+    for (let x = 0; x < world.flow.width; x += 3) {
       const f = world.flow.field[y][x];
       const px = x * world.flow.resolution + world.flow.resolution / 2;
       const py = y * world.flow.resolution + world.flow.resolution / 2;
-      ctx.strokeStyle = '#4466aa';
       ctx.beginPath();
       ctx.moveTo(px, py);
       ctx.lineTo(px + f.x * 30, py + f.y * 30);
@@ -242,7 +243,7 @@ function updateSidebar() {
   document.getElementById('tick-display').textContent = world.tick;
   document.getElementById('s-alive').textContent = alive.length + '/' + world.organisms.length;
 
-  if (world.tick % 10 === 0) {
+  if (world.tick % 50 === 0) {
     const beauty = scoreWorldBeauty(world);
     document.getElementById('s-beauty').textContent = beauty.total.toFixed(3);
     document.getElementById('bar-beauty').style.width = (beauty.total * 100) + '%';
@@ -271,19 +272,31 @@ function updateSidebar() {
   }
 }
 
-let timer;
-function loop() {
-  if (playing && !world.isFinished()) world.step();
+let lastTime = 0;
+let stepsPerFrame = 1;
+
+function loop(time) {
+  requestAnimationFrame(loop);
+  if (time - lastTime < interval) return;
+  lastTime = time;
+
+  if (playing && !world.isFinished()) {
+    for (let i = 0; i < stepsPerFrame; i++) world.step();
+  }
   draw();
-  updateSidebar();
+  if (world.tick % 5 === 0) updateSidebar();
 }
-function startLoop() { clearInterval(timer); timer = setInterval(loop, interval); }
-startLoop();
+requestAnimationFrame(loop);
 
 document.getElementById('btn-play').onclick = () => { playing = true; };
 document.getElementById('btn-pause').onclick = () => { playing = false; };
 document.getElementById('btn-restart').onclick = () => { init(); };
-document.getElementById('speed').onchange = (e) => { interval = parseInt(e.target.value); startLoop(); };
+document.getElementById('speed').onchange = (e) => {
+  const v = parseInt(e.target.value);
+  if (v <= 4) { interval = 16; stepsPerFrame = 3; }
+  else if (v <= 20) { interval = 16; stepsPerFrame = 1; }
+  else { interval = v; stepsPerFrame = 1; }
+};
 </script>
 </body>
 </html>

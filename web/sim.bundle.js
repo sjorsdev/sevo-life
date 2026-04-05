@@ -141,13 +141,40 @@ class World {
                 };
             }
         }
+        const season = Math.floor(this.tick / 100) % 4;
+        if (this.tick % 100 === 0 && this.tick > 0) {
+            if (season === 1) {
+                this.config.flowStrength = 0.5;
+                for (const r of this.resources)r.regrowRate *= 0.5;
+            } else if (season === 2) {
+                this.config.flowStrength = 0.1;
+                for (const r of this.resources){
+                    r.radius *= 0.7;
+                    r.regrowRate *= 0.3;
+                }
+            } else if (season === 3) {
+                this.config.flowStrength = 0.2;
+                for (const r of this.resources){
+                    r.amount = 1;
+                    r.radius *= 1.5;
+                    r.regrowRate *= 3;
+                }
+            } else {
+                this.config.flowStrength = 0.2;
+                for (const r of this.resources){
+                    r.regrowRate = 0.002 + 0.005 * this.rng();
+                    r.radius = 10 + this.rng() * 20;
+                }
+            }
+        }
         for (const r of this.resources){
             r.amount = Math.min(1, r.amount + r.regrowRate);
         }
         for (const org of this.organisms){
             if (!org.alive) continue;
             org.age++;
-            org.energy -= 0.03 + org.particles.length * 0.005;
+            const seasonDrainMult = season === 1 ? 1.5 : season === 2 ? 1.3 : 1.0;
+            org.energy -= (0.03 + org.particles.length * 0.005) * seasonDrainMult;
             if (org.energy <= 0) {
                 org.alive = false;
                 continue;
@@ -156,6 +183,7 @@ class World {
             this.updatePhysics(org);
             this.applyBehavior(org);
             this.harvest(org);
+            this.socialInteraction(org);
             if (org.genome.pulseRate > 0) {
                 const pulse = Math.sin(this.tick * org.genome.pulseRate * 0.1) * 0.3;
                 for (const s of org.springs){
@@ -304,6 +332,21 @@ class World {
                     r.amount -= Math.min(r.amount, 0.1);
                 }
             }
+        }
+    }
+    socialInteraction(org) {
+        const center = this.getCenter(org);
+        for (const other of this.organisms){
+            if (!other.alive || other.id === org.id) continue;
+            const otherCenter = this.getCenter(other);
+            const dist = v2.dist(center, otherCenter);
+            if (dist > 100 || dist < 1) continue;
+            const sizeDiff = Math.abs(org.particles.length - other.particles.length);
+            const diversityBonus = Math.min(1, sizeDiff / 5);
+            const complexity = Math.min(1, other.particles.length / other.genome.maxParticles);
+            const proximity = 1 - dist / 100;
+            const energyGain = proximity * complexity * diversityBonus * 0.05;
+            org.energy += energyGain;
         }
     }
     isFinished() {
