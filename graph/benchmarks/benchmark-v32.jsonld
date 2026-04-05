@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v32",
+  "timestamp": "2026-04-05T10:01:29.074Z",
+  "version": 32,
+  "parent": "benchmark-v31",
+  "task": "Implement Post-Quantum Byzantine-Resilient State Machine Replication (v32) extending v31 by adding: (1) Hybrid Threat Model Verification—agents must formally prove (in TLA+/Isabelle/Coq with machine-checked certificates) that consensus protocol resists both classical (unbounded Byzantine) AND quantum (polynomial-time adversary with superposition queries and entanglement) attacks simultaneously. Proofs must demonstrate: (a) no forgeability of CRYSTALS-Dilithium/SPHINCS+ signatures under combined classical+quantum CMA-EUF; (b) no Byzantine equivocation possible even with quantum oracle access to all prior states; (c) consensus liveness preserved under asynchronous network + Byzantine quorum recovery + quantum key exchange rekeying events. (2) Quantum Side-Channel Resistance—implement constant-time, quantum-leak-free implementations of post-quantum signature verification using formal methods to prove absence of timing channels observable to quantum adversaries (must verify using Quantum Information Theory analysis). (3) Byzantine Consensus Under Unbounded Faults—extend beyond classical f<n/3 to prove safety under full Byzantine majority (arbitrary n-1 Byzantine nodes) via threshold cryptography and distributed key generation (DKG) that survives quantum attacks. (4) Reconfiguration Liveness Under Concurrent Byzantine Recovery—formalize that membership changes during ongoing Byzantine faults cannot deadlock or violate safety, with proof that quantum-fast rekeying cannot be exploited to fork consensus. (5) Quantum-Resistant Group Signature Aggregation—implement threshold BLS-like schemes using lattice-based assumptions, formally verify non-frameability and exculpability hold against quantum PPT adversaries. (6) Complete Formal Artifact Chain—provide end-to-end verified artifacts: specification→protocol→implementation with no gaps, including quantum security proofs, side-channel analyses, and liveness arguments with explicit quantum/classical separation.",
+  "scoringLogic": "hybridThreatModelVerification(0.22) + quantumSideChannelResistance(0.20) + unboundedByzantineConsensusSafety(0.18) + reconfigurationLivenessProof(0.15) + quantumGroupSignatureAggregation(0.13) + formalArtifactChainCompleteness(0.12)",
+  "difficulty": 32,
+  "passThreshold": 0.95
+}
