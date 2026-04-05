@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775392720455",
+  "timestamp": "2026-04-05T12:38:40.455Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: movement cost scales faster than harvest gain. Slow entities with high conservation outperform fast spenders.; Efficiency is critically weak at 0.151 (only 15.1%), dragging overall fitness despite perfect survival. The root cause: moveSpeed is too high (0.6-0.7 across most genomes) relative to energyConserve (0.55-0.85), causing excessive energy burn. Additionally, rhythm (0.181) and coverage (0.404) within beauty are low, indicating insufficient temporal pulsing and spatial spread. Strategy: reduce moveSpeed for high-mobility entities, increase energyConserve for endurance, boost pulseFrequency for visual rhythm, and raise explorationDrive for grid coverage. This rebalances energy spend toward harvest gain.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
