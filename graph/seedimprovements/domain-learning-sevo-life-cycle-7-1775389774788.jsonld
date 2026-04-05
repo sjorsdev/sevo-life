@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775389774788",
+  "timestamp": "2026-04-05T11:49:34.788Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 15 insights",
+  "suggestion": "survivalRate is the highest-weighted component (0.5). Previous version prioritized efficiency,; reduced moveSpeed from 0.85 to 0.55 to avoid energy waste; increased energyConserve to 0.75; ultra-low moveSpeed (0.25) for endurance; highest energyConserve (0.88) to stretch energy; moveSpeed 0.5 (reduced from 0.7), energyConserve 0.65 (increased from 0.45) for longer survival; moderate moveSpeed (0.48), high energyConserve (0.68), maintains trail for beauty without waste; reduced moveSpeed to 0.6 (from 0.75), energyConserve 0.72 (from 0.65) for longer runway; moveSpeed 0.32 (very low), harvestThreshold 0.06 (captures marginal resources), energyConserve 0.82; moveSpeed 0.52 (reduced from 0.6), energyConserve 0.62 (increased from 0.5), pulse at 0.35 (less frequent); moveSpeed 0.54 (reduced from 0.65), energyConserve 0.64 (increased from 0.5), high trail sensitivity; Aggressive energy emergency response — preserve life first, harvest second.; Pulse only when well-fed — conservation first, beauty second; Smarter movement — reduce wasteful exploration. Prefer idle when energy is moderate and no clear resource nearby.; Resource attraction weighted by distance and entity energy state; Reduced exploration drive when energy is moderate or low; Idle more often, but leave aesthetic traces when appropriate",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
