@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775414403097",
+  "timestamp": "2026-04-05T18:40:03.097Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is caused by high-movement low-diversity organisms; solution is selective exploration boost on distinct morphologies + mild energy conservation on expensive movers.; Efficiency (0.451) is the weakest absolute component in the fitness formula. However, the beauty metric reveals a deeper issue: diversityOfForms (0.456) and spatialComposition (0.523) are both weak, indicating organisms are too similar and not exploring their spatial environment enough. The solution is a careful balance: improve energy efficiency while increasing exploration diversity to create morphologically varied behaviors. This grows beautyScore and survival without sacrificing the efficiency gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
