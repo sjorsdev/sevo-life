@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775393929277",
+  "timestamp": "2026-04-05T12:58:49.277Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Lower harvestThreshold captures marginal resources but wastes energy. Optimal threshold balances capture rate with energy expenditure—raise to ~0.15 across high-movement entities.; Efficiency (0.15) is critically low despite high survivalRate (0.875). Survival indicates entities live long, but low efficiency means poor resource-to-energy ratio. Root cause: harvestThreshold on entities 0, 1, 4 is too aggressive (0.08-0.1). They harvest continuously at marginal resource levels, burning energy for minimal gain. Rhythm (0.159) is also weak—low pulseFrequency values prevent emergent movement patterns. Fix by: (1) raising harvestThreshold to 0.15-0.18 to harvest only when resource density justifies energy cost, (2) boosting energyConserve on high-movement entities, (3) increasing pulseFrequency on non-aesthetic entities to improve rhythm without sacrificing efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
