@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412136948",
+  "timestamp": "2026-04-05T18:02:16.948Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "Efficiency gains come from matching movement cost to energy gain rate — slow + aggressive harvesting outperforms fast + sparse resources in particle systems.; Efficiency is critically weak (0.39) despite good beauty (0.726) and adequate survival (0.667). Efficiency bottleneck: organisms moving too fast relative to energy gain. Secondary: diversityOfForms (0.456) is lowest beauty metric — need phenotypic variation. Solution: split population into two strategies — (1) energy-efficient foragers with high resource attraction and conservative movement, and (2) exploratory trail-followers with higher speed but strong path memory. This trades exploration breadth for harvesting precision while increasing morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
