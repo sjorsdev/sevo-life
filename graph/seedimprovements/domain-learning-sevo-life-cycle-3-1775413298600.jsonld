@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413298600",
+  "timestamp": "2026-04-05T18:21:38.600Z",
+  "observation": "Domain sevo-life (fitness 0.553) generated 2 insights",
+  "suggestion": "Efficiency scales harder than beauty; small movement/conservation changes compound. Organisms 1,4,5 need immediate resourceAttraction boost; organism 2 is a template.; Efficiency is the critical bottleneck (0.437), limiting overall fitness despite decent survival (0.667) and beauty (0.711). Organisms are energy-inefficient—notice only organism 2 achieves 25 energy while others plateau at 8-11. Within beauty, motion grace (0.659) and spatial composition (0.634) lag. Strategy: reduce metabolic waste via moveSpeed/energyConserve tuning, boost resource harvesting for struggling organisms, and increase pulse dynamics for more graceful motion. Organism 2's high energy suggests the direction—conservative movement + high attraction.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
