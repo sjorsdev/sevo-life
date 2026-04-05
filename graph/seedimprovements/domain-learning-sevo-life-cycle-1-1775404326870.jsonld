@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775404326870",
+  "timestamp": "2026-04-05T15:52:06.870Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Rhythm emerges from synchronized oscillation, not individual pulse. Efficiency requires harvest frequency, not movement speed.; Fitness is dominated by perfect survival (1.0, 50% weight) but crippled by two components: rhythm at 0.191 (weakest beauty metric) and efficiency at 0.15 (massive untapped potential worth 0.03 directly, 20% of goal). Root cause: entities waste energy on high moveSpeed without efficient harvests (harvestThreshold too high on some), and pulseFrequency values are discordant (0.12–0.35 range, no harmony). Strategy: (1) synchronize pulseFrequency to create rhythmic resonance across population, (2) reduce energy waste by lowering moveSpeed on high-speed entities and lowering harvestThreshold globally to enable more frequent harvests, (3) boost energyConserve to stretch resources further.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
