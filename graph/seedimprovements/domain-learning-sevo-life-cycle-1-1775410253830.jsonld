@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410253830",
+  "timestamp": "2026-04-05T17:30:53.830Z",
+  "observation": "Domain sevo-life (fitness 0.620) generated 2 insights",
+  "suggestion": "Energy conservation > movement elegance. Survival depends on efficient feeding-to-movement ratio, not beautiful flocking.; Efficiency (0.383) is critically weak and bottlenecking overall fitness. Survival rate (0.5) is also low — organisms are dying despite good beauty. The issue: organisms look elegant but burn energy inefficiently. Only 3 of 6 alive. Alive ones (2,4,5) hit age 500 but with depleted energy (5-25), suggesting they're resource-starved. Diversity of forms (0.456) is lowest beauty metric — genomes are too similar. Strategy: reduce movement friction, boost resource seeking, improve energy harvesting. Increase harvestThreshold to trigger feeding at lower hunger levels. Vary trail colors and symmetry to increase morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
