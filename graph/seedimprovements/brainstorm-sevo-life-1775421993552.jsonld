@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775421993552",
+  "timestamp": "2026-04-05T20:46:33.552Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau at zero fitness across 705 cycles indicates the system has converged to a trivial equilibrium where all organisms are nearly identical and the fitness landscape is flat. The composite fitness formula (weighted sum of survival, beauty, efficiency) may be inadvertently punishing all variation equally. Breaking through requires introducing structural *asymmetries* that create new dimensions of differential fitness — not more of the same optimization. The system needs to make beauty or complexity *functionally necessary* (not optional), so that variation becomes advantageous rather than neutral.; [medium] Introduce tissue-level selection pressure: organisms can form multi-type tissue structures (sensory, contractile, adhesive, aesthetic) where tissue types have interdependent survival. A sensory tissue only functions if connected to contractile tissue; beauty emerges from structural coordination, not individual cells. — Current plateau suggests organisms converged to a single trivial strategy (uniform cell type or no differentiation). Requiring tissue cooperation creates new selective pressure for complexity. Fitness becomes a function of tissue integration quality, not just aggregate properties.; [medium] Beauty-as-resource: organisms that generate aesthetic patterns consume metabolic energy proportional to pattern complexity. Other organisms detect and preferentially migrate toward high-beauty regions (beauty becomes a public good). This creates beauty/survival trade-offs and strategic positioning in the world. — If beauty is currently decorative (pure scoring), it has no selective cost or benefit. Making beauty costly but attractive creates emergent behavior: some organisms specialize in beauty-generation and become resource sinks attracting others. Creates alliance and parasitism dynamics.; [hard] Environmental imprinting: organisms leave persistent aesthetic patterns in their environment that degrade over time. Regions with coherent beauty patterns from ancestors become higher-fitness spawning zones. Evolution must now optimize for both individual beauty AND creating inheritable aesthetic landscapes. — Current optimization is purely local/individual. Adding a distributed, persistent fitness landscape tied to beautiful history creates non-Markovian selection: past beauty choices influence current survival. This breaks flat-landscape assumptions and forces multi-generational strategy.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
