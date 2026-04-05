@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409540591",
+  "timestamp": "2026-04-05T17:19:00.591Z",
+  "observation": "Domain sevo-life (fitness 0.651) generated 2 insights",
+  "suggestion": "Survival is constrained by resource scarcity, not predation — organisms need better foraging, not better defense.; Survival rate is critically low at 0.5 (only 3/6 organisms alive, with 3 dead before reaching stable age). This is the bottleneck — it has the highest weight (0.5x) in the goal function. The three surviving organisms are all at age limit (500), suggesting they're barely sustainable. Root cause: organisms expend too much energy on movement without adequate resource recovery. Secondary issue: efficiency at 0.38 suggests particle count or movement cost is too high. Solution: (1) increase resourceAttraction globally to improve foraging success → longer lifespans → higher survival rate, (2) increase energyConserve to stretch available resources, (3) reduce pulseRate/swimStrength to lower movement overhead, (4) fine-tune based on morphology (crawlers need higher attraction, jellyfish need lower movement cost).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
