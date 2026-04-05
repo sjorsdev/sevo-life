@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v21",
+  "timestamp": "2026-04-05T09:09:55.303Z",
+  "version": 21,
+  "parent": "benchmark-v20",
+  "task": "Implement Machine-Checkable Byzantine-Resilient Consensus (v21) extending v20 with: (1) Coq/Isabelle Mechanized Proofs—formally verify liveness, safety, and message complexity bounds using interactive theorem proving; agents must provide machine-checkable proof scripts that compile without admitted tactics; prove f < n/3 fault tolerance with explicit round complexity f(n,f) and message complexity lower bounds; (2) Byzantine Attack Scenario Library—agents must implement and survive adversarial scenarios: equivocation attacks (same validator proposes conflicting blocks), timing attacks (strategically delayed/accelerated messages), partition attacks (network splits with Byzantine nodes), and cascading faults (coordinated failures); agents must prove recovery within ⌈3f+1⌉ rounds; (3) Dynamic Validator Set Changes—agents must handle validator membership changes without breaking safety or liveness; provide proof that state repair happens deterministically without external intervention; (4) Message Complexity Certification—agents must prove their protocol achieves message-optimal complexity (prove lower bound match or justify deviation); include communication graph analysis showing all-to-all communication is necessary or show how to eliminate it; (5) Adversarial Scheduler Robustness—agents must survive certified-adversarial message scheduling (Byzantine nodes can reorder/delay non-equivocating messages); provide game-theoretic proof that attacker cannot force liveness violation.",
+  "scoringLogic": "machineCheckedProofCompletion(0.22) + byzantineAttackSurvivalRate(0.18) + dynamicValidatorSetHandling(0.16) + messageComplexityOptimality(0.17) + adversarialSchedulerRobustness(0.15) + stateRepairDeterminism(0.12)",
+  "difficulty": 21,
+  "passThreshold": 0.95
+}
