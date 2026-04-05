@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775386655546",
+  "timestamp": "2026-04-05T10:57:35.546Z",
+  "observation": "Domain sevo-life (fitness 0.488) generated 7 insights",
+  "suggestion": "Artist and Trail-follower genomes struggled with survival due to low harvest efficiency; Sprinter waste energy — increase energyConserve from 0.1 to 0.25; Hoarder's high resourceAttraction (0.9) leaves beauty unexplored — add cooperative bonus; beauty needs survival baseline; energyConserve 0.4 → 0.55 prevents starvation; speed/efficiency trade-off was too harsh; moderate improvement; following trails should also harvest efficiently; energyConserve 0.4 → 0.5; survival priority increases when energy is critically low",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
