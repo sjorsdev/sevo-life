@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775389060241",
+  "timestamp": "2026-04-05T11:37:40.241Z",
+  "observation": "Domain sevo-life (fitness 0.689) generated 16 insights",
+  "suggestion": "efficiency improved by adding ultra-efficient harvesters and refining movement scoring; harvest threshold 0.04 (lowest) + high conservation = captures every marginal resource; near-zero movement + ultra-low threshold = efficient energy to harvest ratio; moderate speed + responsive harvest threshold = finds new patches without wasting energy; even lower threshold (0.05) + maximum conservation + resource focus = stable harvest; high trail attraction enables cooperative behavior, moderate efficiency still strong; endurance-focused through high conservation + steady harvest + long life; high pulse frequency + symmetry enable complex beauty emergence; moderate attraction but very responsive to local abundance; improved emergency response. When energy critical, relax harvest threshold; improved pulse behavior with adaptive frequency based on energy level; refined movement scoring with cluster detection; cluster bonus — moving towards multiple harvestable resources; reduced exploration randomness to focus movement on high-value directions; slight penalty for moving when very low energy (except towards resources); improved idle behavior. When full and stationary, leave beauty trail",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
