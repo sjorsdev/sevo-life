@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775392193347",
+  "timestamp": "2026-04-05T12:29:53.347Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Fast movement kills efficiency gains; conservation alone can't offset velocity costs. Increase pulse rhythm—current 0.15–0.3 is too low for complex beauty patterns.; Efficiency is critically low (0.143) with 0.2 weight in goals—the biggest improvement lever. All surviving entities reach avgAge=200 (full duration) but harvest very little relative to energy spent. The bottleneck is moveSpeed too high (0.65 on 3 entities) combined with inadequate energyConserve (0.55-0.6 on some). Rhythm is also weak (0.153) due to pulseFrequency capped at 0.3. Strategy: reduce moveSpeed on fast entities, raise energyConserve universally, increase pulseFrequency for beauty. This addresses both efficiency (0.143→0.25+) and beauty (0.578→0.65+).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
