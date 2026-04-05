@@ -410,33 +410,183 @@ async function recordDomainLearnings(
 }
 
 // ===========================================================================
-// MAIN — Detect domain from goal.jsonld and run evolution
+// META-CYCLE: EVOLVE → REFLECT → BRAINSTORM → REALIGN
 // ===========================================================================
-const MAX_CYCLES = 10;
+const EVOLVE_CYCLES = 5;  // evolution cycles per meta-cycle
+const fitnessHistory: number[] = [];
+
+// --- REFLECT: analyze trends, detect plateaus ---
+async function reflect(
+  goal: GoalConfig,
+  fitnessHistory: number[],
+): Promise<{ plateauing: boolean; trend: string; summary: string }> {
+  console.log(`\n============================================================`);
+  console.log(`  REFLECT`);
+  console.log(`============================================================`);
+
+  const recent = fitnessHistory.slice(-10);
+  const older = fitnessHistory.slice(-20, -10);
+
+  const recentAvg = recent.length > 0 ? recent.reduce((a, b) => a + b, 0) / recent.length : 0;
+  const olderAvg = older.length > 0 ? older.reduce((a, b) => a + b, 0) / older.length : 0;
+  const delta = recentAvg - olderAvg;
+
+  const plateauing = recent.length >= 5 && Math.abs(delta) < 0.01;
+  const trend = delta > 0.02 ? "improving" : delta < -0.02 ? "declining" : "plateau";
+
+  const summary = `Fitness trend: ${trend} (recent avg: ${recentAvg.toFixed(3)}, delta: ${delta.toFixed(4)}). ` +
+    `History: ${fitnessHistory.length} cycles. ${plateauing ? "PLATEAU DETECTED — need structural change." : ""}`;
+
+  console.log(`  ${summary}`);
+
+  // Write reflection to graph
+  await writeNode({
+    "@context": "sevo://v1",
+    "@type": "SeedImprovement",
+    "@id": `reflection-${goal.domain}-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    observation: summary,
+    suggestion: plateauing
+      ? "Fitness is plateauing. Parameter tuning has reached its limit. Need structural evolution: new body types, new actions, new beauty dimensions, or changes to the simulation engine itself."
+      : `Continue current approach. Trend: ${trend}.`,
+    evidence: [`fitness-history:${recent.join(",")}`, `trend:${trend}`, `delta:${delta.toFixed(4)}`],
+    priority: plateauing ? 9 : 3,
+  } as SeedImprovementNode);
+
+  return { plateauing, trend, summary };
+}
+
+// --- BRAINSTORM: when stuck, propose structural changes ---
+async function brainstorm(
+  goal: GoalConfig,
+  reflectionSummary: string,
+): Promise<string[]> {
+  console.log(`\n============================================================`);
+  console.log(`  BRAINSTORM — proposing structural changes`);
+  console.log(`============================================================`);
+
+  // Read all learnings for context
+  const learnings = await queryNodes<SeedImprovementNode>("seedimprovement");
+  const recentLearnings = learnings
+    .sort((a, b) => b.timestamp.localeCompare(a.timestamp))
+    .slice(0, 10)
+    .map((l) => `- ${l.observation.slice(0, 100)}`)
+    .join("\n");
+
+  const prompt = `You are the meta-evolution brain of a sevo-life system.
+
+SITUATION: ${reflectionSummary}
+
+GOAL: ${goal.name}
+Composite fitness: ${goal.compositeFitness}
+Goals: ${goal.goals.map((g) => g.name).join(", ")}
+
+RECENT LEARNINGS:
+${recentLearnings}
+
+The system is stuck. Parameter tuning has hit its limit. Propose 3 STRUCTURAL changes that could break through the plateau. Not parameter tweaks — architectural changes to how the simulation works.
+
+Think about: new body cell types, new organism actions, new beauty dimensions, changes to world physics, new interaction types between organisms, changes to the decision function structure, new growth rules.
+
+Respond with JSON only:
+{
+  "proposals": [
+    {"change": "description", "rationale": "why this breaks the plateau", "difficulty": "easy|medium|hard"},
+    {"change": "description", "rationale": "why", "difficulty": "easy|medium|hard"},
+    {"change": "description", "rationale": "why", "difficulty": "easy|medium|hard"}
+  ],
+  "insight": "one key meta-insight about why evolution is stuck"
+}`;
+
+  try {
+    const response = await callClaude(prompt);
+    const jsonMatch = response.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) return [];
+    const parsed = JSON.parse(jsonMatch[0]);
+
+    const proposals: string[] = [];
+    if (parsed.insight) {
+      console.log(`  Meta-insight: ${parsed.insight}`);
+      proposals.push(parsed.insight);
+    }
+    if (parsed.proposals) {
+      for (const p of parsed.proposals) {
+        console.log(`  Proposal [${p.difficulty}]: ${p.change}`);
+        console.log(`    Rationale: ${p.rationale}`);
+        proposals.push(`[${p.difficulty}] ${p.change} — ${p.rationale}`);
+      }
+    }
+
+    // Write brainstorm to graph
+    await writeNode({
+      "@context": "sevo://v1",
+      "@type": "SeedImprovement",
+      "@id": `brainstorm-${goal.domain}-${Date.now()}`,
+      timestamp: new Date().toISOString(),
+      observation: `Brainstorm triggered by plateau. ${proposals.length} proposals generated.`,
+      suggestion: proposals.join("; "),
+      evidence: [`trigger:plateau`, `proposals:${proposals.length}`],
+      priority: 8,
+    } as SeedImprovementNode);
+
+    return proposals;
+  } catch (e) {
+    console.log(`  Brainstorm failed: ${(e as Error).message.slice(0, 100)}`);
+    return [];
+  }
+}
+
+// --- REALIGN: check if we're still serving the goal ---
+async function realign(goal: GoalConfig, bestFitness: number): Promise<void> {
+  console.log(`\n============================================================`);
+  console.log(`  REALIGN — goal check`);
+  console.log(`============================================================`);
+
+  const agents = await queryNodes<AgentNode>("agent", (a) => a.status === "active" && a.domain === goal.domain);
+  const totalLearnings = (await queryNodes<SeedImprovementNode>("seedimprovement")).length;
+
+  console.log(`  Goal: ${goal.name}`);
+  console.log(`  Active agents: ${agents.length}`);
+  console.log(`  Best fitness: ${bestFitness.toFixed(3)}`);
+  console.log(`  Total learnings: ${totalLearnings}`);
+  console.log(`  Are we making life more beautiful? ${bestFitness > 0.7 ? "Yes — pushing further." : bestFitness > 0.5 ? "Getting there." : "Not yet — fundamentals first."}`);
+}
+
+// ===========================================================================
+// MAIN — Meta-cycle: EVOLVE → REFLECT → BRAINSTORM → REALIGN
+// ===========================================================================
 
 async function main() {
   const goal = await loadGoal();
   console.log(`\nSEVO Domain Evolution: ${goal.name}`);
-  console.log(`Domain: ${goal.domain}`);
-  console.log(`Goals: ${goal.goals.length}`);
-  console.log(`Composite fitness: ${goal.compositeFitness}`);
+  console.log(`Meta-cycle: ${EVOLVE_CYCLES} evolve → reflect → brainstorm (if stuck) → realign`);
 
-  for (let cycle = 1; cycle <= MAX_CYCLES; cycle++) {
+  // --- EVOLVE phase ---
+  let bestFitness = 0;
+  let bestAgentId: string | null = null;
+
+  for (let cycle = 1; cycle <= EVOLVE_CYCLES; cycle++) {
     console.log(`\n============================================================`);
-    console.log(`  DOMAIN CYCLE ${cycle}/${MAX_CYCLES}`);
+    console.log(`  EVOLVE ${cycle}/${EVOLVE_CYCLES}`);
     console.log(`============================================================`);
 
-    const { improvements, bestFitness, bestAgentId } = await runDomainCycle(goal, cycle);
+    const result = await runDomainCycle(goal, cycle);
 
-    if (improvements.length > 0) {
-      console.log(`\n  Domain insights:`);
-      for (const insight of improvements) {
+    if (result.improvements.length > 0) {
+      console.log(`\n  Insights:`);
+      for (const insight of result.improvements) {
         console.log(`    - ${insight}`);
       }
-      await recordDomainLearnings(goal.domain, improvements, bestFitness, cycle);
+      await recordDomainLearnings(goal.domain, result.improvements, result.bestFitness, cycle);
     }
 
-    // Compute SevoScore
+    fitnessHistory.push(result.bestFitness);
+    if (result.bestFitness > bestFitness) {
+      bestFitness = result.bestFitness;
+      bestAgentId = result.bestAgentId;
+    }
+
+    // SevoScore
     console.log("\n--- SevoScore ---");
     await computeSevoScore(
       `${goal.domain}-cycle-${cycle}-${Date.now()}`,
@@ -445,13 +595,23 @@ async function main() {
       bestFitness,
     );
 
-    // Cooldown between cycles
-    if (cycle < MAX_CYCLES) {
-      await new Promise((r) => setTimeout(r, 5_000));
+    if (cycle < EVOLVE_CYCLES) {
+      await new Promise((r) => setTimeout(r, 3_000));
     }
   }
 
-  console.log(`\n${goal.domain} evolution complete (${MAX_CYCLES} cycles).`);
+  // --- REFLECT phase ---
+  const reflection = await reflect(goal, fitnessHistory);
+
+  // --- BRAINSTORM phase (only if plateauing) ---
+  if (reflection.plateauing) {
+    await brainstorm(goal, reflection.summary);
+  }
+
+  // --- REALIGN phase ---
+  await realign(goal, bestFitness);
+
+  console.log(`\n${goal.domain} meta-cycle complete.`);
 }
 
 main();
