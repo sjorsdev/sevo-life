@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411721109",
+  "timestamp": "2026-04-05T17:55:21.109Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: metabolism > benefit. Throttle movement, up conservation, diversify morphology.; Efficiency is critically weak (0.42 vs beauty 0.733, survival 0.667). Organisms burn energy inefficiently despite moderate survival. ID 0 died early (379), ID 3 very early (225). IDs 1 & 4 have only 5 energy at age 500 — barely surviving. Reduce energy waste via lower moveSpeed, higher energyConserve. Also diversityOfForms is only 0.456 within beauty metrics — organisms too morphologically similar. Increase trailColor and patternSymmetry variance to boost visual diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
