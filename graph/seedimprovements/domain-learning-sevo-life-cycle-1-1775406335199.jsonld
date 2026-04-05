@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406335199",
+  "timestamp": "2026-04-05T16:25:35.199Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Efficiency gains via metabolic restraint + guided harvesting unlock the fitness ceiling; waste reduction on trails and exploration yields better returns than current high-variance approach.; Efficiency is the critical bottleneck (0.411 vs 0.667 survival, 0.679 beauty), despite only 20% weight. Current organisms show high energy waste and suboptimal movement patterns. Two deaths (org 0 at 350, org 3 at 227) suggest either excessive metabolic costs or poor resource acquisition. To improve: (1) reduce trail overhead via lower trailIntensity, (2) cut exploratory waste via lower explorationDrive, (3) boost energy retention via energyConserve, (4) tighten harvesting to reduce failed attempts. Secondary: spatial composition (0.513) and form diversity (0.456) are weak — adding selectivity to movement and encouraging varied morphologies will help. Organisms 2 and 5 (8 particles, ~13-23 energy) outperform larger variants, suggesting smaller bodies with conservative strategies win.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
