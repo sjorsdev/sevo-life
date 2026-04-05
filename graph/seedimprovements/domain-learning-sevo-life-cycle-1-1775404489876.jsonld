@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775404489876",
+  "timestamp": "2026-04-05T15:54:49.876Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Rhythm (periodic pulsing) is the missing beauty element; fast movement kills efficiency. Shift to sustainable movement + deliberate pulsing.; Fitness is bottlenecked by efficiency (0.149) and beautyScore (0.56). Within beauty, rhythm (0.12) is critically weak. Strategy: (1) reduce moveSpeed on fast entities (Harvester at 0.85 wastes energy), (2) boost pulseFrequency globally to fix rhythm deficit, (3) increase energyConserve to improve efficiency baseline. Rhythm improvement alone lifts beautyScore from 0.56 → ~0.65+, adding ~0.027 to overall fitness. Efficiency gains from speed reduction add ~0.015.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
