@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775392749713",
+  "timestamp": "2026-04-05T12:39:09.713Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement waste, not harvest logic. Beauty bottleneck is low rhythm/pulse on most entities — only Aesthetic Harvester (0.35) generates temporal patterns; rest are static or near-silent.; Efficiency (0.14) is critically low and dominates loss — even at 50% weight for survival, the 0.2 weight on efficiency drags fitness hard. Beauty rhythm (0.091) and coverage (0.375) are secondary bottlenecks. Root cause: moveSpeed is too high (0.6–0.7 wastes energy), harvestThreshold tuning is uneven, and pulseFrequency/explorationDrive don't optimize the stated metrics. Fix: (1) Cut moveSpeed across resource-seeking genomes to 0.4–0.5 (direct energy savings), (2) Push energyConserve to 0.75–0.8 on efficiency-focused entities, (3) Lower harvestThreshold on high-conservation genomes to harvest more frequently without extra movement, (4) Boost pulseFrequency on Aesthetic Harvester to fix rhythm + encourage trail coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
