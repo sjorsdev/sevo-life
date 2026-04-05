@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411889110",
+  "timestamp": "2026-04-05T17:58:09.110Z",
+  "observation": "Domain sevo-life (fitness 0.602) generated 2 insights",
+  "suggestion": "Smaller organisms + efficient movement > large ornate ones. Efficiency is the leverage point for fitness gain.; Efficiency is the critical bottleneck (0.46 vs 0.667 survival, 0.736 beauty). Dead organisms had 13 particles and high energy cost; survivors average 8-10 particles. Smaller, leaner organisms outsurvive. Additionally, diversityOfForms (0.456) is weak within beauty metrics. Strategy: reduce structural mass and drag friction to cut energy waste per particle, increase energyConserve on survivors to compound efficiency gains, vary trailColor/patternSymmetry across genomes to boost form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
