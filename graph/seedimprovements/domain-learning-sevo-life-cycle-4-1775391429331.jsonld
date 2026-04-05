@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775391429331",
+  "timestamp": "2026-04-05T12:17:09.331Z",
+  "observation": "Domain sevo-life (fitness 0.711) generated 2 insights",
+  "suggestion": "Efficiency emerges from stillness + conservation + purposeful movement. High speed kills it. Rhythm emerges from regular pulse intervals ~0.25–0.33, not sporadic 0.04–0.15.; Efficiency at 0.157 is the critical bottleneck, dragging overall fitness to 0.697. The high moveSpeed entities (Harvester, Persistence Hunter) are burning energy on movement without proportional resource gain. energyConserve values are too low across the board (0.4–0.8 range). Additionally, rhythm score is catastrophically low at 0.04, indicating lack of temporal pattern coherence. The solution: reduce movement energy waste by lowering moveSpeed on high-speed genomes and raising energyConserve globally, adjust pulseFrequency to create regular 4–6 beat rhythms (0.25–0.33 range = predictable cycles), and tighten resourceAttraction on explorers to reduce fruitless searching.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
