@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413617954",
+  "timestamp": "2026-04-05T18:26:57.954Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "High survival masks inefficiency—organisms are too mobile and undirected. Constrain movement, incentivize exploration over raw speed, preserve resources.; Efficiency is lowest (0.561) and spatial composition is critically weak (0.3). Organisms survive well but waste energy on movement and cluster poorly. Reduce moveSpeed to cut energy waste, increase explorationDrive to spread spatially, boost energyConserve to stretch resources further, increase trailIntensity to visualize emergent spatial patterns. These changes target the two weakest fitness components.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
