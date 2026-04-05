@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410554520",
+  "timestamp": "2026-04-05T17:35:54.520Z",
+  "observation": "Domain sevo-life (fitness 0.608) generated 2 insights",
+  "suggestion": "Organisms are energetically expensive scouts that don't harvest efficiently. Make them lean foragers with varied body plans.; Efficiency is critically weak at 0.522 (vs beautyScore 0.714, survivalRate 0.667). Organisms burn energy in movement and exploration without harvesting enough. Secondary weakness: diversityOfForms only 0.456 — genomes lack morphological variation. Strategy: (1) reduce movement costs via lower moveSpeed and pulseFrequency, (2) boost energy harvesting via resourceAttraction and harvestThreshold, (3) increase energyConserve for basal metabolism, (4) vary patternSymmetry across genomes to boost form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
