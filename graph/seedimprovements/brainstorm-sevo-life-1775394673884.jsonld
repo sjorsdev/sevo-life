@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775394673884",
+  "timestamp": "2026-04-05T13:11:13.884Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The system has optimized organisms within a *static ecological niche*. Parameter tuning can't escape—you've found the peak in that landscape. To break the plateau, *change the landscape itself*: add new selection pressures (tissue complexity, resource scarcity, inter-species competition) that force organisms into unexplored design spaces. Evolution is stuck not because organisms are optimal, but because the environment stopped asking new questions. Introduce new questions and fitness will climb again.; [medium] Multi-cell tissue differentiation: Allow organisms to evolve specialized cell types (sensory, structural, metabolic, signaling) instead of homogeneous cells. Add morphogenesis rules where genome specifies tissue growth patterns. — Current fitness likely optimizes single-cell behavior. Tissue specialization opens new design space: nervous systems, muscular structures, sensory arrays. Beauty explodes when bodies have integrated form. Survival pressure shifts from 'survive as blob' to 'survive as differentiated organism'. No amount of parameter tuning in homogeneous-cell design can access this space.; [medium] Metabolic economy: Introduce energetic cost to growth, movement, and beauty displays. Organisms must harvest energy from environment (photosynthesis, chemosynthesis, or predation). Create energy competition between organisms. — Plateau happens because current fitness treats survival and beauty independently. With energy scarcity, beauty becomes a costly signal. Organisms must now find new beauty-survival tradeoffs: invest energy in display that attracts mates OR in growth. This creates frequency-dependent selection and arms races—escape velocity mechanisms that simple optimization can't reach.; [hard] Predator-prey trophic levels: Introduce heterotrophic organisms that feed on autotrophs. Create two species with opposite beauty/survival drivers (predators need aggression aesthetics, prey need camouflage). Ecosystem dynamics drive innovation faster than single-population evolution. — Single-population plateau: organisms converge on locally-optimal solutions. Multi-species system creates Red Queen dynamics—predators drive prey innovation, prey evolution drives predator counter-adaptation. Beauty emerges from predator-prey co-evolution (mimicry, aposematism, elaborate displays). This is harder but creates compound innovation cycles that break stagnation.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
