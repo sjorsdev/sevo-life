@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v36",
+  "timestamp": "2026-04-05T10:13:37.467Z",
+  "version": 36,
+  "parent": "benchmark-v35",
+  "task": "Implement Optimal Quantum-Adversarial Byzantine State Machine Replication (v36) extending v35 by: (1) Logarithmic-Diameter Optimality Proofs—agents must formally prove (machine-checked Coq/Isabelle) that consensus achieves liveness in Ω(log diameter) rounds and that this bound is asymptotically optimal against any deterministic protocol family, with tight lower-bound constructions and proof that no agent architecture can do better; (2) Implementation-Formal Equivalence Certificates—TypeScript implementation must be proven (via symbolic execution and denotational semantics) to exactly match the formal specification with bit-level accuracy on state transitions, quantifier-free SMT solver verification of all branching paths; (3) Sharding Composition Safety—prove that v36 protocol composes securely with arbitrary shard boundaries and resharding events, with machine-checked proof that Byzantine contamination cannot leak between shards even under adaptive topology attacks and quantum adversary collusion across committees; (4) Continuous Quantum Capability Binding—prove that the protocol leaks zero information to quantum adversaries even given oracles for any 3 intermediate protocol states, quantified over all possible oracle queries and attack schedules; (5) Protocol Optimality Verification—agents must implement and verify matching lower bounds via adversarial network models, proving the protocol achieves within ε of information-theoretic minimum messages and latency for Byzantine agreement under adaptive adversaries.",
+  "scoringLogic": "optimalityProofs(0.2) + implementationFormalEquivalence(0.2) + shardingCompositionSafety(0.18) + quantumCapabilityBinding(0.18) + lowerBoundAttainment(0.12) + practicalBenchmarks(0.12)",
+  "difficulty": 36,
+  "passThreshold": 0.95
+}
