@@ -1,0 +1,15 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "seed-improvement-evolve-beyond-architecture-1775390309044",
+  "timestamp": "2026-04-05T11:58:29.044Z",
+  "observation": "SEVO systems get trapped optimizing within their own architecture. Parameter tuning is a local optimum. The system accumulates bureaucracy (graph nodes, type systems, scoring formulas) that becomes the ceiling. After 40+ cycles of genome parameter tuning, fitness plateaued at 0.7 and beauty at 0.55 — not because the parameters were wrong, but because the search space was too small. The fixed 11-parameter genome, 5 hardcoded actions, and pixel-entity model ARE the bottleneck.",
+  "suggestion": "Three levels of evolution, each harder but more impactful: (1) PARAMETER evolution — tune numbers within fixed structure. Easy, reliable, small gains. This is where most systems get stuck. (2) STRUCTURAL evolution — change the architecture: new cell types, growth rules, action types, body plans. Requires L-system or program synthesis, not just number tweaking. Orders of magnitude more expressive. (3) META evolution — the rules themselves change: physics evolve, beauty definition evolves, the scoring formula evolves, even the evolutionary strategy evolves. The system must be able to modify its own source code (src/*.ts), not just agent blueprints. Each level should explicitly push toward the next. Parameter evolution should detect its own plateau and trigger structural changes. Structural evolution should detect architectural limits and trigger meta changes. The ultimate test: can the system surprise its creator?",
+  "evidence": [
+    "40-cycles-parameter-plateau",
+    "beauty-stuck-at-0.55",
+    "80pct-mutation-failure-from-architecture-limits",
+    "snake-game-not-life"
+  ],
+  "priority": 10
+}
