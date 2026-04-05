@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775388931907",
+  "timestamp": "2026-04-05T11:35:31.907Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 8 insights",
+  "suggestion": "survival rate was bottleneck at ~0.65. Added cooperative trail-following; new role bridges harvesting and trail cooperation. High trailAttraction (0.5); increased energyConserve to 0.85 (was 0.8) to prevent early energy crash.; beauty was lagging at ~0.68. Increased trailIntensity to 0.9 and; increased energyConserve from 0.55 to 0.70 to reduce starvation deaths.; exploration was underutilized. Increased explorationDrive to 0.9; new role amplifies beauty emergence. Extremely high trailAttraction (0.75); resource distribution changes over time. This role adapts harvest threshold",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
