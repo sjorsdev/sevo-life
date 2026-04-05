@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405199052",
+  "timestamp": "2026-04-05T16:06:39.052Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Population has converged to single strategy; spatial utilization near-zero. Need diversity in movement strategies + global energy efficiency boost + visual distinctness.; Fitness breakdown shows three critical weaknesses: spatialComposition (0.3) is critically low — organisms cluster poorly across the grid. efficiency (0.453) is the weakest goal component (20% weight) — energy waste is high. diversityOfForms (0.457) shows morphological homogeneity — all organisms too similar. All organisms are age 500 with similar particle counts (8-13), suggesting inbred population. Fix: increase movement and exploration to spread organisms and reduce spatial clustering (→ spatialComposition). Boost energy conservation to lower waste per cycle (→ efficiency). Introduce phenotypic variation in trails and pulsing across entities (→ diversityOfForms). Start with explorers (high moveSpeed, explorationDrive) and conservers (high energyConserve, resourceAttraction).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
