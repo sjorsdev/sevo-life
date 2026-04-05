@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775390014748",
+  "timestamp": "2026-04-05T11:53:34.748Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "High exploration + high moveSpeed = expensive wandering. Reduce movement overhead, let resourceAttraction do the work.; Efficiency at 0.153 is the critical bottleneck, dragging overall fitness from potential 0.8+ to 0.7. Survival (1.0) and beauty (0.565) are reasonable, but the simulation is burning energy inefficiently. The Harvester (high moveSpeed 0.85 + explorationDrive 0.7) and Persistence Hunter (0.75 + 0.8) are the largest energy sinks. Strategy: reduce movement costs on inefficient seekers, boost energyConserve universally. This maintains foraging effectiveness while cutting waste.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
