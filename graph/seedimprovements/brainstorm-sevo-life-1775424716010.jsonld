@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775424716010",
+  "timestamp": "2026-04-05T21:31:56.010Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau exists because **evolution exhausted the parameter tuning frontier under constraints**. The current morphology space, action primitives, and evaluation function form a closed optimization surface — plateau is the peak. Breaking through requires expanding the constraint itself: new cell types (new morphological dimensions), environmental instability (new temporal dimensions), or goal fragmentation (new objective dimensions). The system needs new *kinds of things it can be*, not better versions of what it already is.; [hard] Introduce specialized cell types with asymmetric capabilities: muscle cells (movement only), sensory cells (perception only), neural cells (decision/memory only), reproductive cells (self-replication only). Organisms must now coordinate heterogeneous cell types; simple homogeneous blobs are no longer viable. — Current plateau suggests homogeneous cell morphologies have saturated their design space. Requiring cell differentiation creates new degrees of freedom for evolution — cellular roles, signaling networks, developmental complexity. Organisms must evolve integration logic, not just parameter tuning.; [medium] Make the world dynamic: introduce periodic environmental shifts (nutrient distribution changes every N cycles, new predator/toxin zones emerge, climate gradient oscillates). Freeze one environment dimension each shift cycle to maintain some stability, but never allow true equilibrium. — 740 cycles of plateau suggests organisms have locally-optimized to static conditions. Dynamic environments prevent local optima entrapment by constantly invalidating previous solutions. Beauty and survival strategies must now be robust to perturbation, not just fine-tuned to one world state.; [easy] Fragment the beauty metric into independent genetic dimensions: instead of one 'beautyScore', evolve traits like (symmetry_preference, movement_fluidity, color_vibrancy, size_harmony) with independent genes controlling each. Organisms inherit different beauty phenotypes; coexist in niches, not monoculture. — Single aggregate beauty metric has created convergent evolution — all organisms chasing the same local optimum. Multiple beauty dimensions create ecological speciation: some organisms become beautiful by symmetry, others by motion, others by scale relationships. Diversity re-enters; plateau breaks.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
