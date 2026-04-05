@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775390894125",
+  "timestamp": "2026-04-05T12:08:14.125Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 2 insights",
+  "suggestion": "Efficiency collapses when high-speed exploration burns energy without proportional resource gain; shift from speed to conservation and targeted attraction.; Efficiency is critically weak (0.151) due to high energy expenditure without corresponding resource gains. High-speed entities (Harvester at 0.85, Persistence Hunter at 0.75) paired with low-to-moderate energy conservation (0.4-0.65) are burning calories faster than they harvest. Survival is perfect (1.0) because the world is resource-rich, but entities are wasteful. Beauty also suffers from low rhythm (0.239) and coverage (0.358). Solution: increase energyConserve across energy-intensive variants, reduce unnecessary moveSpeed, lower explorationDrive waste, and boost pulseFrequency/trailIntensity for visual impact.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
