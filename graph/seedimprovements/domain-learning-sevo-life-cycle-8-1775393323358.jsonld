@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775393323358",
+  "timestamp": "2026-04-05T12:48:43.358Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Wasted energy kills efficiency harder than under-harvesting. Beauty emerges from sustained, rhythmic presence, not raw trail intensity.; Efficiency is critically underweighted (0.149 vs 0.2 goal). Energy conservation is the primary bottleneck. Secondary issue: rhythm (0.193) and coverage (0.421) drag beautyScore down. Strategy: (1) Increase energyConserve across high-movement entities to reduce waste, (2) Boost trailIntensity and pulseFrequency on beauty specialists to improve rhythm/coverage, (3) Moderate moveSpeed on aggressive seekers to match exploration drive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
