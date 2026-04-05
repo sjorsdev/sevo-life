@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413866329",
+  "timestamp": "2026-04-05T18:31:06.329Z",
+  "observation": "Domain sevo-life (fitness 0.598) generated 2 insights",
+  "suggestion": "Organisms are beautifully formed but starving — energy capture is the bottleneck, not structure.; Efficiency is the bottleneck at 0.293 vs. beautyScore's 0.761. Three organisms died by age 349; the living three have very low energy relative to particle count. Primary issue: inefficient resource capture and energy conversion. The jellyfish has 20 max particles but only 5-22 total energy; crawler likely similar. Increasing resourceAttraction, energyConserve, and explorationDrive will help organisms find and retain energy. Reducing harvestThreshold lets them feed more frequently. Slight reduction in swimStrength/moveSpeed reduces energy waste on movement. These changes maintain beauty (already high on formBeauty, motionGrace, proportionHarmony) while rescuing efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
