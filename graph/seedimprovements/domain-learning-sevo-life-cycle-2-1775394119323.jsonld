@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394119323",
+  "timestamp": "2026-04-05T13:01:59.323Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Movement efficiency (energyConserve vs moveSpeed ratio) dominates efficiency gain. Pulse rhythm emerges from frequency diversity—spread it wider.; Efficiency (0.153) is critically weak—lowest component by far. Root cause: high movement speed (0.85, 0.75) and low energy conservation (0.25-0.4) across multiple entities waste resources. Secondary: rhythm (0.186) is weak due to underutilized pulseFrequency. Strategy: (1) Increase energyConserve to 0.55-0.7 across high-movement entities, reduce moveSpeed where safe; (2) Boost pulseFrequency for entities with <0.15 to create emergent patterns. Survivalrate is perfect (1.0), so conservative tweaks only.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
