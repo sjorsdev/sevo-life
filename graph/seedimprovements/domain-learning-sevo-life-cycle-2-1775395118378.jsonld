@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775395118378",
+  "timestamp": "2026-04-05T13:18:38.378Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency improves by moving less, harvesting more selectively—not by moving faster. Beauty emerges from consistent periodic signals, not sparse trails.; Efficiency at 0.138 is the critical bottleneck (0.5× weight + 0.3× beauty). Current genomes move too fast (0.65-0.85) relative to harvest density, burning energy inefficiently. Reducing moveSpeed across aggressive movers and raising harvestThreshold (wait for denser resources) will lower wasted motion. Separately, beauty's rhythm (0.209) and coverage (0.388) are weak—boost pulseFrequency and trailIntensity in the aesthetic role to improve pattern emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
