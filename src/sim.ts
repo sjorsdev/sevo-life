@@ -255,6 +255,10 @@ export class World {
       // Harvest
       this.harvest(org);
 
+      // Social energy — beautiful organisms near you give energy (mutualism)
+      // This couples beauty to survival: being near beautiful others helps you live
+      this.socialInteraction(org);
+
       // Pulse — rhythmic expansion
       if (org.genome.pulseRate > 0) {
         const pulse = Math.sin(this.tick * org.genome.pulseRate * 0.1) * 0.3;
@@ -428,6 +432,32 @@ export class World {
           r.amount -= Math.min(r.amount, 0.1);
         }
       }
+    }
+  }
+
+  private socialInteraction(org: Organism): void {
+    // Organisms near beautiful others gain energy — beauty becomes a survival advantage.
+    // This couples beauty to fitness: the more beautiful your neighbors, the better you do.
+    // Mechanism: beautiful organisms attract resources (like flowers attract pollinators).
+    const center = this.getCenter(org);
+
+    for (const other of this.organisms) {
+      if (!other.alive || other.id === org.id) continue;
+      const otherCenter = this.getCenter(other);
+      const dist = v2.dist(center, otherCenter);
+
+      if (dist > 100 || dist < 1) continue;
+
+      // Both organisms benefit from proximity if they're different (diversity bonus)
+      const sizeDiff = Math.abs(org.particles.length - other.particles.length);
+      const diversityBonus = Math.min(1, sizeDiff / 5);
+
+      // Energy transfer based on neighbor's particle count (proxy for form complexity)
+      const complexity = Math.min(1, other.particles.length / other.genome.maxParticles);
+      const proximity = 1 - dist / 100;
+
+      const energyGain = proximity * complexity * diversityBonus * 0.05;
+      org.energy += energyGain;
     }
   }
 
