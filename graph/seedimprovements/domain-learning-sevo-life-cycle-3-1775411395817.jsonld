@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411395817",
+  "timestamp": "2026-04-05T17:49:55.817Z",
+  "observation": "Domain sevo-life (fitness 0.647) generated 2 insights",
+  "suggestion": "Starvation is the bottleneck, not physics or beauty. Energy acquisition > energy conservation.; Survival rate is critical (0.5 = half dead) and efficiency is lowest at 0.465. Dead organisms aged 368-415 are starving (energy→0). Root cause: organisms burn energy faster than they acquire resources. Fix: (1) Increase resourceAttraction to find food more reliably, (2) Increase energyConserve to reduce metabolic waste, (3) Lower moveSpeed to reduce locomotion cost, (4) Lower harvestThreshold to eat more frequently before critical. Beauty is already strong (0.754) so preserve those parameters. The 3 alive organisms made it to age 500 with moderate energy (15-31), suggesting current physics are viable if resource acquisition improves.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
