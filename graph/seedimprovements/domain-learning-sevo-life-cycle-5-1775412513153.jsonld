@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412513153",
+  "timestamp": "2026-04-05T18:08:33.153Z",
+  "observation": "Domain sevo-life (fitness 0.620) generated 2 insights",
+  "suggestion": "Simpler bodies with focused resource-seeking outperform complex ones. Beauty is sufficient; efficiency needs ruthless optimization.; Efficiency (0.298) is the critical bottleneck — organisms are surviving and beautiful but failing to gather resources efficiently. Organisms 1 and 4 (12 particles, low energy: 4 and 7) waste complexity on non-productive particles. The efficient ones (2, 5 with 8 particles, high energy: 13, 11) show that smaller morphologies harvest better. Tuning: boost resourceAttraction to aggressively track food, reduce explorationDrive to avoid random energy waste, lower avoidanceRadius to spend less energy avoiding others, increase energyConserve to stretch gathered resources. Also reduce baseRadius slightly — smaller, leaner bodies are more efficient.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
