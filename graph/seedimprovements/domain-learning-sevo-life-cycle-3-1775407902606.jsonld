@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407902606",
+  "timestamp": "2026-04-05T16:51:42.606Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Energy starvation, not age, limits survival. Shift from speed to efficiency; make organisms hunt harder, move slower.; Efficiency is critically weak (0.403, dragging down overall 0.603), causing premature death in 2/6 organisms. Root cause: organisms burn energy moving but don't harvest resources effectively. Survival rate (0.667) correlates with energy depletion. Beauty diversity (0.456) is also low — organisms are too visually similar. Fix: reduce movement cost, boost resource attraction and energy conservation, vary trail colors for diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
