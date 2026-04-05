@@ -57,7 +57,7 @@ const crawler: Genome = {
   springDamping: 0.1,
   drag: 0.95,
   baseRadius: 4,
-  resourceAttraction: 0.4,
+  resourceAttraction: 0.8,
   flockingStrength: 0.1,
   avoidanceRadius: 30,
   pulseRate: 0.2,
