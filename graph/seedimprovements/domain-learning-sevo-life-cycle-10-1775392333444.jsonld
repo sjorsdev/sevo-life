@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775392333444",
+  "timestamp": "2026-04-05T12:32:13.444Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency collapse from explore-exploit imbalance: high movement cost, low harvest commitment. Shift toward slower, aggressive foragers.; Efficiency (0.144) is the critical bottleneck. Entities survive perfectly but waste energy through excessive movement without corresponding resource gains. Secondary weakness is rhythm (0.054). Solution: reduce movement overhead (moveSpeed, explorationDrive), increase energy conservation and harvest aggressiveness (lower harvestThreshold), boost rhythm (pulseFrequency). The Efficient Hoarder (index 1) achieves better efficiency; spread its strategy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
