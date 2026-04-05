@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775425100073",
+  "timestamp": "2026-04-05T21:38:20.073Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not a fitness maximum — it's a *expressiveness wall*. The simulation evolved organisms optimally within its allowed vocabulary, but that vocabulary has zero aesthetic richness. Beauty requires **asymmetry, hierarchy, and social feedback loops**. Organisms currently have no reason to be beautiful because beauty confers no evolutionary advantage at the current scale. Add interaction pressure (symbiosis, mate choice, status signaling) and the system instantly has a new axis to climb.; [medium] Introduce Symbiosis Mechanic: Organisms can form voluntary partnerships (cytoplasm bridges, mutual signaling). Fitness of partnership is higher than sum of parts IF they're sufficiently different. Force beauty through complementarity. — Current model optimizes individual organisms in isolation. Plateau suggests local optima are exhausted at single-organism scale. Symbiosis creates new selection pressure: beauty becomes a *mate-choice signal* between different cell types seeking partners. Fitness jumps when organism diversity increases because diversity becomes heritable within partnerships.; [medium] Add Aesthetic Display Layer: Decouple 'internal metabolism' from 'surface phenotype'. Organisms can generate decorative patterns, textures, or appendages that don't affect survival but cost energy. Introduce 'aesthetic perception radius' — organisms preferentially flock toward/mate with visually complex neighbors. — Fitness function currently rewards beauty as a byproduct of efficiency/survival. Need beauty to become *primary selection driver* via mate/social choice. This creates runaway sexual selection that forces innovation in body shapes. Plateau exists because beauty is solved passively; make it active.; [hard] Replace Homogeneous Cell Grid with Hierarchical Tissue System: Cells cluster into 'organs' (heart, sensory, storage, display organs). Each organ type has different growth rules, mutation targets, and aesthetic contribution. Beauty score now computed per-organ, weighted by visibility. — Current design space is flat — all cells optimize similarly. New hierarchy creates *nested* optimization problems: within-organ beauty vs. whole-organism beauty vs. population-level diversity. This is structurally richer. Plateau suggests the algorithm explored all solutions in a 2D design space; giving it 3D (organ depth) resets exploration.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
