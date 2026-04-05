@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775406263555",
+  "timestamp": "2026-04-05T16:24:23.555Z",
+  "observation": "Domain sevo-life (fitness 0.665) generated 2 insights",
+  "suggestion": "Conservative movement + aggressive harvesting beats active searching; energy spent on exploration must be earned back faster.; Efficiency is critically weak (0.401 vs 0.667 survival, 0.753 beauty), dragging overall fitness. Two organisms died despite reaching age thresholds, suggesting energy depletion. Survivors show high age but low energy levels in some cases. The cost of movement and sensing exceeds the return from resource gathering. Simultaneously, diversityOfForms is weak (0.456), indicating homogeneous phenotypic expression despite multiple genomes. Strategy: reduce movement waste while improving resource-gathering precision, and increase parameter variance to boost form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
