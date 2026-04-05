@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775393710519",
+  "timestamp": "2026-04-05T12:55:10.519Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with movement cost; reduce moveSpeed (especially >0.7) and raise energyConserve across all entities to 0.5+ baseline.; Efficiency at 0.142 is catastrophically low—it contributes only 0.0284 to the weighted fitness while survival and beauty each contribute 3-15x more. The bottleneck is energy waste during movement without sufficient resource capture. Solution: reduce moveSpeed on high-speed entities (conserving energy) while increasing energyConserve globally and maintaining resource attraction. Entities should travel less distance per resource harvested. Survival (0.875) and complexity (0.819) are already strong, so conservation won't hurt there—it'll just make existing behavior more efficient.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
