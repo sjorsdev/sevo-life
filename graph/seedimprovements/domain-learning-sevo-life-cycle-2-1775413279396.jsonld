@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413279396",
+  "timestamp": "2026-04-05T18:21:19.396Z",
+  "observation": "Domain sevo-life (fitness 0.631) generated 2 insights",
+  "suggestion": "Energy starvation kills faster than lack of resources. Conserving calories beats foraging harder.; Survival is collapsing (0.5) and has 50% weight in fitness. 4 of 6 organisms died before age 500. Efficiency (0.407) is also weak. Root cause: organisms are burning energy faster than they can replenish it. Secondary: spatial/diversity metrics weak. Strategy: (1) increase energyConserve sharply — extend lifespan by reducing metabolic burn; (2) boost resourceAttraction to improve feeding efficiency; (3) moderate moveSpeed down slightly — high speed wastes energy without corresponding resource gain; (4) increase trailIntensity and patternSymmetry for beauty gain at no cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
