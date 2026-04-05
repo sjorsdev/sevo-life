@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775393093706",
+  "timestamp": "2026-04-05T12:44:53.706Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Move efficiency from energy-burn model to energy-ROI model: harvest only when gain exceeds cost, move with purpose not desperation.; Efficiency at 0.151 is critically low—it's the dominant bottleneck in fitness (worth 20% of the goal). The gap between high survivalRate (1.0) and low efficiency suggests entities are burning energy on low-ROI movement and marginal harvests. Secondary weakness: rhythm at 0.191 (very low beauty component) from minimal pulseFrequency. Fix by reducing movement cost, raising harvestThreshold to avoid sub-marginal harvests, increasing energyConserve, and adding subtle pulse patterns. Survival is already maxed, so small efficiency gains have high leverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
