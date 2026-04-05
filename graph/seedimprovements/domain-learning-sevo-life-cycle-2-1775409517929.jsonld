@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409517929",
+  "timestamp": "2026-04-05T17:18:37.929Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Energy starvation limits diversity—organisms can't afford complex forms. Efficiency + resourceAttraction unlock the energy budget for beauty.; Efficiency (0.486) is the weakest component at 49% below beautyScore and 27% below survivalRate. The bottleneck is energy depletion: organisms id 4 and 5 have dangerously low energy (7, 15) despite reaching max age, suggesting movement costs exceed resource discovery. Two organisms died before age 500. Improving efficiency yields the highest marginal fitness gain per parameter (0.2 weight on efficiency means 1% efficiency gain = 0.002 fitness points, while survival already dominates). Solution: prioritize energy conservation and resource attraction over raw complexity. Reduce unnecessary motion and particle count on energy-poor organisms; increase resourceAttraction and explorationDrive on survivors to locate food faster.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
