@@ -1,4 +1,4 @@
-// life-agent-v3.ts — Parameter-evolved from v2: Efficiency collapses when entities waste energy chasing marginal resources; beau
+// life-agent-v3.ts — Parameter-evolved from v2: High complexity with low rhythm = visually busy but uncoordinated. Efficiency fa
 // Genome: optimized for harvest efficiency while maintaining pattern diversity
 // Strategy: aggressive resource seeking + energy-aware movement + aesthetic pattern creation
 
@@ -18,30 +18,30 @@ const genomes: EntityGenome[] = [
   // Harvester — aggressive resource seeker, low harvest threshold
   // INSIGHT: new role focused purely on efficiency. Low threshold + high attraction.
   {
-    moveSpeed: 0.85, turnBias: 0.0, resourceAttraction: 0.95, trailAttraction: -0.4,
-    harvestThreshold: 0.12, energyConserve: 0.65, explorationDrive: 0.7,
-    trailIntensity: 0.55, trailColor: 0, pulseFrequency: 0.15, patternSymmetry: 0.5,
+    moveSpeed: 0.85, turnBias: 0.0, resourceAttraction: 0.7, trailAttraction: -0.4,
+    harvestThreshold: 0.08, energyConserve: 0.4, explorationDrive: 0.7,
+    trailIntensity: 0.2, trailColor: 0, pulseFrequency: 0.0, patternSymmetry: 0.2,
   },
   // Efficient Hoarder — stays near resources, very low harvest threshold for max gain
   // INSIGHT: reduced harvestThreshold from 0.1 to 0.05 to capture more marginal resources
   {
     moveSpeed: 0.4, turnBias: -0.15, resourceAttraction: 0.95, trailAttraction: 0.05,
-    harvestThreshold: 0.08, energyConserve: 0.8, explorationDrive: 0.15,
-    trailIntensity: 0.65, trailColor: 1, pulseFrequency: 0.2, patternSymmetry: 0.6,
+    harvestThreshold: 0.05, energyConserve: 0.8, explorationDrive: 0.15,
+    trailIntensity: 0.25, trailColor: 1, pulseFrequency: 0.03, patternSymmetry: 0.4,
   },
   // Aesthetic Harvester — efficient + creates beauty, balanced harvest
   // INSIGHT: merge efficiency with beauty. Moderate threshold, high trail intensity.
   {
     moveSpeed: 0.7, turnBias: 0.4, resourceAttraction: 0.75, trailAttraction: 0.15,
-    harvestThreshold: 0.12, energyConserve: 0.6, explorationDrive: 0.55,
-    trailIntensity: 0.85, trailColor: 2, pulseFrequency: 0.35, patternSymmetry: 0.75,
+    harvestThreshold: 0.12, energyConserve: 0.45, explorationDrive: 0.55,
+    trailIntensity: 0.85, trailColor: 2, pulseFrequency: 0.25, patternSymmetry: 0.75,
   },
   // Balanced Optimizer — jack of all trades with lower harvest threshold
   // INSIGHT: shifted from 0.2 to 0.15 harvestThreshold for better efficiency baseline
   {
-    moveSpeed: 0.65, turnBias: 0.05, resourceAttraction: 0.65, trailAttraction: 0.1,
+    moveSpeed: 0.65, turnBias: 0.05, resourceAttraction: 0.8, trailAttraction: 0.1,
     harvestThreshold: 0.15, energyConserve: 0.55, explorationDrive: 0.5,
-    trailIntensity: 0.65, trailColor: 3, pulseFrequency: 0.2, patternSymmetry: 0.65,
+    trailIntensity: 0.5, trailColor: 3, pulseFrequency: 0.12, patternSymmetry: 0.5,
   },
   // Persistence Hunter — survives longer by seeking resources constantly
   // INSIGHT: reduced energy waste (lower moveSpeed for endurance) while maintaining resource drive
@@ -60,7 +60,7 @@ const genomes: EntityGenome[] = [
   // Pattern Harvester — creates complex patterns while seeking resources
   // INSIGHT: high pulse frequency + symmetry enable beauty creation without sacrificing resource drive
   {
-    moveSpeed: 0.6, turnBias: 0.3, resourceAttraction: 0.7, trailAttraction: 0.05,
+    moveSpeed: 0.6, turnBias: 0.3, resourceAttraction: 0.9, trailAttraction: 0.05,
     harvestThreshold: 0.14, energyConserve: 0.5, explorationDrive: 0.45,
     trailIntensity: 0.8, trailColor: 0, pulseFrequency: 0.45, patternSymmetry: 0.85,
   },
