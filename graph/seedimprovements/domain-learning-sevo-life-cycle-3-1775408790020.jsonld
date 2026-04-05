@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408790020",
+  "timestamp": "2026-04-05T17:06:30.020Z",
+  "observation": "Domain sevo-life (fitness 0.660) generated 2 insights",
+  "suggestion": "Organisms are energy-negative. They explore and move too much relative to harvest rate. Survival depends on conservation + aggressive resource seeking, not movement freedom.; Efficiency (0.365) is the critical bottleneck — it's dragging fitness to 0.512. With 50% death rate and organisms barely sustaining energy, the genomes are burning resources faster than they can harvest. Secondary issues: survivalRate needs higher resource acquisition and energy conservation; spatialComposition (0.3) suggests movement is chaotic, not coordinated. Strategy: (1) dramatically increase energyConserve to reduce metabolic waste, (2) increase resourceAttraction to find food more reliably, (3) boost harvestThreshold logic so organisms don't waste energy on marginal feeding opportunities, (4) decrease moveSpeed to trade exploration for sustainability, (5) increase patternSymmetry and trailIntensity to improve spatial coherence and beauty simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
