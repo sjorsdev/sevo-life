@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411672553",
+  "timestamp": "2026-04-05T17:54:32.553Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Energy is currency; low efficiency means organisms burn too much relative to intake. Diversity blooms when genomes vary in growth geometry and color strategy—current genomes converge on similar forms.; Efficiency at 0.394 is the critical bottleneck, dragging overall fitness to 0.614. Two organisms died early (ages 270, 225), indicating energy starvation. Current survivors have low energy reserves (IDs 1,4 at 3,9). The particle physics are wasting energy on excessive motion and flocking without sufficient resource harvesting. Simultaneously, diversityOfForms (0.456) and spatialComposition (0.543) are weak—genomes aren't generating visually distinct or well-organized structures. Strategy: (1) increase resourceAttraction uniformly to improve harvest efficiency, (2) reduce energy waste via drag/damping, (3) boost diverse form generation via radius/symmetry variation, (4) tune pulseRate to create more complex patterns without metabolic cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
