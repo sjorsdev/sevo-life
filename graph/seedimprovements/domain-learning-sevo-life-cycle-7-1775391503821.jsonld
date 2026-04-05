@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775391503821",
+  "timestamp": "2026-04-05T12:18:23.821Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency fails when harvesting operations are too frequent and low-yield. Raise thresholds and metabolic efficiency to let resources accumulate.; Efficiency is critically weak at 0.154 (vs survivalRate 1.0 and beautyScore 0.528). Root cause: entities are burning energy through movement while harvesting thresholds are too low, meaning they gain little per harvest operation. This creates a metabolic death spiral. Fix by: (1) increasing energyConserve across all roles to reduce waste, (2) increasing harvestThreshold so each harvest captures more accumulated resources, (3) reducing moveSpeed for non-explorers. Rhythm (0.224) and coverage (0.279) in beauty also weak — increase pulseFrequency for temporal patterns. SurvivalRate is maxed; don't sacrifice it.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
