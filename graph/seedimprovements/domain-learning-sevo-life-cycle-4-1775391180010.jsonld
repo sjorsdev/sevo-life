@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775391180010",
+  "timestamp": "2026-04-05T12:13:00.010Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency collapsed due to exploration tax outweighing harvest gains. Entities are moving too much without enough energy discipline to offset it.; Efficiency (0.157) is the critical bottleneck—it's nearly 5x lower than survivalRate. At 0.2 weight, it's costing ~0.06 from the goal function. Additionally, rhythm (0.193) is weak within beauty. Root causes: (1) explorationDrive values (0.65–0.8) cause excess energy-wasting movement; (2) energyConserve is too low on fast movers (Harvester at 0.4 with moveSpeed 0.85 is unsustainable); (3) pulseFrequency and patternSymmetry are too low to generate stable rhythm. Solution: reduce exploration overhead, increase energy recovery, boost rhythm-generating parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
