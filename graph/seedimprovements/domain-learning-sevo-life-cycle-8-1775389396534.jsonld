@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775389396534",
+  "timestamp": "2026-04-05T11:43:16.534Z",
+  "observation": "Domain sevo-life (fitness 0.680) generated 10 insights",
+  "suggestion": "Previous v2 over-optimized efficiency at cost of survival (0.5 weight, largest component).; harvestThreshold 0.25 (vs v2's 0.08) prevents death spirals; energyConserve 0.75 ensures longevity; high trailAttraction (0.5) + synchronized pulse (0.2) creates self-reinforcing groups; reduced variance in gene values reduces extinction risk. Steady performance > occasional peaks.; pulseFrequency 0.35 creates visual rhythm; negative trailAttraction (-0.2); moveSpeed 0.45 + energyConserve 0.8 maximize lifespan; harvestThreshold 0.16; high explorationDrive (0.65) + moderate thresholds (0.21) allow escape from; combination of moderate resourceAttraction (0.6) + high trailAttraction (0.6) +; Decision function now weighs survival > beauty. Prioritizes reaching resources over; Fitness weighted 0.5 survival + 0.3 beauty + 0.2 efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
