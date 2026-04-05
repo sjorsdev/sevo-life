@@ -1,18 +1,30 @@
 // src/git.ts — Git operations via Deno subprocess
 // The most important file. Written first.
 
+// Mutex to prevent concurrent git operations (causes index.lock conflicts)
+let gitLock: Promise<void> = Promise.resolve();
+
 async function exec(args: string[]): Promise<string> {
-  const cmd = new Deno.Command("git", {
-    args,
-    stdout: "piped",
-    stderr: "piped",
-  });
-  const result = await cmd.output();
-  if (!result.success) {
-    const stderr = new TextDecoder().decode(result.stderr);
-    throw new Error(`git ${args[0]} failed: ${stderr}`);
+  let resolve: () => void;
+  const prev = gitLock;
+  gitLock = new Promise<void>((r) => { resolve = r; });
+  await prev;
+
+  try {
+    const cmd = new Deno.Command("git", {
+      args,
+      stdout: "piped",
+      stderr: "piped",
+    });
+    const result = await cmd.output();
+    if (!result.success) {
+      const stderr = new TextDecoder().decode(result.stderr);
+      throw new Error(`git ${args[0]} failed: ${stderr}`);
+    }
+    return new TextDecoder().decode(result.stdout);
+  } finally {
+    resolve!();
   }
-  return new TextDecoder().decode(result.stdout);
 }
 
 export const git = {
