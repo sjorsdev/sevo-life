@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775404778083",
+  "timestamp": "2026-04-05T15:59:38.083Z",
+  "observation": "Domain sevo-life (fitness 0.688) generated 2 insights",
+  "suggestion": "High complexity with low rhythm = visually busy but uncoordinated. Efficiency fails when organisms explore randomly instead of purposefully seeking resources.; Efficiency is critically weak at 0.137—contributing only 2.74% of the goal vs. potential 20%. This drags overall fitness to 0.622. Organisms are burning energy without proportional survival gain. Survival is strong (87.5%) suggesting they're viable, but inefficient. Beauty's rhythm (0.155) is also very low despite high complexity (0.957), indicating jerky/erratic movement. Primary fix: reduce wasted movement (lower moveSpeed, explorationDrive), increase energy conservation, and boost resource focus. Secondary fix: add rhythmic pulsing to convert complex shapes into rhythmic patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
