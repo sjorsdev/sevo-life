@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406790609",
+  "timestamp": "2026-04-05T16:33:10.609Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Particle systems starve on movement; conserve energy first, then explore.; survivalRate (0.5) is the critical bottleneck — weighted at 50% of fitness. Three organisms die before old age with very low energy in survivors (9-30), indicating starvation. Secondary issue: spatialComposition (0.3) and diversityOfForms (0.456) are weak. Strategy: (1) boost energyConserve and resourceAttraction to prevent early death and raise survival to 0.7+, (2) reduce trailAttraction and raise explorationDrive to spread organisms spatially, (3) increase patternSymmetry and trailColor variance for visual diversity. This targets the weighted impact order: survival > beauty composition > efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
