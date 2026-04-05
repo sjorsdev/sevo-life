@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412003182",
+  "timestamp": "2026-04-05T18:00:03.182Z",
+  "observation": "Domain sevo-life (fitness 0.626) generated 2 insights",
+  "suggestion": "Survival bottleneck: organisms aren't finding/harvesting resources fast enough. Energy crisis is preventing diversity from emerging.; Survival rate (0.667) is the critical bottleneck — two organisms died at ages 237 and 267 from energy starvation. Living organisms have dangerously low reserves (3-13 units at age 500). Efficiency (0.309) is also severely constrained — organisms burn energy faster than they harvest. Secondary issue: diversity of forms (0.456) and spatial composition (0.511) are weak, indicating morphological convergence. Strategy: prioritize survival through better resource detection and energy conservation. Reduce wasteful swimming. Increase morphological variation through asymmetric patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
