@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775391523942",
+  "timestamp": "2026-04-05T12:18:43.942Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Beauty and survival achieved—now bottleneck is metabolic efficiency. Smaller movements, better targeting, less waste.; Efficiency is critically weak (0.058 vs survival 0.8 and beauty 0.799). The organisms are beautiful and survive well, but waste energy on movement and exploration. Current avgBodySize of 7 with only 0.058 efficiency suggests high energetic overhead. Primary fix: reduce moveSpeed (costs energy), increase resourceAttraction and energyConserve (more efficient harvesting and metabolism). Secondary: reduce explorationDrive (exploratory movement is costly). Maintain diversity by varying improvements across population.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
