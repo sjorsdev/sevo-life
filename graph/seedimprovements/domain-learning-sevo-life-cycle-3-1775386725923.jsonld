@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775386725923",
+  "timestamp": "2026-04-05T10:58:45.923Z",
+  "observation": "Domain sevo-life (fitness 0.558) generated 2 insights",
+  "suggestion": "Survival dominates fitness (0.5 weight). v1 had high-speed explorers wasting energy.; Decision logic unchanged — improvements are purely in genome parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
