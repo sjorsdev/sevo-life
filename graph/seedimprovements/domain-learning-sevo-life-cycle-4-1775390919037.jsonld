@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775390919037",
+  "timestamp": "2026-04-05T12:08:39.037Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "High moveSpeed + low energyConserve = efficient-looking agents that hemorrhage energy. Conservation scales better than speed for survival.; Efficiency is critically weak (0.155 vs max 0.2), dragging overall fitness. Entities are burning energy inefficiently. Beauty rhythm is also low (0.19). Priority: increase energyConserve across aggressive/mobile entities (0, 2, 4), lower harvestThreshold to capture marginal resources more efficiently, boost pulseFrequency on low-rhythm entities to improve temporal patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
