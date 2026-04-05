@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775425490475",
+  "timestamp": "2026-04-05T21:44:50.475Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The 0.000 fitness plateau after 750 cycles suggests the organism morphology and action space cannot generate variation that matters to the fitness function. You're evolving in a 1D space but trying to measure 3D beauty. The real problem isn't mutation rate or parameter tuning — it's that organisms have no way to *express* the behaviors the fitness function rewards. Add cell specialization + environmental interaction + temporal state, and evolution gains real degrees of freedom to work with.; [medium] Introduce specialized cell types with distinct biochemical roles: energy-storage cells, sensory-receptor cells, and decision-propagation cells (neural analog). Currently all cells are isomorphic. — Isomorphic organisms cannot generate the behavioral complexity needed to express beauty or survive efficiently. Specialization allows emergent behaviors (sensory input → decision → movement) that can actually vary and be selected. This creates degrees of freedom that mutations can leverage.; [medium] Add a new world physics layer: diffusing pheromone fields that organisms can emit/sense. Organisms gain an action: 'release pheromone at intensity level.' World redistributes pheromone via diffusion each cycle. — Current fitness plateau suggests organisms cannot achieve meaningful interaction with environment. Pheromone fields enable emergent communication, cooperation patterns, and aggregation behaviors that can be selected for beauty (coherent swarms, synchronized patterns). This breaks the isolation — organisms now affect world state that others can detect.; [hard] Restructure the decision function from static neural-net-like to a two-layer system: (1) immediate sensory response layer (0-lag), (2) memory-modulated decision layer that persists internal state across cycles. Add a grow/shrink action that modulates organism size over time. — Plateau may indicate organisms cannot learn or exhibit temporal behaviors. Memory + growth create morphological and behavioral trajectories that survive > 1 cycle. Beauty metrics can now reward sustained patterns (growing in spiral, synchronized pulsing). Fitness plateau is often a sign the decision structure is too rigid to express what selection wants.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
