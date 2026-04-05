@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411136893",
+  "timestamp": "2026-04-05T17:45:36.893Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Organisms are surviving but not thriving — they have energy but are using it wastefully. Shift from exploration-driven to efficiency-driven behavior across all genomes.; Efficiency is the critical bottleneck at 0.375 (vs survival 0.667, beauty 0.643). Weighted at 0.2 of the goal, it's still dragging down total fitness. All organisms reach max age but with wasteful energy profiles. The physics are burning energy on inefficient movement and excessive pulsing. Targeting: reduce pulseFrequency (pulsing appears computationally expensive), increase energyConserve (direct metabolic efficiency), increase resourceAttraction (avoid wasted exploration), increase harvestThreshold (only harvest when ROI is positive). This should shift efficiency from 0.375 → 0.55+, boosting overall fitness to 0.62+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
