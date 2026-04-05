@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775412922616",
+  "timestamp": "2026-04-05T18:15:22.616Z",
+  "observation": "Domain sevo-life (fitness 0.616) generated 2 insights",
+  "suggestion": "Organisms are energy-starved not because resources are scarce but because they crowd together seeking the same spots. Spread them out and they'll spend less energy on avoidance.; Efficiency at 0.538 is the bottleneck (lowest component in goal function). The organism population shows inconsistent energy levels (14-32 range) despite identical age caps, indicating poor energy management. Secondary weakness: spatialComposition (0.511) and diversityOfForms (0.456) suggest organisms cluster rather than spread, wasting energy on crowding. Strategy: (1) increase resourceAttraction to help organisms find food more efficiently, (2) increase explorationDrive to force spatial spread and reduce collision costs, (3) boost energyConserve in low-energy genomes (IDs with 14-17 energy) to preserve reserves, (4) increase avoidanceRadius to reduce crowding overhead.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
