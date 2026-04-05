@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412375254",
+  "timestamp": "2026-04-05T18:06:15.254Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Efficiency = sustainability. Spatial composition dominates wasted efficiency. Spread organisms out and reduce energy burn.; Efficiency at 0.404 is the critical bottleneck — it's dragging overall fitness despite strong beauty (0.707) and acceptable survival (0.667). Two organisms died prematurely (ages 226 and 488), and living organisms have low energy (4-18 range). The issue: organisms are energy-inefficient and poorly distributed spatially (0.3). Spatial composition weakness suggests overcrowding or poor formation geometry. Solution: increase resourceAttraction to find food faster, boost energyConserve to extend lifespan, and raise explorationDrive to spread out and maximize world coverage. Organism 2 thrives (18 energy) — use it as template. Organism 1 struggles (4 energy) — aggressive retuning needed.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
