@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Agent",
+  "@id": "agent:v2-archived-1775383871930",
+  "timestamp": "2026-04-05T10:11:11.930Z",
+  "blueprint": "./blueprints/agent-v2.ts",
+  "parent": "agent:v1",
+  "generation": 2,
+  "status": "archived",
+  "archivedReason": "lost selection: mutant EQS 0.467 > parent 0.400",
+  "archivedAt": "2026-04-05T10:11:11.930Z",
+  "originalId": "agent:v2"
+}
