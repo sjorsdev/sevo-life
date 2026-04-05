@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413442065",
+  "timestamp": "2026-04-05T18:24:02.065Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Particles are alive but inefficient energy processors—conservation and attraction parameters are too conservative. Spatial complexity requires higher exploration and symmetry breaking.; Efficiency is critically low (0.525), dragging overall fitness down. The organisms are accumulating age (maxed at 500) but not efficiently gathering/conserving energy—see low energy values despite size. Additionally, spatial composition (0.3) and form diversity (0.456) are weak within beauty. Strategy: boost energyConserve and resourceAttraction globally to improve efficiency; increase explorationDrive and patternSymmetry on subset to diversify forms and spatial patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
