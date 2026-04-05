@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409579339",
+  "timestamp": "2026-04-05T17:19:39.339Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Particles are moving too much. Efficiency improves by being still, not by moving faster. Conserve motion for resource acquisition only.; Efficiency is the bottleneck at 0.371, dragging overall fitness from potential 0.62+ down to 0.555. Organisms are spending energy faster than they harvest it. Survival rate (0.5) is acceptable—all alive organisms reached age 500. Beauty metrics show low diversityOfForms (0.456) and spatialComposition (0.575). Strategy: (1) reduce moveSpeed and explorationDrive to cut wasted locomotion energy, (2) increase energyConserve for prudent metabolism, (3) boost patternSymmetry and trailIntensity selectively to improve diversity without energy cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
