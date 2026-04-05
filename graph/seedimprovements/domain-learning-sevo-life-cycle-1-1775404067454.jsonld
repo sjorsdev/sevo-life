@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775404067454",
+  "timestamp": "2026-04-05T15:47:47.454Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Entities survive but don't accomplish—high movement cost without high resource yield. Shift from exploration waste to focused harvesting efficiency.; Efficiency is critically weak (0.144 vs survivalRate 1.0 and beautyScore 0.596). The simulation is sustaining life but not accomplishing much—likely wasting energy on excessive movement while not harvesting enough. With survival maxed, the constraint is resource-gathering efficiency per energy spent. Primary fixes: reduce moveSpeed and explorationDrive on fast explorers (they burn energy without proportional gain), increase energyConserve globally, lower harvestThreshold slightly on hoarders to convert more marginal resources. Secondary: boost rhythm (pulseFrequency 0.159 is weak) on aesthetic entities without breaking efficiency. Keep Aesthetic Harvester (index 2) stable as it's the efficiency-beauty bridge.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
