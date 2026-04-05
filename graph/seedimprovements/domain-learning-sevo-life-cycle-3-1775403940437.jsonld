@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775403940437",
+  "timestamp": "2026-04-05T15:45:40.437Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency comes from harvest-per-energy-spent, not from harvesting more. Reduce movement cost and improve energy conservation before increasing thrust.; Efficiency is critically weak (0.141 vs. target impact of 0.2). Root cause: high moveSpeed and explorationDrive burn energy without offsetting harvest gains. Secondary: rhythm is near-zero (0.056), driven by uniformly low pulseFrequency. Tertiary: coverage weak (0.388) due to low explorationDrive on stationary hoarders. Fix via: (1) raise energyConserve on all entities to reduce baseline burn, (2) increase pulseFrequency 1.5-2x to create rhythm, (3) boost explorationDrive on slow entities to improve coverage without added movement cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
