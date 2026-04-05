@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775389870319",
+  "timestamp": "2026-04-05T11:51:10.319Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 10 insights",
+  "suggestion": "Previous blueprint optimized efficiency (0.2 weight) but survival (0.5 weight) was weaker.; threshold 0.03 (down from 0.05) captures near-zero marginal resources. Lifespan extended.; moveSpeed 0.2 (sedentary), harvestThreshold 0.02 (picks up dust-level resources).; threshold 0.08 (down from 0.12) increases harvest frequency. Trail intensity 0.9 (up from 0.85) for more beauty.; threshold 0.1 (down from 0.15), energyConserve 0.65 (up from 0.55).; explorationDrive 0.7 (up from 0.5) to find resources, but threshold 0.06 to avoid waste.; high resourceAttraction (0.92) + low threshold (0.04) + high conservation (0.8).; trailIntensity 0.95, patternSymmetry 0.9, pulseFrequency 0.35 for maximal beauty.; explorationDrive 0.8, moveSpeed 0.8, but threshold 0.09 and conservation 0.55.; Decision function now prioritizes resource detection at lower thresholds.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
