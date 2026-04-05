@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409938072",
+  "timestamp": "2026-04-05T17:25:38.072Z",
+  "observation": "Domain sevo-life (fitness 0.604) generated 2 insights",
+  "suggestion": "Efficiency and beauty are coupled — energy waste (low efficiency) manifests as chaotic motion, destroying spatial composition and diversity.; Efficiency (0.401) is the weakest component, contributing only 0.0802 to fitness despite 20% weight. Current organisms show inconsistent energy management: organism 2 at 31 energy while organism 4 only has 6. This indicates poor harvestThreshold tuning and excessive moveSpeed relative to energyConserve. Simultaneously, diversityOfForms (0.456) and spatialComposition (0.3) are weak — organisms lack distinctive patterns and spatial organization. Proposal: boost energyConserve across the board (most organisms draining energy too fast), lower moveSpeed for efficiency, increase patternSymmetry and vary trailColor to improve form diversity and visual composition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
