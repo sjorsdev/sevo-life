@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411702120",
+  "timestamp": "2026-04-05T17:55:02.120Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Efficiency gains come from movement discipline, not growth — lower speed with higher conservation beats faster depletion.; Efficiency is critically weak (0.442), pulling down overall fitness despite solid survival and beauty. Within beauty, spatialComposition (0.3) and diversityOfForms (0.474) drag the score. Improvement strategy: (1) Cut moveSpeed to reduce energy waste in swimming/locomotion. (2) Boost energyConserve to stretch harvested resources further. (3) Increase patternSymmetry to strengthen spatial composition through regular geometric arrangement. (4) Vary trailColor across entities to boost visual diversity signal. The three dead organisms suggest some genomes burn energy too fast — reducing exploration and swim intensity while conserving will help marginal survivors persist.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
