@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394814539",
+  "timestamp": "2026-04-05T13:13:34.539Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Rhythm is the untapped beauty dimension — all entities underutilize pulseFrequency. Energy waste in fast movers (0.85, 0.75) isn't justified by beauty gains.; Efficiency is critically low (0.152) despite perfect survival, indicating massive energy waste. Rhythm is also very weak (0.091), the weakest beauty component. Root causes: (1) aggressive movers (Harvester, Persistence Hunter) have high moveSpeed that wastes energy without corresponding beauty gain, (2) universally low pulseFrequency suppresses rhythm entirely. Mutations: reduce moveSpeed on high-motion entities to cut energy consumption, boost pulseFrequency across the board to activate temporal pattern generation. This drives rhythm up (low-hanging gain) and recaptures efficiency by reducing wasted motion.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
