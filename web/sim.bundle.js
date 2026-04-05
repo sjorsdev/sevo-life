@@ -184,6 +184,31 @@ class World {
             this.applyBehavior(org);
             this.harvest(org);
             this.socialInteraction(org);
+            if (org.energy > 40 && org.age > 100 && org.particles.length >= org.genome.maxParticles * 0.5) {
+                const alive = this.organisms.filter((o)=>o.alive);
+                if (alive.length < 12) {
+                    const childGenome = {
+                        ...org.genome
+                    };
+                    childGenome.baseRadius = org.genome.baseRadius * (0.9 + this.rng() * 0.2);
+                    childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.1));
+                    childGenome.pulseRate = Math.min(1, Math.max(0, org.genome.pulseRate + (this.rng() - 0.5) * 0.1));
+                    childGenome.drag = Math.min(0.99, Math.max(0.9, org.genome.drag + (this.rng() - 0.5) * 0.02));
+                    childGenome.springStiffness = Math.max(0.01, org.genome.springStiffness + (this.rng() - 0.5) * 0.01);
+                    const center = this.getCenter(org);
+                    const offset = {
+                        x: (this.rng() - 0.5) * 60,
+                        y: (this.rng() - 0.5) * 60
+                    };
+                    const childPos = {
+                        x: center.x + offset.x,
+                        y: center.y + offset.y
+                    };
+                    const child = this.spawnOrganism(childGenome, childPos);
+                    child.generation = org.generation + 1;
+                    org.energy -= 20;
+                }
+            }
             if (org.genome.pulseRate > 0) {
                 const pulse = Math.sin(this.tick * org.genome.pulseRate * 0.1) * 0.3;
                 for (const s of org.springs){

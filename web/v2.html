@@ -135,7 +135,7 @@ const floater = {
 
 const genomes = [jellyfish, crawler, floater, jellyfish, crawler, floater];
 let world, playing = true, interval = 16;
-const vizConfig = { ...DEFAULT_WORLD, maxTicks: 2000 };
+const vizConfig = { ...DEFAULT_WORLD, maxTicks: Infinity };
 
 function init() { world = new World(vizConfig, genomes, Date.now() % 100000); }
 init();
