@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411533055",
+  "timestamp": "2026-04-05T17:52:13.055Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Energy waste through excessive movement + spatial clustering → low efficiency and composition. Decentralize via exploration drive, conserve via lower movement cost.; Efficiency is the bottleneck (0.602) dragging overall fitness. More critically, spatial composition (0.3) is severely underperforming—organisms are clustered rather than utilizing the environment. Two fixes: (1) boost energyConserve and reduce wasteful moveSpeed to improve efficiency, (2) increase explorationDrive and vary patternSymmetry across genomes to spread organisms and increase visual/behavioral diversity. diversityOfForms (0.457) compounds both issues—organisms need distinct exploration patterns and spatial footprints.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
