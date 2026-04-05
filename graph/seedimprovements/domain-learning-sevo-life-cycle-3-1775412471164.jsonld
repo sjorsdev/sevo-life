@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775412471164",
+  "timestamp": "2026-04-05T18:07:51.164Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "Efficient movement with clear spatial structure beats expensive exploration; emergent complexity comes from constraint-driven pattern formation, not brute-force search.; Efficiency is the critical bottleneck at 0.445 — it's limiting overall fitness. The weight is 0.2 but drags hard. Spatial composition (0.3) is also severely weak, suggesting organisms aren't using space effectively. Root cause: high explorationDrive wastes energy on fruitless movement. Secondary issue: low patternSymmetry and poor trailColor coordination reduce spatial structure. Solution: (1) Drop explorationDrive to prioritize energy conservation, (2) Increase energyConserve to stretch resources, (3) Tune moveSpeed down slightly to reduce kinetic waste, (4) Boost patternSymmetry and diversify trail colors to improve spatial structure and form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
