@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775390740986",
+  "timestamp": "2026-04-05T12:05:40.986Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: high exploration without early harvesting = energy hemorrhage. Push all toward Efficient Hoarder's conservative harvest model while maintaining diversity.; Efficiency is critically weak (0.143), contributing only 0.0286 to overall fitness. The problem: too many entities have high harvestThreshold (requiring abundant resources before harvesting) combined with high exploration drive. This wastes energy on movement without replenishing. Solution: (1) lower harvestThreshold universally to harvest earlier and more frequently, (2) increase energyConserve for high-mobility entities to reduce movement waste, (3) slightly reduce explorationDrive for Harvester to balance movement cost against resource gain.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
