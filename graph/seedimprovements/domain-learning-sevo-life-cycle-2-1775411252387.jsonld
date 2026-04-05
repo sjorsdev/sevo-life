@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411252387",
+  "timestamp": "2026-04-05T17:47:32.387Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Low energy despite long survival = broken resource loop, not time-to-live problem. Starving while alive indicates attraction/harvesting parameters, not aging.; Efficiency is critically weak (0.288 vs survivalRate 0.667, beautyScore 0.682). Organisms survive to age 500 but with depleted energy (1-11 levels), indicating poor resource harvesting or excessive metabolic cost. Dead organisms (IDs 0, 3) died at 246-265 steps—early death + low efficiency suggests starvation under current parameter regime. Fix: boost resourceAttraction to harvest more aggressively, increase energyConserve to reduce physics/movement overhead, reduce explorationDrive to cut wasteful wandering, and lower moveSpeed for movement economy. This directly improves the 0.2-weighted efficiency component and reduces organism death rate.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
