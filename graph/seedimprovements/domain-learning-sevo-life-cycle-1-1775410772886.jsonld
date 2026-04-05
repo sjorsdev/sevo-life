@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410772886",
+  "timestamp": "2026-04-05T17:39:32.886Z",
+  "observation": "Domain sevo-life (fitness 0.618) generated 2 insights",
+  "suggestion": "Maximum particles reached (age 500) but low energy = forms are growing too heavy. Prune non-essential sensors/fins; reward lean, efficient morphologies.; Efficiency is critically weak at 0.536 (vs. survivalRate 0.667). Weighted contribution: efficiency 0.1072 vs. beauty 0.189. Spatial composition (0.3) is the worst beauty metric — beings cluster tightly instead of exploring. Two organisms dead early (ages 280, 466) suggest energy drain. Recommendation: reduce particle bloat (grow fewer, selective appendages), lower drag coefficient for movement efficiency, increase exploration drive to spread spatially, and improve harvest/energy conservation to reduce early death.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
