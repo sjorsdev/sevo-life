@@ -92,22 +92,24 @@ async function loadGoal(): Promise<GoalConfig> {
 // Domain agent loading
 // ---------------------------------------------------------------------------
 async function getDomainAgents(domain: string): Promise<AgentNode[]> {
+  // Only return particle-simulation agents (life-v2-*).
+  // Old pixel agents (life-agent-v1/v2/v3) are retired — they game a simple
+  // metric instead of producing real beauty.
   const agents = await queryNodes<AgentNode>("agent",
     (n) => n.status === "active" && n.domain === domain,
   );
 
-  // If no domain-tagged agents, check for life agents in graph
-  if (agents.length === 0) {
-    const allActive = await queryNodes<AgentNode>("agent",
-      (n) => n.status === "active",
-    );
-    // Return any agents whose blueprint references the domain
-    return allActive.filter((a) =>
-      a.blueprint.includes("life-agent") || a.domain === domain
-    );
+  // Filter to only particle agents
+  const particleAgents = agents.filter((a) =>
+    a.blueprint.includes("life-v2-") || a["@id"].includes("particle")
+  );
+
+  // If no particle agents, include any domain agents (bootstrap)
+  if (particleAgents.length === 0) {
+    return agents.filter((a) => a.blueprint.includes("life-"));
   }
 
-  return agents;
+  return particleAgents;
 }
 
 // ---------------------------------------------------------------------------
