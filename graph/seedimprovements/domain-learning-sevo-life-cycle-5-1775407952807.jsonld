@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407952807",
+  "timestamp": "2026-04-05T16:52:32.807Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Survival > beauty: without energy, organisms die before beauty emerges. Energy conservation and active harvesting unlock both survival and emergent spatial patterns.; Efficiency is the critical bottleneck (0.328), pulling down overall fitness despite decent beauty. Two organisms died early (ages ~270), suggesting energy starvation. Survivors are barely viable (energy 4-17 at max age). Root cause: organisms are too energy-expensive and not harvesting resources aggressively enough. Secondary issue: spatialComposition (0.548) and diversityOfForms (0.456) lag — need spatial variety. Solution: boost energyConserve and harvestThreshold globally; increase resourceAttraction for early-stage genomes; add spatial diversity via trailColor and patternSymmetry variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
