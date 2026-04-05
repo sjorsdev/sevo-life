@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412790607",
+  "timestamp": "2026-04-05T18:13:10.607Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Efficiency drives survival. Smaller, behavioral-optimized bodies outperform large ones. Conservation beats speed.; Efficiency at 0.59 is the lowest fitness component (0.2 weight). Organism data shows high-particle entities (13p) died while 8-particle bodies thrive — inefficient morphologies waste energy. Organism 1 (12p, 6 energy) underperforms compared to 4 (12p, 26 energy) despite identical structure, indicating behavioral tuning failure. Improvements: (1) increase energyConserve across low-energy organisms to reduce waste, (2) reduce moveSpeed for efficient movers to prevent overactivity, (3) boost resourceAttraction to survive longer (survivalRate 0.667 shows premature deaths), (4) lower explorationDrive to stop wasteful random movement. Organism 5 is optimal — minimal changes. Spatial composition (0.3) and diversity (0.456) suggest morphological pruning toward efficient designs.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
