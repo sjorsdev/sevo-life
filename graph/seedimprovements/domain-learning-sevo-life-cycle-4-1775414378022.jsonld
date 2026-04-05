@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775414378022",
+  "timestamp": "2026-04-05T18:39:38.022Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Efficient predators don't explore randomly; they sense prey and commit. Reduce wasteful wandering, boost harvesting responsiveness.; Efficiency (0.479) is the bottleneck — 42% below beauty (0.717). Two organisms dead, survivors have low energy despite reaching max age. Root cause: low resourceAttraction (organisms aren't harvesting efficiently) and high explorationDrive (wasting energy on unfocused movement). Beauty mechanics are working well — don't disrupt. Increase resource acquisition and metabolic efficiency without sacrificing form.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
