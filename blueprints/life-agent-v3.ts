@@ -1,4 +1,4 @@
-// life-agent-v3.ts — Parameter-evolved from v2: High complexity with low rhythm = visually busy but uncoordinated. Efficiency fa
+// life-agent-v3.ts — Parameter-evolved from v2: Organisms survive but metabolically inefficient — over-movement without goal. Re
 // Genome: optimized for harvest efficiency while maintaining pattern diversity
 // Strategy: aggressive resource seeking + energy-aware movement + aesthetic pattern creation
 
@@ -18,7 +18,7 @@ const genomes: EntityGenome[] = [
   // Harvester — aggressive resource seeker, low harvest threshold
   // INSIGHT: new role focused purely on efficiency. Low threshold + high attraction.
   {
-    moveSpeed: 0.85, turnBias: 0.0, resourceAttraction: 0.7, trailAttraction: -0.4,
+    moveSpeed: 0.85, turnBias: 0.0, resourceAttraction: 0.95, trailAttraction: -0.4,
     harvestThreshold: 0.08, energyConserve: 0.4, explorationDrive: 0.7,
     trailIntensity: 0.2, trailColor: 0, pulseFrequency: 0.0, patternSymmetry: 0.2,
   },
@@ -39,7 +39,7 @@ const genomes: EntityGenome[] = [
   // Balanced Optimizer — jack of all trades with lower harvest threshold
   // INSIGHT: shifted from 0.2 to 0.15 harvestThreshold for better efficiency baseline
   {
-    moveSpeed: 0.65, turnBias: 0.05, resourceAttraction: 0.8, trailAttraction: 0.1,
+    moveSpeed: 0.65, turnBias: 0.05, resourceAttraction: 0.65, trailAttraction: 0.1,
     harvestThreshold: 0.15, energyConserve: 0.55, explorationDrive: 0.5,
     trailIntensity: 0.5, trailColor: 3, pulseFrequency: 0.12, patternSymmetry: 0.5,
   },
@@ -60,7 +60,7 @@ const genomes: EntityGenome[] = [
   // Pattern Harvester — creates complex patterns while seeking resources
   // INSIGHT: high pulse frequency + symmetry enable beauty creation without sacrificing resource drive
   {
-    moveSpeed: 0.6, turnBias: 0.3, resourceAttraction: 0.9, trailAttraction: 0.05,
+    moveSpeed: 0.6, turnBias: 0.3, resourceAttraction: 0.7, trailAttraction: 0.05,
     harvestThreshold: 0.14, energyConserve: 0.5, explorationDrive: 0.45,
     trailIntensity: 0.8, trailColor: 0, pulseFrequency: 0.45, patternSymmetry: 0.85,
   },
