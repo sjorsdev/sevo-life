@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775391010652",
+  "timestamp": "2026-04-05T12:10:10.652Z",
+  "observation": "Domain sevo-life (fitness 0.712) generated 2 insights",
+  "suggestion": "High beauty is masking energy waste; beautiful symmetry and intense trails cost too much. Organisms need the same aesthetic but lower metabolic overhead.; Efficiency is critically weak (0.065 vs. 0.8 survival, 0.778 beauty). Current organisms are energy-expensive: high trail intensity, aggressive movement, and large bodies (avg 5.5 cells). Entity 2 died with 8 cells—oversized. Survival rate is solid (80%) and beauty is excellent, but energy waste is crippling fitness. Strategy: reduce moveSpeed and trailIntensity to cut energy burn while maintaining the beautiful forms that already exist. Increase energyConserve to extract more value per unit energy. Diversify strategies across genomes to improve ecosystem resilience and unlock efficiency gains through division of labor.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
