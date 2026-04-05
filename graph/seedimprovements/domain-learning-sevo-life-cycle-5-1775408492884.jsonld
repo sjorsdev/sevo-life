@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408492884",
+  "timestamp": "2026-04-05T17:01:32.884Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Efficiency improves when organisms actively seek resources and spread spatially—passive beauty without energy independence doesn't survive selection pressure.; Efficiency is the weakest metric (0.517) and the primary fitness drag. Within beauty, spatial composition (0.3) and diversity of forms (0.456) are critically weak. Root causes: organisms lack mobility and resource-seeking strategy, resulting in poor spatial spread and energy inefficiency. Creatures are passive and clustered. Solution: boost resourceAttraction to improve energy harvest and survival, increase explorationDrive to expand spatial coverage and diversify movements, tune energyConserve to sustain longer foraging trips, and vary parameters across entities to increase form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
