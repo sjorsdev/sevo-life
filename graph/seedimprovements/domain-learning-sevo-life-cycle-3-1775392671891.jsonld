@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775392671891",
+  "timestamp": "2026-04-05T12:37:51.891Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Speed kills efficiency. Rebalance: lower moveSpeed on high-speed genomes, compensate with aggressive harvesting (low thresholds) + stronger energy conservation.; Efficiency at 0.166 is critically weak, dragging overall fitness from potential 0.80+ down to 0.69. The culprit: high moveSpeed costs energy without corresponding harvestThreshold reductions. SurvivalRate is perfect (1.0), beautyScore adequate (0.524), but efficiency is bleeding points. Fix: reduce moveSpeed on fast-movers (0, 2, 4), boost energyConserve globally to 0.65-0.85 range. Secondary: rhythm at 0.027 is dead — increase pulseFrequency on 1-2 entities to add temporal pattern.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
