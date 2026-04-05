@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410925812",
+  "timestamp": "2026-04-05T17:42:05.812Z",
+  "observation": "Domain sevo-life (fitness 0.559) generated 2 insights",
+  "suggestion": "Beautiful things at max survival don't need max complexity. Cut particle overhead by 30%, increase drag to 0.98, dial down active seeking. Efficiency will unblock overall fitness ceiling.; Efficiency is critically weak (0.349 vs 0.667 survival, 0.789 beauty). Organisms are over-built: 8-13 particles each, burning energy on movement physics that doesn't translate to survival gain. Survival plateaus at age 500, beauty is already strong, so efficiency gains come from particle-count reduction + energy conservation. Reduce drag (wastes energy on oscillation), lower resourceAttraction (less frantic seeking), cut maxParticles (smaller genomes), and increase energyConserve threshold. The dead organisms (0,3) aged ~260—optimize lifespan-to-cost ratio by making organisms leaner.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
