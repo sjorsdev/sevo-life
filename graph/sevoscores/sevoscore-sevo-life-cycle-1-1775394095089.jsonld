@@ -1,0 +1,33 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SevoScore",
+  "@id": "sevoscore-sevo-life-cycle-1-1775394095089",
+  "timestamp": "2026-04-05T13:01:35.318Z",
+  "cycleId": "sevo-life-cycle-1-1775394095089",
+  "score": 2458.507565339802,
+  "cyclePoints": 4,
+  "breakdown": {
+    "agentsCreated": 96,
+    "agentsImproved": 0,
+    "fitnessEvaluations": 0,
+    "mutationsProposed": 123,
+    "selectionsMade": 57,
+    "noveltysRecorded": 1083,
+    "crossoversPerformed": 36,
+    "seedImprovements": 182,
+    "benchmarksEvolved": 23,
+    "improvementBonus": 0
+  },
+  "metadata": {
+    "totalAgents": 96,
+    "activeAgents": 48,
+    "bestAgentId": "agent:life-v3-1775390091883",
+    "bestEqs": 0.705,
+    "avgFitness": 0.705,
+    "maxBenchmarkDifficulty": 39,
+    "evolvedLoc": 19377,
+    "model": "claude-haiku-4-5",
+    "domain": "Beauty-driven evolution of artificial life",
+    "forkPoint": "2026-04-03T19:01:59.000Z"
+  }
+}
