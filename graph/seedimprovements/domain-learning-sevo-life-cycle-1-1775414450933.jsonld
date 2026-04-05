@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775414450933",
+  "timestamp": "2026-04-05T18:40:50.933Z",
+  "observation": "Domain sevo-life (fitness 0.586) generated 2 insights",
+  "suggestion": "Evolution is choosing beautiful but expensive organisms. Reduce physics overhead and increase resource efficiency to sustain life longer.; Efficiency is the critical bottleneck (0.241 vs. 0.5-0.74 for survival/beauty). Organisms are dying with depleted energy across all lifecycles (ages 230-407), indicating unsustainable energy expenditure. In particle physics simulations, efficiency depends on: (1) energy cost of movement (springStiffness, swimStrength, drag), (2) energy gain from resources (resourceAttraction, harvestThreshold), and (3) structural maintenance. The solution: reduce movement overhead via higher drag (less resistance) and lower spring stiffness, increase resource acquisition via higher resourceAttraction and energyConserve, and optimize active swimming only when beneficial.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
