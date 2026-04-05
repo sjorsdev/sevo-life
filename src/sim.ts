@@ -227,6 +227,33 @@ export class World {
       }
     }
 
+    // Seasons — world physics shift every 100 ticks
+    // No single organism design can be optimal in all seasons
+    const season = Math.floor(this.tick / 100) % 4;
+    const seasonNames = ["calm", "storm", "drought", "bloom"];
+    if (this.tick % 100 === 0 && this.tick > 0) {
+      // Storm: strong currents, scattered resources
+      if (season === 1) {
+        this.config.flowStrength = 0.5;
+        for (const r of this.resources) r.regrowRate *= 0.5;
+      }
+      // Drought: resources shrink and slow regen
+      else if (season === 2) {
+        this.config.flowStrength = 0.1;
+        for (const r of this.resources) { r.radius *= 0.7; r.regrowRate *= 0.3; }
+      }
+      // Bloom: resources explode, easy living
+      else if (season === 3) {
+        this.config.flowStrength = 0.2;
+        for (const r of this.resources) { r.amount = 1; r.radius *= 1.5; r.regrowRate *= 3; }
+      }
+      // Calm: restore defaults
+      else {
+        this.config.flowStrength = 0.2;
+        for (const r of this.resources) { r.regrowRate = 0.002 + 0.005 * this.rng(); r.radius = 10 + this.rng() * 20; }
+      }
+    }
+
     // Resource regrowth
     for (const r of this.resources) {
       r.amount = Math.min(1, r.amount + r.regrowRate);
@@ -236,7 +263,9 @@ export class World {
     for (const org of this.organisms) {
       if (!org.alive) continue;
       org.age++;
-      org.energy -= 0.03 + org.particles.length * 0.005;
+      // Energy drain varies by season — storms cost more
+      const seasonDrainMult = season === 1 ? 1.5 : season === 2 ? 1.3 : 1.0;
+      org.energy -= (0.03 + org.particles.length * 0.005) * seasonDrainMult;
 
       if (org.energy <= 0) {
         org.alive = false;
