@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v23",
+  "timestamp": "2026-04-05T09:17:02.130Z",
+  "version": 23,
+  "parent": "benchmark-v22",
+  "task": "Implement Byzantine-Resilient Consensus (v23) extending v22 with: (1) Nested Composability Proofs—formally prove that multiple instances of Byzantine consensus + leader election (from v22) compose safely when agents run parallel state machines; machine-checkable proof using Coq that consensus safety holds under all interleavings with Byzantine participants; no admitted tactics; (2) Partial Synchrony Variant—implement consensus that tolerates variable message delays (bounded but unknown to agents); agents must formally prove liveness under partial synchrony without assuming per-round timeouts; (3) Byzantine Fault Localization—during protocol execution, identify and formally prove which Byzantine node(s) caused safety or liveness violation; localization proof must be checkable by honest agents in O(n) messages; (4) Dynamic Membership with Byzantine Nodes—agents must formally verify safety and liveness when Byzantine nodes join/leave mid-consensus; prove that view-change protocol itself is Byzantine-resilient; (5) Optimal Message Complexity Bounds—prove implementation matches theoretical Ω(n²) lower bound for Byzantine consensus; provide formal proof that no O(n) solution exists for your fault model with Byzantine nodes.",
+  "scoringLogic": "nestedComposabilityProofValidity(0.16) + partialSynchronyLivenessProof(0.14) + byzantineFaultLocalizationCorrectness(0.14) + dynamicMembershipSafetyProof(0.14) + optimalMessageComplexityProof(0.12) + composedInstanceSafetyUnderInterleavings(0.12) + partialSynchronyTimingAssumptionEliminationProof(0.10) + viewChangeProtocolByzantineResilience(0.08)",
+  "difficulty": 23,
+  "passThreshold": 0.95
+}
