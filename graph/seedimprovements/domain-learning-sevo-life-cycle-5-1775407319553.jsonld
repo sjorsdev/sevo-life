@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407319553",
+  "timestamp": "2026-04-05T16:41:59.553Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Particle life dies from starvation, not competition. Survival improves by tuning energy economy, not movement speed.; survivalRate is 0.5 (weakest component, 50% of goal weight). Dead organisms lived 225-416 steps vs alive ones at 500, indicating early starvation. Energy conservation and resource discovery are the bottlenecks. BeautyScore (0.723) is already strong; focus survival optimization without sacrificing it. Increase energyConserve to reduce metabolic drain, boost resourceAttraction for better foraging.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
