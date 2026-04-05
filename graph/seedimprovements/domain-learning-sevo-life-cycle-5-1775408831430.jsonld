@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408831430",
+  "timestamp": "2026-04-05T17:07:11.430Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Efficiency failure is movement cost vs. resource gain mismatch. Constrain movement, sharpen resource attraction, spread organisms further apart to reduce interference.; Efficiency is the critical bottleneck at 0.479, pulling overall fitness down from potential ~0.7+. Organisms burn energy without proportional return — they're either moving inefficiently or failing to harvest resources optimally. Secondary issue: spatial composition (0.3) indicates poor distribution. Dead organisms (ids 0,3) had 13 particles but died at age 258; living ones (ages 500) are smaller (8-12 particles). This suggests oversized genomes are energetically unsustainable. Reduce baseline movement waste, increase resource capture efficiency, and improve spatial spreading.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
