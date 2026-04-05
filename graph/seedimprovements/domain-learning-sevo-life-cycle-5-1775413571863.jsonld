@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413571863",
+  "timestamp": "2026-04-05T18:26:11.863Z",
+  "observation": "Domain sevo-life (fitness 0.682) generated 2 insights",
+  "suggestion": "Efficiency collapse comes from movement overspend, not morphology. Conservation-first tuning lifts all three weak metrics simultaneously.; Efficiency (0.339) is critically weak — organisms are energy-inefficient despite good survival. Secondary weakness: spatialComposition (0.3) indicates poor space utilization, and diversityOfForms (0.456) shows morphological repetition. Root cause: high moveSpeed and low energyConserve creating wasteful exploration. Solution: (1) increase energyConserve to 0.6-0.75 across all genomes to fix efficiency, (2) reduce moveSpeed to 0.4-0.5 to force deliberate movement, (3) reduce patternSymmetry and vary trailColor to break form repetition and spread organisms spatially. The 3 dead organisms (ids 0, 3) likely starved mid-growth — increasing energy conservation will extend survival. The 3 survivors are locked in at age 500, suggesting reproduction needs tweaking, but efficiency fix is first priority.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
