@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775390623498",
+  "timestamp": "2026-04-05T12:03:43.498Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency improves when energy expenditure per tick is lower relative to harvest rate—prioritize persistent presence over distance covered.; Efficiency is critically weak at 0.151 (0.2 weight = 0.030 contribution). The bottleneck: high moveSpeed (0.6-0.65) conflicts with moderate energyConserve (0.55-0.8), creating poor ROI on movement. Secondary issue: rhythm at 0.059 (lowest beauty component) indicates low pulseFrequency (0.12-0.35 range). Coverage at 0.458 suggests insufficient trail visibility. Strategy: reduce moveSpeed for efficiency, increase pulseFrequency for rhythm/beauty, increase trailIntensity for coverage. This trades raw exploration speed for sustained, efficient, visible presence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
