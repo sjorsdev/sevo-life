@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775403711856",
+  "timestamp": "2026-04-05T15:41:51.857Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Rhythm is the limiting factor in beauty emergence. Synchronized pulsing drives global aesthetic coherence; it's orders of magnitude underutilized.; Critical bottleneck is beautyScore (0.543, weight 0.3) driven by rhythm collapse (0.065). Rhythm is directly controlled by pulseFrequency, which is uniformly low across all entities (0.12-0.35). Efficiency (0.141, weight 0.2) is secondary but also weak—entities show high moveSpeed (0.65-0.85) without corresponding energyConserve gains. Strategy: (1) Increase pulseFrequency across population to 0.35-0.6 to fix rhythm immediately, (2) Reduce moveSpeed on high-speed entities (Harvester, Persistence Hunter) to improve efficiency without sacrificing survival (survivalRate is already strong at 0.875), (3) Boost trailIntensity on explorers to improve coverage (currently 0.467).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
