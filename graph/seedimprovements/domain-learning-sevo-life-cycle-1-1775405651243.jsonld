@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405651243",
+  "timestamp": "2026-04-05T16:14:11.243Z",
+  "observation": "Domain sevo-life (fitness 0.661) generated 2 insights",
+  "suggestion": "Energy abundance without spatial intelligence wastes efficiency. Organisms need to explore, not just move fast.; Efficiency (0.53) is the bottleneck — lowest weighted metric. Spatial composition (0.3) is critically weak within beauty. Current organisms are energy-rich but move inefficiently. Proposal: reduce moveSpeed to cut waste, increase energyConserve to stretch resources further, boost explorationDrive to spread organisms across the world (improving spatial composition), vary patternSymmetry to increase form diversity (0.457 is low). Motion grace (0.62) improves naturally with balanced movement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
