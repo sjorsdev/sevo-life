@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411784864",
+  "timestamp": "2026-04-05T17:56:24.864Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Efficiency comes from low-cost movement + smart foraging. Diversity comes from parameter variance across population, not from extremes.; Efficiency (0.487) is the weakest component — 40% below the target 0.8 bar. Within beauty, diversityOfForms (0.456) and motionGrace (0.571) are dragging down composite scores. Root causes: (1) organisms are persisting to age 500 with moderate energy but not reproducing or dying — suggests energy inefficiency in movement/foraging; (2) all genomes share similar structure, creating low morphological diversity. Fix: reduce drag and springDamping to cut locomotion cost, boost resourceAttraction and swimStrength for efficient foraging and graceful movement, vary flockingStrength/avoidanceRadius across individuals to create behavioral diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
