@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775392038490",
+  "timestamp": "2026-04-05T12:27:18.490Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Movement costs dominate energy budgets; pulseFrequency creates rhythm patterns that compound beauty.; Efficiency is the critical bottleneck at 0.144 (contributing only 0.029 to final score vs. potential 0.2). Root cause: excessive moveSpeed (most entities at 0.65) burns energy without proportional benefit. Secondary issue: rhythm is weakest beauty component (0.232) — low pulseFrequency across the board. Solution: reduce moveSpeed by 0.1-0.15 across fast movers, boost energyConserve by 0.05-0.1, increase pulseFrequency to add temporal structure.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
