@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406866859",
+  "timestamp": "2026-04-05T16:34:26.859Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "In particle systems, efficiency compounds: lower drag → more movement per calorie → more resource gathering → longer survival → more reproductive events. Energy conservation is the multiplier.; Efficiency is the critical bottleneck at 0.329 — dragging overall fitness from potential 0.68+ down to 0.60. Three organisms died with minimal age (0, 3), and survivors are running on fumes despite max-age. The particle physics is too expensive relative to resource intake. Beauty (0.688) is holding; survival (0.667) is acceptable. Target: reduce energy burn rate through physics drag optimization and increase resource harvest efficiency. This lifts efficiency toward 0.5+ while defending the decent beauty gains already achieved.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
