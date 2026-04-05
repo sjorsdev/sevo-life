@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413819590",
+  "timestamp": "2026-04-05T18:30:19.590Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "Large, ornate bodies fail if movement is expensive — efficiency requires either aggressive foraging or minimal motion. Current genomes do neither.; Efficiency is the bottleneck (0.407 vs 0.667 survival, 0.705 beauty). The high-particle organisms (13 particles, IDs 0 and 3) died early despite good form, suggesting energy cost outpaced resource intake. Weakness: too-aggressive movement (high swimStrength + low drag), poor energy conservation, weak resource-seeking. Improvement strategy: increase drag and energy conservation to reduce per-cycle metabolic cost; boost resource attraction to sustain longer; reduce pulse/swim aggressiveness. Also improve spatial composition (0.513) by varying avoidance radius and reducing flocking overlap.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
