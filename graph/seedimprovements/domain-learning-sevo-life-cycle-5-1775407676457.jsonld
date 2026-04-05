@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407676457",
+  "timestamp": "2026-04-05T16:47:56.457Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Organisms are too similar, burning energy inefficiently. Unlock diversity by allowing parameter drift; improve efficiency by raising resourceAttraction and energyConserve.; Efficiency is critically weak (0.485) and drags overall fitness despite good survival. Organisms age to 500 with insufficient energy harvesting—organism 3 has only 1 energy despite 13 particles. Diversity of forms (0.457) and spatial composition (0.506) are also low, indicating convergence. Primary fix: boost resource gathering and energy efficiency; secondary: increase behavioral/visual diversity through trait variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
