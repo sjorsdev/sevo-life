@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412995251",
+  "timestamp": "2026-04-05T18:16:35.251Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Survival bottleneck is energy depletion, not growth strategy. Simplify metabolism: conserve energy, harvest aggressively, move less.; survivalRate (0.5) is critically weak — organisms die before sim end while others reach 500 ticks. Dead ones had equal/more particles but failed earlier, suggesting energy starvation. Efficiency (0.433) shows poor energy management. Strategy: boost energyConserve to extend lifespan, increase resourceAttraction to harvest faster, reduce movement overhead. diversityOfForms (0.456) lags — vary colors and symmetry across genome variants to increase visual distinctness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
