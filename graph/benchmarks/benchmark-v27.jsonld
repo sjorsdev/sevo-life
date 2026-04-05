@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v27",
+  "timestamp": "2026-04-05T09:39:50.964Z",
+  "version": 27,
+  "parent": "benchmark-v26",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v27) extending v26 with: (1) View Change Protocol with Asynchronous Recovery—agents must implement fault detection and leader recovery resilient to Byzantine view-change messages, with guaranteed liveness within f+1 view changes (no timing assumptions); (2) Consensus Commit Proof Chain—agents must construct deterministic, verifiable chain proving all consensus stages from proposal → prepare → commit → finality, with formal proof that finality is irreversible; (3) Adaptive Byzantine Tolerance—agents must dynamically compute fault tolerance threshold f(t) based on observed network latency distribution (e.g., f increases when latency variance is low, decreases when high), with provably safe threshold transitions; (4) Reconfiguration Protocol—agents must safely add/remove replicas during Byzantine faults without consensus interruption or state divergence; (5) Cross-Replica Equivocation Provability—agents must emit cryptographic evidence (signatures + timestamp) when detecting Byzantine equivocation, formalize detection logic as executable predicates.",
+  "scoringLogic": "viewChangeAsyncRecovery(0.13) + commitProofChainFormality(0.13) + adaptiveFaultThresholdCorrectness(0.13) + reconfigurationProtocolLiveness(0.12) + equivocationProvabilityRigor(0.12) + asynchronousSafetyProof(0.12) + cryptographicProofAggregation(0.12) + performanceUnderReconfiguration(0.11)",
+  "difficulty": 27,
+  "passThreshold": 0.95
+}
