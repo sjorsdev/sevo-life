@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411196327",
+  "timestamp": "2026-04-05T17:46:36.327Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Efficiency crisis: organisms explore too much, harvest too little. Pivot from movement-heavy to resource-focused behavior; energy conservation beats speed.; Efficiency (0.479) is critically weak and dominates the fitness bottleneck. Two organisms died early (ages 272, 229) indicating energy depletion. Living organisms maxed lifespan but with highly variable energy states (10 vs 27). Survival is secondary weakness (0.667). Root cause: genomes are energy-wasteful explorers rather than efficient resource-converters. Solution: increase energyConserve universally (reduce movement waste), boost resourceAttraction to find resources faster, and reduce explorationDrive/moveSpeed to cut unnecessary motion. This trades exploration breadth for survival depth. Spatial composition (0.3) is weak—reduce moveSpeed variance to stabilize formation patterns. Diversity (0.456) is addressed by keeping mutation exploration on select genomes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
