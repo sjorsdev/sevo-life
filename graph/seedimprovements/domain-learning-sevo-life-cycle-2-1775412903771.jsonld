@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412903771",
+  "timestamp": "2026-04-05T18:15:03.771Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "Struggling life forms need to conserve energy and hunt more aggressively, not move faster. Efficiency bottleneck is metabolic, not behavioral.; Efficiency is the weakest component at 0.497 (vs. beauty 0.665, survival 0.667). Dead organisms (ids 0, 3) died despite reaching ~300 age, suggesting energy depletion. Living organisms have thin energy reserves (max 31). Root cause: energy drain outpaces resource harvesting. Solution: (1) increase energyConserve to reduce per-tick drain, (2) boost resourceAttraction to find food faster, (3) raise harvestThreshold for more aggressive feeding, (4) lower moveSpeed to reduce locomotion cost. Spatial composition weakness (0.3) is secondary — improved organism stability will enable more complex trail patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
