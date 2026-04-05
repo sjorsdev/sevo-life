@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412493421",
+  "timestamp": "2026-04-05T18:08:13.421Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Dead organisms show ~280 age (energy starvation) vs. alive at 500 (just barely sustaining) — system is right at death threshold. Tighten energy budget and hunting efficiency.; Survival and efficiency are critical bottlenecks. Only 3/6 organisms survive despite reaching age 500, indicating energy crisis — they're burning calories faster than they can harvest. Efficiency is severely weak (0.33), and spatial composition is the worst beauty metric (0.3). Strategy: maximize energy conservation and resource acquisition while reducing wasteful movement. Increase `energyConserve` and `resourceAttraction` globally; decrease `moveSpeed` and `explorationDrive` to reduce energy burn. Boost `patternSymmetry` to improve spatial composition and form harmony.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
