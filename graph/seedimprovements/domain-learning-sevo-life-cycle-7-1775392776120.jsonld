@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775392776120",
+  "timestamp": "2026-04-05T12:39:36.120Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Survival is solved (1.0) — shift selection pressure from staying-alive to staying-efficient. Low rhythm suggests pulsing behavior is underdeveloped; regular temporal patterns create emergent complexity.; Efficiency (0.146) is the critical bottleneck — it's the lowest absolute component and even small gains compound in overall fitness. Rhythm (0.198) in beauty is also severely constrained by low pulseFrequency. Strategy: reduce moveSpeed on mobile entities (survival is already maxed at 1.0, so aggressive exploration isn't required), increase energyConserve to lower cost-per-action, and boost pulseFrequency for better temporal pattern emergence. Target the most inefficient phenotypes: Harvester and Aesthetic Harvester have the lowest energyConserve (0.55-0.6); Efficient Hoarder is already good but needs rhythm boost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
