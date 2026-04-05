@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775393378456",
+  "timestamp": "2026-04-05T12:49:38.456Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency failure is mostly movement cost + threshold misalignment. Move less, harvest more selectively, conserve harder.; Efficiency (0.156) is critically low — entities are burning energy faster than harvesting. The culprits: (1) high moveSpeed on explorers wastes energy per tick, (2) very low harvestThreshold on aggressive harvesters (0.05-0.08) causes energy-negative harvests on marginal resources, (3) global energyConserve too low. Secondary issue: rhythm (0.234) is weak — low pulseFrequency values don't create temporal patterns. Fix: reduce moveSpeed across the board, raise harvestThreshold to selective range (0.10-0.15), boost energyConserve, and increase pulseFrequency for rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
