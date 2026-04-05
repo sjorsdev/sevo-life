@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412946500",
+  "timestamp": "2026-04-05T18:15:46.500Z",
+  "observation": "Domain sevo-life (fitness 0.602) generated 2 insights",
+  "suggestion": "High-complexity genomes (jellyfish tentacles, crawler segments) waste energy. Lean organisms with better foraging instinct outperform.; Efficiency (0.371) is critically weak, dragging fitness from 0.6+ to 0.551. The issue: organisms are high-cost (drag, complexity, size) but low-reward (poor energy harvesting, insufficient exploration). Survival rate (0.5) shows premature death—organisms burn out before age 500. Motion grace (0.588) indicates stiff, jerky movement. Fix: reduce drag friction, boost resource attraction (foraging), lower move costs, increase pulse frequency for flow.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
