@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775394042522",
+  "timestamp": "2026-04-05T13:00:42.522Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency ceiling is energy conservation, not harvest rate. Rhythm emerges from synchronized pulsing. Coverage requires fighting the clustering instinct.; Efficiency is critically weak (0.152) and is the primary drag on overall fitness (goal: 0.5×survival + 0.3×beauty + 0.2×efficiency). Within beauty, rhythm (0.145) and coverage (0.483) are bottlenecks. Efficiency improves by reducing movement energy cost (moveSpeed) and increasing energy retention (energyConserve). Rhythm requires higher pulseFrequency to create temporal coordination. Coverage requires higher explorationDrive to scatter entities across the world, breaking resource clustering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
