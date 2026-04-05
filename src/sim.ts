@@ -1,8 +1,11 @@
 // src/sim.ts — Particle-based life simulation in continuous 2D space
 //
-// No grid. No cells. Organisms are clusters of particles connected by
-// springs, governed by physics. Shapes emerge from growth rules and forces.
-// The world has flow fields, resource gradients, and terrain that's alive.
+// Organisms are clusters of particles connected by springs.
+// The world has chemistry (reaction-diffusion), flow fields, and seasons.
+// Beauty measured by compression progress (Schmidhuber), not fixed formula.
+
+import { createChemField, stepChemistry, depositChemical, readChemical, patternEntropy, patternStructure, type ChemField } from "./chemistry.ts";
+import { BeautyEngine, countUniquePatterns } from "./compression-beauty.ts";
 
 // --- Vector math ---
 export interface V2 { x: number; y: number }
@@ -140,6 +143,8 @@ export class World {
   organisms: Organism[];
   resources: Resource[];
   flow: FlowField;
+  chem: ChemField;              // reaction-diffusion chemistry — the world's body
+  beauty: BeautyEngine;         // compression progress tracker
   tick: number;
   rng: () => number;
   private nextId: number;
@@ -149,6 +154,19 @@ export class World {
     this.tick = 0;
     this.rng = mulberry32(seed);
     this.nextId = 0;
+
+    // Chemistry — the world is alive, a slow giant organism
+    // Reaction-diffusion creates organic patterns that organisms interact with
+    const chemRes = 4; // each chem pixel = 4 world units
+    this.chem = createChemField(
+      Math.ceil(config.width / chemRes),
+      Math.ceil(config.height / chemRes),
+      0.055, // feed rate — sweet spot for spots/stripes
+      0.062, // kill rate
+    );
+
+    // Beauty engine — tracks compression progress over time
+    this.beauty = new BeautyEngine();
 
     // Create flow field — swirling currents that change over time
     const res = 20;
@@ -212,6 +230,29 @@ export class World {
 
   step(): void {
     this.tick++;
+
+    // Chemistry — the world's body evolves (reaction-diffusion)
+    // Run 2 chemistry steps per world step (chemistry is faster/smaller scale)
+    stepChemistry(this.chem, 2);
+
+    // Organisms deposit chemicals where they are — they shape the world
+    for (const org of this.organisms) {
+      if (!org.alive) continue;
+      for (const p of org.particles) {
+        const chemX = p.pos.x / 4; // world→chem coordinates
+        const chemY = p.pos.y / 4;
+        // Living particles deposit chemical B — they leave a chemical trace
+        depositChemical(this.chem, chemX, chemY, "b", 0.02, 1);
+      }
+    }
+
+    // Track beauty via compression progress every 10 ticks
+    if (this.tick % 10 === 0) {
+      const entropy = patternEntropy(this.chem);
+      const structure = patternStructure(this.chem);
+      const uniqueP = countUniquePatterns(this.chem.b, this.chem.width, this.chem.height);
+      this.beauty.record(this.tick, entropy, structure, uniqueP);
+    }
 
     // Evolve flow field — world breathes
     this.flow.phase += 0.01;
