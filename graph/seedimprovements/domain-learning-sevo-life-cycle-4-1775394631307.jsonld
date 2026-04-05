@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775394631307",
+  "timestamp": "2026-04-05T13:10:31.307Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Harvest threshold is an efficiency lever—too high causes energy-wasting search; visual parameters (pulse/trail) unlock beauty gains with zero energy cost.; Efficiency is critically low (0.149), dragging overall fitness to 0.692. The goal weights efficiency at 0.2 but it's underperforming. Root cause: harvestThreshold is too high on indices 2 and 3 (0.12 and 0.15), forcing entities to seek very abundant resources before harvesting—wasting movement energy. Secondary issue: beauty (0.54) is weak, driven by rhythm (0.23) and coverage (0.346). Harvester (0) has zero pulse and low trail intensity; these parameters directly improve those metrics without energy cost. Fixes: (1) lower harvestThreshold to 0.08 across high-threshold entities to improve harvest frequency and efficiency, (2) increase pulseFrequency and trailIntensity on Harvester to unlock rhythm and coverage gains, (3) reduce explorationDrive on Harvester to stop wasting energy on unguided exploration.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
