@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775406378294",
+  "timestamp": "2026-04-05T16:26:18.294Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Organisms are energy-starved foragers — they need to find and consume resources faster than they're burning through searches.; Efficiency (0.337) is the critical bottleneck — organisms waste energy relative to resources gained. Spatial composition (0.3) and diversity (0.456) are also weak, indicating poor spread and form variation. The alive organisms are barely surviving (all at age limit with low energy 7-28). Dead organisms died between 263-359 steps, suggesting inconsistent survival. Strategy: (1) boost resourceAttraction to find food more reliably, (2) increase energyConserve to stretch existing resources, (3) raise explorationDrive to spread spatially and reduce competition, (4) lower harvestThreshold to feed more aggressively when resources appear. This trades off pure survival rate slightly for much better efficiency and spatial distribution.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
