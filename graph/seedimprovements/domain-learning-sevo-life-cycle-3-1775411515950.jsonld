@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411515950",
+  "timestamp": "2026-04-05T17:51:55.950Z",
+  "observation": "Domain sevo-life (fitness 0.600) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is metabolic waste, not capability—constrain energy budget to force tighter morphologies and deliberate movement.; Efficiency is critically low at 0.473—organisms are burning energy without proportional survival benefit. Dead organisms (IDs 0, 3) had 13 particles; survivors have 8-12. Spatial composition is also very weak (0.3), indicating poor organization. Strategy: reduce moveSpeed and increase energyConserve to lower baseline metabolic cost, shift explorationDrive down (wasting energy on aimless movement), boost patternSymmetry to improve spatial structure, lower resourceAttraction slightly to reduce overconsumption.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
