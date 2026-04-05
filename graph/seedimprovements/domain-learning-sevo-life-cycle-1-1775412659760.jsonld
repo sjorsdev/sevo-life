@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412659760",
+  "timestamp": "2026-04-05T18:10:59.760Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy cost vs harvest rate — smaller/simpler forms win by default. Make complex forms viable by cutting metabolic waste and improving resource-seeking.; Efficiency is critically weak (0.342 vs survival 0.667 and beauty 0.673). The heavier organisms (12 particles) are paying high movement/metabolism costs with poor energy harvest. Diversify of forms (0.456) and spatial composition (0.557) also lag. Solution: reduce moveSpeed and trailIntensity for complex organisms to cut energy waste, boost resourceAttraction for faster harvesting, increase energyConserve globally, and vary explorationDrive/trailColor across the population to improve form diversity and spatial dispersion.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
