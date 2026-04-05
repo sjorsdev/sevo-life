@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406105729",
+  "timestamp": "2026-04-05T16:21:45.729Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Efficiency gains from constraint (less movement) outweigh diversity losses — smaller, energized organisms beat large, starving ones.; Efficiency is the critical bottleneck (0.535 vs 0.667 survivalRate, 0.685 beautyScore). Three organisms are alive but energy-depleted (9-19 energy on smaller genomes), indicating wasted movement or inefficient harvesting. Spatial composition (0.3) suggests organisms are clustering poorly. Fix by: (1) reducing moveSpeed and explorationDrive to conserve energy, (2) increasing energyConserve to maintain vitality, (3) tuning harvestThreshold to grab resources sooner before energy crashes, (4) boosting patternSymmetry to improve spatial coherence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
