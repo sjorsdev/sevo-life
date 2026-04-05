@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775395011736",
+  "timestamp": "2026-04-05T13:16:51.736Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "High moveSpeed without corresponding energyConserve creates a fitness trap — entities exhaust themselves chasing resources inefficiently. Rhythm beauty emerges from temporal synchronization, not just static color.; Efficiency (0.155) is the critical bottleneck — it's 8x lower than survivalRate (1.0) despite perfect survival. This suggests entities are burning energy without proportional resource gain. The Harvester (#0) combines high moveSpeed (0.85) with moderate energyConserve (0.6), creating energy waste. The Persistence Hunter (#4) also has high moveSpeed (0.75) with modest conservation. Additionally, rhythm metric (0.094) is severely underutilized — most entities have pulseFrequency <0.35, limiting emergent pattern beauty. The strategy: reduce wasteful movement in aggressive seekers, increase rhythm diversity, and calibrate harvest thresholds to avoid accepting marginally-valuable resources that cost more energy than they yield.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
