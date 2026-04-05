@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775404717167",
+  "timestamp": "2026-04-05T15:58:37.167Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Particles optimizing for mere survival ignore energy waste and pattern generation—must add incentive structure that rewards efficient distributed movement with emergent rhythmic behavior.; Efficiency (0.144) is critically low—organisms waste ~86% of potential energy. Rhythm (0.06) is nearly absent—no periodic pulsing patterns. Coverage (0.258) is weak—organisms cluster rather than explore. These three metrics alone account for ~0.35 fitness loss. Fix by: (1) increasing energyConserve to reduce idle energy drain, (2) increasing pulseFrequency to create visible oscillating patterns that boost rhythm, (3) increasing explorationDrive to spread coverage across the grid. Symmetry (0.463) will naturally improve as rhythm and coverage improve.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
