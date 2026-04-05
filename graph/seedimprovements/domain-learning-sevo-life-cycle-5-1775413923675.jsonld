@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413923675",
+  "timestamp": "2026-04-05T18:32:03.675Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "Efficiency and diversity are competing: leaner forms survive longer but look repetitive. Amplify the leanest forms' hunting and conservation, then add radical growth-step variations to branch diversity.; Efficiency at 0.511 is the weakest metric and bottleneck. Alive organisms have low energy relative to particle counts — they're structurally expensive relative to their resource intake. DiversityOfForms (0.456) is also critically low. Strategy: (1) boost resourceAttraction to improve energy intake, (2) increase energyConserve to squeeze more distance per unit fuel, (3) reduce pulseFrequency to stop wasteful oscillation, (4) increase explorationDrive to discover resources faster. Target the most efficient survivors (organisms 2, 4, 5 with 8 particles) as mutation anchors — scale up their parameters to maximize their replication.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
