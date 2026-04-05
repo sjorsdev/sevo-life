@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409089446",
+  "timestamp": "2026-04-05T17:11:29.446Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "Survival unlocks all other metrics—beauty and efficiency follow when organisms live long enough to develop and reproduce.; Survival rate (0.333) is the critical bottleneck—only 2 of 6 organisms alive, and they're barely sustained. Beauty and efficiency metrics are secondary when organisms die before completing lifecycles. Root causes: (1) resourceAttraction too weak to find food reliably, (2) moveSpeed too high burns energy without proportional gain, (3) energyConserve too low creates metabolic drain, (4) explorationDrive and pulseFrequency waste energy on non-survival behaviors. Solution: prioritize food-finding and metabolism efficiency while dramatically reducing wasteful movement. This frees energy for growth and reproduction.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
