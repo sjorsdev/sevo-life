@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409297636",
+  "timestamp": "2026-04-05T17:14:57.636Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy-to-growth ratio: organisms survive but don't spread efficiently. Fix by penalizing idle energy and rewarding exploration + reproduction.; Efficiency is critically weak (0.454 vs 0.833 survival, 0.673 beauty). Primary drain: organisms survive but waste energy without reproducing, limiting population scale. Secondary weakness: spatialComposition (0.3) indicates clustering, not distributed coverage. Strategy: (1) reduce idle energy waste via energyConserve, (2) increase exploratory spread via explorationDrive to distribute organisms and improve spatial harmony, (3) increase pattern diversity to boost diversityOfForms metric (0.457). Current organisms at max age with low energy suggest they're reproducing inefficiently.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
