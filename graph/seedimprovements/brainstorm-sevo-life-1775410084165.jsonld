@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775410084165",
+  "timestamp": "2026-04-05T17:28:04.165Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not a fitness ceiling—it's a **dimensionality collapse**. All organisms have converged on the same 3-4 dominant strategies within the fixed world structure. Evolution has optimized the existing design space to saturation. The solution is not better optimization, but *new dimensions*: temporal variation (phases), life-history diversity (metamorphosis), and social structure (colonies). Each adds orthogonal axes to the fitness landscape, expanding the searchable space and allowing evolution to escape the current local optimum.; [medium] Introduce environmental phase shifts: divide world lifetime into 3-4 distinct phases (e.g., nutrient-rich → sparse → rich again) with different resource distributions. Organisms must adapt strategies or die. — Plateau occurs because all organisms have converged to optimize for a single static environment. Phase shifts create a moving fitness landscape—organisms can no longer lock into local optima. Beauty now rewards adaptability across phases, not just current-phase dominance. This breaks symmetry and forces continuous innovation.; [medium] Add metamorphosis: organisms can voluntarily transition to a different body form mid-life (e.g., motile→sessile, predator→photosynthesizer). Transition costs energy but unlocks new growth rules and beauty patterns in the new form. — Current fitness landscape assumes one strategy per organism lifetime. Metamorphosis doubles the search space—organisms can now explore two independent body plans in one life. This enables two-stage strategies: 'explore as mobile → settle and beautify as sessile.' Breaks out of single-optimization trap.; [hard] Introduce colony beauty: add new beauty dimension that rewards emergent multi-organism patterns—synchronized movement, resonant frequencies, or chemical synchronization between nearby organisms. Single organisms can still survive, but evolved beauty now includes 'plays well with others.' — Current beauty is individual-centric. Colony-level beauty shifts selection pressure from 'optimize myself' to 'optimize as a collective.' This enables cooperation evolution, which is structurally novel. Fitness landscape reorganizes around interaction topology, not just individual morphology. Organisms discover they can improve fitness by being worse individually but better collectively.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
