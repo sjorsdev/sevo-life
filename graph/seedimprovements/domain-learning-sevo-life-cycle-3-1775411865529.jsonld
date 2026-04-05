@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411865529",
+  "timestamp": "2026-04-05T17:57:45.529Z",
+  "observation": "Domain sevo-life (fitness 0.657) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is morphological cost, not behavioral—lighter bodies with smarter foraging beats heavy bodies with strict conservation; Efficiency is the weakest component (0.464 vs beautyScore 0.692). This likely reflects high particle counts relative to capability and suboptimal energy-to-movement conversion. Spatial composition is also critically weak (0.3), indicating poor environmental distribution. Two dead organisms (ids 0, 3) suggest energy depletion despite adequate food. Strategy: reduce particle overhead and energyConserve burden (more aggressive harvesting), increase exploration drive to spread organisms across space (fixing spatial composition), and boost resourceAttraction to enable survival despite lower conservation. Smaller baseRadius and lower turn bias reduce computational drag per movement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
