@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405808230",
+  "timestamp": "2026-04-05T16:16:48.230Z",
+  "observation": "Domain sevo-life (fitness 0.660) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is wasted exploration + energy bleed. Conserve energy during low-resource periods; reduce moveSpeed and explorationDrive to cut waste-motion cost; improve spatial arrangement via patternSymmetry to boost composition metric.; Efficiency (0.441) is the bottleneck — it's 30% lower than beautyScore and 34% below survivalRate. At 0.2 weight, improving efficiency by 0.15 gains +0.03 overall fitness. Secondary targets: spatialComposition (0.3) and diversityOfForms (0.456) are dragging beauty. Efficiency improvements come from energy conservation, reduced waste motion, and optimal harvest timing. Organisms 4 and 0 (dead at 408) show energy starvation — need better conservation and reduced exploration waste.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
