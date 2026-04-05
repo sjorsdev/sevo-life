@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413063834",
+  "timestamp": "2026-04-05T18:17:43.834Z",
+  "observation": "Domain sevo-life (fitness 0.555) generated 2 insights",
+  "suggestion": "Beautiful shapes moving inefficiently—creatures are burning energy on complex motion patterns (high motionGrace) without converting resources. Fix resource-capture first; beauty emerges from successful survival.; Efficiency is the critical bottleneck at 0.386 vs beautyScore 0.804. The simulation sustains life (survivalRate 0.667) and displays beauty well, but organisms burn energy inefficiently. Organisms 1, 4 are starving (4 energy each) despite age 500 while organism 2 hoards (37 energy). This pattern indicates poor resource-to-movement trade-off. Solution: increase resourceAttraction to pull resources in faster, increase energyConserve to reduce waste on motion, reduce explorationDrive (wasting energy on random movement), and lower harvestThreshold so organisms feed more aggressively. Geometry (symmetry 0.833, proportion 0.962) is already excellent; focus on physics efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
