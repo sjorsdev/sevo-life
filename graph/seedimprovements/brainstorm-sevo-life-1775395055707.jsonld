@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775395055707",
+  "timestamp": "2026-04-05T13:17:35.707Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Plateau reflects convergence in a **single, unchanging fitness landscape**. All agents compete on identical metrics in identical conditions. New structure (temporal variation, competitor types, or ontogenetic complexity) **creates multiple interacting fitness landscapes** — no single phenotype can simultaneously maximize all of them. This fragmentation prevents convergence and restores gradient signal.; [medium] Introduce seasonal cycles — environment properties shift every N steps (temperature, light, available resources). Fitness calculation weights beautyScore differently per season. — Current plateau: all organisms optimize for static conditions. Seasonal pressure forces trade-offs — traits optimal in season A fail in season B. Organisms can no longer reach global fitness maximum; instead populations diversify into specialists and generalists. This creates a shifting fitness landscape preventing convergence to local optima. Estimated fitness boost: 0.15-0.25 as temporal bet-hedging becomes valuable.; [hard] Add predator organism type with inverse beautyScore — predators score high on 'threat display' (sharp shapes, aggressive color), prey score on 'camouflage + grace' (smooth, muted). Introduce predator-prey energy transfer. — Current plateau: selection pressure uniform across population. Predator-prey dynamics create oscillating selection: when prey become too beautiful/visible, predators exploit them; when prey hide, they sacrifice beautyScore but survive; predator beauty becomes anti-correlated with prey. This arms race generates new adaptive space and fitness gradients that parameter tuning cannot access. Estimated fitness boost: 0.10-0.20 from ecological stability and niche differentiation.; [medium] Add developmental stages (3 phases: juvenile→mature→elder) with different action sets, metabolism rates, and beauty perception. Beauty scoring weights change per stage. — Current plateau: organisms are homogeneous across lifespan. Stages create internal structure — a single organism solves 3 different optimization problems sequentially. A juvenile's fast reproduction may trade beauty for speed; mature form balances all traits; elder form invests in environmental legacy. This breaks linear phenotype optimization and allows body-plan reuse across stages. Estimated fitness boost: 0.08-0.15 from life-history trade-off richness.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
