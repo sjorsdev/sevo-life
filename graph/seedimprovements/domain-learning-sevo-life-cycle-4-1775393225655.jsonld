@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775393225655",
+  "timestamp": "2026-04-05T12:47:05.655Z",
+  "observation": "Domain sevo-life (fitness 0.692) generated 2 insights",
+  "suggestion": "Movement cost per resource gained is too high. Shift from speed-based seeking to rhythm-enhanced patterns and smarter exploration efficiency.; Efficiency is critically weak at 0.149 (bottleneck on goal score). Root cause: high movement costs (moveSpeed 0.6-0.85) without proportional resource acquisition. Secondary issue: rhythm is near-zero (pulseFrequency 0.0-0.25 max) dragging beauty to 0.524. Beings survive perfectly (no energy pressure) but waste motion. Solution: (1) Reduce moveSpeed on fast beings to cut energy waste while maintaining resourceAttraction, (2) 2-3x increase pulseFrequency globally to unlock rhythm metric, (3) Increase explorationDrive in low-exploration entities (Hoarder, Balanced Optimizer) to find resources without costly movement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
