@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775389805211",
+  "timestamp": "2026-04-05T11:50:05.211Z",
+  "observation": "Domain sevo-life (fitness 0.698) generated 15 insights",
+  "suggestion": "previous version at 0.698 traded survival for efficiency. Weight is 0.5 (highest).; moveSpeed reduced to 0.3 for 50% less energy drain. harvestThreshold 0.04.; moveSpeed 0.4 (energy efficient) + harvestThreshold 0.06 + trail intensity 0.7; reduced moveSpeed to 0.55 from 0.65. harvestThreshold 0.09 (tighter capture).; moveSpeed 0.45, high trail intensity (0.9), patternSymmetry 0.8.; moveSpeed 0.6, but explorationDrive only 0.5. harvestThreshold 0.08.; moveSpeed 0.35, harvestThreshold 0.05, energyConserve 0.92.; moveSpeed 0.5 (middle ground), trailAttraction 0.25 (follows patterns).; moveSpeed 0.65 for exploration, but harvestThreshold 0.06 catches more.; Check energy first. If below critical (30%), avoid movement.; Harvest at threshold — aggressive early, then selective.; Movement decision — survive energy first.; Random exploration only when energy sufficient.; Trail creation — aesthetic signature costs ~2% energy, applied conservatively.; Output metrics for scoring. Fitness = 0.5*survival + 0.3*beauty + 0.2*efficiency",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
