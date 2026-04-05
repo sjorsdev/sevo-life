@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775389645111",
+  "timestamp": "2026-04-05T11:47:25.111Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 18 insights",
+  "suggestion": "survival rate bottleneck identified. Previous versions exhausted energy chasing marginal resources.; raised harvestThreshold from 0.08 to 0.12 to avoid chasing trace resources at high energy cost; high energyConserve (0.9) + moderate harvest (0.11) + willingness to idle prevents death; high pulseFrequency + patternSymmetry create emergent beauty while moderate speed saves energy; tuned all parameters to mid-range for stability. Lower moveSpeed (0.6) reduces energy waste.; very high trailAttraction (0.8) + moderate resourceAttraction creates synergy with other entities; very low moveSpeed (0.3) + high energyConserve (0.88) allows long survival on selective harvests; pulseFrequency 0.55 + patternSymmetry 0.8 enable coordination without constant movement; balanced trailAttraction (0.65) and trailIntensity (0.7) enable population trail formation; moderate parameters allow this genome to adapt behavior based on decision logic constraints; critical survival protection. When energy is critically low, harvest anything or rest.; new survival tier (3-5 energy): conservative behavior. Harvest what's available, rest otherwise.; pulse threshold raised to energy > 8 to prevent energy depletion from beauty creation; improved movement strategy with better resource + trail scoring integration; balanced resource weight. Reduced from 2.0 to 1.5 to avoid energy-expensive chasing; pattern symmetry bonus for organized movement patterns; exploration tuned to energy state. High exploration when full, minimal when moderate.; strategic idle + trail creation. When full of energy but not moving, leave aesthetics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
