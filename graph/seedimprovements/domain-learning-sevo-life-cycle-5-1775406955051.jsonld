@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406955051",
+  "timestamp": "2026-04-05T16:35:55.051Z",
+  "observation": "Domain sevo-life (fitness 0.593) generated 2 insights",
+  "suggestion": "Particles are exploring insufficiently. Spread drives evolution of larger formations and emergent spatial patterns.; spatialComposition (0.3) is critically weak, dragging overall beauty. This indicates organisms cluster too densely or don't explore enough. Efficiency (0.515) is also below target. Strategy: increase explorationDrive and moveSpeed to spread organisms across space and improve spatial composition; boost energyConserve to recover efficiency without sacrificing movement; introduce patternSymmetry and trailColor variation to lift diversityOfForms from 0.456.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
