@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775403916850",
+  "timestamp": "2026-04-05T15:45:16.850Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Fast entities waste energy; rhythmic visual patterns are free beauty. Slow down movers, add pulse.; Efficiency is critically weak (0.143) despite maxed survival. The Harvester (0.85 moveSpeed, 0.7 exploration, 0.6 conservation) and Persistence Hunter (0.75 moveSpeed, 0.8 exploration) are burning energy inefficiently. Reducing moveSpeed and explorationDrive while increasing energyConserve will reclaim wasted resources. Separately, rhythm (0.076) is killing beauty—boost pulseFrequency on aesthetic entities. Efficiency gains are highest ROI: 0.2 weight on a 0.143→0.3+ target yields +0.034 to overall score; beauty tweaks worth +0.015.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
