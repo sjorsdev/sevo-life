@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775417321637",
+  "timestamp": "2026-04-05T19:28:41.637Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Efficiency fails because organisms move extravagantly without proportional resource gain. Energy conservation and smart foraging win over random motion.; Efficiency (0.499) is the critical bottleneck—nearly 50% below target. This indicates organisms are expending energy faster than they harvest it. Secondary weakness: spatialComposition (0.3) and diversityOfForms (0.456) suggest insufficient movement variety and form differentiation. Strategy: (1) boost energyConserve across all genomes to reduce waste, (2) decrease moveSpeed to cut unnecessary motion, (3) increase resourceAttraction for more efficient foraging, (4) tune harvestThreshold lower for organisms with low energy reserves, (5) increase patternSymmetry and vary trailColor to improve spatial/visual diversity. Organism 2 (8 particles, 4 energy) is near-critical—aggressive conservation needed. Organisms 1 and 4 (12 particles) are stable—can tolerate slightly more exploration.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
