@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775390676962",
+  "timestamp": "2026-04-05T12:04:36.962Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Movement efficiency > exploration breadth: low-speed, high-conservation scouts outperform high-speed wanderers in this resource landscape.; Efficiency is critically weak at 0.134, dragging overall fitness from potential 0.75+ down to 0.632. Analysis: high moveSpeed (0.65) on explorers + moderate-to-low energyConserve (0.45-0.55) + high explorationDrive (0.7-0.8) = massive wasted energy. The Harvester and Persistence Hunter are burning resources on unfocused movement. Efficient Hoarder (index 1) has the right formula (0.4 speed, 0.7 conservation) but is rare. Solution: reduce movement speed on active explorers, boost energy conservation universally, temper exploration drive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
