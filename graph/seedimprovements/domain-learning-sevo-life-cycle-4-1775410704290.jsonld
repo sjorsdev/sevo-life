@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410704290",
+  "timestamp": "2026-04-05T17:38:24.290Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Organisms are spending energy to move fast, not to eat efficiently — flip priority to stable foraging with high energy retention over exploratory wandering.; Efficiency at 0.403 is the critical bottleneck — 25% below survival and 20% below beauty. The organism death pattern (2 dead at ages 265-371) and low energy reserves (max 23 across living organisms) suggest energy is being wasted on inefficient movement and poor resource conversion. High moveSpeed and explorationDrive drain energy without proportional resource gain. Increasing energyConserve, resourceAttraction, and harvestThreshold efficiency while reducing wasteful movement speed will compound EQS. Secondary: spatialComposition (0.3) and diversityOfForms (0.456) are weak — diversifying movement patterns and trail colors improves composition without energy cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
