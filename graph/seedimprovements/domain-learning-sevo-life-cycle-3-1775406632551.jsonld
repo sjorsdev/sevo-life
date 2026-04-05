@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775406632551",
+  "timestamp": "2026-04-05T16:30:32.551Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Static beauty is wasted beauty. Motion and exploration unlock both efficiency gains AND better spatial composition.; Efficiency is critically weak (0.498), dragging overall fitness despite strong beauty. Within beauty, spatial composition (0.3) and form diversity (0.456) are bottlenecks. Organisms are stationary, not exploring—they're maxing lifespan but not gathering resources efficiently. Boost moveSpeed and explorationDrive across genomes to increase activity, resource harvesting, and spatial pattern emergence. Increase trailIntensity so movement creates richer visual trails (beauty) as secondary benefit.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
