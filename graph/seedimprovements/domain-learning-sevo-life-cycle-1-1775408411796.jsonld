@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408411796",
+  "timestamp": "2026-04-05T17:00:11.796Z",
+  "observation": "Domain sevo-life (fitness 0.597) generated 2 insights",
+  "suggestion": "Efficiency bottleneck stems from inefficient foraging and energy waste—organisms find resources poorly and burn energy faster than they harvest. Shift to aggressive resource-seeking behavior paired with strict energy conservation.; Efficiency is critically low at 0.354—organisms are poor at energy management and resource extraction. With 50% mortality and survivors at <3% max energy, the system is resource-starved. SurvivalRate (0.667) also underperforms the goal weight (0.5). Beauty is already solid (0.677). Priority: maximize resourceAttraction and energyConserve to enable survival, which compounds all other metrics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
