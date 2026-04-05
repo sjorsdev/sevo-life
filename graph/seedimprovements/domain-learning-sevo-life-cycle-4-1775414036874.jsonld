@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775414036874",
+  "timestamp": "2026-04-05T18:33:56.874Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Organisms are energy-starved clusterers. Efficiency and spread are coupled: efficient movers who explore widely create better spatial patterns and survive longer.; Efficiency (0.425) is the bottleneck—it's the weakest fitness component and directly drags down the 0.2-weighted goal term. Spatial composition (0.3) is even worse and dominates the beauty penalty. Organisms are clustering and moving inefficiently. Solution: (1) boost energyConserve to reduce waste per movement, (2) increase explorationDrive and avoidanceRadius to spread entities across space, (3) reduce flockingStrength to break clustering behavior. This addresses both efficiency (lower movement waste) and spatial composition (entities distribute themselves, creating better visual patterns). Survival is limited by energy depletion—organism 4 has 0 energy at age 500—so conservation is critical.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
