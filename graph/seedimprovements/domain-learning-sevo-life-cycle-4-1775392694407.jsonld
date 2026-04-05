@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775392694407",
+  "timestamp": "2026-04-05T12:38:14.407Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "High harvestThreshold ≤0.08 + high moveSpeed = chasing pennies. Entities burn energy faster than they gain it. Raise thresholds, lower movement, pulse for rhythm.; Efficiency is critically low (0.148) despite perfect survival—entities are wasting energy on movement and marginal resource chasing. Beauty rhythm is nearly absent (0.104). Three changes: (1) reduce moveSpeed to cut wasted movement, (2) raise harvestThreshold to focus on high-value resources instead of marginal ones, (3) boost pulseFrequency to create temporal beauty patterns (rhythm). Efficiency gains directly improve the weighted score; rhythm improvement lifts beautyScore.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
