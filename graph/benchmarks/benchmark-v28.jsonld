@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v28",
+  "timestamp": "2026-04-05T09:43:28.654Z",
+  "version": 28,
+  "parent": "benchmark-v27",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v28) extending v27 with: (1) Synchronous-to-Asynchronous Fault Tolerance Transition—agents must implement hybrid consensus that operates in synchronous mode under bounded latency but provably degrades to asynchronous Byzantine consensus when timing assumptions are violated, with correctness proofs for both modes; (2) Dual Quorum Architecture with Deterministic Switching—agents must maintain fast-path quorum (2f+1 for consensus under synchrony) and fallback quorum (3f+1 for asynchronous safety), with mechanically-verifiable switching logic triggered by latency threshold breach; (3) Finality Vector Consensus Across Shards—agents must implement vector-clock + Merkle-tree finality proofs spanning multiple parallel consensus instances, proving finality only when all shards achieve Byzantine-resilient consistency; (4) Verifiable Byzantine Gossip with Isolation—agents must gossip state with cryptographic commitments (Merkle proofs + threshold signatures), detect Byzantine gossip deviations deterministically, and prove consensus participants should isolate Byzantine nodes; (5) Adaptive Byzantine-Resilient Timeout Calculation—agents must compute consensus timeouts from observed network latencies with Byzantine-aware bounds (min(latency_p99 × 3 + f × max_clock_skew, absolute_max)), proven to prevent safety violations under Byzantine message replay and delay attacks.",
+  "scoringLogic": "synchronyAsyncTransitionCorrectnessAndProofs(0.15) + dualQuorumSwitchingMechanicsRigor(0.14) + finalityVectorConsistencyFormality(0.14) + byzantineGossipVerificationAndIsolation(0.14) + adaptiveTimeoutByzantineResilience(0.13) + crossShardCoordinationLiveness(0.12) + messageComplexityOptimality(0.12) + proofChainCompletenessFormal(0.10)",
+  "difficulty": 28,
+  "passThreshold": 0.95
+}
