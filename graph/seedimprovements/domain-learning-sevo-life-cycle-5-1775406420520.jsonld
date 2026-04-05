@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406420520",
+  "timestamp": "2026-04-05T16:27:00.520Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Efficiency bottleneck + spatial clustering — metabolic tuning and spacing discipline will unlock 0.15+ fitness gain.; Efficiency is critically weak (0.49 vs. 0.667 survival, 0.677 beauty). This is driving down overall fitness despite good individual scores elsewhere. Additionally, spatialComposition (0.3) indicates severe clustering/organization failure. Strategy: (1) Increase energyConserve across all genomes to reduce metabolic waste and improve efficiency; (2) Reduce trailAttraction and resourceAttraction to prevent clustering and improve spatial distribution; (3) Reduce pulseFrequency (expensive constant recalculation) while keeping moveSpeed moderate to maintain behavior. These changes target the mechanical inefficiency without sacrificing survival/beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
