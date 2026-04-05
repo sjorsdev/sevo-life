@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775405577756",
+  "timestamp": "2026-04-05T16:12:57.756Z",
+  "observation": "Domain sevo-life (fitness 0.628) generated 2 insights",
+  "suggestion": "Efficient survival enables beauty expression — organisms that live long enough explore richer behavioral and visual territories. Energy scarcity kills diversity before it can emerge.; Efficiency (0.409) is the critical bottleneck — 2× weaker than survivalRate and 1.7× weaker than beautyScore. Organisms burn energy faster than they harvest it, preventing longer exploration/complexity. Secondary: spatialComposition (0.3) needs trail visibility and pattern coherence. Fix: (1) boost resourceAttraction across all genomes to make feeding decisive, (2) increase energyConserve to cut metabolic baseline, (3) modest moveSpeed reduction to avoid wasted travel. Projected: efficiency → 0.55–0.60, overall fitness → 0.68–0.70.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
