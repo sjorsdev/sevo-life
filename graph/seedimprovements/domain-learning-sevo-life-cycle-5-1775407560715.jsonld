@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407560715",
+  "timestamp": "2026-04-05T16:46:00.715Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "Morphological convergence suppresses beauty diversity; high baseline movement cost suppresses efficiency—vary form signatures while reducing baseline energy drag; Efficiency (0.542) is the bottleneck, and diversityOfForms (0.456) is critically low. Current organisms show convergent morphology and movement. Organism 2 is energy-starved (8 vs 20-29 for others) despite max age—energy waste from high moveSpeed. To boost efficiency: increase energyConserve globally, reduce moveSpeed for low-energy entities, raise resourceAttraction for better foraging. To boost diversity: vary trailColor, patternSymmetry, and pulseFrequency across genomes—visual/behavioral signatures currently too similar. These changes address both bottlenecks within the 0.3×beautyScore and 0.2×efficiency terms of the goal.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
