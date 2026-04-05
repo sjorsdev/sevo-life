@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405422584",
+  "timestamp": "2026-04-05T16:10:22.584Z",
+  "observation": "Domain sevo-life (fitness 0.627) generated 2 insights",
+  "suggestion": "High energy ≠ high fitness. Organisms sustaining themselves are burning movement cycles—efficiency gains by conservative locomotion will cascade to beauty (less frantic = more graceful) and raise floor for all fitness components.; Efficiency is critically weak (0.462 vs survivalRate 0.833), dragging overall fitness. Organisms 1-3 show high energy burn despite adequate survival. Secondary issues: spatialComposition (0.3) suggests poor world coverage, diversityOfForms (0.457) indicates insufficient morphological range. Strategy: (1) reduce moveSpeed + increase energyConserve for high-energy organisms to improve efficiency by ~15-20%, (2) increase explorationDrive to spread population across space, (3) boost patternSymmetry to improve motionGrace and form coherence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
