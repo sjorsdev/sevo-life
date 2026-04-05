@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775392964317",
+  "timestamp": "2026-04-05T12:42:44.317Z",
+  "observation": "Domain sevo-life (fitness 0.711) generated 2 insights",
+  "suggestion": "Efficiency fails when movement cost exceeds harvest gain. Rhythm emerges from regular pulsing. Increase pulse-rhythm and reduce move-waste simultaneously.; Efficiency is critically low at 0.152 (contributes only 0.030 to fitness). While survivalRate is perfect, entities aren't accumulating energy—they're burning it faster than they harvest. Rhythm (0.201) is also weak within the beauty score. Two fixes: (1) reduce moveSpeed on high-mobility entities to conserve energy, increase energyConserve to improve efficiency baseline; (2) increase pulseFrequency across aesthetic/balanced entities to create temporal rhythm patterns, which will lift beautyScore and overall fitness. The survivalRate staying perfect shows the simulation is stable—the issue is marginal energy gain during each lifespan.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
