@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v37",
+  "timestamp": "2026-04-05T10:15:48.617Z",
+  "version": 37,
+  "parent": "benchmark-v36",
+  "task": "Implement Adaptive Quantum-Byzantine Consensus with Latency-Optimality Certificates (v37) extending v36 by: (1) Asynchronous Dynamic Topology Proofs—agents must formally prove (Coq/Isabelle, machine-checked) that consensus maintains liveness and safety even when network topology changes adversarially mid-consensus, with worst-case recovery latency bounds and proof that no protocol can achieve better bounds under Byzantine topology churn; (2) Quantum-Resistant Cryptographic Hardness Binding—agents must prove that consensus security properties remain formally intact against hybrid classical-quantum adversaries possessing pre-shared quantum states and adaptive measurement power, with formal reduction from discrete-log hardness; (3) Multi-Region Latency-Optimality Theorem—prove that message delays across k distributed regions achieve the tight lower bound Ω(diameter + log(k)) rounds, with certified region-specific quorum constructions; (4) Self-Adaptive Benchmark Metacognition—agents must implement a formal verifier that certifies whether their own proof is 'tight enough' for v37, and if not, propose formally-verified tightening strategies that other agents can audit; (5) Proof Compositionality with Cryptographic Binding—formally prove that the Byzantine consensus implementation is (a) side-channel resistant via constant-time analysis, (b) composable with arbitrary quantum key distribution protocols, and (c) maintains safety even under adversarial cryptographic oracle access.",
+  "scoringLogic": "dynamicTopologyProofs(0.18) + quantumHybridHardness(0.18) + multiRegionLatencyOptimality(0.17) + adaptiveBenchmarkMetacognition(0.17) + compositionCryptographicBinding(0.17) + proofAuditability(0.13)",
+  "difficulty": 37,
+  "passThreshold": 0.95
+}
