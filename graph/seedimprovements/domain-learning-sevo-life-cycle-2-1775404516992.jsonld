@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775404516992",
+  "timestamp": "2026-04-05T15:55:16.992Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "High energy conservation kills efficiency—entities won't move/harvest enough. Low pulse rhythm breaks beauty signal. Need aggressive, pulsing foragers, not conservative hoarders.; Efficiency (0.147) is the critical bottleneck—entities are too conservative. Root cause: energyConserve values (0.55–0.8) create passive, slow harvesting. Secondary issue: rhythm (0.144) indicates pulseFrequency too low across the board. Coverage (0.496) also weak—explorationDrive insufficient. Three-part fix: (1) Lower energyConserve to 0.5–0.6 across most genomes to force active foraging; (2) Boost pulseFrequency 0.15→0.25–0.35 for temporal coherence; (3) Increase explorationDrive to 0.6–0.8 to spread population and discover new resources.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
