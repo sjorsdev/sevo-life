@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775391939943",
+  "timestamp": "2026-04-05T12:25:39.943Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "High explorationDrive wastes energy on empty search; low pulseFrequency breaks visual rhythm. Reduce exploration, increase rhythm.; Efficiency is critically low (0.148) despite perfect survival, indicating energy waste from unnecessary exploration. Rhythm is broken (0.087), dragging beautyScore. Root causes: (1) explorationDrive is too high (0.5-0.8) causing wandering that burns energy without resource gain; (2) pulseFrequency is too low (0.08-0.3) destroying rhythm. Solution: reduce explorationDrive to conserve energy + increase pulseFrequency to establish visual rhythm. Secondary: boost trailIntensity on aesthetic entities to improve colorHarmony.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
