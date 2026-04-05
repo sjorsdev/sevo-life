@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775390116925",
+  "timestamp": "2026-04-05T11:55:16.925Z",
+  "observation": "Domain sevo-life (fitness 0.693) generated 2 insights",
+  "suggestion": "Efficiency ceiling is set by movement cost, not harvest threshold—reduce moveSpeed and boost conservation discipline.; Efficiency is critically low at 0.156 (weighted contribution only 0.0312 to overall fitness). Survival is maxed (1.0) and entities live full lifespan (avgAge 200 = totalTicks 200), so the bottleneck is energy waste, not death. The problem: moveSpeed 0.65–0.85 across most entities burns energy faster than resource harvest can replenish. The Hoarder (index 1) with moveSpeed 0.4 and energyConserve 0.8 is the efficiency baseline. Fix: reduce moveSpeed by 0.1–0.2 on high-movement entities, increase energyConserve to ≥0.7 where below, moderate explorationDrive to cut wasted wandering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
