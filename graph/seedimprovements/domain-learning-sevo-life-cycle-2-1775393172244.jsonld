@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775393172244",
+  "timestamp": "2026-04-05T12:46:12.244Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Survival is abundant; energy is scarce. Creatures survive by attraction but waste it on excess movement. Rebalance work/rest ratio.; Efficiency at 0.141 is catastrophically weak — dragging down overall fitness despite strong survivalRate (0.875). The gap shows entities are surviving but burning energy wastefully. Current genomes pair high moveSpeed (0.7-0.85) with low-to-moderate energyConserve (0.4-0.65). The fix: increase energyConserve across the board (target 0.65-0.75) while reducing moveSpeed for non-explorers. This unlocks survival + efficiency synergy. Secondary: boost rhythm (0.266) via pulseFrequency to improve beautyScore.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
