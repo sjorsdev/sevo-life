@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411232842",
+  "timestamp": "2026-04-05T17:47:12.842Z",
+  "observation": "Domain sevo-life (fitness 0.654) generated 2 insights",
+  "suggestion": "Age-500 survivors with <12 energy means organisms mature but cannot thrive—flip the balance by making energy conservation primary (0.85+), lowering harvest aggressiveness, and reducing exploration waste.; Efficiency (0.291) is critically weak and limiting overall fitness. Two organisms die at age 225 while others survive to 500 but with depleted energy (3-11 units)—this pattern indicates high metabolic cost relative to resource income. The organisms are energy-starved despite reaching maturity, suggesting harvestThreshold is too high and energyConserve is insufficient. Spatial composition (0.3) also indicates inefficient foraging spread. Strategy: reduce movement costs, lower resource thresholds to harvest more aggressively, increase energy conservation, and boost resource attraction to break the starvation cycle.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
