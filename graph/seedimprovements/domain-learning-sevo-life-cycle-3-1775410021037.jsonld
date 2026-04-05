@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410021037",
+  "timestamp": "2026-04-05T17:27:01.037Z",
+  "observation": "Domain sevo-life (fitness 0.589) generated 2 insights",
+  "suggestion": "Efficiency collapses because organisms move/pulse too much relative to energy income. Reduce baseline motion cost and extend energy retention. Spatial composition improves when trails and pulsing create coherent visual patterns.; Efficiency at 0.398 is the critical bottleneck — it's dragging down overall fitness despite decent survival (0.667) and beauty (0.655). The organism deaths at age 225/265 suggest energy depletion before reaching max lifespan. SpatialComposition (0.3) and diversityOfForms (0.456) are secondary weaknesses within beauty. Solution: (1) reduce energy consumption through lower moveSpeed and higher energyConserve, (2) increase patternSymmetry and trailIntensity to improve spatial layout, (3) diverge parameters across genomes to boost morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
