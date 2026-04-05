@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775395095811",
+  "timestamp": "2026-04-05T13:18:15.811Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Movement is the primary efficiency bottleneck. High speed + exploration without guaranteed resource discovery = wasted energy. Shift toward lower-cost stalking and higher-sensitivity harvesting.; Efficiency is severely limiting the goal (0.14 vs. 0.875 survivalRate and 0.541 beautyScore). The system burns energy on high movement speeds without proportional resource gain. moveSpeed dominates energy expenditure; reducing it 10-15% across most genomes while maintaining resourceAttraction will improve efficiency significantly. Harvest thresholds could drop slightly lower, and trail-creation overhead should decrease on non-aesthetic entities.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
