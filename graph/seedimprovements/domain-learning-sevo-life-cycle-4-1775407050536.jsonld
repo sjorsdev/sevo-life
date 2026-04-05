@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407050536",
+  "timestamp": "2026-04-05T16:37:30.536Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Life persists through efficient resource acquisition; beauty emerges from stable, long-lived forms. Tune feeding before aesthetics.; Survival rate (0.5) is the critical bottleneck — three organisms died at ages 225-317, likely from energy starvation. Beauty is already strong (0.959 spatial harmony). Increase resourceAttraction to help organisms find energy sources, boost energyConserve to reduce wasteful drain, and lower explorationDrive for those burning energy fruitlessly. The three survivors at age 500 suggest the physics work; feeding is the failure mode.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
