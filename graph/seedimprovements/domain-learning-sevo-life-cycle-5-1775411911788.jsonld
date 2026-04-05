@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411911788",
+  "timestamp": "2026-04-05T17:58:31.788Z",
+  "observation": "Domain sevo-life (fitness 0.596) generated 2 insights",
+  "suggestion": "Organisms survive long but starve slowly — they move too rigidly (high drag) and don't seek resources actively enough. Efficiency bottleneck is movement cost, not lifespan.; Efficiency is critically weak (0.411 vs beauty 0.735, survival 0.667). Most organisms survive to sim limit but have low/depleted energy, indicating poor resource gathering or movement overhead. diversityOfForms is also low (0.456), suggesting organisms are too similar. Strategy: (1) Reduce drag for energy-efficient locomotion, (2) Increase resourceAttraction for better foraging, (3) Boost energyConserve to prevent waste, (4) Vary baseRadius and colors across genomes to increase diversity. Target: +0.15-0.20 efficiency, +0.1 diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
