@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775406522436",
+  "timestamp": "2026-04-05T16:28:42.436Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Small, conservative organisms live longest. Evolve toward lower energy consumption and smarter (not faster) movement. Spread to increase spatial beauty.; Efficiency is the critical bottleneck (0.31 vs target 0.5+), dragging overall fitness despite solid survival and beauty. Organisms are energy-inefficient: smaller, longer-lived organisms (8 particles, high energy) outperform larger ones (13 particles, dead). spatialComposition is also weak (0.3), suggesting poor world-filling behavior. Strategy: (1) global energy conservation—reduce moveSpeed, increase energyConserve—to let organisms sustain longer with less burn; (2) boost resourceAttraction to make energy gathering more effective; (3) increase explorationDrive in half the population to spread them better in space; (4) diversify trail colors and pattern symmetry to push diversityOfForms above 0.5.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
