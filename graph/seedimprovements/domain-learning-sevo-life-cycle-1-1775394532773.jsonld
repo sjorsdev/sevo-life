@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775394532773",
+  "timestamp": "2026-04-05T13:08:52.773Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Entities prioritize trail aesthetics over resource optimization. Lower harvest thresholds + temporal rhythm patterns unlock efficiency gains without sacrificing complexity.; Efficiency at 0.135 is critically weak — 5x below survival and beauty. High survival (0.875) + high complexity (0.877) but low resource extraction suggests entities are creating beautiful trails while starving. Primary fix: lower harvestThreshold to harvest marginal resources more aggressively. Secondary fix: boost pulseFrequency (currently 0.0-0.25) to improve rhythm (0.17 — the weakest beauty component). The genomes are energy-conserving but too selective about harvests.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
