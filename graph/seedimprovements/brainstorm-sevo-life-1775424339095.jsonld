@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775424339095",
+  "timestamp": "2026-04-05T21:25:39.095Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau exists because your fitness function has become a fixed optimization target—organisms converge to exploit it and then have nowhere to go. Evolution stalls when the world stops changing and the definition of success stays constant. Break through by making fitness itself dynamic (proposal 2), adding new levels of organization to explore (proposal 1), or changing the world itself (proposal 3). Real biological evolution thrives on multiple moving targets, not single fixed peaks.; [hard] Introduce multi-scale selection: organisms can form colonies that compete as meta-units. Colonies share fitness bonuses for synchronized behavior, creating a second evolutionary level above individual organisms. — Current plateau suggests organisms have exploited all advantage within individual-level competition. Adding a hierarchical level (cells → organisms → colonies) opens an entirely new strategic space. Organisms now face trade-offs between personal fitness and collective contribution. Beauty can emerge from colony-level patterns rather than individual morphology, unlocking new optimization directions.; [easy] Make beauty definition dynamic and diversity-driven: instead of a fixed beauty metric, beauty score is highest for morphologies/behaviors that are rare in the current population. Beauty = (1 + novelty_factor) * base_aesthetic_score. — Organisms have likely converged to a few 'locally beautiful' solutions that dominate the population. A moving target for beauty forces continuous exploration rather than convergence to local maxima. This couples evolution directly to maintaining population diversity, which breaks the plateau by rewarding exploration.; [medium] Introduce world phase shifts: the environment itself cycles through 3-5 distinct regimes (resource scarcity, high predation, low mutation, etc.) on a 50-100 cycle schedule. Organisms must adapt to a changing world rather than a static one. — A static world allows organisms to specialize completely. Environmental variation forces generalism, trade-offs, and constant adaptation. This mirrors real evolution where climate/resource cycles drive speciation. Organisms can no longer settle into a stable peak—the landscape itself keeps shifting.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
