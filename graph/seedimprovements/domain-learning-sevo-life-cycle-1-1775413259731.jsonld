@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413259731",
+  "timestamp": "2026-04-05T18:20:59.731Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Energy waste + clustering + homogeneity form a bottleneck. Unlock it via efficiency (conserve), food-finding (attract), exploration (spread), and distinctness (vary).; Efficiency is critically weakest at 0.473—organisms burning energy without proportional return. Two died young (ages 225, 272) indicating resource starvation or poor energy management. Spatial composition at 0.3 shows severe clustering; diversityOfForms at 0.456 shows phenotypic monotony. Strategy: boost energyConserve across all genomes to reduce waste; increase resourceAttraction and harvestThreshold aggressiveness so organisms find/secure food faster before starving; raise explorationDrive to spread organisms spatially (improving composition); vary trailColor and patternSymmetry across variants for phenotypic diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
