@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775404878264",
+  "timestamp": "2026-04-05T16:01:18.264Z",
+  "observation": "Domain sevo-life (fitness 0.709) generated 2 insights",
+  "suggestion": "Rhythm and coverage are beauty bottlenecks — organisms have high complexity but poor temporal and spatial coherence. Efficiency fails because energyConserve is too low; organisms burn resources without purpose.; Efficiency is critically weak (0.152), reducing overall fitness by 0.0304. Beauty metrics are also imbalanced: rhythm (0.078) is severely underdeveloped, coverage (0.35) is low despite high complexity, and symmetry (0.403) lags. Survival is strong (0.875), so gains come from: (1) boosting rhythm via pulseFrequency — drives emergent beauty patterns, (2) increasing explorationDrive and patternSymmetry to unlock coverage and symmetry, (3) raising energyConserve to improve efficiency without sacrificing lifespan (avgAge=200 suggests energy is abundant but poorly managed). Target 4 of 8 organisms: 2 for exploration/rhythm, 2 for efficiency/symmetry.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
