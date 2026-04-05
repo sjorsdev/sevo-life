@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775392063517",
+  "timestamp": "2026-04-05T12:27:43.517Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "High movement burns energy without proportional harvest gain; reduce speed across roles and favor stationary energy conservation. Rhythm requires pulse, not just intensity.; Efficiency (0.143) is the critical bottleneck, dragging fitness from potential ~0.85 toward 0.704. Survival is perfect (100%), so we can trade movement for efficiency gains. Secondary: beauty is weak on rhythm (0.203) and coverage (0.458). Strategy: reduce moveSpeed globally to lower energy costs per tick, increase pulseFrequency for rhythm, boost trailIntensity for coverage. These changes preserve survival while unlocking efficiency gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
