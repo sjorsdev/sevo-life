@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410298286",
+  "timestamp": "2026-04-05T17:31:38.286Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Survival and efficiency are coupled — organisms spending energy wastefully on exploration die before reaching reproductive age. Constraint: organisms are reaching max_age=500 but many die earlier from starvation.; Efficiency is critically weak (0.382), dragging total fitness to 0.558. Three organisms have low energy (<30), suggesting poor energy management. survivalRate at 0.5 means half are dying. diversityOfForms is weak (0.456) — genomes are too similar. Strategy: reduce movement waste (moveSpeed), improve energy conservation (energyConserve), tune harvest behavior, and introduce parameter heterogeneity across genome instances to boost both efficiency and form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
