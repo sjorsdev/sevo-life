@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775393904619",
+  "timestamp": "2026-04-05T12:58:24.619Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Energy-movement mismatch: fast harvesters burn resources exploring instead of capitalizing; rhythm starved because pulse patterns too infrequent to register.; Efficiency (0.147) is critically weak—entities waste energy through high movement costs without proportional harvest gains. Rhythm (0.153) is also depressed despite good complexity/harmony scores. Root cause: low energyConserve across high-moveSpeed genomes, and low pulseFrequency even in aesthetic variants. Strategy: reduce movement overhead by cutting moveSpeed on high-speed variants while boosting energyConserve globally, and raise pulseFrequency uniformly to unlock temporal beauty patterns. This targets the two lowest-weighted components while reinforcing survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
