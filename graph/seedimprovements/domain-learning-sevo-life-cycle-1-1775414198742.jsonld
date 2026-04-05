@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775414198742",
+  "timestamp": "2026-04-05T18:36:38.742Z",
+  "observation": "Domain sevo-life (fitness 0.605) generated 2 insights",
+  "suggestion": "Over-activity kills efficiency: reduce move cost and resource-seeking drive, invest energy in position-holding and conservation instead.; Efficiency is the critical bottleneck at 0.581 (20% of goal weight). The organisms are expending too much energy on wasteful movement and resource chasing despite adequate survival. Spatial composition (0.3) also suggests poor distribution — high movement cost without strategic benefit. Solution: reduce moveSpeed and resourceAttraction, increase energyConserve to improve metabolic efficiency. Simultaneously increase explorationDrive to spread organisms apart (fixing spatial composition) without wasteful searching. This trades raw activity for strategic settlement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
