@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409279339",
+  "timestamp": "2026-04-05T17:14:39.339Z",
+  "observation": "Domain sevo-life (fitness 0.604) generated 2 insights",
+  "suggestion": "Efficiency and spatial diversity are inversely coupled in current design — organisms need more aggressive resource attraction and energy conservation simultaneously; diversity of form unlocks through color/pattern variance, not body structure alone.; Efficiency at 0.553 is the critical bottleneck. spatialComposition (0.3) and diversityOfForms (0.456) are also dragging beauty down. Current organisms are energy-inefficient (alive ones have low reserves: 50→4) and too morphologically similar. Strategy: (1) boost energyConserve and resourceAttraction across all genomes to fix efficiency, (2) increase explorationDrive and vary trailColor/patternSymmetry to spread organisms in space and increase visual diversity, (3) tune moveSpeed for more efficient locomotion. High survival but low energy reserves suggests organisms are starving despite living — they need better resource pathfinding.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
