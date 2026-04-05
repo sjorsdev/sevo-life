@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413795428",
+  "timestamp": "2026-04-05T18:29:55.428Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "High symmetry + poor efficiency = beautiful but exhausted. Make them lean and purposeful.; Efficiency is critically weak (0.464) and carries 20% weight in the goal function. Current organisms are consuming energy inefficiently — several reach age 500 but with low remaining energy (organism 4: only 3 energy). The jellyfish and crawler morphologies have good symmetry (0.876) and form beauty (0.803) but are overweight and wasteful. Increase damping and drag to stabilize movement, reduce baseRadius for lighter bodies, and lower exploration drive to cut wasted motion.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
