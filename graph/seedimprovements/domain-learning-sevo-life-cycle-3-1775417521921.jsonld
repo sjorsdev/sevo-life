@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775417521921",
+  "timestamp": "2026-04-05T19:32:01.921Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Energy starvation despite food availability = navigation inefficiency. Fix search strategy and movement cost.; Efficiency at 0.372 is the critical bottleneck. The organisms are alive but energy-starved (ID 5 has only 1 energy, IDs 0/3 died). This indicates high locomotion/physics costs relative to resource intake. Mutation strategy: (1) increase resourceAttraction to find food more aggressively with less searching, (2) reduce drag and swimStrength to lower physics overhead, (3) increase energyConserve to stretch reserves, (4) lower pulseRate/exploration to cut waste. Survival and beauty are acceptable; efficiency gains will push fitness above 0.65.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
