@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409629242",
+  "timestamp": "2026-04-05T17:20:29.242Z",
+  "observation": "Domain sevo-life (fitness 0.572) generated 2 insights",
+  "suggestion": "One strong organism (id 2: 45 energy) vs three barely surviving—diversity of behavioral strategies collapsed. Unlock efficiency and spacing through exploration and conservative energy management.; Efficiency (0.497) is the weakest component by weighted impact—it contributes only 0.0994 to overall fitness vs. 0.335 from survival. The energy reserves vary wildly (org 2 has 45, org 4 has 5 at identical max age), indicating inconsistent resource gathering. Spatial composition (0.3) is critically weak, suggesting organisms clump rather than spread. Fix: boost energyConserve to reduce waste, increase resourceAttraction for failing organisms, raise explorationDrive to improve spatial spreading and diversity. Preserve org 2's parameters—it clearly has found a successful strategy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
