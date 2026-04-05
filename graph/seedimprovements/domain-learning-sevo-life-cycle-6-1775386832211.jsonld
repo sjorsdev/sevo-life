@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775386832211",
+  "timestamp": "2026-04-05T11:00:32.211Z",
+  "observation": "Domain sevo-life (fitness 0.533) generated 4 insights",
+  "suggestion": "previous genomes had contradictory parameters (high exploration + low energy conservation); decision function now weights beauty contribution in lower-energy states; separate beauty and survival decisions based on energy state; decision weights shift based on energy and specialization",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
