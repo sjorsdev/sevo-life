@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410182734",
+  "timestamp": "2026-04-05T17:29:42.734Z",
+  "observation": "Domain sevo-life (fitness 0.616) generated 2 insights",
+  "suggestion": "Energy starvation, not poor genes. Conservation beats movement optimization. Diversity comes from varied parameters, not identical tuning.; Efficiency (0.48) is the critical bottleneck. With only 0.2 weight but lowest absolute score, improving it by 0.25-0.35 adds 0.05-0.07 to overall fitness. Root cause: high energy drain from movement despite low speeds. Secondary weaknesses in beauty: spatialComposition (0.3) lacks distributed formations; diversityOfForms (0.457) suggests genomes are too similar. Strategy: (1) globally increase energyConserve to stretch resources further, (2) reduce physics drag to lower movement cost, (3) vary explorationDrive and patternSymmetry across entities to break spatial monotony and create emergent diversity. All organisms reached max lifespan, so survival floor is solid—room to trade some movement for efficiency without sacrificing survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
