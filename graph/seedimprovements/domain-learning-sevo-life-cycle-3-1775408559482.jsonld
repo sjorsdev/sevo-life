@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408559482",
+  "timestamp": "2026-04-05T17:02:39.482Z",
+  "observation": "Domain sevo-life (fitness 0.657) generated 2 insights",
+  "suggestion": "Lifespan constraint (500 steps) is active; survival isn't the limiter—efficient energy use and spatial distribution are. Multi-genome ecosystem must diversify shapes; currently too homogeneous.; Efficiency (0.563) is the primary bottleneck, dragging down overall fitness. Within beauty, spatialComposition (0.3) is critically weak, followed by diversityOfForms (0.456). Organisms are either burning energy inefficiently or not spreading/moving strategically. Dead organisms (ids 0, 3) suggest early failure despite reaching moderate age, indicating energy starvation. Fix: increase energyConserve across-the-board to reduce waste, boost explorationDrive to create spatial spread and diversity, and increase patternSymmetry variance to enhance form diversity and composition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
