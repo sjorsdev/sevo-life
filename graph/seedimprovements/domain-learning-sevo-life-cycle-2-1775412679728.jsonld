@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412679728",
+  "timestamp": "2026-04-05T18:11:19.728Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Energy starvation is not scarcity—it's inefficient search. Organisms need speed, attraction, and permission to move.; Efficiency at 0.286 is the critical bottleneck (0.2 × 0.286 = 0.057 contribution to overall fitness). Only 50% survival despite organisms reaching max age indicates energy starvation—they're not gathering resources fast enough or moving too inefficiently. The physics cost (drag, damping) is outweighing the benefit. Secondary issue: spatialComposition 0.3 and diversityOfForms 0.456 suggest organisms cluster rather than explore. Fix: (1) increase moveSpeed and resourceAttraction to enable faster resource capture, (2) reduce energyConserve to permit bolder exploration, (3) boost explorationDrive to spread spatial distribution, (4) raise harvestThreshold to trigger eating sooner before starvation. This lifts efficiency and survival simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
