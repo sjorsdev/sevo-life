@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412272546",
+  "timestamp": "2026-04-05T18:04:32.546Z",
+  "observation": "Domain sevo-life (fitness 0.559) generated 2 insights",
+  "suggestion": "Efficiency degrades with exploration cost; organisms need to conserve energy aggressively and forage strategically, not wander.; Efficiency is critically low (0.423) despite decent survival (0.667) and beauty (0.758). Analysis shows organisms burn energy inefficiently: those with lowest energy (1, 4, 5) have poor survival outcome risk, while organism 2 thrives with 32 energy on 8 particles. The problem is high explorationDrive and insufficient energyConserve. Dead organisms (0, 3) lived only 225-243 cycles before starvation — they explored too much, conserved too little. Increasing energyConserve from baseline ~0.3 to 0.65+ and reducing explorationDrive from ~0.6 to 0.3 targets the core inefficiency. Also increase harvestThreshold slightly to force efficient resource gathering rather than passive absorption.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
