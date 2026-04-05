@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409237225",
+  "timestamp": "2026-04-05T17:13:57.225Z",
+  "observation": "Domain sevo-life (fitness 0.657) generated 2 insights",
+  "suggestion": "Particles survive long but inefficiently — trade mobility for conservation and vary exploration strategy by genome type.; Efficiency is critically weak (0.33) and directly lowers overall fitness. Organisms waste energy despite long lifespans. Spatial composition (0.3) and diversity of forms (0.456) are also bottlenecks. Target: reduce wasted movement, conserve energy better, explore space more strategically, increase visual/behavioral diversity across genomes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
