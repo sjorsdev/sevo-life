@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775393121051",
+  "timestamp": "2026-04-05T12:45:21.051Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 2 insights",
+  "suggestion": "Entities are moving too fast relative to harvest yield. Survival bias masks efficiency loss — they're not starving because harvestThreshold is low, but they're wasting energy on poor exploration.; Efficiency is critically weak at 0.142, contributing only 0.028 to the 0.689 fitness score. The root cause: high movement costs (moveSpeed 0.6-0.7) combined with moderate-to-high explorationDrive (0.5-0.8) are burning energy faster than entities can harvest. Survival is perfect (no starvation risk), but entities are inefficiently mobile. Rhythm is also weak (0.134), suggesting low pulseFrequency everywhere. Primary fix: reduce movement overhead + boost energy conservation. Secondary: increase pulseFrequency on 1-2 entities for rhythm diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
