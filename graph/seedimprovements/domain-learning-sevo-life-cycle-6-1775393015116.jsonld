@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775393015116",
+  "timestamp": "2026-04-05T12:43:35.116Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Population is energy-inefficient because high explorationDrive wastes resources without proportional return; doubling pulseFrequency/trailIntensity (cheap per entity, high impact on beauty scores) outweighs minor efficiency cost given goal weights.; Efficiency is critically weak (0.121), dragging down overall fitness. Within beauty, rhythm (0.18) and coverage (0.292) are severely underperforming. Current population emphasizes resource gathering but wastes energy on high exploration and low trail production. Solution: (1) Reduce exploration-driven energy waste and move speed on high-exploration entities, (2) Dramatically increase pulseFrequency and trailIntensity across the population to fix rhythm and coverage deficits — beauty's 0.3 weight justifies the small energy cost, (3) Fine-tune harvestThreshold to improve efficiency baseline. Entity 2's rhythm (0.35) and entity 1's efficiency mechanics (0.05 threshold) show viable paths; amplify and spread these patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
