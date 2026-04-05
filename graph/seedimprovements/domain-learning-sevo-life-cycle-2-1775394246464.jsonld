@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394246464",
+  "timestamp": "2026-04-05T13:04:06.464Z",
+  "observation": "Domain sevo-life (fitness 0.696) generated 2 insights",
+  "suggestion": "High movement cost without discovery efficiency—mobile entities need lower moveSpeed or higher harvest yields. Rhythm requires consistent pulseFrequency baseline across population.; Efficiency is critically weak (0.15/1.0), dragging down overall fitness despite perfect survival. Entities are too mobile—high moveSpeed burns energy without proportional resource discovery. Additionally, rhythm (0.153) is the weakest beauty component, indicating low pulseFrequency across most entities. Solution: (1) reduce moveSpeed on high-mobility entities to cut energy waste, (2) boost energyConserve uniformly to improve efficiency baseline, (3) increase pulseFrequency on rhythm-deficient entities. This rebalances the energy budget from travel to harvesting, directly improving efficiency while adding visual rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
