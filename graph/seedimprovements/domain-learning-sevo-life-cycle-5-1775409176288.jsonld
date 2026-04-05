@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409176288",
+  "timestamp": "2026-04-05T17:12:56.288Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Energy is the bottleneck — shift from exploration to exploitation: aggressive resource seeking + conservative metabolism + coordinated movement via trails.; Efficiency is critically low (0.332) — dragging overall fitness despite decent beauty. Root cause: organisms dying with depleted energy (org 0 at age 252, org 3 at 298) while healthy ones reach 500. Current genomes burn energy faster than they harvest. Secondary issues: spatial composition 0.3 (organisms not spreading/positioning effectively) and diversity 0.456 (insufficient morphological variation). Strategy: prioritize energy conservation and resource harvesting in weak genomes, reduce wasteful exploration, increase trail following for spatial coordination.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
