@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408283093",
+  "timestamp": "2026-04-05T16:58:03.093Z",
+  "observation": "Domain sevo-life (fitness 0.626) generated 2 insights",
+  "suggestion": "Spread organisms spatially via explorationDrive, vary pulse/symmetry for form diversity, increase energyConserve to extend lifespans and enable longer-term spatial settlement.; Fitness 0.632 is limited by three weak components: spatialComposition (0.3) is critically low, diversityOfForms (0.456) is underdeveloped, and survivalRate (0.667) with 2/6 dead organisms. Spatial composition fails because organisms cluster; we need higher explorationDrive to spread them. Diversity of forms requires variation in pulseFrequency and patternSymmetry across the population. Survival rate fails because energyConserve is too low—organisms burn energy too fast. Organisms id:0 and id:3 died in ~260 turns; boost conservation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
