@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775414055733",
+  "timestamp": "2026-04-05T18:34:15.733Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Efficiency and spatial composition improve together—organisms that spread explore more efficiently, encounter more resources, and create richer diversity patterns.; Efficiency is the bottleneck at 0.518, dragging overall fitness. Within beauty, spatialComposition (0.3) and diversityOfForms (0.474) are weak — organisms cluster and homogenize. The 5 surviving organisms have moderate energy (12-33) despite being age-capped, suggesting energy waste and poor resource efficiency. Strategy: reduce energy waste, increase exploration/spread, boost form diversity through parameter variance across genomes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
