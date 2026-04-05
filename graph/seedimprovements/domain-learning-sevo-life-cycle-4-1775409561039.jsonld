@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409561039",
+  "timestamp": "2026-04-05T17:19:21.039Z",
+  "observation": "Domain sevo-life (fitness 0.657) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy burn from movement + visuals. Trade small beauty gains for energy sustainability to unlock longer survival.; Efficiency is critically low at 0.506, pulling overall fitness down despite good survival and beauty. Root cause: high energy consumption vs. survival. Spatial composition (0.3) and diversity of forms (0.456) are also weak. Dead organisms expired at ages 378-398 vs. 500 max, indicating they couldn't maintain energy efficiently. Solution: reduce movement waste, improve energy conservation, increase exploration drive for better spatial spreading (which boosts composition), and dial back visual intensity to conserve resources.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
