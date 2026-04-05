@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775391682875",
+  "timestamp": "2026-04-05T12:21:22.875Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Rhythm (0.14) indicates entities are invisible in time. Efficiency (0.142) indicates they're invisible in space — not finding resources. Solve both by increasing movement discovery speed and visual pulse presence.; Efficiency is critically weak at 0.142 (contributing only 0.028 to fitness — the weakest component by far). Rhythm is nearly absent at 0.14 within beauty metrics. These are the two biggest leverage points. Efficiency loss indicates entities aren't discovering enough harvestable resources per unit energy spent. Rhythm collapse suggests pulseFrequency is far too conservative — entities need to pulse more visibly and frequently to create temporal pattern. Increasing moveSpeed across the board helps entities scan more area and find resources faster (improving efficiency). Dramatically increasing pulseFrequency (currently capped at 0.4, most in 0.1-0.25 range) will instantly improve rhythm, complexity, and coverage metrics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
