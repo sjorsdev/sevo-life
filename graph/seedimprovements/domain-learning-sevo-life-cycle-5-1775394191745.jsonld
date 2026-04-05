@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394191745",
+  "timestamp": "2026-04-05T13:03:11.745Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Energy conservation matters more than movement speed; beauty requires consistent, intense trail output not just pretty colors.; Efficiency is critically weak at 0.147 (should target 0.3+). Root cause: excessive movement energy waste despite low moveSpeed genomes. Harvester phenotype burns energy (0.4 conservation) while exploration drives entities away from harvest zones. Beauty weakness (0.511) stems from low rhythm (0.249) and coverage (0.238) — underpowered trail signals. Fix: increase energyConserve to 0.65-0.75 across all genomes, reduce moveSpeed for fast variants, boost pulseFrequency and trailIntensity for aesthetic signal strength.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
