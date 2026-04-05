@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410885861",
+  "timestamp": "2026-04-05T17:41:25.861Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Beauty-optimized genomes need energy abundance to sustain it—optimize gathering before motion.; Efficiency is the bottleneck (0.422 vs survival 0.667, beauty 0.74). Organisms reach max age but maintain minimal energy reserves (1-27), indicating they're barely sustaining. Root cause: high movement costs relative to resource gathering. Two dead organisms show survival brittleness. Solution: increase resourceAttraction to gather faster, reduce movement energy waste, boost energy conservation. This preserves the high beauty scores while fixing the efficiency drain.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
