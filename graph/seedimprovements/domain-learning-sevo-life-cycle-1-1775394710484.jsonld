@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775394710484",
+  "timestamp": "2026-04-05T13:11:50.484Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "High survival + low efficiency = wasteful movement. Reduce moveSpeed globally, increase energyConserve, boost pulseFrequency to fix both efficiency and rhythm simultaneously.; Efficiency at 0.154 is critically low—the primary drag on overall fitness. Entities survive (1.0) but waste energy through high moveSpeed and low energyConserve. Rhythm at 0.133 is also weak, indicating low pulseFrequency. Strategy: reduce unnecessary movement, increase energy conservation, boost rhythm generation. Survival rate is already perfect so minor efficiency-for-speed trades are safe.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
