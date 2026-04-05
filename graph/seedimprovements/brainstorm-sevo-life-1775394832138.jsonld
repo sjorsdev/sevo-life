@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775394832138",
+  "timestamp": "2026-04-05T13:13:52.138Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Evolution is stuck in a **single morphological grammar**. After 215 cycles, organisms have optimized within a fixed body-plan space. The system needs architectural expansion (new cell types, life-stages, or phenotypic plasticity), not parameter tuning within the current design grammar. Polypheny or differentiation introduces new axes of variation that re-energize selection pressure and allow beauty and survival to decouple and re-equilibrate at a higher combined fitness.; [medium] Introduce polyphenic development: organisms express radically different phenotypes in response to local conditions (nutrient density, light, crowding). Same genome → multiple body plans. — Plateau indicates the single-phenotype design space is exhausted. Polypheny expands possibility space by 10x+. Organisms can be simultaneously beautiful (high-nutrition morph), efficient (low-nutrition morph), and survive both contexts. Breaks the survivalRate-vs-beauty tradeoff.; [medium] Add cell-type differentiation pipeline: introduce 2-3 new specialized cell types (sensor cells, communication cells, structural cells) with distinct rules. Current system likely has homogeneous cell pools. — Beauty stagnation suggests organisms have maxed out current morphological grammar. New cell types unlock new body architectures, behaviors, and beauty expressions. Predator-prey arms races can re-energize selection pressure through functional specialization.; [easy] Reweight fitness: shift from static 0.5/0.3/0.2 to *dynamic weighting that increases beauty coefficient when survivalRate plateaus*. When system detects stagnation, beauty becomes 50%, survival drops to 30%. — Root cause: survival optimization saturated. System hit a local ceiling where further survival gains cost beauty. Dynamic weighting forces exploration of beauty-first morphologies when survival-first paths are exhausted. Metacontrol escapes local optima.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
