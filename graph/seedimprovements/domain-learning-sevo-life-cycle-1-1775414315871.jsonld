@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775414315871",
+  "timestamp": "2026-04-05T18:38:35.871Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Energy bottleneck: organisms survive long but inefficiently. Tighten metabolism and food-finding before adding complexity.; Efficiency is critically weak (0.499 vs 0.73 beauty, 0.67 survival) and accounts for 0.2 of total fitness. This is the primary bottleneck. Four organisms reached max lifespan (500) with only modest energy reserves (6-33), indicating they're barely sustaining despite good longevity — they're burning energy inefficiently. Secondary weakness: diversityOfForms (0.456) shows organisms lack visual distinctiveness. Fix efficiency through tighter energy management (higher energyConserve, lower moveSpeed), improve resource finding (high resourceAttraction), and reduce movement waste. Then increase diversity by varying trailColor and patternSymmetry to create morphologically distinct lineages.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
