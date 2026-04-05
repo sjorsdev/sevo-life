@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410534803",
+  "timestamp": "2026-04-05T17:35:34.803Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Low efficiency + low spatial composition = organisms burning energy without coordinating space effectively. Fix movement cost first, then diversity of form placement.; Efficiency is the critical bottleneck at 0.467 (46.7%), directly dragging overall fitness to 0.622. Spatial composition (0.3) is also weak. The organisms have low energy despite resource presence, suggesting poor energy conservation and resource efficiency. Additionally, they're clustering rather than spreading spatially. Strategy: Increase energyConserve aggressively to reduce wasteful movement, reduce exploratory waste with lower explorationDrive, boost visual spread with trailIntensity and patternSymmetry variation to address spatial composition weakness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
