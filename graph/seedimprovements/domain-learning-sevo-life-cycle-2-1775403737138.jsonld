@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775403737138",
+  "timestamp": "2026-04-05T15:42:17.138Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "High resourceAttraction without low moveSpeed = energy waste. Harvester role should move decisively, not constantly. Rhythm is severely underdeveloped—pulse patterns are underutilized evolution lever.; Efficiency is critically low (0.148 vs max 1.0), dragging overall fitness despite perfect survival. The primary leaks are: (1) unnecessarily high moveSpeed in resource-seeking roles—movement is energy-expensive, (2) low pulseFrequency (0.125 rhythm) wastes visual/pattern potential, (3) underutilized trail coverage (0.501). Strategy: globally reduce moveSpeed by ~15-20% for roles that don't need high mobility, increase energyConserve by 10-15%, boost pulseFrequency to 0.25-0.4 for better rhythm. Secondary: raise trailIntensity in patterned entities to maximize visual coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
