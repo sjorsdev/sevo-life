@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775403890142",
+  "timestamp": "2026-04-05T15:44:50.142Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Speed wastes energy; efficiency beats wandering. Slow down the hunters, conserve harder, cut decorative trails on pure-efficiency roles.; Efficiency is critically low (0.14), bottlenecking overall fitness. While survivalRate is strong (0.875), the high-speed movement and trail drawing are burning energy inefficiently. The goal weights efficiency at 0.2, so improving from 0.14→0.3+ yields +0.032 fitness directly. Strategy: reduce moveSpeed on speed-focused entities, boost energyConserve globally, trim unnecessary trail intensity on efficiency specialists, preserve resource gathering thresholds.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
