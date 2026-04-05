@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409112378",
+  "timestamp": "2026-04-05T17:11:52.378Z",
+  "observation": "Domain sevo-life (fitness 0.610) generated 2 insights",
+  "suggestion": "Beauty requires spacious composition and efficient metabolism—organisms must explore, not huddle; consume, not exhaust.; Efficiency (0.385) and spatialComposition (0.3) are the critical bottlenecks. Efficiency is sabotaged by high trail/movement costs with poor resource conversion. Spatial composition fails because organisms cluster rather than explore. Organisms 0 and 3 died at age 260–274 despite abundant age budget, indicating energy starvation. Solutions: (1) increase energyConserve to stretch resource lifetime, (2) reduce trailIntensity (visual trails are energetically expensive), (3) boost explorationDrive and moveSpeed so organisms spread and find resources rather than relying on trails, (4) increase resourceAttraction so they hunt actively instead of passively waiting.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
