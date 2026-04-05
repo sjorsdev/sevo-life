@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775404429236",
+  "timestamp": "2026-04-05T15:53:49.236Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency and rhythm are decoupled—neither is getting enough evolutionary pressure. Aggression on harvest (lower threshold) + temporal pulsing (higher frequency) fixes both simultaneously.; Efficiency is critically weak (0.15), dragging down overall fitness despite perfect survival. The harvestThreshold values (0.08-0.15) are still too high—beings should harvest more aggressively at lower resource levels to maximize gain/energy ratio. Rhythm (0.175) is also weak; pulseFrequency (0.15-0.35) is too low to create temporal patterns. Double-down on both: lower harvestThreshold across the board, raise energyConserve where possible, and substantially boost pulseFrequency to unlock rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
