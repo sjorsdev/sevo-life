@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409062057",
+  "timestamp": "2026-04-05T17:11:02.057Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Efficiency improves through energy conservation + distributed exploration, not faster swimming. Spatial diversity requires spreading drive, not form complexity.; Efficiency is the critical bottleneck (0.485) dragging down overall fitness despite strong beauty. Organisms are energy-inefficient and spatially clumped (spatialComposition: 0.3, diversityOfForms: 0.456). High variance in organism energy (0-35) indicates poor resource harvesting and movement optimization. Two organisms are nearly dead (energy 0, age 270), and struggling ones (ids 1,4: energy 8-9) share likely inefficient genomes. Strategy: increase energyConserve to reduce wasteful movement, boost resourceAttraction for efficient feeding, increase explorationDrive to spread out (improves spatial composition and diversity), and reduce moveSpeed for lower baseline energy cost. Targets the high-mortality, low-energy organisms.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
