@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775391297984",
+  "timestamp": "2026-04-05T12:14:57.984Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Aggressive harvesting thresholds waste more energy than they gain. Higher threshold + lower movement = higher efficiency. Rhythm emerges from pulse frequency, not from static patterns.; Efficiency is critically weak (0.153), dragging down overall fitness. Primary cause: harvestThreshold values are too aggressive (0.04-0.12), forcing entities to waste energy harvesting marginal resources that don't justify movement cost. Secondary issue: beautyScore (0.548) is weak due to low rhythm (0.212) and coverage (0.296)—pulseFrequency too low across all entities, no emergent rhythmic patterns. Solution: (1) raise harvestThreshold to filter out unprofitable harvests, reducing energy waste; (2) increase pulseFrequency to generate rhythmic visual patterns; (3) rebalance moveSpeed vs energyConserve on high-speed entities. Expected impact: +25% efficiency, +15% beauty from rhythm improvement.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
