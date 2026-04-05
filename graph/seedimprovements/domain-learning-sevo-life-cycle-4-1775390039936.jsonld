@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775390039936",
+  "timestamp": "2026-04-05T11:53:59.936Z",
+  "observation": "Domain sevo-life (fitness 0.695) generated 2 insights",
+  "suggestion": "Survival is free energy waste. Energy conservation beats speed.; Efficiency (0.148) is catastrophically weak — 8x weaker than beautyScore. This is the primary bottleneck. All entities survived (avgAge=200=totalTicks), confirming resource adequacy, so the issue is energy waste. Rhythm (0.139) is also critically low — entities lack synchronized pulse patterns. Fix: (1) Reduce moveSpeed on high-activity entities to cut movement cost, (2) Increase energyConserve to minimize passive depletion, (3) Boost pulseFrequency across the board to establish visual rhythm patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
