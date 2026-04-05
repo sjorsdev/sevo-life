@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406990380",
+  "timestamp": "2026-04-05T16:36:30.380Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "spatial composition failure means organisms are clustered/static. Movement must be rewarded by better distribution. Energy conservation (not reducing movement) is the efficiency lever.; spatialComposition (0.3) is critically weak — organisms aren't distributed in space. efficiency (0.53) is second-worst and is being suppressed because movement costs energy without spatial reward. survivalRate is strong but organism 3 has dangerously low energy (1). Solution: increase exploration-driven movement and pattern visibility, offset energy cost with better conservation and harvest timing. diversityOfForms (0.457) secondary target — add subtle parameter variance across genomes to create visual distinctness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
