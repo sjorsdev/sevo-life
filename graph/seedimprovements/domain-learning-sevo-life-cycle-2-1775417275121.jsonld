@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775417275121",
+  "timestamp": "2026-04-05T19:27:55.121Z",
+  "observation": "Domain sevo-life (fitness 0.616) generated 2 insights",
+  "suggestion": "Fewer particles + sustained energy = longer survival. Current genomes grow too aggressively (particle cost) relative to energy harvested. Flip to conservative growth + efficient resource magnetism.; Efficiency is critically weak at 0.283 (contributing only 0.057 to total fitness). Half the organisms die despite reaching saturation age, indicating severe energy mismanagement. Dead organisms (ages 246-270) had 12-13 particles; survivors maxed out at age 500 with only 8-12 particles. This reveals: (1) growth is too energetically expensive relative to resource gain, (2) energy conservation strategies are absent, (3) spatial positioning (0.3 beauty metric) suggests poor resource clustering. To improve efficiency and survival simultaneously, increase energy conservation, reduce wasteful movement, and boost targeted resource attraction. Focus on the three surviving genomes (indices 2, 4, 5) which demonstrate the efficiency-survival tradeoff.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
