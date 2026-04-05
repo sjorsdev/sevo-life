@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406614875",
+  "timestamp": "2026-04-05T16:30:14.875Z",
+  "observation": "Domain sevo-life (fitness 0.667) generated 2 insights",
+  "suggestion": "Energy depletion is killing the population. Organisms are moving/exploring too much relative to food availability. Survival beats beauty.; Survival rate is critically low at 0.5 (3/6 dead). All dead organisms show energy=0, indicating starvation. This dominates the fitness calculation (0.5 weight). Secondary issue: diversityOfForms (0.456) and proportionHarmony (0.581) are weak, suggesting genomes cluster around similar morphologies and size ratios. Strategy: (1) Reduce movement costs via energyConserve + lower moveSpeed to extend lifespan. (2) Increase resourceAttraction to find food before starvation. (3) Lower harvestThreshold to feed more aggressively. (4) Vary patternSymmetry across genomes to generate more morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
