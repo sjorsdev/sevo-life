@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775403792698",
+  "timestamp": "2026-04-05T15:43:12.698Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Selectivity beats volume in energy-constrained systems—low thresholds create negative-ROI harvesting spirals.; Efficiency (0.137) is catastrophically low despite strong survival (0.875). The disconnect indicates severe energy waste. Root cause: harvestThreshold values (0.07-0.15) are too permissive—entities harvest marginal resources that cost more energy to acquire than they return. This is an efficiency trap. Solution: raise thresholds to force selectivity (0.15-0.25 range), reduce unnecessary movement for non-explorer roles, increase energyConserve to lower baseline metabolism. Marginal resource collection must stop.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
