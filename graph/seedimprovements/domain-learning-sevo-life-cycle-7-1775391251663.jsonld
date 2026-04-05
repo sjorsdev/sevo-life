@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775391251663",
+  "timestamp": "2026-04-05T12:14:11.663Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Energy waste from unchecked movement is the bottleneck. Harvesters should be slower and far more conservative; rhythm emerges from higher pulse rates, not movement.; Current fitness 0.703 is anchored by perfect survival (1.0) but dragged down by efficiency (0.16—terrible) and beauty (0.569). Efficiency collapse is caused by high moveSpeed (0.75-0.85) paired with high explorationDrive (0.7-0.8) and low energyConserve (0.4-0.55). Entities are burning energy on wasteful movement. Beauty's rhythm (0.221) is critically low—pulseFrequency across all genomes is 0.12-0.35, too infrequent to create temporal patterns. Coverage (0.479) is also weak. Strategy: reduce moveSpeed on fast explorers, raise energyConserve globally to 0.65-0.75, and triple pulseFrequency (minimum 0.3) to unlock rhythm. This sacrifices some coverage distance for efficiency gains and temporal beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
