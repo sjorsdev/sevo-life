@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411609390",
+  "timestamp": "2026-04-05T17:53:29.390Z",
+  "observation": "Domain sevo-life (fitness 0.658) generated 2 insights",
+  "suggestion": "Smaller, slower bodies with high resource-seeking survive; movement cost dominates efficiency bottleneck; Efficiency (0.526) is the weakest fitness component. Low-energy organisms (ids 1, 5: 14 and 21 energy) indicate movement cost is unsustainable. Spatial composition (0.3) further suggests uncoordinated, inefficient movement. Deaths of ids 0 and 3 show larger, complex bodies fail. Simpler organisms (8 particles in ids 2, 5) retain better energy reserves. Primary fixes: reduce moveSpeed (movement is costly), increase energyConserve (prevent waste), boost resourceAttraction for energy-starved genomes. Secondary: increase explorationDrive to improve spatialComposition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
