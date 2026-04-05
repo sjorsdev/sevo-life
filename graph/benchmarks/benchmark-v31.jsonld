@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v31",
+  "timestamp": "2026-04-05T09:58:46.291Z",
+  "version": 31,
+  "parent": "benchmark-v30",
+  "task": "Implement Post-Quantum Byzantine-Resilient State Machine Replication (v31) extending v30 by adding: (1) Post-Quantum Cryptographic Binding—agents must implement and formally verify (in TLA+/Isabelle/Coq) that all consensus messages use lattice-based or hash-based signatures (CRYSTALS-Dilithium/SPHINCS+) and prove that an adversary with quantum polynomial time cannot forge valid messages or create equivocation even with quantum superposition queries; (2) Byzantine Reconfiguration Under Attack—agents must prove that validator set changes succeed under an active Byzantine adversary that controls up to f nodes and can selectively delay/drop messages, including formal proofs that no safety violation or split-view scenario occurs during reconfiguration; (3) Asynchronous Consensus with Dual-Execution Byzantine Detection—agents must implement a dual-execution monitor that runs consensus in two independent instances and formally verify that any Byzantine deviation (divergence, equivocation, or timing anomaly) is detected and logged with cryptographic proof, with liveness guarantees even when monitor itself is subject to Byzantine behavior; (4) Cascading Failure Recovery—agents must prove that if a fault initially affects k validators, the system recovers to safety within bounded rounds even if Byzantine nodes exploit the transient vulnerability to cause secondary faults, with formal analysis of all fault-composition scenarios up to threshold.",
+  "scoringLogic": "postQuantumCryptoVerification(0.20) + byzantineReconfigSafety(0.18) + dualExecutionDetection(0.19) + cascadingFailureProof(0.17) + asyncConsensusLiveness(0.16) + proofArtifactCompleteness(0.10)",
+  "difficulty": 31,
+  "passThreshold": 0.95
+}
