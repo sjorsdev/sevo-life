@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775391992139",
+  "timestamp": "2026-04-05T12:26:32.139Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Energy bleeding in movement kills efficiency more than poor harvesting. Rhythm emerges from regular pulsing, not random movement.; Efficiency is critically weak (0.131), dragging down overall fitness. The simulation burns too much energy in movement relative to harvest gains. Simultaneously, rhythm (0.176) and coverage (0.367) are the weakest beauty components. Solution: (1) reduce moveSpeed across high-velocity entities to cut energy waste; (2) increase pulseFrequency 2-3x to establish rhythmic patterns; (3) boost trailIntensity to improve visual coverage and beauty. Efficiency improvements directly compound — cutting move cost from 0.65 to 0.45 is a 30% energy savings per tick.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
