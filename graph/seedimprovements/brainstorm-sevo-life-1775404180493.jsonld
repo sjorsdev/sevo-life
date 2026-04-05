@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775404180493",
+  "timestamp": "2026-04-05T15:49:40.493Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Evolution is trapped in a single-organism, single-scale optimization. Organisms have tuned survival and beauty within the current morphospace but found the ceiling. Breaking the plateau requires either (1) new degrees of freedom via specialization, (2) new selection pressure via resource scarcity, or (3) new adaptation targets via multi-organism dynamics. The system needs at least two of these to escape. Pure parameter tuning cannot create what structural changes unlock.; [medium] Introduce heterogeneous cell types with metabolic roles (energy producers, support cells, sensory neurons, muscle fibers with distinct properties). Replace uniform cell model. — Current uniform cells limit morphological innovation. Specialization enables division of labor, hierarchical body plans, and emergent complexity at new organizational scales. Beauty can now reward tissue patterning and symmetry. Survival gains from organ-like structures.; [hard] Add explicit energy metabolism: organisms harvest energy from environment (local absorption rate varies by location), pay energy cost per action/growth, must balance growth vs action efficiency. Energy reserves decay over time. — Plateau suggests organisms optimized for current physics but hit a complexity ceiling. Energy constraints create new trade-off spaces: fast-moving predatory bodies vs efficient slow growers. Enables new organism morphologies tuned to energy landscape. Survival fitness becomes energy-aware.; [hard] Introduce multi-organism interaction layer: organisms detect and interact with neighbors (not just environment). Enable chemical signaling, predation/grazing, symbiosis mechanics. Beauty now rewards emergent group patterns and collective structures. — Single-organism optimization saturates. Multi-organism dynamics create new evolutionary niches: cooperative formations, predator-prey arms races, chemical communication. Unlocks beauty dimensions from emergent swarm behavior and hierarchical organization.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
