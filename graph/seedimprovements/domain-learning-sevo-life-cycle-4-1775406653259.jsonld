@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406653259",
+  "timestamp": "2026-04-05T16:30:53.259Z",
+  "observation": "Domain sevo-life (fitness 0.648) generated 2 insights",
+  "suggestion": "Low energy + high age = organisms survive by dormancy, not efficiency. Need faster resource detection and leaner movement.; Efficiency at 0.445 is the critical bottleneck — organisms survive but are energy-starved (avg 13.25 J with only 1 organism above threshold). Two vectors of improvement: (1) resourceAttraction boost to close the harvest gap — organisms aren't finding food fast enough; (2) energyConserve increase to reduce movement waste — low efficiency suggests wasteful physics/movement patterns. Secondary issue: spatialComposition (0.3) is severely weak, suggesting organisms cluster; raising trailAttraction spreads the population and increases spatial beauty without fitness cost. Current survival works (0.667) so focus on reducing waste and improving food-finding, not changing morphology.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
