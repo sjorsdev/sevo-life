@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775416660792",
+  "timestamp": "2026-04-05T19:17:40.792Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Efficiency floor: energyConserve + patternSymmetry beat raw moveSpeed. Lower pulse overhead, reward sustained movement.; Efficiency is critically weak at 0.332 vs beautyScore 0.674. Within beauty, spatialComposition (0.3) and motionGrace (0.674) lag. The 3 surviving organisms (IDs 1,2,5, all age 500) indicate viable genomes. Strategy: boost energy conservation across survivors, increase patternSymmetry for better spatial use, reduce pulseFrequency to cut wasted oscillation, and moderate moveSpeed for elegant rather than frantic motion. The dead organisms (0,3,4, ages 229-387) suggest their high-energy strategies burned out early. Survivors should evolve toward efficiency-first tuning.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
