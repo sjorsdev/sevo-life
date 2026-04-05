@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409764979",
+  "timestamp": "2026-04-05T17:22:44.979Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy hemorrhaging during movement; survivors with 12 particles outlive 8-particle forms despite higher overhead—suggests larger mass absorbs costs better. Paradox: smaller forms are supposedly efficient but starving. Solution: reduce drag/stiffness globally, boost resource magnet on struggling genomes, let larger forms dominate this cycle.; Efficiency is the weakest component (0.406 vs 0.667-0.692 for survival/beauty). Two organisms died and survivors show energy stress (org 2 at 4 energy despite age 500). Root issue: movement and physics overhead consuming too much energy relative to resource gathering. Strategy: reduce movement costs, increase resource attraction to accelerate energy gain, and improve energy conservation. Beauty is acceptable (0.692) so we can trade minor visual cost for efficiency gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
