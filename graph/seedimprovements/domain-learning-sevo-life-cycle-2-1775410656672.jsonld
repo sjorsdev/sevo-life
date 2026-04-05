@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410656672",
+  "timestamp": "2026-04-05T17:37:36.672Z",
+  "observation": "Domain sevo-life (fitness 0.613) generated 2 insights",
+  "suggestion": "Efficiency precedes beauty: starving organisms cannot build complex structures. First stabilize energy economy, then visual refinement evolves.; Efficiency is the critical bottleneck at 0.429—dragging overall fitness to 0.618. Organisms are starving despite 500-cycle lifespans: even survivors have minimal energy (4-22 units). Dead organisms (0, 3) expired at age 366-399, suggesting early energy depletion. The particle physics are too expensive: high movement costs + low resource harvesting + expensive visual effects (trails, pulsing). Fix: (1) reduce energy-expensive movement/pulsing by 30-40%, (2) boost resource attraction and harvest efficiency, (3) increase energy conservation. This shifts the fitness profile from beauty-chasing to survival-first, which feeds back into beauty (more generations = more sophisticated forms).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
