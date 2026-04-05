@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407863200",
+  "timestamp": "2026-04-05T16:51:03.200Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Dead organisms starved before reaching peak; efficiency mutations should protect early survival and enable sustained energy harvesting.; Efficiency (0.441) is the critical bottleneck—2 organisms died young (226-293 age), suggesting energy starvation. Organisms that survived to 500 have adequate but modest energy (1-27). To improve the composite fitness, prioritize efficiency gains: increase energyConserve to reduce metabolic drag, boost resourceAttraction to sustain longer, reduce wasteful moveSpeed, and introduce diversity with contrasting energy strategies. Secondary improvement: motionGrace (0.581) and spatialComposition (0.529) suffer from uncoordinated movement—tune pulseFrequency and turnBias for smoother, more coherent motion.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
