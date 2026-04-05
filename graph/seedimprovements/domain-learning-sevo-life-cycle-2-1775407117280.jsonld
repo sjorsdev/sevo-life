@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407117280",
+  "timestamp": "2026-04-05T16:38:37.280Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy drain from poor foraging + clustering; spatial beauty requires dispersal pressure.; Efficiency (0.493) and spatial composition (0.3) are severely weak. Two organisms died despite reaching 278-360 age, suggesting energy drain. Alive organisms cluster at max age with modest energy reserves. Root causes: (1) organisms aren't exploring efficiently to find resources (low moveSpeed/explorationDrive), (2) they're clumping together (low spatial dispersion), (3) energy consumption is too high relative to harvest rate. Diversity of forms (0.456) is also weak — genomes are too similar. Fix: boost moveSpeed and explorationDrive to spread organisms and improve spatial coverage, increase resourceAttraction for better foraging efficiency, increase energyConserve to reduce drain on long-lived genomes, vary trailColor and patternSymmetry across genomes to increase visual diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
