@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775414149119",
+  "timestamp": "2026-04-05T18:35:49.119Z",
+  "observation": "Domain sevo-life (fitness 0.610) generated 2 insights",
+  "suggestion": "Particle systems optimize energy-to-beauty ratio, not raw motion. Stillness with pattern beats frantic low-value movement.; Efficiency (0.395) is the critical bottleneck — it's the lowest component and has 0.2 goal weight. Within beauty, spatialComposition (0.3) is extremely weak. Organisms are burning energy without sufficient returns. The 2 dead organisms (IDs 1, 3) show survival fragility. Strategy: reduce energy drain via higher energyConserve and lower pulseFrequency, increase explorationDrive to spread particles better (fixes spatial composition weakness), and tighten harvestThreshold to avoid wasting energy on marginal resources. This directly addresses the goal: 0.2 * efficiency is the limiting term.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
