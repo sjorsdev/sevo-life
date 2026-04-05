@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413775473",
+  "timestamp": "2026-04-05T18:29:35.473Z",
+  "observation": "Domain sevo-life (fitness 0.648) generated 2 insights",
+  "suggestion": "Elegance without efficiency is death — current organisms are beautiful but starving. Shift selection pressure from structure to foraging behavior.; Efficiency (0.392) is the critical bottleneck — it's 40% weaker than beauty and 41% weaker than survival. Organisms reach age 500 but die with depleted energy, indicating they waste resources moving/maintaining structure without sufficient energy gain. Root causes: low resourceAttraction (organisms struggle to find resources efficiently) and high energy drain from movement/drag. Fix: increase resourceAttraction to 0.75–0.85 across all genomes to improve foraging efficiency, increase energyConserve to 0.65–0.75 to reduce metabolic waste, and reduce unnecessary movement (lower flockingStrength) to preserve energy. This rebalances the energy budget without sacrificing the strong beauty metrics (proportionHarmony 0.963, symmetryQuality 0.889).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
