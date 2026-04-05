@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775416972548",
+  "timestamp": "2026-04-05T19:22:52.548Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "Efficiency > Beauty in fitness weight (0.2 vs 0.3). Optimize for energy before pursuing new forms.; Efficiency is the critical bottleneck (0.468 vs 0.667 survivalRate, 0.662 beautyScore). With 0.2 weight in the goal, it's dragging fitness from 0.67+ down to 0.614. Organisms are burning energy wastefully—most alive entities have <18 energy despite reaching max age. Spatial composition (0.3) also indicates poor distribution. Root causes: (1) moveSpeed too high, (2) pulseFrequency/explorationDrive wasting energy, (3) energyConserve not aggressive enough. Secondary issue: diversityOfForms (0.456) suggests genomes are converging—need at least one radically different mover. Strategy: Reduce baseline energy burn across all genomes, make resource hunting more targeted, introduce one highly conservative energy-saver as a comparison variant.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
