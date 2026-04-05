@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775390961228",
+  "timestamp": "2026-04-05T12:09:21.228Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency collapses when entities are harvest-conservative + sedentary; aggressive threshold reduction + movement/rhythm increase unlocks exploration coverage and pattern emergence.; Efficiency (0.135) is the critical bottleneck, contributing only 0.027 to overall fitness vs 0.375 for survival. Root causes: (1) harvestThreshold values are too conservative—entities skip marginal resources. (2) Coverage (0.204) and Rhythm (0.332) in beauty metrics are weak due to low moveSpeed in passive entities and near-zero pulseFrequency across the board. Strategy: lower harvest thresholds uniformly to 6-10% to maximize resource capture per entity, increase moveSpeed in low-exploration genomes (1, 3, 4), and boost pulseFrequency 3-4x to establish visual rhythm patterns that contribute to beautyScore while improving survival correlation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
