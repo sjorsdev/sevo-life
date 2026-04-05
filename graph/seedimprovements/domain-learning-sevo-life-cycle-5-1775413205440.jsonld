@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413205440",
+  "timestamp": "2026-04-05T18:20:05.440Z",
+  "observation": "Domain sevo-life (fitness 0.541) generated 2 insights",
+  "suggestion": "Efficiency beats survival rate on marginal ROI—move less, harvest smarter, vary colors, spread patterns. Each change is orthogonal.; Efficiency (0.612) is the critical bottleneck—it's the lowest weighted component. Within beauty, spatialComposition (0.3) and diversityOfForms (0.457) drag significantly. Strategy: (1) Reduce moveSpeed and increase energyConserve to lower metabolic cost and improve efficiency. (2) Increase resourceAttraction so genomes harvest better with less wandering. (3) Vary trailColor across genomes (currently likely uniform) to boost diversityOfForms. (4) Increase explorationDrive and patternSymmetry to improve spatial distribution and composition. The organisms survive well but waste energy in movement; more efficient harvesting + visual diversity fixes both.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
