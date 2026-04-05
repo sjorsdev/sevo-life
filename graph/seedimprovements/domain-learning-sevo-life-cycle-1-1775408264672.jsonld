@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408264672",
+  "timestamp": "2026-04-05T16:57:44.672Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Organisms are energy-stable but spatially static — increase exploration and movement efficiency to unlock spatial emergence.; Spatial composition (0.3) is critically weak — organisms cluster too densely or randomly. Efficiency (0.61) is the second bottleneck. Both drag down the composite goal. Survival is good (0.833), so no need to defend it; instead, optimize movement patterns and energy use. Propose mutations on 3 genomes with complementary strategies: (1) increase moveSpeed + energyConserve to improve efficiency score directly, (2) raise explorationDrive to encourage spatial spreading and pattern emergence, (3) tune pulseFrequency for smoother motion grace.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
