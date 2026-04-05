@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775392223060",
+  "timestamp": "2026-04-05T12:30:23.060Z",
+  "observation": "Domain sevo-life (fitness 0.696) generated 2 insights",
+  "suggestion": "Rhythm failure: low pulseFrequency. Efficiency failure: high energyConserve suppresses foraging activity. Entities survive but produce almost nothing.; Efficiency (0.144) is critically weak — worth only 0.029 of total goal. Beauty rhythm (0.148) is also critically weak, dragging beautyScore down. Root cause: pulseFrequency is too low (0.08–0.3 across population) which kills temporal pattern emergence, and energyConserve is too high (0.55–0.85) which suppresses active exploration and harvesting. Survival is perfect at 1.0, so entities have energy budget to spend more aggressively. Shift budget from defensive hoarding to active exploration and rhythmic output.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
