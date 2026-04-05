@@ -57,7 +57,9 @@ export async function run(
   }
   args.push(blueprint);
 
-  const cmd = new Deno.Command("deno", {
+  // Use full path — subprocess may not inherit shell PATH
+  const denoPath = `${Deno.env.get("HOME")}/.deno/bin/deno`;
+  const cmd = new Deno.Command(denoPath, {
     args,
     stdout: "piped",
     stderr: "piped",
