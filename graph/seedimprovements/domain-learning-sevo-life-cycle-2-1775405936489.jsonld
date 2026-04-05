@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405936489",
+  "timestamp": "2026-04-05T16:18:56.489Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Lean bodies with high energyConserve and patternSymmetry outperform particle-heavy explorers—fewer particles, better efficiency, better visual form.; Efficiency is critically weak (0.521), dragging overall fitness despite strong survival. spatialComposition (0.3) indicates poor spatial arrangement. Organisms 5 achieves survival on 8 particles vs 12-13 for others, suggesting particle bloat. Increase energy conservation and movement efficiency globally. Reduce wasteful movement behaviors. Improve spatial pattern symmetry to boost composition beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
