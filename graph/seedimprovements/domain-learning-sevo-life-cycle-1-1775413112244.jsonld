@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413112244",
+  "timestamp": "2026-04-05T18:18:32.244Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Energy starvation drives early death and inefficiency; low spatial dispersion limits beauty. Organisms need stronger resource-seeking behavior and must spread out to maximize both survival and aesthetic contribution.; Current bottleneck: diversityOfForms (0.456) and spatialComposition (0.551) indicate organisms cluster too uniformly and lack visual variety. Secondary issue: survivalRate (0.667) shows energy starvation—two organisms died mid-lifecycle. Efficiency (0.617) is weak. Fix: (1) increase resourceAttraction to help organisms find energy more effectively, (2) increase explorationDrive to spread organisms spatially and reduce clustering, (3) increase energyConserve for conservation under scarcity, (4) vary trailColor across genomes to maximize visual diversity contribution to beauty scoring.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
