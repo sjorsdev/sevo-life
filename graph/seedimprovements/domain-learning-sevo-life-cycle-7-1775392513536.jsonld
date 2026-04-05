@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-7-1775392513536",
+  "timestamp": "2026-04-05T12:35:13.536Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "High movement + low conservation = fitness death. Efficiency beats speed; conservation is the fastest path to survival.; Efficiency is critically weak (0.149 vs target 0.2), dragging overall fitness. The culprit: multiple entities waste energy with low energyConserve (0.5–0.55) combined with high moveSpeed. Aesthetic Harvester and Balanced Optimizer are the main inefficient offenders. Increasing energyConserve on these will directly boost efficiency score. Beauty is secondary but can be improved via pattern symmetry on specialized roles.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:7"
+  ],
+  "priority": 5
+}
