@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775395169811",
+  "timestamp": "2026-04-05T13:19:29.811Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost, not harvest logic. Lower moveSpeed + better conservation > aggressive mobility.; Efficiency (0.138) is the bottleneck—it's the lowest absolute component and will improve overall fitness most. SurvivalRate is strong (0.875); beautyScore is weak but efficiency drag is worse. Root cause: 5 of 8 entities have moveSpeed ≥0.65, creating high energy costs without proportional resource gain. Solution: reduce moveSpeed for mobile entities, boost energyConserve across the board. This trades exploration breadth for energy efficiency—viable because resourceAttraction is already high (0.75–0.95).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
