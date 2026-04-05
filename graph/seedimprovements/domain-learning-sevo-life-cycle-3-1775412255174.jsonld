@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775412255174",
+  "timestamp": "2026-04-05T18:04:15.174Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: metabolic cost exceeds resource capture. Trade exploration for exploitation. Vary morphology parameters to unlock diversity ceiling.; Efficiency is critically weak at 0.443 (0.2 weight in goal function). This is dragging down overall fitness despite decent survival/beauty. Secondary issues: diversity of forms (0.456) and motion grace (0.588) in beauty breakdown. Root cause: organisms are likely expending excessive energy on movement/exploration without proportional returns. Fix: reduce metabolic waste (energyConserve), lower exploration entropy (explorationDrive), and create form diversity through parameter variation. Motion grace improves with lower energy volatility.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
