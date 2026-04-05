@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413901581",
+  "timestamp": "2026-04-05T18:31:41.581Z",
+  "observation": "Domain sevo-life (fitness 0.643) generated 2 insights",
+  "suggestion": "beauty doesn't win if the organism starves before age 500. Efficiency is the fitness gate.; efficiency at 0.374 is the critical bottleneck. Organisms burn energy faster than they harvest it — three are dead, survivors are energy-starved. Root cause: moveSpeed likely too high (particle movement is expensive), energyConserve too low (poor metabolism), explorationDrive wastes energy on random motion, harvestThreshold set too high (organisms starve while waiting to eat). Action: reduce movement overhead, improve energy capture, tighten feeding loops. survivalRate (0.5) will improve as efficiency improves — better-fed organisms survive longer.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
