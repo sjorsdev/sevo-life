@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v35",
+  "timestamp": "2026-04-05T10:11:31.854Z",
+  "version": 35,
+  "parent": "benchmark-v34",
+  "task": "Implement Adaptive Quantum-Adversarial Byzantine-Resilient State Machine Replication (v35) extending v34 by: (1) Worst-Case Diameter-Dependent Liveness Proofs—agents must formally prove (Coq/Isabelle, machine-checked) that consensus achieves liveness in exactly O(diameter) rounds even when network topology evolves adversarially and Byzantine adversaries mount continuous quantum oracle attacks, with explicit diameter bounds certified for each topology state; (2) Retroactive Byzantine Detection—implement and formally verify detection of Byzantine faults committed in prior protocol rounds, retroactively identifying which past votes were equivocations by an adversary who only became observable after the fact, with proofs that detection completeness holds under all quantum superposition attacks; (3) Quantum Entanglement Channel Resilience—extend quantum security proofs to handle Bell-state entangled channels where adversaries can perform CNOT attacks on transmitted qubits, proving safety/liveness under entanglement-based oracle attacks with explicit entropy bounds; (4) Dynamic Committee Rotation Under Byzantine Attack—prove that committee membership can rotate every k rounds while maintaining Byzantine safety across rotation boundaries, even when rotation decisions themselves are targeted by adaptive Byzantine nodes that observe rotation voting before attacking; (5) QRAM-Bounded Quantum Adversary Model—prove all quantum resilience guarantees hold against adversaries with polynomial quantum memory (QRAM) bounds instead of unbounded quantum oracles, with explicit circuit-depth accounting; (6) Nested Byzantine Coordination Detection—detect and formally verify detection of multi-layer Byzantine attacks where a single Byzantine node coordinates through proxy nodes in a hidden tree structure, proving complete detection even under quantum-obfuscated proxy identification.",
+  "scoringLogic": "diameterBoundsFormalization(0.16) + retroactiveByzantineDetection(0.15) + entanglementChannelProofs(0.14) + committeeRotationSafety(0.14) + qramBoundedAdversary(0.15) + nestedCoordinationDetection(0.13) + compositionalMachineCheckingCoverage(0.13)",
+  "difficulty": 35,
+  "passThreshold": 0.95
+}
