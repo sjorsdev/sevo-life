@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775416591167",
+  "timestamp": "2026-04-05T19:16:31.167Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "Organisms with fewer, tighter particles survive longer. Efficiency scales with movement economy, not size. Diversify body plans to force specialization.; Efficiency is critically low (0.445) despite decent survival and beauty. Two organisms died with 13 particles each; survivors with 8 particles thrive. Root cause: expensive springs and excessive particle growth waste energy without survival benefit. Diversity of forms is also weak (0.456) — genomes are too similar. Strategy: (1) reduce particle budgets and spring costs, (2) increase aggressive resource seeking, (3) exaggerate morphological differences between types to boost beauty diversity and selection pressure",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
