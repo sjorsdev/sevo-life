@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411274366",
+  "timestamp": "2026-04-05T17:47:54.366Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Efficiency and spacing are coupled—organisms waste energy competing at the same resources. Decouple via behavioral diversity.; Efficiency is weakest (0.545). Dead organisms had 13 particles vs. living at 8-12, suggesting large forms are costly. Spatial composition (0.3) indicates clustering—organisms compete at same food sources. Propose: (1) Favor compact, efficient bodies by reducing resourceAttraction and increasing energyConserve. (2) Increase explorationDrive and moveSpeed to spread organisms spatially, reducing per-organism energy cost from competition. (3) Add behavioral diversity—some organisms aggressive foragers (high resourceAttraction), others explorers (high explorationDrive) to fill different niches and improve diversityOfForms.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
