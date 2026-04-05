@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409672321",
+  "timestamp": "2026-04-05T17:21:12.321Z",
+  "observation": "Domain sevo-life (fitness 0.606) generated 2 insights",
+  "suggestion": "Efficiency improves by reducing energy-expensive behaviors (movement, pulsing, exploration) while keeping resource-attraction sharp — lean predators outperform expensive wanderers.; Efficiency is the bottleneck (0.448 vs 0.667 survival, 0.63 beauty). With 6 branches explored, the system is burning energy on expensive movement and pulse patterns without sufficient survival benefit. Dead organisms (ids 0, 3) suggest high-cost exploration without payoff. Survival is stable (0.667) — we can trade some exploratory motion for leaner, steadier organisms. SpatialComposition (0.3) and motionGrace (0.549) within beauty are weak, suggesting jerky, inefficient movement. Solution: reduce movement energy cost, slow pulse cycles, increase energy retention, and lower exploration drive to favor resource concentration over random wandering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
