@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775391652215",
+  "timestamp": "2026-04-05T12:20:52.215Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Efficiency wins via movement economy, not faster harvesting. Lower moveSpeed + higher energyConserve = more energy-to-fitness ROI. Rhythm improves when pulsing entities are more frequent.; Efficiency is critically weak (0.135 vs beautyScore 0.583 vs survivalRate 1.0). This drags the composite fitness. The issue: high moveSpeed (0.6-0.65) burns energy, and energyConserve is moderate (0.5-0.8). Secondary weakness: rhythm in beauty is very low (0.159). Fix by reducing movement cost and increasing energy extraction efficiency. Increase pulseFrequency on aesthetic entities to improve rhythm.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
