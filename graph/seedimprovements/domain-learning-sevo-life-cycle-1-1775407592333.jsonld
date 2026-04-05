@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407592333",
+  "timestamp": "2026-04-05T16:46:32.333Z",
+  "observation": "Domain sevo-life (fitness 0.648) generated 2 insights",
+  "suggestion": "Smaller, efficient foragers outcompete large explorers. Directness beats curiosity when resources are scarce.; Efficiency at 0.344 is the critical blocker (worth 0.2 × weight = 0.068 points max). Current organisms waste energy on movement and exploration. High mortality (50% survival) indicates energy depletion despite some reaching age 500. Beauty is healthy at 0.692 so we preserve it. Strategy: reduce energy waste (moveSpeed, explorationDrive), improve directed foraging (resourceAttraction, harvestThreshold), conserve reserves (energyConserve). Spatial composition weakness (0.3) is secondary — fix efficiency first, beauty will follow when organisms live longer.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
