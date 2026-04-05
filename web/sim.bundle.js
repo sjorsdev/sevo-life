@@ -1,3 +1,42 @@
+const v2 = {
+    add: (a, b)=>({
+            x: a.x + b.x,
+            y: a.y + b.y
+        }),
+    sub: (a, b)=>({
+            x: a.x - b.x,
+            y: a.y - b.y
+        }),
+    scale: (a, s)=>({
+            x: a.x * s,
+            y: a.y * s
+        }),
+    len: (a)=>Math.sqrt(a.x * a.x + a.y * a.y),
+    norm: (a)=>{
+        const l = v2.len(a);
+        return l > 0 ? {
+            x: a.x / l,
+            y: a.y / l
+        } : {
+            x: 0,
+            y: 0
+        };
+    },
+    dist: (a, b)=>v2.len(v2.sub(a, b)),
+    rot: (a, rad)=>({
+            x: a.x * Math.cos(rad) - a.y * Math.sin(rad),
+            y: a.x * Math.sin(rad) + a.y * Math.cos(rad)
+        }),
+    angle: (a)=>Math.atan2(a.y, a.x)
+};
+const DEFAULT_WORLD = {
+    width: 800,
+    height: 600,
+    maxTicks: 500,
+    resourceCount: 60,
+    flowStrength: 0.2,
+    gravity: 0
+};
 function mulberry32(seed) {
     let s = seed | 0;
     return ()=>{
@@ -9,958 +48,466 @@ function mulberry32(seed) {
 }
 class World {
     config;
-    grid;
-    entities;
-    events;
-    tick;
-    rng;
-    nextId;
-    totalBirths;
-    totalDeaths;
-    constructor(config, genomes){
-        this.config = config;
-        this.tick = 0;
-        this.events = [];
-        this.rng = mulberry32(config.seed);
-        this.totalBirths = 0;
-        this.totalDeaths = 0;
-        this.grid = Array.from({
-            length: config.height
-        }, ()=>Array.from({
-                length: config.width
-            }, ()=>({
-                    resource: 0,
-                    trail: 0,
-                    trailColor: 0,
-                    occupied: false
-                })));
-        let placed = 0;
-        while(placed < config.initialResources){
-            const x = Math.floor(this.rng() * config.width);
-            const y = Math.floor(this.rng() * config.height);
-            if (this.grid[y][x].resource === 0) {
-                this.grid[y][x].resource = 0.3 + this.rng() * 0.7;
-                placed++;
-            }
-        }
-        this.entities = genomes.map((genome, i)=>{
-            const pos = {
-                x: Math.floor(this.rng() * config.width),
-                y: Math.floor(this.rng() * config.height)
-            };
-            this.grid[pos.y][pos.x].occupied = true;
-            this.totalBirths++;
-            return {
-                id: i,
-                pos,
-                energy: 20,
-                age: 0,
-                genome,
-                alive: true,
-                totalHarvested: 0,
-                trailsLeft: 0,
-                distanceTraveled: 0,
-                generation: 0,
-                parentIds: [],
-                bornAtTick: 0
-            };
-        });
-        this.nextId = genomes.length;
-    }
-    spawn(genome, generation = 0, parentIds = []) {
-        const { width, height } = this.config;
-        let attempts = 0;
-        while(attempts < 50){
-            const x = Math.floor(this.rng() * width);
-            const y = Math.floor(this.rng() * height);
-            if (!this.grid[y][x].occupied) {
-                const entity = {
-                    id: this.nextId++,
-                    pos: {
-                        x,
-                        y
-                    },
-                    energy: 20,
-                    age: 0,
-                    genome,
-                    alive: true,
-                    totalHarvested: 0,
-                    trailsLeft: 0,
-                    distanceTraveled: 0,
-                    generation,
-                    parentIds,
-                    bornAtTick: this.tick
-                };
-                this.grid[y][x].occupied = true;
-                this.entities.push(entity);
-                this.totalBirths++;
-                this.events.push({
-                    type: "birth",
-                    x,
-                    y,
-                    id: entity.id,
-                    generation
-                });
-                return entity;
-            }
-            attempts++;
-        }
-        return null;
-    }
-    getAlive() {
-        return this.entities.filter((e)=>e.alive);
-    }
-    evolveConfig(changes) {
-        this.config = {
-            ...this.config,
-            ...changes
-        };
-    }
-    getNeighbors(pos, radius = 3) {
-        const views = [];
-        for(let dy = -radius; dy <= radius; dy++){
-            for(let dx = -radius; dx <= radius; dx++){
-                const nx = (pos.x + dx + this.config.width) % this.config.width;
-                const ny = (pos.y + dy + this.config.height) % this.config.height;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist <= radius) {
-                    views.push({
-                        pos: {
-                            x: nx,
-                            y: ny
-                        },
-                        cell: this.grid[ny][nx],
-                        distance: dist,
-                        direction: {
-                            x: Math.sign(dx),
-                            y: Math.sign(dy)
-                        }
-                    });
-                }
-            }
-        }
-        return views;
-    }
-    applyAction(entity, action) {
-        const { config, grid } = this;
-        switch(action.type){
-            case "move":
-                {
-                    const nx = (entity.pos.x + action.direction.x + config.width) % config.width;
-                    const ny = (entity.pos.y + action.direction.y + config.height) % config.height;
-                    if (!grid[ny][nx].occupied) {
-                        const oldCell = grid[entity.pos.y][entity.pos.x];
-                        const entityPeriod = 8 + entity.id * 3;
-                        const phase = entity.age % (entityPeriod * 3);
-                        let trailStrength;
-                        if (phase < entityPeriod) {
-                            trailStrength = entity.genome.trailIntensity * 0.15;
-                        } else if (phase < entityPeriod * 2) {
-                            trailStrength = entity.genome.trailIntensity * 0.5;
-                        } else {
-                            trailStrength = entity.genome.trailIntensity * 0.9;
-                        }
-                        oldCell.trail = Math.min(1, oldCell.trail + trailStrength);
-                        oldCell.trailColor = entity.genome.trailColor;
-                        if (entity.genome.trailIntensity > 0.1) entity.trailsLeft++;
-                        oldCell.occupied = false;
-                        entity.pos = {
-                            x: nx,
-                            y: ny
-                        };
-                        grid[ny][nx].occupied = true;
-                        entity.energy -= config.moveCost;
-                        entity.distanceTraveled++;
-                    }
-                    break;
-                }
-            case "harvest":
-                {
-                    const cell = grid[entity.pos.y][entity.pos.x];
-                    if (cell.resource > 0) {
-                        const gained = Math.min(cell.resource, 1) * config.harvestGain;
-                        entity.energy += gained;
-                        entity.totalHarvested += gained;
-                        cell.resource = 0;
-                        this.events.push({
-                            type: "harvest",
-                            x: entity.pos.x,
-                            y: entity.pos.y,
-                            id: entity.id
-                        });
-                    }
-                    break;
-                }
-            case "trail":
-                {
-                    const cell = grid[entity.pos.y][entity.pos.x];
-                    cell.trail = Math.min(1, cell.trail + action.intensity);
-                    cell.trailColor = action.color;
-                    entity.trailsLeft++;
-                    break;
-                }
-            case "pulse":
-                {
-                    const r = Math.min(action.radius, 3);
-                    for(let dy = -r; dy <= r; dy++){
-                        for(let dx = -r; dx <= r; dx++){
-                            if (Math.sqrt(dx * dx + dy * dy) <= r) {
-                                const px = (entity.pos.x + dx + config.width) % config.width;
-                                const py = (entity.pos.y + dy + config.height) % config.height;
-                                grid[py][px].trail = Math.min(1, grid[py][px].trail + 0.3);
-                                grid[py][px].trailColor = entity.genome.trailColor;
-                            }
-                        }
-                    }
-                    entity.energy -= 1;
-                    entity.trailsLeft += r * r;
-                    this.events.push({
-                        type: "pulse",
-                        x: entity.pos.x,
-                        y: entity.pos.y,
-                        id: entity.id,
-                        r
-                    });
-                    break;
-                }
-            case "idle":
-                entity.energy += 0.1;
-                break;
-        }
-    }
-    step(decisionFn) {
-        this.tick++;
-        this.events = [];
-        const { config, grid, entities } = this;
-        for (const entity of entities){
-            if (!entity.alive) continue;
-            entity.energy -= config.energyDrainPerTick;
-            entity.age++;
-            if (entity.energy <= 0) {
-                entity.alive = false;
-                grid[entity.pos.y][entity.pos.x].occupied = false;
-                this.totalDeaths++;
-                this.events.push({
-                    type: "death",
-                    x: entity.pos.x,
-                    y: entity.pos.y,
-                    id: entity.id
-                });
-                continue;
-            }
-            const neighbors = this.getNeighbors(entity.pos);
-            const action = decisionFn(entity, neighbors);
-            this.applyAction(entity, action);
-        }
-        for(let y = 0; y < config.height; y++){
-            for(let x = 0; x < config.width; x++){
-                if (grid[y][x].trail > 0) {
-                    grid[y][x].trail = Math.max(0, grid[y][x].trail - config.trailDecayRate);
-                }
-            }
-        }
-        for(let y = 0; y < config.height; y++){
-            for(let x = 0; x < config.width; x++){
-                if (grid[y][x].resource === 0 && this.rng() < config.resourceRegenRate) {
-                    grid[y][x].resource = 0.2 + this.rng() * 0.5;
-                }
-            }
-        }
-    }
-    getEntityResults() {
-        return this.entities.map((e)=>({
-                id: e.id,
-                survived: e.alive,
-                age: e.age,
-                totalHarvested: e.totalHarvested,
-                trailsLeft: e.trailsLeft,
-                distanceTraveled: e.distanceTraveled,
-                finalEnergy: e.energy,
-                generation: e.generation,
-                parentIds: e.parentIds
-            }));
-    }
-    isFinished() {
-        return this.tick >= this.config.maxTicks || this.entities.every((e)=>!e.alive);
-    }
-}
-function symmetryScore(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    let matches = 0;
-    let total = 0;
-    for(let y = 0; y < h; y++){
-        for(let x = 0; x < Math.floor(w / 2); x++){
-            const left = grid[y][x].trail;
-            const right = grid[y][w - 1 - x].trail;
-            const bothPresent = left > 0.1 || right > 0.1;
-            if (bothPresent) {
-                total++;
-                if (Math.abs(left - right) < 0.3) matches++;
-            }
-        }
-    }
-    for(let y = 0; y < Math.floor(h / 2); y++){
-        for(let x = 0; x < w; x++){
-            const top = grid[y][x].trail;
-            const bottom = grid[h - 1 - y][x].trail;
-            const bothPresent = top > 0.1 || bottom > 0.1;
-            if (bothPresent) {
-                total++;
-                if (Math.abs(top - bottom) < 0.3) matches++;
-            }
-        }
-    }
-    return total > 0 ? matches / total : 0;
-}
-function complexityScore(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    const bins = [
-        0,
-        0,
-        0,
-        0,
-        0
-    ];
-    let trailCells = 0;
-    for(let y = 0; y < h; y++){
-        for(let x = 0; x < w; x++){
-            if (grid[y][x].trail > 0.02) {
-                const bin = Math.min(4, Math.floor(grid[y][x].trail * 5));
-                bins[bin]++;
-                trailCells++;
-            }
-        }
-    }
-    let intensityEntropy = 0;
-    if (trailCells > 0) {
-        for (const count of bins){
-            if (count > 0) {
-                const p = count / trailCells;
-                intensityEntropy -= p * Math.log2(p);
-            }
-        }
-        intensityEntropy /= Math.log2(bins.length);
-    }
-    let spatialDiff = 0;
-    let spatialCount = 0;
-    for(let y = 0; y < h - 1; y++){
-        for(let x = 0; x < w - 1; x++){
-            const here = grid[y][x].trail;
-            const right = grid[y][x + 1].trail;
-            const below = grid[y + 1][x].trail;
-            if (here > 0.02 || right > 0.02) {
-                spatialDiff += Math.abs(here - right);
-                spatialCount++;
-            }
-            if (here > 0.02 || below > 0.02) {
-                spatialDiff += Math.abs(here - below);
-                spatialCount++;
-            }
-        }
-    }
-    const spatialVariation = spatialCount > 0 ? Math.min(1, spatialDiff / spatialCount * 3) : 0;
-    return 0.6 * intensityEntropy + 0.4 * spatialVariation;
-}
-function rhythmScore(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    function measureGapRegularity(gaps) {
-        if (gaps.length < 2) return 0;
-        const mean = gaps.reduce((a, b)=>a + b, 0) / gaps.length;
-        const variance = gaps.reduce((a, b)=>a + (b - mean) ** 2, 0) / gaps.length;
-        const cv = mean > 0 ? Math.sqrt(variance) / mean : 1;
-        return Math.max(0, 1 - cv);
-    }
-    const hGaps = [];
-    for(let y = 0; y < h; y += 2){
-        let inTrail = false;
-        let gapLen = 0;
-        for(let x = 0; x < w; x++){
-            const hasTrail = grid[y][x].trail > 0.1;
-            if (hasTrail && !inTrail) {
-                if (gapLen > 0) hGaps.push(gapLen);
-                gapLen = 0;
-                inTrail = true;
-            } else if (!hasTrail) {
-                gapLen++;
-                inTrail = false;
-            }
-        }
-    }
-    const vGaps = [];
-    for(let x = 0; x < w; x += 2){
-        let inTrail = false;
-        let gapLen = 0;
-        for(let y = 0; y < h; y++){
-            const hasTrail = grid[y][x].trail > 0.1;
-            if (hasTrail && !inTrail) {
-                if (gapLen > 0) vGaps.push(gapLen);
-                gapLen = 0;
-                inTrail = true;
-            } else if (!hasTrail) {
-                gapLen++;
-                inTrail = false;
-            }
-        }
-    }
-    let periodicityScore = 0;
-    let rowCount = 0;
-    for(let y = 0; y < h; y += 4){
-        const intensities = Array.from({
-            length: w
-        }, (_, x)=>grid[y][x].trail);
-        const trailCount = intensities.filter((v)=>v > 0.05).length;
-        if (trailCount < 5) continue;
-        let bestCorr = 0;
-        for(let lag = 3; lag <= 12; lag++){
-            let sum = 0;
-            let count = 0;
-            for(let x = 0; x < w - lag; x++){
-                sum += intensities[x] * intensities[x + lag];
-                count++;
-            }
-            const corr = count > 0 ? sum / count : 0;
-            bestCorr = Math.max(bestCorr, corr);
-        }
-        periodicityScore += Math.min(1, bestCorr * 5);
-        rowCount++;
-    }
-    periodicityScore = rowCount > 0 ? periodicityScore / rowCount : 0;
-    const hRhythm = measureGapRegularity(hGaps);
-    const vRhythm = measureGapRegularity(vGaps);
-    return 0.35 * hRhythm + 0.35 * vRhythm + 0.30 * periodicityScore;
-}
-function colorHarmonyScore(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    const colorCounts = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ];
-    let totalTrails = 0;
-    for(let y = 0; y < h; y++){
-        for(let x = 0; x < w; x++){
-            if (grid[y][x].trail > 0.1) {
-                const c = Math.min(5, Math.max(0, Math.floor(grid[y][x].trailColor)));
-                colorCounts[c]++;
-                totalTrails++;
-            }
-        }
-    }
-    if (totalTrails === 0) return 0;
-    const usedColors = colorCounts.map((count, i)=>({
-            color: i,
-            ratio: count / totalTrails
-        })).filter((c)=>c.ratio > 0.05);
-    if (usedColors.length <= 1) return 0.2;
-    let harmonySum = 0;
-    let pairs = 0;
-    for(let i = 0; i < usedColors.length; i++){
-        for(let j = i + 1; j < usedColors.length; j++){
-            const dist = Math.min(Math.abs(usedColors[i].color - usedColors[j].color), 6 - Math.abs(usedColors[i].color - usedColors[j].color));
-            harmonySum += dist === 3 ? 1.0 : dist === 2 ? 0.8 : 0.5;
-            pairs++;
-        }
-    }
-    return pairs > 0 ? harmonySum / pairs : 0;
-}
-function coverageScore(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    let trailCells = 0;
-    const totalCells = h * w;
-    for(let y = 0; y < h; y++){
-        for(let x = 0; x < w; x++){
-            if (grid[y][x].trail > 0.05) trailCells++;
-        }
-    }
-    const ratio = trailCells / totalCells;
-    if (ratio < 0.1) return ratio * 5;
-    if (ratio > 0.7) return Math.max(0, 1 - (ratio - 0.7) * 3);
-    return 0.5 + (ratio - 0.1) * (0.5 / 0.6);
-}
-function scoreBeauty(grid) {
-    const symmetry = symmetryScore(grid);
-    const complexity = complexityScore(grid);
-    const rhythm = rhythmScore(grid);
-    const colorHarmony = colorHarmonyScore(grid);
-    const coverage = coverageScore(grid);
-    const total = symmetry * 0.25 + complexity * 0.25 + rhythm * 0.20 + colorHarmony * 0.15 + coverage * 0.15;
-    return {
-        symmetry,
-        complexity,
-        rhythm,
-        colorHarmony,
-        coverage,
-        total
-    };
-}
-function beautyByColor(grid) {
-    const h = grid.length;
-    const w = grid[0].length;
-    const globalBeauty = scoreBeauty(grid).total;
-    const contributions = [];
-    for(let color = 0; color < 6; color++){
-        const masked = Array.from({
-            length: h
-        }, (_, y)=>Array.from({
-                length: w
-            }, (_, x)=>{
-                const cell = grid[y][x];
-                const c = Math.min(5, Math.max(0, Math.floor(cell.trailColor)));
-                if (c === color && cell.trail > 0) {
-                    return {
-                        ...cell,
-                        trail: 0
-                    };
-                }
-                return cell;
-            }));
-        const beautyWithout = scoreBeauty(masked).total;
-        contributions[color] = globalBeauty - beautyWithout;
-    }
-    return contributions;
-}
-const DEFAULT_CONFIG = {
-    width: 40,
-    height: 30,
-    maxTicks: 200,
-    initialResources: 80,
-    resourceRegenRate: 0.005,
-    trailDecayRate: 0.02,
-    energyDrainPerTick: 0.5,
-    moveCost: 0.3,
-    harvestGain: 5,
-    seed: 42
-};
-class Body {
-    cells;
-    center;
-    genome;
-    age;
-    constructor(center, genome){
-        this.center = center;
-        this.genome = genome;
-        this.age = 0;
-        this.cells = [
-            {
-                offset: {
-                    x: 0,
-                    y: 0
-                },
-                type: "core",
-                energy: 20,
-                age: 0,
-                color: genome.coreColor
-            }
-        ];
-    }
-    getWorldPositions() {
-        return this.cells.map((c)=>({
-                x: this.center.x + c.offset.x,
-                y: this.center.y + c.offset.y
-            }));
-    }
-    getBounds() {
-        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-        for (const c of this.cells){
-            minX = Math.min(minX, c.offset.x);
-            maxX = Math.max(maxX, c.offset.x);
-            minY = Math.min(minY, c.offset.y);
-            maxY = Math.max(maxY, c.offset.y);
-        }
-        return {
-            minX,
-            maxX,
-            minY,
-            maxY,
-            width: maxX - minX + 1,
-            height: maxY - minY + 1
-        };
-    }
-    countByType(type) {
-        return this.cells.filter((c)=>c.type === type).length;
-    }
-    hasCell(offset) {
-        return this.cells.some((c)=>c.offset.x === offset.x && c.offset.y === offset.y);
-    }
-    grow(availableEnergy, rng) {
-        this.age++;
-        for (const c of this.cells)c.age++;
-        if (this.cells.length >= this.genome.maxCells) return [];
-        const newCells = [];
-        for (const rule of this.genome.growthRules){
-            if (this.cells.length + newCells.length >= this.genome.maxCells) break;
-            if (availableEnergy < rule.energyCost) continue;
-            const existing = this.cells.filter((c)=>c.type === rule.produces).length + newCells.filter((c)=>c.type === rule.produces).length;
-            if (existing >= rule.maxInstances) continue;
-            const sources = this.cells.filter((c)=>c.type === rule.from && c.age >= rule.minAge);
-            for (const source of sources){
-                if (rng() > rule.probability) continue;
-                if (this.cells.length + newCells.length >= this.genome.maxCells) break;
-                const newOffset = {
-                    x: source.offset.x + rule.direction.x,
-                    y: source.offset.y + rule.direction.y
-                };
-                if (this.hasCell(newOffset) || newCells.some((c)=>c.offset.x === newOffset.x && c.offset.y === newOffset.y)) continue;
-                const color = this.genome.colorGradient ? (this.genome.coreColor + Math.floor(Math.sqrt(newOffset.x ** 2 + newOffset.y ** 2))) % 6 : rule.produces === "skin" ? this.genome.skinColor : this.genome.coreColor;
-                newCells.push({
-                    offset: newOffset,
-                    type: rule.produces,
-                    energy: 5,
-                    age: 0,
-                    color
-                });
-                availableEnergy -= rule.energyCost;
-                if (rule.symmetry && this.genome.bilateralSymmetry > 0.5) {
-                    const mirrorOffset = {
-                        x: -newOffset.x,
-                        y: newOffset.y
-                    };
-                    if (!this.hasCell(mirrorOffset) && !newCells.some((c)=>c.offset.x === mirrorOffset.x && c.offset.y === mirrorOffset.y)) {
-                        newCells.push({
-                            offset: mirrorOffset,
-                            type: rule.produces,
-                            energy: 5,
-                            age: 0,
-                            color
-                        });
-                        availableEnergy -= rule.energyCost;
-                    }
-                }
-            }
-        }
-        this.cells.push(...newCells);
-        return newCells;
-    }
-}
-function scoreBodyBeauty(body) {
-    const cells = body.cells;
-    if (cells.length <= 1) return {
-        formSymmetry: 0,
-        proportion: 0,
-        complexity: 0,
-        colorHarmony: 0,
-        total: 0
-    };
-    let mirrorMatches = 0;
-    let mirrorTotal = 0;
-    for (const c of cells){
-        if (c.offset.x === 0) continue;
-        mirrorTotal++;
-        const mirror = cells.find((m)=>m.offset.x === -c.offset.x && m.offset.y === c.offset.y);
-        if (mirror) {
-            mirrorMatches++;
-            if (mirror.type === c.type) mirrorMatches += 0.5;
-        }
-    }
-    const formSymmetry = mirrorTotal > 0 ? Math.min(1, mirrorMatches / mirrorTotal) : 0;
-    const bounds = body.getBounds();
-    const ratio = bounds.width / Math.max(bounds.height, 1);
-    const inverseGolden = 1 / 1.618;
-    const closestGolden = Math.min(Math.abs(ratio - 1.618), Math.abs(ratio - inverseGolden), Math.abs(ratio - 1));
-    const proportion = Math.max(0, 1 - closestGolden);
-    const usedTypes = new Set(cells.map((c)=>c.type));
-    const typeDiversity = usedTypes.size / 6;
-    const sizeFactor = Math.min(1, cells.length / body.genome.maxCells);
-    const complexity = 0.6 * typeDiversity + 0.4 * sizeFactor;
-    const colorCounts = [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ];
-    for (const c of cells)colorCounts[c.color % 6]++;
-    const usedColors = colorCounts.map((count, i)=>({
-            color: i,
-            ratio: count / cells.length
-        })).filter((c)=>c.ratio > 0.05);
-    let harmonySum = 0;
-    let pairs = 0;
-    for(let i = 0; i < usedColors.length; i++){
-        for(let j = i + 1; j < usedColors.length; j++){
-            const dist = Math.min(Math.abs(usedColors[i].color - usedColors[j].color), 6 - Math.abs(usedColors[i].color - usedColors[j].color));
-            harmonySum += dist === 3 ? 1.0 : dist === 2 ? 0.8 : 0.5;
-            pairs++;
-        }
-    }
-    const colorHarmony = pairs > 0 ? harmonySum / pairs : 0.3;
-    const total = formSymmetry * 0.35 + proportion * 0.20 + complexity * 0.25 + colorHarmony * 0.20;
-    return {
-        formSymmetry,
-        proportion,
-        complexity,
-        colorHarmony,
-        total
-    };
-}
-function mulberry321(seed) {
-    let s = seed | 0;
-    return ()=>{
-        s = s + 0x6d2b79f5 | 0;
-        let t = Math.imul(s ^ s >>> 15, 1 | s);
-        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-        return ((t ^ t >>> 14) >>> 0) / 4294967296;
-    };
-}
-class WorldV2 {
-    config;
-    grid;
     organisms;
-    events;
+    resources;
+    flow;
     tick;
     rng;
     nextId;
-    constructor(config, genomes){
+    constructor(config, genomes, seed = 42){
         this.config = config;
         this.tick = 0;
-        this.events = [];
-        this.rng = mulberry321(config.seed);
+        this.rng = mulberry32(seed);
         this.nextId = 0;
-        this.grid = Array.from({
-            length: config.height
-        }, ()=>Array.from({
-                length: config.width
-            }, ()=>({
-                    resource: 0,
-                    trail: 0,
-                    trailColor: 0,
-                    occupied: false
-                })));
-        let placed = 0;
-        while(placed < config.initialResources){
-            const x = Math.floor(this.rng() * config.width);
-            const y = Math.floor(this.rng() * config.height);
-            if (this.grid[y][x].resource === 0) {
-                this.grid[y][x].resource = 0.3 + this.rng() * 0.7;
-                placed++;
+        const res = 20;
+        const fw = Math.ceil(config.width / 20);
+        const fh = Math.ceil(config.height / 20);
+        this.flow = {
+            resolution: res,
+            width: fw,
+            height: fh,
+            field: Array.from({
+                length: fh
+            }, (_, y)=>Array.from({
+                    length: fw
+                }, (_, x)=>{
+                    const cx = x / fw - 0.5, cy = y / fh - 0.5;
+                    return {
+                        x: -cy * config.flowStrength,
+                        y: cx * config.flowStrength
+                    };
+                })),
+            phase: 0
+        };
+        this.resources = Array.from({
+            length: config.resourceCount
+        }, ()=>({
+                pos: {
+                    x: this.rng() * config.width,
+                    y: this.rng() * config.height
+                },
+                amount: 0.5 + this.rng() * 0.5,
+                radius: 10 + this.rng() * 20,
+                regrowRate: 0.002 + this.rng() * 0.005
+            }));
+        this.organisms = genomes.map((genome)=>this.spawnOrganism(genome));
+    }
+    spawnOrganism(genome, pos) {
+        const p = pos ?? {
+            x: 50 + this.rng() * (this.config.width - 100),
+            y: 50 + this.rng() * (this.config.height - 100)
+        };
+        const org = {
+            id: this.nextId++,
+            particles: [
+                {
+                    pos: {
+                        ...p
+                    },
+                    vel: {
+                        x: 0,
+                        y: 0
+                    },
+                    radius: genome.baseRadius,
+                    mass: 1,
+                    color: [
+                        ...genome.baseColor
+                    ],
+                    age: 0,
+                    type: "core",
+                    energy: 30
+                }
+            ],
+            springs: [],
+            genome,
+            age: 0,
+            energy: 50,
+            alive: true,
+            totalHarvested: 0
+        };
+        return org;
+    }
+    step() {
+        this.tick++;
+        this.flow.phase += 0.01;
+        for(let y = 0; y < this.flow.height; y++){
+            for(let x = 0; x < this.flow.width; x++){
+                const cx = x / this.flow.width - 0.5;
+                const cy = y / this.flow.height - 0.5;
+                const phase = this.flow.phase;
+                this.flow.field[y][x] = {
+                    x: (-cy + 0.1 * Math.sin(phase + cx * 6)) * this.config.flowStrength,
+                    y: (cx + 0.1 * Math.cos(phase + cy * 6)) * this.config.flowStrength
+                };
             }
         }
-        this.organisms = genomes.map((genome)=>{
-            const center = this.findOpenSpace();
-            const body = new Body(center, genome);
-            this.markOccupied(body);
-            const org = {
-                id: this.nextId++,
-                body,
-                energy: 30,
-                age: 0,
-                alive: true,
-                totalHarvested: 0,
-                generation: 0,
-                parentIds: [],
-                bornAtTick: 0
-            };
-            return org;
-        });
-    }
-    findOpenSpace() {
-        for(let i = 0; i < 100; i++){
-            const x = 3 + Math.floor(this.rng() * (this.config.width - 6));
-            const y = 3 + Math.floor(this.rng() * (this.config.height - 6));
-            if (!this.grid[y][x].occupied) return {
-                x,
-                y
-            };
+        for (const r of this.resources){
+            r.amount = Math.min(1, r.amount + r.regrowRate);
         }
-        return {
-            x: Math.floor(this.config.width / 2),
-            y: Math.floor(this.config.height / 2)
-        };
-    }
-    markOccupied(body) {
-        for (const pos of body.getWorldPositions()){
-            const wx = (pos.x % this.config.width + this.config.width) % this.config.width;
-            const wy = (pos.y % this.config.height + this.config.height) % this.config.height;
-            this.grid[wy][wx].occupied = true;
-        }
-    }
-    clearOccupied(body) {
-        for (const pos of body.getWorldPositions()){
-            const wx = (pos.x % this.config.width + this.config.width) % this.config.width;
-            const wy = (pos.y % this.config.height + this.config.height) % this.config.height;
-            this.grid[wy][wx].occupied = false;
-        }
-    }
-    step(decisionFn) {
-        this.tick++;
-        this.events = [];
         for (const org of this.organisms){
             if (!org.alive) continue;
-            org.energy -= this.config.energyDrainPerTick * (1 + org.body.cells.length * 0.02);
             org.age++;
+            org.energy -= 0.03 + org.particles.length * 0.005;
             if (org.energy <= 0) {
                 org.alive = false;
-                this.clearOccupied(org.body);
                 continue;
             }
-            const nearbyResources = [];
-            const center = org.body.center;
-            const eyeCount = org.body.countByType("eye");
-            const perceptionRadius = 3 + eyeCount * 2;
-            for(let dy = -perceptionRadius; dy <= perceptionRadius; dy++){
-                for(let dx = -perceptionRadius; dx <= perceptionRadius; dx++){
-                    if (Math.sqrt(dx * dx + dy * dy) > perceptionRadius) continue;
-                    const wx = ((center.x + dx) % this.config.width + this.config.width) % this.config.width;
-                    const wy = ((center.y + dy) % this.config.height + this.config.height) % this.config.height;
-                    if (this.grid[wy][wx].resource > 0.1) {
-                        nearbyResources.push({
-                            x: wx,
-                            y: wy
-                        });
-                    }
+            this.growOrganism(org);
+            this.updatePhysics(org);
+            this.applyBehavior(org);
+            this.harvest(org);
+            if (org.genome.pulseRate > 0) {
+                const pulse = Math.sin(this.tick * org.genome.pulseRate * 0.1) * 0.3;
+                for (const s of org.springs){
+                    s.restLength *= 1 + pulse * 0.02;
                 }
             }
-            const nearbyOrganisms = this.organisms.filter((o)=>o.alive && o.id !== org.id).map((o)=>{
-                const dx = o.body.center.x - center.x;
-                const dy = o.body.center.y - center.y;
-                return {
-                    id: o.id,
-                    distance: Math.sqrt(dx * dx + dy * dy),
-                    cellCount: o.body.cells.length
-                };
-            }).filter((o)=>o.distance < perceptionRadius * 2);
-            const action = decisionFn(org, nearbyResources, nearbyOrganisms, this.tick);
-            this.applyAction(org, action);
+            for (const p of org.particles)p.age++;
         }
-        for(let y = 0; y < this.config.height; y++){
-            for(let x = 0; x < this.config.width; x++){
-                if (this.grid[y][x].trail > 0) {
-                    this.grid[y][x].trail = Math.max(0, this.grid[y][x].trail - this.config.trailDecayRate);
-                }
-                if (this.grid[y][x].resource === 0 && this.rng() < this.config.resourceRegenRate) {
-                    this.grid[y][x].resource = 0.2 + this.rng() * 0.5;
-                }
+    }
+    growOrganism(org) {
+        if (org.particles.length >= org.genome.maxParticles) return;
+        if (org.energy < 5) return;
+        for (const step of org.genome.growthSteps){
+            if (org.age !== step.triggerAge) continue;
+            if (org.particles.length >= org.genome.maxParticles) break;
+            const parentIdx = org.particles.findIndex((p)=>p.type === step.parentType);
+            if (parentIdx < 0) continue;
+            const parent = org.particles[parentIdx];
+            const growOne = (angle)=>{
+                if (org.particles.length >= org.genome.maxParticles) return;
+                const dir = v2.rot({
+                    x: 1,
+                    y: 0
+                }, angle);
+                const childPos = v2.add(parent.pos, v2.scale(dir, step.distance));
+                let color;
+                if (step.childColor === "accent") color = [
+                    ...org.genome.accentColor
+                ];
+                else if (step.childColor === "gradient") {
+                    const t = org.particles.length / org.genome.maxParticles;
+                    color = org.genome.baseColor.map((c, i)=>Math.round(c + (org.genome.accentColor[i] - c) * t));
+                } else color = [
+                    ...org.genome.baseColor
+                ];
+                const childIdx = org.particles.length;
+                org.particles.push({
+                    pos: childPos,
+                    vel: {
+                        x: 0,
+                        y: 0
+                    },
+                    radius: org.genome.baseRadius * step.childRadius,
+                    mass: step.childRadius,
+                    color,
+                    age: 0,
+                    type: step.childType,
+                    energy: 5
+                });
+                org.springs.push({
+                    a: parentIdx,
+                    b: childIdx,
+                    restLength: step.distance,
+                    stiffness: org.genome.springStiffness,
+                    damping: org.genome.springDamping
+                });
+                org.energy -= 2;
+            };
+            growOne(step.angle);
+            if (step.mirror) growOne(-step.angle);
+        }
+    }
+    updatePhysics(org) {
+        const { config } = this;
+        for (const spring of org.springs){
+            const a = org.particles[spring.a];
+            const b = org.particles[spring.b];
+            const delta = v2.sub(b.pos, a.pos);
+            const dist = v2.len(delta);
+            if (dist < 0.01) continue;
+            const displacement = dist - spring.restLength;
+            const dir = v2.norm(delta);
+            const force = v2.scale(dir, displacement * spring.stiffness);
+            const relVel = v2.sub(b.vel, a.vel);
+            const dampForce = v2.scale(dir, v2.len(relVel) * spring.damping * Math.sign(displacement));
+            a.vel = v2.add(a.vel, v2.scale(v2.add(force, dampForce), 1 / a.mass));
+            b.vel = v2.sub(b.vel, v2.scale(v2.add(force, dampForce), 1 / b.mass));
+        }
+        for (const p of org.particles){
+            const fx = Math.floor(p.pos.x / this.flow.resolution);
+            const fy = Math.floor(p.pos.y / this.flow.resolution);
+            if (fx >= 0 && fx < this.flow.width && fy >= 0 && fy < this.flow.height) {
+                const flowForce = this.flow.field[fy][fx];
+                p.vel = v2.add(p.vel, v2.scale(flowForce, 0.05));
+            }
+            if (config.gravity > 0) {
+                p.vel.y += config.gravity;
+            }
+            p.vel = v2.scale(p.vel, org.genome.drag);
+            p.pos = v2.add(p.pos, p.vel);
+            p.pos.x = (p.pos.x % config.width + config.width) % config.width;
+            p.pos.y = (p.pos.y % config.height + config.height) % config.height;
+        }
+    }
+    applyBehavior(org) {
+        if (org.particles.length === 0) return;
+        const core = org.particles[0];
+        let nearestDist = Infinity;
+        let nearestDir = {
+            x: 0,
+            y: 0
+        };
+        for (const r of this.resources){
+            if (r.amount < 0.1) continue;
+            const d = v2.dist(core.pos, r.pos);
+            if (d < nearestDist) {
+                nearestDist = d;
+                nearestDir = v2.norm(v2.sub(r.pos, core.pos));
+            }
+        }
+        if (nearestDist < 300) {
+            const swimForce = v2.scale(nearestDir, org.genome.swimStrength * 0.3);
+            const fins = org.particles.filter((p)=>p.type === "fin");
+            const movers = fins.length > 0 ? fins : [
+                core
+            ];
+            for (const p of movers){
+                p.vel = v2.add(p.vel, swimForce);
+            }
+        }
+        for (const other of this.organisms){
+            if (!other.alive || other.id === org.id) continue;
+            const otherCore = other.particles[0];
+            if (!otherCore) continue;
+            const d = v2.dist(core.pos, otherCore.pos);
+            if (d < org.genome.avoidanceRadius && d > 0.1) {
+                const away = v2.norm(v2.sub(core.pos, otherCore.pos));
+                core.vel = v2.add(core.vel, v2.scale(away, 0.5));
             }
         }
     }
-    applyAction(org, action) {
-        switch(action.type){
-            case "grow":
-                {
-                    const newCells = org.body.grow(org.energy, this.rng);
-                    org.energy -= newCells.length * org.body.genome.growthEnergyCost;
-                    this.markOccupied(org.body);
-                    break;
+    harvest(org) {
+        const mouths = org.particles.filter((p)=>p.type === "mouth");
+        const harvesters = mouths.length > 0 ? mouths : [
+            org.particles[0]
+        ];
+        const efficiency = mouths.length > 0 ? 1.0 : 0.3;
+        for (const h of harvesters){
+            for (const r of this.resources){
+                if (r.amount < 0.05) continue;
+                const d = v2.dist(h.pos, r.pos);
+                if (d < r.radius + h.radius) {
+                    const gained = Math.min(r.amount, 0.1) * 5 * efficiency;
+                    org.energy += gained;
+                    org.totalHarvested += gained;
+                    r.amount -= Math.min(r.amount, 0.1);
                 }
-            case "move":
-                {
-                    const legCount = org.body.countByType("leg");
-                    if (legCount === 0 && org.body.cells.length > 1) break;
-                    this.clearOccupied(org.body);
-                    org.body.center.x = ((org.body.center.x + action.direction.x) % this.config.width + this.config.width) % this.config.width;
-                    org.body.center.y = ((org.body.center.y + action.direction.y) % this.config.height + this.config.height) % this.config.height;
-                    this.markOccupied(org.body);
-                    for (const cell of org.body.cells){
-                        if (cell.type === "skin") {
-                            const wx = ((org.body.center.x + cell.offset.x) % this.config.width + this.config.width) % this.config.width;
-                            const wy = ((org.body.center.y + cell.offset.y) % this.config.height + this.config.height) % this.config.height;
-                            this.grid[wy][wx].trail = Math.min(1, this.grid[wy][wx].trail + 0.3);
-                            this.grid[wy][wx].trailColor = cell.color;
-                        }
-                    }
-                    org.energy -= this.config.moveCost * (1 + org.body.cells.length * 0.05);
-                    break;
-                }
-            case "harvest":
-                {
-                    const mouths = org.body.cells.filter((c)=>c.type === "mouth");
-                    if (mouths.length === 0) {
-                        const cx = (org.body.center.x % this.config.width + this.config.width) % this.config.width;
-                        const cy = (org.body.center.y % this.config.height + this.config.height) % this.config.height;
-                        if (this.grid[cy][cx].resource > 0) {
-                            const gained = this.grid[cy][cx].resource * this.config.harvestGain * 0.5;
-                            org.energy += gained;
-                            org.totalHarvested += gained;
-                            this.grid[cy][cx].resource = 0;
-                        }
-                        break;
-                    }
-                    for (const mouth of mouths){
-                        const wx = ((org.body.center.x + mouth.offset.x) % this.config.width + this.config.width) % this.config.width;
-                        const wy = ((org.body.center.y + mouth.offset.y) % this.config.height + this.config.height) % this.config.height;
-                        if (this.grid[wy][wx].resource > 0) {
-                            const gained = this.grid[wy][wx].resource * this.config.harvestGain;
-                            org.energy += gained;
-                            org.totalHarvested += gained;
-                            this.grid[wy][wx].resource = 0;
-                        }
-                    }
-                    break;
-                }
-            case "pulse":
-                {
-                    for (const cell of org.body.cells){
-                        if (cell.type === "skin" || cell.type === "core") {
-                            const wx = ((org.body.center.x + cell.offset.x) % this.config.width + this.config.width) % this.config.width;
-                            const wy = ((org.body.center.y + cell.offset.y) % this.config.height + this.config.height) % this.config.height;
-                            this.grid[wy][wx].trail = Math.min(1, this.grid[wy][wx].trail + 0.5);
-                            this.grid[wy][wx].trailColor = action.color;
-                        }
-                    }
-                    org.energy -= 0.5;
-                    break;
-                }
-            case "idle":
-                org.energy += 0.05;
-                break;
+            }
         }
     }
     isFinished() {
         return this.tick >= this.config.maxTicks || this.organisms.every((o)=>!o.alive);
     }
-    getResults() {
-        const alive = this.organisms.filter((o)=>o.alive);
-        const organismResults = this.organisms.map((o)=>({
-                id: o.id,
-                survived: o.alive,
-                age: o.age,
-                cellCount: o.body.cells.length,
-                bodyBeauty: scoreBodyBeauty(o.body),
-                totalHarvested: o.totalHarvested,
-                generation: o.generation
-            }));
-        const livingBeauties = organismResults.filter((o)=>o.survived).map((o)=>o.bodyBeauty.total);
-        const worldBeauty = livingBeauties.length > 0 ? livingBeauties.reduce((a, b)=>a + b, 0) / livingBeauties.length : 0;
-        let diversitySum = 0;
-        let diversityPairs = 0;
-        for(let i = 0; i < alive.length; i++){
-            for(let j = i + 1; j < alive.length; j++){
-                const a = alive[i].body.cells.length;
-                const b = alive[j].body.cells.length;
-                const sizeDiff = Math.abs(a - b) / Math.max(a, b, 1);
-                const typesA = new Set(alive[i].body.cells.map((c)=>c.type));
-                const typesB = new Set(alive[j].body.cells.map((c)=>c.type));
-                const typeOverlap = [
-                    ...typesA
-                ].filter((t)=>typesB.has(t)).length / Math.max(typesA.size, typesB.size, 1);
-                diversitySum += sizeDiff * 0.5 + (1 - typeOverlap) * 0.5;
-                diversityPairs++;
-            }
-        }
-        const ecosystemDiversity = diversityPairs > 0 ? diversitySum / diversityPairs : 0;
-        return {
-            organisms: organismResults,
-            worldBeauty,
-            ecosystemDiversity,
-            survivalRate: alive.length / Math.max(this.organisms.length, 1),
-            avgBodySize: alive.length > 0 ? alive.reduce((s, o)=>s + o.body.cells.length, 0) / alive.length : 0,
-            avgAge: this.organisms.reduce((s, o)=>s + o.age, 0) / Math.max(this.organisms.length, 1),
-            totalTicks: this.tick,
-            grid: this.grid
+    getCenter(org) {
+        if (org.particles.length === 0) return {
+            x: 0,
+            y: 0
         };
+        const sum = org.particles.reduce((s, p)=>v2.add(s, p.pos), {
+            x: 0,
+            y: 0
+        });
+        return v2.scale(sum, 1 / org.particles.length);
     }
 }
-export { World as World };
-export { scoreBeauty as scoreBeauty, beautyByColor as beautyByColor };
-export { DEFAULT_CONFIG as DEFAULT_CONFIG };
-export { WorldV2 as WorldV2 };
-export { Body as Body, scoreBodyBeauty as scoreBodyBeauty };
+function scoreForm(org) {
+    const n = org.particles.length;
+    if (n < 3) return 0;
+    const center = org.particles.reduce((s, p)=>v2.add(s, p.pos), {
+        x: 0,
+        y: 0
+    });
+    const c = v2.scale(center, 1 / n);
+    const dists = org.particles.map((p)=>v2.dist(p.pos, c));
+    const avgDist = dists.reduce((a, b)=>a + b, 0) / n;
+    const variance = dists.reduce((s, d)=>s + (d - avgDist) ** 2, 0) / n;
+    const cv = avgDist > 0 ? Math.sqrt(variance) / avgDist : 0;
+    const formScore = cv < 0.1 ? cv * 3 : cv > 1.2 ? Math.max(0, 1.5 - cv) : Math.min(1, 0.3 + cv * 0.7);
+    const types = new Set(org.particles.map((p)=>p.type));
+    const typeDiversity = Math.min(1, (types.size - 1) / 4);
+    const sizeFactor = Math.min(1, n / (org.genome.maxParticles * 0.6));
+    return formScore * 0.4 + typeDiversity * 0.3 + sizeFactor * 0.3;
+}
+function scoreSymmetry(org) {
+    if (org.particles.length < 4) return 0;
+    const center = org.particles.reduce((s, p)=>v2.add(s, p.pos), {
+        x: 0,
+        y: 0
+    });
+    const c = v2.scale(center, 1 / org.particles.length);
+    const left = org.particles.filter((p)=>p.pos.x < c.x);
+    const right = org.particles.filter((p)=>p.pos.x >= c.x);
+    if (left.length === 0 || right.length === 0) return 0.1;
+    let matchScore = 0;
+    for (const lp of left){
+        const mirrorX = 2 * c.x - lp.pos.x;
+        const mirrorY = lp.pos.y;
+        let bestDist = Infinity;
+        for (const rp of right){
+            const d = Math.sqrt((rp.pos.x - mirrorX) ** 2 + (rp.pos.y - mirrorY) ** 2);
+            bestDist = Math.min(bestDist, d);
+        }
+        if (bestDist < 2) matchScore += 0.7;
+        else if (bestDist < 20) matchScore += Math.min(1, 0.7 + bestDist * 0.02);
+        else matchScore += Math.max(0, 0.5 - bestDist * 0.005);
+    }
+    return Math.min(1, matchScore / left.length);
+}
+function scoreProportion(org) {
+    if (org.particles.length < 4) return 0;
+    const center = org.particles.reduce((s, p)=>v2.add(s, p.pos), {
+        x: 0,
+        y: 0
+    });
+    v2.scale(center, 1 / org.particles.length);
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const p of org.particles){
+        minX = Math.min(minX, p.pos.x);
+        maxX = Math.max(maxX, p.pos.x);
+        minY = Math.min(minY, p.pos.y);
+        maxY = Math.max(maxY, p.pos.y);
+    }
+    const w = maxX - minX;
+    const h = maxY - minY;
+    if (w < 1 || h < 1) return 0;
+    const ratio = Math.max(w, h) / Math.min(w, h);
+    const targets = [
+        1.618,
+        1.618 * 1.618,
+        1 / 1.618,
+        1,
+        2
+    ];
+    let bestDist = Infinity;
+    for (const t of targets){
+        bestDist = Math.min(bestDist, Math.abs(ratio - t));
+    }
+    return Math.max(0, 1 - bestDist * 0.5);
+}
+function scoreColor(org) {
+    if (org.particles.length < 2) return 0;
+    let coherence = 0;
+    let pairs = 0;
+    for (const spring of org.springs){
+        const a = org.particles[spring.a];
+        const b = org.particles[spring.b];
+        const colorDist = Math.sqrt((a.color[0] - b.color[0]) ** 2 + (a.color[1] - b.color[1]) ** 2 + (a.color[2] - b.color[2]) ** 2);
+        if (colorDist < 10) coherence += 0.5;
+        else if (colorDist < 150) coherence += 0.8 + 0.2 * (colorDist / 150);
+        else coherence += Math.max(0.2, 1 - (colorDist - 150) / 300);
+        pairs++;
+    }
+    return pairs > 0 ? coherence / pairs : 0;
+}
+function scoreDiversity(organisms) {
+    const alive = organisms.filter((o)=>o.alive && o.particles.length > 2);
+    if (alive.length < 2) return 0;
+    let totalDiff = 0;
+    let pairs = 0;
+    for(let i = 0; i < alive.length; i++){
+        for(let j = i + 1; j < alive.length; j++){
+            const a = alive[i], b = alive[j];
+            const sizeDiff = Math.abs(a.particles.length - b.particles.length) / Math.max(a.particles.length, b.particles.length);
+            const typesA = new Map();
+            const typesB = new Map();
+            for (const p of a.particles)typesA.set(p.type, (typesA.get(p.type) ?? 0) + 1);
+            for (const p of b.particles)typesB.set(p.type, (typesB.get(p.type) ?? 0) + 1);
+            const allTypes = new Set([
+                ...typesA.keys(),
+                ...typesB.keys()
+            ]);
+            let typeDiff = 0;
+            for (const t of allTypes){
+                const ra = (typesA.get(t) ?? 0) / a.particles.length;
+                const rb = (typesB.get(t) ?? 0) / b.particles.length;
+                typeDiff += Math.abs(ra - rb);
+            }
+            totalDiff += sizeDiff * 0.4 + typeDiff * 0.6;
+            pairs++;
+        }
+    }
+    return pairs > 0 ? Math.min(1, totalDiff / pairs) : 0;
+}
+function scoreComposition(world) {
+    const alive = world.organisms.filter((o)=>o.alive && o.particles.length > 2);
+    if (alive.length < 2) return 0.1;
+    const centers = alive.map((o)=>world.getCenter(o));
+    let totalDist = 0;
+    let pairs = 0;
+    for(let i = 0; i < centers.length; i++){
+        for(let j = i + 1; j < centers.length; j++){
+            totalDist += v2.dist(centers[i], centers[j]);
+            pairs++;
+        }
+    }
+    const avgDist = pairs > 0 ? totalDist / pairs : 0;
+    const idealDist = Math.sqrt(world.config.width * world.config.height) / (alive.length + 1);
+    const distRatio = avgDist / Math.max(idealDist, 1);
+    const spacingScore = distRatio > 0.5 && distRatio < 2 ? 1 - Math.abs(1 - distRatio) * 0.5 : 0.3;
+    return spacingScore;
+}
+function scoreMotion(world) {
+    const alive = world.organisms.filter((o)=>o.alive);
+    if (alive.length === 0) return 0;
+    let graceSum = 0;
+    for (const org of alive){
+        const speeds = org.particles.map((p)=>v2.len(p.vel));
+        const avgSpeed = speeds.reduce((a, b)=>a + b, 0) / speeds.length;
+        if (avgSpeed < 0.01) {
+            graceSum += 0.2;
+            continue;
+        }
+        const speedVariance = speeds.reduce((s, v)=>s + (v - avgSpeed) ** 2, 0) / speeds.length;
+        const speedCv = Math.sqrt(speedVariance) / avgSpeed;
+        const coordination = Math.max(0, 1 - speedCv);
+        const speedScore = avgSpeed > 0.1 && avgSpeed < 3 ? 1 : 0.3;
+        graceSum += coordination * 0.6 + speedScore * 0.4;
+    }
+    return graceSum / alive.length;
+}
+function scoreWorldBeauty(world) {
+    const alive = world.organisms.filter((o)=>o.alive && o.particles.length > 2);
+    if (alive.length === 0) {
+        return {
+            formBeauty: 0,
+            symmetryQuality: 0,
+            proportionHarmony: 0,
+            colorCoherence: 0,
+            diversityOfForms: 0,
+            spatialComposition: 0,
+            motionGrace: 0,
+            total: 0
+        };
+    }
+    const formBeauty = alive.reduce((s, o)=>s + scoreForm(o), 0) / alive.length;
+    const symmetryQuality = alive.reduce((s, o)=>s + scoreSymmetry(o), 0) / alive.length;
+    const proportionHarmony = alive.reduce((s, o)=>s + scoreProportion(o), 0) / alive.length;
+    const colorCoherence = alive.reduce((s, o)=>s + scoreColor(o), 0) / alive.length;
+    const diversityOfForms = scoreDiversity(alive);
+    const spatialComposition = scoreComposition(world);
+    const motionGrace = scoreMotion(world);
+    const total = formBeauty * 0.20 + symmetryQuality * 0.15 + proportionHarmony * 0.10 + colorCoherence * 0.10 + diversityOfForms * 0.15 + spatialComposition * 0.15 + motionGrace * 0.15;
+    return {
+        formBeauty,
+        symmetryQuality,
+        proportionHarmony,
+        colorCoherence,
+        diversityOfForms,
+        spatialComposition,
+        motionGrace,
+        total
+    };
+}
+export { World as World, v2 as v2, DEFAULT_WORLD as DEFAULT_WORLD };
+export { scoreWorldBeauty as scoreWorldBeauty };

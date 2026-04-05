@@ -3,58 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sevo-life v2 — organisms</title>
+<title>sevo-life — particle organisms</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0a0a0f; color: #c8c8d0; font-family: 'Berkeley Mono', 'JetBrains Mono', monospace; overflow: hidden; }
-  #app { display: grid; grid-template-columns: 1fr 280px; grid-template-rows: auto 1fr; height: 100vh; }
+  body { background: #04060c; color: #c8c8d0; font-family: 'Berkeley Mono', 'JetBrains Mono', monospace; overflow: hidden; }
+  #app { display: grid; grid-template-columns: 1fr 260px; grid-template-rows: auto 1fr; height: 100vh; }
   header {
-    grid-column: 1 / -1; padding: 10px 20px;
+    grid-column: 1 / -1; padding: 8px 16px;
     display: flex; align-items: center; justify-content: space-between;
-    background: #111118; border-bottom: 1px solid #222;
+    background: #0a0c14; border-bottom: 1px solid #1a1a28;
   }
-  header h1 { font-size: 16px; font-weight: 400; letter-spacing: 2px; color: #888; }
-  header h1 span { color: #e8e8f0; }
-  .controls { display: flex; gap: 8px; align-items: center; }
+  header h1 { font-size: 14px; font-weight: 400; letter-spacing: 2px; color: #556; }
+  header h1 span { color: #aab; }
+  .controls { display: flex; gap: 6px; align-items: center; }
   .controls button {
-    background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 5px 14px;
-    font-family: inherit; font-size: 12px; cursor: pointer; border-radius: 3px;
+    background: #12141e; border: 1px solid #2a2a3a; color: #889; padding: 4px 12px;
+    font-family: inherit; font-size: 11px; cursor: pointer; border-radius: 3px;
   }
-  .controls button:hover { background: #252530; color: #ddd; }
-  .controls button.active { background: #2a2a3a; color: #fff; border-color: #667; }
-  .controls select { background: #1a1a24; border: 1px solid #333; color: #aaa; padding: 4px 8px; font-family: inherit; font-size: 12px; border-radius: 3px; }
-  .tick { font-size: 13px; color: #888; font-variant-numeric: tabular-nums; }
-  #canvas-wrap { display: flex; align-items: center; justify-content: center; background: #06060a; }
-  canvas { image-rendering: pixelated; }
-  #sidebar { background: #0e0e14; border-left: 1px solid #1a1a22; padding: 16px; overflow-y: auto; font-size: 12px; }
-  .panel { margin-bottom: 14px; }
-  .panel-title { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: #555; margin-bottom: 6px; padding-bottom: 3px; border-bottom: 1px solid #1a1a22; }
-  .stat-row { display: flex; justify-content: space-between; padding: 2px 0; }
-  .stat-label { color: #666; }
-  .stat-value { color: #b8b8c0; font-variant-numeric: tabular-nums; }
-  .bar { height: 4px; background: #1a1a24; border-radius: 2px; margin: 3px 0 6px; overflow: hidden; }
+  .controls button:hover { background: #1a1c28; color: #bbc; }
+  .controls button.active { background: #1e2030; color: #dde; border-color: #445; }
+  .controls select { background: #12141e; border: 1px solid #2a2a3a; color: #889; padding: 3px 6px; font-family: inherit; font-size: 11px; border-radius: 3px; }
+  .tick { font-size: 12px; color: #556; font-variant-numeric: tabular-nums; }
+  #canvas-wrap { display: flex; align-items: center; justify-content: center; background: #02030a; }
+  canvas { border-radius: 2px; }
+  #sidebar { background: #08091210; border-left: 1px solid #141420; padding: 12px; overflow-y: auto; font-size: 11px; }
+  .panel { margin-bottom: 12px; }
+  .panel-title { font-size: 9px; text-transform: uppercase; letter-spacing: 1.5px; color: #445; margin-bottom: 5px; padding-bottom: 3px; border-bottom: 1px solid #141420; }
+  .stat-row { display: flex; justify-content: space-between; padding: 1px 0; }
+  .stat-label { color: #556; }
+  .stat-value { color: #99a; font-variant-numeric: tabular-nums; }
+  .bar { height: 3px; background: #141420; border-radius: 2px; margin: 2px 0 5px; overflow: hidden; }
   .bar-fill { height: 100%; border-radius: 2px; transition: width 0.3s; }
-  .org-card { background: #151520; border-radius: 4px; padding: 8px; margin-bottom: 6px; }
-  .org-card.dead { opacity: 0.3; }
-  .org-name { font-weight: bold; font-size: 11px; margin-bottom: 4px; }
-  .org-stat { font-size: 10px; color: #777; }
+  .org-card { background: #0c0e18; border-radius: 3px; padding: 6px 8px; margin-bottom: 4px; border: 1px solid #181a28; }
+  .org-card.dead { opacity: 0.25; }
+  .org-name { font-weight: bold; font-size: 10px; margin-bottom: 2px; }
+  .org-stat { font-size: 9px; color: #556; }
 </style>
 </head>
 <body>
 <div id="app">
   <header>
-    <h1>sevo / <span>life v2</span> — organisms</h1>
+    <h1>sevo / <span>life</span></h1>
     <div class="controls">
       <button id="btn-play" class="active">Play</button>
       <button id="btn-pause">Pause</button>
       <button id="btn-restart">Restart</button>
       <select id="speed">
-        <option value="200">Slow</option>
-        <option value="60" selected>Normal</option>
-        <option value="20">Fast</option>
-        <option value="4">Max</option>
+        <option value="50">Slow</option>
+        <option value="16" selected>Normal</option>
+        <option value="4">Fast</option>
       </select>
-      <span class="tick" id="tick-display">tick 0</span>
+      <span class="tick" id="tick-display">0</span>
     </div>
   </header>
   <div id="canvas-wrap"><canvas id="canvas"></canvas></div>
@@ -63,20 +62,19 @@
       <div class="panel-title">World</div>
       <div class="stat-row"><span class="stat-label">Tick</span><span class="stat-value" id="s-tick">0</span></div>
       <div class="stat-row"><span class="stat-label">Alive</span><span class="stat-value" id="s-alive">0</span></div>
-      <div class="stat-row"><span class="stat-label">Avg Body Size</span><span class="stat-value" id="s-size">0</span></div>
     </div>
     <div class="panel">
-      <div class="panel-title">Body Beauty</div>
-      <div class="stat-row"><span class="stat-label">World Beauty</span><span class="stat-value" id="s-beauty">--</span></div>
-      <div class="bar"><div class="bar-fill" id="bar-beauty" style="width:0;background:#a7a"></div></div>
-      <div class="stat-row"><span class="stat-label">Form Symmetry</span><span class="stat-value" id="s-sym">--</span></div>
-      <div class="bar"><div class="bar-fill" id="bar-sym" style="width:0;background:#7a7"></div></div>
-      <div class="stat-row"><span class="stat-label">Proportion</span><span class="stat-value" id="s-prop">--</span></div>
-      <div class="bar"><div class="bar-fill" id="bar-prop" style="width:0;background:#77a"></div></div>
-      <div class="stat-row"><span class="stat-label">Complexity</span><span class="stat-value" id="s-complex">--</span></div>
-      <div class="bar"><div class="bar-fill" id="bar-complex" style="width:0;background:#a77"></div></div>
-      <div class="stat-row"><span class="stat-label">Ecosystem Diversity</span><span class="stat-value" id="s-diversity">--</span></div>
-      <div class="bar"><div class="bar-fill" id="bar-diversity" style="width:0;background:#7aa"></div></div>
+      <div class="panel-title">Beauty</div>
+      <div class="stat-row"><span class="stat-label">Total</span><span class="stat-value" id="s-beauty">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-beauty" style="width:0;background:#8a6db0"></div></div>
+      <div class="stat-row"><span class="stat-label">Form</span><span class="stat-value" id="s-form">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-form" style="width:0;background:#6a8db0"></div></div>
+      <div class="stat-row"><span class="stat-label">Symmetry</span><span class="stat-value" id="s-sym">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-sym" style="width:0;background:#6ab08d"></div></div>
+      <div class="stat-row"><span class="stat-label">Motion</span><span class="stat-value" id="s-motion">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-motion" style="width:0;background:#b0896a"></div></div>
+      <div class="stat-row"><span class="stat-label">Diversity</span><span class="stat-value" id="s-div">--</span></div>
+      <div class="bar"><div class="bar-fill" id="bar-div" style="width:0;background:#6ab0a8"></div></div>
     </div>
     <div class="panel">
       <div class="panel-title">Organisms</div>
@@ -86,264 +84,202 @@
 </div>
 
 <script type="module">
-import { WorldV2, Body, scoreBodyBeauty, DEFAULT_CONFIG } from './sim.bundle.js';
+import { World, DEFAULT_WORLD, scoreWorldBeauty } from './sim.bundle.js';
 
-const HUES = [
-  [255, 80, 80],   // 0 red
-  [80, 255, 120],  // 1 green
-  [80, 140, 255],  // 2 blue
-  [255, 220, 60],  // 3 yellow
-  [200, 80, 255],  // 4 purple
-  [80, 240, 240],  // 5 cyan
-];
+const SPECIES = ['Jellyfish', 'Crawler', 'Floater', 'Jellyfish', 'Crawler', 'Floater'];
 
-const CELL_TYPE_SHAPES = {
-  core:         { symbol: '●', glow: true },
-  mouth:        { symbol: '◉', glow: false },
-  leg:          { symbol: '▪', glow: false },
-  eye:          { symbol: '◎', glow: true },
-  skin:         { symbol: '■', glow: false },
-  reproductive: { symbol: '✦', glow: true },
-};
-
-// --- Body genomes (same as life-agent-v5) ---
-const treeGenome = {
-  growthRules: [
-    { from: "core", direction: { x: 0, y: -1 }, produces: "skin", minAge: 2, energyCost: 3, probability: 0.8, maxInstances: 6, symmetry: false },
-    { from: "skin", direction: { x: 1, y: 0 }, produces: "skin", minAge: 3, energyCost: 3, probability: 0.4, maxInstances: 4, symmetry: true },
-    { from: "skin", direction: { x: 0, y: -1 }, produces: "mouth", minAge: 4, energyCost: 2, probability: 0.3, maxInstances: 4, symmetry: true },
-    { from: "core", direction: { x: 0, y: 1 }, produces: "leg", minAge: 1, energyCost: 2, probability: 0.6, maxInstances: 2, symmetry: false },
-    { from: "core", direction: { x: 1, y: 0 }, produces: "eye", minAge: 5, energyCost: 4, probability: 0.3, maxInstances: 2, symmetry: true },
+const jellyfish = {
+  growthSteps: [
+    { triggerAge: 5, parentType: "core", childType: "flesh", angle: -Math.PI/2, distance: 15, mirror: false, childRadius: 1.2, childColor: "gradient" },
+    { triggerAge: 8, parentType: "core", childType: "flesh", angle: -Math.PI/3, distance: 18, mirror: true, childRadius: 1.0, childColor: "gradient" },
+    { triggerAge: 12, parentType: "core", childType: "flesh", angle: -Math.PI/6, distance: 20, mirror: true, childRadius: 0.8, childColor: "accent" },
+    { triggerAge: 15, parentType: "core", childType: "sensor", angle: Math.PI/2, distance: 20, mirror: false, childRadius: 0.5, childColor: "accent" },
+    { triggerAge: 18, parentType: "sensor", childType: "sensor", angle: Math.PI/2, distance: 15, mirror: false, childRadius: 0.4, childColor: "accent" },
+    { triggerAge: 20, parentType: "core", childType: "sensor", angle: Math.PI/2+0.4, distance: 18, mirror: true, childRadius: 0.5, childColor: "accent" },
+    { triggerAge: 22, parentType: "sensor", childType: "mouth", angle: Math.PI/2, distance: 12, mirror: false, childRadius: 0.6, childColor: "base" },
+    { triggerAge: 10, parentType: "flesh", childType: "fin", angle: 0, distance: 12, mirror: true, childRadius: 0.7, childColor: "accent" },
   ],
-  maxCells: 18, growthEnergyCost: 2,
-  coreColor: 2, skinColor: 3, colorGradient: true,
-  bilateralSymmetry: 0.9, radialSymmetry: 0.1, elongation: 0.7, branching: 0.5,
+  maxParticles: 20, baseColor: [100,140,255], accentColor: [200,120,255],
+  springStiffness: 0.03, springDamping: 0.05, drag: 0.97, baseRadius: 5,
+  resourceAttraction: 0.6, flockingStrength: 0.2, avoidanceRadius: 40, pulseRate: 0.8, swimStrength: 0.4,
 };
-
-const starGenome = {
-  growthRules: [
-    { from: "core", direction: { x: 1, y: 0 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.7, maxInstances: 3, symmetry: true },
-    { from: "core", direction: { x: 0, y: 1 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.7, maxInstances: 3, symmetry: true },
-    { from: "skin", direction: { x: 1, y: 0 }, produces: "mouth", minAge: 3, energyCost: 2, probability: 0.5, maxInstances: 4, symmetry: true },
-    { from: "skin", direction: { x: 0, y: 1 }, produces: "mouth", minAge: 3, energyCost: 2, probability: 0.5, maxInstances: 4, symmetry: true },
-    { from: "core", direction: { x: 0, y: -1 }, produces: "eye", minAge: 4, energyCost: 3, probability: 0.5, maxInstances: 1, symmetry: false },
-    { from: "core", direction: { x: 1, y: 1 }, produces: "leg", minAge: 1, energyCost: 2, probability: 0.6, maxInstances: 2, symmetry: true },
+const crawler = {
+  growthSteps: [
+    { triggerAge: 3, parentType: "core", childType: "flesh", angle: 0, distance: 12, mirror: false, childRadius: 1.0, childColor: "base" },
+    { triggerAge: 6, parentType: "flesh", childType: "flesh", angle: 0, distance: 12, mirror: false, childRadius: 0.9, childColor: "gradient" },
+    { triggerAge: 9, parentType: "flesh", childType: "flesh", angle: 0, distance: 12, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 4, parentType: "core", childType: "sensor", angle: -Math.PI/4, distance: 10, mirror: true, childRadius: 0.5, childColor: "accent" },
+    { triggerAge: 7, parentType: "flesh", childType: "fin", angle: Math.PI/2, distance: 8, mirror: true, childRadius: 0.6, childColor: "accent" },
+    { triggerAge: 11, parentType: "flesh", childType: "fin", angle: Math.PI/2, distance: 8, mirror: true, childRadius: 0.6, childColor: "accent" },
+    { triggerAge: 5, parentType: "core", childType: "mouth", angle: -Math.PI/8, distance: 8, mirror: false, childRadius: 0.7, childColor: "base" },
+    { triggerAge: 13, parentType: "flesh", childType: "spike", angle: 0, distance: 10, mirror: false, childRadius: 0.5, childColor: "accent" },
   ],
-  maxCells: 20, growthEnergyCost: 2,
-  coreColor: 0, skinColor: 4, colorGradient: false,
-  bilateralSymmetry: 0.8, radialSymmetry: 0.7, elongation: 0.2, branching: 0.3,
+  maxParticles: 18, baseColor: [80,200,100], accentColor: [200,255,80],
+  springStiffness: 0.08, springDamping: 0.1, drag: 0.95, baseRadius: 4,
+  resourceAttraction: 0.8, flockingStrength: 0.1, avoidanceRadius: 30, pulseRate: 0.2, swimStrength: 0.7,
 };
-
-const wormGenome = {
-  growthRules: [
-    { from: "core", direction: { x: 0, y: -1 }, produces: "skin", minAge: 1, energyCost: 2, probability: 0.9, maxInstances: 8, symmetry: false },
-    { from: "skin", direction: { x: 0, y: -1 }, produces: "skin", minAge: 2, energyCost: 2, probability: 0.6, maxInstances: 8, symmetry: false },
-    { from: "skin", direction: { x: 0, y: -1 }, produces: "mouth", minAge: 5, energyCost: 2, probability: 0.4, maxInstances: 1, symmetry: false },
-    { from: "mouth", direction: { x: 1, y: 0 }, produces: "eye", minAge: 1, energyCost: 3, probability: 0.5, maxInstances: 2, symmetry: true },
-    { from: "skin", direction: { x: 1, y: 0 }, produces: "leg", minAge: 2, energyCost: 1, probability: 0.4, maxInstances: 6, symmetry: true },
+const floater = {
+  growthSteps: [
+    { triggerAge: 4, parentType: "core", childType: "flesh", angle: 0, distance: 14, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 4, parentType: "core", childType: "flesh", angle: Math.PI*2/5, distance: 14, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 4, parentType: "core", childType: "flesh", angle: Math.PI*4/5, distance: 14, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 4, parentType: "core", childType: "flesh", angle: Math.PI*6/5, distance: 14, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 4, parentType: "core", childType: "flesh", angle: Math.PI*8/5, distance: 14, mirror: false, childRadius: 0.8, childColor: "gradient" },
+    { triggerAge: 10, parentType: "flesh", childType: "sensor", angle: 0, distance: 10, mirror: false, childRadius: 0.5, childColor: "accent" },
+    { triggerAge: 8, parentType: "core", childType: "mouth", angle: Math.PI/2, distance: 8, mirror: false, childRadius: 0.6, childColor: "accent" },
   ],
-  maxCells: 22, growthEnergyCost: 1.5,
-  coreColor: 1, skinColor: 5, colorGradient: true,
-  bilateralSymmetry: 0.95, radialSymmetry: 0.0, elongation: 0.9, branching: 0.1,
+  maxParticles: 15, baseColor: [255,140,100], accentColor: [255,220,150],
+  springStiffness: 0.02, springDamping: 0.03, drag: 0.98, baseRadius: 6,
+  resourceAttraction: 0.3, flockingStrength: 0.4, avoidanceRadius: 50, pulseRate: 0.6, swimStrength: 0.2,
 };
 
-const genomes = [treeGenome, starGenome, wormGenome, treeGenome, starGenome, wormGenome];
-const MORPH_NAMES = ['Tree', 'Star', 'Worm', 'Tree', 'Star', 'Worm'];
+const genomes = [jellyfish, crawler, floater, jellyfish, crawler, floater];
+let world, playing = true, interval = 16;
 
-// --- Config ---
-const config = { ...DEFAULT_CONFIG, width: 60, height: 45, maxTicks: 9999, initialResources: 200, resourceRegenRate: 0.015, harvestGain: 8, energyDrainPerTick: 0.3, seed: 42 };
-const CELL_PX = 12;
-
-// --- Decision function ---
-function decide(org, nearbyResources, nearbyOrganisms, worldTick) {
-  const bodySize = org.body.cells.length;
-  const maxSize = org.body.genome.maxCells;
-  if (bodySize < maxSize * 0.5 && org.energy > 20) return { type: "grow" };
-  if (org.energy < 8) {
-    if (nearbyResources.length > 0) {
-      const c = nearbyResources.sort((a, b) => (Math.abs(a.x - org.body.center.x) + Math.abs(a.y - org.body.center.y)) - (Math.abs(b.x - org.body.center.x) + Math.abs(b.y - org.body.center.y)))[0];
-      const dx = Math.sign(c.x - org.body.center.x), dy = Math.sign(c.y - org.body.center.y);
-      if (dx === 0 && dy === 0) return { type: "harvest" };
-      return { type: "move", direction: { x: dx, y: dy } };
-    }
-    return { type: "harvest" };
-  }
-  if (bodySize < maxSize && org.energy > 25) return { type: "grow" };
-  if (worldTick % 12 === 0 && org.energy > 12) return { type: "pulse", color: org.body.genome.coreColor };
-  if (nearbyResources.length > 0) {
-    const c = nearbyResources[0];
-    const dx = Math.sign(c.x - org.body.center.x), dy = Math.sign(c.y - org.body.center.y);
-    if (dx === 0 && dy === 0) return { type: "harvest" };
-    return { type: "move", direction: { x: dx, y: dy } };
-  }
-  const dirs = [{x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1}];
-  return { type: "move", direction: dirs[worldTick % 4] };
-}
-
-// --- State ---
-let world, playing = true, interval = 60;
-
-function init() {
-  config.seed = Date.now() % 100000;
-  world = new WorldV2(config, genomes);
-}
+function init() { world = new World(DEFAULT_WORLD, genomes, Date.now() % 100000); }
 init();
 
-// --- Canvas ---
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-canvas.width = config.width * CELL_PX;
-canvas.height = config.height * CELL_PX;
+canvas.width = DEFAULT_WORLD.width;
+canvas.height = DEFAULT_WORLD.height;
 
 function draw() {
-  ctx.fillStyle = '#08080c';
+  // Dark background with subtle gradient
+  ctx.fillStyle = '#02030a';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  // Draw resources
-  for (let y = 0; y < config.height; y++) {
-    for (let x = 0; x < config.width; x++) {
-      const cell = world.grid[y][x];
-      if (cell.resource > 0.05) {
-        const a = cell.resource * 0.5;
-        ctx.fillStyle = `rgba(60, 180, 60, ${a})`;
-        ctx.fillRect(x * CELL_PX + 2, y * CELL_PX + 2, CELL_PX - 4, CELL_PX - 4);
-      }
-      if (cell.trail > 0.02) {
-        const hue = HUES[cell.trailColor % 6];
-        ctx.fillStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, ${cell.trail * 0.25})`;
-        ctx.fillRect(x * CELL_PX, y * CELL_PX, CELL_PX, CELL_PX);
-      }
+  // Flow field visualization — subtle
+  ctx.globalAlpha = 0.03;
+  for (let y = 0; y < world.flow.height; y++) {
+    for (let x = 0; x < world.flow.width; x++) {
+      const f = world.flow.field[y][x];
+      const px = x * world.flow.resolution + world.flow.resolution / 2;
+      const py = y * world.flow.resolution + world.flow.resolution / 2;
+      ctx.strokeStyle = '#4466aa';
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(px + f.x * 30, py + f.y * 30);
+      ctx.stroke();
     }
   }
+  ctx.globalAlpha = 1;
 
-  // Draw organisms
+  // Resources — soft glowing circles
+  for (const r of world.resources) {
+    if (r.amount < 0.05) continue;
+    const a = r.amount * 0.4;
+    const gradient = ctx.createRadialGradient(r.pos.x, r.pos.y, 0, r.pos.x, r.pos.y, r.radius);
+    gradient.addColorStop(0, `rgba(40, 180, 80, ${a})`);
+    gradient.addColorStop(1, `rgba(40, 180, 80, 0)`);
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(r.pos.x, r.pos.y, r.radius, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Organisms
   for (const org of world.organisms) {
     if (!org.alive) continue;
-    for (const cell of org.body.cells) {
-      const wx = ((org.body.center.x + cell.offset.x) % config.width + config.width) % config.width;
-      const wy = ((org.body.center.y + cell.offset.y) % config.height + config.height) % config.height;
-      const px = wx * CELL_PX;
-      const py = wy * CELL_PX;
-      const hue = HUES[cell.color % 6];
-      const shape = CELL_TYPE_SHAPES[cell.type] || CELL_TYPE_SHAPES.skin;
 
-      // Glow effect for core/eye cells
-      if (shape.glow) {
-        ctx.fillStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, 0.15)`;
-        ctx.beginPath();
-        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX, 0, Math.PI * 2);
-        ctx.fill();
-      }
+    // Springs — translucent connections
+    ctx.globalAlpha = 0.3;
+    for (const spring of org.springs) {
+      const a = org.particles[spring.a];
+      const b = org.particles[spring.b];
+      const midColor = a.color.map((c, i) => Math.round((c + b.color[i]) / 2));
+      ctx.strokeStyle = `rgb(${midColor.join(',')})`;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(a.pos.x, a.pos.y);
+      ctx.lineTo(b.pos.x, b.pos.y);
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
 
-      // Cell body
-      ctx.fillStyle = `rgb(${hue[0]}, ${hue[1]}, ${hue[2]})`;
-      if (cell.type === 'core') {
-        ctx.beginPath();
-        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX/2 - 1, 0, Math.PI * 2);
-        ctx.fill();
-      } else if (cell.type === 'eye') {
-        ctx.beginPath();
-        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, CELL_PX/3, 0, Math.PI * 2);
-        ctx.fill();
+    // Particles
+    for (const p of org.particles) {
+      const [r, g, b] = p.color;
+
+      // Glow
+      const glow = ctx.createRadialGradient(p.pos.x, p.pos.y, 0, p.pos.x, p.pos.y, p.radius * 3);
+      glow.addColorStop(0, `rgba(${r},${g},${b}, 0.15)`);
+      glow.addColorStop(1, `rgba(${r},${g},${b}, 0)`);
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(p.pos.x, p.pos.y, p.radius * 3, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Body
+      ctx.fillStyle = `rgb(${r},${g},${b})`;
+      ctx.beginPath();
+      ctx.arc(p.pos.x, p.pos.y, p.radius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Eye highlight for sensors
+      if (p.type === 'sensor') {
         ctx.fillStyle = '#fff';
         ctx.beginPath();
-        ctx.arc(px + CELL_PX/2, py + CELL_PX/2, 2, 0, Math.PI * 2);
-        ctx.fill();
-      } else if (cell.type === 'mouth') {
-        ctx.fillRect(px + 2, py + 2, CELL_PX - 4, CELL_PX - 4);
-        ctx.fillStyle = '#000';
-        ctx.fillRect(px + 4, py + CELL_PX/2 - 1, CELL_PX - 8, 2);
-      } else if (cell.type === 'leg') {
-        ctx.fillRect(px + 3, py + 1, CELL_PX - 6, CELL_PX - 2);
-      } else {
-        // skin / default — rounded rect
-        const r = 2;
-        ctx.beginPath();
-        ctx.roundRect(px + 1, py + 1, CELL_PX - 2, CELL_PX - 2, r);
+        ctx.arc(p.pos.x - p.radius * 0.2, p.pos.y - p.radius * 0.2, p.radius * 0.3, 0, Math.PI * 2);
         ctx.fill();
       }
 
-      // Outline connecting cells
-      ctx.strokeStyle = `rgba(${hue[0]}, ${hue[1]}, ${hue[2]}, 0.3)`;
-      ctx.lineWidth = 0.5;
-      ctx.strokeRect(px, py, CELL_PX, CELL_PX);
+      // Mouth indicator
+      if (p.type === 'mouth') {
+        ctx.strokeStyle = `rgba(${r*0.5},${g*0.5},${b*0.5}, 0.8)`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(p.pos.x, p.pos.y, p.radius * 0.6, 0, Math.PI);
+        ctx.stroke();
+      }
     }
   }
 }
 
-// --- Sidebar ---
 function updateSidebar() {
   const alive = world.organisms.filter(o => o.alive);
   document.getElementById('s-tick').textContent = world.tick;
-  document.getElementById('s-alive').textContent = alive.length + ' / ' + world.organisms.length;
-  document.getElementById('tick-display').textContent = 'tick ' + world.tick;
-  const avgSize = alive.length > 0 ? (alive.reduce((s, o) => s + o.body.cells.length, 0) / alive.length).toFixed(1) : '0';
-  document.getElementById('s-size').textContent = avgSize;
+  document.getElementById('tick-display').textContent = world.tick;
+  document.getElementById('s-alive').textContent = alive.length + '/' + world.organisms.length;
 
-  // Beauty metrics
-  const beauties = alive.map(o => scoreBodyBeauty(o.body));
-  if (beauties.length > 0) {
-    const avg = (arr, fn) => arr.reduce((s, b) => s + fn(b), 0) / arr.length;
-    const wb = avg(beauties, b => b.total);
-    const sym = avg(beauties, b => b.formSymmetry);
-    const prop = avg(beauties, b => b.proportion);
-    const cpx = avg(beauties, b => b.complexity);
-    document.getElementById('s-beauty').textContent = wb.toFixed(3);
-    document.getElementById('bar-beauty').style.width = (wb * 100) + '%';
-    document.getElementById('s-sym').textContent = sym.toFixed(3);
-    document.getElementById('bar-sym').style.width = (sym * 100) + '%';
-    document.getElementById('s-prop').textContent = prop.toFixed(3);
-    document.getElementById('bar-prop').style.width = (prop * 100) + '%';
-    document.getElementById('s-complex').textContent = cpx.toFixed(3);
-    document.getElementById('bar-complex').style.width = (cpx * 100) + '%';
+  if (world.tick % 10 === 0) {
+    const beauty = scoreWorldBeauty(world);
+    document.getElementById('s-beauty').textContent = beauty.total.toFixed(3);
+    document.getElementById('bar-beauty').style.width = (beauty.total * 100) + '%';
+    document.getElementById('s-form').textContent = beauty.formBeauty.toFixed(3);
+    document.getElementById('bar-form').style.width = (beauty.formBeauty * 100) + '%';
+    document.getElementById('s-sym').textContent = beauty.symmetryQuality.toFixed(3);
+    document.getElementById('bar-sym').style.width = (beauty.symmetryQuality * 100) + '%';
+    document.getElementById('s-motion').textContent = beauty.motionGrace.toFixed(3);
+    document.getElementById('bar-motion').style.width = (beauty.motionGrace * 100) + '%';
+    document.getElementById('s-div').textContent = beauty.diversityOfForms.toFixed(3);
+    document.getElementById('bar-div').style.width = (beauty.diversityOfForms * 100) + '%';
   }
 
-  // Diversity
-  let divSum = 0, divPairs = 0;
-  for (let i = 0; i < alive.length; i++) {
-    for (let j = i + 1; j < alive.length; j++) {
-      const a = alive[i].body.cells.length, b = alive[j].body.cells.length;
-      divSum += Math.abs(a - b) / Math.max(a, b, 1);
-      divPairs++;
+  if (world.tick % 30 === 0) {
+    const list = document.getElementById('org-list');
+    list.innerHTML = '';
+    for (let i = 0; i < world.organisms.length; i++) {
+      const org = world.organisms[i];
+      const [r, g, b] = org.genome.baseColor;
+      const card = document.createElement('div');
+      card.className = 'org-card' + (org.alive ? '' : ' dead');
+      card.innerHTML = `<div class="org-name" style="color:rgb(${r},${g},${b})">${SPECIES[i]} #${org.id}</div>` +
+        `<div class="org-stat">${org.particles.length}p · E:${org.energy.toFixed(0)} · age:${org.age}</div>`;
+      list.appendChild(card);
     }
-  }
-  const diversity = divPairs > 0 ? divSum / divPairs : 0;
-  document.getElementById('s-diversity').textContent = diversity.toFixed(3);
-  document.getElementById('bar-diversity').style.width = (diversity * 100) + '%';
-
-  // Organism cards
-  const list = document.getElementById('org-list');
-  list.innerHTML = '';
-  for (let i = 0; i < world.organisms.length; i++) {
-    const org = world.organisms[i];
-    const beauty = scoreBodyBeauty(org.body);
-    const hue = HUES[org.body.genome.coreColor % 6];
-    const card = document.createElement('div');
-    card.className = 'org-card' + (org.alive ? '' : ' dead');
-    card.innerHTML = `
-      <div class="org-name" style="color:rgb(${hue.join(',')})">
-        ${MORPH_NAMES[i] || 'Organism'} #${org.id}
-      </div>
-      <div class="org-stat">cells: ${org.body.cells.length} · energy: ${org.energy.toFixed(0)} · age: ${org.age}</div>
-      <div class="org-stat">beauty: ${beauty.total.toFixed(3)} · symmetry: ${beauty.formSymmetry.toFixed(2)}</div>
-    `;
-    list.appendChild(card);
   }
 }
 
-// --- Loop ---
 let timer;
 function loop() {
-  if (playing && !world.isFinished()) {
-    world.step(decide);
-  }
+  if (playing && !world.isFinished()) world.step();
   draw();
   updateSidebar();
 }
 function startLoop() { clearInterval(timer); timer = setInterval(loop, interval); }
 startLoop();
 
-// --- Controls ---
 document.getElementById('btn-play').onclick = () => { playing = true; };
 document.getElementById('btn-pause').onclick = () => { playing = false; };
 document.getElementById('btn-restart').onclick = () => { init(); };

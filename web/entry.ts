@@ -1,39 +1,19 @@
 // web/entry.ts — Browser entry point for sevo-life visualization
-// Exports both v1 (pixel) and v2 (body) world engines
 
-// v1 — legacy pixel world
-export { World } from "../src/world.ts";
-export { scoreBeauty, beautyByColor } from "../src/beauty.ts";
-export { DEFAULT_CONFIG } from "../src/life-types.ts";
-
-// v2 — multi-cell organism world
-export { WorldV2 } from "../src/world-v2.ts";
-export { Body, scoreBodyBeauty } from "../src/body.ts";
+// v3 — particle-based simulation (current)
+export { World, v2, DEFAULT_WORLD } from "../src/sim.ts";
+export { scoreWorldBeauty } from "../src/sim-beauty.ts";
 
 export type {
-  Cell,
-  CellView,
-  DecisionFn,
-  Entity,
-  EntityAction,
-  EntityGenome,
-  EntityResult,
-  BeautyMetrics,
-  SimulationResult,
-  Vec2,
-  WorldConfig,
-  WorldEvent,
-} from "../src/life-types.ts";
-
-export type {
-  BodyGenome,
-  BodyCell,
-  GrowthRule,
-  CellType,
-} from "../src/body.ts";
-
-export type {
+  V2,
+  Particle,
+  Spring,
+  Genome,
+  GrowthStep,
   Organism,
-  OrganismAction,
-  OrganismDecisionFn,
-} from "../src/world-v2.ts";
+  Resource,
+  FlowField,
+  WorldConfig,
+} from "../src/sim.ts";
+
+export type { BeautyScore } from "../src/sim-beauty.ts";
