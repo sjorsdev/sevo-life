@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406358109",
+  "timestamp": "2026-04-05T16:25:58.109Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Efficiency unlock: maximize energy conservation while boosting resource-seeking precision. The wasted cycles are in aimless movement and pulse overhead, not in growth or beauty-building.; Efficiency is the critical bottleneck at 0.488 (half the target). Survival and beauty are both solid (0.667 and 0.676), but efficiency drags the weighted fitness from 0.65+ down to 0.622. The organisms are burning energy inefficiently — high exploration and pulsing without sufficient resource returns. Priority: maximize energyConserve, reduce wasteful oscillation (pulseFrequency), lower exploration drift. This single change compounds: better energy management → longer lifespans → more time to grow beautiful forms → better diversity. The spatialComposition weakness in beauty comes from inefficient movement patterns; fixing movement efficiency fixes composition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
