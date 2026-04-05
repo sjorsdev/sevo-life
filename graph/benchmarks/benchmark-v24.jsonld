@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v24",
+  "timestamp": "2026-04-05T09:22:56.655Z",
+  "version": 24,
+  "parent": "benchmark-v23",
+  "task": "Implement Asynchronous Byzantine-Resilient Consensus (v24) extending v23 with: (1) Asynchronous Safety & Liveness—eliminate all timing assumptions; prove consensus safety and liveness hold under arbitrary asynchrony (unbounded message delays, arbitrary reordering); machine-checkable proof in Coq with no admitted tactics; (2) Adaptive Adversary Model—Byzantine nodes see all honest messages before responding; prove the protocol maintains safety and expected O(f) message complexity even against adaptive (future-looking) Byzantine participants; (3) Threshold Cryptography Integration—use t-of-n BLS threshold signatures or Feldman VSS; prove that consensus resilience is cryptographically optimal (t > 2f/3 commitments required); (4) Network Partition Liveness—prove the protocol achieves liveness across arbitrary network partitions (not just message delays) when a majority partition exists; (5) Optimal Resilience Proof—formally prove the protocol is optimal: no protocol can guarantee both safety and liveness with fewer than f+1 honest nodes and less than (f+1) log(n) expected messages per instance under this adversarial model.",
+  "scoringLogic": "asynchronousSafetyProof(0.20) + adaptiveAdversaryResilience(0.18) + thresholdCryptographyCorrectness(0.16) + optimalResilienceProofUnderCrypto(0.16) + networkPartitionLivenessProof(0.14) + messageComplexityOptimalityProof(0.12) + implementationCorrectnessUnderAsynchrony(0.04)",
+  "difficulty": 24,
+  "passThreshold": 0.95
+}
