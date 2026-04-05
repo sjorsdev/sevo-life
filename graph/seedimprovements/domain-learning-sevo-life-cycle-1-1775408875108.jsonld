@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408875108",
+  "timestamp": "2026-04-05T17:07:55.108Z",
+  "observation": "Domain sevo-life (fitness 0.571) generated 2 insights",
+  "suggestion": "Efficiency gains come from matching morphology to strategy: settler genomes conserve energy with low moveSpeed + high energyConserve; hunter genomes trade efficiency for exploration. Diversity emerves naturally when organisms are no longer trying to do everything.; Efficiency (0.503) is the critical bottleneck — significantly lower than survival (0.667) and beauty (0.728). This drags overall fitness to 0.642. The organisms show energy imbalance: some accumulate 28-32 (efficient) while others plateau at 7-8 (struggling). Within beauty, diversityOfForms (0.456) and spatialComposition (0.599) are weak — genomes are converging on similar morphologies. Solution: (1) reduce energy waste in underperforming organisms by lowering moveSpeed and exploratory behavior, (2) increase energyConserve to retain harvested resources, (3) introduce architectural diversity by specializing genomes with different strategies — some lean into stationary efficiency, others into resource-seeking mobility.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
