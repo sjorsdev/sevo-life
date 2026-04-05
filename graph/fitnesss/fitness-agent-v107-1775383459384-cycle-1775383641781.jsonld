@@ -1,0 +1,19 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Fitness",
+  "@id": "fitness-agent-v107-1775383459384-cycle-1775383641781",
+  "timestamp": "2026-04-05T10:07:27.210Z",
+  "agent": "agent:v107-1775383459384",
+  "eqs": 0.4,
+  "accuracy": 0,
+  "magnitude": 0,
+  "branchesExplored": 5,
+  "predictionError": 1,
+  "cycleId": "cycle-1775383641781",
+  "context": {
+    "fitness": 1,
+    "branches": 5,
+    "correct": 25,
+    "total": 25
+  }
+}
