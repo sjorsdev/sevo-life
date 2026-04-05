@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775404090413",
+  "timestamp": "2026-04-05T15:48:10.413Z",
+  "observation": "Domain sevo-life (fitness 0.709) generated 2 insights",
+  "suggestion": "Efficiency fails because movement cost exceeds harvest gain; beauty's rhythm fails because fast pulses lack structure—both fixed by tuning speed and temporal regularity.; Efficiency is critically weak (0.153), dragging overall fitness. The Harvester and Persistence Hunter move too fast (0.85, 0.75), burning energy unnecessarily. Simultaneously, rhythm is the weakest beauty component (0.156), caused by low pulseFrequency and patternSymmetry. Strategy: (1) Reduce moveSpeed for high-mobility entities to cut energy waste and boost efficiency. (2) Increase pulseFrequency and patternSymmetry for trail-intensive entities to create temporal structure and improve rhythm. Rhythm + efficiency together could lift overall fitness from 0.7 to 0.76+.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
