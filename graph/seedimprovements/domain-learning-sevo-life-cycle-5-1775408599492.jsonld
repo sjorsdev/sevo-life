@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408599492",
+  "timestamp": "2026-04-05T17:03:19.492Z",
+  "observation": "Domain sevo-life (fitness 0.532) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is metabolic overspend + poor resource hunting. Organisms starve before reaching reproductive maturity.; Efficiency at 0.384 is critically low, dragging overall fitness to 0.537. Three organisms died (50% mortality); survivors are energy-constrained (depleted energy pools). The genome's current parameters waste energy on expensive movement and exploration. Survival rate improvement and efficiency gains are coupled: better energy conservation and resource targeting directly increase lifespan. Beauty is adequate (0.669); spatial composition and diversity are secondary. Primary fix: raise energyConserve (0.3→0.6) to reduce metabolic overhead, boost resourceAttraction (0.2→0.7) for faster food discovery, reduce moveSpeed (0.6→0.4) to minimize travel waste. Secondary: increase trailIntensity and patternSymmetry for spatial beauty gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
