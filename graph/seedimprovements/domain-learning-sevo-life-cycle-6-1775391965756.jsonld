@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775391965756",
+  "timestamp": "2026-04-05T12:26:05.756Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "High moveSpeed without proportional energyConserve creates energy deficit. Survival doesn't require movement intensity; resource attraction + proximity does.; Efficiency is critically low at 0.152 (20% weight, valued at only 0.03 toward total fitness). Entities survive perfectly (1.0) but waste energy through excessive movement and visual effects. The genomes prioritize moveSpeed (0.6-0.65) over energyConserve (0.55-0.85). Strategy: reduce moveSpeed across all roles, increase energyConserve, and trim energy-expensive parameters (pulseFrequency, trailIntensity) that don't directly drive survival or critical beauty metrics. This preserves survivalRate while compounding efficiency gains. Secondary: rhythm (0.129) is weak—adjust pulseFrequency patterns to improve temporal coordination.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
