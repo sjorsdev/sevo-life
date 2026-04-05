@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775417166145",
+  "timestamp": "2026-04-05T19:26:06.145Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Energy is being wasted on movement resistance and idle pulsing, not on growth or goal pursuit. Leaner bodies + less drag + purposeful seeking = efficiency without sacrificing survival.; Efficiency is critically weak at 0.348 (weakest component by far), dragging down overall fitness despite decent survival (0.667) and beauty (0.749). With 0.2 goal weight, efficiency improvements have high leverage. Particle simulations waste energy primarily through: high drag during movement (0.9-0.99), excessive pulsing/swimming at idle, and oversized baseRadius. Organism 5's high energy (32) despite age 500 suggests excessive reserves burned on locomotion. Organisms 1,2,4 at 7-9 energy are more efficient but undersized. Strategy: reduce drag (movement resistance), decrease pulse/swim on idle, tighten baseRadius to reduce inertia, increase resourceAttraction to make movement goal-directed rather than wasteful wandering. Target alive organisms; spare dead ones (they've failed selection).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
