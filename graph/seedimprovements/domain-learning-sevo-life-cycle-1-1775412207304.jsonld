@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412207304",
+  "timestamp": "2026-04-05T18:03:27.304Z",
+  "observation": "Domain sevo-life (fitness 0.567) generated 2 insights",
+  "suggestion": "Efficiency deficit + beauty weakness = energy is being spent on movement and exploration instead of building coherent spatial patterns. Make organisms slower but more intentional.; Efficiency is the critical bottleneck (0.593 vs. 0.833 survival and 0.647 beauty). Organisms are energy-inefficient despite surviving. The gap suggests excess movement cost, high pulse energy, or wasteful exploration. Simultaneously, spatialComposition (0.3) and diversityOfForms (0.457) are weak — forms cluster without spatial elegance. Strategy: (1) Cut movement energy waste—lower moveSpeed and pulseFrequency, boost energyConserve to stretch each energy unit. (2) Reduce explorationDrive to stop wasteful wandering. (3) Increase patternSymmetry and trailIntensity to improve spatial beauty emergently. This keeps the 6 survivors healthy while making them leaner and more patterned.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
