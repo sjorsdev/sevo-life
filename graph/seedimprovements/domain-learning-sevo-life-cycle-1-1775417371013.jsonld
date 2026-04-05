@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775417371013",
+  "timestamp": "2026-04-05T19:29:31.013Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Efficiency scales with energy-per-lifetime. Long-lived organisms (age 500) with low energy (0-16) are metabolically inefficient. Prioritize drag reduction (20% → 15%) and resourceAttraction boost over movement speed.; Efficiency is the critical bottleneck at 0.341 — dragging overall fitness to 0.602. The goal weights efficiency at 0.2 (20% of total), meaning a 0.34→0.5 gain adds +0.032 to overall fitness. Survivalrate and beauty are already decent (0.67, 0.68). Current organisms show high age (500 max) but low energy (0-16), indicating they're surviving but burning energy inefficiently. Spatialcomposition is also weak (0.3) suggesting particle density/arrangement is suboptimal. Proposal: reduce drag (lower friction loss), increase resourceAttraction (harvest faster, less wandering), cut baseRadius slightly (smaller = less mass to move), boost energyConserve parameter. Also increase diversity of form by varying growth step triggers and particle counts across genomes to improve spatialcomposition.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
