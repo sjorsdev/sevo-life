@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413754581",
+  "timestamp": "2026-04-05T18:29:14.581Z",
+  "observation": "Domain sevo-life (fitness 0.665) generated 2 insights",
+  "suggestion": "Sustainable life evolves lean, not large. Population survived only when bodies stayed small and movement conservative—opposite of current genomes.; Survival rate (0.5) is critically weak—half the population dies despite decent beauty (0.71). Dead organisms had 12-13 particles; survivors averaged 8-10 and reached age 500. Pattern: large, energetically expensive bodies fail; lean, conservative ones persist. Efficiency (0.365) compounds this—the population is burning energy faster than it can harvest. Root cause: moveSpeed and explorationDrive too high relative to energyConserve. Solution: aggressively increase energyConserve (0.75-0.9), reduce moveSpeed (0.3-0.5), lower explorationDrive to unsustainable minimum. This flips the selection pressure from 'grow large' to 'live long'.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
