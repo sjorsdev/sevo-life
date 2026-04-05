@@ -1,3 +1,181 @@
+function createChemField(width, height, feed = 0.055, kill = 0.062) {
+    const size = width * height;
+    const a = new Float64Array(size).fill(1.0);
+    const b = new Float64Array(size).fill(0.0);
+    const cx = Math.floor(width / 2);
+    const cy = Math.floor(height / 2);
+    for(let dy = -5; dy <= 5; dy++){
+        for(let dx = -5; dx <= 5; dx++){
+            if (dx * dx + dy * dy <= 5 * 5) {
+                const idx = (cy + dy) * width + (cx + dx);
+                if (idx >= 0 && idx < size) {
+                    b[idx] = 1.0;
+                    a[idx] = 0.5;
+                }
+            }
+        }
+    }
+    return {
+        width,
+        height,
+        a,
+        b,
+        feed,
+        kill,
+        dA: 1.0,
+        dB: 0.5
+    };
+}
+function laplacian(field, x, y, w, h) {
+    const idx = (i, j)=>(j + h) % h * w + (i + w) % w;
+    const center = field[idx(x, y)];
+    return field[idx(x - 1, y)] * 0.2 + field[idx(x + 1, y)] * 0.2 + field[idx(x, y - 1)] * 0.2 + field[idx(x, y + 1)] * 0.2 + field[idx(x - 1, y - 1)] * 0.05 + field[idx(x + 1, y - 1)] * 0.05 + field[idx(x - 1, y + 1)] * 0.05 + field[idx(x + 1, y + 1)] * 0.05 - center;
+}
+function stepChemistry(field, steps = 1) {
+    const { width: w, height: h, feed: F, kill: k, dA, dB } = field;
+    const size = w * h;
+    for(let s = 0; s < steps; s++){
+        const newA = new Float64Array(size);
+        const newB = new Float64Array(size);
+        for(let y = 0; y < h; y++){
+            for(let x = 0; x < w; x++){
+                const i = y * w + x;
+                const a = field.a[i];
+                const b = field.b[i];
+                const reaction = a * b * b;
+                newA[i] = a + (dA * laplacian(field.a, x, y, w, h) - reaction + F * (1 - a));
+                newB[i] = b + (dB * laplacian(field.b, x, y, w, h) + reaction - (k + F) * b);
+                newA[i] = Math.max(0, Math.min(1, newA[i]));
+                newB[i] = Math.max(0, Math.min(1, newB[i]));
+            }
+        }
+        field.a = newA;
+        field.b = newB;
+    }
+}
+function depositChemical(field, x, y, chemical, amount, radius = 2) {
+    const { width: w, height: h } = field;
+    for(let dy = -radius; dy <= radius; dy++){
+        for(let dx = -radius; dx <= radius; dx++){
+            if (dx * dx + dy * dy > radius * radius) continue;
+            const px = ((Math.floor(x) + dx) % w + w) % w;
+            const py = ((Math.floor(y) + dy) % h + h) % h;
+            const idx = py * w + px;
+            const arr = chemical === "a" ? field.a : field.b;
+            arr[idx] = Math.min(1, arr[idx] + amount);
+        }
+    }
+}
+function patternEntropy(field) {
+    const counts = new Array(20).fill(0);
+    const total = field.b.length;
+    for(let i = 0; i < total; i++){
+        const bin = Math.min(20 - 1, Math.floor(field.b[i] * 20));
+        counts[bin]++;
+    }
+    let entropy = 0;
+    for (const c of counts){
+        if (c > 0) {
+            const p = c / total;
+            entropy -= p * Math.log2(p);
+        }
+    }
+    return entropy / Math.log2(20);
+}
+function patternStructure(field) {
+    const { width: w, height: h, b } = field;
+    const lags = [
+        2,
+        5,
+        10
+    ];
+    let structure = 0;
+    for (const lag of lags){
+        let corr = 0;
+        let count = 0;
+        for(let y = 0; y < h; y += 3){
+            for(let x = 0; x < w - lag; x += 3){
+                corr += b[y * w + x] * b[y * w + x + lag];
+                count++;
+            }
+        }
+        const avgCorr = count > 0 ? corr / count : 0;
+        structure += avgCorr;
+    }
+    return Math.min(1, structure / lags.length * 5);
+}
+class BeautyEngine {
+    history = [];
+    windowSize = 20;
+    record(tick, entropy, structure, uniquePatterns) {
+        const compressibility = entropy > 0.01 ? structure / entropy : 0;
+        this.history.push({
+            tick,
+            entropy,
+            structure,
+            uniquePatterns,
+            compressibility
+        });
+        if (this.history.length > 200) {
+            this.history = this.history.slice(-200);
+        }
+    }
+    compressionProgress() {
+        if (this.history.length < this.windowSize * 2) return 0;
+        const recent = this.history.slice(-this.windowSize);
+        const older = this.history.slice(-this.windowSize * 2, -this.windowSize);
+        const recentAvg = recent.reduce((s, h)=>s + h.compressibility, 0) / recent.length;
+        const olderAvg = older.reduce((s, h)=>s + h.compressibility, 0) / older.length;
+        return recentAvg - olderAvg;
+    }
+    birkhoffMeasure() {
+        if (this.history.length === 0) return 0;
+        const latest = this.history[this.history.length - 1];
+        return latest.compressibility;
+    }
+    novelty() {
+        if (this.history.length < 10) return 0;
+        const recent = this.history.slice(-5);
+        const older = this.history.slice(-10, -5);
+        const recentPatterns = recent.reduce((s, h)=>s + h.uniquePatterns, 0) / recent.length;
+        const olderPatterns = older.reduce((s, h)=>s + h.uniquePatterns, 0) / older.length;
+        return Math.max(0, (recentPatterns - olderPatterns) / Math.max(olderPatterns, 1));
+    }
+    beauty() {
+        const cp = this.compressionProgress();
+        const bm = this.birkhoffMeasure();
+        const nv = this.novelty();
+        const cpNorm = Math.max(0, Math.min(1, cp * 10 + 0.5));
+        const bmNorm = Math.min(1, bm);
+        const nvNorm = Math.min(1, nv);
+        const total = 0.4 * cpNorm + 0.3 * bmNorm + 0.3 * nvNorm;
+        const latest = this.history[this.history.length - 1];
+        return {
+            total,
+            compressionProgress: cpNorm,
+            birkhoff: bmNorm,
+            novelty: nvNorm,
+            entropy: latest?.entropy ?? 0,
+            structure: latest?.structure ?? 0
+        };
+    }
+}
+function countUniquePatterns(field, width, height, resolution = 5) {
+    const patterns = new Set();
+    for(let y = 1; y < height - 1; y += 2){
+        for(let x = 1; x < width - 1; x += 2){
+            let hash = "";
+            for(let dy = -1; dy <= 1; dy++){
+                for(let dx = -1; dx <= 1; dx++){
+                    const val = field[(y + dy) * width + (x + dx)];
+                    hash += Math.floor(val * resolution);
+                }
+            }
+            patterns.add(hash);
+        }
+    }
+    return patterns.size;
+}
 const v2 = {
     add: (a, b)=>({
             x: a.x + b.x,
@@ -51,6 +229,8 @@ class World {
     organisms;
     resources;
     flow;
+    chem;
+    beauty;
     tick;
     rng;
     nextId;
@@ -59,6 +239,9 @@ class World {
         this.tick = 0;
         this.rng = mulberry32(seed);
         this.nextId = 0;
+        const chemRes = 4;
+        this.chem = createChemField(Math.ceil(config.width / chemRes), Math.ceil(config.height / chemRes), 0.055, 0.062);
+        this.beauty = new BeautyEngine();
         const res = 20;
         const fw = Math.ceil(config.width / 20);
         const fh = Math.ceil(config.height / 20);
@@ -129,6 +312,21 @@ class World {
     }
     step() {
         this.tick++;
+        stepChemistry(this.chem, 2);
+        for (const org of this.organisms){
+            if (!org.alive) continue;
+            for (const p of org.particles){
+                const chemX = p.pos.x / 4;
+                const chemY = p.pos.y / 4;
+                depositChemical(this.chem, chemX, chemY, "b", 0.02, 1);
+            }
+        }
+        if (this.tick % 10 === 0) {
+            const entropy = patternEntropy(this.chem);
+            const structure = patternStructure(this.chem);
+            const uniqueP = countUniquePatterns(this.chem.b, this.chem.width, this.chem.height);
+            this.beauty.record(this.tick, entropy, structure, uniqueP);
+        }
         this.flow.phase += 0.01;
         for(let y = 0; y < this.flow.height; y++){
             for(let x = 0; x < this.flow.width; x++){
@@ -579,3 +777,5 @@ function scoreWorldBeauty(world) {
 }
 export { World as World, v2 as v2, DEFAULT_WORLD as DEFAULT_WORLD };
 export { scoreWorldBeauty as scoreWorldBeauty };
+export { createChemField as createChemField, stepChemistry as stepChemistry, patternEntropy as patternEntropy, patternStructure as patternStructure };
+export { BeautyEngine as BeautyEngine, countUniquePatterns as countUniquePatterns };

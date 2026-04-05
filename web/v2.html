@@ -67,13 +67,13 @@
       <div class="panel-title">Beauty</div>
       <div class="stat-row"><span class="stat-label">Total</span><span class="stat-value" id="s-beauty">--</span></div>
       <div class="bar"><div class="bar-fill" id="bar-beauty" style="width:0;background:#8a6db0"></div></div>
-      <div class="stat-row"><span class="stat-label">Form</span><span class="stat-value" id="s-form">--</span></div>
+      <div class="stat-row"><span class="stat-label">Compression Progress</span><span class="stat-value" id="s-form">--</span></div>
       <div class="bar"><div class="bar-fill" id="bar-form" style="width:0;background:#6a8db0"></div></div>
-      <div class="stat-row"><span class="stat-label">Symmetry</span><span class="stat-value" id="s-sym">--</span></div>
+      <div class="stat-row"><span class="stat-label">Order/Complexity</span><span class="stat-value" id="s-sym">--</span></div>
       <div class="bar"><div class="bar-fill" id="bar-sym" style="width:0;background:#6ab08d"></div></div>
-      <div class="stat-row"><span class="stat-label">Motion</span><span class="stat-value" id="s-motion">--</span></div>
+      <div class="stat-row"><span class="stat-label">Novelty</span><span class="stat-value" id="s-motion">--</span></div>
       <div class="bar"><div class="bar-fill" id="bar-motion" style="width:0;background:#b0896a"></div></div>
-      <div class="stat-row"><span class="stat-label">Diversity</span><span class="stat-value" id="s-div">--</span></div>
+      <div class="stat-row"><span class="stat-label">Entropy</span><span class="stat-value" id="s-div">--</span></div>
       <div class="bar"><div class="bar-fill" id="bar-div" style="width:0;background:#6ab0a8"></div></div>
     </div>
     <div class="panel">
@@ -84,7 +84,7 @@
 </div>
 
 <script type="module">
-import { World, DEFAULT_WORLD, scoreWorldBeauty } from './sim.bundle.js';
+import { World, DEFAULT_WORLD } from './sim.bundle.js';
 
 const SPECIES = ['Jellyfish', 'Crawler', 'Floater', 'Jellyfish', 'Crawler', 'Floater'];
 
@@ -146,26 +146,26 @@ canvas.width = DEFAULT_WORLD.width;
 canvas.height = DEFAULT_WORLD.height;
 
 function draw() {
-  // Dark background with subtle gradient
-  ctx.fillStyle = '#02030a';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  // Flow field — every 3rd cell only
-  ctx.globalAlpha = 0.04;
-  ctx.strokeStyle = '#4466aa';
-  ctx.lineWidth = 0.5;
-  for (let y = 0; y < world.flow.height; y += 3) {
-    for (let x = 0; x < world.flow.width; x += 3) {
-      const f = world.flow.field[y][x];
-      const px = x * world.flow.resolution + world.flow.resolution / 2;
-      const py = y * world.flow.resolution + world.flow.resolution / 2;
-      ctx.beginPath();
-      ctx.moveTo(px, py);
-      ctx.lineTo(px + f.x * 30, py + f.y * 30);
-      ctx.stroke();
-    }
+  // Chemistry layer — reaction-diffusion patterns (the world's body)
+  const chem = world.chem;
+  const chemScale = 4; // each chem pixel = 4 world units
+  const imgData = ctx.createImageData(chem.width, chem.height);
+  for (let i = 0; i < chem.b.length; i++) {
+    const b = chem.b[i];
+    const a = chem.a[i];
+    const idx = i * 4;
+    // Chemical B = warm colors (life trace), Chemical A = cool background
+    imgData.data[idx] = Math.floor(b * 120 + (1 - a) * 20);     // R
+    imgData.data[idx + 1] = Math.floor(b * 60 + a * 8);         // G
+    imgData.data[idx + 2] = Math.floor(a * 30 + b * 80);        // B
+    imgData.data[idx + 3] = 255;
   }
-  ctx.globalAlpha = 1;
+  // Draw chemistry scaled up to world size
+  const chemCanvas = new OffscreenCanvas(chem.width, chem.height);
+  const chemCtx = chemCanvas.getContext('2d');
+  chemCtx.putImageData(imgData, 0, 0);
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(chemCanvas, 0, 0, canvas.width, canvas.height);
 
   // Resources — soft glowing circles
   for (const r of world.resources) {
@@ -245,17 +245,17 @@ function updateSidebar() {
   document.getElementById('s-alive').textContent = alive.length + '/' + world.organisms.length;
 
   if (world.tick % 50 === 0) {
-    const beauty = scoreWorldBeauty(world);
-    document.getElementById('s-beauty').textContent = beauty.total.toFixed(3);
-    document.getElementById('bar-beauty').style.width = (beauty.total * 100) + '%';
-    document.getElementById('s-form').textContent = beauty.formBeauty.toFixed(3);
-    document.getElementById('bar-form').style.width = (beauty.formBeauty * 100) + '%';
-    document.getElementById('s-sym').textContent = beauty.symmetryQuality.toFixed(3);
-    document.getElementById('bar-sym').style.width = (beauty.symmetryQuality * 100) + '%';
-    document.getElementById('s-motion').textContent = beauty.motionGrace.toFixed(3);
-    document.getElementById('bar-motion').style.width = (beauty.motionGrace * 100) + '%';
-    document.getElementById('s-div').textContent = beauty.diversityOfForms.toFixed(3);
-    document.getElementById('bar-div').style.width = (beauty.diversityOfForms * 100) + '%';
+    const b = world.beauty.beauty();
+    document.getElementById('s-beauty').textContent = b.total.toFixed(3);
+    document.getElementById('bar-beauty').style.width = (b.total * 100) + '%';
+    document.getElementById('s-form').textContent = b.compressionProgress.toFixed(3);
+    document.getElementById('bar-form').style.width = (b.compressionProgress * 100) + '%';
+    document.getElementById('s-sym').textContent = b.birkhoff.toFixed(3);
+    document.getElementById('bar-sym').style.width = (b.birkhoff * 100) + '%';
+    document.getElementById('s-motion').textContent = b.novelty.toFixed(3);
+    document.getElementById('bar-motion').style.width = (b.novelty * 100) + '%';
+    document.getElementById('s-div').textContent = b.entropy.toFixed(3);
+    document.getElementById('bar-div').style.width = (b.entropy * 100) + '%';
   }
 
   if (world.tick % 30 === 0) {
