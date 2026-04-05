@@ -135,8 +135,9 @@ const floater = {
 
 const genomes = [jellyfish, crawler, floater, jellyfish, crawler, floater];
 let world, playing = true, interval = 16;
+const vizConfig = { ...DEFAULT_WORLD, maxTicks: 2000 };
 
-function init() { world = new World(DEFAULT_WORLD, genomes, Date.now() % 100000); }
+function init() { world = new World(vizConfig, genomes, Date.now() % 100000); }
 init();
 
 const canvas = document.getElementById('canvas');
@@ -280,7 +281,8 @@ function loop(time) {
   if (time - lastTime < interval) return;
   lastTime = time;
 
-  if (playing && !world.isFinished()) {
+  if (playing) {
+    if (world.isFinished()) init(); // restart with new seed
     for (let i = 0; i < stepsPerFrame; i++) world.step();
   }
   draw();
