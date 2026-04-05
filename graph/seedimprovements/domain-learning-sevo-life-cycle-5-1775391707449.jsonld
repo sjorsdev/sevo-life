@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775391707449",
+  "timestamp": "2026-04-05T12:21:47.449Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Movement and trail-making are the primary energy drains. Reduce moveSpeed baseline 0.6→0.5 for efficiency track; raise pulseFrequency on beauty entities for emergent rhythm without extra movement cost.; Efficiency is critically weak (0.127 vs target 0.2). All other metrics are acceptable. Survival is strong (0.875) so we can afford to reduce movement/exploration. Primary lever: reduce moveSpeed and trailIntensity across efficiency-focused entities. Secondary lever: boost energyConserve for persistence. Tertiary: increase pulseFrequency on beauty entities to fix rhythm metric (currently 0.155) without harming efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
