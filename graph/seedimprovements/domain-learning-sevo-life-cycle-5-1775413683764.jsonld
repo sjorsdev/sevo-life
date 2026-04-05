@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413683764",
+  "timestamp": "2026-04-05T18:28:03.764Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "Early starvation kills organisms before they can mature; survival unlocks beauty potential. Prioritize resource efficiency over complexity.; Efficiency is the lowest-scoring component (0.644) and has direct weight in the goal function. Two organisms died early (ages 272-274), suggesting resource starvation in early development. Three surviving organisms have critically low energy (organism 4: 9 units), indicating poor resource acquisition or excessive metabolic cost. Diversity of forms (0.456) is also weak, suggesting genomes aren't expressing enough structural variation. Primary strategy: increase resourceAttraction to help organisms find food faster and survive early stages, boost energyConserve to reduce metabolic overhead, adjust harvestThreshold to be more opportunistic. Secondary strategy: increase trailIntensity and promote form diversity to improve beautyScore's weaker dimensions.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
