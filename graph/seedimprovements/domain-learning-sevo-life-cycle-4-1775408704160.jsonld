@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408704160",
+  "timestamp": "2026-04-05T17:05:04.160Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Efficiency gains come from slower, greedier, more focused foraging + spatial dispersion; biological diversity emerges from asymmetric patterns and independent exploration.; Efficiency at 0.455 is the critical bottleneck (worth 0.091 in overall fitness). Pattern analysis: organisms with fewer particles (8) show 2-3x better energy/particle ratio than those with 13 particles. The dead organisms (IDs 0, 3) had maximal growth (13 particles), suggesting oversizing wastes energy. Secondary weaknesses: diversityOfForms (0.456) and spatialComposition (0.3) indicate organisms are too similar and clustering too tightly. Strategy: (1) globally reduce moveSpeed and increase energyConserve to lower baseline costs, (2) increase resourceAttraction + harvestThreshold to make feeding smarter/focused, (3) reduce trailIntensity (overhead), (4) increase explorationDrive and reduce trailAttraction to spread organisms spatially and introduce behavioral diversity, (5) vary patternSymmetry to create morphological heterogeneity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
