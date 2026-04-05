@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410045716",
+  "timestamp": "2026-04-05T17:27:25.716Z",
+  "observation": "Domain sevo-life (fitness 0.610) generated 2 insights",
+  "suggestion": "Efficiency → survival. Lower movement waste, harvest resources more aggressively. Alive organisms at max age with depleted energy suggests food scarcity or poor acquisition strategy.; Efficiency is the critical weakness (0.39/1.0, contributing only 0.078 to goal). Analysis: 50% mortality, survivors have energy crisis (organisms 1,5: 14-16 energy for 12-8 particles = 1.2-2.0 per particle, unsustainable). Dead organisms exhausted energy before reaching max age. Root cause: organisms are moving/pulsing too aggressively relative to food intake. Beauty metrics are strong (0.691 overall), so preserve those. Survival rate bottleneck is energy depletion → improve resource harvesting efficiency and reduce unnecessary energy expenditure.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
