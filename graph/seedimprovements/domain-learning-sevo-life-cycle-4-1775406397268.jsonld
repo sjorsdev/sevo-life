@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775406397268",
+  "timestamp": "2026-04-05T16:26:37.268Z",
+  "observation": "Domain sevo-life (fitness 0.626) generated 2 insights",
+  "suggestion": "Organisms are energy-spenders, not energy-savers. Reduce motion costs and increase conservation thresholds to extend lifespan and improve efficiency metric.; Efficiency is the weakest component at 0.564 (20% weight). Energy is being wasted: organisms die before max age (404, 225 age limits) and surviving organisms show high energy variance (15-43), indicating poor metabolic optimization. Secondary weakness: spatialComposition (0.3) suggests organisms clump poorly. Improving energyConserve directly addresses metabolic efficiency; reducing moveSpeed and explorationDrive prevents wasteful movement. This preserves survival rate while reducing energy drain.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
