@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775390872659",
+  "timestamp": "2026-04-05T12:07:52.659Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 2 insights",
+  "suggestion": "Fast explorers are starving. Lean toward persistence hunters with lower speed but higher conservation.; Efficiency is catastrophically low at 0.147 — the critical bottleneck. Analysis shows multiple genomes with high moveSpeed (0.75–0.85) paired with low energyConserve (0.4–0.45), creating severe energy waste. Current design favors exploration/movement over survival efficiency. SurvivalRate is perfect (1.0), so we have safety margin to reduce movement costs. Beauty is weak but secondary — rhythm (0.193) and coverage (0.346) matter less than fixing efficiency baseline. Solution: reduce moveSpeed and increase energyConserve across high-waste genomes. This trades some exploration for sustainable resource economics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
