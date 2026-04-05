@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775405441866",
+  "timestamp": "2026-04-05T16:10:41.866Z",
+  "observation": "Domain sevo-life (fitness 0.662) generated 2 insights",
+  "suggestion": "Efficiency gains compound: reduced waste × better resource finding × less idle exploration = longer energy for reproduction and complex growth.; Efficiency is critical bottleneck (0.395 vs 0.667 survival, 0.674 beauty). Current organisms waste energy on unnecessary movement/pulsing. Survival and beauty are adequate but efficiency drag suppresses overall fitness. Strategy: (1) boost energyConserve to reduce metabolic waste, (2) increase resourceAttraction to move purposefully toward food vs random exploration, (3) reduce explorationDrive to eliminate wandering, (4) lower pulseFrequency to save pulsing energy. All 8 entities benefit since efficiency is system-wide.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
