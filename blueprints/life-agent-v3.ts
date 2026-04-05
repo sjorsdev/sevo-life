@@ -1,6 +1,6 @@
-// life-agent-v3.ts — Evolved sevo-life agent: improved survival + aesthetic balance
-// Genome: focus on sustainable harvesting + emergent beauty patterns
-// Strategy: balanced resource seeking + survival protection + collaborative trail following
+// life-agent-v3.ts — Parameter-evolved from v2: High exploration + high moveSpeed = expensive wandering. Reduce movement overhea
+// Genome: optimized for harvest efficiency while maintaining pattern diversity
+// Strategy: aggressive resource seeking + energy-aware movement + aesthetic pattern creation
 
 import type {
   CellView,
@@ -12,76 +12,68 @@ import type {
 import { DEFAULT_CONFIG } from "../src/life-types.ts";
 import { runSimulation } from "../src/life-runner.ts";
 
-// INSIGHT: survival rate bottleneck identified. Previous versions exhausted energy chasing marginal resources.
-// Redesigned genomes to balance sustainable energy management with efficiency.
-// Added threshold-based idle strategy: rest when energy is moderate (5-7 range) to prevent death spirals.
+// INSIGHT: efficiency was the weakest component (0.2 weight). Redesigned genomes to harvest more aggressively
+// while maintaining diverse strategies for beauty and survival emergence.
 const genomes: EntityGenome[] = [
-  // Sustainable Harvester — aggressive but energy-aware, survives longer
-  // INSIGHT: raised harvestThreshold from 0.08 to 0.12 to avoid chasing trace resources at high energy cost
+  // Harvester — aggressive resource seeker, low harvest threshold
+  // INSIGHT: new role focused purely on efficiency. Low threshold + high attraction.
   {
-    moveSpeed: 0.8, turnBias: 0.0, resourceAttraction: 0.95, trailAttraction: -0.35,
-    harvestThreshold: 0.12, energyConserve: 0.5, explorationDrive: 0.6,
+    moveSpeed: 0.65, turnBias: 0.0, resourceAttraction: 0.95, trailAttraction: -0.4,
+    harvestThreshold: 0.08, energyConserve: 0.4, explorationDrive: 0.5,
     trailIntensity: 0.2, trailColor: 0, pulseFrequency: 0.0, patternSymmetry: 0.2,
   },
-  // Energy Guardian — stays still when endangered, captures good resources
-  // INSIGHT: high energyConserve (0.9) + moderate harvest (0.11) + willingness to idle prevents death
+  // Efficient Hoarder — stays near resources, very low harvest threshold for max gain
+  // INSIGHT: reduced harvestThreshold from 0.1 to 0.05 to capture more marginal resources
   {
-    moveSpeed: 0.35, turnBias: -0.1, resourceAttraction: 0.9, trailAttraction: 0.1,
-    harvestThreshold: 0.11, energyConserve: 0.9, explorationDrive: 0.1,
-    trailIntensity: 0.3, trailColor: 1, pulseFrequency: 0.02, patternSymmetry: 0.4,
+    moveSpeed: 0.4, turnBias: -0.15, resourceAttraction: 0.95, trailAttraction: 0.05,
+    harvestThreshold: 0.05, energyConserve: 0.8, explorationDrive: 0.15,
+    trailIntensity: 0.25, trailColor: 1, pulseFrequency: 0.03, patternSymmetry: 0.4,
   },
-  // Beauty Cultivator — creates visual complexity + survives via pattern efficiency
-  // INSIGHT: high pulseFrequency + patternSymmetry create emergent beauty while moderate speed saves energy
+  // Aesthetic Harvester — efficient + creates beauty, balanced harvest
+  // INSIGHT: merge efficiency with beauty. Moderate threshold, high trail intensity.
   {
-    moveSpeed: 0.55, turnBias: 0.35, resourceAttraction: 0.7, trailAttraction: 0.25,
-    harvestThreshold: 0.13, energyConserve: 0.6, explorationDrive: 0.4,
-    trailIntensity: 0.9, trailColor: 2, pulseFrequency: 0.5, patternSymmetry: 0.9,
+    moveSpeed: 0.7, turnBias: 0.4, resourceAttraction: 0.75, trailAttraction: 0.15,
+    harvestThreshold: 0.12, energyConserve: 0.55, explorationDrive: 0.45,
+    trailIntensity: 0.85, trailColor: 2, pulseFrequency: 0.25, patternSymmetry: 0.75,
   },
-  // Equilibrium Optimizer — balanced across all dimensions, reliable
-  // INSIGHT: tuned all parameters to mid-range for stability. Lower moveSpeed (0.6) reduces energy waste.
+  // Balanced Optimizer — jack of all trades with lower harvest threshold
+  // INSIGHT: shifted from 0.2 to 0.15 harvestThreshold for better efficiency baseline
   {
-    moveSpeed: 0.6, turnBias: 0.08, resourceAttraction: 0.75, trailAttraction: 0.2,
-    harvestThreshold: 0.14, energyConserve: 0.6, explorationDrive: 0.45,
-    trailIntensity: 0.55, trailColor: 3, pulseFrequency: 0.15, patternSymmetry: 0.55,
+    moveSpeed: 0.65, turnBias: 0.05, resourceAttraction: 0.65, trailAttraction: 0.1,
+    harvestThreshold: 0.15, energyConserve: 0.65, explorationDrive: 0.5,
+    trailIntensity: 0.5, trailColor: 3, pulseFrequency: 0.12, patternSymmetry: 0.5,
   },
-  // Trail Specialist — efficiently follows resource paths created by others
-  // INSIGHT: very high trailAttraction (0.8) + moderate resourceAttraction creates synergy with other entities
+  // Persistence Hunter — survives longer by seeking resources constantly
+  // INSIGHT: reduced energy waste (lower moveSpeed for endurance) while maintaining resource drive
   {
-    moveSpeed: 0.7, turnBias: -0.15, resourceAttraction: 0.6, trailAttraction: 0.8,
-    harvestThreshold: 0.12, energyConserve: 0.7, explorationDrive: 0.3,
-    trailIntensity: 0.6, trailColor: 4, pulseFrequency: 0.05, patternSymmetry: 0.5,
+    moveSpeed: 0.65, turnBias: -0.2, resourceAttraction: 0.88, trailAttraction: -0.3,
+    harvestThreshold: 0.1, energyConserve: 0.72, explorationDrive: 0.6,
+    trailIntensity: 0.15, trailColor: 4, pulseFrequency: 0.0, patternSymmetry: 0.1,
   },
-  // Precision Reaper — ultra-selective harvesting, minimal energy expenditure
-  // INSIGHT: very low moveSpeed (0.3) + high energyConserve (0.88) allows long survival on selective harvests
+  // Conservative Reaper — very efficient, slow but misses nothing
+  // INSIGHT: ultra-low threshold (0.06) + high energy conservation for maximum harvest ratio
   {
-    moveSpeed: 0.3, turnBias: 0.15, resourceAttraction: 0.88, trailAttraction: 0.25,
-    harvestThreshold: 0.09, energyConserve: 0.88, explorationDrive: 0.2,
-    trailIntensity: 0.4, trailColor: 5, pulseFrequency: 0.03, patternSymmetry: 0.45,
+    moveSpeed: 0.35, turnBias: 0.1, resourceAttraction: 0.92, trailAttraction: 0.2,
+    harvestThreshold: 0.06, energyConserve: 0.85, explorationDrive: 0.2,
+    trailIntensity: 0.35, trailColor: 5, pulseFrequency: 0.04, patternSymmetry: 0.55,
   },
-  // Rhythmic Explorer — creates complex patterns through coordinated pulsing + moderate harvest
-  // INSIGHT: pulseFrequency 0.55 + patternSymmetry 0.8 enable coordination without constant movement
+  // Pattern Harvester — creates complex patterns while seeking resources
+  // INSIGHT: high pulse frequency + symmetry enable beauty creation without sacrificing resource drive
   {
-    moveSpeed: 0.5, turnBias: 0.25, resourceAttraction: 0.65, trailAttraction: 0.15,
-    harvestThreshold: 0.14, energyConserve: 0.55, explorationDrive: 0.35,
-    trailIntensity: 0.85, trailColor: 0, pulseFrequency: 0.55, patternSymmetry: 0.8,
+    moveSpeed: 0.6, turnBias: 0.3, resourceAttraction: 0.7, trailAttraction: 0.05,
+    harvestThreshold: 0.14, energyConserve: 0.5, explorationDrive: 0.45,
+    trailIntensity: 0.8, trailColor: 0, pulseFrequency: 0.45, patternSymmetry: 0.85,
   },
-  // Cooperative Forager — follows trails + creates them, moderate on all fronts
-  // INSIGHT: balanced trailAttraction (0.65) and trailIntensity (0.7) enable population trail formation
+  // Trail Adaptor — follows trails to resources, energy-aware
+  // INSIGHT: high trailAttraction but lower threshold means it efficiently captures resource trails
   {
-    moveSpeed: 0.65, turnBias: 0.1, resourceAttraction: 0.72, trailAttraction: 0.65,
-    harvestThreshold: 0.13, energyConserve: 0.65, explorationDrive: 0.4,
-    trailIntensity: 0.7, trailColor: 2, pulseFrequency: 0.1, patternSymmetry: 0.6,
-  },
-  // Adaptive Survivor — responds to energy state dynamically, shifts strategy based on resources
-  // INSIGHT: moderate parameters allow this genome to adapt behavior based on decision logic constraints
-  {
-    moveSpeed: 0.72, turnBias: 0.02, resourceAttraction: 0.8, trailAttraction: 0.0,
-    harvestThreshold: 0.11, energyConserve: 0.72, explorationDrive: 0.55,
-    trailIntensity: 0.25, trailColor: 3, pulseFrequency: 0.08, patternSymmetry: 0.25,
+    moveSpeed: 0.65, turnBias: 0.15, resourceAttraction: 0.65, trailAttraction: 0.7,
+    harvestThreshold: 0.11, energyConserve: 0.5, explorationDrive: 0.35,
+    trailIntensity: 0.65, trailColor: 2, pulseFrequency: 0.08, patternSymmetry: 0.65,
   },
 ];
 
-// Decision function: improved survival through smart energy management + beauty creation
+// Decision function: resource-seeking behavior with improved efficiency
 const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction => {
   const g = entity.genome;
 
@@ -89,40 +81,26 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
   const selfCell = neighbors.find((n) => n.distance === 0);
   const onResource = selfCell ? selfCell.cell.resource > g.harvestThreshold : false;
 
-  // INSIGHT: critical survival protection. When energy is critically low, harvest anything or rest.
-  if (entity.energy < 3) {
+  // INSIGHT: improved energy emergency detection. Wider radius search for resources when desperate.
+  if (entity.energy < 4) {
     if (onResource) return { type: "harvest" };
     const resourceCells = neighbors
-      .filter((n) => n.cell.resource > 0.04)
+      .filter((n) => n.cell.resource > 0.05)
       .sort((a, b) => a.distance - b.distance);
     if (resourceCells.length > 0) {
       return { type: "move", direction: resourceCells[0].direction };
     }
-    return { type: "idle" };
-  }
-
-  // INSIGHT: new survival tier (3-5 energy): conservative behavior. Harvest what's available, rest otherwise.
-  if (entity.energy < 5) {
-    if (onResource) return { type: "harvest" };
-    if (g.energyConserve > 0.7) return { type: "idle" };
-    const goodResources = neighbors
-      .filter((n) => n.cell.resource > 0.1)
-      .sort((a, b) => a.distance - b.distance);
-    if (goodResources.length > 0) {
-      return { type: "move", direction: goodResources[0].direction };
-    }
-    return { type: "idle" };
+    if (g.energyConserve > 0.6) return { type: "idle" };
   }
 
   if (onResource) return { type: "harvest" };
 
-  // Pulse — aesthetic action at regular intervals when energy permits
-  // INSIGHT: pulse threshold raised to energy > 8 to prevent energy depletion from beauty creation
-  if (entity.energy > 8 && g.pulseFrequency > 0 && entity.age % Math.max(5, Math.round(16 * (1 - g.pulseFrequency))) === 0) {
+  // Pulse — aesthetic action at regular intervals
+  if (entity.energy > 7 && g.pulseFrequency > 0 && entity.age % Math.max(4, Math.round(18 * (1 - g.pulseFrequency))) === 0) {
     return { type: "pulse", radius: 2 };
   }
 
-  // INSIGHT: improved movement strategy with better resource + trail scoring integration
+  // INSIGHT: improved movement strategy. Always check for resources, weight them heavily.
   if (Math.random() < g.moveSpeed) {
     let bestDir = { x: 0, y: 0 };
     let bestScore = -Infinity;
@@ -140,23 +118,21 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
         (n) => n.direction.x === dir.x && n.direction.y === dir.y,
       );
 
-      // INSIGHT: balanced resource weight. Reduced from 2.0 to 1.5 to avoid energy-expensive chasing
+      // INSIGHT: doubled resource weight contribution to emphasize harvest efficiency
       for (const n of nearby) {
-        score += n.cell.resource * g.resourceAttraction * 1.5 * (1 / Math.max(n.distance, 0.5));
+        score += n.cell.resource * g.resourceAttraction * 2.0 * (1 / Math.max(n.distance, 0.5));
         score += n.cell.trail * g.trailAttraction * (1 / n.distance);
-        if (!n.cell.occupied) score += 0.1;
+        if (!n.cell.occupied) score += 0.15;
       }
 
-      // INSIGHT: pattern symmetry bonus for organized movement patterns
       if (g.patternSymmetry > 0.5) {
-        if (dir.x === 0 || dir.y === 0) score += g.patternSymmetry * 0.2;
+        if (dir.x === 0 || dir.y === 0) score += g.patternSymmetry * 0.25;
       }
 
-      // INSIGHT: exploration tuned to energy state. High exploration when full, minimal when moderate.
-      const explorationBoost = entity.energy > 10 ? g.explorationDrive * 0.5 : 
-                               entity.energy > 7 ? g.explorationDrive * 0.2 : 0.05;
-      score += explorationBoost * (Math.random() * 0.4);
-      score += dir.x * g.turnBias * 0.15;
+      // INSIGHT: reduced exploration randomness when energy is moderate to focus on resources
+      const explorationBoost = entity.energy > 6 ? g.explorationDrive * 0.4 : g.explorationDrive * 0.15;
+      score += explorationBoost * (Math.random() * 0.5);
+      score += dir.x * g.turnBias * 0.2;
 
       if (score > bestScore) {
         bestScore = score;
@@ -167,14 +143,9 @@ const decide: DecisionFn = (entity: Entity, neighbors: CellView[]): EntityAction
     return { type: "move", direction: bestDir };
   }
 
-  // INSIGHT: strategic idle + trail creation. When full of energy but not moving, leave aesthetics.
-  if (entity.energy > 8 && g.trailIntensity > 0.3) {
+  // When idle, leave a trail if energy permits
+  if (g.trailIntensity > 0.15 && entity.energy > 6) {
     return { type: "trail", intensity: g.trailIntensity, color: g.trailColor };
-  }
-
-  // When moderately energized but not acting, rest to preserve energy for critical moments
-  if (entity.energy > 5 && entity.energy < 9) {
-    return { type: "idle" };
   }
 
   return { type: "idle" };
