@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405870662",
+  "timestamp": "2026-04-05T16:17:50.662Z",
+  "observation": "Domain sevo-life (fitness 0.654) generated 2 insights",
+  "suggestion": "Efficiency improves when organisms conserve energy during movement rather than move faster; diversity emerges from behavioral variance (exploration drive, turn bias), not just morphology.; Efficiency (0.608) is the weakest metric, dragging down composite fitness. Additionally, diversityOfForms (0.457) and spatialComposition (0.3) are critically weak within beautyScore. The organisms show uneven energy distribution (some depleted, some full), indicating poor metabolic tuning. Strategy: reduce moveSpeed and increase energyConserve to stabilize metabolism; increase explorationDrive and turnBias variance to scatter organisms and boost spatial composition; introduce trailColor and patternSymmetry diversity to improve form diversity without physics cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
