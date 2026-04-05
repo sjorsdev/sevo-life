@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775393734636",
+  "timestamp": "2026-04-05T12:55:34.636Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "Rhythm deficit is efficiency's twin problem — low pulseFrequency means entities move erratically, wasting energy; periodic behavior + lower moveSpeed = synchronized, efficient swarms.; Efficiency is critically low (0.15), dragging overall fitness. Root cause: moveSpeed values (0.55-0.85) are too high relative to harvestThreshold gains, burning energy faster than it's harvested. Rhythm is also weak (0.142), indicating insufficient periodic behavior. Solution: (1) reduce moveSpeed by 10-15% to lower energy cost per action, (2) increase pulseFrequency 40-100% to create synchronized rhythm patterns, (3) boost explorationDrive on passive entities (indices 1,4) to improve grid coverage. Coverage weakness (0.363) stems from low exploration on hoarder-type entities.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
