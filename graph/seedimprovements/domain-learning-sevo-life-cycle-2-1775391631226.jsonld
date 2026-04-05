@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775391631226",
+  "timestamp": "2026-04-05T12:20:31.226Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Reduce movement cost via lower moveSpeed + higher energyConserve. Movement is the primary efficiency sink. Rhythm requires higher pulse frequency.; Efficiency is critically weak (0.146) and dominates fitness loss. Moving costs energy; current genomes move too much and conserve poorly. Harvester (idx 0), Aesthetic Harvester (idx 2), and Persistence Hunter (idx 4) all spend 0.65-0.6 moveSpeed with insufficient conservation. Efficiency gains flow directly: 0.2 weight. Secondary: rhythm (0.205) signals pulseFrequency too low—boost for beauty gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
