@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775417481007",
+  "timestamp": "2026-04-05T19:31:21.007Z",
+  "observation": "Domain sevo-life (fitness 0.623) generated 2 insights",
+  "suggestion": "survival scales with active energy hunting + conservation; beauty is already emergent from morphology, don't break that; survivalRate at 0.333 is the weakest component (worth 50% of fitness). Only 2 of 6 organisms alive; 4 died before cycle end. Organisms are energy-starved or structurally unstable. beautyScore is already strong (0.749), so preserve that. The problem is survival mechanics: low resourceAttraction means organisms can't find energy; insufficient energyConserve wastes what they find; low explorationDrive keeps them sedentary. Increase active resource-seeking and energy management across all genomes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
