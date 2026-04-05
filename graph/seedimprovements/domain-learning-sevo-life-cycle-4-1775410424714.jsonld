@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775410424714",
+  "timestamp": "2026-04-05T17:33:44.714Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost vs. resource income. Organisms oscillate/pulse/swim without proportional energy return. Prioritize: energyConserve (retain harvest), resourceAttraction (gather faster), moveSpeed (reduce waste), swimStrength (costly for jellyfish), pulseFrequency (expensive visual behavior).; Efficiency is critically low (0.368) despite good beauty (0.752). The constraint: 50% organism mortality before max age + only 3/6 surviving, suggesting energy starvation. Physics costs (drag, movement, pulsing) exceed energy gains from resource gathering. Survival rate (0.5) also needs work. Strategy: reduce wasteful movement/physics overhead while increasing resource gathering and energy retention. Don't touch beauty parameters—their contribution is already optimized.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
