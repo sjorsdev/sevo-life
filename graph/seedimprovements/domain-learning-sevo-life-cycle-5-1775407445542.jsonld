@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407445542",
+  "timestamp": "2026-04-05T16:44:05.542Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Efficiency gains compound: lower energy waste + faster exploration = sustained survival + better spatial distribution = higher beauty composition.; Efficiency is the bottleneck (0.564 vs 0.695 beauty). Two organisms died early; survival depends on energy management. Spatial composition (0.3) is critically low — organisms cluster rather than explore. Diversity of forms (0.456) lacks morphological variation. Strategy: reduce energyConserve to cut waste, increase explorationDrive to spread organisms and improve composition, boost moveSpeed for faster resource acquisition, and vary trail/pattern parameters across genomes for visual diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
