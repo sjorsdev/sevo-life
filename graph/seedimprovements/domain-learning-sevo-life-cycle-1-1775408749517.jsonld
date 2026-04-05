@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775408749517",
+  "timestamp": "2026-04-05T17:05:49.517Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Organisms with high exploration drive die when placed in low-resource density; conservation + attraction beats discovery.; Survival rate (0.667) is the dominant weakness and highest-weighted component (0.5×). Two organisms died before age 500, suggesting energy starvation. The alive organisms show wide energy variance (8-22), indicating inconsistent resource gathering. Secondary issue: efficiency (0.389) is low, suggesting movement waste. Solution: (1) Increase resourceAttraction across the board to improve resource acquisition, (2) increase energyConserve to stretch gathered energy further, (3) lower harvestThreshold to capture resources sooner before death, (4) reduce explorationDrive to avoid wasteful movement in low-energy states. This targets survival directly while improving efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
