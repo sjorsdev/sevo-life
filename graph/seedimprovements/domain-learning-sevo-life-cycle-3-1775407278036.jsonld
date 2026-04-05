@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407278036",
+  "timestamp": "2026-04-05T16:41:18.036Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Efficiency gains through energy conservation and resource focus exceed beauty ceiling pressure — survival+beauty already locked at high values.; Efficiency (0.335) is the critical bottleneck — it contributes only 0.067 to total fitness despite 20% weight. Beauty is strong (0.787), survivalRate adequate (0.667). Energy management is the constraint: organisms survive to 500 steps but with low efficiency scores. Orgs 2 and 5 have highest energy (12, 17) — they're doing something right. Reduce passive energy drain via energyConserve, cut wasteful exploration via lower explorationDrive, and boost resourceAttraction to minimize search time. diversityOfForms (0.456) is secondary — maintain particle counts but improve differentiation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
