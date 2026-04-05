@@ -1,0 +1,11 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Mutation",
+  "@id": "mutation-agent-v4-1775378608417",
+  "timestamp": "2026-04-05T08:43:28.417Z",
+  "parent": "agent:v4",
+  "proposal": "LLM-generated aggressive mutation (rate 0.55)",
+  "branch": "main",
+  "status": "testing",
+  "reasoning": "Strategy: aggressive. Make MODERATE changes — improve existing strategies and add new test categories."
+}
