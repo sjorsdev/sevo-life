@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407535970",
+  "timestamp": "2026-04-05T16:45:35.970Z",
+  "observation": "Domain sevo-life (fitness 0.592) generated 2 insights",
+  "suggestion": "Survival threshold crossed when energy < harvestThreshold before max lifespan: increase retention (energyConserve) and food-finding efficiency (resourceAttraction) before tweaking movement.; survivalRate is the critical bottleneck at 0.5 (half dead). Dead organisms (ids 0,3,4) died at age 267-298, suggesting energy depletion before reaching max lifespan. spatialComposition = 0.3 is severely weak, indicating clustering instead of dispersal. Alive organisms (1,2,5) survive at max age but with marginal energy reserves. The fix: (1) reduce moveSpeed to cut unnecessary energy drain, (2) increase energyConserve for longer lifespans, (3) boost resourceAttraction so organisms find food more efficiently, (4) increase explorationDrive to break clustering patterns and improve spatial distribution, (5) vary trailColor and patternSymmetry across genotypes to increase diversityOfForms.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
