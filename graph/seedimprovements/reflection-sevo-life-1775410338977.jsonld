@@ -1,0 +1,14 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "reflection-sevo-life-1775410338977",
+  "timestamp": "2026-04-05T17:32:18.977Z",
+  "observation": "Fitness trend: plateau (recent avg: 0.619, delta: -0.0150). History: 470 cycles. ",
+  "suggestion": "Continue current approach. Trend: plateau.",
+  "evidence": [
+    "fitness-history:0.625,0.625,0.634,0.634,0.636,0.62,0.558,0.64,0.591,0.625",
+    "trend:plateau",
+    "delta:-0.0150"
+  ],
+  "priority": 3
+}
