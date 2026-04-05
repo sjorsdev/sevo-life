@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410000063",
+  "timestamp": "2026-04-05T17:26:40.063Z",
+  "observation": "Domain sevo-life (fitness 0.654) generated 2 insights",
+  "suggestion": "Organisms are starving despite good physics (beauty is excellent) — energy acquisition and conservation are bottlenecks, not morphology.; Survival rate is critically low at 0.5 (3 of 6 dead). Dead organisms show premature death (ages 225, 299, 414) suggesting energy starvation, not natural aging. Efficiency is also weak at 0.435, indicating wasteful movement relative to energy gain. Beauty is strong (0.759), so preserve those parameters. Fix survival by improving resource acquisition and energy conservation, reduce wasteful movement, and slightly boost visual distinction to maintain beauty gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
