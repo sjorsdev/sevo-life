@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410511895",
+  "timestamp": "2026-04-05T17:35:11.895Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Alive organisms are energy-starved despite reaching max lifespan — the physics favor longevity over vitality. Rebalance toward active resource harvesting and energy efficiency.; Efficiency is the bottleneck (0.403 vs 0.667-0.682 for other metrics). Survivors have dangerously low energy reserves (5-22) despite reaching max age, indicating resource acquisition and conservation are failing. ResourceAttraction is weak — organisms find resources inefficiently. EnergyConserve is likely too low — they burn calories faster than they harvest. Spatial composition is also weak (0.3), suggesting trail/pattern parameters don't reinforce useful shapes. Boost resourceAttraction and energyConserve on the 4 survivors; reduce moveSpeed to conserve energy while maintaining exploration; increase trailIntensity and patternSymmetry to improve spatial emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
