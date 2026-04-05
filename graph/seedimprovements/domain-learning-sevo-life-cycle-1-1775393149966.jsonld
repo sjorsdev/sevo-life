@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775393149966",
+  "timestamp": "2026-04-05T12:45:49.966Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is threshold-triggered over-searching. Raise thresholds, sync movement rhythm to reduce wasted energy and unlock beauty.; Efficiency is critically weak at 0.144 — entities burn energy faster than they harvest. Root causes: (1) harvestThreshold too low on index 0 (0.08) and 1 (0.05) causes energy waste hunting marginal resources; (2) moveSpeed too high for roles that don't need exploration; (3) energyConserve needs universal boost; (4) rhythm is lowest beauty metric at 0.187 — pulseFrequency too low or silent. Fix: raise harvestThreshold to reduce wasteful movement, lower moveSpeed on conservative roles, universally boost energyConserve and pulseFrequency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
