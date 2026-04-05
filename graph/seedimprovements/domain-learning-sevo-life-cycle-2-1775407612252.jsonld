@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775407612252",
+  "timestamp": "2026-04-05T16:46:52.252Z",
+  "observation": "Domain sevo-life (fitness 0.571) generated 2 insights",
+  "suggestion": "Energy efficiency beats raw exploration; dying organisms had identical parameters to survivors—symmetry mutations create distinct viable forms.; Efficiency (0.575) is the bottleneck — it's dragging down overall fitness. Two organisms died despite high age (270), suggesting resource starvation. diversityOfForms (0.456) is critically low, and symmetryQuality (0.568) is weak. Strategy: (1) Reduce exploratory waste and increase resource targeting to boost efficiency, (2) Vary patternSymmetry and pulseFrequency across genomes to increase morphological diversity, (3) Boost energyConserve to prevent early death. Jellyfish-like forms should be more conservative; crawler-like forms more aggressive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
