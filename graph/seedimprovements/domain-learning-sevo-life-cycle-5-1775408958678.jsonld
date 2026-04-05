@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408958678",
+  "timestamp": "2026-04-05T17:09:18.678Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Energy efficiency emerges from behavioral specialization, not global tuning. Force trade-offs between exploration and conservation across the population.; efficiency (0.412) is the critical bottleneck — 2.6× weaker than beautyScore. Paired with low diversityOfForms (0.456), organisms are too similar and energy-inefficient. Strategy: force niche differentiation via opposed parameter sets. Create slow/conservative foragers (high energyConserve, low moveSpeed) and fast/aggressive explorers (high explorationDrive, high moveSpeed). This trades off against each other, creating form diversity while reducing wasted energy across the population. spatialComposition weakness suggests poor world utilization — diverse strategies will spread populations differently.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
