@@ -1,45 +1,51 @@
 # PROGRESS
 
-## Status: DIRECTION SHIFT — from formula optimization to emergent beauty
+## Status: NEEDS SERIOUS REDESIGN — current simulation too simple
 ## SevoScore: 3935
-## Current simulation: particle organisms with springs, seasons, reproduction
-## Honest assessment: optimizing a fixed beauty formula, not discovering beauty
 
-## What needs to change (Vision V3)
-The simulation optimizes a number. It doesn't discover beauty.
-Real beauty emerges from interaction — flowers shaped by pollinators,
-coral reefs by thousands of species co-evolving.
+## Honest assessment (again)
+The particle simulation is a toy. Spring-connected dots with no internal state,
+no geometric shapes, no real structure. Organisms have no memory, no metabolism,
+no development stages. The world has chemistry but organisms can't even
+sustain reproduction — 10,000 ticks, zero generations. Debugging energy
+thresholds is missing the point entirely.
 
-### Next steps (in order):
-1. **Chemistry** — particles bond, react, form compounds. Simple rules → complex structures.
-2. **Levels** — atoms → molecules → membranes → organisms. Beauty at each scale.
-3. **Mutual shaping** — organisms change each other's form through interaction.
-4. **Exchange** — trade energy, particles, information. Dependency → relationship → beauty.
-5. **LLM as observer** — remove beauty scorer. LLM watches and describes what's emerging.
-   What organisms are attracted to IS beauty. Discovered, not defined.
+## What's fundamentally missing
+1. **Internal state** — organisms have no memory, no metabolism, no neural network
+2. **Geometric shapes** — particles are dots, not structured forms
+3. **Multi-scale levels** — no atoms→molecules→cells→organs→organisms
+4. **Real interaction** — organisms don't communicate, trade, eat each other
+5. **The world as organism** — chemistry exists but doesn't shape organisms back
+6. **Time for emergence** — need millions of ticks, not thousands
 
-## What works (keep)
-- Particle physics engine (sim.ts) — springs, flow field, seasons
-- Reproduction with genome mutation
+## Research foundations discovered (should have found earlier)
+- Schmidhuber (2009) — beauty = compression progress
+- Birkhoff (1933) — aesthetic measure = order / complexity
+- Turing (1952) — reaction-diffusion → organic patterns
+- Lehman & Stanley — novelty search (evolution without objectives)
+- Gray-Scott model — two-chemical reaction-diffusion
+
+## Infrastructure that works
+- sevo-score@1.2.1 on npm — scoring, contracts, auto-publish
+- sevo-engine@1.0.0 on npm — graph, runner, scorer, mutator
 - Meta-cycle: EVOLVE → REFLECT → BRAINSTORM → REALIGN
-- Parameter-patch mutations (100% run rate)
-- sevo-score + sevo-engine on npm
-- Visualization framework (web/v2.html)
-- All learnings in graph/seedimprovements/
+- Chemistry layer (reaction-diffusion)
+- Compression-progress beauty engine
+- Visualization framework
 
-## Run commands
-- Evolve: `deno run --allow-all src/fork-runner.ts`
-- Visualize: `deno run --allow-all web/build.ts && PORT=8090 deno run --allow-all web/serve.ts`
+## Key learnings for next attempt
+- Research existing work before building from scratch
+- Test basic viability (can organisms reproduce?) before adding features
+- Don't optimize numbers without checking visual output
+- The simulation IS the evolution — not separate loops
+- Beauty can't be a formula — it must emerge from interaction
+- The world needs to be alive, not a backdrop
+- Organisms need internal state to be interesting
+- This is serious research, not weekend hacking
 
-## Key learnings from this session
-- A "tree" organism of 5 grid cells with beauty 0.83 is not beautiful
-- Particle organisms with beauty 0.74 are better but still formula-optimized
-- The beauty scorer IS the ceiling — remove it, let beauty emerge
-- Don't grind cycles without checking visual output
-- Don't ask permission when the goal is clear
-- Evolution needs reflection, brainstorming, and structural changes
-- Seasons broke one plateau, reproduction broke another
-- Pixel agents were retired because they gamed metrics
-- The simulation needs chemistry and levels, not more parameters
+## Next step
+This needs a deeper foundation. Research: Lenia (continuous cellular automata),
+NEAT (evolving neural networks), Avida (digital organisms with metabolism),
+Tierra (self-replicating programs). Stand on existing artificial life research.
 
 ## Timestamp: 2026-04-05

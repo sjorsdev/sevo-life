@@ -121,9 +121,9 @@ export interface WorldConfig {
 export const DEFAULT_WORLD: WorldConfig = {
   width: 800,
   height: 600,
-  maxTicks: 500,
-  resourceCount: 60,
-  flowStrength: 0.2,
+  maxTicks: Infinity,
+  resourceCount: 100,
+  flowStrength: 0.15,
   gravity: 0,
 };
 
@@ -220,7 +220,7 @@ export class World {
       springs: [],
       genome,
       age: 0,
-      energy: 50,
+      energy: 80,
       alive: true,
       totalHarvested: 0,
     };
@@ -304,9 +304,9 @@ export class World {
     for (const org of this.organisms) {
       if (!org.alive) continue;
       org.age++;
-      // Energy drain varies by season — storms cost more
-      const seasonDrainMult = season === 1 ? 1.5 : season === 2 ? 1.3 : 1.0;
-      org.energy -= (0.03 + org.particles.length * 0.005) * seasonDrainMult;
+      // Energy drain — very low base so life is sustainable
+      const seasonDrainMult = season === 1 ? 1.3 : season === 2 ? 1.1 : 1.0;
+      org.energy -= (0.015 + org.particles.length * 0.002) * seasonDrainMult;
 
       if (org.energy <= 0) {
         org.alive = false;
@@ -346,10 +346,10 @@ export class World {
         org.energy += beautyScore.total * 0.2;
       }
 
-      // Reproduction — organisms with enough energy and age spawn offspring
-      if (org.energy > 40 && org.age > 100 && org.particles.length >= org.genome.maxParticles * 0.5) {
+      // Reproduction — age-based, not energy-gated. Life must reproduce to evolve.
+      if (org.age > 150 && org.age % 200 === 0 && org.energy > 5) {
         const alive = this.organisms.filter(o => o.alive);
-        if (alive.length < 12) { // population cap
+        if (alive.length < 30) { // population cap — room for ecosystem
           // Mutate genome — parameters AND structure
           const childGenome: Genome = JSON.parse(JSON.stringify(org.genome));
           // Parameter mutations
@@ -398,7 +398,7 @@ export class World {
           const childPos = { x: center.x + offset.x, y: center.y + offset.y };
           const child = this.spawnOrganism(childGenome, childPos);
           child.generation = (org as any).generation + 1;
-          org.energy -= 20; // reproduction cost
+          org.energy -= 10; // reproduction cost
         }
       }
 
@@ -569,10 +569,11 @@ export class World {
         if (r.amount < 0.05) continue;
         const d = v2.dist(h.pos, r.pos);
         if (d < r.radius + h.radius) {
-          const gained = Math.min(r.amount, 0.1) * 5 * efficiency;
+          const bite = Math.min(r.amount, 0.15);
+          const gained = bite * 10 * efficiency;
           org.energy += gained;
           org.totalHarvested += gained;
-          r.amount -= Math.min(r.amount, 0.1);
+          r.amount -= bite;
         }
       }
     }
