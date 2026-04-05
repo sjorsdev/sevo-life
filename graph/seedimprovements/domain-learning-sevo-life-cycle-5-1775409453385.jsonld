@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409453385",
+  "timestamp": "2026-04-05T17:17:33.385Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Survival gates all downstream fitness. Keep organisms alive longer by reducing energy waste and improving harvesting — beauty and efficiency follow.; Survival (0.5) is the critical bottleneck. Organisms die around age 250-300 and survivors at age 500 have critically low energy (7-34), indicating energy depletion. Dead organisms (IDs 0,1,3) exhausted reserves too quickly. Root cause: energyConserve too low (organisms hemorrhage energy), resourceAttraction insufficient (poor harvesting). Beauty is strong (0.748) so form mechanics work; efficiency (0.359) fails because alive organisms can't sustain. Fix: aggressive energyConserve boost to stop depletion, increase resourceAttraction to feed organisms, reduce moveSpeed to lower energy burn.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
