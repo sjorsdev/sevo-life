@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775389969623",
+  "timestamp": "2026-04-05T11:52:49.623Z",
+  "observation": "Domain sevo-life (fitness 0.698) generated 2 insights",
+  "suggestion": "Efficiency gains come from slower, more rhythmic pulsing—not fast movement. Beauty emerges from temporal pattern, not speed.; Efficiency is critically low (0.148), dragging overall fitness. This is driven by high energy expenditure—moveSpeed on aggressive entities (Harvester, Persistence Hunter) is excessive. Additionally, rhythm is the weakest beauty component (0.131), indicating insufficient temporal pulsing. Coverage is also weak (0.342), suggesting sparse trails. Strategy: reduce moveSpeed on high-movement entities to improve energetic efficiency, dramatically increase pulseFrequency across the board to create rhythm, and boost trailIntensity on sparse entities. These three changes target the three weakest metrics simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
