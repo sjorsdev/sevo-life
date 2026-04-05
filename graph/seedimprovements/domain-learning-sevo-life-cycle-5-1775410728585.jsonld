@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410728585",
+  "timestamp": "2026-04-05T17:38:48.585Z",
+  "observation": "Domain sevo-life (fitness 0.631) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is starvation during growth phase — energy cost of heavy bodies exceeds foraging rate. Maximize resource-seeking velocity.; Efficiency is critically weak at 0.467 (weakest metric). Survival organisms (IDs 0, 3) died young with 13 particles; survivors thrived with 8 particles. Root cause: organisms spend too much energy searching for resources relative to intake. Dead organisms likely had low resource-seeking parameters. Solution: aggressively increase resourceAttraction and explorationDrive to enable faster food discovery and reduce maintenance cost relative to energy gain. Secondary: increase moveSpeed to search efficiently (less time = less drag cost). Preserve beauty parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
