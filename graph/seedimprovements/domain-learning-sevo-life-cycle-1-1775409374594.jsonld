@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775409374594",
+  "timestamp": "2026-04-05T17:16:14.594Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Particle systems waste energy on expensive movement patterns. Constrain motion (moveSpeed 0.3-0.5), reward efficient harvesting (energyConserve 0.7+), reduce exploration entropy (explorationDrive 0.3).; Efficiency is critically low (0.357) while survival is poor (50% death rate). The dead organisms (0,3,4) didn't reach age 500, indicating energy management failure. Three survived but with low energy reserves (8-19). To improve efficiency: reduce moveSpeed (high computational cost, low fitness gain), increase energyConserve (extend lifespan and reduce waste), lower explorationDrive (expensive computation for marginal beauty), increase resourceAttraction (focused foraging vs. wandering). Efficiency gains unblock the survival rate, which directly improves the goal function.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
