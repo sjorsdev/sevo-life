@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406238676",
+  "timestamp": "2026-04-05T16:23:58.676Z",
+  "observation": "Domain sevo-life (fitness 0.641) generated 2 insights",
+  "suggestion": "Alive organisms hit age cap but with low energy reserves—survival bottleneck is mid-lifespan; fix energy budget before pushing max-age limits.; Efficiency is critically low (0.36) — organisms burn energy inefficiently despite good survival age. Survival rate is 50% (3/6 alive) indicating mid-lifespan failures. Within beauty, spatialComposition (0.3) is extremely weak. Root cause: high energy expenditure with poor resource gathering. Solution: reduce moveSpeed to cut energy drain, increase energyConserve to extend runway, boost resourceAttraction to find food faster and more reliably, tune harvestThreshold to trigger feeding earlier. For those reaching age 500, energy levels (15-23) suggest marginal efficiency even at equilibrium.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
