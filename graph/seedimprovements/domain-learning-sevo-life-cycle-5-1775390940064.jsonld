@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775390940064",
+  "timestamp": "2026-04-05T12:09:00.064Z",
+  "observation": "Domain sevo-life (fitness 0.695) generated 2 insights",
+  "suggestion": "Efficiency and beauty trade energy: rhythm requires temporal variation (pulseFrequency), but low conservation wastes it on movement. Decouple via slower base movement + conserved energy → pulses stay visible without cost.; Efficiency is critically weak (0.146) and is the primary fitness bottleneck. Secondary weakness is beautyScore (0.569), specifically rhythm (0.265). Efficiency falls because energyConserve is too low (0.4–0.8 range) and some entities waste energy with excessive moveSpeed (0.75–0.85). Rhythm fails because pulseFrequency is near-zero (0.0–0.25 range), suppressing temporal visual patterns. Fix: boost energyConserve globally (+0.15–0.2), reduce high moveSpeed entities, and multiply pulseFrequency by 3–4x to restore rhythm while conserving energy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
