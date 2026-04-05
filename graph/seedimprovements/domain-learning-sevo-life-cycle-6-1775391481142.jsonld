@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775391481142",
+  "timestamp": "2026-04-05T12:18:01.142Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "Energy inefficiency comes from high move speed + conservative harvest — entities search too much for too-high thresholds. Rhythm emerges from pulse timing, not trait coverage.; Efficiency is critically low at 0.151, dragging fitness from potential 0.8+ down to 0.706. Survival is maxed (1.0) so no gain there. Beauty is acceptable but rhythm is weakest sub-metric at 0.223. Primary lever: reduce movement waste and increase harvest greediness. Move high-speed entities slower (Harvester 0.85→0.70, Persistence Hunter 0.82→0.65) and boost energy conservation uniformly. Secondary lever: increase pulseFrequency across population to create rhythmic patterns (rhythm metric critically underdeveloped). This compounds: entities waste less energy, harvest more predictably, create more visible patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
