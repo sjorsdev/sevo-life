@@ -234,12 +234,17 @@ async function runDomainCycle(
   try {
     const blueprint = await Deno.readTextFile(bestAgent.blueprint);
 
+    // Detect genome format: v1 (EntityGenome) or v2 (particle Genome)
+    const isParticle = blueprint.includes("sim.ts") || blueprint.includes("Genome");
+    const isV1 = blueprint.includes("EntityGenome") || blueprint.includes("life-types");
+
     // Extract current genomes from blueprint
-    const genomeMatch = blueprint.match(/const genomes:\s*EntityGenome\[\]\s*=\s*\[([\s\S]*?)\];/);
-    const currentGenomes = genomeMatch ? genomeMatch[1].slice(0, 2000) : "unknown";
+    const genomeMatch = isParticle
+      ? blueprint.match(/const (jellyfish|crawler|floater|allGenomes)[\s\S]*?maxParticles:\s*\d+/g)
+      : blueprint.match(/const genomes:\s*EntityGenome\[\]\s*=\s*\[([\s\S]*?)\];/);
+    const currentGenomes = genomeMatch ? (Array.isArray(genomeMatch) ? genomeMatch.join("\n").slice(0, 2500) : genomeMatch[1]?.slice(0, 2000) ?? "unknown") : "unknown";
 
     // Get last run's detailed fitness breakdown
-    const lastRunResult = fitnessMap.get(bestAgent["@id"]) ?? bestFitness;
     const bestResult = await run(bestAgent.blueprint, {
       ...SEVO_PERMISSIONS,
       read: [...SEVO_PERMISSIONS.read, "./blueprints", "./src"],
@@ -250,12 +255,23 @@ async function runDomainCycle(
       `- ${g.name}: ${g.description} (metric: ${g.metric})`
     ).join("\n");
 
+    const genomeParamInfo = isParticle
+      ? `This is a PARTICLE simulation. Each organism genome has:
+springStiffness (0.01-0.5), springDamping (0.01-0.3), drag (0.9-0.99), baseRadius (2-8),
+resourceAttraction (0-1), flockingStrength (0-1), avoidanceRadius (10-80),
+pulseRate (0-1), swimStrength (0-1).
+Growth steps have: triggerAge, angle (radians), distance (5-25), childRadius (0.3-2).
+Colors are RGB arrays [0-255, 0-255, 0-255].`
+      : `Each genome has: moveSpeed, turnBias, resourceAttraction, trailAttraction, harvestThreshold, energyConserve, explorationDrive, trailIntensity, trailColor (0-5), pulseFrequency, patternSymmetry`;
+
     const prompt = `You are tuning genome parameters for a sevo-life simulation.
 
 GOALS: ${goal.compositeFitness}
 ${goalDescription}
 
 CURRENT FITNESS: ${JSON.stringify(breakdown, null, 2)}
+
+${genomeParamInfo}
 
 CURRENT GENOMES (8 entities with these parameters):
 ${currentGenomes}
@@ -287,9 +303,14 @@ Only include genomes you want to change. Only include parameters you want to cha
 
     // Apply parameter patches to the blueprint
     let mutatedBlueprint = blueprint;
-    const genomeParams = ["moveSpeed", "turnBias", "resourceAttraction", "trailAttraction",
-      "harvestThreshold", "energyConserve", "explorationDrive", "trailIntensity",
-      "trailColor", "pulseFrequency", "patternSymmetry"];
+    const genomeParams = isParticle
+      ? ["springStiffness", "springDamping", "drag", "baseRadius",
+         "resourceAttraction", "flockingStrength", "avoidanceRadius",
+         "pulseRate", "swimStrength", "maxParticles", "growthEnergyCost",
+         "distance", "childRadius", "triggerAge", "angle"]
+      : ["moveSpeed", "turnBias", "resourceAttraction", "trailAttraction",
+         "harvestThreshold", "energyConserve", "explorationDrive", "trailIntensity",
+         "trailColor", "pulseFrequency", "patternSymmetry"];
 
     if (patch.genomes && Array.isArray(patch.genomes)) {
       for (const genomePatch of patch.genomes) {
