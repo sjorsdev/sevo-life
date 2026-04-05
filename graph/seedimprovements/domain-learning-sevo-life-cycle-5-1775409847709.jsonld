@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775409847709",
+  "timestamp": "2026-04-05T17:24:07.709Z",
+  "observation": "Domain sevo-life (fitness 0.652) generated 2 insights",
+  "suggestion": "Efficiency bottleneck stems from kinetic waste—reduce moveSpeed 20%, increase energyConserve 50%, spread organisms via explorationDrive, diversify visual footprint via trailColor variance.; Efficiency is critically weak (0.383) compared to survival (0.667) and beauty (0.671). Spatial composition (0.3) and diversity of forms (0.456) are also poor. Root cause: organisms moving too fast (energy inefficient) and clustered too close together (bad spatial use). Solution: reduce movement speed and increase energy conservation globally, boost exploration drive for spatial spread, vary trail patterns across entities to increase morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
