@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411420457",
+  "timestamp": "2026-04-05T17:50:20.457Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Survival > beauty. Energy-wasting exploration kills before genetics express enough complexity to be beautiful. Constrain movement, reward efficient harvesting.; Survival Rate at 0.5 is the critical bottleneck — 50% mortality despite 500-cycle lifespan. Energy conservation is the lever. Efficiency at 0.405 compounds this: creatures burn resources fast but gain little return. Dead organisms (0,3,4) likely exceeded energy budgets before reaching reproductive payoff. Secondary issue: diversityOfForms at 0.456 suggests creatures are too morphologically similar. Solution: (1) Reduce metabolic drag via energyConserve + lower moveSpeed, (2) increase resourceAttraction to find food before starvation, (3) vary trail colors/pattern symmetry across genomes to boost form distinctness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
