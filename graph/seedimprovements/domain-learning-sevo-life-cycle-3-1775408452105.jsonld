@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408452105",
+  "timestamp": "2026-04-05T17:00:52.105Z",
+  "observation": "Domain sevo-life (fitness 0.616) generated 2 insights",
+  "suggestion": "Efficiency scales with metabolic specialization—not all organisms should be generalists. Diversity and efficiency improve together when genomes adopt different energy strategies.; Efficiency at 0.523 is the critical bottleneck—the weakest metric by far, and it directly limits the composite goal. Within beauty, diversityOfForms (0.456) is failing; organisms are too morphologically similar. The alive organisms plateau at age 500 with moderate energy (15-32), suggesting they're surviving but not thriving. Root cause: organisms are either burning energy inefficiently or not optimizing resource gathering. Solution: (1) Lower movement costs via reduced moveSpeed and explorationDrive, (2) increase energyConserve to stretch resources, (3) vary resourceAttraction and harvestThreshold across genomes to create metabolic diversity and force specialization.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
