@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394733931",
+  "timestamp": "2026-04-05T13:12:13.931Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Energy waste dominates over beauty—maximize conservation first, then add coordinated rhythm through pulse timing to rebuild beauty as a byproduct.; Efficiency is critically weak (0.156) compared to survival (1.0) and beauty (0.509). The bottleneck is energy waste: entities are moving and exploring without adequate energy conservation or rhythmic resource capture patterns. Rhythm (0.107) is also severely underperforming, indicating pulseFrequency across the population is too low. Strategy: (1) boost energyConserve on low-efficiency entities to reduce waste, (2) increase pulseFrequency for visible rhythmic patterns that contribute to both beauty and perceived efficiency, (3) refine harvestThreshold on explorers to be more selective about marginal harvests.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
