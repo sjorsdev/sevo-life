@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413084801",
+  "timestamp": "2026-04-05T18:18:04.801Z",
+  "observation": "Domain sevo-life (fitness 0.605) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is particle growth overhead; energy-expensive symmetry outcompetes adaptive diversity. Trade some motion for survival.; Efficiency at 0.38 is the critical bottleneck — it's dragging the composite fitness despite strong beauty (0.725) and acceptable survival (0.667). Dead organisms (ids 0, 3) had 13 particles and expired at ~240 cycles, while survivors have 8-12 particles and max at 500. This suggests particle overhead is killing early growth. Additionally, formBeauty and symmetry are high but diversityOfForms is only 0.456 — the genomes are converging. Strategy: (1) Reduce energy waste by lowering movement speed and increasing conservation, (2) Reduce particle overhead in complex morphologies, (3) Boost form diversity via trail color and pattern variation to open new beauty dimensions.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
