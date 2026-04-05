@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775417540272",
+  "timestamp": "2026-04-05T19:32:20.272Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "Organisms are starving despite low energyConserve—they need aggressive resource-seeking and spatial spread, not conservation. Survival depends on finding food, not hoarding.; Efficiency is the weakest component at 0.583 (20% weight) and spatial composition at 0.3 reveals poor distribution. Most organisms at age 500 have critical energy depletion (0-8 energy), indicating failed resource harvesting. The system prioritizes beauty over survival mechanics. Increase exploration and resource-finding behaviors to spread organisms and boost energy acquisition. Lower harvestThreshold to make feeding more aggressive when starving. Boost moveSpeed and explorationDrive to improve spatial composition and efficiency together.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
