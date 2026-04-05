@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775394656995",
+  "timestamp": "2026-04-05T13:10:56.995Z",
+  "observation": "Domain sevo-life (fitness 0.699) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement + energy waste relative to harvest gain. Rhythm deficit means existing trails are not creating temporal patterns. Push thresholds lower to harvest more per joule spent; push pulse frequencies higher to create emergent visual rhythm.; Efficiency is critically weak at 0.145 (only 0.029 contribution despite 20% weight). Beauty rhythm is 0.303 and coverage is 0.317 — both pulling beautyScore down. Strategy: (1) aggressively lower harvestThreshold on resource-focused entities to capture marginal gains while reducing movement waste, (2) max out energyConserve on the hoarder, (3) boost pulseFrequency across the board to dramatically improve rhythm and coverage metrics. The 1.0 survivalRate is stable so we can shift optimization toward efficiency and aesthetic emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
