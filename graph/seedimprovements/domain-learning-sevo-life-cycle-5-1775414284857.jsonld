@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775414284857",
+  "timestamp": "2026-04-05T18:38:04.857Z",
+  "observation": "Domain sevo-life (fitness 0.609) generated 2 insights",
+  "suggestion": "Beauty is solved; survival fails due to energy deficit. Efficiency compounds both: energy-efficient creatures survive longer and can invest in complex beauty without dying.; Efficiency is critically low (0.324, worth 20% of score). With 50% survival rate and many organisms dying before age 500, the population is energy-starved. BeautyScore is strong (0.778), so avoid radical changes there. The problem: creatures spend too much energy moving and too little finding resources. Survival gains will also improve overall fitness. Strategy: (1) reduce moveSpeed to lower energy burn, (2) increase energyConserve to preserve reserves, (3) increase resourceAttraction to make foraging cheaper, (4) reduce explorationDrive to eliminate wasteful wandering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
