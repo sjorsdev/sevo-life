@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775389284826",
+  "timestamp": "2026-04-05T11:41:24.826Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 10 insights",
+  "suggestion": "beautyScore weighted 0.3 (0.636 fitness indicates surviving/efficiency high).; trailIntensity 0.9 + trailColor 1 + pulseFrequency 0.4 creates visually distinct patterns; patternSymmetry 0.85 + pulseFrequency 0.35 creates rhythm in trails.; keep highly efficient genome for survival anchor. harvestThreshold 0.05; trailColor 4 + high trailIntensity 0.8 adds color diversity to global palette.; patternSymmetry 0.9 + turnBias 0.45 generates spiral-like trails.; aggressive resource seeking (resourceAttraction 0.9) + visual expression; explorationDrive 0.8 + pulseFrequency 0.32 creates pattern emergence through movement.; harvestThreshold 0.06 + moveSpeed 0.35 maximizes resource capture per energy unit.; decision function unchanged — fitness improvement comes from genome diversity",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
