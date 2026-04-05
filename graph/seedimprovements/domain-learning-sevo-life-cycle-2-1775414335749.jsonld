@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775414335749",
+  "timestamp": "2026-04-05T18:38:55.749Z",
+  "observation": "Domain sevo-life (fitness 0.597) generated 2 insights",
+  "suggestion": "High metabolism (moveSpeed) + weak conservation = early death and low efficiency. Trail coherence drives spatial beauty — intensity and symmetry are key.; Efficiency (0.428) is critically lowest and drags overall fitness. Spatial composition (0.3) and diversityOfForms (0.456) are also weak. Three organisms died young (ages 228-399), suggesting poor energy conservation. Alive organisms at age 500 have low energy (7-20), indicating moveSpeed is too high and energyConserve too low. Spatial composition failure suggests organisms lack trail coherence. Solution: globally reduce moveSpeed to conserve energy, increase energyConserve, boost trailIntensity and patternSymmetry for spatial structure, vary trailColor across genomes to increase form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
