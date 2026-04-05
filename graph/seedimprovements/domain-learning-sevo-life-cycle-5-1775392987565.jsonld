@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775392987565",
+  "timestamp": "2026-04-05T12:43:07.565Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with movement; pure harvesters should minimize speed and maximize conservation. Unlock efficiency from 0.147 → 0.3+ by ruthless energy discipline.; Efficiency (0.147) is the critical bottleneck, dragging down overall fitness. The goal weights it at 0.2, but it's contributing only 0.029 vs survivalRate's 0.5. Root causes: (1) moveSpeed too high for stationary harvesters—movement wastes energy without commensurate resource gain; (2) harvestThreshold floor (0.05) still leaves marginal resources unharvested; (3) energyConserve maxed at 0.85 is insufficient. Strategy: aggressive efficiency push—lower movement for harvesters, aggressive thresholds, maximize energy conservation. Survival is already perfect (1.0), so marginal efficiency gains have high ROI.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
