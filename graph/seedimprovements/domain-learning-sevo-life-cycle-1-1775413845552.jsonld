@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775413845552",
+  "timestamp": "2026-04-05T18:30:45.552Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Low efficiency + survival suggests exploration/foraging mismatch—organisms search without finding. Prioritize resource detection over movement speed.; Efficiency is critically weak (0.453), dragging overall fitness despite decent beauty. Organisms are energy-starved (low levels despite max age) and dying before completion. Root cause: inefficient resource acquisition and movement. Solution: boost resource attraction for faster energy collection, increase energy conservation to reduce movement waste, and improve exploration drive for better spatial distribution and diversity. Secondary: weak diversity of forms (0.456) suggests genomes need varied trail patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
