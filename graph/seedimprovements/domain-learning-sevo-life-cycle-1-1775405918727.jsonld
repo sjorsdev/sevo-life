@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405918727",
+  "timestamp": "2026-04-05T16:18:38.727Z",
+  "observation": "Domain sevo-life (fitness 0.617) generated 2 insights",
+  "suggestion": "In particle life, energy waste from excessive movement kills survivors before beauty matters; optimize for resource density first, exploration second.; Efficiency is the critical bottleneck at 0.479, dragging 20% of the fitness score. Death events (organisms 0, 3) and low energy in survivors (21-33) indicate poor energy management. Survival-related deaths are efficiency failures. Target: reduce wasteful movement, improve resource acquisition, and preserve energy. These changes apply across all entities since the issue is systemic parameter tuning, not organism-specific strategy.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
