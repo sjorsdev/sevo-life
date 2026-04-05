@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775404998075",
+  "timestamp": "2026-04-05T16:03:18.075Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 2 insights",
+  "suggestion": "Organisms survive but metabolically inefficient — over-movement without goal. Reduce drift, increase energy preservation, add coordinated pulsing for emergent rhythm.; Efficiency (0.152) is critically weak despite perfect survival. Organisms are burning energy with no proportional output. This drags overall fitness. Secondary weakness: Rhythm (0.25) and Coverage (0.338) suggest uncoordinated, clustered behavior. Strategy: (1) reduce energy waste via lower movement costs and higher conservation, (2) tune for better spatial distribution and synchronized motion. Complexity is already strong (0.885) — preserve it by maintaining some behavioral richness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
