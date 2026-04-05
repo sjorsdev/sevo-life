@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775394938060",
+  "timestamp": "2026-04-05T13:15:38.060Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Fast movement without energy discipline wastes more resources than exploration gains—prioritize conservation, then move only when needed.; Efficiency is critically weak at 0.142, dragging overall fitness despite strong survival (0.875). The problem: high moveSpeed genomes (Harvester at 0.85, Persistence at 0.75) burn energy without proportional resource gain. Energy conservation is consistently too low (0.6-0.72) for the movement costs incurred. Solution: reduce movement in fast genomes and increase conservation uniformly. Survives will remain strong because resourceAttraction is high; the energy saved goes directly to efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
