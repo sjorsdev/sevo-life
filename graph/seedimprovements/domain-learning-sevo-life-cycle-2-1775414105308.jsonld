@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775414105308",
+  "timestamp": "2026-04-05T18:35:05.308Z",
+  "observation": "Domain sevo-life (fitness 0.645) generated 2 insights",
+  "suggestion": "Evolution pressure should shift from movement complexity to resource efficiency and spatial coherence; morphology is good (0.9 proportionHarmony) but physics parameters are unbalanced.; Efficiency is critically weak (0.397) while survival is below target (0.667). Organisms are burning energy faster than acquiring it. Spatial composition (0.3) shows poor layout. Propose: reduce wasteful movement parameters (moveSpeed, swimStrength) across all living entities to conserve energy; increase resourceAttraction so organisms find food faster and live longer; boost energyConserve to stretch each harvest further; strengthen spatial/pattern parameters to improve composition. Dead organisms show they struggle mid-lifecycle — likely energy starvation. Alive ones plateau at max age, suggesting they survive but inefficiently.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
