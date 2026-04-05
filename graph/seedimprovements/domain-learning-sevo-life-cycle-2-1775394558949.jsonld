@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775394558949",
+  "timestamp": "2026-04-05T13:09:18.949Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Movement cost dominates energy budget. Shift from 'explore and harvest' to 'harvest efficiently where you are' — lower speed, higher conservation, pulsed behavior.; Efficiency is critically weak (0.139 vs survivalRate 1.0 and beautyScore 0.573). The fitness weighted by 0.2 contributes minimally. Analysis: entities move too aggressively (moveSpeed 0.6-0.7 burns energy) while energyConserve sits at 0.65-0.9. Additionally, rhythm beauty is extremely low (0.117), suggesting erratic pulse patterns. Fix: reduce moveSpeed cluster-wide to lower energy expenditure, increase energyConserve to 0.85+, boost pulseFrequency to establish rhythm, reduce explorationDrive to minimize wasteful wandering. Secondary: rhythm improvement directly improves beautyScore.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
