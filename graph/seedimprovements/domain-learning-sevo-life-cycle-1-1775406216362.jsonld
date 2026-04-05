@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775406216362",
+  "timestamp": "2026-04-05T16:23:36.362Z",
+  "observation": "Domain sevo-life (fitness 0.613) generated 2 insights",
+  "suggestion": "Efficiency gains come from movement economy (less movement, smarter resource seeking) and energy budgeting. Diversity comes from growth asymmetry—break perfect mirroring to create heterogeneous phenotypes.; Efficiency is critically weak (0.42) compared to survival (0.667) and beauty (0.707). Root causes: (1) high energy waste from aggressive movement/resource-seeking, (2) low energy conservation, (3) unbalanced exploration-to-sustainability ratio. Secondary: diversity of forms is low (0.456), driven by limited growth pattern variance. Mutations focus on: reduce moveSpeed and resourceAttraction to cut energy waste; increase energyConserve to sustain longer on same resources; vary patternSymmetry and explorationDrive to increase morphological diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
