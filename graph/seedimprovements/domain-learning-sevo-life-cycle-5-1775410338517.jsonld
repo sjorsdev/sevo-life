@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410338517",
+  "timestamp": "2026-04-05T17:32:18.517Z",
+  "observation": "Domain sevo-life (fitness 0.625) generated 2 insights",
+  "suggestion": "survival bottleneck is energy management, not morphology — increase conservation, reduce movement cost, improve feeding efficiency; survivalRate is critically low (0.333) — only 2/6 organisms alive. Most die before max age, indicating energy drain or poor resource acquisition. Beauty is decent but diversity=0 indicates homogeneous trails. Efficiency at 0.336 suggests metabolic waste. Primary fix: increase energyConserve (reduce drain), boost resourceAttraction (find food), diversify trailColor (improve diversity metric). Secondary: reduce wasteful exploration if explorationDrive is high.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
