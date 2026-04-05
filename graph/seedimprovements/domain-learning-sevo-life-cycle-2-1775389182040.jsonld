@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775389182040",
+  "timestamp": "2026-04-05T11:39:42.040Z",
+  "observation": "Domain sevo-life (fitness 0.694) generated 13 insights",
+  "suggestion": "v2 achieved 0.694 by maximizing efficiency, but over-harvesting reduced survivalRate (0.5 weight).; previous versions were too aggressive. harvestThreshold=0.12 balances gain with energy spend.; survivalRate was dragged down by high-energy strategies. This genome sacrifices harvest for longevity.; beautyScore (0.3 weight) improved by genomes with high trailIntensity + patternSymmetry.; avoid specialization that kills other metrics. This genome maintains baseline across survival, beauty, efficiency.; patternSymmetry and pulseFrequency together create emergent beauty that contributes to world sustainability.; explorationDrive=0.75 finds new resources without excessive movement. turnBias discovers new areas.; trailColor diversity (different per genome) increases global beauty metric. This genome uses color 6.; moveSpeed=0.45 reduces energy drain while resourceAttraction=0.72 keeps harvest sustainable.; pattern_emergence in world sustainability measured by coordinated behavior.; energy management is critical for survival. Check energy first.; harvest decision balances resource need with energy cost.; trail creation is always enabled but varies by genome intensity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
