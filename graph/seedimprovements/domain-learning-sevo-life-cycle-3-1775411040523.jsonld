@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775411040523",
+  "timestamp": "2026-04-05T17:44:00.523Z",
+  "observation": "Domain sevo-life (fitness 0.612) generated 2 insights",
+  "suggestion": "Energy scarcity forces early death and poor exploration. Shift from movement cost to resource-seeking effectiveness.; Efficiency (0.489) is the bottleneck limiting overall fitness. Organisms are dying prematurely (ids 0, 3) and survivors have critically low energy (14-32). SpatialComposition (0.3) shows poor distribution. Increasing energyConserve prevents starvation, increasing resourceAttraction helps organisms find food, and explorationDrive spreads them spatially. SymmetryQuality (0.625) improves with patternSymmetry.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
