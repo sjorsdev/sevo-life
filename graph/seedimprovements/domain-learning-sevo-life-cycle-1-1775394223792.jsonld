@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775394223792",
+  "timestamp": "2026-04-05T13:03:43.792Z",
+  "observation": "Domain sevo-life (fitness 0.695) generated 2 insights",
+  "suggestion": "Efficiency crashes when energy waste exceeds resource gain rate. Cut exploration drift, maximize conservation.; Efficiency is critically weak at 0.158, contributing only 0.032 to overall fitness while survivalRate (1.0) is perfect. The bottleneck is energy waste, not resource scarcity. Current genomes have high explorationDrive (0.5-0.8) causing expensive random wandering, and energyConserve below optimal (0.4-0.8 range). To improve efficiency: reduce wasted exploration, boost energy conservation, and recalibrate harvestThreshold to avoid harvesting from near-empty resources that yield low return-on-investment. Higher energyConserve (0.8+) + lower explorationDrive (0.3-0.4) will extend lifespan and increase efficiency without sacrificing resource seeking since resourceAttraction (0.65-0.95) keeps entities directed.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
