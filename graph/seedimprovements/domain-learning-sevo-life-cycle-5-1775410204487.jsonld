@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410204487",
+  "timestamp": "2026-04-05T17:30:04.487Z",
+  "observation": "Domain sevo-life (fitness 0.636) generated 2 insights",
+  "suggestion": "survival floor enables everything else — optimize for persistence first, beauty emerges from stable populations; survivalRate (0.5) is critically low — 3 of 6 organisms dead, survivors barely have energy. This is the primary constraint on fitness. Root causes: (1) organisms expend energy faster than they gather it (high drag + pulseRate consuming energy), (2) resourceAttraction too weak to compete for resources, (3) complex growth sequences cost energy without survival payoff. Secondary issue: efficiency (0.313) shows poor energy-to-lifespan ratio. Solution: reduce energy expenditure (drag, pulseRate), increase resource gathering, simplify growth. Beauty is stable enough to accept minor trade-off for survival viability.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
