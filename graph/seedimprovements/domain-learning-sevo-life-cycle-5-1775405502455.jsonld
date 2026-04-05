@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405502455",
+  "timestamp": "2026-04-05T16:11:42.455Z",
+  "observation": "Domain sevo-life (fitness 0.663) generated 2 insights",
+  "suggestion": "Lean organisms (8 particles) are 3-5x more energy-efficient than bulky ones (12 particles). Prioritize metabolic efficiency over particle count.; Efficiency at 0.402 is the critical bottleneck, dragging 20% of fitness from 0.78 potential down to 0.63 actual. Survivalrate and beauty are healthy (0.667, 0.733), but organisms waste energy on movement and maintenance. Alive organisms show inverse correlation: those with fewer particles (8) maintain higher energy reserves (23, 39) vs. 12-particle organisms (3, 8 energy). Strategy: increase energyConserve to reduce cost-per-action, boost resourceAttraction to feed more consistently, lower moveSpeed in high-particle organisms to cut wasted locomotion. This improves energy economics without harming survival or beauty metrics.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
