@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775393965273",
+  "timestamp": "2026-04-05T12:59:25.273Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost unmatched to resource gain; low pulseFrequency leaves rhythm dimension unexplored.; Efficiency is critically weak at 0.16 (contributing only 0.032 to overall fitness). Survival is excellent (1.0) so energy waste is not killing entities—they just aren't harvesting efficiently. The high-movement genomes (Harvester 0.85, Persistence Hunter 0.75) pair with low energyConserve (0.25, 0.5), burning energy without proportional gain. Rhythm is also weak (0.101), suggesting pulseFrequency is too low to create temporal patterns. Strategy: reduce moveSpeed on aggressive foragers, increase energyConserve baseline, boost pulseFrequency for rhythm and beauty emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
