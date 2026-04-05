@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408725639",
+  "timestamp": "2026-04-05T17:05:25.639Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Organisms are dying despite decent form beauty — the issue is energy metabolism, not morphology. Shift from exploration/display to resource-efficiency.; survivalRate at 0.5 (worth 0.25 toward final fitness) is the critical bottleneck. 50% organism death suggests energy starvation or inefficient harvesting. beautyScore is actually strong at 0.674. Target: raise survivalRate from 0.5→0.7 by improving resource acquisition and energy conservation. Secondary: raise efficiency from 0.347→0.5 by reducing wasted movement and pulse overhead.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
