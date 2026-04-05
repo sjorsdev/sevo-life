@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413042510",
+  "timestamp": "2026-04-05T18:17:22.510Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Organisms survive by being still, not by being efficient — convert energy conservation into purposeful spatial patterns.; Efficiency is the critical bottleneck (0.561), dragging overall fitness to 0.64. Organisms have severe energy leaks: survivor org1 has only 3J at age 500, org5 has 10J despite living full duration. Dead organisms (0, 3) suggest energy bankruptcy before maturation. Weak spatialComposition (0.3) indicates poor trail/pattern organization. Strategy: (1) increase energyConserve across all genomes to retain resources, (2) reduce moveSpeed and explorationDrive to cut baseline metabolic cost, (3) raise harvestThreshold for selective, efficient feeding, (4) boost patternSymmetry and trailIntensity to organize space better, converting wasted movement into coordinated, beautiful behavior.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
