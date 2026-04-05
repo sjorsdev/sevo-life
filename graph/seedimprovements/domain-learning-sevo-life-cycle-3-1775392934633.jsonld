@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775392934633",
+  "timestamp": "2026-04-05T12:42:14.633Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Efficiency collapses when energy cost of movement exceeds harvest gain; conservative movement + selective harvesting + better energy retention restores the efficiency baseline.; Efficiency is critically weak at 0.152, dragging the overall fitness down. The root cause: entities are burning energy through excessive movement (moveSpeed too high) with insufficient energy conservation (energyConserve too low). Compounding this, some entities (Efficient Hoarder at 0.05) harvest too aggressively, wasting energy on marginal resources. Secondary weakness: rhythm (pulseFrequency) is 0.265, the lowest beauty component. Strategy: (1) Increase energyConserve across all types to 0.75-0.85 to reduce energy waste. (2) Reduce moveSpeed for high-movement types (Harvester, Aesthetic Harvester) to 0.5 for efficiency. (3) Normalize harvestThreshold upward to 0.1-0.15 to avoid wasting energy on low-value resources. (4) Increase pulseFrequency to improve rhythm beauty. This shift prioritizes the weakest weighted goal (efficiency 0.2 weight) while also addressing beauty (0.3 weight).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
