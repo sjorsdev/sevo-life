@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410135118",
+  "timestamp": "2026-04-05T17:28:55.118Z",
+  "observation": "Domain sevo-life (fitness 0.555) generated 2 insights",
+  "suggestion": "Energy-starved organisms die before reaching full beauty expression. Reduce friction, accelerate feeding, and diversify morphologies to unlock longer lifespans and form complexity.; Efficiency (0.383) is the bottleneck — the lowest fitness component. Combined with early organism deaths (263-272 age vs 500 max), this indicates wasted energy in movement and poor resource gathering. Survival rate (0.667) needs improvement too. Strategy: (1) Reduce drag+springStiffness to lower movement cost, (2) increase resourceAttraction and energyConserve to help organisms find food faster and retain energy longer, (3) vary parameters across genomes to increase diversity of forms (currently 0.456, the weakest beauty metric). Organisms with higher energy (16-20) are alive; low-energy ones (0-1) died. Efficiency tuning directly improves both survival and beauty diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
