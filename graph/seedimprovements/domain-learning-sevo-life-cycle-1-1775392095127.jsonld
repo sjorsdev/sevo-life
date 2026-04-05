@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775392095127",
+  "timestamp": "2026-04-05T12:28:15.127Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Entities are too cautious: high energyConserve locks up foraging activity. Shift from pure conservation to active harvest engagement while maintaining survival baseline.; Efficiency (0.138) is the critical bottleneck, dragging fitness from potential 0.82 to 0.69. Secondary: rhythm (0.114) and coverage (0.408) within beauty metrics. The genomes are over-conserving energy—energyConserve values (0.6-0.85) prevent entities from harvesting aggressively enough relative to movement cost. Survival is perfect (1.0); we can trade conservation for engagement without breaking it. Rhythm requires direct pulseFrequency boost—most genomes are 0.08-0.3, creating no temporal pattern. Coverage needs selective exploration increases.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
