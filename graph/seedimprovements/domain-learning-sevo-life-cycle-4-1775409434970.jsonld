@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409434970",
+  "timestamp": "2026-04-05T17:17:14.970Z",
+  "observation": "Domain sevo-life (fitness 0.608) generated 2 insights",
+  "suggestion": "Energy waste comes from overcommunication (trailAttraction) not hunger — organisms are following pheromone clouds instead of individually foraging.; Efficiency (0.496) is the critical weak point — 26% below target. Organisms are energy-inefficient despite stable survival. Secondary weakness: spatialComposition (0.3) shows severe clustering. Root cause: high moveSpeed and low energyConserve cause wasteful locomotion; high trailAttraction causes all organisms to converge on same paths, reducing spatial diversity and creating redundant patterns. Fix: increase energyConserve across the board, reduce trailAttraction to break the clustering attractor, and boost explorationDrive to fill the space better. This trades slight mobility for 3x efficiency gain and solves spatial composition simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
