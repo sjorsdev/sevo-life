@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775409827595",
+  "timestamp": "2026-04-05T17:23:47.595Z",
+  "observation": "Domain sevo-life (fitness 0.599) generated 2 insights",
+  "suggestion": "Energy conservation is the efficiency bottleneck; low harvesting and high movement waste force starvation deaths before survival lifespan benefits compound.; Efficiency is severely weak (0.372) — it's the primary fitness constraint. Organisms are hemorrhaging energy and not harvesting effectively. Secondary issue: diversityOfForms (0.456) suggests organisms are too morphologically similar. Three organisms are dead despite reaching reasonable ages, indicating resource starvation or poor energy conservation. Solution: (1) Prioritize energyConserve and harvestThreshold across all genomes to stop energy bleed, (2) Boost resourceAttraction and explorationDrive to help organisms find food before they starve, (3) Vary trailColor and patternSymmetry across population to increase morphological diversity and exploit different ecological niches.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
