@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v39",
+  "timestamp": "2026-04-05T10:21:36.844Z",
+  "version": 39,
+  "parent": "benchmark-v38",
+  "task": "Implement Adaptive Quantum-Byzantine Consensus with Latency-Optimality Certificates (v39) extending v38 by: (1) Mechanically-verified Liveness Bound Proof—agents must prove via temporal logic (TLA+) that consensus is achieved within O(f+1) rounds in asynchronous settings where f < n/4, with machine-checked proof that no correct process waits indefinitely even under Byzantine topology churn and quantum-adversarial message injection; (2) Adversarial Network Topology Attack Simulation—agents must validate protocol safety and liveness under dynamically-reordered Byzantine networks, specifically proving resilience against: (a) n/3 Byzantine nodes with adaptive corruption, (b) message arrival reordering up to O(n) hops, (c) cascading network partition-merge cycles with Byzantine leader spoofing; (3) Hybrid Classical-Quantum Adversary Resistance Proof—agents must prove via reduction to decisional Diffie-Hellman that the consensus output is computationally indistinguishable from random even against adversaries with quantum key recovery (Grover) and fault-tolerant quantum computers attacking post-quantum signature schemes; (4) Composable Safety Invariant—agents must prove using composability framework that if ANY two protocol instances run on same network, the cross-instance invariant (no two correct processes commit conflicting values across instances) is maintained under Byzantine faults, validated by SMT solver for all Byzantine coalitions up to size f; (5) Optimal DoS Resource Cost Certification—agents must certify via game-theoretic analysis that the cost to an attacker to delay consensus by Δ rounds is at least Ω(Δ·n·B) where B is per-message bandwidth, with proof that no protocol in the Byzantine asynchronous model can achieve lower cost-to-delay ratio.",
+  "scoringLogic": "livenessRoundBoundTLA+(0.18) + adversarialTopologyChurnResistance(0.17) + hybridQuantumAdversaryReductionProof(0.18) + composableSafetyInvariantSMT(0.17) + optimizedDoSGameTheoryProof(0.16) + resourceUtilizationEfficiency(0.14)",
+  "difficulty": 39,
+  "passThreshold": 0.95
+}
