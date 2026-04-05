@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775411801030",
+  "timestamp": "2026-04-05T17:56:41.030Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not a local optimum—it's a **morphological lock-in**. The system has found the best possible organism shape within current structural constraints, but the constraint space itself has become the ceiling. All mutations are micro-refinements of the same body plan. Breaking through requires introducing new **generative degrees of freedom** (tissue types, reproductive dynamics, spatial complexity) that make old solutions suboptimal and force exploration of fundamentally different design spaces.; [hard] Introduce organ systems with cell specialization. Currently cells are likely homogeneous. Add 3-4 specialized cell types (sensory neurons, muscle fibers, energy-storage cells, structural skeleton) with interdependencies. Cells can only function in proximity to complementary types. — Current morphology space is locally saturated. Specialized tissues create orthogonal degrees of freedom: organisms now must balance competing tissue requirements, opening new body plans that can't be reached via parameter tuning. Beauty emerges from tissue coordination, not just shape.; [medium] Add reproductive events with mate selection. Organisms don't just reproduce independently—they seek compatible mates based on phenotype. Introduce sexual recombination where offspring inherit blended traits. Add heritable mate-preference genes. — Asexual reproduction hits local optima fast. Sexual recombination + mate choice creates runaway selection (e.g., peacock tails). Beauty stops being about individual fitness and becomes about signaling and courtship displays. Population-level dynamics escape individual optimization traps.; [medium] Introduce dynamic resource clustering and resource-type diversity. Instead of uniform food distribution, create spatial resource niches (protein-rich zones, energy-dense zones, toxic zones requiring detox organs). Organisms must specialize for different regions. — Current world likely has uniform selection pressure. Spatial niche diversity creates subpopulations with different fitness landscapes. Organisms can't optimize for all niches—diversity explodes, new body plans emerge. Beauty becomes context-dependent (symmetry works here, speed works there).",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
