@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411446052",
+  "timestamp": "2026-04-05T17:50:46.052Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "organisms are starving/exhausting energy mid-life; conservation + attraction fixes survival; diversity of trail/pattern parameters fixes compositional beauty.; survival rate is critically low (0.5, highest weight 0.5×) — organisms dying at ages 225-377 indicate energy depletion. Efficiency is also weak (0.354). Priority: increase energyConserve and resourceAttraction across all genomes to extend lifespan. Secondary: reduce moveSpeed to minimize wasteful movement. Tertiary: increase trailIntensity and patternSymmetry variance for better spatial composition (currently 0.3) and diversity (0.456).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
