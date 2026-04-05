@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412632289",
+  "timestamp": "2026-04-05T18:10:32.289Z",
+  "observation": "Domain sevo-life (fitness 0.639) generated 2 insights",
+  "suggestion": "Smaller, slower organisms with high energy-conservation and active resource-seeking dominate; scale energy budgets down, spread spatially wider, and reward efficient harvesting.; Efficiency is critically weak (0.365 vs 0.667 survival, 0.678 beauty). Organisms burn energy inefficiently—even survivors have low net energy. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are bottlenecks. Strategy: reduce energy waste via lower moveSpeed and higher energyConserve; boost spatial coverage and visual diversity via explorationDrive and patternSymmetry; improve resource capture efficiency via resourceAttraction and harvestThreshold tuning.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
