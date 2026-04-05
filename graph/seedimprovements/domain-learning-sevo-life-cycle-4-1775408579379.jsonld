@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775408579379",
+  "timestamp": "2026-04-05T17:02:59.379Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Efficiency collapses when organisms chase movement and harvesting indiscriminately. Selective harvesting + energy retention beats speed.; Efficiency is the critical bottleneck at 0.399, dragging the overall fitness to 0.612 despite strong beauty (0.684). The goal weights efficiency at only 0.2, but it's the worst-performing component. Root cause: high energy expenditure vs. harvest gain. Secondary weakness: spatial composition (0.3) suggests clustering. Solution: (1) reduce moveSpeed to cut energy cost per step, (2) increase energyConserve to stretch harvested resources, (3) boost harvestThreshold to avoid wasteful small harvests, (4) increase explorationDrive to spread organisms spatially and reduce redundant movement in the same region.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
