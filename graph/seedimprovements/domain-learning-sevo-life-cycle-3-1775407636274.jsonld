@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407636274",
+  "timestamp": "2026-04-05T16:47:16.274Z",
+  "observation": "Domain sevo-life (fitness 0.618) generated 2 insights",
+  "suggestion": "Survival advantage goes to organisms that spend less energy moving and more intelligently harvesting. Efficiency scales inversely with exploration drive and movement speed.; Efficiency is severely bottlenecked at 0.456 — it's dragging 0.091 points off overall fitness. Dead organisms had 13 particles; survivors have 8-12. The pattern suggests energy cost is killing larger variants. Low efficiency indicates organisms burn energy faster than they harvest. Solution: reduce movement overhead (moveSpeed), boost energy conservation (energyConserve), improve resource-gathering efficiency (resourceAttraction), and cut exploration waste (explorationDrive). These changes preserve beauty (0.723 is strong) while fixing the efficiency leak.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
