@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409650258",
+  "timestamp": "2026-04-05T17:20:50.258Z",
+  "observation": "Domain sevo-life (fitness 0.576) generated 2 insights",
+  "suggestion": "Survival != fitness: organisms live long but starve. Resource scarcity, not predation, is the limiter.; Efficiency (0.398) is the critical bottleneck—lowest component and dragging goal score. Organisms reach max age (500) but end critically low on energy (organism 2: 2 energy, organisms 0/3: dead). This suggests resourceAttraction and harvestThreshold mismatch: organisms are underfed despite long lifespans. Two dead organisms confirm energy depletion risk. Root cause: organisms move/consume energy but fail to gather enough resources. Fix: (1) boost resourceAttraction 0.3→0.7 to find scattered resources more effectively, (2) lower harvestThreshold 0.6→0.35 to trigger feeding earlier and more frequently, (3) increase energyConserve 0.4→0.75 to reduce per-cycle burn rate. Jellyfish and crawler archetypes both need this adjustment. Secondary gain: better energy stability should improve survivalRate.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
