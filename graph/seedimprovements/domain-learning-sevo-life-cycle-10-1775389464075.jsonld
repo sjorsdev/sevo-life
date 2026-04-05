@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-10-1775389464075",
+  "timestamp": "2026-04-05T11:44:24.075Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 20 insights",
+  "suggestion": "fitness plateau at 0.702 suggests survival bottleneck (50% weight).; ultra-low harvest thresholds cause entities to waste energy in barren areas.; shifted harvestThreshold from 0.08 to 0.15 to reduce wasted harvest attempts; increased energyConserve from 0.4 to 0.65 to extend survival; reduced moveSpeed from 0.4 to 0.35 to minimize energy waste in movement; raised harvestThreshold from 0.05 to 0.12 to avoid energy-negative harvests; raised trailIntensity from 0.85 to 0.9 to boost beauty component; increased patternSymmetry from 0.75 to 0.85 for more structured trails; lowered moveSpeed from 0.65 to 0.58 to reduce baseline energy expenditure; raised energyConserve from 0.55 to 0.62 across all genomes for baseline improvement; reduced moveSpeed from 0.75 to 0.65 for lower energy cost per distance; increased energyConserve from 0.65 to 0.7 to maximize endurance; lowered moveSpeed from 0.35 to 0.32 for minimal wasted energy; raised harvestThreshold from 0.06 to 0.14 to avoid energy-negative decisions; maximized trailIntensity (0.95) and pulseFrequency (0.4) for beauty dominance; lowered resourceAttraction from typical 0.75 to 0.6 to prioritize trail creation; increased moveSpeed to 0.8 for rapid pattern exploration; high trailAttraction (0.5) to follow and extend aesthetic paths; look ahead to avoid energy waste in empty regions; exploration drive scaled by energy level — conserve when low",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:10"
+  ],
+  "priority": 5
+}
