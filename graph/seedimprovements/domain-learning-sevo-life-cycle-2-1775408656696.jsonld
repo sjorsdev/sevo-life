@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408656696",
+  "timestamp": "2026-04-05T17:04:16.696Z",
+  "observation": "Domain sevo-life (fitness 0.688) generated 2 insights",
+  "suggestion": "Early death signals broken resource discovery; drag dominates energy budget on idle organisms. Spatial spread is the cheapest beauty lever.; Efficiency (0.402) is the weakest component—nearly half the goal weighting. Two organisms died early (ages 225, 267) suggesting poor resource finding or energy burn. The spatial composition (0.3) and diversity of forms (0.456) are also dragging beauty down. Strategy: (1) reduce drag for all to cut passive energy loss, (2) boost resourceAttraction and energyConserve for the dead ones to improve survival, (3) increase explorationDrive to spread organisms spatially and increase form diversity. This trades small moveSpeed cost for major efficiency gain.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
