@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410860761",
+  "timestamp": "2026-04-05T17:41:00.761Z",
+  "observation": "Domain sevo-life (fitness 0.588) generated 2 insights",
+  "suggestion": "Efficiency gains + spatial dispersion will raise beauty and survival simultaneously — organisms that spread efficiently use less total energy and create better spatial composition.; Fitness is held back by three weak components: (1) efficiency at 0.542 — organisms are particle-heavy and energy-inefficient, (2) spatialComposition at 0.3 — organisms cluster or fail to distribute across the world, (3) motionGrace at 0.426 — movement patterns lack fluidity. Dead organisms (id 0, 3) suggest survival threshold is borderline. To raise overall fitness above 0.7, prioritize efficiency by reducing wasted particle/energy cycles, spread organisms via explorationDrive, and smooth motion via pulseFrequency calibration.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
