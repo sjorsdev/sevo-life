@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775413349785",
+  "timestamp": "2026-04-05T18:22:29.785Z",
+  "observation": "Domain sevo-life (fitness 0.620) generated 2 insights",
+  "suggestion": "Spatial beauty emerges from dispersal + visual diversity; efficiency emerges from purposeful movement, not random wandering.; Fitness 0.619 is bottlenecked by three factors: (1) spatialComposition at 0.3 — organisms are clustered, wasting the environment's space; (2) diversityOfForms at 0.474 — trail patterns and visual phenotypes are too homogeneous; (3) efficiency at 0.422 — wasting energy on unfocused movement. Organism 0 has critical energy (2), organisms 1/3 died young. The simulation needs wider dispersal, stronger visual differentiation, and smarter energy allocation. Increasing moveSpeed and explorationDrive spreads organisms, increasing trailIntensity and color variation creates visible diversity, energyConserve keeps marginal organisms alive longer.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
