@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775393782289",
+  "timestamp": "2026-04-05T12:56:22.289Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Efficiency fails when energy expenditure (movement) exceeds energy gain (harvest). Constrain motion, not resources.; Efficiency at 0.147 is the critical bottleneck—it's 78% below target and dragging overall fitness. The other metrics are reasonable: survivalRate is perfect (1.0), beautyScore is moderate (0.555). Root cause: entities are moving too fast (0.55-0.85 moveSpeed) and exploring too aggressively (explorationDrive 0.5-0.8), wasting energy without proportional harvesting gains. Solution: reduce moveSpeed cluster to 0.45-0.65 range, cut explorationDrive to 0.2-0.4 to enforce focused behavior, increase energyConserve floor to 0.5. Secondary: boost pulseFrequency 0.15→0.3+ to improve rhythm (currently 0.232, the weakest beauty metric).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
