@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775394142653",
+  "timestamp": "2026-04-05T13:02:22.653Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "high moveSpeed without matching energyConserve creates energy deficit; harvestThreshold must align with actual resource yield to avoid chasing losses.; efficiency at 0.145 is critically low and dominating fitness drag. The Harvester and Aesthetic Harvester are burning energy at high speeds (0.85, 0.7) with poor conservation (0.25, 0.35) while chasing marginal resources at low thresholds (0.08, 0.12). This creates a net energy loss. Increase energyConserve on speed-biased entities and raise harvestThreshold to avoid unprofitable harvesting. Persistence Hunter has decent conservation but can squeeze more efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
