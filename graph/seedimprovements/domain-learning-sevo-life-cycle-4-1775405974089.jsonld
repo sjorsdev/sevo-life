@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405974089",
+  "timestamp": "2026-04-05T16:19:34.089Z",
+  "observation": "Domain sevo-life (fitness 0.639) generated 2 insights",
+  "suggestion": "Efficiency bottleneck can be cracked via lower drag + higher resource attraction; energy cost of locomotion dominates fitness ceiling more than survival or beauty at current weights.; Efficiency is the critical bottleneck at 0.562, dragging overall fitness despite solid survival (0.667) and beauty (0.679). The bottleneck dominates because 0.2 weight on a weak metric limits ceiling even with excellent other scores. Root causes: high drag (0.9-0.99) makes energy-expensive movement; low resourceAttraction means poor foraging; springDamping 0.01-0.1 wastes energy on oscillation. Secondary weakness: diversityOfForms at 0.456 — genomes are too morphologically similar. Target: push efficiency to 0.75+ by reducing movement costs and improving harvest efficiency. Vary genome spring stiffness to create distinct body morphologies.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
