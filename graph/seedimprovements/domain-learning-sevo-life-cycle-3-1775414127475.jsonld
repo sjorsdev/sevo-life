@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775414127475",
+  "timestamp": "2026-04-05T18:35:27.475Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Energy efficiency gates survival, which gates morphological diversity. Current genomes are profligate swimmers — prioritize energyConserve and drag reduction over exploration.; Efficiency is critically low (0.345) compared to beauty (0.722). Three organisms died prematurely (ages 273–359) while three hit max age (500) but barely. Root cause: high energy expenditure relative to resource harvesting. The survivors (IDs 1, 2, 5) with energy 10–19 are barely subsisting. To improve survival rate from 50% → 70%+, reduce metabolic drag and increase energy conservation. Diversity of forms (0.456) also weak — but cannot improve until organisms survive longer to express full growth. Fix efficiency first; form diversity follows.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
