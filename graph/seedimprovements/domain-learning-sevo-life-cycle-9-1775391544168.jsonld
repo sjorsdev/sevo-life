@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775391544168",
+  "timestamp": "2026-04-05T12:19:04.168Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "High survivalRate + low efficiency = well-fed but wasteful; low diversity + identical symmetry = monoculture masquerading as optimization.; Efficiency (0.07) and ecosystem diversity (0.096) are catastrophically low despite perfect survival. The organisms are energy-wasteful (efficiency compounds the goal at 0.2×0.07=0.014) and completely homogeneous (all formSymmetry=1, identical phenotypes). Strategy: (1) Drastically increase energyConserve to fix efficiency—organisms are burning calories doing redundant work. (2) Introduce behavioral and visual diversity by varying moveSpeed, explorationDrive, and trailColor to break homogeneity and improve ecosystem diversity. (3) Modulate trailIntensity to create richer visual patterns without energy cost.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
