@@ -14,6 +14,7 @@ import type {
   FitnessNode,
   BenchmarkNode,
   SeedImprovementNode,
+  SevoScoreNode,
 } from "./types.ts";
 
 // ---------------------------------------------------------------------------
@@ -414,19 +415,20 @@ async function recordDomainLearnings(
 // ===========================================================================
 const EVOLVE_CYCLES = 5;  // evolution cycles per meta-cycle
 
-// Load fitness history from graph — persists across sessions
+// Load domain fitness history from SevoScore nodes — persists across sessions
 async function loadFitnessHistory(): Promise<number[]> {
-  const fitnessNodes = await queryNodes<FitnessNode>("fitness");
-  // Get unique fitness values per cycle, sorted by timestamp
-  const byCycle = new Map<string, number>();
-  for (const f of fitnessNodes) {
-    const existing = byCycle.get(f.cycleId);
-    if (!existing || f.eqs > existing) byCycle.set(f.cycleId, f.eqs);
-  }
-  return [...byCycle.values()];
+  const scores = await queryNodes<SevoScoreNode>("sevoscore");
+  // Sort by timestamp and extract the metadata.bestEqs (domain-specific fitness)
+  return scores
+    .sort((a, b) => a.timestamp.localeCompare(b.timestamp))
+    .map((s) => {
+      // Use avgFitness from metadata if available, fall back to score trend
+      const avg = (s.metadata as Record<string, unknown>)?.avgFitness;
+      return typeof avg === "number" ? avg : s.cyclePoints / Math.max(s.score, 1);
+    });
 }
 const fitnessHistory: number[] = await loadFitnessHistory();
-console.log(`Loaded ${fitnessHistory.length} historical fitness records from graph`);
+console.log(`Loaded ${fitnessHistory.length} SevoScore fitness records`);
 
 // --- REFLECT: analyze trends, detect plateaus ---
 async function reflect(
