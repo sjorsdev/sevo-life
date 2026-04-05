@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410160618",
+  "timestamp": "2026-04-05T17:29:20.618Z",
+  "observation": "Domain sevo-life (fitness 0.634) generated 2 insights",
+  "suggestion": "Energy hemorrhage through undirected movement. Rebalance toward resource attraction and conservation.; Efficiency is critically weak at 0.486 while weighted 0.2 in the goal. More importantly, spatial composition (0.3) is failing, suggesting organisms waste energy moving inefficiently rather than purposefully seeking resources. Three organisms have already died. The fix: reduce metabolic overhead (movement, pulsing), increase resource-seeking intelligence, and improve spatial distribution through higher exploration drive. This shifts energy budget from wasteful movement to productive hunting and growth.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
