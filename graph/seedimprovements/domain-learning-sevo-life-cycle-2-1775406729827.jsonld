@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406729827",
+  "timestamp": "2026-04-05T16:32:09.827Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Efficiency crashes when organisms pulse/move without corresponding food discovery — break the movement → starvation feedback loop by increasing resourceAttraction and reducing metabolic cost.; Efficiency is critically low (0.401) and is the primary bottleneck. Alive organisms have energy reserves ranging 4-21, suggesting inconsistent resource access and wasteful movement. Survival rate (0.667) indicates some organisms deplete energy before age 500. Diversity of forms (0.474) is weak — morphologies are similar. Primary fix: reduce energy drain from movement/pulsing while improving resource attraction. Secondary: introduce morphological variation to increase diversity score.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
