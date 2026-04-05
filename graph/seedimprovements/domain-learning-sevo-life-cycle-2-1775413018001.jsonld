@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775413018001",
+  "timestamp": "2026-04-05T18:16:58.001Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Energy is the keystone constraint—maximize harvesting efficiency first, then beauty emerges from sustained lifespan.; Efficiency (0.399) is the critical bottleneck — 67% of the score weight. Organisms are alive but energy-starved (3-28 units while max capacity appears higher). Root cause: low resourceAttraction + high explorationDrive + inefficient movement. SpatialComposition (0.3) suggests movement patterns lack coherence. Secondary issue: early deaths at 230-264 suggest early-stage energy management failure. Solution: (1) Increase resourceAttraction and reduce explorationDrive to focus on gathering over random search. (2) Boost energyConserve to reduce baseline drain. (3) Tune harvestThreshold lower so organisms feed earlier. (4) Reduce moveSpeed for efficiency unless moving to resources. (5) Increase patternSymmetry to improve spatial composition scores.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
