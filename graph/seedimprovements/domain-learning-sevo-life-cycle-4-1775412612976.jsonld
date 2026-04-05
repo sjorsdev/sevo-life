@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775412612976",
+  "timestamp": "2026-04-05T18:10:12.976Z",
+  "observation": "Domain sevo-life (fitness 0.653) generated 2 insights",
+  "suggestion": "Elegance > complexity. Smaller simpler organisms (8 particles) survive longer; prioritize lean phenotypes over ornate morphology.; Efficiency is critically weak at 0.459 vs. beautyScore 0.743 and survivalRate 0.667. Efficiency likely penalizes particle overhead and metabolic cost. Current organisms have 8-13 particles each, generating high drag and energy consumption. Primary improvements: increase energyConserve to reduce per-step cost, reduce moveSpeed to lower physics overhead, cut explorationDrive and pulseFrequency to eliminate wasteful movement, lower trailIntensity if rendering costs factor in. Target: decrease effective particle cost-per-energy-gained.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
