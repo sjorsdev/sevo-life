@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775410678455",
+  "timestamp": "2026-04-05T17:37:58.455Z",
+  "observation": "Domain sevo-life (fitness 0.624) generated 2 insights",
+  "suggestion": "Smaller, greedier organisms outsurvived larger ones. Efficiency scales inversely with particle count and baseRadius. Prune form complexity, sharpen resource sensors.; Efficiency is the critical bottleneck at 0.388 (dragging down overall fitness). Two organisms died early (IDs 0, 3 — both 13 particles, short lifespans), while 8-particle survivors thrived to age 500. Root cause: oversized forms burning energy faster than resources sustain them. Fix: (1) Reduce particle budgets + baseRadius to lower energy drain, (2) Increase resourceAttraction and harvestThreshold to ensure survivors capture enough energy, (3) Increase energyConserve to stretch resources further. Survival rate will improve as a second-order effect. Beauty is acceptable at 0.67 — prioritize efficiency gains.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
