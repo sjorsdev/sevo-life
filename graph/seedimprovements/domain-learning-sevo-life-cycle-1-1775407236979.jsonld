@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407236979",
+  "timestamp": "2026-04-05T16:40:36.979Z",
+  "observation": "Domain sevo-life (fitness 0.661) generated 2 insights",
+  "suggestion": "Energy management bottleneck: high-particle organisms can't sustain themselves. Spread them out (exploration) and give them color identity (diversity).; Efficiency is critically weak at 0.484 (worth 0.2×goal). Target: increase energyConserve across low-energy organisms (1,4 have energy=4 despite 12 particles). Secondary: boost explorationDrive and diversify trailColor to improve spatialComposition (0.3, extremely weak) and diversityOfForms (0.457). Organisms 1 and 4 are energy-starved despite similar particle counts to org 0—they need energy optimization first. Spatial composition is nearly dead; spread and visual differentiation via exploration and color variance will help.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
