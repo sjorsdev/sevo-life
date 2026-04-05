@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-9-1775391034322",
+  "timestamp": "2026-04-05T12:10:34.322Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Energy efficiency is gated by moveSpeed + exploration cost; beauty plateau at symmetry=1.0 signals convergence — unlock both by conservation + diversity mutation; Efficiency is catastrophically low (0.044), dragging overall fitness from potential ~0.79 down to 0.544. High-beauty organisms are dying (IDs 0, 4 had beauty 0.802, 0.835 but died). Root cause: excessive movement consuming energy faster than harvesters can replace it. Solution: dramatically increase energy conservation, reduce unnecessary movement, boost resource attraction to close the energy gap. Secondary: introduce symmetry variation to evolve beyond perfect-1.0 (identical) forms, allowing beauty discovery beyond current plateau.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:9"
+  ],
+  "priority": 5
+}
