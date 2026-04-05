@@ -1,42 +1,41 @@
 # PROGRESS
 
-## Status: PLATEAU — brainstorm proposals ready for implementation
-## SevoScore: 2550
-## Best fitness: 0.708 (stuck for ~20 cycles)
-## Active agents: 28 (24 v1-pixel, 4 v2-body)
-## Body beauty: 0.808 (v2 agents)
-## Total learnings: 220+
-## Brainstorms: 4 (all detecting plateau, all proposing structural changes)
+## Status: REBUILD NEEDED — simulation does not produce beauty
+## SevoScore: 2550 (represents activity, not quality)
 
-## What's working
-- Meta-cycle: EVOLVE → REFLECT → BRAINSTORM → REALIGN
-- Body system (world-v2.ts, body.ts): multi-cell organisms with L-system growth
-- Parameter-patch mutations: 100% run rate vs 20% for full rewrites
-- Fork detection: only scores own work, not inherited data
-- Visualization: http://localhost:8090 (run: PORT=8090 deno run --allow-all web/serve.ts)
+## Honest assessment
+The current simulation is not producing beautiful life. A "tree" organism
+is 5 cells in a row. Beauty score 0.83 is a trivially satisfied formula.
+100+ cycles of evolution, only 2 life agents survived, nothing visually
+meaningful emerged. The grid-cell model is too simple for real beauty.
 
-## What's stuck
-- Fitness plateaued at ~0.7 for 20+ cycles
-- All 4 brainstorms converge on same diagnosis: single static fitness landscape
-- Parameter tuning within current architecture has reached its limit
+## What to KEEP
+- sevo-score (npm) — canonical scoring, works
+- sevo-engine (npm) — graph, runner, scorer, works
+- sevo-web — leaderboard, learnings page, works
+- All learnings in graph/seedimprovements/ — 220+ records
+- Meta-cycle structure (EVOLVE → REFLECT → BRAINSTORM → REALIGN)
+- Fork detection, SevoScore computation
+- The brainstorm proposals (seasonal cycles, predator-prey, developmental stages)
 
-## Brainstorm consensus — implement these (in order of impact):
-1. **Seasonal cycles** [easy] — environment shifts every N ticks, no single phenotype dominates
-2. **Dynamic beauty dimensions** [medium] — expand what beauty means (temporal, relational, emergent)
-3. **Predator-prey** [hard] — Red Queen dynamics, co-evolution, multi-species ecosystem
-4. **Developmental stages** [medium] — juvenile→mature→elder with different capabilities
+## What to REBUILD from scratch
+- World engine — needs continuous space, not grid cells
+- Organism model — needs organic shapes from hundreds of particles, not 5-18 cells
+- Beauty scoring — needs emergence-based metrics, not trivially-satisfied formulas
+- Visualization — needs to render something actually beautiful
+
+## Key learnings for the rebuild
+1. Parameter tuning is a local optimum — structural evolution matters more
+2. LLM full-file rewrites fail 80% — use JSON patches or structured mutations
+3. Beauty score must be hard to satisfy — if everything scores 0.8, the metric is broken
+4. The world must be alive too — not a static backdrop for agents
+5. Evolution needs reflection — detect plateaus, brainstorm, realign with the goal
+6. Don't grind cycles without checking if the output is actually beautiful
+7. Don't ask for permission — if the goal is clear, act on it
+8. Forked projects must use fork-runner.ts not sevo.ts
 
 ## Entry point
-- Run: `deno run --allow-all src/fork-runner.ts` (NOT sevo.ts)
-- fork-runner.ts has the meta-cycle built in
+- Run: `deno run --allow-all src/fork-runner.ts`
 - Visualization: `deno run --allow-all web/build.ts && PORT=8090 deno run --allow-all web/serve.ts`
-
-## Key files
-- src/fork-runner.ts — main evolution loop with meta-cycle
-- src/world-v2.ts — multi-cell organism world engine
-- src/body.ts — L-system growth + body beauty scoring
-- src/beauty.ts — legacy trail beauty (v1 agents still use this)
-- blueprints/life-agent-v5.ts — body agent with dynamic fitness weights
-- web/v2.html — organism visualization
 
 ## Timestamp: 2026-04-05
