@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775404541382",
+  "timestamp": "2026-04-05T15:55:41.382Z",
+  "observation": "Domain sevo-life (fitness 0.700) generated 2 insights",
+  "suggestion": "Movement cost is the efficiency killer. Dramatic moveSpeed reduction + higher energyConserve will unlock better resource-to-lifespan ratios and expose efficiency as the key lever.; Efficiency is critically weak at 0.13, dragging overall fitness to 0.564. The issue is excessive energy consumption from movement (moveSpeed too high) and insufficient energy conservation. Rhythm score (0.239) is also weak, indicating poor pulseFrequency patterns. Strategy: reduce moveSpeed across all entities (most are 0.65-0.85, need 0.4-0.55), increase energyConserve (target 0.7-0.8), boost pulseFrequency to improve rhythm emergence, and slightly lower harvestThreshold to capture marginal resources more aggressively. Entity 1 (Efficient Hoarder) already has good energy efficiency and low thresholds—use it as the model.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
