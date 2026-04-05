@@ -228,60 +228,107 @@ async function runDomainCycle(
 
   console.log(`  Best: ${bestAgent["@id"]} fitness=${bestFitness.toFixed(3)}`);
 
-  // Mutate the best agent — include all goals in the prompt
+  // Mutate via parameter patch — ask LLM for genome tweaks as JSON,
+  // then apply programmatically. Full rewrites fail >80% of the time.
   try {
     const blueprint = await Deno.readTextFile(bestAgent.blueprint);
-    const truncated = blueprint.slice(0, 3000);
+
+    // Extract current genomes from blueprint
+    const genomeMatch = blueprint.match(/const genomes:\s*EntityGenome\[\]\s*=\s*\[([\s\S]*?)\];/);
+    const currentGenomes = genomeMatch ? genomeMatch[1].slice(0, 2000) : "unknown";
+
+    // Get last run's detailed fitness breakdown
+    const lastRunResult = fitnessMap.get(bestAgent["@id"]) ?? bestFitness;
+    const bestResult = await run(bestAgent.blueprint, {
+      ...SEVO_PERMISSIONS,
+      read: [...SEVO_PERMISSIONS.read, "./blueprints", "./src"],
+    }, 60_000);
+    const breakdown = bestResult.fitnessOutput ?? {};
+
     const goalDescription = goal.goals.map((g) =>
       `- ${g.name}: ${g.description} (metric: ${g.metric})`
     ).join("\n");
 
-    // Include server recommendations in mutation prompt if available
-    let serverGuidance = "";
-    if (learnings) {
-      const recs = learnings.recommendations as Record<string, unknown> | undefined;
-      const recList = recs?.recommendations as string[] | undefined;
-      if (recList?.length) {
-        serverGuidance = `\nSERVER RECOMMENDATIONS (from cross-instance learning):\n${recList.slice(0, 3).map(r => `- ${r}`).join("\n")}\n`;
+    const prompt = `You are tuning genome parameters for a sevo-life simulation.
+
+GOALS: ${goal.compositeFitness}
+${goalDescription}
+
+CURRENT FITNESS: ${JSON.stringify(breakdown, null, 2)}
+
+CURRENT GENOMES (8 entities with these parameters):
+${currentGenomes}
+
+Each genome has: moveSpeed, turnBias, resourceAttraction, trailAttraction, harvestThreshold, energyConserve, explorationDrive, trailIntensity, trailColor (0-5), pulseFrequency, patternSymmetry
+
+Analyze the fitness breakdown. Identify the weakest component and propose parameter changes to improve it.
+
+Respond with JSON only, no markdown:
+{
+  "reasoning": "what to improve and why",
+  "insight": "one-line domain learning",
+  "genomes": [
+    {"index": 0, "changes": {"moveSpeed": 0.7, "energyConserve": 0.5}},
+    {"index": 2, "changes": {"trailIntensity": 0.9, "patternSymmetry": 0.8}}
+  ]
+}
+
+Only include genomes you want to change. Only include parameters you want to change. Values must be numbers 0-1 (except trailColor: 0-5).`;
+
+    const response = await callClaude(prompt);
+    const jsonMatch = response.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) throw new Error("No JSON in LLM response");
+    const patch = JSON.parse(jsonMatch[0]);
+
+    // Extract insight
+    if (patch.insight) improvements.push(patch.insight);
+    if (patch.reasoning) improvements.push(patch.reasoning);
+
+    // Apply parameter patches to the blueprint
+    let mutatedBlueprint = blueprint;
+    const genomeParams = ["moveSpeed", "turnBias", "resourceAttraction", "trailAttraction",
+      "harvestThreshold", "energyConserve", "explorationDrive", "trailIntensity",
+      "trailColor", "pulseFrequency", "patternSymmetry"];
+
+    if (patch.genomes && Array.isArray(patch.genomes)) {
+      for (const genomePatch of patch.genomes) {
+        const changes = genomePatch.changes;
+        if (!changes || typeof changes !== "object") continue;
+
+        for (const [param, value] of Object.entries(changes)) {
+          if (!genomeParams.includes(param)) continue;
+          if (typeof value !== "number") continue;
+
+          // Find and replace the parameter value in the blueprint
+          // Match patterns like "moveSpeed: 0.85" with flexible whitespace
+          const paramRegex = new RegExp(
+            `(${param}:\\s*)([-]?\\d+\\.?\\d*)`,
+            "g"
+          );
+
+          let matchCount = 0;
+          const targetIndex = genomePatch.index ?? 0;
+          mutatedBlueprint = mutatedBlueprint.replace(paramRegex, (match, prefix, _oldVal) => {
+            if (matchCount === targetIndex) {
+              matchCount++;
+              return `${prefix}${value}`;
+            }
+            matchCount++;
+            return match;
+          });
+        }
       }
     }
 
-    const prompt = `You are evolving a sevo-life agent to improve multi-goal fitness.
-
-DOMAIN GOALS:
-${goalDescription}
-
-COMPOSITE FITNESS: ${goal.compositeFitness}
-${serverGuidance}
-CURRENT BLUEPRINT (truncated):
-\`\`\`typescript
-${truncated}
-\`\`\`
-
-CURRENT FITNESS: ${bestFitness.toFixed(3)}
-
-RULES:
-1. Output ONLY the complete new TypeScript file. No markdown fences.
-2. Self-contained — imports only from ../src/life-types.ts and ../src/life-runner.ts
-3. Must output JSON on last line: {"fitness": 0-1, "branches": 1, "survivalRate": 0-1, "beautyScore": 0-1, "efficiency": 0-1}
-4. Improve the weakest component of fitness.
-5. Add comments with domain insights: // INSIGHT: <description>`;
-
-    const response = await callClaude(prompt);
-    let code = response;
-    const fenceMatch = response.match(/```(?:typescript|ts)?\n([\s\S]*?)```/);
-    if (fenceMatch) code = fenceMatch[1];
-
-    // Extract insights
-    const insightMatches = code.matchAll(/\/\/\s*INSIGHT:\s*(.+)/g);
-    for (const match of insightMatches) {
-      improvements.push(match[1].trim());
-    }
-
-    // Write and test the mutant
+    // Update the version comment
     const gen = bestAgent.generation + 1;
+    mutatedBlueprint = mutatedBlueprint.replace(
+      /^\/\/ life-agent-v\d+.*/m,
+      `// life-agent-v${gen}.ts — Parameter-evolved from v${bestAgent.generation}: ${(patch.insight ?? "tuned genomes").slice(0, 80)}`
+    );
+
     const mutantPath = `./blueprints/life-agent-v${gen}.ts`;
-    await Deno.writeTextFile(mutantPath, code);
+    await Deno.writeTextFile(mutantPath, mutatedBlueprint);
 
     const permissions = {
       ...SEVO_PERMISSIONS,
@@ -291,10 +338,11 @@ RULES:
 
     if (testResult.success) {
       const mutantFitness = (testResult.fitnessOutput?.fitness as number) ?? 0;
-      console.log(`  Mutant fitness: ${mutantFitness.toFixed(3)}`);
+      const mutantBeauty = (testResult.fitnessOutput?.beautyScore as number) ?? 0;
+      const mutantSurvival = (testResult.fitnessOutput?.survivalRate as number) ?? 0;
+      console.log(`  Mutant: fitness=${mutantFitness.toFixed(3)} beauty=${mutantBeauty.toFixed(3)} survival=${mutantSurvival.toFixed(3)}`);
 
-      if (mutantFitness >= bestFitness) {
-        // Register the winning mutant
+      if (mutantFitness > bestFitness) {
         const agentNode: AgentNode = {
           "@context": "sevo://v1",
           "@type": "Agent",
@@ -308,15 +356,15 @@ RULES:
         };
         await writeNode(agentNode);
         await git.add(mutantPath);
-        await git.commit(`evolve(${goal.domain}): life-agent-v${gen} fitness=${mutantFitness.toFixed(3)}`);
-        console.log(`  Registered: ${agentNode["@id"]}`);
+        await git.commit(`evolve(${goal.domain}): life-agent-v${gen} fitness=${mutantFitness.toFixed(3)} beauty=${mutantBeauty.toFixed(3)}`);
+        console.log(`  WINNER: ${agentNode["@id"]}`);
         bestFitness = mutantFitness;
       } else {
-        console.log(`  Rejected (${mutantFitness.toFixed(3)} < ${bestFitness.toFixed(3)})`);
+        console.log(`  Rejected (${mutantFitness.toFixed(3)} <= ${bestFitness.toFixed(3)})`);
         try { await Deno.remove(mutantPath); } catch { /* ok */ }
       }
     } else {
-      console.log(`  Mutant failed to run`);
+      console.log(`  Mutant failed: ${testResult.stderr.slice(0, 150)}`);
       try { await Deno.remove(mutantPath); } catch { /* ok */ }
     }
   } catch (e) {
