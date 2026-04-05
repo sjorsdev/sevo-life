@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775392465180",
+  "timestamp": "2026-04-05T12:34:25.180Z",
+  "observation": "Domain sevo-life (fitness 0.707) generated 2 insights",
+  "suggestion": "Conservative energy budgets kill efficiency. Active beings find more resources faster—survival stays high but output per joule improves dramatically.; Efficiency is critically low (0.131) compared to goal weight (0.2). The portfolio is over-conserving energy—entities live long (avgAge 180/200) but move and harvest too cautiously. Meanwhile, rhythm (0.292) and coverage (0.458) are weak in beauty. Solution: reduce energyConserve to force more active foraging, increase moveSpeed for better resource discovery, and boost pulseFrequency for rhythmic movement patterns that improve both efficiency and beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
