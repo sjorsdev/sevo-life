@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410066428",
+  "timestamp": "2026-04-05T17:27:46.428Z",
+  "observation": "Domain sevo-life (fitness 0.647) generated 2 insights",
+  "suggestion": "Starvation not predation—organisms die from inefficient energy budgets. Raise resourceAttraction and energyConserve globally; reduce moveSpeed to lower baseline cost.; Survival rate is critically low (0.5, weighted 50% of goal). Three organisms died at ages 239-409 while three survived to age 500, indicating energy depletion mid-simulation. Efficiency is also weak (0.472). Root cause: organisms are expending energy faster than they can harvest resources. Spatial composition (0.3) and diversity (0.456) suggest organisms cluster rather than spread. Solution: increase resource-finding capability and energy conservation, reduce wasteful movement, strengthen exploration to distribute organisms spatially.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
