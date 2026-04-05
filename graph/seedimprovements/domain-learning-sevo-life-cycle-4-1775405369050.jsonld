@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405369050",
+  "timestamp": "2026-04-05T16:09:29.050Z",
+  "observation": "Domain sevo-life (fitness 0.633) generated 2 insights",
+  "suggestion": "death before age 500 means starvation, not predation — organisms need faster resource finding and stricter energy budgeting; survivalRate is the weakest component at 0.667 (only 4/6 alive), weighted 50% of total fitness. Two organisms died at ages 283 and 346 before reaching max lifespan (500). This indicates poor energy management or excessive exploration in dangerous areas. Secondary issue: efficiency at 0.478 suggests wasteful movement. Tertiary: diversityOfForms at 0.456 indicates morphological convergence. Solution: prioritize survival by increasing resourceAttraction (find food faster before starvation), energyConserve (stretch energy reserves), and reducing explorationDrive (avoid risky areas). Lower moveSpeed to improve efficiency. These changes cascade: better survival → more stable beauty → higher overall fitness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
