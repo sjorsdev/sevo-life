@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775417406602",
+  "timestamp": "2026-04-05T19:30:06.602Z",
+  "observation": "Domain sevo-life (fitness 0.619) generated 2 insights",
+  "suggestion": "Organisms die from energy poverty, not age. Efficiency gains flow directly to survival.; Efficiency is critically weak (0.481 vs 0.667 for survival, 0.692 for beauty). Organisms show energy starvation—two died young (age 225-337) and survivors have low energy reserves (6-22). The physics are wasting energy in movement. Boost resource attraction to prioritize feeding, reduce drag/damping to cut movement costs, and tune energy conservation parameters.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
