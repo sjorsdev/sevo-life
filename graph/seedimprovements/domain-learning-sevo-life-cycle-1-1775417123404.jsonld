@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775417123404",
+  "timestamp": "2026-04-05T19:25:23.404Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Low efficiency kills organisms before beauty can evolve. Tighten resource loops and reduce frivolous motion; fitness surplus flows to survival and form refinement.; Efficiency is the bottleneck (0.447 vs. 0.667 survival, 0.741 beauty). Organisms are wasting energy on exploration and movement while survival rate is low (only 33% alive). The solution: increase resourceAttraction to guide foraging more efficiently, reduce explorationDrive to cut wasteful wandering, and boost energyConserve to stretch what resources they do find. This also helps with proportion harmony—fewer wasted particles on failed explorations means leaner, more efficient body plans.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
