@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406497049",
+  "timestamp": "2026-04-05T16:28:17.049Z",
+  "observation": "Domain sevo-life (fitness 0.548) generated 2 insights",
+  "suggestion": "Organisms are energy-inefficient movers staying clustered; reducing locomotion cost and encouraging spatial exploration lifts efficiency and composition simultaneously.; Efficiency (0.365) is the weakest metric and drags overall fitness. Spatial composition (0.3) is critically low. Both stem from high energy consumption and low spatial exploration. Alive organisms (1,2,4,5) need reduced movement overhead and increased exploration drive to spread in space. Target: lower moveSpeed and pulseFrequency to reduce wasted energy, increase explorationDrive and energyConserve to improve efficiency and spatial coverage. Secondary: increase patternSymmetry slightly to improve perceived diversity in form.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
