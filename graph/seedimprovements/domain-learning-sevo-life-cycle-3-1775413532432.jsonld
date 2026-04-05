@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775413532432",
+  "timestamp": "2026-04-05T18:25:32.432Z",
+  "observation": "Domain sevo-life (fitness 0.629) generated 2 insights",
+  "suggestion": "Organisms are surviving but not exploring. Add explorationDrive to decouple resource-seeking from spatial distribution; variance in pulsing patterns drives morphological diversity.; Weakest components are spatialComposition (0.3 — organisms clustering), diversityOfForms (0.456 — insufficient morphological variety), and efficiency (0.521 — poor energy management). High survivalRate (0.667) and strong physics metrics (formBeauty 0.812, symmetryQuality 0.829) suggest the base designs work; the problem is behavioral. Organisms lack exploration incentive and cluster around resources. Fix: (1) boost explorationDrive to force spatial dispersal and reduce clustering, (2) reduce resourceAttraction to prevent congregation, (3) increase avoidanceRadius for natural spacing, (4) increase energyConserve to improve efficiency score, (5) vary patternSymmetry and pulseFrequency across genomes for form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
