@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775410971621",
+  "timestamp": "2026-04-05T17:42:51.621Z",
+  "observation": "Domain sevo-life (fitness 0.658) generated 2 insights",
+  "suggestion": "Efficiency scales inversely with movement overhead; lean organisms with conservative metabolism outperform bloated explorers in fitness-per-energy.; Efficiency is the weakest component (0.46) and has 0.2 weight in the goal. Survival (0.667) and beauty (0.661) are already strong. Current organisms show high particle counts and likely high movement/trail overhead. Efficiency improvement path: (1) Increase energyConserve to reduce metabolic cost per cycle, (2) Reduce moveSpeed to lower per-step energy burn, (3) Decrease trailIntensity and explorationDrive to eliminate wasteful signaling and wandering, (4) Maintain resourceAttraction to keep food-seeking viable. This targets the EQS-limiting factor without degrading survival or beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
