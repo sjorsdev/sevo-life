@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412856527",
+  "timestamp": "2026-04-05T18:14:16.527Z",
+  "observation": "Domain sevo-life (fitness 0.611) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: organisms need better resource detection (resourceAttraction) and energy discipline (energyConserve). Spatial composition: need movement diversity and geographic spread during growth.; Efficiency is critically low (0.423), pulling fitness down 0.068 points. Spatial composition (0.3) is also failing. Root causes: (1) organisms may be moving inefficiently or wasting energy, (2) lack of spatial spread in form layout. With 3 of 6 organisms surviving and all at max age, they're stable but not optimizing resource use. Strategy: increase energyConserve and resourceAttraction to reduce wasteful motion; spread explorationDrive and moveSpeed across variants to create better spatial distribution; increase diversity by creating morphologically distinct forms (high vs low pulseFrequency, varied trail colors) to boost diversityOfForms metric.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
