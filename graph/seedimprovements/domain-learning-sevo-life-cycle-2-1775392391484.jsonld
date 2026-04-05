@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775392391484",
+  "timestamp": "2026-04-05T12:33:11.484Z",
+  "observation": "Domain sevo-life (fitness 0.704) generated 2 insights",
+  "suggestion": "Lower harvest thresholds don't improve efficiency—they waste energy on marginal gains. Selectivity matters more than coverage.; Efficiency is critically weak (0.125) despite strong survival (0.875). This suggests entities waste energy on visual features and marginal resource captures. Efficiency should improve by: (1) increasing harvestThreshold to be selective about which resources to pursue (avoid wasting energy on tiny targets), (2) reducing trailIntensity/pulseFrequency for non-aesthetic roles to cut visual overhead, (3) raising energyConserve slightly. Beauty is also weak (rhythm 0.223, coverage 0.363), but efficiency impact is more immediate. Redirect aesthetic investment to entities with beauty-specific roles.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
