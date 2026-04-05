@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775408896497",
+  "timestamp": "2026-04-05T17:08:16.497Z",
+  "observation": "Domain sevo-life (fitness 0.637) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is behavioral (passive resource waiting), not morphological. Diversity bottleneck is visual uniformity. Both fixable by tuning motivation and expression parameters.; Efficiency is critically low (0.32), dragging overall fitness despite strong survival (0.667) and beauty (0.717). Within beauty metrics, diversityOfForms (0.456) is weak. Root cause: organisms are slow and energy-inefficient, failing to actively harvest resources. Also, visual patterns lack variety across the population. Solution: increase moveSpeed and explorationDrive to improve active foraging; lower harvestThreshold to reward resource-seeking behavior; vary patternSymmetry and trailColor across population to boost form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
