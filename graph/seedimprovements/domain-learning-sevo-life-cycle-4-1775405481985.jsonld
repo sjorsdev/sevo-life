@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775405481985",
+  "timestamp": "2026-04-05T16:11:21.985Z",
+  "observation": "Domain sevo-life (fitness 0.658) generated 2 insights",
+  "suggestion": "Over-building (high particle count) without matching energy capture creates bloated, inefficient morphologies. Shift selection pressure toward lean, energy-dense designs.; Efficiency is the limiting factor (0.497 vs target 1.0). Organism energy-to-particle ratios are inverted: jellyfish/crawler with 13 particles have only 6-7 energy, while lean forms with 8 particles achieve 12-20. Root cause: resource attraction too low, harvest inefficient. Secondary: diversityOfForms (0.427) and spatialComposition (0.3) are weak. Solution: boost resource hunting, tighten energy budgets, increase exploration variance to generate form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
