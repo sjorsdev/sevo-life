@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775392649764",
+  "timestamp": "2026-04-05T12:37:29.764Z",
+  "observation": "Domain sevo-life (fitness 0.688) generated 2 insights",
+  "suggestion": "Movement is the invisible energy sink. Entities self-organize better when constrained to smaller territories — harvest-to-distance ratio improves, beauty emerges from density rather than coverage.; Efficiency is critically weak at 0.152, dragging down total fitness despite perfect survival. The root cause is excessive movement energy burn relative to harvest. moveSpeed values (0.4-0.85) are high for the simulation scale, and explorationDrive compels wasteful wandering. Secondary issue: beauty is weak at 0.55 due to low rhythm (0.287), symmetry (0.388), and coverage (0.371). Solution: (1) reduce moveSpeed across all entities by 10-15%, (2) lower explorationDrive on non-specialist roles, (3) boost pulseFrequency to improve rhythm, (4) increase patternSymmetry for structural beauty. These changes prioritize efficiency first (the bottleneck), with beauty improvements as side effects.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
