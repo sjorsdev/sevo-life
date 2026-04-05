@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775416904778",
+  "timestamp": "2026-04-05T19:21:44.778Z",
+  "observation": "Domain sevo-life (fitness 0.530) generated 2 insights",
+  "suggestion": "Survival drives fitness more than beauty — focus mutations on energy management and resource sensing before aesthetic refinement.; Survival rate (0.5) is the critical bottleneck — it has 0.5 weight in the goal. Organisms die before reaching their potential. Secondary issue: efficiency (0.388) suggests energy waste during movement. Third: motion grace (0.657) and diversity of forms (0.456) are low. Strategy: increase resourceAttraction to help organisms find food earlier, boost energyConserve to reduce wasted movement, slightly reduce moveSpeed to improve energy efficiency, and increase explorationDrive moderately to find resources without burning out. Add morphological diversity via trailColor variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
