@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775410383959",
+  "timestamp": "2026-04-05T17:33:03.959Z",
+  "observation": "Domain sevo-life (fitness 0.620) generated 2 insights",
+  "suggestion": "Energy is the bottleneck. Genomes spend more moving than harvesting. Conservation > exploration.; Efficiency is critically low (0.483) despite decent beauty (0.681), dragging overall fitness to 0.623. Root cause: organisms are energy-inefficient (high metabolism relative to harvesting). Secondary weakness is spatial composition (0.3) and form diversity (0.456). Strategy: (1) Increase energyConserve to 0.7+ (metabolic efficiency), (2) boost resourceAttraction to 0.8+ (find food faster, reduce foraging cost), (3) reduce moveSpeed to 0.5-0.6 (lower energy drain during exploration), (4) increase patternSymmetry and trailIntensity to improve spatial/visual diversity without extra cost. This shifts the goal function: 0.5 × better_survival + 0.3 × stable_beauty + 0.2 × much_better_efficiency.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
