@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775407139900",
+  "timestamp": "2026-04-05T16:38:59.900Z",
+  "observation": "Domain sevo-life (fitness 0.541) generated 2 insights",
+  "suggestion": "Energy drain kills early — reduce structural oscillation and movement cost; survival rate and efficiency will recover together.; Efficiency is critically low (0.436) — energy cost of maintaining structure and movement far exceeds resource gain. Two organisms died early (age ~270), suggesting unsustainable physics. Spatial composition is abysmal (0.3) — organisms cluster instead of spreading. Fix by: (1) reducing oscillatory waste (lower pulseRate, springStiffness, swimStrength), (2) improving food seeking (higher resourceAttraction), (3) extending energy reserves (higher energyConserve, lower drag resistance), (4) encouraging exploration (higher explorationDrive). Survival rate (0.667) will improve as energy balance becomes positive.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
