@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775404756545",
+  "timestamp": "2026-04-05T15:59:16.545Z",
+  "observation": "Domain sevo-life (fitness 0.650) generated 2 insights",
+  "suggestion": "Energy bottleneck in weak genomes + morphological clustering limit efficiency and composition beauty. Break clustering with exploration and asymmetry.; Efficiency is the weakest component at 0.548 (vs. survivalRate 0.833). Two organisms are energy-starved: id 3 has only 1 energy despite being alive at age 500, and id 1 has 18 (low). This indicates poor energy harvest or conservation. Spatial composition (0.3) and diversity (0.457) are also weak, suggesting genomes cluster in similar morphologies. Strategy: boost energy conservation and resource attraction for struggling organisms; increase exploration and pattern variation to spread spatial composition and form diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
