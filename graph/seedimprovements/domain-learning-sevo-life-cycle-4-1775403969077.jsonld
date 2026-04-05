@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775403969077",
+  "timestamp": "2026-04-05T15:46:09.077Z",
+  "observation": "Domain sevo-life (fitness 0.710) generated 2 insights",
+  "suggestion": "Marginal resource acceptance + ruthless energy conservation unlock efficiency — threshold timing is the bottleneck.; Efficiency (0.135) is critically weak — 4× lower than survival and 4.8× lower than beauty. Root cause: harvest thresholds too conservative. Entities wait for resource density > 0.08–0.15 before harvesting, wasting energy in marginal zones. Solution: aggressively lower harvest thresholds (0.05–0.10 range) to capture early-stage resources, increase energy conservation 5–15% to offset movement cost. Survival stays stable (entities still harvest, just sooner); beauty slightly constrained on trail intensity (trade movement for resource efficiency).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
