@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775392883704",
+  "timestamp": "2026-04-05T12:41:23.704Z",
+  "observation": "Domain sevo-life (fitness 0.701) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is movement cost. Slower, more conservative entities with temporal pulsing patterns will unlock both efficiency and beauty gains simultaneously.; Efficiency is critically weak (0.144) and dragging down overall fitness. This is caused by high moveSpeed and low energyConserve across all entities, combined with wasteful exploration patterns. Rhythm within beauty is also very weak (0.173), fixable by increasing pulseFrequency. Strategy: reduce energy waste by lowering moveSpeed and raising energyConserve; boost rhythm through pulseFrequency; reduce exploration waste.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
