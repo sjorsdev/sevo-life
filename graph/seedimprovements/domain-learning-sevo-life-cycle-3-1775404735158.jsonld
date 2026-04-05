@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775404735158",
+  "timestamp": "2026-04-05T15:58:55.158Z",
+  "observation": "Domain sevo-life (fitness 0.698) generated 2 insights",
+  "suggestion": "Complex organisms with poor efficiency waste energy on movement; adding periodic pulse patterns creates rhythm without increasing cost.; Efficiency is catastrophically low (0.15), costing 0.03 points vs potential 0.04 if it reached 0.2. Beauty's rhythm metric is near-zero (0.091) while complexity is high, indicating organisms are active but lack temporal patterns. Survival is already perfect. Optimize for energy economy and rhythmic movement patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
