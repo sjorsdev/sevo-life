@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775409894354",
+  "timestamp": "2026-04-05T17:24:54.354Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Clustering emerges when exploration is low relative to resource attraction; diversity fails when all genomes converge. Decouple motion from consumption.; Spatial composition (0.3) is critical: organisms cluster around resources rather than exploring the full world. Efficiency (0.529) is weak: particle count is high relative to energy gain. The formBeauty and proportionHarmony are strong, but diversityOfForms (0.457) lacks variety. Solution: (1) Increase moveSpeed and explorationDrive to decouple movement from resource-seeking, spreading organisms spatially. (2) Reduce resourceAttraction on types that cluster, forcing them to explore. (3) Increase energyConserve across the board to improve energy-per-particle efficiency. This spreads the population spatially and reduces wasted particles.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
