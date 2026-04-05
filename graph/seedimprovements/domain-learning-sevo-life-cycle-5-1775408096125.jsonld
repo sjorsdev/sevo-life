@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775408096125",
+  "timestamp": "2026-04-05T16:54:56.125Z",
+  "observation": "Domain sevo-life (fitness 0.630) generated 2 insights",
+  "suggestion": "Energy scarcity is the bottleneck—survival and beauty both require long enough lifespans to express complexity. Reduce waste, improve foraging efficiency, increase energy conservation.; Efficiency is critically low at 0.349 despite being the third metric. The immediate blocker is energy management—living organisms show highly variable energy (3 to 27), indicating inconsistent foraging efficiency. Two organisms died relatively young (ages 228, 270), suggesting resource starvation or movement waste. To improve the composite fitness: (1) increase energyConserve across the board to reduce waste and extend lifespan, (2) boost resourceAttraction for low-energy survivors (1, 5) to ensure consistent food discovery, (3) reduce explorationDrive to cut movement overhead while maintaining search effectiveness. Beauty diversity is also suppressed—patternSymmetry variance will help. These changes target the 0.2-weighted but severely underperforming efficiency component first, while stabilizing survival.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
