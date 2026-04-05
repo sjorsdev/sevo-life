@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775410491287",
+  "timestamp": "2026-04-05T17:34:51.287Z",
+  "observation": "Domain sevo-life (fitness 0.635) generated 2 insights",
+  "suggestion": "Energy-efficient organisms spread out naturally; cramped genomes waste energy on mutual avoidance. Spatial composition improves when explorationDrive > flockingStrength.; Efficiency (0.437) is the bottleneck — nearly half the overall fitness weight depends on components below 0.65. Within beauty, spatialComposition (0.3) and diversityOfForms (0.456) are critical failures. The data shows organisms reach max age but with inconsistent energy levels (some at 41, others at 5), indicating inefficient movement patterns and poor resource tracking. High flocking/avoidance values likely trap organisms together, wasting energy on collision avoidance. Fix: reduce movement waste, increase exploration radius, and boost visual-pattern diversity to encourage form differentiation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
