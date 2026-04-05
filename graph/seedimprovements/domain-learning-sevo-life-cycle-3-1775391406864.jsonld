@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775391406864",
+  "timestamp": "2026-04-05T12:16:46.864Z",
+  "observation": "Domain sevo-life (fitness 0.708) generated 2 insights",
+  "suggestion": "Movement is luxury; harvestThreshold efficiency is survival. Reduce speed, increase conservation, maximize temporal pattern generation for emergent beauty.; Efficiency (0.158) is catastrophically weak — it's dragging down the entire fitness score despite perfect survival. The movement-heavy genomes (Harvester at 0.85, Persistence Hunter at 0.82) are burning energy faster than harvestThreshold reductions can compensate. Secondary issue: rhythm (0.208) is the worst beauty metric. Current pulseFrequency values (0.12-0.35) are too low to create temporal patterns. Strategy: (1) Reduce moveSpeed on high-speed entities to cut energy waste, (2) Bump energyConserve closer to 0.7-0.8 baseline across the board, (3) Dramatically increase pulseFrequency (0.3+) and patternSymmetry (0.6+) to generate rhythm and pattern emergence. This pushes efficiency from 0.158 → ~0.35-0.45 and beauty from 0.575 → ~0.65-0.70.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
