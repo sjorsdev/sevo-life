@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775417429578",
+  "timestamp": "2026-04-05T19:30:29.578Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Efficiency breakthrough requires aggressive resourceAttraction (0.8+) and energyConserve (0.65+); diversity emerges from explorationDrive + trailIntensity, not form complexity.; Efficiency at 0.381 is the critical bottleneck (0.2 weight in goal). Root cause: low-energy organisms (1, 4, 5) failing to gather resources fast enough. resourceAttraction and energyConserve are underpowered. Secondary: diversityOfForms (0.456) and spatialComposition (0.524) are weak because explorationDrive is too low. Increase resource-finding and conservation on struggling genomes; boost exploration and trail visibility on others to increase spatial pattern variety.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
