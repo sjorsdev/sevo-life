@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775405694773",
+  "timestamp": "2026-04-05T16:14:54.773Z",
+  "observation": "Domain sevo-life (fitness 0.628) generated 2 insights",
+  "suggestion": "Beauty emerges from constraint: efficient organisms moving in coordinated patterns naturally compose space better than high-energy chaotic movement.; Efficiency is the weakest metric at 0.532 (20% weight impact). Spatial composition and motion grace are also severely underperforming. Root cause: organisms are burning energy through excessive movement and poor coordination. All reached max lifespan but with uneven energy levels (organism 3 only 5 energy). Fix: prioritize energy conservation, increase movement synchrony and pattern regularity to improve both efficiency and spatial/motion metrics simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
