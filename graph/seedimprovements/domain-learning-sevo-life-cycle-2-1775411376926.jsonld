@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411376926",
+  "timestamp": "2026-04-05T17:49:36.926Z",
+  "observation": "Domain sevo-life (fitness 0.614) generated 2 insights",
+  "suggestion": "Survival bottleneck is energy starvation, not form beauty. Extend lifespan by 2x via conservative energy model (higher energyConserve, lower explorationDrive), then diversity gains from the extra live organisms will naturally improve all metrics.; Fitness is bottlenecked by survivalRate (0.5) and efficiency (0.416). Three organisms are dead; survivors have survived 500 steps but others died much earlier (225-452 steps). Root cause: energy depletion. Organism 5 survives with highest energy (35), suggesting its genome is efficient. Strategy: (1) increase energyConserve and resourceAttraction across all genomes to extend lifespan, (2) reduce moveSpeed/explorationDrive to lower baseline energy burn, (3) increase diversityOfForms by varying trailColor and patternSymmetry across genomes to hit the weak beauty component (0.456). Secondary: improve motionGrace (0.596) via pulseFrequency tuning.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
