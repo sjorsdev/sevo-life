@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775410460324",
+  "timestamp": "2026-04-05T17:34:20.324Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Plateau indicates local optima saturation within current morphospace. All organisms converge to blob → fast/efficient → high survival. Adding orthogonal dimensions (tissue heterogeneity, spatial variation, reproductive interdependence) doesn't improve fitness on the current landscape — it CHANGES the landscape itself, revealing new peaks invisible from the current valley. Beauty evolution requires asymmetry and specialization; uniform physics permits neither.; [medium] Multi-tissue cell differentiation system — Current organisms likely use homogeneous cells. Introduce 4+ distinct cell types (sensor, muscle, storage, structural) with different metabolic costs and properties. This exponentially expands morphological possibility space and enables new behavioral strategies (sensing + acting decoupling, energy buffering for behavioral flexibility). Organisms can now build nervous systems, storage organs, and specialized appendages rather than blob-shaped repeat units. Beauty metrics can reward emergent specialization patterns.; [easy] Spatial environmental gradients (nutrient, temperature, light) — Uniform world physics flatten selection pressure — all organisms converge to the same local optimum. Adding smooth gradients across the world creates distinct ecological niches and rewards organisms that sense and migrate. This forces evolution of directional sensors, memory of where resources are, and migration behaviors. Beauty metrics can now reward elegant gradient-following or color-coded niche specialization. Escapes the single-peak fitness landscape.; [hard] Obligate multi-organism reproductive cascades — If reproduction is individual, evolution selects only for immediate fitness. Introduce reproductive roles: 'producers' create metabolic surplus, 'reproducers' spend that surplus on offspring, 'builders' shape shared structures. No single organism can reproduce alone. This forces evolution of cooperation, signaling, and ecosystem structure — a fundamentally different optimization landscape. Beauty now rewards emergent colony behavior and symbiotic patterns.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
