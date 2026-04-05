@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775425873869",
+  "timestamp": "2026-04-05T21:51:13.869Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "Fitness plateau at exactly 0.000 indicates the population has collapsed into a single fixed point where all organisms perform identically—likely all dying or all frozen in the same failed strategy. With zero variance in phenotype, there is no selection gradient and evolution cannot climb. The system needs either new capabilities organisms can explore (metamorphosis), new environmental heterogeneity to select for (cycles/oscillation), or new dimensions of fitness that reward emergent properties organisms haven't discovered yet (cooperation). Pure parameter tuning cannot escape this—you need to change what is *possible*.; [hard] Introduce multi-stage organism lifecycle with developmental metamorphosis — Current organisms likely optimize for a single phenotype. Add ontogeny where organisms transition through 2-3 life stages (juvenile→adult→elder) with different body architectures, energy costs, and action capabilities. Early stage could prioritize movement+growth, late stage could enable stationary energy production or reproduction. This fragments the fitness landscape into multiple ecological niches and allows evolution to explore fundamentally different strategies instead of converging on a single local optimum.; [medium] Add environmental oscillation: periodic resource waves + day/night cycles — A static environment selects for a single static solution until all organisms converge on identical behavior. Introduce environmental rhythm (resource availability fluctuates, light/energy cycles, temperature variations) that changes every 10-50 simulation steps. Organisms must now evolve multi-phase strategies—behaviors that switch based on internal state + environmental phase. This forces continuous adaptive innovation and prevents premature convergence.; [medium] Introduce cooperative signaling and group-level fitness bonuses — Current evolution is likely pure competition. Add chemical/spatial signaling so organisms can detect neighbors and coordinate simple behaviors (cluster together, face same direction, synchronize growth). Weight fitness toward group-scale metrics: symmetric arrangements, coordinated motion, or collective energy efficiency receive beauty bonuses. This shifts selection from individual optimization to emergent collective dynamics, opening entirely new design space.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
