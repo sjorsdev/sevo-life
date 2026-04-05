@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775412446492",
+  "timestamp": "2026-04-05T18:07:26.492Z",
+  "observation": "Domain sevo-life (fitness 0.599) generated 2 insights",
+  "suggestion": "Energy efficiency ≡ harvest rate / movement cost. Increase conservation + attraction, decrease exploration.; Efficiency at 0.359 is the critical bottleneck — it weights 20% of fitness but drags the composite score from ~0.70 potential down to 0.599. Organisms show severe energy depletion (organism 5 has only 4 energy at age 500; organisms 0 and 3 died young). Root cause: movement/exploration is energy-expensive relative to resource harvesting. Solution: reduce metabolic drag (increase energyConserve), boost resource acquisition speed (increase resourceAttraction), dial back wasteful exploration (reduce explorationDrive). This directly trades costly wandering for directed foraging.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
