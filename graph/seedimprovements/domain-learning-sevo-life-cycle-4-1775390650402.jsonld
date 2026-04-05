@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775390650402",
+  "timestamp": "2026-04-05T12:04:10.402Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency improves when entities spend energy to find resources rather than hoard it; rhythm emerges from regular pulsing, not rare bursts.; Fitness is dominated by perfect survival (1.0) but dragged down by weak efficiency (0.144) and moderate beauty (0.562). Efficiency is the biggest ROI target — it contributes only 0.029 to the 0.698 total. Within beauty, rhythm (0.123) is critically weak. Root cause: energyConserve is too high (0.55-0.8), starving entities of movement needed to find resources. Rhythm is low because pulseFrequency (0.12-0.35) is too infrequent to create regular patterns. Solution: reduce energy conservation to enable active foraging, increase pulse frequency for rhythm, boost trail intensity for coverage.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
