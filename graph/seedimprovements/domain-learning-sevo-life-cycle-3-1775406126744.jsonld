@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775406126744",
+  "timestamp": "2026-04-05T16:22:06.744Z",
+  "observation": "Domain sevo-life (fitness 0.648) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is behavioral: poor resource-seeking and space utilization, not physics. Organisms need higher attraction + lower burn rate + exploratory spreading.; Efficiency is the bottleneck (0.456), dragging overall fitness down 0.2 weight directly. Dead organisms (ids 0, 3) died young, suggesting poor energy management. Spatial composition is also weak (0.3), indicating organisms cluster instead of exploring. Root cause: organisms aren't balancing energy conservation with exploration to find resources efficiently. Fix: increase resourceAttraction to find food (improves efficiency + survival), boost explorationDrive to spread organisms across space (improves spatial composition + diversity), and increase energyConserve to extend lifespans. Survivors show variable energy (5-33); more conservative genomes with better attraction should level this out.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
