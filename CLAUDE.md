@@ -162,6 +162,7 @@ sevo/
 │   ├── benchmarks/              # benchmark definition nodes
 │   ├── mutations/               # mutation proposal nodes
 │   ├── selections/              # selection decision nodes
+│   ├── sevoscores/              # SevoScore snapshots (cumulative)
 │   └── meta/                    # seed improvement notes, fork decisions
 │
 ├── blueprints/                  # agent TypeScript blueprints
@@ -173,6 +174,7 @@ sevo/
 │   ├── git.ts                   # git operations
 │   ├── runner.ts                # sandboxed Deno subprocess runner
 │   ├── scorer.ts                # EQS computation
+│   ├── sevoscore.ts             # SevoScore — uses sevo-score npm package
 │   ├── mutator.ts               # mutation proposals via LLM
 │   ├── selector.ts              # winner selection + diversity enforcement
 │   ├── benchmark.ts             # benchmark runner + evolution
