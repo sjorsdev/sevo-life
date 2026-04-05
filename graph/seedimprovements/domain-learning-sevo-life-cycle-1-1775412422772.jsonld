@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412422772",
+  "timestamp": "2026-04-05T18:07:02.772Z",
+  "observation": "Domain sevo-life (fitness 0.530) generated 2 insights",
+  "suggestion": "Efficiency bottleneck is energy burn, not beauty. Solve survival first (energyConserve + resourceAttraction); beauty follows from long-lived diverse forms.; Efficiency is critically weak (0.396), dragging fitness despite good beauty (0.752). Two organisms died before max age — survival rate is only 0.667. The core problem: organisms burn energy faster than they harvest, and 33% fail to sustain. Diversity of forms is also low (0.456). Solution: (1) Increase energyConserve across all genomes to waste less per timestep, (2) Boost resourceAttraction so organisms find food faster, (3) Lower moveSpeed to reduce energy burn from motion, (4) Increase harvestThreshold aggressiveness to eat earlier when hungry. These shifts trade some exploration for sustainability. Diversity improves via higher trailIntensity and patternSymmetry — more visually distinct genomes.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
