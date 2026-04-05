@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-6-1775389678227",
+  "timestamp": "2026-04-05T11:47:58.227Z",
+  "observation": "Domain sevo-life (fitness 0.702) generated 15 insights",
+  "suggestion": "fitness 0.702 suggests survivalRate (50% weight) is bottleneck.; maximize energy conservation (0.9) + aggressive resource seeking + low harvest threshold.; balance energyConserve (0.75) with enough movement to find clusters.; high patternSymmetry (0.8) creates coherent visual patterns while; higher explorationDrive (0.6) with energy conservation (0.7) allows discovery; reduced moveSpeed (0.4) + ultra-high energyConserve (0.88) + sustained; all metrics moderate (0.5-0.6 range) to allow emergent specialization.; moveSpeed 0.25 (lowest ever) + harvestThreshold 0.05 (lowest ever) +; create entity population from genomes.; decision function now optimizes for survival-first, with beauty as emergent property.; use Manhattan distance for efficiency, prefer resources that exceed harvestThreshold.; exploration only when energy good + drive triggers.; rest mode for survival. Entities stay put, conserving energy.; only create trail if energy > 0.5 (avoid beauty cost during starvation).; run simulation with survival-optimized population.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:6"
+  ],
+  "priority": 5
+}
