@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775404446661",
+  "timestamp": "2026-04-05T15:54:06.661Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is caused by convergence in a stable, single-objective fitness landscape. All organisms evolve toward the same solution because there is no penalty for doing so. Breaking through requires either: (1) multiplying the morphology search space so optimization cannot be global, (2) introducing dynamic adversarial pressure that makes any single strategy suboptimal, or (3) creating stochastic development so identical parents diverge unpredictably. Evolution thrives on constraint, not freedom—the system needs more constraints, not fewer.; [hard] Cellular differentiation: introduce specialized cell types (sensory cells, motor cells, metabolic cells, reproductive cells) with emergent spatial organization rules. Organisms must now arrange cell types in meaningful patterns rather than uniform tissue. — Current morphology space is exhausted. Cellular differentiation explodes design space exponentially. It creates new beauty dimensions (internal structure harmony, functional clustering) and opens novel survival strategies (localized sensing, distributed decision-making) that single-cell-type organisms cannot access.; [hard] Adversarial dynamic environment: introduce moving resource patches and roaming predator organisms that actively hunt based on organism size/beauty. Make predator strategy also evolvable—it coevolves with prey. — Stable environments cause convergence to a single local optimum. Predators create an arms race: organisms cannot simply max beauty (makes them targets) or max size (easier to catch). Trade-offs re-enable exploration. The predator population itself prevents the system from settling.; [medium] Growth feedback loops: replace deterministic growth rules with probabilistic growth rules that respond to local conditions (nutrient density, neighbor proximity, age). Add growth-phase trade-offs: energy spent on beauty growth unavailable for survival growth. — Current growth is too predictable—all viable solutions converge to the same morphology. Probabilistic rules with feedback create developmental sensitivity: small variations in initial seed lead to different mature forms. This maintains diversity and opens new developmental pathways.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
