@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411003348",
+  "timestamp": "2026-04-05T17:43:23.348Z",
+  "observation": "Domain sevo-life (fitness 0.546) generated 2 insights",
+  "suggestion": "Organisms are starving before reaching reproductive age. Shift from exploration to resource-seeking and conservation.; Survival rate is the bottleneck (0.667, weighted 0.5 of total fitness). Two organisms died young (IDs 0, 3 at 242-257 steps), indicating energy depletion before reproducing. Efficiency is also weak (0.354). Priority: increase resourceAttraction to help organisms find energy faster, boost energyConserve to reduce waste, lower explorationDrive to reduce wasteful movement, reduce moveSpeed for efficiency gains. Secondary: diversityOfForms (0.456) suggests genomes need more variation in patternSymmetry.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
