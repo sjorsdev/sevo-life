@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775417503873",
+  "timestamp": "2026-04-05T19:31:43.873Z",
+  "observation": "Domain sevo-life (fitness 0.647) generated 2 insights",
+  "suggestion": "Energy conservation beats complexity — lower movement, higher focus, extend the organisms already succeeding (org 2 at age 500 with 24 energy).; Efficiency is critically weak (0.423). Organisms are burning energy on excess movement without proportional gain. Survival rate is decent (0.667) and beauty adequate (0.649), but inefficient physiology wastes resources that could extend lifespan or grow complexity. Secondary weakness: spatial composition (0.3) suggests particles cluster poorly. Strategy: (1) reduce moveSpeed to cut idle energy costs, (2) boost energyConserve to stretch resources further, (3) increase resourceAttraction to prioritize harvest over exploration, (4) lower explorationDrive to eliminate wasteful wandering. This trades lateral exploration for metabolic efficiency—organisms become more focused foragers.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
