@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775411354853",
+  "timestamp": "2026-04-05T17:49:14.853Z",
+  "observation": "Domain sevo-life (fitness 0.615) generated 2 insights",
+  "suggestion": "Starvation kills early; inefficiency kills late. Boost attraction in failing lineages, tighten energy efficiency in survivors.; Survival rate 0.5 dominates fitness weight (×0.5 = 0.25 contribution). Organisms 0,1,3 died at ages 270-500, indicating resource starvation before reaching age cap. Living organisms (2,4,5) retain moderate energy but inefficiently (efficiency 0.412 is weak secondary bottleneck). Dead lineages need aggressive resourceAttraction boost to locate food; survivors need energyConserve improvement to move without hemorrhaging energy. Secondary: pulseFrequency affects motionGrace (0.548, low)—tune for fluid movement patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
