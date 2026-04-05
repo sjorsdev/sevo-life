@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775409739461",
+  "timestamp": "2026-04-05T17:22:19.461Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The system has optimized organisms for static survival + simple beauty metrics in an unchanging world. The selection landscape is single-peaked with no sexual selection or environmental variability to drive innovation. Once organisms reach 'good enough,' there's no pressure to diversify. Breakthrough requires: (1) a second selection axis (mate choice), (2) time-varying world state (seasonal/diurnal cycles), or (3) coevolutionary pressure (predator-prey arms race). Without these, evolution explores local maxima and stagnates. Beauty-driven evolution needs *multiple* competing beauty standards or beauty linked to survival in novel ways.; [medium] Introduce sexual selection with aesthetic choosiness. Organisms evolve mate preferences for specific beauty traits (color, pattern, movement) and must compete/display to breed. Separates reproductive fitness from survival fitness. — Sexual selection creates a secondary landscape orthogonal to survival—beauty traits that don't help survival but signal genetic quality drive rapid diversification. Current plateau suggests survival pressure alone exhausted the design space. Mate choice adds runaway selection dynamics (Fisher's runaway process) that continuously innovates.; [medium] Add world physics variability: diurnal cycles (day/night with energy/predation pressure changes), seasonal resource distribution (nutrients concentrate in different regions each cycle), temperature gradients. Organisms must evolve temporal and spatial strategies. — Static world = single peak in selection landscape. Once organisms find the summit, there's no pressure to innovate. Environmental cycles create moving targets—strategies optimal in summer fail in winter, forcing continuous morphological/behavioral adaptation. Niche space explodes.; [hard] Introduce a second trophic level: add predator organisms with independent evolution. Predators hunt prey but evolve sensitivity to prey beauty displays (honest signals of toxicity/unpalatability). Prey evolve warning coloration and defenses. Creates arms-race dynamics between predator and prey aesthetics. — Plateau indicates within-species selection has saturated. Inter-species interaction (predator-prey) creates dynamic selection pressure that never equilibrates—predators evolve counters, prey evolve new signals, creating continuous novelty. Beauty becomes honest signaling strategy, coupling aesthetics to survival in a new way.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
