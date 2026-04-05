@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775391455452",
+  "timestamp": "2026-04-05T12:17:35.452Z",
+  "observation": "Domain sevo-life (fitness 0.709) generated 2 insights",
+  "suggestion": "Movement cost dominates efficiency drain—pulsing beauty compensates for reduced speed by increasing per-tick visual value.; Efficiency (0.161) is the critical bottleneck—entities move too fast relative to energy conservation, burning resources without proportional gain. Rhythm (0.173) is the weakest beauty metric, directly addressable via higher pulseFrequency. Strategy: reduce moveSpeed on high-cost entities (0.82–0.85 is excessive), increase pulseFrequency across all genomes (currently capped at 0.35, should target 0.35–0.5), and raise energyConserve to reduce waste. These changes amplify resource harvesting ROI and enable aesthetic patterns that compound the beauty score.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
