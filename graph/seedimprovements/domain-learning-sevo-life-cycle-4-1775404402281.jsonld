@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775404402281",
+  "timestamp": "2026-04-05T15:53:22.281Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Efficiency saturates via coverage, not harvest thresholds. Fast, curious entities explore more. Rhythm emerges from coordinated pulsing, not just color.; Efficiency is catastrophically weak at 0.143 (contributing only 0.029 to fitness), while survival is maxed at 1.0. The bottleneck is coverage (0.421) — beings aren't exploring enough of the world to efficiently gather resources. Increasing moveSpeed and explorationDrive on slow-moving entities unlocks better world utilization. Secondary issue: rhythm is near-zero (0.171) in beauty — increasing pulseFrequency creates temporal pattern complexity. These two changes can lift efficiency from 0.143 toward 0.35+, adding ~0.04 to total fitness.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
