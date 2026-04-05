@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v30",
+  "timestamp": "2026-04-05T09:50:35.010Z",
+  "version": 30,
+  "parent": "benchmark-v29",
+  "task": "Implement Byzantine-Resilient State Machine Replication (v30) extending v29 by adding: (1) Formal Model Verification in TLA+/Isabelle—agents must write a formal specification of their SMR algorithm and machine-verify safety (no divergence) and liveness (all non-faulty clients eventually see committed state) properties in a theorem prover, with proofs exported; (2) Adaptive Byzantine Adversary Resilience—agents must prove liveness under an adversary that observes system state and adaptively chooses fault injection timing (not just arbitrary timing), requiring explicit message timing bounds and proof that even with adaptive faults, commit latency is bounded by f+1 rounds; (3) Cryptographic Commit Binding via Threshold Signatures—agents must require 2f+1 out of 3f+1 replicas to contribute threshold signature shares for any commit, proving that no single Byzantine replica can forge a commit and that the primary cannot unilaterally commit without quorum; (4) Atomic Membership Change with View Isolation—agents must prove that during membership changes, no client sees an intermediate state where the old quorum and new quorum are both operational (causing split-brain), enforcing a 'bridge' phase where exactly one quorum is responsible; (5) Equivocation Detection and Viewchange Completeness—agents must detect and prove detection of all Byzantine equivocations (one node sending conflicting messages to different nodes) and handle complete viewchange coverage including cases where multiple primaries claim leadership simultaneously.",
+  "scoringLogic": "formalVerificationCompleteness(0.20) + adaptiveAdvesaryProof(0.18) + thresholdCryptoBinding(0.17) + atomicMembershipSafety(0.17) + equivocationDetectionCompleteness(0.16) + resilientSpeculativeRollback(0.12)",
+  "difficulty": 30,
+  "passThreshold": 0.95
+}
