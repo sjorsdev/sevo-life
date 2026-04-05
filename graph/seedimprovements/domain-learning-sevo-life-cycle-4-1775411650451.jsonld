@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775411650451",
+  "timestamp": "2026-04-05T17:54:10.451Z",
+  "observation": "Domain sevo-life (fitness 0.632) generated 2 insights",
+  "suggestion": "Organisms are energy-starved foragers, not efficient hunters. They move too much, sense resources too weakly, and die of attrition, not predation.; Efficiency is the critical bottleneck at 0.435 vs 0.667 survival and 0.671 beauty. Organisms show low energy (max 22, most <15) and early deaths (291-372 age). The core issue: poor resource acquisition and excessive energy drain. High moveSpeed costs energy without proportional resource return. ResourceAttraction is insufficient. Secondary weakness: diversityOfForms (0.456) and spatialComposition (0.3) indicate undifferentiated morphologies. Solution: (1) Increase energyConserve 30→70% to reduce baseline drain, (2) Double resourceAttraction to 0.8 for better foraging, (3) Reduce moveSpeed to preserve energy, (4) Increase harvestThreshold to feed more aggressively, (5) Boost patternSymmetry and trailIntensity for visual distinction across entities.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
