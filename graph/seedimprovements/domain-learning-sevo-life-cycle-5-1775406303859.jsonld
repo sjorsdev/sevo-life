@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775406303859",
+  "timestamp": "2026-04-05T16:25:03.859Z",
+  "observation": "Domain sevo-life (fitness 0.644) generated 2 insights",
+  "suggestion": "Efficiency gains come from organisms that move with purpose (high resourceAttraction, low waste) and create symmetric, scalable forms. Spatial beauty requires geometric intent, not random particle placement.; Efficiency is the bottleneck (0.452 vs. needed improvement). Too many particles consuming energy without proportional return. Spatial composition is critically weak (0.3), indicating organisms aren't creating coherent visual patterns. Strategy: reduce metabolic cost via energyConserve and moveSpeed tuning, boost pattern symmetry for spatial coherence, increase resourceAttraction for faster energy return on movement investment.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
