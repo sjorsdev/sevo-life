@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775407926047",
+  "timestamp": "2026-04-05T16:52:06.047Z",
+  "observation": "Domain sevo-life (fitness 0.642) generated 2 insights",
+  "suggestion": "Energy efficiency scales fitness more than movement freedom — reduce speed and pulse intensity, increase conservation and targeted resource attraction.; Efficiency is critically weak (0.431 vs beautyScore 0.767). The world is burning energy without proportional return. Alive organisms persist with moderate energy (16-26) while dead ones hit zero, indicating starvation from high movement/pulse costs. Survival rate at 0.5 means half the population is dying. Primary lever: reduce energy expenditure (moveSpeed, pulseFrequency, explorationDrive) while increasing energy conservation and resource attraction to keep organisms alive longer. Secondary: boost form diversity by varying trailColor and patternSymmetry across the population.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
