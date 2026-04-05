@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775405217163",
+  "timestamp": "2026-04-05T16:06:57.163Z",
+  "observation": "Domain sevo-life (fitness 0.656) generated 2 insights",
+  "suggestion": "Energy conservation beats complexity: lower-cost movement + better resource targeting outperforms high-effort morphology; Efficiency at 0.494 is the critical bottleneck, dragging overall fitness from 0.63 toward 0.5. With 6 branches tested, survival is good (0.833) and beauty is acceptable (0.671), but organisms are energy-inefficient: spending more resources than they gain. Organism 4 died early despite having particles—likely energy starvation. Most survivors have low-to-moderate energy (5-9 range) despite age 500. Reduce movement cost via drag optimization and lower swim/move intensity; increase resource attraction to harvest more efficiently; tune springDamping to smooth motion and reduce wasted oscillations. Secondary: diversityOfForms (0.432) and spatialComposition (0.3) constrain beauty ceiling—solve efficiency first, then increase growth variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
