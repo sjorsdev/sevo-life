@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775409259522",
+  "timestamp": "2026-04-05T17:14:19.522Z",
+  "observation": "Domain sevo-life (fitness 0.646) generated 2 insights",
+  "suggestion": "Efficiency failures = wasted movement + poor harvesting. Energy must flow to form-building, not ground motion. Spatial composition fails because organisms cluster; exploration + varied trails fix this.; Efficiency (0.438) is the critical bottleneck — it's 20% of overall fitness but 33% below target. The dead organism (id 3, age 260) died from energy depletion. Most survivors have low energy harvesting. Spatial composition (0.3) is also severely weak. Primary strategy: reduce movement waste (lower moveSpeed, raise energyConserve), improve resource harvesting (raise resourceAttraction on organisms with 0 energy), increase spatial/visual salience (boost explorationDrive, trailIntensity, vary trailColor). This targets efficiency + spatial beauty simultaneously.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
