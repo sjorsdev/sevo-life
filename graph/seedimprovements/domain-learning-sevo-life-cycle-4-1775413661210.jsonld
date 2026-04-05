@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-4-1775413661210",
+  "timestamp": "2026-04-05T18:27:41.210Z",
+  "observation": "Domain sevo-life (fitness 0.621) generated 2 insights",
+  "suggestion": "Efficiency wins through conservation+targeting, not activity. High-energy survivors use energy wisely, not fast.; Efficiency is the critical bottleneck at 0.456, dragging overall fitness down despite strong beauty (0.786). Organisms are burning energy faster than they harvest—organism 5 thrives with 33 energy but organism 2 limps along with 8. The solution: boost energyConserve (reduce waste), lower moveSpeed (less wasteful motion), and raise resourceAttraction + harvestThreshold (find and claim resources decisively). Secondary issue: diversityOfForms at 0.456 in beauty—increase patternSymmetry and vary trailColor across entities to add visual variety.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:4"
+  ],
+  "priority": 5
+}
