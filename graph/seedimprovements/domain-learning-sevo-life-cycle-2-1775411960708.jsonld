@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775411960708",
+  "timestamp": "2026-04-05T17:59:20.708Z",
+  "observation": "Domain sevo-life (fitness 0.649) generated 2 insights",
+  "suggestion": "Efficiency bottleneck: organisms spend energy faster than they harvest. Conservation beats velocity.; Efficiency at 0.434 is the lowest weighted component (0.2×0.434 = 0.087). With beautyScore already strong at 0.752 and survivalRate at 0.667, improving efficiency is highest ROI. Alive organisms show moderate energy levels (10-24) but appear to waste energy on movement or failed resource searches. Proposal: increase energyConserve to reduce per-action waste, moderate moveSpeed to cut unnecessary traversal, reduce explorationDrive to eliminate wasteful wandering, and tune resourceAttraction to prevent energy-draining chase behavior while maintaining foraging success.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
