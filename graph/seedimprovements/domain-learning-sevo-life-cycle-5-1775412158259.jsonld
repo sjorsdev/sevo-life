@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775412158259",
+  "timestamp": "2026-04-05T18:02:38.259Z",
+  "observation": "Domain sevo-life (fitness 0.594) generated 2 insights",
+  "suggestion": "efficiency bottleneck is behavioral (movement cost), not morphological. Low spatial utilization + uniform aesthetics. Fix: move less, explore more deliberately, vary form.; efficiency is critically low (0.443 vs 0.68 beauty, 0.667 survival), dragging overall fitness below 0.65. Root cause: organisms moving too much with insufficient resource gain. spatialComposition (0.3) is also dangerously weak — organisms likely clustering instead of filling the world. diversityOfForms (0.456) indicates overuse of uniform patternSymmetry and trailColor. Strategy: (1) reduce moveSpeed and turnBias to lower wasteful motion, (2) increase explorationDrive to spread organisms across world, (3) vary patternSymmetry/trailColor across population to increase morphological diversity, (4) boost energyConserve to penalize inefficient wandering.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
