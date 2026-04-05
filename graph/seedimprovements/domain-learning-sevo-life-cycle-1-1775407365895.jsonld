@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775407365895",
+  "timestamp": "2026-04-05T16:42:45.895Z",
+  "observation": "Domain sevo-life (fitness 0.561) generated 2 insights",
+  "suggestion": "Survival improves when energy doesn't hemorrhage through inefficient exploration—optimize harvestThreshold and energyConserve to favor steady resource gathering over costly wandering.; Efficiency (0.411) is the critical bottleneck dragging overall fitness to 0.606. Two organisms died in their 270s while others reach age 500 with low energy reserves (9-12 vs 33). The constraint is energy depletion, not survival ability. Energy-expensive movement (moveSpeed) isn't translating to better beauty or resources. Improve efficiency by reducing energy waste through conservation and more targeted movement, while maintaining beauty metrics that are already strong (formBeauty 0.791, proportionHarmony 0.887).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
