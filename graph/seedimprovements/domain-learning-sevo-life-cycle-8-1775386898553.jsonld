@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775386898553",
+  "timestamp": "2026-04-05T11:01:38.553Z",
+  "observation": "Domain sevo-life (fitness 0.558) generated 3 insights",
+  "suggestion": "Enhanced decision function with energy-aware desperation mode; Scan neighbors more thoroughly for resources vs trails; Decision logic with survival priority",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
