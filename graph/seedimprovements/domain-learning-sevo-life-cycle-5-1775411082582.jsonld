@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775411082582",
+  "timestamp": "2026-04-05T17:44:42.582Z",
+  "observation": "Domain sevo-life (fitness 0.640) generated 2 insights",
+  "suggestion": "Energy efficiency and spatial distribution are decoupled — spread organisms to reduce local resource competition and interference.; Current fitness 0.604 is bottlenecked by efficiency (0.511) and survival (0.667). Two organisms died early (<300 cycles), and survivors show critical energy depletion (IDs 4,5 at 11-18 energy vs 41 for best). Spatial composition is abysmal (0.3) — organisms are clustered instead of dispersed, wasting resources on overlap. Beauty components reveal: symmetry weak (0.562), motion grace weak (0.556). Root cause: organisms burning energy faster than they acquire it, trapped in local clusters. Fix: (1) Increase energyConserve to reduce metabolism baseline, (2) boost explorationDrive to spread organisms and reduce trampling, (3) raise resourceAttraction to find food faster, (4) lower moveSpeed slightly to preserve energy while still exploring, (5) increase patternSymmetry for free beauty (algorithmic, no energy cost).",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
