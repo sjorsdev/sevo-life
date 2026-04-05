@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775406886447",
+  "timestamp": "2026-04-05T16:34:46.447Z",
+  "observation": "Domain sevo-life (fitness 0.643) generated 2 insights",
+  "suggestion": "Efficiency gains via minimal-complexity morphologies. Diversity via structural variation, not just parameter noise.; Efficiency (0.368) is the critical bottleneck dragging overall fitness to 0.63. Current organisms maintain moderate energy (11-15) but relative to their particle count (8-13), they're burning resources inefficiently. Additionally, diversityOfForms (0.456) is weak—all organisms converge to similar 10-13 particle structures. Two organisms die early (277, 244 age) suggesting energy management stress. Fix: (1) reduce baseRadius and maxParticles across genomes to lower maintenance overhead, (2) increase resourceAttraction to harvest more aggressively, (3) increase energyConserve to retain collected energy, (4) create geometrically distinct genomes (one compact, one elongated, one radial) to boost diversity.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
