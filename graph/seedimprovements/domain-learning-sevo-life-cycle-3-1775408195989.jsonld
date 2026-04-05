@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775408195989",
+  "timestamp": "2026-04-05T16:56:35.989Z",
+  "observation": "Domain sevo-life (fitness 0.622) generated 2 insights",
+  "suggestion": "Dead organisms pulsed too much or moved inefficiently before establishing resource flow. Survivors with balanced attraction + conservative pulse thrive.; Efficiency (0.55) is the weakest metric with 20% goal weight. Deaths at ages 225-276 indicate early resource depletion. Surviving organisms show energy variance (1-39 range). Improve by: (1) increasing resourceAttraction for organisms 0,3 to prevent early death; (2) optimizing drag/swimStrength trade-off for efficient movement; (3) reducing pulseRate for dead organisms — pulsing is energy-expensive; (4) boosting flocking for cohesive gathering. DiversityOfForms (0.456) weak — vary parameters to increase form variation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
