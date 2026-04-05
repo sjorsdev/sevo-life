@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-2-1775404350390",
+  "timestamp": "2026-04-05T15:52:30.390Z",
+  "observation": "Domain sevo-life (fitness 0.706) generated 2 insights",
+  "suggestion": "Survival is free but efficiency requires restraint—reduce movement cost and boost conservation across the board, especially on aggressive seekers.; Efficiency is critically weak (0.155) despite perfect survival (1.0), indicating high-cost movement and resource harvesting. Secondary issue: rhythm is very low (0.214), suggesting pulseFrequency parameters across the population are under-utilized. The Efficient Hoarder (index 1) shows the correct balance: low moveSpeed (0.4) + high energyConserve (0.8). Aggressive entities like the Harvester (index 0) burn energy through movement without sufficient return. Fix: lower moveSpeed on movement-heavy entities, increase energyConserve globally, boost pulseFrequency to unlock rhythm and pattern emergence.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:2"
+  ],
+  "priority": 5
+}
