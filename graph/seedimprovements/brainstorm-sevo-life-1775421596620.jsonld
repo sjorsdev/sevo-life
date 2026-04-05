@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775421596620",
+  "timestamp": "2026-04-05T20:39:56.620Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is a **decoupling crisis**. Beauty is being optimized as an independent objective while survival is a constraint, not an integrated co-evolutionary pressure. In nature, beauty emerges FROM survival mechanisms (sexual selection, honest signaling, resource allocation). The system needs architectural change that makes beauty expensive, context-dependent, or coupled to reproductive fitness—not an abstract aesthetic metric optimized in parallel. The 0.000 fitness suggests organisms may be extinct or unable to sustain themselves because the beauty formula is selecting for forms that cannot survive the basic physics.; [easy] Metabolic coupling: Add energy cost to beauty features. Each cell type or pattern has a maintenance cost proportional to its visual complexity/symmetry/coverage. Organisms must balance beauty against resource consumption. — Current fitness plateau suggests beauty and survival are decoupled. Organisms optimized for beauty metrics alone may be exhausting resources or unable to reproduce. Coupling beauty cost to metabolism re-creates the tradeoff that exists in nature. Beauty becomes expensive, forcing evolution to find Pareto-optimal solutions, not just beauty maxima.; [medium] Environmental niche cycles: Replace constant world physics with 4-phase seasonal cycles (or spatial gradients) that reward different organism morphologies. Phase 1 favors speed, Phase 2 favors size, Phase 3 favors density/armor, Phase 4 favors efficiency. Each phase runs for N steps. — Constant environment allows convergence to a single 'optimal' form that exhausts resources. Cyclic selection pressure prevents monoculture and forces organisms to evolve generalist strategies with inherent visual diversity. Beauty emerges from evolutionary arms races, not from direct optimization.; [hard] Add sexual selection layer: Introduce mate-choice mechanic where organisms preferentially reproduce with partners exhibiting certain beauty features (symmetry, color patterns, specific growth rhythms). But couple this to predation risk or energy cost—beautiful organisms attract mates AND predators. — Sexual selection is a core mechanism linking beauty to fitness in nature. Current system treats beauty as abstract metric. Adding honest signaling (beauty = health/resources) and costs (visibility = risk) re-couples beauty to survival. Creates genuine trade-offs that prevent fitness collapse.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
