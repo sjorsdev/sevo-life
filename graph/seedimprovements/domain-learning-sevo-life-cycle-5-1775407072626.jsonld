@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775407072626",
+  "timestamp": "2026-04-05T16:37:52.626Z",
+  "observation": "Domain sevo-life (fitness 0.618) generated 2 insights",
+  "suggestion": "Particle count trades beautyComplexity for survival — 8-particle bodies thrive; 12-13-particle bodies starve. Reduce growth distance and childRadius to stay lean.; Survival is the bottleneck at 0.5 (only 3/6 alive). The living organisms all have 8 particles; dead ones had 12-13 particles, suggesting high complexity drains energy faster than they can harvest. Efficiency at 0.367 confirms energy drain. Dead organisms died before max age despite more particles. Strategy: reduce particle count targets, boost energy conservation and harvest triggers, and increase resource attraction to prevent starvation. Living genomes already found good complexity; scale that pattern.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
