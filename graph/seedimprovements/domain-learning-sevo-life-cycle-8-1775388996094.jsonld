@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-8-1775388996094",
+  "timestamp": "2026-04-05T11:36:36.094Z",
+  "observation": "Domain sevo-life (fitness 0.697) generated 14 insights",
+  "suggestion": "efficiency bottleneck identified. Previous versions lowered harvestThreshold but moveSpeed remained high.; breakthrough idea: stay almost still, react only to resources passing nearby.; shift from v2's 0.4/0.35 moveSpeed. At 0.25, still responsive but energy cost drops 35%.; don't sacrifice beauty for efficiency. This genome pairs low moveSpeed (0.45) with high; fitness includes survivalRate (0.5 weight). This genome extends lifespan by conservative; exploration (0.6 explorationDrive) but at minimal cost. moveSpeed 0.5 is high enough to find; beautyScore (0.3 weight) is next critical component after efficiency. This genome; diversity enforcement. Population needs generalists that don't specialize too narrowly.; decision function tuned for efficiency-weighted survival. Entities prioritize:; threshold-based action selection. Only move if benefit exceeds cost.; conservation mode. Low energy = minimal movement, hold position.; exploration mode. Moderate energy and no resources = explore, but conservatively.; compute fitness components from simulation result; normalize efficiency to 0-1 range for composite fitness",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:8"
+  ],
+  "priority": 5
+}
