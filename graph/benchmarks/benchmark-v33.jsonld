@@ -1,0 +1,12 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Benchmark",
+  "@id": "benchmark-v33",
+  "timestamp": "2026-04-05T10:04:33.426Z",
+  "version": 33,
+  "parent": "benchmark-v32",
+  "task": "Implement Adaptive Quantum-Adversarial Byzantine-Resilient State Machine Replication (v33) extending v32 by: (1) Adaptive Multi-Round Quantum Threat Model—agents must formally prove (in Coq or Isabelle with machine-checked certificates) that consensus protocol resists adversaries that can adaptively choose attack strategies across multiple rounds of quantum queries, including mid-protocol strategy changes. Proofs must demonstrate: (a) no state-leakage under adaptive quantum side-channels after protocol restart, (b) commitment binding under adversarial concurrent quantum signature forgery attempts, (c) consensus safety preserved even if adversary successfully forges one quantum signature (graceful degradation). (2) Composable Security Bounds—agents must provide formal composition theorems proving protocol security holds in arbitrary larger cryptographic systems with other PQC primitives, including lattice-based threshold signatures (FROST-style schemes). (3) Verifiable Delay Functions (VDF) Integration—agents must design and prove security of quantum-resistant VDF using CSIDH or isogeny-based construction, integrated into consensus leader election to prevent quantum-speedup attacks on timing assumptions. Proofs must include: (a) sequentiality under quantum oracle queries, (b) verifiability in lattice-based setting. (4) Distributed Key Generation with Proactive Refresh—agents must implement DKG with proactive reconfiguration protocol where keys rotate every n rounds; proofs must guarantee: (a) no single round's adversarial quantum queries compromise past or future keys, (b) liveness during key refresh under f Byzantine + adaptive quantum attacker, (c) information-theoretic lower bounds on refresh frequency. (5) Adversarial Reconfiguration Resilience—protocol must tolerate adversary triggering arbitrary reconfigurations mid-consensus while maintaining safety; formalize as game where adversary controls reconfiguration timing and can force validator set changes; prove consensus survives unbounded reconfigurations.",
+  "scoringLogic": "adaptiveMultiRoundQuantumModel(0.22) + composableSecurityComposition(0.20) + vdfSequentialityProof(0.16) + proactiveKeyRefreshLiveness(0.18) + adversarialReconfigurationResilience(0.14) + informationTheoreticBounds(0.10)",
+  "difficulty": 33,
+  "passThreshold": 0.95
+}
