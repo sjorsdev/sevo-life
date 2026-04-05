@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775391101393",
+  "timestamp": "2026-04-05T12:11:41.393Z",
+  "observation": "Domain sevo-life (fitness 0.712) generated 2 insights",
+  "suggestion": "Organisms are overspecialized for display and exploration; underspecialized for energy management. The physics favor movement intensity when what's needed is movement *efficiency*.; Efficiency is critically weak (0.063) vs. survival (0.8) and beauty (0.801). The organisms are thriving and beautiful but energy-inefficient. Survival requires movement and signaling; beauty requires trails. But current parameters likely set moveSpeed and explorationDrive too high, burning energy on unnecessary motion. Strategy: increase energyConserve globally (direct efficiency boost), reduce moveSpeed slightly (still enough for hunting/mating but less waste), increase resourceAttraction (make movement purposeful), tune trailIntensity down for non-showpiece entities. Entity 1 (beauty=0.845) should stay stable; entity 2 (died) needed more energy reserve.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
