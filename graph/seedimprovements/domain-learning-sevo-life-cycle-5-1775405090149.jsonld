@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405090149",
+  "timestamp": "2026-04-05T16:04:50.149Z",
+  "observation": "Domain sevo-life (fitness 0.703) generated 2 insights",
+  "suggestion": "High complexity but poor rhythm suggests organisms move chaotically; adding synchronized pulse and symmetry while cutting wasted energy should improve both metrics.; Efficiency is critically weak (0.156), dragging overall fitness. This suggests organisms waste energy through excessive movement or poor resource finding. Simultaneously, rhythm (0.213) and coverage (0.271) are low, indicating patterns aren't emergent or synchronized. Strategy: (1) boost energy conservation and resource targeting to fix efficiency, (2) introduce rhythmic pulsing and symmetric patterns for beauty. The 0.2 weight on efficiency means fixing it yields higher returns than beauty. Proposed changes distribute two efficiency-focused genomes, two pattern-focused genomes, and two balancing genomes to maintain evolutionary pressure.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
