@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-3-1775392145246",
+  "timestamp": "2026-04-05T12:29:05.246Z",
+  "observation": "Domain sevo-life (fitness 0.705) generated 2 insights",
+  "suggestion": "Rhythm bottleneck: low pulse frequencies kill visual beauty while high movement burns energy without proportional return. Raise pulse, lower move, survive better.; Fitness breakdown shows critical weaknesses: efficiency is only 0.141 (5x below target given 0.2 weight), and beautyScore is 0.58 (below target given 0.3 weight). Within beauty, rhythm is catastrophically low at 0.154—entities lack temporal pattern repetition. Root cause: low pulseFrequency across all genomes (0.08–0.3) suppresses rhythm, while high moveSpeed without commensurate harvest gains wastes energy. Strategy: (1) Boost pulseFrequency 2–3× to restore rhythm and push beauty from 0.58 to ~0.72+, (2) reduce moveSpeed moderately and lift energyConserve to cut wasted movement energy, improving efficiency from 0.141 to ~0.3+. Survival is already at 1.0—no need to touch it.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:3"
+  ],
+  "priority": 5
+}
