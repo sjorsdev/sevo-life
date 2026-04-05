@@ -1,0 +1,10 @@
+{
+  "@context": "sevo://v1",
+  "@type": "Agent",
+  "@id": "agent:v76-1775381943755",
+  "timestamp": "2026-04-05T09:39:03.755Z",
+  "blueprint": "./blueprints/agent-v76.ts",
+  "parent": "agent:v4",
+  "generation": 76,
+  "status": "active"
+}
