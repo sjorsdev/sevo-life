@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405390349",
+  "timestamp": "2026-04-05T16:09:50.349Z",
+  "observation": "Domain sevo-life (fitness 0.651) generated 2 insights",
+  "suggestion": "Low efficiency + poor spatial composition indicates organisms are stationary energy-hoarders. Motion and exploration are high-ROI mutations.; Efficiency is critically weak (0.464 vs targets 0.667+). Root cause: organisms aren't moving through space effectively or gathering resources relative to energy spent. Within beauty, spatialComposition (0.3) is catastrophically low — organisms clustering poorly. Solution: increase exploration and movement efficiency. Boost moveSpeed and explorationDrive to cover more space per energy unit. Increase trailIntensity and patternSymmetry to create better spatial harmony. Reduce energyConserve to allow more active behavior. These changes directly address the weakest metrics while improving spatial composition for beauty.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
