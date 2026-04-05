@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775413225895",
+  "timestamp": "2026-04-05T18:20:25.895Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau is not fitness exhaustion — it's exploration collapse. 590 cycles of convergent pressure have pushed the population into a narrow fitness peak in a high-dimensional space. The organism design space (body plan + decision function) is far from exhausted, but mutations within the current architecture (undifferentiated cells, static environment, monolithic beauty) can only shuffle existing solutions. Environmental stasis + phenotypic simplicity + single-axis beauty = local optimum trap. Structural changes that expand the design space (new cell types), prevent convergence (dynamic world), and create multiple optimization axes (decoupled beauty) force exploration to restart.; [easy] Dynamic Environmental Cycles — Introduce seasons/nutrient waves with 50-100 cycle periodicity. Nutrient distribution, temperature ranges, predation pressure vary over time. World state is no longer static. — Current plateau indicates organisms have optimized for a fixed environment and saturated the design space. Dynamic pressure prevents convergence — forces continuous adaptation. Organisms that were 'good enough' become maladaptive when world shifts. Breaks the local optimum trap.; [medium] Cellular Specialization — Introduce 4+ body cell types: muscle (energy-to-force conversion), sensor (energy-to-perception), store (energy accumulation/buffering), nerve (decision-to-action latency reduction). Organisms must allocate genome bits to cell ratios. — Current organisms likely hit a complexity ceiling because phenotype is undifferentiated. New cell types expand design space exponentially — organisms can now build specialized subsystems (better movers, better thinkers, better survivors) instead of generalists. Opens entire new directions for mutation.; [medium] Decouple Beauty into 4 Independent Dimensions — Replace single beautyScore with: (1) Symmetry (bilateral structure), (2) Color Harmony (chromatic distribution), (3) Movement Grace (trajectory smoothness), (4) Form Complexity (structural information). Each dimension = 0.075 of total fitness. Allow partial beauty specialization. — Single beauty metric forces all organisms toward one aesthetic optimum. Decoupling allows speciation-like splitting: some organisms pursue symmetry, others color, others smooth motion. Multiple local optima become findable. Organisms no longer compete on identical metric — diversity becomes fitness-advantageous.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
