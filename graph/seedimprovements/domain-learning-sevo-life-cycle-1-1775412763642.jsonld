@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775412763642",
+  "timestamp": "2026-04-05T18:12:43.642Z",
+  "observation": "Domain sevo-life (fitness 0.638) generated 2 insights",
+  "suggestion": "Energy-efficient organisms with active resource attraction will survive longer, and survival rate (0.5 weight) amplifies the fitness gain far more than optimizing beauty alone.; Efficiency is the critical bottleneck (0.423 vs beauty 0.686, survival 0.667). Two organisms died young (ages 235, 282), suggesting energy starvation. The efficiency penalty compounds: 0.2 weight * 0.423 = only 0.085 of total fitness. Spatial composition (0.3) is also very weak. Primary fix: reduce energy expenditure and improve resource finding. Secondary: increase spatial diversity of forms through varied growth patterns.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
