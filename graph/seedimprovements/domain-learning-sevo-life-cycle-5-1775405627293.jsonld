@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-5-1775405627293",
+  "timestamp": "2026-04-05T16:13:47.293Z",
+  "observation": "Domain sevo-life (fitness 0.598) generated 2 insights",
+  "suggestion": "Organisms survive but move inefficiently and scatter—spatial beauty requires coordinated flocking physics, not solo wandering.; Efficiency (0.434) is the critical bottleneck—it drags down overall fitness despite decent survival. Spatial composition (0.3) is abysmal, indicating organisms don't cluster or arrange beautifully. Looking at organisms: ID 1 has only 1 energy (severe underperformance), ID 4 has 42 (overeating—poor conversion). The genomes are burning energy on ungainly movement and poor food location. Fixes: (1) Reduce drag from current 0.9-0.99 to ~0.92-0.94 for smoother, more graceful motion. (2) Boost resourceAttraction and flockingStrength so organisms cluster spatially while feeding efficiently. (3) Increase swimStrength and pulseRate for coordinated motion. (4) Tune springDamping to prevent energy waste through oscillation.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:5"
+  ],
+  "priority": 5
+}
