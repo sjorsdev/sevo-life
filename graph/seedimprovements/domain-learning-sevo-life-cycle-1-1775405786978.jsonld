@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "domain-learning-sevo-life-cycle-1-1775405786978",
+  "timestamp": "2026-04-05T16:16:26.978Z",
+  "observation": "Domain sevo-life (fitness 0.658) generated 2 insights",
+  "suggestion": "Efficiency gains compound survival, unlocking better beauty measurement on living entities.; Efficiency is the critical bottleneck (0.366), dragging down overall fitness to 0.603. With goal weighting of 0.5*survivalRate + 0.3*beautyScore + 0.2*efficiency, each 0.1 gain in efficiency yields +0.02 total fitness. The uneven energy distribution (0 to 34) and 2 dead organisms (33% mortality) suggest poor resource conservation and scavenging. Boosting energyConserve reduces metabolic waste; increasing resourceAttraction helps organisms find food before starvation; moderating moveSpeed prevents wasteful thrashing. Weak diversityOfForms (0.372) suggests organisms converging on similar energy strategies—vary parameters to encourage heterogeneous survival strategies.",
+  "evidence": [
+    "domain:sevo-life",
+    "cycle:1"
+  ],
+  "priority": 5
+}
