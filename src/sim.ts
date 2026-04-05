@@ -328,17 +328,70 @@ export class World {
       // Social energy — beautiful organisms near you give energy (mutualism)
       this.socialInteraction(org);
 
+      // LIVE EVOLUTION SIGNAL: organisms in chemically interesting areas get energy.
+      // Compression progress feeds directly into survival — beauty = fitness, in real-time.
+      if (this.tick % 20 === 0) {
+        const center = this.getCenter(org);
+        const chemX = Math.floor(center.x / 4);
+        const chemY = Math.floor(center.y / 4);
+        // Read local chemical B — organisms thrive where chemistry is active
+        const localB = readChemical(this.chem, chemX, chemY, "b");
+        // Energy bonus proportional to local chemical activity
+        // High B = active reaction zone = interesting = energy
+        org.energy += localB * 0.5;
+
+        // Global beauty bonus — if the whole system is getting more interesting,
+        // all organisms benefit (rising tide lifts all boats)
+        const beautyScore = this.beauty.beauty();
+        org.energy += beautyScore.total * 0.2;
+      }
+
       // Reproduction — organisms with enough energy and age spawn offspring
       if (org.energy > 40 && org.age > 100 && org.particles.length >= org.genome.maxParticles * 0.5) {
         const alive = this.organisms.filter(o => o.alive);
         if (alive.length < 12) { // population cap
-          // Mutate genome slightly for offspring
-          const childGenome = { ...org.genome };
-          childGenome.baseRadius = org.genome.baseRadius * (0.9 + this.rng() * 0.2);
-          childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.1));
-          childGenome.pulseRate = Math.min(1, Math.max(0, org.genome.pulseRate + (this.rng() - 0.5) * 0.1));
-          childGenome.drag = Math.min(0.99, Math.max(0.9, org.genome.drag + (this.rng() - 0.5) * 0.02));
-          childGenome.springStiffness = Math.max(0.01, org.genome.springStiffness + (this.rng() - 0.5) * 0.01);
+          // Mutate genome — parameters AND structure
+          const childGenome: Genome = JSON.parse(JSON.stringify(org.genome));
+          // Parameter mutations
+          childGenome.baseRadius = org.genome.baseRadius * (0.85 + this.rng() * 0.3);
+          childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.15));
+          childGenome.pulseRate = Math.min(1, Math.max(0, org.genome.pulseRate + (this.rng() - 0.5) * 0.15));
+          childGenome.drag = Math.min(0.99, Math.max(0.9, org.genome.drag + (this.rng() - 0.5) * 0.03));
+          childGenome.springStiffness = Math.max(0.005, org.genome.springStiffness * (0.7 + this.rng() * 0.6));
+          childGenome.springDamping = Math.max(0.005, org.genome.springDamping * (0.7 + this.rng() * 0.6));
+          childGenome.maxParticles = Math.max(5, Math.min(30, childGenome.maxParticles + Math.floor((this.rng() - 0.5) * 4)));
+          childGenome.resourceAttraction = Math.min(1, Math.max(0, org.genome.resourceAttraction + (this.rng() - 0.5) * 0.15));
+          childGenome.flockingStrength = Math.min(1, Math.max(0, org.genome.flockingStrength + (this.rng() - 0.5) * 0.15));
+          // Color mutation
+          childGenome.baseColor = childGenome.baseColor.map(c =>
+            Math.max(0, Math.min(255, c + Math.floor((this.rng() - 0.5) * 40)))
+          ) as [number, number, number];
+          childGenome.accentColor = childGenome.accentColor.map(c =>
+            Math.max(0, Math.min(255, c + Math.floor((this.rng() - 0.5) * 40)))
+          ) as [number, number, number];
+          // Structural mutation: randomly adjust a growth step
+          if (childGenome.growthSteps.length > 0 && this.rng() < 0.3) {
+            const stepIdx = Math.floor(this.rng() * childGenome.growthSteps.length);
+            const step = childGenome.growthSteps[stepIdx];
+            step.angle += (this.rng() - 0.5) * 0.5;
+            step.distance = Math.max(5, step.distance + (this.rng() - 0.5) * 6);
+            step.childRadius = Math.max(0.3, Math.min(2, step.childRadius + (this.rng() - 0.5) * 0.3));
+            step.probability = Math.max(0.1, Math.min(1, step.probability + (this.rng() - 0.5) * 0.2));
+          }
+          // Rare: add a new growth step
+          if (this.rng() < 0.1 && childGenome.growthSteps.length < 10) {
+            const types: Array<"core" | "flesh" | "mouth" | "sensor" | "fin" | "spike"> = ["flesh", "mouth", "sensor", "fin", "spike"];
+            childGenome.growthSteps.push({
+              triggerAge: 5 + Math.floor(this.rng() * 20),
+              parentType: types[Math.floor(this.rng() * types.length)],
+              childType: types[Math.floor(this.rng() * types.length)],
+              angle: (this.rng() - 0.5) * Math.PI * 2,
+              distance: 8 + this.rng() * 12,
+              mirror: this.rng() > 0.5,
+              childRadius: 0.5 + this.rng() * 1,
+              childColor: this.rng() > 0.5 ? "accent" : "gradient",
+            });
+          }
 
           const center = this.getCenter(org);
           const offset = { x: (this.rng() - 0.5) * 60, y: (this.rng() - 0.5) * 60 };

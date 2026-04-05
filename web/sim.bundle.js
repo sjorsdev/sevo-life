@@ -66,6 +66,13 @@ function depositChemical(field, x, y, chemical, amount, radius = 2) {
         }
     }
 }
+function readChemical(field, x, y, chemical) {
+    const { width: w, height: h } = field;
+    const px = (Math.floor(x) % w + w) % w;
+    const py = (Math.floor(y) % h + h) % h;
+    const arr = chemical === "a" ? field.a : field.b;
+    return arr[py * w + px];
+}
 function patternEntropy(field) {
     const counts = new Array(20).fill(0);
     const total = field.b.length;
@@ -382,17 +389,57 @@ class World {
             this.applyBehavior(org);
             this.harvest(org);
             this.socialInteraction(org);
+            if (this.tick % 20 === 0) {
+                const center = this.getCenter(org);
+                const chemX = Math.floor(center.x / 4);
+                const chemY = Math.floor(center.y / 4);
+                const localB = readChemical(this.chem, chemX, chemY, "b");
+                org.energy += localB * 0.5;
+                const beautyScore = this.beauty.beauty();
+                org.energy += beautyScore.total * 0.2;
+            }
             if (org.energy > 40 && org.age > 100 && org.particles.length >= org.genome.maxParticles * 0.5) {
                 const alive = this.organisms.filter((o)=>o.alive);
                 if (alive.length < 12) {
-                    const childGenome = {
-                        ...org.genome
-                    };
-                    childGenome.baseRadius = org.genome.baseRadius * (0.9 + this.rng() * 0.2);
-                    childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.1));
-                    childGenome.pulseRate = Math.min(1, Math.max(0, org.genome.pulseRate + (this.rng() - 0.5) * 0.1));
-                    childGenome.drag = Math.min(0.99, Math.max(0.9, org.genome.drag + (this.rng() - 0.5) * 0.02));
-                    childGenome.springStiffness = Math.max(0.01, org.genome.springStiffness + (this.rng() - 0.5) * 0.01);
+                    const childGenome = JSON.parse(JSON.stringify(org.genome));
+                    childGenome.baseRadius = org.genome.baseRadius * (0.85 + this.rng() * 0.3);
+                    childGenome.swimStrength = Math.min(1, Math.max(0, org.genome.swimStrength + (this.rng() - 0.5) * 0.15));
+                    childGenome.pulseRate = Math.min(1, Math.max(0, org.genome.pulseRate + (this.rng() - 0.5) * 0.15));
+                    childGenome.drag = Math.min(0.99, Math.max(0.9, org.genome.drag + (this.rng() - 0.5) * 0.03));
+                    childGenome.springStiffness = Math.max(0.005, org.genome.springStiffness * (0.7 + this.rng() * 0.6));
+                    childGenome.springDamping = Math.max(0.005, org.genome.springDamping * (0.7 + this.rng() * 0.6));
+                    childGenome.maxParticles = Math.max(5, Math.min(30, childGenome.maxParticles + Math.floor((this.rng() - 0.5) * 4)));
+                    childGenome.resourceAttraction = Math.min(1, Math.max(0, org.genome.resourceAttraction + (this.rng() - 0.5) * 0.15));
+                    childGenome.flockingStrength = Math.min(1, Math.max(0, org.genome.flockingStrength + (this.rng() - 0.5) * 0.15));
+                    childGenome.baseColor = childGenome.baseColor.map((c)=>Math.max(0, Math.min(255, c + Math.floor((this.rng() - 0.5) * 40))));
+                    childGenome.accentColor = childGenome.accentColor.map((c)=>Math.max(0, Math.min(255, c + Math.floor((this.rng() - 0.5) * 40))));
+                    if (childGenome.growthSteps.length > 0 && this.rng() < 0.3) {
+                        const stepIdx = Math.floor(this.rng() * childGenome.growthSteps.length);
+                        const step = childGenome.growthSteps[stepIdx];
+                        step.angle += (this.rng() - 0.5) * 0.5;
+                        step.distance = Math.max(5, step.distance + (this.rng() - 0.5) * 6);
+                        step.childRadius = Math.max(0.3, Math.min(2, step.childRadius + (this.rng() - 0.5) * 0.3));
+                        step.probability = Math.max(0.1, Math.min(1, step.probability + (this.rng() - 0.5) * 0.2));
+                    }
+                    if (this.rng() < 0.1 && childGenome.growthSteps.length < 10) {
+                        const types = [
+                            "flesh",
+                            "mouth",
+                            "sensor",
+                            "fin",
+                            "spike"
+                        ];
+                        childGenome.growthSteps.push({
+                            triggerAge: 5 + Math.floor(this.rng() * 20),
+                            parentType: types[Math.floor(this.rng() * types.length)],
+                            childType: types[Math.floor(this.rng() * types.length)],
+                            angle: (this.rng() - 0.5) * Math.PI * 2,
+                            distance: 8 + this.rng() * 12,
+                            mirror: this.rng() > 0.5,
+                            childRadius: 0.5 + this.rng() * 1,
+                            childColor: this.rng() > 0.5 ? "accent" : "gradient"
+                        });
+                    }
                     const center = this.getCenter(org);
                     const offset = {
                         x: (this.rng() - 0.5) * 60,
