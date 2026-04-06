@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775451634184",
+  "timestamp": "2026-04-06T05:00:34.184Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau occurs because the fitness landscape is **static and decomposable**. Organisms can independently optimize each fitness component toward a fixed ideal. Evolution has found the local maximum within that design space and cannot escape without either (1) a moving target that prevents convergence, (2) discontinuous jumps enabled by structural reorganization, or (3) fundamental trade-offs that prevent simultaneous optimization. The system needs internal dynamics that fight convergence—not new parameters, but new sources of adaptive pressure.; [medium] Coevolutionary beauty standards: Replace fixed beauty metric with organism-evaluated beauty. Each organism has a 'beauty preference' gene that influences mate selection and group formation. Beauty standards evolve alongside organism morphology, creating a moving fitness target. — Fixed beauty function locks organisms into optimizing toward one static ideal. Coevolution opens a perpetually new solution space—organisms chase a moving target, preventing convergence. Beauty becomes diversity engine, not convergence attractor.; [hard] Lifecycle metamorphosis phases: Decouple growth into discrete developmental phases (larval, pupal, adult) where organism structure can be radically reconfigured at phase transitions, not accumulated incrementally. Allow 'complete rewiring' of body plan mid-life if energy budget permits. — Monotonic accumulation locks organisms into their early morphological choices. Metamorphosis enables escape from local optima by allowing sudden body-plan restructuring, creating discontinuous jumps in the fitness landscape that gradient-following cannot reach.; [medium] Explicit resource bottleneck economy: Introduce per-organism energy budget that must be allocated across four competing needs (growth, reproduction, movement, beauty-expression). Organisms cannot simultaneously maximize all—forces strategic trade-off discovery instead of all-dimensions optimization. — Composite fitness (0.5+0.3+0.2) allows independent optimization of each component. Scarcity creates forced choices, revealing entirely new phenotypic strategies. Beauty becomes costly; survival becomes contingent; efficiency becomes selective pressure only when resources are genuinely finite.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
