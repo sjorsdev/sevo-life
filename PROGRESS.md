@@ -1,54 +1,53 @@
 # PROGRESS
 
-## Status: ALIVE — reproduction working, THINK phase generating ideas
-## SevoScore: 3950
-## Population: 30 organisms (cap), 28+ unique color variants from 3 species
-## THINK ideas: 21 cross-disciplinary ideas in graph
+## Status: organism-v2 (GRN + geometric development) built, needs integration
+## SevoScore: 4039
+## THINK ideas: 30+ cross-disciplinary ideas in graph
 
-## Breakthrough this session
-spawnOrganism() never added organisms to the array. One missing line.
-Everything built before was useless without reproduction. Now fixed:
-3 starting species → 30 organisms by tick 1000 with real diversification.
+## What just happened
+- organism-v2.ts: Gene Regulatory Networks, internal state (8 signals), geometric cells
+- Tested: grows bilateral body with mouths/sensors/display from single cell via GRN
+- Reproduction bug fixed (spawnOrganism never added to array)
+- THINK phase producing novel cross-disciplinary ideas every cycle
 
-## Meta-cycle: EVOLVE → REFLECT → THINK → BRAINSTORM → REALIGN
-THINK phase generates novel cross-disciplinary ideas every cycle.
-21 ideas accumulated, converging on 3 themes:
-1. **Temporal dimension** — rhythm, oscillation, phase-locking with environment
-2. **Environmental legacy** — organisms shape world for offspring (niche construction)
-3. **Developmental programs** — growth rules not fixed form (morphogenesis)
+## Immediate next step
+Wire organism-v2 into the world engine (sim.ts) and visualization (web/v2.html).
+The old Organism type (just particles + springs) needs to be replaced with OrganismV2
+(GRN + internal state + geometric cells + costly signaling).
 
-## Most actionable ideas (from THINK)
-- Niche construction: chemistry deposits as inheritance (organisms already do this!)
-- Beauty as costly signal: decorative cells cost 3x, Pareto tradeoff
-- Polymorphic castes: group selection, division of labor
-- Stigmergy: collective intelligence via environmental modification
+## Proposed: programmatic meta-cycle runner
+Instead of long Claude conversations that forget, build a script that:
+1. Reads PROGRESS.md + graph state
+2. Calls `claude -p` with clean context for each meta-cycle phase
+3. EVOLVE: run simulation, measure, mutate
+4. REFLECT: analyze trends
+5. THINK: creative cross-disciplinary reasoning
+6. IMPLEMENT: actually build what THINK proposes
+7. TEST: verify it works
+8. Each step is stateless — repo IS the memory
 
-## Research foundations
-- Schmidhuber (2009) — beauty = compression progress
-- Birkhoff (1933) — M = O/C (order/complexity)
-- Turing (1952) — reaction-diffusion
-- Kuramoto model — coupled oscillators
-- Kleiber's law — metabolic scaling
+## Key files
+- src/organism-v2.ts — GRN organisms (NEW, needs integration)
+- src/sim.ts — world engine (uses old Organism, needs update)
+- src/chemistry.ts — Gray-Scott reaction-diffusion
+- src/compression-beauty.ts — Schmidhuber + Birkhoff beauty
+- src/fork-runner.ts — meta-cycle with THINK phase
+- web/v2.html — visualization (needs update for GRN organisms)
 
-## Infrastructure
-- sim.ts: particle physics + chemistry + seasons + reproduction + social interaction
-- chemistry.ts: Gray-Scott reaction-diffusion
-- compression-beauty.ts: Schmidhuber + Birkhoff beauty engine
-- fork-runner.ts: meta-cycle with THINK phase
-- web/v2.html: Canvas2D visualization
-- sevo-score@1.2.1, sevo-engine@1.0.0 on npm
+## THINK themes (from 30+ ideas)
+1. Temporal dimension — rhythm, oscillation, phase-locking
+2. Environmental legacy — organisms shape world for offspring
+3. Developmental programs — GRN, morphogenesis (NOW BUILT)
+4. Costly signaling — beauty as honest signal of fitness (NOW BUILT)
+5. Collective intelligence — stigmergy, niche construction
+6. Polymorphic castes — group selection, division of labor
 
-## Key learnings
-- Research before building (Schmidhuber, not homemade formulas)
-- Test basic viability first (can organisms reproduce?)
-- Don't optimize numbers without visual verification
-- THINK phase > BRAINSTORM — cross-disciplinary reasoning finds what optimization can't
-- One missing line of code can block everything
+## Learnings
+- Research before building (Schmidhuber, Birkhoff, Turing, Kuramoto)
+- Test basic viability first (reproduction blocked everything)
+- THINK phase > grinding cycles
+- One missing line can block everything (spawnOrganism push)
+- Don't ask permission when goal is clear
+- The simulation needs serious depth, not more parameters
 
-## Run
-```
-deno run --allow-all src/fork-runner.ts    # evolve with meta-cycle
-deno run --allow-all web/build.ts && PORT=8090 deno run --allow-all web/serve.ts  # visualize
-```
-
-## Timestamp: 2026-04-05
+## Timestamp: 2026-04-06
