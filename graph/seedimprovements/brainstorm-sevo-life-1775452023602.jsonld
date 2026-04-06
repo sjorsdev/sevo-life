@@ -1,0 +1,13 @@
+{
+  "@context": "sevo://v1",
+  "@type": "SeedImprovement",
+  "@id": "brainstorm-sevo-life-1775452023602",
+  "timestamp": "2026-04-06T05:07:03.602Z",
+  "observation": "Brainstorm triggered by plateau. 4 proposals generated.",
+  "suggestion": "The plateau exists not because mutation exhausted the space, but because the *fitness landscape structure* constrains what mutations matter. Evolution stuck in a local attractor where marginal improvements in current strategies yield zero fitness gain. New physics (costs, plasticity, interactions) reshapes the landscape itself, making previously irrelevant mutations suddenly valuable. The system needs structural innovation in what can be optimized, not better optimization of what already exists.; [medium] Phenotypic plasticity: Organism body structure determined by development phase + environmental conditions, not genotype alone. Same genome produces different phenotypes in different nutrient/light/temperature zones. — Current system explores mutation space within fixed body archetypes. Plasiticity multiplies the effective genome space exponentially without new genes — environment becomes a hidden parameter organisms can exploit. Breaks plateau by making adaptation a lifetime strategy, not just reproductive success.; [hard] Inter-organism cooperation primitives: Add simple chemical signaling (pheromones), proximity-based grouping, and energy/resource sharing between non-kin. Allow organisms to form temporary coalitions with beauty/survival bonuses. — Current evolution is individual-level selection only. Multi-level selection creates new fitness valleys to explore. Cooperation enables emergent morphologies (colonial bodies, swarms) that single organisms cannot achieve. Beauty can now come from collective patterns, not just individual form.; [easy] Metabolic cost structure: Each cell type has a maintenance cost (survivalRate -= 0.01*cellCount_expensive). Introduce metabolic budgeting so organisms must trade growth, motion, reproduction, and aesthetic elaboration against a fixed energy budget. — Current fitness function may allow arbitrary elaboration with no penalty. Adding real tradeoffs forces creatures into unexplored regions of design space. Beauty-for-survival tension becomes a genuine optimization problem. Efficiency component becomes load-bearing and reveals new Pareto frontiers.",
+  "evidence": [
+    "trigger:plateau",
+    "proposals:4"
+  ],
+  "priority": 8
+}
